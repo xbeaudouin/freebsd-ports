@@ -226,6 +226,7 @@ domoticz/scripts/python/script_device_PIRsmarter.py
 domoticz/scripts/readme.txt
 domoticz/scripts/restart_domoticz
 domoticz/scripts/templates/All.Lua
+domoticz/scripts/templates/All.Python
 domoticz/scripts/templates/Device.Lua
 domoticz/scripts/templates/Security.Lua
 domoticz/scripts/templates/Time.Lua
@@ -896,5 +897,5 @@ domoticz/www/views/uservariables.html
 domoticz/www/views/utility.html
 domoticz/www/views/weather.html
 domoticz/www/zwavetopology.html
-@dir(domoticz,domoticz) /var/db/domoticz
-@dir(domoticz,domoticz) /var/run/domoticz
+@dir(domoticz:domoticz) /var/db/domoticz
+@dir(domoticz:domoticz) /var/run/domoticz
