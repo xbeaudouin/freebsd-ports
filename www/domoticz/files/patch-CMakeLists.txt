@@ -1,5 +1,5 @@
---- CMakeLists.txt.orig	2015-12-17 18:30:44.000000000 +0100
-+++ CMakeLists.txt	2015-12-22 17:37:43.246216000 +0100
+--- CMakeLists.txt.orig	2016-01-22 11:09:57.000000000 +0100
++++ CMakeLists.txt	2016-01-22 17:24:59.215415000 +0100
 @@ -10,7 +10,7 @@
      DEFINITION LUA_LIBRARIES)
  ELSE(USE_BUILTIN_LUA)
@@ -9,7 +9,39 @@
    IF(LUA_FOUND)
      INCLUDE_DIRECTORIES(${LUA_INCLUDE_DIRS})
      add_definitions(-DWITH_EXTERNAL_LUA)
-@@ -132,23 +132,24 @@
+@@ -19,11 +19,26 @@
+   ENDIF(LUA_FOUND)
+ ENDIF(USE_BUILTIN_LUA)
+ 
+-add_subdirectory (MQTT)
+-get_directory_property (CMAKE_MQTT_INCLUDES DIRECTORY MQTT
+-    DEFINITION MQTT_INCLUDE_DIRS)
+-get_directory_property (CMAKE_MQTT_LIBRARIES DIRECTORY MQTT
+-    DEFINITION MQTT_LIBRARIES)
++option(USE_BUILTIN_MQTT "Use builtin Mosquitto library" YES)
++IF(USE_BUILTIN_MQTT)
++  message(STATUS "Using builtin Mosquitto library")
++  add_subdirectory (MQTT)
++  get_directory_property (CMAKE_MQTT_INCLUDES DIRECTORY MQTT
++      DEFINITION MQTT_INCLUDE_DIRS)
++  get_directory_property (CMAKE_MQTT_LIBRARIES DIRECTORY MQTT
++      DEFINITION MQTT_LIBRARIES)
++ELSE(USE_BUILTIN_MQTT)
++  find_path(CMAKE_MQTT_INCLUDE NAMES mosquittopp.h)
++  IF(CMAKE_MQTT_INCLUDE)
++     message(STATUS "Found mosquitto mosquittopp.h at: ${CMAKE_MQTT_INCLUDE}")
++     find_library(CMAKE_MQTT_LIBRARIES NAMES libmosquittopp.so)
++     IF(CMAKE_MQTT_LIBRARIES)
++        message(STATUS "Found mosquitto lib at: ${CMAKE_MQTT_LIBRARIES}") 
++     ENDIF(CMAKE_MQTT_LIBRARIES)
++  ELSE(CMAKE_MQTT_INCLUDE)
++     meessage(FATAL_ERROR "Mosquitto includes or library cannot be found, and you ask to NOT use builtin")
++  ENDIF(CMAKE_MQTT_INCLUDE)
++ENDIF(USE_BUILTIN_MQTT)
+ 
+ option(USE_BUILTIN_SQLITE "Use builtin sqlite library" YES)
+ IF(USE_BUILTIN_SQLITE)
+@@ -132,23 +147,24 @@
    ENDIF(CMAKE_COMPILER_IS_GNUCXX)
  ENDMACRO()
  
@@ -44,9 +76,9 @@
 -set (domoticz_VERSION_PATCH ${ProjectRevision})
 +set (domoticz_VERSION_PATCH XXXDOMOTICZXXX)
  
- include_directories(${CMAKE_SOURCE_DIR}/main) 
+ include_directories(${CMAKE_SOURCE_DIR}/main)
  
-@@ -482,7 +483,7 @@
+@@ -536,7 +552,7 @@
  IF(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
    target_link_libraries(domoticz ${Boost_LIBRARIES} ${ZLIB_LIBRARIES} ${CURL_LIBRARIES} pthread ${LUA_LIBRARIES} mqtt ${SQLite_LIBRARIES} ${CMAKE_DL_LIBS})
  else()
