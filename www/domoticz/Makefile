@@ -1,0 +1,50 @@
+# $FreeBSD$
+
+PORTNAME=	domoticz
+PORTVERSION=	2.${DOMOTICZ_REL}
+CATEGORIES=	www
+
+MAINTAINER=	kiwi@oav.net
+COMMENT=	Home Automation System
+
+LICENSE=	GPLv3
+
+LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libexpat.so:${PORTSDIR}/textproc/expat2 \
+		libboost_system.so:${PORTSDIR}/devel/boost-libs \
+		libboost_python.so:${PORTSDIR}/devel/boost-python-libs \
+		libtelldus-core.so:${PORTSDIR}/comms/telldus-core \
+		libopenzwave.so:${PORTSDIR}/comms/openzwave
+
+# This hack is to get rid of dependency of git while building
+# the package.
+DOMOTICZ_REL=	4273
+DOMOTICZ_TS=	1453276741
+USE_GITHUB=	yes
+GH_TAGNAME=	2546f51
+
+USES=		cmake iconv pkgconfig lua:52 execinfo sqlite 
+
+USE_RC_SUBR=	domoticz
+
+USERS=		domoticz
+GROUPS=		domoticz
+
+CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO" \
+		-DUSE_BUILTIN_LUA="NO" \
+		-DUSE_STATIC_BOOST="NO" \
+		-DUSE_BUILTIN_ZLIB="NO" \
+		-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz
+
+post-patch:
+	@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e "s,XXXPREFIXXX,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/getgit.cmake
+	@${REINPLACE_CMD} -e "s,XXXHASHXXX,${GH_TAGNAME},g" ${WRKSRC}/getgit.cmake
+	@${REINPLACE_CMD} -e "s,XXXTIMEXXX,${DOMOTICZ_TS},g" ${WRKSRC}/getgit.cmake
+
+post-install:
+	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
+
+.include <bsd.port.mk>
