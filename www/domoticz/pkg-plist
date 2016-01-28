@@ -24,6 +24,7 @@ domoticz/Config/aeotec/doorbell_gen5.xml
 domoticz/Config/aeotec/doorwindow.xml
 domoticz/Config/aeotec/drycontactsensor.xml
 domoticz/Config/aeotec/dsd31.xml
+domoticz/Config/aeotec/dws6.xml
 domoticz/Config/aeotec/hdss_gen5.xml
 domoticz/Config/aeotec/hem.xml
 domoticz/Config/aeotec/hemg2.xml

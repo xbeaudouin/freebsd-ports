@@ -14,14 +14,15 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libboost_system.so:${PORTSDIR}/devel/boost-libs \
 		libboost_python.so:${PORTSDIR}/devel/boost-python-libs \
 		libtelldus-core.so:${PORTSDIR}/comms/telldus-core \
+		libmosquitto.so:${PORTSDIR}/net/mosquitto \
 		libopenzwave.so:${PORTSDIR}/comms/openzwave
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	4298
-DOMOTICZ_TS=	1453457397
+DOMOTICZ_REL=	4337
+DOMOTICZ_TS=	1453969390
 USE_GITHUB=	yes
-GH_TAGNAME=	4ab7980
+GH_TAGNAME=	095f3d5
 
 USES=		cmake iconv pkgconfig lua:52 execinfo sqlite python
 
@@ -36,6 +37,7 @@ CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO" \
 		-DUSE_BUILTIN_ZLIB="NO" \
 		-DUSE_STATIC_OPENZWAVE="NO" \
 		-DUSE_PYTHON="YES" \
+		-DUSE_BUILTIN_MQTT="NO" \
 		-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz
 
 post-patch:
@@ -45,6 +47,7 @@ post-patch:
 	@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/getgit.cmake
 	@${REINPLACE_CMD} -e "s,XXXHASHXXX,${GH_TAGNAME},g" ${WRKSRC}/getgit.cmake
 	@${REINPLACE_CMD} -e "s,XXXTIMEXXX,${DOMOTICZ_TS},g" ${WRKSRC}/getgit.cmake
+	@${REINPLACE_CMD} -e "/^ADD_PRECOMPILED_HEADER/ d" ${WRKSRC}/CMakeLists.txt
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
