@@ -19,10 +19,10 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	4416
-DOMOTICZ_TS=	1454659536
+DOMOTICZ_REL=	4476
+DOMOTICZ_TS=	1454924103
 USE_GITHUB=	yes
-GH_TAGNAME=	2c36fbf
+GH_TAGNAME=	8fd5fb0
 
 USES=		cmake iconv pkgconfig lua:52 execinfo sqlite python
 
@@ -41,12 +41,12 @@ CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO" \
 		-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz
 
 post-patch:
-	@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/CMakeLists.txt
+	#@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
-	@${REINPLACE_CMD} -e "s,XXXPREFIXXX,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
-	@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/getgit.cmake
-	@${REINPLACE_CMD} -e "s,XXXHASHXXX,${GH_TAGNAME},g" ${WRKSRC}/getgit.cmake
-	@${REINPLACE_CMD} -e "s,XXXTIMEXXX,${DOMOTICZ_TS},g" ${WRKSRC}/getgit.cmake
+	#@${REINPLACE_CMD} -e "s,XXXPREFIXXX,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
+	#@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/getgit.cmake
+	#@${REINPLACE_CMD} -e "s,XXXHASHXXX,${GH_TAGNAME},g" ${WRKSRC}/getgit.cmake
+	#@${REINPLACE_CMD} -e "s,XXXTIMEXXX,${DOMOTICZ_TS},g" ${WRKSRC}/getgit.cmake
 	@${REINPLACE_CMD} -e "/^ADD_PRECOMPILED_HEADER/ d" ${WRKSRC}/CMakeLists.txt
 
 post-install:

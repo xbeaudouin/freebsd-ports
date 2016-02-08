@@ -1,49 +1,11 @@
---- CMakeLists.txt.orig	2016-01-28 09:23:10.000000000 +0100
-+++ CMakeLists.txt	2016-01-28 17:36:06.720167000 +0100
+--- CMakeLists.txt.orig	2016-02-08 17:54:18.763712000 +0100
++++ CMakeLists.txt	2016-02-08 17:54:43.260148000 +0100
 @@ -10,7 +10,7 @@
      DEFINITION LUA_LIBRARIES)
  ELSE(USE_BUILTIN_LUA)
    find_package(PkgConfig)
 -  pkg_check_modules(LUA lua>=5.2)
-+  pkg_check_modules(LUA lua-5.2)
++  pkg_check_modules(LUA lua>=5.2 lua-5.2)
    IF(LUA_FOUND)
      INCLUDE_DIRECTORIES(${LUA_INCLUDE_DIRS})
      add_definitions(-DWITH_EXTERNAL_LUA)
-@@ -132,23 +148,24 @@
-   ENDIF(CMAKE_COMPILER_IS_GNUCXX)
- ENDMACRO()
- 
--FIND_PROGRAM(GIT_EXECUTABLE git
--  DOC "git command line client")
-+#FIND_PROGRAM(GIT_EXECUTABLE git
-+#  DOC "git command line client")
- 
--MACRO(Gitversion_GET_REVISION dir variable)
--  EXECUTE_PROCESS(COMMAND ${GIT_EXECUTABLE} rev-list HEAD --count
--    OUTPUT_VARIABLE ${variable}
--    OUTPUT_STRIP_TRAILING_WHITESPACE)
--ENDMACRO(Gitversion_GET_REVISION)
--
--Gitversion_GET_REVISION(. ProjectRevision)
--MATH(EXPR ProjectRevision "${ProjectRevision}+2107")
--MESSAGE(STATUS "Compiling Revision #${ProjectRevision}")
-+#MACRO(Gitversion_GET_REVISION dir variable)
-+#  EXECUTE_PROCESS(COMMAND ${GIT_EXECUTABLE} rev-list HEAD --count
-+#    OUTPUT_VARIABLE ${variable}
-+#    OUTPUT_STRIP_TRAILING_WHITESPACE)
-+#ENDMACRO(Gitversion_GET_REVISION)
-+
-+#Gitversion_GET_REVISION(. ProjectRevision)
-+#MATH(EXPR ProjectRevision "${ProjectRevision}+2107")
-+#MESSAGE(STATUS "Compiling Revision #${ProjectRevision}")
-+MESSAGE(STATUS "Compiling Revision #XXXDOMOTICZXXX")
- 
- # The version number.
- set (domoticz_VERSION_MAJOR 3)
- set (domoticz_VERSION_MINOR 0)
--set (domoticz_VERSION_PATCH ${ProjectRevision})
-+set (domoticz_VERSION_PATCH XXXDOMOTICZXXX)
- 
- include_directories(${CMAKE_SOURCE_DIR}/main)
- 
- 
