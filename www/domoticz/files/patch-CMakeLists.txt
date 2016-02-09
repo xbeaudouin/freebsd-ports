@@ -1,14 +1,5 @@
---- CMakeLists.txt.orig	2016-02-09 15:20:39.000000000 +0100
-+++ CMakeLists.txt	2016-02-09 16:38:09.247294000 +0100
-@@ -10,7 +10,7 @@
-     DEFINITION LUA_LIBRARIES)
- ELSE(USE_BUILTIN_LUA)
-   find_package(PkgConfig)
--  pkg_search_module(LUA lua5.2>=5.2 lua>=5.2)
-+  pkg_search_module(LUA lua5.2>=5.2 lua>=5.2 lua-5.2)
-   IF(LUA_FOUND)
-     INCLUDE_DIRECTORIES(${LUA_INCLUDE_DIRS})
-     add_definitions(-DWITH_EXTERNAL_LUA)
+--- CMakeLists.txt.orig	2016-02-09 17:38:19.000000000 +0100
++++ CMakeLists.txt	2016-02-09 18:10:03.320731000 +0100
 @@ -148,7 +148,7 @@
    ENDIF(CMAKE_COMPILER_IS_GNUCXX)
  ENDMACRO()

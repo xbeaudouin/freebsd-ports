@@ -19,10 +19,10 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	4517
-DOMOTICZ_TS=	1455027639
+DOMOTICZ_REL=	4519
+DOMOTICZ_TS=	1455035899
 USE_GITHUB=	yes
-GH_TAGNAME=	d980dc3
+GH_TAGNAME=	3b15406
 
 USES=		cmake iconv pkgconfig lua:52 execinfo sqlite python
 
@@ -40,7 +40,6 @@ CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO" \
 		-DUSE_BUILTIN_MQTT="NO"
 
 post-patch:
-	#@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e "s,XXXPREFIXXXX,${PREFIX}/domoticz,g" ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/appversion.default
