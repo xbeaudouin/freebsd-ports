@@ -1,9 +1,0 @@
---- appversion.h.txt.orig	2016-02-08 17:56:51.712817000 +0100
-+++ appversion.h.txt	2016-02-08 17:57:25.381071000 +0100
-@@ -1,3 +1,3 @@
--#define APPVERSION 4416
--#define APPHASH "2c36fbf"
--#define APPDATE 1454659536
-+#define APPVERSION 4476
-+#define APPHASH "8fd5fb0"
-+#define APPDATE 1454924103

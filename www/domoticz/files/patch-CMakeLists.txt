@@ -1,15 +1,15 @@
---- CMakeLists.txt.orig	2016-02-08 10:35:03.000000000 +0100
-+++ CMakeLists.txt	2016-02-08 18:04:41.255602000 +0100
+--- CMakeLists.txt.orig	2016-02-09 15:20:39.000000000 +0100
++++ CMakeLists.txt	2016-02-09 16:21:46.796236000 +0100
 @@ -10,7 +10,7 @@
      DEFINITION LUA_LIBRARIES)
  ELSE(USE_BUILTIN_LUA)
    find_package(PkgConfig)
--  pkg_check_modules(LUA lua>=5.2)
-+  pkg_check_modules(LUA lua-5.2)
+-  pkg_search_module(LUA lua5.2>=5.2 lua>=5.2)
++  pkg_search_module(LUA lua5.2>=5.2 lua>=5.2 lua-5.2)
    IF(LUA_FOUND)
      INCLUDE_DIRECTORIES(${LUA_INCLUDE_DIRS})
      add_definitions(-DWITH_EXTERNAL_LUA)
-@@ -147,7 +147,7 @@
+@@ -148,7 +148,7 @@
    ENDIF(CMAKE_COMPILER_IS_GNUCXX)
  ENDMACRO()
  
@@ -18,3 +18,16 @@
    DOC "git command line client")
  
  MACRO(Gitversion_GET_REVISION dir variable)
+@@ -612,9 +612,9 @@
+ 
+ INCLUDE(CPack)
+ 
+-IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+-  set(CMAKE_INSTALL_PREFIX "/opt/${CPACK_PACKAGE_NAME}" CACHE PATH "Install path prefix, prepended onto install directories." FORCE)
+-ENDIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
++#IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
++#  set(CMAKE_INSTALL_PREFIX "/opt/${CPACK_PACKAGE_NAME}" CACHE PATH "Install path prefix, prepended onto install directories." FORCE)
++#ENDIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+ 
+ install(TARGETS domoticz DESTINATION ${CMAKE_INSTALL_PREFIX})
+ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/www DESTINATION ${CMAKE_INSTALL_PREFIX} USE_SOURCE_PERMISSIONS)
