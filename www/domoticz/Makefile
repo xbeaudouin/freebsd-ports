@@ -37,13 +37,12 @@ CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO" \
 		-DUSE_BUILTIN_ZLIB="NO" \
 		-DUSE_STATIC_OPENZWAVE="NO" \
 		-DUSE_PYTHON="YES" \
-		-DUSE_BUILTIN_MQTT="NO" \
-		-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz
+		-DUSE_BUILTIN_MQTT="NO"
 
 post-patch:
 	#@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
-	@${REINPLACE_CMD} -e "s,XXXPREFIXXX,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e "s,XXXPREFIXXXX,${PREFIX}/domoticz,g" ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/appversion.default
 	@${REINPLACE_CMD} -e "s,XXXHASHXXX,${GH_TAGNAME},g" ${WRKSRC}/appversion.default
 	@${REINPLACE_CMD} -e "s,XXXTIMEXXX,${DOMOTICZ_TS},g" ${WRKSRC}/appversion.default
