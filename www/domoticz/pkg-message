@@ -1,5 +1,5 @@
 Notice:
- This ports runs per default using uid:gid domoticz:domoticz to
+ This port runs per default using uid:gid domoticz:domoticz to
  avoid security problems.
 
  Some code of Domoticz may needs root acces. If you are ok with
@@ -8,4 +8,5 @@ Notice:
 domoticz_user="root"
 domoticz_group="wheel"
 
+ And restart domoticz.
 
