@@ -1,0 +1,11 @@
+Notice:
+ This ports runs per default using uid:gid domoticz:domoticz to
+ avoid security problems.
+
+ Some code of Domoticz may needs root acces. If you are ok with
+ that change the following rc.conf to:
+
+domoticz_user="root"
+domoticz_group="wheel"
+
+
