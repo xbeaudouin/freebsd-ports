@@ -15,14 +15,15 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libboost_python.so:${PORTSDIR}/devel/boost-python-libs \
 		libtelldus-core.so:${PORTSDIR}/comms/telldus-core \
 		libmosquitto.so:${PORTSDIR}/net/mosquitto \
+		libsysinfo.so:${PORTSDIR}/devel/libsysinfo \
 		libopenzwave.so:${PORTSDIR}/comms/openzwave
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	4671
-DOMOTICZ_TS=	1455960354
+DOMOTICZ_REL=	4692
+DOMOTICZ_TS=	1456061631
 USE_GITHUB=	yes
-GH_TAGNAME=	040230a
+GH_TAGNAME=	f42a1df
 
 USES=		cmake iconv pkgconfig lua:52 execinfo sqlite python
 
