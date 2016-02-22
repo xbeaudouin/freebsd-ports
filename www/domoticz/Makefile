@@ -20,10 +20,10 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	4692
-DOMOTICZ_TS=	1456061631
+DOMOTICZ_REL=	4707
+DOMOTICZ_TS=	1456129062
 USE_GITHUB=	yes
-GH_TAGNAME=	f42a1df
+GH_TAGNAME=	f092c1e
 
 USES=		cmake iconv pkgconfig lua:52 execinfo sqlite python
 
