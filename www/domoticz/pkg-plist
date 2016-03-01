@@ -53,6 +53,7 @@ domoticz/Config/device_classes.xml
 domoticz/Config/device_classes.xsd
 domoticz/Config/device_configuration.xsd
 domoticz/Config/dlink/dch-z110.xml
+domoticz/Config/dlink/dch-z120.xml
 domoticz/Config/dlink/dch-z510.xml
 domoticz/Config/dragontech/wd-100.xml
 domoticz/Config/duwi/ZWES1000.xml
@@ -254,6 +255,7 @@ domoticz/www/app/DPFibaroController.js
 domoticz/www/app/DPHttpController.js
 domoticz/www/app/DashboardController.js
 domoticz/www/app/DevicesController.js
+domoticz/www/app/DummyController.js
 domoticz/www/app/EventsController.js
 domoticz/www/app/FloorplanController.js
 domoticz/www/app/FloorplanEditController.js
