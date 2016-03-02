@@ -1,0 +1,9 @@
+--- appversion.default.orig	2016-02-08 17:55:47.588020000 +0100
++++ appversion.default	2016-02-08 17:56:29.669290000 +0100
+@@ -1,3 +1,3 @@
+-#define APPVERSION 4467
+-#define APPHASH "f5ea6f3"
+-#define APPDATE 1454916604
++#define APPVERSION XXXDOMOTICZXXX
++#define APPHASH "XXXHASHXXX"
++#define APPDATE XXXTIMEXXX
