@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	domoticz
-PORTVERSION=	2.${DOMOTICZ_REL}
+PORTVERSION=	2.4834
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -18,12 +18,8 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libsysinfo.so:${PORTSDIR}/devel/libsysinfo \
 		libopenzwave.so:${PORTSDIR}/comms/openzwave
 
-# This hack is to get rid of dependency of git while building
-# the package.
-DOMOTICZ_REL=	4832
-DOMOTICZ_TS=	1456818013
 USE_GITHUB=	yes
-GH_TAGNAME=	c12b320
+GH_TAGNAME=	8398125
 
 USES=		cmake iconv pkgconfig lua:52 execinfo sqlite python
 
@@ -43,9 +39,6 @@ CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO" \
 post-patch:
 	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e "s,XXXPREFIXXXX,${PREFIX}/domoticz,g" ${WRKSRC}/CMakeLists.txt
-	@${REINPLACE_CMD} -e "s,XXXDOMOTICZXXX,${DOMOTICZ_REL},g" ${WRKSRC}/appversion.default
-	@${REINPLACE_CMD} -e "s,XXXHASHXXX,${GH_TAGNAME},g" ${WRKSRC}/appversion.default
-	@${REINPLACE_CMD} -e "s,XXXTIMEXXX,${DOMOTICZ_TS},g" ${WRKSRC}/appversion.default
 	@${REINPLACE_CMD} -e "/^ADD_PRECOMPILED_HEADER/ d" ${WRKSRC}/CMakeLists.txt
 
 post-install:
