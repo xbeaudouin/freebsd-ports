@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	domoticz-devel
-PORTVERSION=	2.${DOMOTICZ_REL}
+PORTVERSION=	3.${DOMOTICZ_REL}
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -20,10 +20,10 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	4834
-DOMOTICZ_TS=	1456904172
+DOMOTICZ_REL=	4847
+DOMOTICZ_TS=	1457079592
 USE_GITHUB=	yes
-GH_TAGNAME=	8398125
+GH_TAGNAME=	0b4dbb1
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
 
