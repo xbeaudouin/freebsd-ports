@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	domoticz
-PORTVERSION=	2.4834
+PORTVERSION=	3.4834
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
