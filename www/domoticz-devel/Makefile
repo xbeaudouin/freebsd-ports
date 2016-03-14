@@ -18,12 +18,14 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libsysinfo.so:${PORTSDIR}/devel/libsysinfo \
 		libopenzwave.so:${PORTSDIR}/comms/openzwave
 
+CONFLICTS_INSTALL?=	domoticz-[23]*
+
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	4935
-DOMOTICZ_TS=	1457618496
+DOMOTICZ_REL=	4947
+DOMOTICZ_TS=	1457703285
 USE_GITHUB=	yes
-GH_TAGNAME=	34fc74e
+GH_TAGNAME=	a6de978
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
 

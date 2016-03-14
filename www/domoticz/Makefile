@@ -18,6 +18,8 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libsysinfo.so:${PORTSDIR}/devel/libsysinfo \
 		libopenzwave.so:${PORTSDIR}/comms/openzwave
 
+CONFLICTS_INSTALL?=	domoticz-devel-*
+
 USE_GITHUB=	yes
 GH_TAGNAME=	8398125
 
