@@ -769,6 +769,7 @@ domoticz/www/js/angular-tree-control.js.gz
 domoticz/www/js/angular.min.js.gz
 domoticz/www/js/angularAMD.min.js.gz
 domoticz/www/js/blockly_compressed.js.gz
+domoticz/www/js/blocks_compressed.js.gz
 domoticz/www/js/bootbox.min.js.gz
 domoticz/www/js/bootstrap.min.js.gz
 domoticz/www/js/colpick.js.gz
@@ -827,12 +828,18 @@ domoticz/www/js/themes/skies.js.gz
 domoticz/www/js/ui-bootstrap.min.js.gz
 domoticz/www/js/wow.min.js.gz
 domoticz/www/media/1x1.gif
+domoticz/www/media/click.mp3
 domoticz/www/media/click.wav
+domoticz/www/media/delete.mp3
 domoticz/www/media/delete.wav
+domoticz/www/media/disconnect.wav
 domoticz/www/media/handclosed.cur
+domoticz/www/media/handdelete.cur
 domoticz/www/media/handopen.cur
 domoticz/www/media/quote0.png
 domoticz/www/media/quote1.png
+domoticz/www/media/sprites.png
+domoticz/www/media/sprites.svg
 domoticz/www/media/swf/copy_csv_xls.swf
 domoticz/www/media/swf/copy_csv_xls_pdf.swf
 domoticz/www/media/trashbody.png
