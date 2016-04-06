@@ -1,9 +1,9 @@
---- getgit.cmake.orig	2016-03-10 18:17:30.713436000 +0100
-+++ getgit.cmake	2016-03-10 18:18:30.680335000 +0100
-@@ -1,66 +1,5 @@
--# this macro gets called as a custom build step by running make
--# please take into account, that the variable 'SOURCE_DIR' has been defined by the caller
--
+--- getgit.cmake.orig	2016-04-01 15:27:18.517929000 +0200
++++ getgit.cmake	2016-04-01 15:27:52.572836000 +0200
+@@ -1,66 +1,7 @@
+ # this macro gets called as a custom build step by running make
+ # please take into account, that the variable 'SOURCE_DIR' has been defined by the caller
+ 
 -# the git.cmake module is part of the standard distribution
 -find_package(Git)
 -if(NOT GIT_FOUND)
@@ -57,13 +57,13 @@
 -ENDIF(NOT ProjectDate)
 -Gitversion_CHECK_DIRTY("${SOURCE_DIR}" ProjectDirty)
 -IF(ProjectDirty)
--  MESSAGE(STATUS "domoticz has been modified locally: add \"-modified\" to hash")
+-  MESSAGE(STATUS "domoticz has been modified locally: adding \"-modified\" to hash")
 -  set (ProjectHash "${ProjectHash}-modified")
 -ENDIF(ProjectDirty)
 -
 -# write a file with the APPVERSION define
 -file(WRITE ${SOURCE_DIR}/appversion.h.txt "#define APPVERSION ${ProjectRevision}\n#define APPHASH \"${ProjectHash}\"\n#define APPDATE ${ProjectDate}\n")
- 
+-
 +set (ProjectDate 0)
  # if ProjectDate is 0, create appversion.h.txt from a copy of appversion.default
  IF(NOT ProjectDate AND EXISTS ${SOURCE_DIR}/appversion.default)
