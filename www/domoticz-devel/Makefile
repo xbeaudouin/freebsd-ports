@@ -22,10 +22,10 @@ CONFLICTS_INSTALL?=	domoticz-[23]*
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	5070
-DOMOTICZ_TS=	1460538613
+DOMOTICZ_REL=	5075
+DOMOTICZ_TS=	1461066156
 USE_GITHUB=	yes
-GH_TAGNAME=	86f58c9
+GH_TAGNAME=	5b6a3ef
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
 
