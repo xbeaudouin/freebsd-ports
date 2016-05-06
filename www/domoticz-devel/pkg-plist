@@ -1,6 +1,7 @@
 domoticz/Config/2gig/ct100.xml
 domoticz/Config/2gig/ct101.xml
 domoticz/Config/2gig/ct30.xml
+domoticz/Config/2gig/ct50e.xml
 domoticz/Config/BeNext/1poleswitch.xml
 domoticz/Config/BeNext/2poleswitch.xml
 domoticz/Config/BeNext/AlarmSound.xml
@@ -57,6 +58,7 @@ domoticz/Config/assa_abloy/RealLivingCapTouch.xml
 domoticz/Config/cooper/RF9505-T.xml
 domoticz/Config/cooper/RF9540-N.xml
 domoticz/Config/danfoss/living.xml
+domoticz/Config/danfoss/rs.xml
 domoticz/Config/danfoss/rsroom.xml
 domoticz/Config/danfoss/z.xml
 domoticz/Config/device_classes.xml
@@ -65,6 +67,7 @@ domoticz/Config/device_configuration.xsd
 domoticz/Config/dlink/dch-z110.xml
 domoticz/Config/dlink/dch-z120.xml
 domoticz/Config/dlink/dch-z510.xml
+domoticz/Config/domitech/zb22uk.xml
 domoticz/Config/domitech/ze27eu.xml
 domoticz/Config/dragontech/wd-100.xml
 domoticz/Config/duwi/ZWES1000.xml
@@ -72,6 +75,7 @@ domoticz/Config/duwi/ZWESJ300.xml
 domoticz/Config/duwi/zwfb.xml
 domoticz/Config/enerwave/zw15s.xml
 domoticz/Config/enerwave/zw20r.xml
+domoticz/Config/enerwave/zw20rm.xml
 domoticz/Config/enerwave/zw500d.xml
 domoticz/Config/enerwave/zwn-bpc.xml
 domoticz/Config/enerwave/zwn-sc7.xml
@@ -121,6 +125,7 @@ domoticz/Config/fortrezz/mimolite.xml
 domoticz/Config/fortrezz/ssa2.xml
 domoticz/Config/fortrezz/ssa3.xml
 domoticz/Config/frostdale/fdn2nxx.xml
+domoticz/Config/ge/12724-dimmer.xml
 domoticz/Config/ge/dimmer.xml
 domoticz/Config/ge/dimmer_module.xml
 domoticz/Config/ge/relay.xml
@@ -157,6 +162,7 @@ domoticz/Config/mcohome/mhs412.xml
 domoticz/Config/mcohome/mhs513.xml
 domoticz/Config/merten/507801.xml
 domoticz/Config/merten/50x5xx.xml
+domoticz/Config/nexia/db100z.xml
 domoticz/Config/nodon/asp3100SmartPlug.xml
 domoticz/Config/nodon/crc3100OctanRemote.xml
 domoticz/Config/nodon/crc360xSofremote.xml
@@ -169,6 +175,7 @@ domoticz/Config/philio/pan03.xml
 domoticz/Config/philio/pan04.xml
 domoticz/Config/philio/pan08.xml
 domoticz/Config/philio/phpat02.xml
+domoticz/Config/philio/pse02.xml
 domoticz/Config/philio/psm02.xml
 domoticz/Config/philio/psr04.xml
 domoticz/Config/philio/pst02-1c.xml
@@ -265,6 +272,7 @@ domoticz/scripts/lua/script_device_demo.lua
 domoticz/scripts/lua/script_time_demo.lua
 domoticz/scripts/lua_parsers/example.lua
 domoticz/scripts/lua_parsers/example_json.lua
+domoticz/scripts/lua_parsers/example_owm.lua
 domoticz/scripts/lua_parsers/example_xml.lua
 domoticz/scripts/python/domoticz.py
 domoticz/scripts/python/reloader.py
@@ -852,6 +860,7 @@ domoticz/www/js/require.js.gz
 domoticz/www/js/respond.min.js.gz
 domoticz/www/js/themes/dark-blue.js.gz
 domoticz/www/js/themes/dark-green.js.gz
+domoticz/www/js/themes/dark-ucust.js.gz
 domoticz/www/js/themes/gray.js.gz
 domoticz/www/js/themes/grid.js.gz
 domoticz/www/js/themes/skies.js.gz
