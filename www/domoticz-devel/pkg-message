@@ -10,3 +10,6 @@ domoticz_group="wheel"
 
  And restart domoticz.
 
+If you have issues with domoticz listen option, you can add
+ net.inet6.ip6.v6only=0 to /etc/sysctl.conf
+
