@@ -27,12 +27,12 @@ SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	5139
-DOMOTICZ_TS=	1463384922
+DOMOTICZ_REL=	5143
+DOMOTICZ_TS=	1463412701
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz OpenZWave:ozw
 GH_PROJECT=	domoticz open-zwave:ozw
-GH_TAGNAME=	862c282 e9e3fce:ozw
+GH_TAGNAME=	8a58b87 e9e3fce:ozw
 
 USES=		gmake cmake iconv pkgconfig execinfo python
 
