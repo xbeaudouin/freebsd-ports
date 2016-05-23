@@ -9,10 +9,10 @@ COMMENT=	Home Automation System
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
-		libexpat.so:${PORTSDIR}/textproc/expat2 \
-		libtelldus-core.so:${PORTSDIR}/comms/telldus-core \
-		libsysinfo.so:${PORTSDIR}/devel/libsysinfo
+LIB_DEPENDS=	libcurl.so:ftp/curl \
+		libexpat.so:textproc/expat2 \
+		libtelldus-core.so:comms/telldus-core \
+		libsysinfo.so:devel/libsysinfo
 
 CONFLICTS_INSTALL?=	domoticz-[23]*
 
@@ -27,12 +27,12 @@ SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	5143
-DOMOTICZ_TS=	1463412701
+DOMOTICZ_REL=	5163
+DOMOTICZ_TS=	1463925912
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz OpenZWave:ozw
 GH_PROJECT=	domoticz open-zwave:ozw
-GH_TAGNAME=	8a58b87 e9e3fce:ozw
+GH_TAGNAME=	96842c3 6025c6a:ozw
 
 USES=		gmake cmake iconv pkgconfig execinfo python
 
@@ -47,12 +47,12 @@ CMAKE_ARGS+=	-DUSE_STATIC_OPENZWAVE="YES" \
 
 .if ${PORT_OPTIONS:MSBOOST}
 CMAKE_ARGS+=	-DUSE_STATIC_BOOST="YES"
-BUILD_DEPENDS+=	boost-libs>=0:${PORTSDIR}/devel/boost-libs \
-		boost-python-libs>=:${PORTSDIR}/devel/boost-python-libs
+BUILD_DEPENDS+=	boost-libs>=0:devel/boost-libs \
+		boost-python-libs>=0:devel/boost-python-libs
 .else
 CMAKE_ARGS+=	-DUSE_STATIC_BOOST="NO"
-LIB_DEPENDS+=	libboost_system.so:${PORTSDIR}/devel/boost-libs \
-		libboost_python.so:${PORTSDIR}/devel/boost-python-libs
+LIB_DEPENDS+=	libboost_system.so:devel/boost-libs \
+		libboost_python.so:devel/boost-python-libs
 .endif
 
 .if ${PORT_OPTIONS:MSLUA}
@@ -66,7 +66,7 @@ USES+=		lua:52
 CMAKE_ARGS+=	-DUSE_BUILTIN_MQTT="YES"
 .else
 CMAKE_ARGS+=	-DUSE_BUILTIN_MQTT="NO"
-LIB_DEPENDS+=	libmosquitto.so:${PORTSDIR}/net/mosquitto
+LIB_DEPENDS+=	libmosquitto.so:net/mosquitto
 .endif
 
 .if ${PORT_OPTIONS:MSSQLITE}
@@ -86,7 +86,10 @@ post-patch:
 	@${REINPLACE_CMD} -e "s,XXXHASHXXX,${GH_TAGNAME},g" ${WRKSRC}/appversion.default
 	@${REINPLACE_CMD} -e "s,XXXTIMEXXX,${DOMOTICZ_TS},g" ${WRKSRC}/appversion.default
 	@${REINPLACE_CMD} -e "/^ADD_PRECOMPILED_HEADER/ d" ${WRKSRC}/CMakeLists.txt
-	cd  ${WRKSRC_ozw} && ${GMAKE}
+
+pre-build:
+	#cd ${WRKSRC_ozw} && ${DO_MAKE_BUILD}
+	cd ${WRKSRC_ozw} && ${GMAKE}
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
