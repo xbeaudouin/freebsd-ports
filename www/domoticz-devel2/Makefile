@@ -17,32 +17,32 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 CONFLICTS_INSTALL?=	domoticz-[23]*
 
 OPTIONS_SUB=	YES
-OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE
+OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE OZW
 SBOOST_DESC=	Use static Boost instead of dynamic linking
 SLUA_DESC=	Use domoticz provided LUA instead of ports one
 SMQTT_DESC=	Use domoticz mosquitto instead of ports one
 SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
+OZW_DESC=	Use static OpenZWave
 
 .include <bsd.port.options.mk>
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	5187
-DOMOTICZ_TS=	1464510250
+DOMOTICZ_REL=	5188
+DOMOTICZ_TS=	1464686542
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz OpenZWave:ozw
 GH_PROJECT=	domoticz open-zwave:ozw
-GH_TAGNAME=	1660d9a 9b7c45a:ozw
+GH_TAGNAME=	18ad1a2 9b7c45a:ozw
 
-USES=		gmake cmake iconv pkgconfig execinfo python
+USES=		cmake iconv pkgconfig execinfo python
 
 USE_RC_SUBR=	domoticz
 
 USERS=		domoticz
 GROUPS=		domoticz
 
-CMAKE_ARGS+=	-DUSE_STATIC_OPENZWAVE="YES" \
-		-DUSE_BUILTIN_ZLIB="NO" \
+CMAKE_ARGS+=	-DUSE_BUILTIN_ZLIB="NO" \
 		-DUSE_PYTHON="YES"
 
 .if ${PORT_OPTIONS:MSBOOST}
@@ -76,8 +76,18 @@ CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO"
 USES+=		sqlite
 .endif
 
+.if ${PORT_OPTIONS:MOZW}
+CMAKE_ARGS+=	-DUSE_STATIC_OPENZWAVE="YES"
+.else
+CMAKE_ARGS+=	-DUSE_STATIC_OPENZWAVE="NO"
+LIB_DEPENDS+=	libopenzwave.so:comms/openzwave-devel
+USES+=		gmake
+.endif
+
+.if ${PORT_OPTIONS:MOZW}
 post-extract:
 	@${LN} -s ${WRKSRC_ozw} ${WRKSRC}/../open-zwave-read-only
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
@@ -87,9 +97,11 @@ post-patch:
 	@${REINPLACE_CMD} -e "s,XXXTIMEXXX,${DOMOTICZ_TS},g" ${WRKSRC}/appversion.default
 	@${REINPLACE_CMD} -e "/^ADD_PRECOMPILED_HEADER/ d" ${WRKSRC}/CMakeLists.txt
 
+.if ${PORT_OPTIONS:MOZW}
 pre-build:
 	#cd ${WRKSRC_ozw} && ${DO_MAKE_BUILD}
 	cd ${WRKSRC_ozw} && ${GMAKE}
+.endif
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
