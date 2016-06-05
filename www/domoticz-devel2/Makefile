@@ -28,12 +28,12 @@ OZW_DESC=	Use static OpenZWave
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	5188
-DOMOTICZ_TS=	1464686542
+DOMOTICZ_REL=	5204
+DOMOTICZ_TS=	1465113032
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz OpenZWave:ozw
 GH_PROJECT=	domoticz open-zwave:ozw
-GH_TAGNAME=	18ad1a2 9b7c45a:ozw
+GH_TAGNAME=	61d45d1 9b7c45a:ozw
 
 USES=		cmake iconv pkgconfig execinfo python
 
