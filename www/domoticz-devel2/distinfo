@@ -1,5 +1,3 @@
-TIMESTAMP = 1465123785
-SHA256 (domoticz-domoticz-3.5204-61d45d1_GH0.tar.gz) = 5e09ea8ea5821bc0f8d79b9d9ccb68070f4316b23a3e81db8f24d6a4c383b83b
-SIZE (domoticz-domoticz-3.5204-61d45d1_GH0.tar.gz) = 38438173
-SHA256 (OpenZWave-open-zwave-9b7c45a_GH0.tar.gz) = 256aa10ad9e7cca3358281d1447bfa877f20b55a0a71329a9df1d177cf2ecb59
-SIZE (OpenZWave-open-zwave-9b7c45a_GH0.tar.gz) = 994623
+TIMESTAMP = 1465642048
+SHA256 (domoticz-domoticz-3.5239-90d0c97_GH0.tar.gz) = c589d85b6294641ee2ff0abf920cba139c021e9658660c4acfc99a3b3596ed4a
+SIZE (domoticz-domoticz-3.5239-90d0c97_GH0.tar.gz) = 38455607

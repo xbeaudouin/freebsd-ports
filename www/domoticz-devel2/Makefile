@@ -12,28 +12,28 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
 		libtelldus-core.so:comms/telldus-core \
-		libsysinfo.so:devel/libsysinfo
+		libsysinfo.so:devel/libsysinfo \
+		libopenzwave.so:comms/openzwave-devel
 
 CONFLICTS_INSTALL?=	domoticz-[23]*
 
 OPTIONS_SUB=	YES
-OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE OZW
+OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE
 SBOOST_DESC=	Use static Boost instead of dynamic linking
 SLUA_DESC=	Use domoticz provided LUA instead of ports one
 SMQTT_DESC=	Use domoticz mosquitto instead of ports one
 SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
-OZW_DESC=	Use static OpenZWave
 
 .include <bsd.port.options.mk>
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	5204
-DOMOTICZ_TS=	1465113032
+DOMOTICZ_REL=	5239
+DOMOTICZ_TS=	1465627859
 USE_GITHUB=	yes
-GH_ACCOUNT=	domoticz OpenZWave:ozw
-GH_PROJECT=	domoticz open-zwave:ozw
-GH_TAGNAME=	61d45d1 9b7c45a:ozw
+GH_ACCOUNT=	domoticz 
+GH_PROJECT=	domoticz
+GH_TAGNAME=	90d0c97
 
 USES=		cmake iconv pkgconfig execinfo python
 
@@ -43,7 +43,8 @@ USERS=		domoticz
 GROUPS=		domoticz
 
 CMAKE_ARGS+=	-DUSE_BUILTIN_ZLIB="NO" \
-		-DUSE_PYTHON="YES"
+		-DUSE_PYTHON="YES" \
+		-DUSE_STATIC_OPENZWAVE="NO"
 
 .if ${PORT_OPTIONS:MSBOOST}
 CMAKE_ARGS+=	-DUSE_STATIC_BOOST="YES"
@@ -76,19 +77,6 @@ CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO"
 USES+=		sqlite
 .endif
 
-.if ${PORT_OPTIONS:MOZW}
-CMAKE_ARGS+=	-DUSE_STATIC_OPENZWAVE="YES"
-.else
-CMAKE_ARGS+=	-DUSE_STATIC_OPENZWAVE="NO"
-LIB_DEPENDS+=	libopenzwave.so:comms/openzwave-devel
-USES+=		gmake
-.endif
-
-.if ${PORT_OPTIONS:MOZW}
-post-extract:
-	@${LN} -s ${WRKSRC_ozw} ${WRKSRC}/../open-zwave-read-only
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e "s,XXXPREFIXXXX,${PREFIX}/domoticz,g" ${WRKSRC}/CMakeLists.txt
@@ -96,12 +84,6 @@ post-patch:
 	@${REINPLACE_CMD} -e "s,XXXHASHXXX,${GH_TAGNAME},g" ${WRKSRC}/appversion.default
 	@${REINPLACE_CMD} -e "s,XXXTIMEXXX,${DOMOTICZ_TS},g" ${WRKSRC}/appversion.default
 	@${REINPLACE_CMD} -e "/^ADD_PRECOMPILED_HEADER/ d" ${WRKSRC}/CMakeLists.txt
-
-.if ${PORT_OPTIONS:MOZW}
-pre-build:
-	#cd ${WRKSRC_ozw} && ${DO_MAKE_BUILD}
-	cd ${WRKSRC_ozw} && ${GMAKE}
-.endif
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
