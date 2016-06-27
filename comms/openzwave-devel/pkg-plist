@@ -120,6 +120,7 @@ bin/ozw_config
 %%ETCDIR%%/fibaro/fgd211.xml
 %%ETCDIR%%/fibaro/fgd212.xml
 %%ETCDIR%%/fibaro/fgfs101.xml
+%%ETCDIR%%/fibaro/fgfs101zw5.xml
 %%ETCDIR%%/fibaro/fggc001.xml
 %%ETCDIR%%/fibaro/fgk001.xml
 %%ETCDIR%%/fibaro/fgms.xml
@@ -189,6 +190,7 @@ bin/ozw_config
 %%ETCDIR%%/philio/pan04.xml
 %%ETCDIR%%/philio/pan08.xml
 %%ETCDIR%%/philio/phpat02.xml
+%%ETCDIR%%/philio/phpsg01.xml
 %%ETCDIR%%/philio/pse02.xml
 %%ETCDIR%%/philio/psm02.xml
 %%ETCDIR%%/philio/psr04.xml
@@ -226,6 +228,7 @@ bin/ozw_config
 %%ETCDIR%%/qubino/ZMNHSDx.xml
 %%ETCDIR%%/qubino/ZMNHTDx.xml
 %%ETCDIR%%/qubino/ZMNHUD1.xml
+%%ETCDIR%%/qubino/ZMNHZDx.xml
 %%ETCDIR%%/rcs/em52-zw.xml
 %%ETCDIR%%/rcs/pm12-zw.xml
 %%ETCDIR%%/rcs/therm0005.xml
@@ -239,6 +242,7 @@ bin/ozw_config
 %%ETCDIR%%/schlagelink/itemp.xml
 %%ETCDIR%%/schlagelink/minikeypad.xml
 %%ETCDIR%%/sensative/strips.xml
+%%ETCDIR%%/stelpro/stzw402.xml
 %%ETCDIR%%/swiid/swiidinter.xml
 %%ETCDIR%%/swiid/swiidplug.xml
 %%ETCDIR%%/thermofloor/heatit021.xml

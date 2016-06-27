@@ -82,6 +82,7 @@ domoticz/Config/duwi/05458.xml
 domoticz/Config/duwi/ZWES1000.xml
 domoticz/Config/duwi/ZWESJ300.xml
 domoticz/Config/duwi/zwfb.xml
+domoticz/Config/electronicsolutions/dbmz.xml
 domoticz/Config/enerwave/zw15s.xml
 domoticz/Config/enerwave/zw20r.xml
 domoticz/Config/enerwave/zw20rm.xml
@@ -118,6 +119,7 @@ domoticz/Config/fibaro/fgbs001.xml
 domoticz/Config/fibaro/fgd211.xml
 domoticz/Config/fibaro/fgd212.xml
 domoticz/Config/fibaro/fgfs101.xml
+domoticz/Config/fibaro/fgfs101zw5.xml
 domoticz/Config/fibaro/fggc001.xml
 domoticz/Config/fibaro/fgk001.xml
 domoticz/Config/fibaro/fgms.xml
@@ -187,6 +189,7 @@ domoticz/Config/philio/pan03.xml
 domoticz/Config/philio/pan04.xml
 domoticz/Config/philio/pan08.xml
 domoticz/Config/philio/phpat02.xml
+domoticz/Config/philio/phpsg01.xml
 domoticz/Config/philio/pse02.xml
 domoticz/Config/philio/psm02.xml
 domoticz/Config/philio/psr04.xml
@@ -224,12 +227,14 @@ domoticz/Config/qubino/ZMNHODx.xml
 domoticz/Config/qubino/ZMNHSDx.xml
 domoticz/Config/qubino/ZMNHTDx.xml
 domoticz/Config/qubino/ZMNHUD1.xml
+domoticz/Config/qubino/ZMNHZDx.xml
 domoticz/Config/rcs/em52-zw.xml
 domoticz/Config/rcs/pm12-zw.xml
 domoticz/Config/rcs/therm0005.xml
 domoticz/Config/rcs/therm0007.xml
 domoticz/Config/rcs/therm0009.xml
 domoticz/Config/remotec/zfm-80.xml
+domoticz/Config/remotec/zrc-90.xml
 domoticz/Config/remotec/zts-110.xml
 domoticz/Config/remotec/zurc.xml
 domoticz/Config/remotec/zxt-120.xml
@@ -237,6 +242,7 @@ domoticz/Config/schlage/BE469NXCEN.xml
 domoticz/Config/schlagelink/itemp.xml
 domoticz/Config/schlagelink/minikeypad.xml
 domoticz/Config/sensative/strips.xml
+domoticz/Config/stelpro/stzw402.xml
 domoticz/Config/swiid/swiidinter.xml
 domoticz/Config/swiid/swiidplug.xml
 domoticz/Config/thermofloor/heatit021.xml
@@ -985,3 +991,4 @@ domoticz/www/views/weather.html
 domoticz/www/zwavetopology.html
 @dir(domoticz,domoticz) /var/db/domoticz
 @dir(domoticz,domoticz) /var/run/domoticz
+

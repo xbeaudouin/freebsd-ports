@@ -18,24 +18,25 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 CONFLICTS_INSTALL?=	domoticz-[23]*
 
 OPTIONS_SUB=	YES
-OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE
+OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE PYTHON
 SBOOST_DESC=	Use static Boost instead of dynamic linking
 SLUA_DESC=	Use domoticz provided LUA instead of ports one
 SMQTT_DESC=	Use domoticz mosquitto instead of ports one
 SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
+PYTHON_DESC=	Enable support for Python in EventSystem
 
 .include <bsd.port.options.mk>
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	5239
-DOMOTICZ_TS=	1465627859
+DOMOTICZ_REL=	5274
+DOMOTICZ_TS=	1466938158
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz 
 GH_PROJECT=	domoticz
-GH_TAGNAME=	90d0c97
+GH_TAGNAME=	e0ad61e
 
-USES=		cmake iconv pkgconfig execinfo python
+USES=		cmake iconv pkgconfig execinfo
 
 USE_RC_SUBR=	domoticz
 
@@ -75,6 +76,13 @@ CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="YES"
 .else
 CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO"
 USES+=		sqlite
+.endif
+
+.if ${PORT_OPTIONS:MPYTHON}
+CMAKE_ARGS+=	-DUSE_PYTHON="NO"
+.else
+CMAKE_ARGS+=	-DUSE_PYTHON="YES"
+USES+=		python
 .endif
 
 post-patch:
