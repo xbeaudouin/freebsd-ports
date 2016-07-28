@@ -8,8 +8,9 @@ CATEGORIES=	net-mgmt
 MAINTAINER=	kiwi@oav.net
 COMMENT=	librenms agents and plugins for freebsd system
 
-NO_ARCH=	yes
 LICENSE=	GPLv3
+
+NO_ARCH=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	librenms
@@ -22,7 +23,6 @@ RUN_DEPENDS+=	xinetd:security/xinetd \
 		bash:shells/bash
 
 LIB_DEPENDS+=	libstatgrab.so:devel/libstatgrab \
-
 
 do-install:
 	cd ${STAGEDIR} ; \
