@@ -299,6 +299,7 @@ domoticz/scripts/lua_parsers/example_json.lua
 domoticz/scripts/lua_parsers/example_owm.lua
 domoticz/scripts/lua_parsers/example_xml.lua
 domoticz/scripts/python/domoticz.py
+domoticz/scripts/python/googlepubsub.py
 domoticz/scripts/python/reloader.py
 domoticz/scripts/python/script_device_PIRsmarter.py
 domoticz/scripts/readme.txt
@@ -314,6 +315,7 @@ domoticz/www/app/AboutController.js
 domoticz/www/app/CamController.js
 domoticz/www/app/CustomIconsController.js
 domoticz/www/app/DPFibaroController.js
+domoticz/www/app/DPGooglePubSubController.js
 domoticz/www/app/DPHttpController.js
 domoticz/www/app/DashboardController.js
 domoticz/www/app/DevicesController.js
@@ -337,6 +339,9 @@ domoticz/www/app/RoomplanController.js
 domoticz/www/app/ScenesController.js
 domoticz/www/app/SetupController.js
 domoticz/www/app/TemperatureController.js
+domoticz/www/app/TemperatureCustomLogController.js
+domoticz/www/app/TemperatureLogController.js
+domoticz/www/app/TemperatureNotificationsController.js
 domoticz/www/app/UpdateController.js
 domoticz/www/app/UserVariablesController.js
 domoticz/www/app/UsersController.js
@@ -962,6 +967,7 @@ domoticz/www/views/customicons.html
 domoticz/www/views/dashboard.html
 domoticz/www/views/devices.html
 domoticz/www/views/dpfibaro.html
+domoticz/www/views/dpgooglepubsub.html
 domoticz/www/views/dphttp.html
 domoticz/www/views/events.html
 domoticz/www/views/floorplanedit.html
@@ -983,6 +989,10 @@ domoticz/www/views/roomplan.html
 domoticz/www/views/scenes.html
 domoticz/www/views/setup.html
 domoticz/www/views/temperature.html
+domoticz/www/views/temperature_custom_temp_log.html
+domoticz/www/views/temperature_log.html
+domoticz/www/views/temperature_notifications.html
+domoticz/www/views/temperatures/temperatureWidget.html
 domoticz/www/views/update.html
 domoticz/www/views/users.html
 domoticz/www/views/uservariables.html
@@ -991,4 +1001,3 @@ domoticz/www/views/weather.html
 domoticz/www/zwavetopology.html
 @dir(domoticz,domoticz) /var/db/domoticz
 @dir(domoticz,domoticz) /var/run/domoticz
-

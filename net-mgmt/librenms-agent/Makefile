@@ -15,7 +15,7 @@ NO_ARCH=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	librenms
 GH_PROJECT=	librenms-agent
-GH_TAGNAME=	dde18e9
+GH_TAGNAME=	fb678cb
 
 NO_BUILD=	yes
 

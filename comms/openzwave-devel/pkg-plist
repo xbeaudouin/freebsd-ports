@@ -52,13 +52,13 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zw074.xml
 %%ETCDIR%%/aeotec/zw075.xml
 %%ETCDIR%%/aeotec/zw078.xml
-%%ETCDIR%%/aeotec/zw079.xml
 %%ETCDIR%%/aeotec/zw080.xml
 %%ETCDIR%%/aeotec/zw088.xml
 %%ETCDIR%%/aeotec/zw089.xml
 %%ETCDIR%%/aeotec/zw090.xml
 %%ETCDIR%%/aeotec/zw095.xml
 %%ETCDIR%%/aeotec/zw096.xml
+%%ETCDIR%%/aeotec/zw097.xml
 %%ETCDIR%%/aeotec/zw098.xml
 %%ETCDIR%%/aeotec/zw099.xml
 %%ETCDIR%%/aeotec/zw100.xml
@@ -84,6 +84,7 @@ bin/ozw_config
 %%ETCDIR%%/duwi/ZWES1000.xml
 %%ETCDIR%%/duwi/ZWESJ300.xml
 %%ETCDIR%%/duwi/zwfb.xml
+%%ETCDIR%%/electronicsolutions/dbmz.xml
 %%ETCDIR%%/enerwave/zw15s.xml
 %%ETCDIR%%/enerwave/zw20r.xml
 %%ETCDIR%%/enerwave/zw20rm.xml
@@ -143,6 +144,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/dimmer.xml
 %%ETCDIR%%/ge/dimmer_module.xml
 %%ETCDIR%%/ge/relay.xml
+%%ETCDIR%%/gr/gr105n.xml
 %%ETCDIR%%/greenwave/powernode1.xml
 %%ETCDIR%%/greenwave/powernode6.xml
 %%ETCDIR%%/homeseer/ezmotionplus.xml
@@ -228,6 +230,7 @@ bin/ozw_config
 %%ETCDIR%%/qubino/ZMNHSDx.xml
 %%ETCDIR%%/qubino/ZMNHTDx.xml
 %%ETCDIR%%/qubino/ZMNHUD1.xml
+%%ETCDIR%%/qubino/ZMNHVDx.xml
 %%ETCDIR%%/qubino/ZMNHZDx.xml
 %%ETCDIR%%/rcs/em52-zw.xml
 %%ETCDIR%%/rcs/pm12-zw.xml
@@ -235,6 +238,7 @@ bin/ozw_config
 %%ETCDIR%%/rcs/therm0007.xml
 %%ETCDIR%%/rcs/therm0009.xml
 %%ETCDIR%%/remotec/zfm-80.xml
+%%ETCDIR%%/remotec/zrc-90.xml
 %%ETCDIR%%/remotec/zts-110.xml
 %%ETCDIR%%/remotec/zurc.xml
 %%ETCDIR%%/remotec/zxt-120.xml
