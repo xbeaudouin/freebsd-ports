@@ -6,7 +6,7 @@ PORTVERSION=	0.3
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	kiwi@oav.net
-COMMENT=	librenms agents and plugins for freebsd system
+COMMENT=	Agents and plugins for librenms on FreeBSD
 
 LICENSE=	GPLv3
 
@@ -24,16 +24,24 @@ RUN_DEPENDS+=	xinetd:security/xinetd \
 
 LIB_DEPENDS+=	libstatgrab.so:devel/libstatgrab \
 
+post-patch:
+	@${REINPLACE_CMD} -e "s,XXXPREFIXXXX,${PREFIX},g" ${WRKSRC}/check_mk_agent_freebsd
+	@${REINPLACE_CMD} -e "s,XXXPREFIXXXX,${PREFIX},g" ${WRKSRC}/mk_enplug
+	@${REINPLACE_CMD} -e "s,XXXPREFIXXXX,${PREFIX},g" ${WRKSRC}/check_mk_xinetd
+
 do-install:
-	cd ${STAGEDIR} ; \
-	${MKDIR} usr/local/etc/xinetd.d/ usr/local/lib/check_mk_agent/plugins usr/local/lib/check_mk_agent/repo usr/local/lib/check_mk_agent/local ; \
-	cd ${WRKSRC} ; \
-	${INSTALL_SCRIPT} check_mk_agent_freebsd ${STAGEDIR}/usr/local/bin/check_mk_agent ; \
-	${INSTALL_SCRIPT} mk_enplug ${STAGEDIR}/usr/local/bin/ ; \
-	${INSTALL_SCRIPT} check_mk_xinetd ${STAGEDIR}/usr/local/etc/xinetd.d/check_mk ; \
-	${INSTALL_SCRIPT}  snmp/distro ${STAGEDIR}/usr/local/bin ; \
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/xinetd.d
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/check_mk_agent/plugins
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/check_mk_agent/repo
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/check_mk_agent/local
+	@${INSTALL_SCRIPT} ${WRKSRC}/check_mk_agent_freebsd ${STAGEDIR}${PREFIX}/bin/check_mk_agent
+	@${INSTALL_SCRIPT} ${WRKSRC}/mk_enplug ${STAGEDIR}${PREFIX}/bin/
+	@${INSTALL_SCRIPT} ${WRKSRC}/check_mk_xinetd ${STAGEDIR}${PREFIX}/etc/xinetd.d/check_mk
+	@${INSTALL_SCRIPT} ${WRKSRC}/snmp/distro ${STAGEDIR}${PREFIX}/bin
+
+	@cd ${WRKSRC} ; \
 	for agent_local in $$( ${FIND} ./agent-local -type f ! -name README ); do \
-		${INSTALL_SCRIPT} "$$agent_local" ${STAGEDIR}/usr/local/lib/check_mk_agent/repo/ ; \
+		${INSTALL_SCRIPT} "$$agent_local" ${STAGEDIR}${PREFIX}/lib/check_mk_agent/repo/ ; \
 	done
 
 .include <bsd.port.mk>

@@ -5,7 +5,7 @@
  
  export MK_LIBDIR="/usr/local/lib/check_mk_agent"
 -export MK_CONFDIR="/etc/check_mk"
-+export MK_CONFDIR="/usr/local/etc/check_mk"
++export MK_CONFDIR="XXXPREFIXXXX/etc/check_mk"
  export MK_TMPDIR="/var/run/check_mk"
  
  

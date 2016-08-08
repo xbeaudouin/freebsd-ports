@@ -6,8 +6,8 @@
  
 -plugdir=/usr/lib/check_mk_agent/plugins
 -repodir=/usr/lib/check_mk_agent/repo
-+plugdir=/usr/local/lib/check_mk_agent/plugins
-+repodir=/usr/local/lib/check_mk_agent/repo
++plugdir=XXXPREFIXXXX/lib/check_mk_agent/plugins
++repodir=XXXPREFIXXXX/lib/check_mk_agent/repo
  
  findscripts() {
      find ${repodir} -type f | sed -e "s#$repodir/##g"
