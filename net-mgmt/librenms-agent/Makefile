@@ -34,12 +34,12 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/check_mk_agent/plugins
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/check_mk_agent/repo
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/check_mk_agent/local
-	@${INSTALL_SCRIPT} ${WRKSRC}/check_mk_agent_freebsd ${STAGEDIR}${PREFIX}/bin/check_mk_agent
-	@${INSTALL_SCRIPT} ${WRKSRC}/mk_enplug ${STAGEDIR}${PREFIX}/bin/
-	@${INSTALL_SCRIPT} ${WRKSRC}/check_mk_xinetd ${STAGEDIR}${PREFIX}/etc/xinetd.d/check_mk
-	@${INSTALL_SCRIPT} ${WRKSRC}/snmp/distro ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/check_mk_agent_freebsd ${STAGEDIR}${PREFIX}/bin/check_mk_agent
+	${INSTALL_SCRIPT} ${WRKSRC}/mk_enplug ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/check_mk_xinetd ${STAGEDIR}${PREFIX}/etc/xinetd.d/check_mk
+	${INSTALL_SCRIPT} ${WRKSRC}/snmp/distro ${STAGEDIR}${PREFIX}/bin
 
-	@cd ${WRKSRC} ; \
+	cd ${WRKSRC} ; \
 	for agent_local in $$( ${FIND} ./agent-local -type f ! -name README ); do \
 		${INSTALL_SCRIPT} "$$agent_local" ${STAGEDIR}${PREFIX}/lib/check_mk_agent/repo/ ; \
 	done

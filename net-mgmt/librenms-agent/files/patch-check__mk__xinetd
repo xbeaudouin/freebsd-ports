@@ -1,4 +1,4 @@
---- check_mk_xinetd.orig	2016-07-26 19:46:20 UTC
+--- check_mk_xinetd.orig	2016-08-01 16:26:27 UTC
 +++ check_mk_xinetd
 @@ -30,7 +30,7 @@ service check_mk
  	protocol       = tcp

@@ -1,10 +1,12 @@
---- check_mk_agent_freebsd.orig	2016-07-26 19:46:20 UTC
+--- check_mk_agent_freebsd.orig	2016-08-01 16:26:27 UTC
 +++ check_mk_agent_freebsd
-@@ -41,7 +41,7 @@ export LC_ALL=C
+@@ -40,8 +40,8 @@
+ export LC_ALL=C
  unset LANG
  
- export MK_LIBDIR="/usr/local/lib/check_mk_agent"
+-export MK_LIBDIR="/usr/local/lib/check_mk_agent"
 -export MK_CONFDIR="/etc/check_mk"
++export MK_LIBDIR="XXXPREFIXXXX/lib/check_mk_agent"
 +export MK_CONFDIR="XXXPREFIXXXX/etc/check_mk"
  export MK_TMPDIR="/var/run/check_mk"
  
