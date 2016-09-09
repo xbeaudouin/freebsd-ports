@@ -12,7 +12,6 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
 		libtelldus-core.so:comms/telldus-core \
-		libsysinfo.so:devel/libsysinfo \
 		libopenzwave.so:comms/openzwave-devel
 
 CONFLICTS_INSTALL?=	domoticz-[23]*
@@ -29,12 +28,12 @@ PYTHON_DESC=	Enable support for Python in EventSystem
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	5356
-DOMOTICZ_TS=	1469287497
+DOMOTICZ_REL=	5631
+DOMOTICZ_TS=	1473365620
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz 
 GH_PROJECT=	domoticz
-GH_TAGNAME=	7b38b2a
+GH_TAGNAME=	54dffac
 
 USES=		cmake iconv pkgconfig execinfo
 
