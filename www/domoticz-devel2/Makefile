@@ -28,12 +28,12 @@ PYTHON_DESC=	Enable support for Python in EventSystem
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	5641
-DOMOTICZ_TS=	1473800919
+DOMOTICZ_REL=	5859
+DOMOTICZ_TS=	1478241656
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz 
 GH_PROJECT=	domoticz
-GH_TAGNAME=	3741a53
+GH_TAGNAME=	24c2169
 
 USES=		cmake iconv pkgconfig execinfo
 

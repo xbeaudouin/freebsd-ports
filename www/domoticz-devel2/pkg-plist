@@ -11,6 +11,7 @@ domoticz/Config/BeNext/EnergySwitch.xml
 domoticz/Config/BeNext/HeatingControl.xml
 domoticz/Config/BeNext/Molite.xml
 domoticz/Config/BeNext/PanicButton.xml
+domoticz/Config/BeNext/PanicWatch.xml
 domoticz/Config/BeNext/PluginDimmer.xml
 domoticz/Config/BeNext/SceneController.xml
 domoticz/Config/BeNext/TagReader.xml
@@ -76,6 +77,8 @@ domoticz/Config/device_classes.xml
 domoticz/Config/device_classes.xsd
 domoticz/Config/device_configuration.xsd
 domoticz/Config/devolo/mt02648.xml
+domoticz/Config/devolo/mt2646.xml
+domoticz/Config/devolo/mt2647.xml
 domoticz/Config/dlink/dch-z110.xml
 domoticz/Config/dlink/dch-z120.xml
 domoticz/Config/dlink/dch-z510.xml
@@ -126,6 +129,7 @@ domoticz/Config/fibaro/fgfs101.xml
 domoticz/Config/fibaro/fgfs101zw5.xml
 domoticz/Config/fibaro/fggc001.xml
 domoticz/Config/fibaro/fgk001.xml
+domoticz/Config/fibaro/fgk10x.xml
 domoticz/Config/fibaro/fgms.xml
 domoticz/Config/fibaro/fgpb101.xml
 domoticz/Config/fibaro/fgr221.xml
@@ -141,9 +145,11 @@ domoticz/Config/fibaro/fgs223.xml
 domoticz/Config/fibaro/fgsd002.xml
 domoticz/Config/fibaro/fgss101.xml
 domoticz/Config/fibaro/fgwpe.xml
+domoticz/Config/firstalert/zcombo.xml
 domoticz/Config/fortrezz/mimolite.xml
 domoticz/Config/fortrezz/ssa2.xml
 domoticz/Config/fortrezz/ssa3.xml
+domoticz/Config/fortrezz/wv01.xml
 domoticz/Config/fortrezz/wwa02.xml
 domoticz/Config/frostdale/fdn2nxx.xml
 domoticz/Config/ge/12724-dimmer.xml
@@ -167,6 +173,7 @@ domoticz/Config/horstmann/ses302.xml
 domoticz/Config/horstmann/ses303.xml
 domoticz/Config/horstmann/sir321.xml
 domoticz/Config/horstmann/srt323.xml
+domoticz/Config/idlock/idlock101.xml
 domoticz/Config/intermatic/ca8900.xml
 domoticz/Config/iris/rangeextender.xml
 domoticz/Config/kwikset/smartcode.xml
@@ -180,6 +187,7 @@ domoticz/Config/linear/PD300Z-2.xml
 domoticz/Config/linear/WD500Z-1.xml
 domoticz/Config/manufacturer_specific.xml
 domoticz/Config/manufacturer_specific.xsd
+domoticz/Config/mcohome/mhp210.xml
 domoticz/Config/mcohome/mhs311.xml
 domoticz/Config/mcohome/mhs312.xml
 domoticz/Config/mcohome/mhs314.xml
@@ -202,6 +210,7 @@ domoticz/Config/options.xsd
 domoticz/Config/philio/pan03.xml
 domoticz/Config/philio/pan04.xml
 domoticz/Config/philio/pan08.xml
+domoticz/Config/philio/phpab01.xml
 domoticz/Config/philio/phpat02.xml
 domoticz/Config/philio/phpsg01.xml
 domoticz/Config/philio/pse02.xml
@@ -235,7 +244,9 @@ domoticz/Config/qubino/ZMNHIA2.xml
 domoticz/Config/qubino/ZMNHIDx.xml
 domoticz/Config/qubino/ZMNHJA2.xml
 domoticz/Config/qubino/ZMNHJD1.xml
+domoticz/Config/qubino/ZMNHKDx.xml
 domoticz/Config/qubino/ZMNHLAx.xml
+domoticz/Config/qubino/ZMNHLDx.xml
 domoticz/Config/qubino/ZMNHNDx.xml
 domoticz/Config/qubino/ZMNHODx.xml
 domoticz/Config/qubino/ZMNHSDx.xml
@@ -260,9 +271,11 @@ domoticz/Config/sensative/strips.xml
 domoticz/Config/shenzen_neo/nas-ds01z.xml
 domoticz/Config/shenzen_neo/nas-pd01z.xml
 domoticz/Config/shenzen_neo/nas-wr01z.xml
+domoticz/Config/shenzen_neo/nas-ws02z.xml
 domoticz/Config/stelpro/stzw402.xml
 domoticz/Config/swiid/swiidinter.xml
 domoticz/Config/swiid/swiidplug.xml
+domoticz/Config/telldus/tzdw100.xml
 domoticz/Config/thermofloor/heatit021.xml
 domoticz/Config/trane/TZEMT400AB32MAA.xml
 domoticz/Config/trane/TZEMT400BB32MAA.xml
@@ -289,8 +302,11 @@ domoticz/Config/wenzhou/tz68.xml
 domoticz/Config/wenzhou/tz88.xml
 domoticz/Config/widom/UBS104.xml
 domoticz/Config/widom/UME304C_S.xml
+domoticz/Config/widom/WDS.xml
 domoticz/Config/zipato/MiniKeypad.xml
 domoticz/Config/zipato/RGBBulb.xml
+domoticz/Config/zooz/zen07.xml
+domoticz/Config/zooz/zse08.xml
 domoticz/Config/zwave.me/ZME_05431.xml
 domoticz/Config/zwave.me/ZME_06433.xml
 domoticz/Config/zwave.me/ZME_06436.xml
@@ -314,6 +330,8 @@ domoticz/scripts/_domoticz_main
 domoticz/scripts/_domoticz_main.bat
 domoticz/scripts/buienradar_rain_example.pl
 domoticz/scripts/download_update.sh
+domoticz/scripts/logrotate/domoticz
+domoticz/scripts/lua/JSON.lua
 domoticz/scripts/lua/script_device_demo.lua
 domoticz/scripts/lua/script_time_demo.lua
 domoticz/scripts/lua_parsers/example.lua

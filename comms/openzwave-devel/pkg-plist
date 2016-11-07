@@ -78,6 +78,7 @@ bin/ozw_config
 %%ETCDIR%%/device_classes.xsd
 %%ETCDIR%%/device_configuration.xsd
 %%ETCDIR%%/devolo/mt02648.xml
+%%ETCDIR%%/devolo/mt2646.xml
 %%ETCDIR%%/dlink/dch-z110.xml
 %%ETCDIR%%/dlink/dch-z120.xml
 %%ETCDIR%%/dlink/dch-z510.xml
@@ -146,6 +147,7 @@ bin/ozw_config
 %%ETCDIR%%/fortrezz/mimolite.xml
 %%ETCDIR%%/fortrezz/ssa2.xml
 %%ETCDIR%%/fortrezz/ssa3.xml
+%%ETCDIR%%/fortrezz/wv01.xml
 %%ETCDIR%%/fortrezz/wwa02.xml
 %%ETCDIR%%/frostdale/fdn2nxx.xml
 %%ETCDIR%%/ge/12724-dimmer.xml
