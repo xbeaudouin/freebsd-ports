@@ -1,4 +1,3 @@
-/you/have/to/check/what/makeplist/gives/you
 domoticz/Config/2gig/ct100.xml
 domoticz/Config/2gig/ct101.xml
 domoticz/Config/2gig/ct30.xml
@@ -156,6 +155,7 @@ domoticz/Config/frostdale/fdn2nxx.xml
 domoticz/Config/ge/12724-dimmer.xml
 domoticz/Config/ge/dimmer.xml
 domoticz/Config/ge/dimmer_module.xml
+domoticz/Config/ge/hinge-pin.xml
 domoticz/Config/ge/receptacle.xml
 domoticz/Config/ge/relay.xml
 domoticz/Config/gr/gr105.xml
@@ -185,6 +185,7 @@ domoticz/Config/leviton/vri06.xml
 domoticz/Config/leviton/vri10.xml
 domoticz/Config/linear/LB60Z-1.xml
 domoticz/Config/linear/PD300Z-2.xml
+domoticz/Config/linear/WA00Z-1.xml
 domoticz/Config/linear/WD500Z-1.xml
 domoticz/Config/manufacturer_specific.xml
 domoticz/Config/manufacturer_specific.xsd
@@ -242,7 +243,8 @@ domoticz/Config/qubino/ZMNHCDx.xml
 domoticz/Config/qubino/ZMNHDA2.xml
 domoticz/Config/qubino/ZMNHDDx.xml
 domoticz/Config/qubino/ZMNHIA2.xml
-domoticz/Config/qubino/ZMNHIDx.xml
+domoticz/Config/qubino/ZMNHIDxS1.xml
+domoticz/Config/qubino/ZMNHIDxS2.xml
 domoticz/Config/qubino/ZMNHJA2.xml
 domoticz/Config/qubino/ZMNHJD1.xml
 domoticz/Config/qubino/ZMNHKDx.xml
@@ -282,6 +284,7 @@ domoticz/Config/trane/TZEMT400AB32MAA.xml
 domoticz/Config/trane/TZEMT400BB32MAA.xml
 domoticz/Config/vision/zd2102.xml
 domoticz/Config/vision/zd2201.xml
+domoticz/Config/vision/zd2301.xml
 domoticz/Config/vision/zg8101.xml
 domoticz/Config/vision/zm1601eu.xml
 domoticz/Config/vision/zm1601eu5.xml
@@ -308,6 +311,7 @@ domoticz/Config/zipato/MiniKeypad.xml
 domoticz/Config/zipato/RGBBulb.xml
 domoticz/Config/zooz/zen07.xml
 domoticz/Config/zooz/zse08.xml
+domoticz/Config/zooz/zse09.xml
 domoticz/Config/zwave.me/ZME_05431.xml
 domoticz/Config/zwave.me/ZME_06433.xml
 domoticz/Config/zwave.me/ZME_06436.xml
