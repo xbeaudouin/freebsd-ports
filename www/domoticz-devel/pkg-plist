@@ -89,6 +89,7 @@ domoticz/Config/duwi/05458.xml
 domoticz/Config/duwi/ZWES1000.xml
 domoticz/Config/duwi/ZWESJ300.xml
 domoticz/Config/duwi/zwfb.xml
+domoticz/Config/ecolink/sensor.xml
 domoticz/Config/electronicsolutions/dbmz.xml
 domoticz/Config/enerwave/zw15s.xml
 domoticz/Config/enerwave/zw20r.xml
@@ -133,7 +134,6 @@ domoticz/Config/fibaro/fgk10x.xml
 domoticz/Config/fibaro/fgms.xml
 domoticz/Config/fibaro/fgpb101.xml
 domoticz/Config/fibaro/fgr221.xml
-domoticz/Config/fibaro/fgr222.xml
 domoticz/Config/fibaro/fgrgbwm441.xml
 domoticz/Config/fibaro/fgrm222.xml
 domoticz/Config/fibaro/fgs211.xml
@@ -186,6 +186,7 @@ domoticz/Config/leviton/vri10.xml
 domoticz/Config/linear/LB60Z-1.xml
 domoticz/Config/linear/PD300Z-2.xml
 domoticz/Config/linear/WA00Z-1.xml
+domoticz/Config/linear/WAPIRZ-1.xml
 domoticz/Config/linear/WD500Z-1.xml
 domoticz/Config/manufacturer_specific.xml
 domoticz/Config/manufacturer_specific.xsd
@@ -226,6 +227,7 @@ domoticz/Config/polycontrol/keypad.xml
 domoticz/Config/polycontrol/polylock.xml
 domoticz/Config/popp/009105.xml
 domoticz/Config/popp/009303.xml
+domoticz/Config/popp/012501.xml
 domoticz/Config/popp/123580.xml
 domoticz/Config/popp/123601.xml
 domoticz/Config/popp/123658.xml
@@ -309,6 +311,7 @@ domoticz/Config/widom/UME304C_S.xml
 domoticz/Config/widom/WDS.xml
 domoticz/Config/zipato/MiniKeypad.xml
 domoticz/Config/zipato/RGBBulb.xml
+domoticz/Config/zipato/vszd2102.xml
 domoticz/Config/zooz/zen07.xml
 domoticz/Config/zooz/zse08.xml
 domoticz/Config/zooz/zse09.xml

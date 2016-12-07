@@ -13,6 +13,7 @@ bin/ozw_config
 %%ETCDIR%%/BeNext/HeatingControl.xml
 %%ETCDIR%%/BeNext/Molite.xml
 %%ETCDIR%%/BeNext/PanicButton.xml
+%%ETCDIR%%/BeNext/PanicWatch.xml
 %%ETCDIR%%/BeNext/PluginDimmer.xml
 %%ETCDIR%%/BeNext/SceneController.xml
 %%ETCDIR%%/BeNext/TagReader.xml
@@ -79,6 +80,7 @@ bin/ozw_config
 %%ETCDIR%%/device_configuration.xsd
 %%ETCDIR%%/devolo/mt02648.xml
 %%ETCDIR%%/devolo/mt2646.xml
+%%ETCDIR%%/devolo/mt2647.xml
 %%ETCDIR%%/dlink/dch-z110.xml
 %%ETCDIR%%/dlink/dch-z120.xml
 %%ETCDIR%%/dlink/dch-z510.xml
@@ -89,6 +91,7 @@ bin/ozw_config
 %%ETCDIR%%/duwi/ZWES1000.xml
 %%ETCDIR%%/duwi/ZWESJ300.xml
 %%ETCDIR%%/duwi/zwfb.xml
+%%ETCDIR%%/ecolink/sensor.xml
 %%ETCDIR%%/electronicsolutions/dbmz.xml
 %%ETCDIR%%/enerwave/zw15s.xml
 %%ETCDIR%%/enerwave/zw20r.xml
@@ -129,10 +132,10 @@ bin/ozw_config
 %%ETCDIR%%/fibaro/fgfs101zw5.xml
 %%ETCDIR%%/fibaro/fggc001.xml
 %%ETCDIR%%/fibaro/fgk001.xml
+%%ETCDIR%%/fibaro/fgk10x.xml
 %%ETCDIR%%/fibaro/fgms.xml
 %%ETCDIR%%/fibaro/fgpb101.xml
 %%ETCDIR%%/fibaro/fgr221.xml
-%%ETCDIR%%/fibaro/fgr222.xml
 %%ETCDIR%%/fibaro/fgrgbwm441.xml
 %%ETCDIR%%/fibaro/fgrm222.xml
 %%ETCDIR%%/fibaro/fgs211.xml
@@ -144,6 +147,7 @@ bin/ozw_config
 %%ETCDIR%%/fibaro/fgsd002.xml
 %%ETCDIR%%/fibaro/fgss101.xml
 %%ETCDIR%%/fibaro/fgwpe.xml
+%%ETCDIR%%/firstalert/zcombo.xml
 %%ETCDIR%%/fortrezz/mimolite.xml
 %%ETCDIR%%/fortrezz/ssa2.xml
 %%ETCDIR%%/fortrezz/ssa3.xml
@@ -153,6 +157,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/12724-dimmer.xml
 %%ETCDIR%%/ge/dimmer.xml
 %%ETCDIR%%/ge/dimmer_module.xml
+%%ETCDIR%%/ge/hinge-pin.xml
 %%ETCDIR%%/ge/receptacle.xml
 %%ETCDIR%%/ge/relay.xml
 %%ETCDIR%%/gr/gr105.xml
@@ -171,6 +176,7 @@ bin/ozw_config
 %%ETCDIR%%/horstmann/ses303.xml
 %%ETCDIR%%/horstmann/sir321.xml
 %%ETCDIR%%/horstmann/srt323.xml
+%%ETCDIR%%/idlock/idlock101.xml
 %%ETCDIR%%/intermatic/ca8900.xml
 %%ETCDIR%%/iris/rangeextender.xml
 %%ETCDIR%%/kwikset/smartcode.xml
@@ -181,6 +187,8 @@ bin/ozw_config
 %%ETCDIR%%/leviton/vri10.xml
 %%ETCDIR%%/linear/LB60Z-1.xml
 %%ETCDIR%%/linear/PD300Z-2.xml
+%%ETCDIR%%/linear/WA00Z-1.xml
+%%ETCDIR%%/linear/WAPIRZ-1.xml
 %%ETCDIR%%/linear/WD500Z-1.xml
 %%ETCDIR%%/manufacturer_specific.xml
 %%ETCDIR%%/manufacturer_specific.xsd
@@ -238,10 +246,13 @@ bin/ozw_config
 %%ETCDIR%%/qubino/ZMNHDA2.xml
 %%ETCDIR%%/qubino/ZMNHDDx.xml
 %%ETCDIR%%/qubino/ZMNHIA2.xml
-%%ETCDIR%%/qubino/ZMNHIDx.xml
+%%ETCDIR%%/qubino/ZMNHIDxS1.xml
+%%ETCDIR%%/qubino/ZMNHIDxS2.xml
 %%ETCDIR%%/qubino/ZMNHJA2.xml
 %%ETCDIR%%/qubino/ZMNHJD1.xml
+%%ETCDIR%%/qubino/ZMNHKDx.xml
 %%ETCDIR%%/qubino/ZMNHLAx.xml
+%%ETCDIR%%/qubino/ZMNHLDx.xml
 %%ETCDIR%%/qubino/ZMNHNDx.xml
 %%ETCDIR%%/qubino/ZMNHODx.xml
 %%ETCDIR%%/qubino/ZMNHSDx.xml
@@ -266,14 +277,17 @@ bin/ozw_config
 %%ETCDIR%%/shenzen_neo/nas-ds01z.xml
 %%ETCDIR%%/shenzen_neo/nas-pd01z.xml
 %%ETCDIR%%/shenzen_neo/nas-wr01z.xml
+%%ETCDIR%%/shenzen_neo/nas-ws02z.xml
 %%ETCDIR%%/stelpro/stzw402.xml
 %%ETCDIR%%/swiid/swiidinter.xml
 %%ETCDIR%%/swiid/swiidplug.xml
+%%ETCDIR%%/telldus/tzdw100.xml
 %%ETCDIR%%/thermofloor/heatit021.xml
 %%ETCDIR%%/trane/TZEMT400AB32MAA.xml
 %%ETCDIR%%/trane/TZEMT400BB32MAA.xml
 %%ETCDIR%%/vision/zd2102.xml
 %%ETCDIR%%/vision/zd2201.xml
+%%ETCDIR%%/vision/zd2301.xml
 %%ETCDIR%%/vision/zg8101.xml
 %%ETCDIR%%/vision/zm1601eu.xml
 %%ETCDIR%%/vision/zm1601eu5.xml
@@ -298,6 +312,10 @@ bin/ozw_config
 %%ETCDIR%%/widom/WDS.xml
 %%ETCDIR%%/zipato/MiniKeypad.xml
 %%ETCDIR%%/zipato/RGBBulb.xml
+%%ETCDIR%%/zipato/vszd2102.xml
+%%ETCDIR%%/zooz/zen07.xml
+%%ETCDIR%%/zooz/zse08.xml
+%%ETCDIR%%/zooz/zse09.xml
 %%ETCDIR%%/zwave.me/ZME_05431.xml
 %%ETCDIR%%/zwave.me/ZME_06433.xml
 %%ETCDIR%%/zwave.me/ZME_06436.xml
