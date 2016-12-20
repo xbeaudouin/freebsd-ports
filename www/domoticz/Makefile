@@ -8,6 +8,7 @@ MAINTAINER=	kiwi@oav.net
 COMMENT=	Home Automation System
 
 LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
@@ -41,7 +42,8 @@ USE_RC_SUBR=	domoticz
 USERS=		domoticz
 GROUPS=		domoticz
 
-CMAKE_ARGS+=	-DUSE_BUILTIN_ZLIB="NO" \
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
+		-DUSE_BUILTIN_ZLIB="NO" \
 		-DUSE_PYTHON="YES" \
 		-DUSE_STATIC_OPENZWAVE="NO"
 
@@ -92,6 +94,6 @@ post-patch:
 	@${REINPLACE_CMD} -e "/^ADD_PRECOMPILED_HEADER/ d" ${WRKSRC}/CMakeLists.txt
 
 post-install:
-	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
+	@${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
 
 .include <bsd.port.mk>
