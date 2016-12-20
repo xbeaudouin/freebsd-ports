@@ -67,7 +67,11 @@ domoticz/Config/aeotec/zw120.xml
 domoticz/Config/aeotec/zw121.xml
 domoticz/Config/aeotec/zw130.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
+domoticz/Config/assa_abloy/PushButtonDeadbolt.xml
+domoticz/Config/assa_abloy/PushButtonLever.xml
 domoticz/Config/assa_abloy/RealLivingCapTouch.xml
+domoticz/Config/assa_abloy/TouchDeadbolt.xml
+domoticz/Config/assa_abloy/TouchLever.xml
 domoticz/Config/cooper/RF9505-T.xml
 domoticz/Config/cooper/RF9540-N.xml
 domoticz/Config/danfoss/living.xml
@@ -162,6 +166,8 @@ domoticz/Config/gr/gr105.xml
 domoticz/Config/gr/gr105n.xml
 domoticz/Config/greenwave/powernode1.xml
 domoticz/Config/greenwave/powernode6.xml
+domoticz/Config/hank/scenecontroller1.xml
+domoticz/Config/hank/scenecontroller4.xml
 domoticz/Config/homeseer/ezmotionplus.xml
 domoticz/Config/homeseer/hsm100.xml
 domoticz/Config/homeseer/hsm200.xml
@@ -177,6 +183,7 @@ domoticz/Config/horstmann/srt323.xml
 domoticz/Config/idlock/idlock101.xml
 domoticz/Config/intermatic/ca8900.xml
 domoticz/Config/iris/rangeextender.xml
+domoticz/Config/kaipule/im20.xml
 domoticz/Config/kwikset/smartcode.xml
 domoticz/Config/leviton/rzi10.xml
 domoticz/Config/leviton/vrcpg.xml
@@ -281,12 +288,14 @@ domoticz/Config/stelpro/stzw402.xml
 domoticz/Config/swiid/swiidinter.xml
 domoticz/Config/swiid/swiidplug.xml
 domoticz/Config/telldus/tzdw100.xml
+domoticz/Config/telldus/tzwp100.xml
 domoticz/Config/thermofloor/heatit021.xml
 domoticz/Config/trane/TZEMT400AB32MAA.xml
 domoticz/Config/trane/TZEMT400BB32MAA.xml
 domoticz/Config/vision/zd2102.xml
 domoticz/Config/vision/zd2201.xml
 domoticz/Config/vision/zd2301.xml
+domoticz/Config/vision/zf5201.xml
 domoticz/Config/vision/zg8101.xml
 domoticz/Config/vision/zm1601eu.xml
 domoticz/Config/vision/zm1601eu5.xml
