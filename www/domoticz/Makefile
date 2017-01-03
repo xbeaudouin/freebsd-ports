@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/www/domoticz/Makefile 429660 2016-12-27 20:59:17Z matthew $
 
 PORTNAME=	domoticz
 PORTVERSION=	3.${DOMOTICZ_REL}
@@ -31,11 +31,10 @@ PYTHON_DESC=	Enable support for Python in EventSystem
 DOMOTICZ_REL=	5877
 DOMOTICZ_TS=	1478792673
 USE_GITHUB=	yes
-GH_ACCOUNT=	domoticz 
+GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	15b013c
 
-USES=		cmake iconv pkgconfig execinfo
+USES=		cmake iconv pkgconfig execinfo ssl
 
 USE_RC_SUBR=	domoticz
 

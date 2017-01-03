@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2016-09-08 22:13:40.000000000 +0200
-+++ CMakeLists.txt	2016-09-09 13:43:37.726246000 +0200
-@@ -163,7 +163,7 @@
+--- CMakeLists.txt.orig	2016-11-10 15:44:33 UTC
++++ CMakeLists.txt
+@@ -163,7 +163,7 @@ MACRO(ADD_PRECOMPILED_HEADER _targetName
    ENDIF(CMAKE_COMPILER_IS_GNUCXX)
  ENDMACRO()
  
@@ -9,7 +9,7 @@
    DOC "git command line client")
  
  MACRO(Gitversion_GET_REVISION dir variable)
-@@ -645,14 +645,13 @@
+@@ -653,14 +653,13 @@ IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_D
    set(CMAKE_INSTALL_PREFIX "/opt/${CPACK_PACKAGE_NAME}" CACHE PATH "Install path prefix, prepended onto install directories." FORCE)
  ENDIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
  
