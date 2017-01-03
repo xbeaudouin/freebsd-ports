@@ -8,6 +8,7 @@ MAINTAINER=	kiwi@oav.net
 COMMENT=	Home Automation System
 
 LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
@@ -28,12 +29,12 @@ PYTHON_DESC=	Enable support for Python in EventSystem
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	6207
-DOMOTICZ_TS=	1482134601
+DOMOTICZ_REL=	6304
+DOMOTICZ_TS=	1483436952
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz 
 GH_PROJECT=	domoticz
-GH_TAGNAME=	92d154f
+GH_TAGNAME=	ef84f72
 
 USES=		cmake iconv pkgconfig execinfo
 
@@ -42,7 +43,8 @@ USE_RC_SUBR=	domoticz
 USERS=		domoticz
 GROUPS=		domoticz
 
-CMAKE_ARGS+=	-DUSE_BUILTIN_ZLIB="NO" \
+CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
+		-DUSE_BUILTIN_ZLIB="NO" \
 		-DUSE_PYTHON="YES" \
 		-DUSE_STATIC_OPENZWAVE="NO" \
 		-DUSE_PYTHON_PLUGINS="NO"

@@ -62,6 +62,7 @@ domoticz/Config/aeotec/zw098.xml
 domoticz/Config/aeotec/zw099.xml
 domoticz/Config/aeotec/zw100.xml
 domoticz/Config/aeotec/zw112.xml
+domoticz/Config/aeotec/zw116.xml
 domoticz/Config/aeotec/zw117.xml
 domoticz/Config/aeotec/zw120.xml
 domoticz/Config/aeotec/zw121.xml
@@ -343,6 +344,9 @@ domoticz/Config/zwscene.xsd
 domoticz/History.txt
 domoticz/License.txt
 domoticz/domoticz
+domoticz/plugins/examples/Denon4306.py
+domoticz/plugins/examples/Kodi.py
+domoticz/plugins/examples/RAVEn.py
 domoticz/scripts/_domoticz_main
 domoticz/scripts/_domoticz_main.bat
 domoticz/scripts/buienradar_rain_example.pl
