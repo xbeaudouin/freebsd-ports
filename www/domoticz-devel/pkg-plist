@@ -401,6 +401,7 @@ domoticz/www/app/CustomIconsController.js
 domoticz/www/app/DPFibaroController.js
 domoticz/www/app/DPGooglePubSubController.js
 domoticz/www/app/DPHttpController.js
+domoticz/www/app/DPInfluxController.js
 domoticz/www/app/DashboardController.js
 domoticz/www/app/DevicesController.js
 domoticz/www/app/DummyController.js
@@ -502,6 +503,7 @@ domoticz/www/i18n/domoticz-de.json.gz
 domoticz/www/i18n/domoticz-el.json.gz
 domoticz/www/i18n/domoticz-en.json.gz
 domoticz/www/i18n/domoticz-es.json.gz
+domoticz/www/i18n/domoticz-et.json.gz
 domoticz/www/i18n/domoticz-fi.json.gz
 domoticz/www/i18n/domoticz-fr.json.gz
 domoticz/www/i18n/domoticz-he.json.gz
@@ -509,6 +511,7 @@ domoticz/www/i18n/domoticz-hu.json.gz
 domoticz/www/i18n/domoticz-is.json.gz
 domoticz/www/i18n/domoticz-it.json.gz
 domoticz/www/i18n/domoticz-lt.json.gz
+domoticz/www/i18n/domoticz-lv.json.gz
 domoticz/www/i18n/domoticz-mk.json.gz
 domoticz/www/i18n/domoticz-nl.json.gz
 domoticz/www/i18n/domoticz-no.json.gz
@@ -1029,6 +1032,9 @@ domoticz/www/secpanel/media/key.ogg
 domoticz/www/secpanel/media/wrongcode.aac
 domoticz/www/secpanel/media/wrongcode.mp3
 domoticz/www/secpanel/media/wrongcode.ogg
+domoticz/www/styles/dark-th3me/custom.css
+domoticz/www/styles/dark-th3me/fonts/Ubuntu.ttf
+domoticz/www/styles/dark-th3me/images/domoticz.jpg
 domoticz/www/styles/default/custom.css
 domoticz/www/styles/element-dark/custom.css
 domoticz/www/styles/element-dark/fonts/DroidSans.ttf
@@ -1056,6 +1062,7 @@ domoticz/www/views/devices.html
 domoticz/www/views/dpfibaro.html
 domoticz/www/views/dpgooglepubsub.html
 domoticz/www/views/dphttp.html
+domoticz/www/views/dpinflux.html
 domoticz/www/views/events.html
 domoticz/www/views/floorplanedit.html
 domoticz/www/views/floorplans.html
