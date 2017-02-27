@@ -99,8 +99,12 @@ bin/ozw_config
 %%ETCDIR%%/duwi/ZWES1000.xml
 %%ETCDIR%%/duwi/ZWESJ300.xml
 %%ETCDIR%%/duwi/zwfb.xml
+%%ETCDIR%%/ecolink/doorwindow.xml
+%%ETCDIR%%/ecolink/firefighter.xml
+%%ETCDIR%%/ecolink/motion.xml
 %%ETCDIR%%/ecolink/sensor.xml
 %%ETCDIR%%/electronicsolutions/dbmz.xml
+%%ETCDIR%%/enerwave/zw15rmplus.xml
 %%ETCDIR%%/enerwave/zw15s.xml
 %%ETCDIR%%/enerwave/zw20r.xml
 %%ETCDIR%%/enerwave/zw20rm.xml
@@ -141,6 +145,7 @@ bin/ozw_config
 %%ETCDIR%%/fibaro/fggc001.xml
 %%ETCDIR%%/fibaro/fgk001.xml
 %%ETCDIR%%/fibaro/fgk10x.xml
+%%ETCDIR%%/fibaro/fgkf601.xml
 %%ETCDIR%%/fibaro/fgms.xml
 %%ETCDIR%%/fibaro/fgmszw5.xml
 %%ETCDIR%%/fibaro/fgpb101.xml
@@ -164,8 +169,8 @@ bin/ozw_config
 %%ETCDIR%%/fortrezz/wv01.xml
 %%ETCDIR%%/fortrezz/wwa02.xml
 %%ETCDIR%%/frostdale/fdn2nxx.xml
-%%ETCDIR%%/ge/12491-switch.xml
 %%ETCDIR%%/ge/12724-dimmer.xml
+%%ETCDIR%%/ge/14291-switch.xml
 %%ETCDIR%%/ge/dimmer.xml
 %%ETCDIR%%/ge/dimmer_module.xml
 %%ETCDIR%%/ge/hinge-pin.xml
@@ -233,6 +238,7 @@ bin/ozw_config
 %%ETCDIR%%/options.xsd
 %%ETCDIR%%/philio/pan03.xml
 %%ETCDIR%%/philio/pan04.xml
+%%ETCDIR%%/philio/pan07.xml
 %%ETCDIR%%/philio/pan08.xml
 %%ETCDIR%%/philio/pan11.xml
 %%ETCDIR%%/philio/phpab01.xml
@@ -249,6 +255,7 @@ bin/ozw_config
 %%ETCDIR%%/polycontrol/polylock.xml
 %%ETCDIR%%/popp/009105.xml
 %%ETCDIR%%/popp/009303.xml
+%%ETCDIR%%/popp/009402.xml
 %%ETCDIR%%/popp/012501.xml
 %%ETCDIR%%/popp/123580.xml
 %%ETCDIR%%/popp/123601.xml
@@ -407,9 +414,9 @@ include/openzwave/command_classes/Lock.h
 include/openzwave/command_classes/ManufacturerSpecific.h
 include/openzwave/command_classes/Meter.h
 include/openzwave/command_classes/MeterPulse.h
+include/openzwave/command_classes/MultiChannelAssociation.h
 include/openzwave/command_classes/MultiCmd.h
 include/openzwave/command_classes/MultiInstance.h
-include/openzwave/command_classes/MultiInstanceAssociation.h
 include/openzwave/command_classes/NoOperation.h
 include/openzwave/command_classes/NodeNaming.h
 include/openzwave/command_classes/Powerlevel.h
@@ -470,7 +477,7 @@ include/openzwave/value_classes/ValueStore.h
 include/openzwave/value_classes/ValueString.h
 lib/libopenzwave.so
 lib/libopenzwave.so.1.4
-libdata/pkgconfig/libopenzwave.pc
+lib/pkgconfig/libopenzwave.pc
 @dir %%ETCDIR%%/2gig
 @dir %%ETCDIR%%/BeNext
 @dir %%ETCDIR%%/act
@@ -527,4 +534,4 @@ libdata/pkgconfig/libopenzwave.pc
 @dir include/openzwave/platform
 @dir include/openzwave/value_classes
 @dir include/openzwave
-@dir libdata/pkgconfig
+@dir lib/pkgconfig
