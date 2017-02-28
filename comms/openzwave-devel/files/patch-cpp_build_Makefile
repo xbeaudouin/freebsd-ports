@@ -1,0 +1,11 @@
+--- cpp/build/Makefile.orig	2017-02-28 13:20:23.936707000 +0100
++++ cpp/build/Makefile	2017-02-28 13:21:19.797478000 +0100
+@@ -230,6 +230,8 @@
+ 	@echo "Installing Pkg-config Files"
+ 	@install -d $(DESTDIR)/$(pkgconfigdir) 
+ 	@cp $(top_builddir)/libopenzwave.pc $(DESTDIR)/$(pkgconfigdir)
++	@install -d $(DESTDIR)/$(PREFIX)/libdata/pkgconfig 
++	@cp $(top_builddir)/libopenzwave.pc $(DESTDIR)/$(PREFIX)/libdata/pkgconfig
+ 	@install -d $(DESTDIR)/$(PREFIX)/bin/
+ 	@cp $(top_builddir)/ozw_config $(DESTDIR)/$(PREFIX)/bin/ozw_config
+ 	@chmod 755 $(DESTDIR)/$(PREFIX)/bin/ozw_config
