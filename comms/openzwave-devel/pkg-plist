@@ -478,6 +478,7 @@ include/openzwave/value_classes/ValueString.h
 lib/libopenzwave.so
 lib/libopenzwave.so.1.4
 lib/pkgconfig/libopenzwave.pc
+libdata/pkgconfig/libopenzwave.pc
 @dir %%ETCDIR%%/2gig
 @dir %%ETCDIR%%/BeNext
 @dir %%ETCDIR%%/act

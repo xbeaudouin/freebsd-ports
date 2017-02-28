@@ -48,6 +48,7 @@ post-install:
 .else
 	${RM} ${STAGEDIR}${DOCSDIR}/Doxyfile.in
 .endif
+	${CP} ${STAGEDIR}${LOCALBASE}/lib/pkgconfig/libopenzwave.pc ${STAGEDIR}${LOCALBASE}/libdata/pkgconfig
 
 MAKE_ARGS=VERSION_REV=${VERSION_REV} LIBDIR=${WRKSRC} docdir=${DOCSDIR}
 
