@@ -61,6 +61,7 @@ domoticz/Config/aeotec/zw097.xml
 domoticz/Config/aeotec/zw098.xml
 domoticz/Config/aeotec/zw099.xml
 domoticz/Config/aeotec/zw100.xml
+domoticz/Config/aeotec/zw111.xml
 domoticz/Config/aeotec/zw112.xml
 domoticz/Config/aeotec/zw116.xml
 domoticz/Config/aeotec/zw117.xml
@@ -70,7 +71,6 @@ domoticz/Config/aeotec/zw130.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
 domoticz/Config/assa_abloy/PushButtonDeadbolt.xml
 domoticz/Config/assa_abloy/PushButtonLever.xml
-domoticz/Config/assa_abloy/RealLivingCapTouch.xml
 domoticz/Config/assa_abloy/TouchDeadbolt.xml
 domoticz/Config/assa_abloy/TouchLever.xml
 domoticz/Config/cooper/RF9501.xml
@@ -97,8 +97,12 @@ domoticz/Config/duwi/05458.xml
 domoticz/Config/duwi/ZWES1000.xml
 domoticz/Config/duwi/ZWESJ300.xml
 domoticz/Config/duwi/zwfb.xml
+domoticz/Config/ecolink/doorwindow.xml
+domoticz/Config/ecolink/firefighter.xml
+domoticz/Config/ecolink/motion.xml
 domoticz/Config/ecolink/sensor.xml
 domoticz/Config/electronicsolutions/dbmz.xml
+domoticz/Config/enerwave/zw15rmplus.xml
 domoticz/Config/enerwave/zw15s.xml
 domoticz/Config/enerwave/zw20r.xml
 domoticz/Config/enerwave/zw20rm.xml
@@ -139,6 +143,7 @@ domoticz/Config/fibaro/fgfs101zw5.xml
 domoticz/Config/fibaro/fggc001.xml
 domoticz/Config/fibaro/fgk001.xml
 domoticz/Config/fibaro/fgk10x.xml
+domoticz/Config/fibaro/fgkf601.xml
 domoticz/Config/fibaro/fgms.xml
 domoticz/Config/fibaro/fgmszw5.xml
 domoticz/Config/fibaro/fgpb101.xml
@@ -162,8 +167,8 @@ domoticz/Config/fortrezz/ssa3.xml
 domoticz/Config/fortrezz/wv01.xml
 domoticz/Config/fortrezz/wwa02.xml
 domoticz/Config/frostdale/fdn2nxx.xml
-domoticz/Config/ge/12491-switch.xml
 domoticz/Config/ge/12724-dimmer.xml
+domoticz/Config/ge/14291-switch.xml
 domoticz/Config/ge/dimmer.xml
 domoticz/Config/ge/dimmer_module.xml
 domoticz/Config/ge/hinge-pin.xml
@@ -231,6 +236,7 @@ domoticz/Config/options.xml
 domoticz/Config/options.xsd
 domoticz/Config/philio/pan03.xml
 domoticz/Config/philio/pan04.xml
+domoticz/Config/philio/pan07.xml
 domoticz/Config/philio/pan08.xml
 domoticz/Config/philio/pan11.xml
 domoticz/Config/philio/phpab01.xml
@@ -247,6 +253,7 @@ domoticz/Config/polycontrol/keypad.xml
 domoticz/Config/polycontrol/polylock.xml
 domoticz/Config/popp/009105.xml
 domoticz/Config/popp/009303.xml
+domoticz/Config/popp/009402.xml
 domoticz/Config/popp/012501.xml
 domoticz/Config/popp/123580.xml
 domoticz/Config/popp/123601.xml
