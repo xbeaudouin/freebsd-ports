@@ -17,6 +17,7 @@ bin/ozw_config
 %%ETCDIR%%/BeNext/PluginDimmer.xml
 %%ETCDIR%%/BeNext/SceneController.xml
 %%ETCDIR%%/BeNext/TagReader.xml
+%%ETCDIR%%/BeNext/TagReader500.xml
 %%ETCDIR%%/act/lfm20.xml
 %%ETCDIR%%/act/zdm230.xml
 %%ETCDIR%%/act/zdw103.xml
@@ -69,12 +70,17 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zw117.xml
 %%ETCDIR%%/aeotec/zw120.xml
 %%ETCDIR%%/aeotec/zw121.xml
+%%ETCDIR%%/aeotec/zw129.xml
 %%ETCDIR%%/aeotec/zw130.xml
+%%ETCDIR%%/aeotec/zw132.xml
+%%ETCDIR%%/aeotec/zw139.xml
+%%ETCDIR%%/aeotec/zw140.xml
 %%ETCDIR%%/assa_abloy/KeyfreeConnected.xml
 %%ETCDIR%%/assa_abloy/PushButtonDeadbolt.xml
 %%ETCDIR%%/assa_abloy/PushButtonLever.xml
 %%ETCDIR%%/assa_abloy/TouchDeadbolt.xml
 %%ETCDIR%%/assa_abloy/TouchLever.xml
+%%ETCDIR%%/assa_abloy/nexTouch.xml
 %%ETCDIR%%/cooper/RF9501.xml
 %%ETCDIR%%/cooper/RF9505-T.xml
 %%ETCDIR%%/cooper/RF9517.xml
@@ -94,6 +100,7 @@ bin/ozw_config
 %%ETCDIR%%/dlink/dch-z510.xml
 %%ETCDIR%%/domitech/zb22uk.xml
 %%ETCDIR%%/domitech/ze27eu.xml
+%%ETCDIR%%/domux/dx2skz.xml
 %%ETCDIR%%/dragontech/wd-100.xml
 %%ETCDIR%%/duwi/05458.xml
 %%ETCDIR%%/duwi/ZWES1000.xml
@@ -111,6 +118,7 @@ bin/ozw_config
 %%ETCDIR%%/enerwave/zw500d.xml
 %%ETCDIR%%/enerwave/zwn-bpc.xml
 %%ETCDIR%%/enerwave/zwn-sc7.xml
+%%ETCDIR%%/enerwave/zwnrsm1plus.xml
 %%ETCDIR%%/eurotronic/eur_cometz.xml
 %%ETCDIR%%/eurotronic/eur_stellaz.xml
 %%ETCDIR%%/everspring/ad146.xml
@@ -135,6 +143,8 @@ bin/ozw_config
 %%ETCDIR%%/evolve/lrm-as.xml
 %%ETCDIR%%/evolve/lsm-15.xml
 %%ETCDIR%%/evolve/ltm-5.xml
+%%ETCDIR%%/fakro/zwp10.xml
+%%ETCDIR%%/fakro/zwrs.xml
 %%ETCDIR%%/fakro/zws12.xml
 %%ETCDIR%%/fakro/zws230.xml
 %%ETCDIR%%/fibaro/fgbs001.xml
@@ -171,6 +181,7 @@ bin/ozw_config
 %%ETCDIR%%/frostdale/fdn2nxx.xml
 %%ETCDIR%%/ge/12724-dimmer.xml
 %%ETCDIR%%/ge/14291-switch.xml
+%%ETCDIR%%/ge/14294-dimmer.xml
 %%ETCDIR%%/ge/dimmer.xml
 %%ETCDIR%%/ge/dimmer_module.xml
 %%ETCDIR%%/ge/hinge-pin.xml
@@ -180,10 +191,13 @@ bin/ozw_config
 %%ETCDIR%%/gr/gr105n.xml
 %%ETCDIR%%/greenwave/powernode1.xml
 %%ETCDIR%%/greenwave/powernode6.xml
+%%ETCDIR%%/hank/hkzw-so01-smartplug.xml
+%%ETCDIR%%/hank/hkzw-so05-smartplug.xml
 %%ETCDIR%%/hank/scenecontroller1.xml
 %%ETCDIR%%/hank/scenecontroller4.xml
 %%ETCDIR%%/homeseer/ezmotionplus.xml
 %%ETCDIR%%/homeseer/hs-wd100plus.xml
+%%ETCDIR%%/homeseer/hs-ws100plus.xml
 %%ETCDIR%%/homeseer/hsm100.xml
 %%ETCDIR%%/homeseer/hsm200.xml
 %%ETCDIR%%/homeseer/ztroller.xml
@@ -352,6 +366,7 @@ bin/ozw_config
 %%ETCDIR%%/zooz/zse09.xml
 %%ETCDIR%%/zooz/zse40.xml
 %%ETCDIR%%/zwave.me/ZME_05431.xml
+%%ETCDIR%%/zwave.me/ZME_05461.xml
 %%ETCDIR%%/zwave.me/ZME_06433.xml
 %%ETCDIR%%/zwave.me/ZME_06436.xml
 %%ETCDIR%%/zwave.me/ZME_064381.xml

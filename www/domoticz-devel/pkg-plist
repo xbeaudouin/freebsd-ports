@@ -15,6 +15,7 @@ domoticz/Config/BeNext/PanicWatch.xml
 domoticz/Config/BeNext/PluginDimmer.xml
 domoticz/Config/BeNext/SceneController.xml
 domoticz/Config/BeNext/TagReader.xml
+domoticz/Config/BeNext/TagReader500.xml
 domoticz/Config/act/lfm20.xml
 domoticz/Config/act/zdm230.xml
 domoticz/Config/act/zdw103.xml
@@ -67,12 +68,17 @@ domoticz/Config/aeotec/zw116.xml
 domoticz/Config/aeotec/zw117.xml
 domoticz/Config/aeotec/zw120.xml
 domoticz/Config/aeotec/zw121.xml
+domoticz/Config/aeotec/zw129.xml
 domoticz/Config/aeotec/zw130.xml
+domoticz/Config/aeotec/zw132.xml
+domoticz/Config/aeotec/zw139.xml
+domoticz/Config/aeotec/zw140.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
 domoticz/Config/assa_abloy/PushButtonDeadbolt.xml
 domoticz/Config/assa_abloy/PushButtonLever.xml
 domoticz/Config/assa_abloy/TouchDeadbolt.xml
 domoticz/Config/assa_abloy/TouchLever.xml
+domoticz/Config/assa_abloy/nexTouch.xml
 domoticz/Config/cooper/RF9501.xml
 domoticz/Config/cooper/RF9505-T.xml
 domoticz/Config/cooper/RF9517.xml
@@ -92,6 +98,7 @@ domoticz/Config/dlink/dch-z120.xml
 domoticz/Config/dlink/dch-z510.xml
 domoticz/Config/domitech/zb22uk.xml
 domoticz/Config/domitech/ze27eu.xml
+domoticz/Config/domux/dx2skz.xml
 domoticz/Config/dragontech/wd-100.xml
 domoticz/Config/duwi/05458.xml
 domoticz/Config/duwi/ZWES1000.xml
@@ -109,6 +116,7 @@ domoticz/Config/enerwave/zw20rm.xml
 domoticz/Config/enerwave/zw500d.xml
 domoticz/Config/enerwave/zwn-bpc.xml
 domoticz/Config/enerwave/zwn-sc7.xml
+domoticz/Config/enerwave/zwnrsm1plus.xml
 domoticz/Config/eurotronic/eur_cometz.xml
 domoticz/Config/eurotronic/eur_stellaz.xml
 domoticz/Config/everspring/ad146.xml
@@ -133,6 +141,8 @@ domoticz/Config/everspringct/hsm02.xml
 domoticz/Config/evolve/lrm-as.xml
 domoticz/Config/evolve/lsm-15.xml
 domoticz/Config/evolve/ltm-5.xml
+domoticz/Config/fakro/zwp10.xml
+domoticz/Config/fakro/zwrs.xml
 domoticz/Config/fakro/zws12.xml
 domoticz/Config/fakro/zws230.xml
 domoticz/Config/fibaro/fgbs001.xml
@@ -169,6 +179,7 @@ domoticz/Config/fortrezz/wwa02.xml
 domoticz/Config/frostdale/fdn2nxx.xml
 domoticz/Config/ge/12724-dimmer.xml
 domoticz/Config/ge/14291-switch.xml
+domoticz/Config/ge/14294-dimmer.xml
 domoticz/Config/ge/dimmer.xml
 domoticz/Config/ge/dimmer_module.xml
 domoticz/Config/ge/hinge-pin.xml
@@ -182,6 +193,7 @@ domoticz/Config/hank/scenecontroller1.xml
 domoticz/Config/hank/scenecontroller4.xml
 domoticz/Config/homeseer/ezmotionplus.xml
 domoticz/Config/homeseer/hs-wd100plus.xml
+domoticz/Config/homeseer/hs-ws100plus.xml
 domoticz/Config/homeseer/hsm100.xml
 domoticz/Config/homeseer/hsm200.xml
 domoticz/Config/homeseer/ztroller.xml
@@ -350,6 +362,7 @@ domoticz/Config/zooz/zse08.xml
 domoticz/Config/zooz/zse09.xml
 domoticz/Config/zooz/zse40.xml
 domoticz/Config/zwave.me/ZME_05431.xml
+domoticz/Config/zwave.me/ZME_05461.xml
 domoticz/Config/zwave.me/ZME_06433.xml
 domoticz/Config/zwave.me/ZME_06436.xml
 domoticz/Config/zwave.me/ZME_064381.xml
@@ -372,8 +385,9 @@ domoticz/plugins/AwoxSMP/%%LUA_LIBDIR%%/__init__.py
 domoticz/plugins/AwoxSMP/%%LUA_LIBDIR%%/pySmartPlugSmpB16.py
 domoticz/plugins/AwoxSMP/plugin.py
 domoticz/plugins/examples/BaseTemplate.py
-domoticz/plugins/examples/Denon4306.py
+domoticz/plugins/examples/DenonMarantz.py
 domoticz/plugins/examples/Dlink DSP-W215.py
+domoticz/plugins/examples/HTTP.py
 domoticz/plugins/examples/Kodi.py
 domoticz/plugins/examples/RAVEn.py
 domoticz/scripts/_domoticz_main
