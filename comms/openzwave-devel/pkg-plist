@@ -182,6 +182,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/12724-dimmer.xml
 %%ETCDIR%%/ge/14291-switch.xml
 %%ETCDIR%%/ge/14294-dimmer.xml
+%%ETCDIR%%/ge/26933-motion-dimmer.xml
 %%ETCDIR%%/ge/dimmer.xml
 %%ETCDIR%%/ge/dimmer_module.xml
 %%ETCDIR%%/ge/hinge-pin.xml
@@ -494,60 +495,3 @@ lib/libopenzwave.so
 lib/libopenzwave.so.1.4
 lib/pkgconfig/libopenzwave.pc
 libdata/pkgconfig/libopenzwave.pc
-@dir %%ETCDIR%%/2gig
-@dir %%ETCDIR%%/BeNext
-@dir %%ETCDIR%%/act
-@dir %%ETCDIR%%/aeotec
-@dir %%ETCDIR%%/assa_abloy
-@dir %%ETCDIR%%/cooper
-@dir %%ETCDIR%%/danfoss
-@dir %%ETCDIR%%/dlink
-@dir %%ETCDIR%%/dragontech
-@dir %%ETCDIR%%/duwi
-@dir %%ETCDIR%%/enerwave
-@dir %%ETCDIR%%/eurotronic
-@dir %%ETCDIR%%/everspring
-@dir %%ETCDIR%%/everspringct
-@dir %%ETCDIR%%/evolve
-@dir %%ETCDIR%%/fibaro
-@dir %%ETCDIR%%/frostdale
-@dir %%ETCDIR%%/ge
-@dir %%ETCDIR%%/greenwave
-@dir %%ETCDIR%%/homeseer
-@dir %%ETCDIR%%/honeywell
-@dir %%ETCDIR%%/horstmann
-@dir %%ETCDIR%%/intermatic
-@dir %%ETCDIR%%/iris
-@dir %%ETCDIR%%/leviton
-@dir %%ETCDIR%%/linear
-@dir %%ETCDIR%%/mcohome
-@dir %%ETCDIR%%/merten
-@dir %%ETCDIR%%/nodon
-@dir %%ETCDIR%%/northq
-@dir %%ETCDIR%%/philio
-@dir %%ETCDIR%%/polycontrol
-@dir %%ETCDIR%%/popp
-@dir %%ETCDIR%%/qees
-@dir %%ETCDIR%%/qubino
-@dir %%ETCDIR%%/rcs
-@dir %%ETCDIR%%/remotec
-@dir %%ETCDIR%%/schlage
-@dir %%ETCDIR%%/schlagelink
-@dir %%ETCDIR%%/swiid
-@dir %%ETCDIR%%/thermofloor
-@dir %%ETCDIR%%/trane
-@dir %%ETCDIR%%/vision
-@dir %%ETCDIR%%/vitrum
-@dir %%ETCDIR%%/waynedalton
-@dir %%ETCDIR%%/wenzhou
-@dir %%ETCDIR%%/widom
-@dir %%ETCDIR%%/zipato
-@dir %%ETCDIR%%/zwave.me
-@dir %%ETCDIR%%
-@dir include/openzwave/aes
-@dir include/openzwave/command_classes
-@dir include/openzwave/platform/unix
-@dir include/openzwave/platform
-@dir include/openzwave/value_classes
-@dir include/openzwave
-@dir lib/pkgconfig
