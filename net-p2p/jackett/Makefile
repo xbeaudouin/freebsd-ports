@@ -1,7 +1,7 @@
 # $FreeBSD: head/net-p2p/sonarr/Makefile 430494 2017-01-03 18:28:10Z feld $
 
 PORTNAME=	jackett
-PORTVERSION=	0.7.1225
+PORTVERSION=	0.7.1256
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://github.com/Jackett/Jackett/releases/download/
 DISTNAME=	v${PORTVERSION}/Jackett.Binaries.Mono
@@ -19,8 +19,7 @@ USE_RC_SUBR=	jackett
 NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/Jackett
 
-#USERS=	jackett
-USERS=	nobody
+USERS=	jackett
 
 .include <bsd.port.options.mk>
 

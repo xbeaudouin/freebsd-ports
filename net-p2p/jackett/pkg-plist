@@ -52,6 +52,7 @@
 %%DATADIR%%/CurlSharp.dll.mdb
 %%DATADIR%%/DateTimeRoutines.dll
 %%DATADIR%%/Definitions/2fast4you.yml
+%%DATADIR%%/Definitions/3dtorrents.yml
 %%DATADIR%%/Definitions/acidlounge.yml
 %%DATADIR%%/Definitions/aox.yml
 %%DATADIR%%/Definitions/apollo.yml
@@ -89,6 +90,7 @@
 %%DATADIR%%/Definitions/gods.yml
 %%DATADIR%%/Definitions/gormogon.yml
 %%DATADIR%%/Definitions/greekteam.yml
+%%DATADIR%%/Definitions/hdbits.yml
 %%DATADIR%%/Definitions/hdbitscom.yml
 %%DATADIR%%/Definitions/hdclub.yml
 %%DATADIR%%/Definitions/hdhome.yml
@@ -100,6 +102,7 @@
 %%DATADIR%%/Definitions/hyperay.yml
 %%DATADIR%%/Definitions/icetorrent.yml
 %%DATADIR%%/Definitions/ilcorsaronero.yml
+%%DATADIR%%/Definitions/iloveclassics.yml
 %%DATADIR%%/Definitions/infinityt.yml
 %%DATADIR%%/Definitions/inperil.yml
 %%DATADIR%%/Definitions/insanetracker.yml
