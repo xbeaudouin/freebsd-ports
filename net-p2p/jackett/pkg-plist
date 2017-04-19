@@ -92,10 +92,10 @@
 %%DATADIR%%/Definitions/greekteam.yml
 %%DATADIR%%/Definitions/hdbits.yml
 %%DATADIR%%/Definitions/hdbitscom.yml
+%%DATADIR%%/Definitions/hdchina.yml
 %%DATADIR%%/Definitions/hdclub.yml
 %%DATADIR%%/Definitions/hdhome.yml
 %%DATADIR%%/Definitions/hdme.yml
-%%DATADIR%%/Definitions/hdpter.yml
 %%DATADIR%%/Definitions/hdsky.yml
 %%DATADIR%%/Definitions/hdtorrentsit.yml
 %%DATADIR%%/Definitions/hon3yhd.yml
@@ -125,6 +125,7 @@
 %%DATADIR%%/Definitions/nethd.yml
 %%DATADIR%%/Definitions/newretro.yml
 %%DATADIR%%/Definitions/nyaa.yml
+%%DATADIR%%/Definitions/ourbits.yml
 %%DATADIR%%/Definitions/passionetorrent.yml
 %%DATADIR%%/Definitions/polishsource.yml
 %%DATADIR%%/Definitions/polishtracker.yml
@@ -138,6 +139,7 @@
 %%DATADIR%%/Definitions/sharespacedb.yml
 %%DATADIR%%/Definitions/shellife.yml
 %%DATADIR%%/Definitions/skytorrents.yml
+%%DATADIR%%/Definitions/tasmanit.yml
 %%DATADIR%%/Definitions/tenyardtracker.yml
 %%DATADIR%%/Definitions/theempire.yml
 %%DATADIR%%/Definitions/thehorrorcharnel.yml
@@ -145,6 +147,7 @@
 %%DATADIR%%/Definitions/theshinning.yml
 %%DATADIR%%/Definitions/thetorrents.yml
 %%DATADIR%%/Definitions/tntvillage.yml
+%%DATADIR%%/Definitions/torrent9.yml
 %%DATADIR%%/Definitions/torrentbd.yml
 %%DATADIR%%/Definitions/torrentccf.yml
 %%DATADIR%%/Definitions/torrenthr.yml
