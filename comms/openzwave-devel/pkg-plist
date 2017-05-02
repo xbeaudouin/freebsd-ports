@@ -231,6 +231,7 @@ bin/ozw_config
 %%ETCDIR%%/logicsoft/ZHC5010.xml
 %%ETCDIR%%/manufacturer_specific.xml
 %%ETCDIR%%/manufacturer_specific.xsd
+%%ETCDIR%%/mcohome/mh8fceu.xml
 %%ETCDIR%%/mcohome/mhp210.xml
 %%ETCDIR%%/mcohome/mhs311.xml
 %%ETCDIR%%/mcohome/mhs312.xml
@@ -302,6 +303,7 @@ bin/ozw_config
 %%ETCDIR%%/qubino/ZMNHTDx.xml
 %%ETCDIR%%/qubino/ZMNHUD1.xml
 %%ETCDIR%%/qubino/ZMNHVDx.xml
+%%ETCDIR%%/qubino/ZMNHWD1.xml
 %%ETCDIR%%/qubino/ZMNHZDx.xml
 %%ETCDIR%%/rcs/em52-zw.xml
 %%ETCDIR%%/rcs/pm12-zw.xml
