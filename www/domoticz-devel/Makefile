@@ -29,12 +29,12 @@ PYTHON_DESC=	Enable support for Python in EventSystem
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	7449
-DOMOTICZ_TS=	1494261364
+DOMOTICZ_REL=	7450
+DOMOTICZ_TS=	1494518712
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz 
 GH_PROJECT=	domoticz
-GH_TAGNAME=	9df60618
+GH_TAGNAME=	586c31f9
 
 USES=		cmake iconv pkgconfig execinfo ssl
 
@@ -45,7 +45,6 @@ GROUPS=		domoticz
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
 		-DUSE_BUILTIN_ZLIB="NO" \
-		-DUSE_PYTHON="YES" \
 		-DUSE_STATIC_OPENZWAVE="NO" \
 		-DUSE_PYTHON_PLUGINS="NO"
 
@@ -81,10 +80,10 @@ USES+=		sqlite
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
-CMAKE_ARGS+=	-DUSE_PYTHON="NO"
+CMAKE_ARGS+=	-DUSE_PYTHON="NO" -DUSE_PYTHON_PLUGINS="NO"
 .else
-CMAKE_ARGS+=	-DUSE_PYTHON="YES"
-USES+=		python
+CMAKE_ARGS+=	-DUSE_PYTHON="NO" -DUSE_PYTHON_PLUGINS="YES"
+USES+=		python:3.4
 .endif
 
 post-patch:
