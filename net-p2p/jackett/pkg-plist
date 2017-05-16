@@ -54,11 +54,13 @@
 %%DATADIR%%/Definitions/2fast4you.yml
 %%DATADIR%%/Definitions/3dtorrents.yml
 %%DATADIR%%/Definitions/acidlounge.yml
+%%DATADIR%%/Definitions/anidex.yml
 %%DATADIR%%/Definitions/aox.yml
 %%DATADIR%%/Definitions/apollo.yml
 %%DATADIR%%/Definitions/arabafenice.yml
 %%DATADIR%%/Definitions/asiandvdclub.yml
 %%DATADIR%%/Definitions/audiobooktorrents.yml
+%%DATADIR%%/Definitions/awesomehd.yml
 %%DATADIR%%/Definitions/bigtorrent.yml
 %%DATADIR%%/Definitions/bithq.yml
 %%DATADIR%%/Definitions/bithumen.yml
@@ -99,6 +101,7 @@
 %%DATADIR%%/Definitions/hdsky.yml
 %%DATADIR%%/Definitions/hdtorrentsit.yml
 %%DATADIR%%/Definitions/hon3yhd.yml
+%%DATADIR%%/Definitions/horriblesubs.yml
 %%DATADIR%%/Definitions/hyperay.yml
 %%DATADIR%%/Definitions/icetorrent.yml
 %%DATADIR%%/Definitions/ilcorsaronero.yml
@@ -124,7 +127,8 @@
 %%DATADIR%%/Definitions/nachtwerk.yml
 %%DATADIR%%/Definitions/nethd.yml
 %%DATADIR%%/Definitions/newretro.yml
-%%DATADIR%%/Definitions/nyaa.yml
+%%DATADIR%%/Definitions/nyaa-pantsu.yml
+%%DATADIR%%/Definitions/nyoo.yml
 %%DATADIR%%/Definitions/ourbits.yml
 %%DATADIR%%/Definitions/passionetorrent.yml
 %%DATADIR%%/Definitions/polishsource.yml
@@ -139,6 +143,8 @@
 %%DATADIR%%/Definitions/sharespacedb.yml
 %%DATADIR%%/Definitions/shellife.yml
 %%DATADIR%%/Definitions/skytorrents.yml
+%%DATADIR%%/Definitions/sporthd.yml
+%%DATADIR%%/Definitions/sportscult.yml
 %%DATADIR%%/Definitions/tasmanit.yml
 %%DATADIR%%/Definitions/tenyardtracker.yml
 %%DATADIR%%/Definitions/theempire.yml
@@ -152,6 +158,7 @@
 %%DATADIR%%/Definitions/thetorrents.yml
 %%DATADIR%%/Definitions/thevault.yml
 %%DATADIR%%/Definitions/tntvillage.yml
+%%DATADIR%%/Definitions/tokyotosho.yml
 %%DATADIR%%/Definitions/torrent9.yml
 %%DATADIR%%/Definitions/torrentbd.yml
 %%DATADIR%%/Definitions/torrentccf.yml
