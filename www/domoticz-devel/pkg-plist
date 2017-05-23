@@ -90,9 +90,17 @@ domoticz/Config/danfoss/z.xml
 domoticz/Config/device_classes.xml
 domoticz/Config/device_classes.xsd
 domoticz/Config/device_configuration.xsd
+domoticz/Config/devolo/connectz.xml
 domoticz/Config/devolo/mt02648.xml
+domoticz/Config/devolo/mt02755.xml
+domoticz/Config/devolo/mt02758.xml
+domoticz/Config/devolo/mt02792.xml
 domoticz/Config/devolo/mt2646.xml
 domoticz/Config/devolo/mt2647.xml
+domoticz/Config/devolo/mt2652.xml
+domoticz/Config/devolo/mt2653.xml
+domoticz/Config/devolo/mt2756.xml
+domoticz/Config/devolo/rs014G0159.xml
 domoticz/Config/dlink/dch-z110.xml
 domoticz/Config/dlink/dch-z120.xml
 domoticz/Config/dlink/dch-z510.xml
@@ -148,6 +156,7 @@ domoticz/Config/fakro/zws230.xml
 domoticz/Config/fibaro/fgbs001.xml
 domoticz/Config/fibaro/fgd211.xml
 domoticz/Config/fibaro/fgd212.xml
+domoticz/Config/fibaro/fgdw2.xml
 domoticz/Config/fibaro/fgfs101.xml
 domoticz/Config/fibaro/fgfs101zw5.xml
 domoticz/Config/fibaro/fggc001.xml
@@ -208,6 +217,7 @@ domoticz/Config/horstmann/ses302.xml
 domoticz/Config/horstmann/ses303.xml
 domoticz/Config/horstmann/sir321.xml
 domoticz/Config/horstmann/srt323.xml
+domoticz/Config/horstmann/ssr302.xml
 domoticz/Config/idlock/idlock101.xml
 domoticz/Config/ingersoll/dwzwave1.xml
 domoticz/Config/intermatic/ca8900.xml
@@ -229,6 +239,7 @@ domoticz/Config/linear/WT00Z-1.xml
 domoticz/Config/logicsoft/ZHC5010.xml
 domoticz/Config/manufacturer_specific.xml
 domoticz/Config/manufacturer_specific.xsd
+domoticz/Config/mcohome/mh8fceu.xml
 domoticz/Config/mcohome/mhp210.xml
 domoticz/Config/mcohome/mhs311.xml
 domoticz/Config/mcohome/mhs312.xml
@@ -259,6 +270,7 @@ domoticz/Config/philio/phpat02.xml
 domoticz/Config/philio/phpsg01.xml
 domoticz/Config/philio/pse02.xml
 domoticz/Config/philio/psm02.xml
+domoticz/Config/philio/psp05.xml
 domoticz/Config/philio/psr04.xml
 domoticz/Config/philio/pst02-1c.xml
 domoticz/Config/philio/pst02-b.xml
@@ -298,6 +310,7 @@ domoticz/Config/qubino/ZMNHNDx.xml
 domoticz/Config/qubino/ZMNHODx.xml
 domoticz/Config/qubino/ZMNHSDx.xml
 domoticz/Config/qubino/ZMNHTDx.xml
+domoticz/Config/qubino/ZMNHTDxS3.xml
 domoticz/Config/qubino/ZMNHUD1.xml
 domoticz/Config/qubino/ZMNHVDx.xml
 domoticz/Config/qubino/ZMNHWD1.xml

@@ -13,6 +13,7 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
 		libtelldus-core.so:comms/telldus-core \
+		libjsoncpp.so:devel/jsoncpp \
 		libopenzwave.so:comms/openzwave-devel
 
 CONFLICTS_INSTALL?=	domoticz-[23]*
@@ -23,18 +24,18 @@ SBOOST_DESC=	Use static Boost instead of dynamic linking
 SLUA_DESC=	Use domoticz provided LUA instead of ports one
 SMQTT_DESC=	Use domoticz mosquitto instead of ports one
 SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
-PYTHON_DESC=	Enable support for Python in EventSystem
+PYTHON_DESC=	Enable support for Python Plugins
 
 .include <bsd.port.options.mk>
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	7450
-DOMOTICZ_TS=	1494518712
+DOMOTICZ_REL=	7478
+DOMOTICZ_TS=	1495536571
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz 
 GH_PROJECT=	domoticz
-GH_TAGNAME=	586c31f9
+GH_TAGNAME=	b5703d48
 
 USES=		cmake iconv pkgconfig execinfo ssl
 
@@ -45,6 +46,7 @@ GROUPS=		domoticz
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
 		-DUSE_BUILTIN_ZLIB="NO" \
+		-DUSE_BUILTIN_JSONCPP="NO" \
 		-DUSE_STATIC_OPENZWAVE="NO"
 
 .if ${PORT_OPTIONS:MSBOOST}
