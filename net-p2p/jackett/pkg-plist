@@ -75,6 +75,7 @@
 %%DATADIR%%/Definitions/classix.yml
 %%DATADIR%%/Definitions/czteam.yml
 %%DATADIR%%/Definitions/datascene.yml
+%%DATADIR%%/Definitions/deildu.yml
 %%DATADIR%%/Definitions/diablotorrent.yml
 %%DATADIR%%/Definitions/dragonworld.yml
 %%DATADIR%%/Definitions/dragonworldreloaded.yml
@@ -128,6 +129,7 @@
 %%DATADIR%%/Definitions/nethd.yml
 %%DATADIR%%/Definitions/newretro.yml
 %%DATADIR%%/Definitions/nyaa-pantsu.yml
+%%DATADIR%%/Definitions/nyaasi.yml
 %%DATADIR%%/Definitions/nyoo.yml
 %%DATADIR%%/Definitions/ourbits.yml
 %%DATADIR%%/Definitions/passionetorrent.yml

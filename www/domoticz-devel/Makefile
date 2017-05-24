@@ -30,12 +30,12 @@ PYTHON_DESC=	Enable support for Python Plugins
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	7478
-DOMOTICZ_TS=	1495536571
+DOMOTICZ_REL=	7502
+DOMOTICZ_TS=	1495555601
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz 
 GH_PROJECT=	domoticz
-GH_TAGNAME=	b5703d48
+GH_TAGNAME=	fdc764ee
 
 USES=		cmake iconv pkgconfig execinfo ssl
 
