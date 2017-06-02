@@ -1,9 +1,11 @@
---- cpp/build/Makefile.orig	2017-02-28 13:20:23.936707000 +0100
-+++ cpp/build/Makefile	2017-02-28 13:21:19.797478000 +0100
-@@ -230,6 +230,8 @@
+--- cpp/build/Makefile.orig	2017-05-29 16:03:30.000000000 +0200
++++ cpp/build/Makefile	2017-05-31 16:11:23.278909000 +0200
+@@ -228,8 +228,8 @@
+ 	@cp -r $(top_srcdir)/docs/* $(DESTDIR)/$(docdir)
+ 	@if [ -d "$(top_builddir)/docs/html/" ]; then cp -r $(top_builddir)/docs/html/* $(DESTDIR)/$(docdir); fi
  	@echo "Installing Pkg-config Files"
- 	@install -d $(DESTDIR)/$(pkgconfigdir) 
- 	@cp $(top_builddir)/libopenzwave.pc $(DESTDIR)/$(pkgconfigdir)
+-	@install -d $(DESTDIR)/$(pkgconfigdir) 
+-	@cp $(top_builddir)/libopenzwave.pc $(DESTDIR)/$(pkgconfigdir)
 +	@install -d $(DESTDIR)/$(PREFIX)/libdata/pkgconfig 
 +	@cp $(top_builddir)/libopenzwave.pc $(DESTDIR)/$(PREFIX)/libdata/pkgconfig
  	@install -d $(DESTDIR)/$(PREFIX)/bin/

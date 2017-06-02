@@ -92,14 +92,29 @@ bin/ozw_config
 %%ETCDIR%%/device_classes.xml
 %%ETCDIR%%/device_classes.xsd
 %%ETCDIR%%/device_configuration.xsd
+%%ETCDIR%%/devolo/connectz.xml
 %%ETCDIR%%/devolo/mt02648.xml
+%%ETCDIR%%/devolo/mt02755.xml
+%%ETCDIR%%/devolo/mt02758.xml
+%%ETCDIR%%/devolo/mt02792.xml
 %%ETCDIR%%/devolo/mt2646.xml
 %%ETCDIR%%/devolo/mt2647.xml
+%%ETCDIR%%/devolo/mt2652.xml
+%%ETCDIR%%/devolo/mt2653.xml
+%%ETCDIR%%/devolo/mt2756.xml
+%%ETCDIR%%/devolo/rs014G0159.xml
 %%ETCDIR%%/dlink/dch-z110.xml
 %%ETCDIR%%/dlink/dch-z120.xml
 %%ETCDIR%%/dlink/dch-z510.xml
 %%ETCDIR%%/domitech/zb22uk.xml
 %%ETCDIR%%/domitech/ze27eu.xml
+%%ETCDIR%%/domux/dx1caz.xml
+%%ETCDIR%%/domux/dx1cgz.xml
+%%ETCDIR%%/domux/dx1dsz.xml
+%%ETCDIR%%/domux/dx1htz.xml
+%%ETCDIR%%/domux/dx1msz.xml
+%%ETCDIR%%/domux/dx1saz.xml
+%%ETCDIR%%/domux/dx1wlz.xml
 %%ETCDIR%%/domux/dx2skz.xml
 %%ETCDIR%%/dragontech/wd-100.xml
 %%ETCDIR%%/duwi/05458.xml
@@ -150,6 +165,7 @@ bin/ozw_config
 %%ETCDIR%%/fibaro/fgbs001.xml
 %%ETCDIR%%/fibaro/fgd211.xml
 %%ETCDIR%%/fibaro/fgd212.xml
+%%ETCDIR%%/fibaro/fgdw2.xml
 %%ETCDIR%%/fibaro/fgfs101.xml
 %%ETCDIR%%/fibaro/fgfs101zw5.xml
 %%ETCDIR%%/fibaro/fggc001.xml
@@ -192,6 +208,8 @@ bin/ozw_config
 %%ETCDIR%%/gr/gr105n.xml
 %%ETCDIR%%/greenwave/powernode1.xml
 %%ETCDIR%%/greenwave/powernode6.xml
+%%ETCDIR%%/hank/hkzw-dws01.xml
+%%ETCDIR%%/hank/hkzw-ms01.xml
 %%ETCDIR%%/hank/hkzw-so01-smartplug.xml
 %%ETCDIR%%/hank/hkzw-so05-smartplug.xml
 %%ETCDIR%%/hank/scenecontroller1.xml
@@ -210,6 +228,7 @@ bin/ozw_config
 %%ETCDIR%%/horstmann/ses303.xml
 %%ETCDIR%%/horstmann/sir321.xml
 %%ETCDIR%%/horstmann/srt323.xml
+%%ETCDIR%%/horstmann/ssr302.xml
 %%ETCDIR%%/idlock/idlock101.xml
 %%ETCDIR%%/ingersoll/dwzwave1.xml
 %%ETCDIR%%/intermatic/ca8900.xml
@@ -262,6 +281,7 @@ bin/ozw_config
 %%ETCDIR%%/philio/phpsg01.xml
 %%ETCDIR%%/philio/pse02.xml
 %%ETCDIR%%/philio/psm02.xml
+%%ETCDIR%%/philio/psp05.xml
 %%ETCDIR%%/philio/psr04.xml
 %%ETCDIR%%/philio/pst02-1c.xml
 %%ETCDIR%%/philio/pst02-b.xml
@@ -301,6 +321,7 @@ bin/ozw_config
 %%ETCDIR%%/qubino/ZMNHODx.xml
 %%ETCDIR%%/qubino/ZMNHSDx.xml
 %%ETCDIR%%/qubino/ZMNHTDx.xml
+%%ETCDIR%%/qubino/ZMNHTDxS3.xml
 %%ETCDIR%%/qubino/ZMNHUD1.xml
 %%ETCDIR%%/qubino/ZMNHVDx.xml
 %%ETCDIR%%/qubino/ZMNHWD1.xml
@@ -495,5 +516,4 @@ include/openzwave/value_classes/ValueStore.h
 include/openzwave/value_classes/ValueString.h
 lib/libopenzwave.so
 lib/libopenzwave.so.1.4
-lib/pkgconfig/libopenzwave.pc
 libdata/pkgconfig/libopenzwave.pc
