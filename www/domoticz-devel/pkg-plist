@@ -492,8 +492,8 @@ domoticz/scripts/lua_parsers/example_xml.lua
 domoticz/scripts/python/domoticz.py
 domoticz/scripts/python/googlepubsub.py
 domoticz/scripts/python/reloader.py
-domoticz/scripts/python/script_device_test.py
-domoticz/scripts/python/script_time_test.py
+domoticz/scripts/python/script_device_demo.py
+domoticz/scripts/python/script_time_demo.py
 domoticz/scripts/readme.txt
 domoticz/scripts/restart_domoticz
 domoticz/scripts/templates/All.Lua
