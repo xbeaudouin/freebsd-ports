@@ -12,8 +12,8 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
-		libjsoncpp.so:devel/jsoncpp \
 		libopenzwave.so:comms/openzwave-devel
+#		libjsoncpp.so:devel/jsoncpp \
 
 CONFLICTS_INSTALL?=	domoticz-[23]*
 
@@ -46,7 +46,7 @@ GROUPS=		domoticz
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
 		-DUSE_BUILTIN_ZLIB="NO" \
-		-DUSE_BUILTIN_JSONCPP="NO" \
+		-DUSE_BUILTIN_JSONCPP="YES" \
 		-DUSE_STATIC_OPENZWAVE="NO"
 
 .if ${PORT_OPTIONS:MSBOOST}
