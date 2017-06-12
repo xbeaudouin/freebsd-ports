@@ -40,6 +40,7 @@
 %%DATADIR%%/Content/libs/bootstrap-notify.js
 %%DATADIR%%/Content/libs/filesize.min.js
 %%DATADIR%%/Content/libs/handlebars.min.js
+%%DATADIR%%/Content/libs/handlebarsextend.js
 %%DATADIR%%/Content/libs/handlebarsmoment.js
 %%DATADIR%%/Content/libs/jquery.dataTables.min.js
 %%DATADIR%%/Content/libs/jquery.min.js
@@ -55,6 +56,7 @@
 %%DATADIR%%/Definitions/3dtorrents.yml
 %%DATADIR%%/Definitions/acidlounge.yml
 %%DATADIR%%/Definitions/anidex.yml
+%%DATADIR%%/Definitions/anirena.yml
 %%DATADIR%%/Definitions/aox.yml
 %%DATADIR%%/Definitions/apollo.yml
 %%DATADIR%%/Definitions/arabafenice.yml
@@ -125,7 +127,6 @@
 %%DATADIR%%/Definitions/mononokebt.yml
 %%DATADIR%%/Definitions/mteamtp.yml
 %%DATADIR%%/Definitions/myspleen.yml
-%%DATADIR%%/Definitions/nachtwerk.yml
 %%DATADIR%%/Definitions/nethd.yml
 %%DATADIR%%/Definitions/newretro.yml
 %%DATADIR%%/Definitions/nyaa-pantsu.yml
