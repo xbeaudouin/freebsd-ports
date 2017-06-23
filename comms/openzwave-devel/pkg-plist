@@ -70,6 +70,7 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zw117.xml
 %%ETCDIR%%/aeotec/zw120.xml
 %%ETCDIR%%/aeotec/zw121.xml
+%%ETCDIR%%/aeotec/zw122.xml
 %%ETCDIR%%/aeotec/zw129.xml
 %%ETCDIR%%/aeotec/zw130.xml
 %%ETCDIR%%/aeotec/zw132.xml
@@ -196,6 +197,7 @@ bin/ozw_config
 %%ETCDIR%%/fortrezz/wwa02.xml
 %%ETCDIR%%/frostdale/fdn2nxx.xml
 %%ETCDIR%%/ge/12724-dimmer.xml
+%%ETCDIR%%/ge/14282-plugin-switch.xml
 %%ETCDIR%%/ge/14291-switch.xml
 %%ETCDIR%%/ge/14294-dimmer.xml
 %%ETCDIR%%/ge/26933-motion-dimmer.xml
@@ -204,6 +206,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/hinge-pin.xml
 %%ETCDIR%%/ge/receptacle.xml
 %%ETCDIR%%/ge/relay.xml
+%%ETCDIR%%/gocontrol/GC-TBZ48L.xml
 %%ETCDIR%%/gr/gr105.xml
 %%ETCDIR%%/gr/gr105n.xml
 %%ETCDIR%%/greenwave/powernode1.xml
@@ -235,11 +238,15 @@ bin/ozw_config
 %%ETCDIR%%/iris/rangeextender.xml
 %%ETCDIR%%/kaipule/im20.xml
 %%ETCDIR%%/kwikset/smartcode.xml
+%%ETCDIR%%/leviton/dz15s.xml
+%%ETCDIR%%/leviton/dz6hd.xml
+%%ETCDIR%%/leviton/dzpd3.xml
 %%ETCDIR%%/leviton/rzi10.xml
 %%ETCDIR%%/leviton/vrcpg.xml
 %%ETCDIR%%/leviton/vrf01.xml
 %%ETCDIR%%/leviton/vri06.xml
 %%ETCDIR%%/leviton/vri10.xml
+%%ETCDIR%%/linear/GC-TBZ48.xml
 %%ETCDIR%%/linear/LB60Z-1.xml
 %%ETCDIR%%/linear/PD300Z-2.xml
 %%ETCDIR%%/linear/WA00Z-1.xml
@@ -251,6 +258,7 @@ bin/ozw_config
 %%ETCDIR%%/manufacturer_specific.xml
 %%ETCDIR%%/manufacturer_specific.xsd
 %%ETCDIR%%/mcohome/mh8fceu.xml
+%%ETCDIR%%/mcohome/mh9co2.xml
 %%ETCDIR%%/mcohome/mhp210.xml
 %%ETCDIR%%/mcohome/mhs311.xml
 %%ETCDIR%%/mcohome/mhs312.xml
@@ -289,6 +297,7 @@ bin/ozw_config
 %%ETCDIR%%/polycontrol/doorlock.xml
 %%ETCDIR%%/polycontrol/keypad.xml
 %%ETCDIR%%/polycontrol/polylock.xml
+%%ETCDIR%%/popp/004407.xml
 %%ETCDIR%%/popp/009105.xml
 %%ETCDIR%%/popp/009303.xml
 %%ETCDIR%%/popp/009402.xml
@@ -296,6 +305,7 @@ bin/ozw_config
 %%ETCDIR%%/popp/123580.xml
 %%ETCDIR%%/popp/123601.xml
 %%ETCDIR%%/popp/123658.xml
+%%ETCDIR%%/popp/700168.xml
 %%ETCDIR%%/popp/smoke-detector.xml
 %%ETCDIR%%/popp/solar-siren.xml
 %%ETCDIR%%/popp/zweather.xml
@@ -354,6 +364,7 @@ bin/ozw_config
 %%ETCDIR%%/thermofloor/heatit021.xml
 %%ETCDIR%%/trane/TZEMT400AB32MAA.xml
 %%ETCDIR%%/trane/TZEMT400BB32MAA.xml
+%%ETCDIR%%/trane/TZEMT524AA21MA.xml
 %%ETCDIR%%/vision/zd2102.xml
 %%ETCDIR%%/vision/zd2201.xml
 %%ETCDIR%%/vision/zd2301.xml
@@ -388,6 +399,7 @@ bin/ozw_config
 %%ETCDIR%%/zooz/zen07.xml
 %%ETCDIR%%/zooz/zse08.xml
 %%ETCDIR%%/zooz/zse09.xml
+%%ETCDIR%%/zooz/zse33.xml
 %%ETCDIR%%/zooz/zse40.xml
 %%ETCDIR%%/zwave.me/ZME_05431.xml
 %%ETCDIR%%/zwave.me/ZME_05461.xml

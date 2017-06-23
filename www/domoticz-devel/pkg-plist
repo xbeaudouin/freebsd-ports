@@ -68,6 +68,7 @@ domoticz/Config/aeotec/zw116.xml
 domoticz/Config/aeotec/zw117.xml
 domoticz/Config/aeotec/zw120.xml
 domoticz/Config/aeotec/zw121.xml
+domoticz/Config/aeotec/zw122.xml
 domoticz/Config/aeotec/zw129.xml
 domoticz/Config/aeotec/zw130.xml
 domoticz/Config/aeotec/zw132.xml
@@ -106,7 +107,13 @@ domoticz/Config/dlink/dch-z120.xml
 domoticz/Config/dlink/dch-z510.xml
 domoticz/Config/domitech/zb22uk.xml
 domoticz/Config/domitech/ze27eu.xml
-domoticz/Config/domux/dx2skz.xml
+domoticz/Config/domux/dx1caz.xml
+domoticz/Config/domux/dx1cgz.xml
+domoticz/Config/domux/dx1dsz.xml
+domoticz/Config/domux/dx1htz.xml
+domoticz/Config/domux/dx1msz.xml
+domoticz/Config/domux/dx1saz.xml
+domoticz/Config/domux/dx1wlz.xml
 domoticz/Config/dragontech/wd-100.xml
 domoticz/Config/duwi/05458.xml
 domoticz/Config/duwi/ZWES1000.xml
@@ -187,6 +194,7 @@ domoticz/Config/fortrezz/wv01.xml
 domoticz/Config/fortrezz/wwa02.xml
 domoticz/Config/frostdale/fdn2nxx.xml
 domoticz/Config/ge/12724-dimmer.xml
+domoticz/Config/ge/14282-plugin-switch.xml
 domoticz/Config/ge/14291-switch.xml
 domoticz/Config/ge/14294-dimmer.xml
 domoticz/Config/ge/26933-motion-dimmer.xml
@@ -195,10 +203,13 @@ domoticz/Config/ge/dimmer_module.xml
 domoticz/Config/ge/hinge-pin.xml
 domoticz/Config/ge/receptacle.xml
 domoticz/Config/ge/relay.xml
+domoticz/Config/gocontrol/GC-TBZ48L.xml
 domoticz/Config/gr/gr105.xml
 domoticz/Config/gr/gr105n.xml
 domoticz/Config/greenwave/powernode1.xml
 domoticz/Config/greenwave/powernode6.xml
+domoticz/Config/hank/hkzw-dws01.xml
+domoticz/Config/hank/hkzw-ms01.xml
 domoticz/Config/hank/hkzw-so01-smartplug.xml
 domoticz/Config/hank/hkzw-so05-smartplug.xml
 domoticz/Config/hank/scenecontroller1.xml
@@ -224,11 +235,15 @@ domoticz/Config/intermatic/ca8900.xml
 domoticz/Config/iris/rangeextender.xml
 domoticz/Config/kaipule/im20.xml
 domoticz/Config/kwikset/smartcode.xml
+domoticz/Config/leviton/dz15s.xml
+domoticz/Config/leviton/dz6hd.xml
+domoticz/Config/leviton/dzpd3.xml
 domoticz/Config/leviton/rzi10.xml
 domoticz/Config/leviton/vrcpg.xml
 domoticz/Config/leviton/vrf01.xml
 domoticz/Config/leviton/vri06.xml
 domoticz/Config/leviton/vri10.xml
+domoticz/Config/linear/GC-TBZ48.xml
 domoticz/Config/linear/LB60Z-1.xml
 domoticz/Config/linear/PD300Z-2.xml
 domoticz/Config/linear/WA00Z-1.xml
@@ -240,6 +255,7 @@ domoticz/Config/logicsoft/ZHC5010.xml
 domoticz/Config/manufacturer_specific.xml
 domoticz/Config/manufacturer_specific.xsd
 domoticz/Config/mcohome/mh8fceu.xml
+domoticz/Config/mcohome/mh9co2.xml
 domoticz/Config/mcohome/mhp210.xml
 domoticz/Config/mcohome/mhs311.xml
 domoticz/Config/mcohome/mhs312.xml
@@ -278,6 +294,7 @@ domoticz/Config/philio/pst02.xml
 domoticz/Config/polycontrol/doorlock.xml
 domoticz/Config/polycontrol/keypad.xml
 domoticz/Config/polycontrol/polylock.xml
+domoticz/Config/popp/004407.xml
 domoticz/Config/popp/009105.xml
 domoticz/Config/popp/009303.xml
 domoticz/Config/popp/009402.xml
@@ -285,6 +302,7 @@ domoticz/Config/popp/012501.xml
 domoticz/Config/popp/123580.xml
 domoticz/Config/popp/123601.xml
 domoticz/Config/popp/123658.xml
+domoticz/Config/popp/700168.xml
 domoticz/Config/popp/smoke-detector.xml
 domoticz/Config/popp/solar-siren.xml
 domoticz/Config/popp/zweather.xml
@@ -343,6 +361,7 @@ domoticz/Config/telldus/tzwp100.xml
 domoticz/Config/thermofloor/heatit021.xml
 domoticz/Config/trane/TZEMT400AB32MAA.xml
 domoticz/Config/trane/TZEMT400BB32MAA.xml
+domoticz/Config/trane/TZEMT524AA21MA.xml
 domoticz/Config/vision/zd2102.xml
 domoticz/Config/vision/zd2201.xml
 domoticz/Config/vision/zd2301.xml
@@ -377,6 +396,7 @@ domoticz/Config/zipato/zp3102.xml
 domoticz/Config/zooz/zen07.xml
 domoticz/Config/zooz/zse08.xml
 domoticz/Config/zooz/zse09.xml
+domoticz/Config/zooz/zse33.xml
 domoticz/Config/zooz/zse40.xml
 domoticz/Config/zwave.me/ZME_05431.xml
 domoticz/Config/zwave.me/ZME_05461.xml
