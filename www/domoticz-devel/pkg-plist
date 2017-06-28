@@ -431,25 +431,35 @@ domoticz/scripts/_domoticz_main
 domoticz/scripts/_domoticz_main.bat
 domoticz/scripts/buienradar_rain_example.pl
 domoticz/scripts/download_update.sh
-domoticz/scripts/dzVents/documentation/QUICKREF.md
+domoticz/scripts/dzVents/.gitignore
+domoticz/scripts/dzVents/data/README.md
 domoticz/scripts/dzVents/documentation/README.md
-domoticz/scripts/dzVents/documentation/dzVents history.txt
-domoticz/scripts/dzVents/documentation/smoothing.png
-domoticz/scripts/dzVents/dzVents_settings_example.lua
+domoticz/scripts/dzVents/documentation/README.wiki
+domoticz/scripts/dzVents/documentation/dzvents-smoothing.png
+domoticz/scripts/dzVents/documentation/history.md
 domoticz/scripts/dzVents/examples/calc temp delta.lua
 domoticz/scripts/dzVents/examples/check battery levels.lua
 domoticz/scripts/dzVents/examples/check dead devices by desc.lua
 domoticz/scripts/dzVents/examples/check dead devices.lua
+domoticz/scripts/dzVents/examples/external_light.lua
 domoticz/scripts/dzVents/examples/garage door.lua
-domoticz/scripts/dzVents/examples/generic.lua
 domoticz/scripts/dzVents/examples/get sensor values.lua
 domoticz/scripts/dzVents/examples/intruder alert.lua
+domoticz/scripts/dzVents/examples/leak_detection.lua
 domoticz/scripts/dzVents/examples/notify for dead system-alive check devices.lua
 domoticz/scripts/dzVents/examples/only run script when button pressed.lua
 domoticz/scripts/dzVents/examples/random night light.lua
 domoticz/scripts/dzVents/examples/respond to switch.lua
 domoticz/scripts/dzVents/examples/schedule fish pond pump.lua
 domoticz/scripts/dzVents/examples/simple room heating with hysteresis control.lua
+domoticz/scripts/dzVents/examples/templates/bare.lua
+domoticz/scripts/dzVents/examples/templates/complete.lua
+domoticz/scripts/dzVents/examples/templates/device.lua
+domoticz/scripts/dzVents/examples/templates/global_data.lua
+domoticz/scripts/dzVents/examples/templates/security.lua
+domoticz/scripts/dzVents/examples/templates/timer.lua
+domoticz/scripts/dzVents/examples/templates/variable.lua
+domoticz/scripts/dzVents/generated_scripts/README.md
 domoticz/scripts/dzVents/runtime/Device.lua
 domoticz/scripts/dzVents/runtime/Domoticz.lua
 domoticz/scripts/dzVents/runtime/EventHelpers.lua
@@ -458,15 +468,56 @@ domoticz/scripts/dzVents/runtime/Time.lua
 domoticz/scripts/dzVents/runtime/TimedCommand.lua
 domoticz/scripts/dzVents/runtime/Utils.lua
 domoticz/scripts/dzVents/runtime/Variable.lua
-domoticz/scripts/dzVents/runtime/device_scripts_dispatcher.lua
+domoticz/scripts/dzVents/runtime/device-adapters/Adapters.lua
+domoticz/scripts/dzVents/runtime/device-adapters/airquality_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/alert_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/barometer_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/counter_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/custom_sensor_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/distance_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/electric_usage_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/evohome_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/gas_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/generic_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/group_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/hue_light_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/humidity_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/kodi_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/kwh_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/lux_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/opentherm_gateway_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/p1_smartmeter_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/percentage_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/pressure_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/rain_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/scene_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/security_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/solar_radiation_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/switch_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/temperature_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/temperature_humidity_barometer_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/temperature_humidity_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/text_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/thermostat_setpoint_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/uv_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/voltage_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/wind_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/zone_heating_device.lua
+domoticz/scripts/dzVents/runtime/dzVents.lua
 domoticz/scripts/dzVents/runtime/misc/smoothing.xlsx
 domoticz/scripts/dzVents/runtime/persistence.lua
 domoticz/scripts/dzVents/runtime/tests/.luacov
 domoticz/scripts/dzVents/runtime/tests/README.md
 domoticz/scripts/dzVents/runtime/tests/devices.lua
+domoticz/scripts/dzVents/runtime/tests/generated_scripts/internal1.lua
+domoticz/scripts/dzVents/runtime/tests/generated_scripts/internal2.lua
+domoticz/scripts/dzVents/runtime/tests/scandir/.f3.lua
+domoticz/scripts/dzVents/runtime/tests/scandir/.f3.lua.swp
 domoticz/scripts/dzVents/runtime/tests/scandir/f1.lua
+domoticz/scripts/dzVents/runtime/tests/scandir/f1lua
 domoticz/scripts/dzVents/runtime/tests/scandir/f2.lua
 domoticz/scripts/dzVents/runtime/tests/scandir/f3.lua
+domoticz/scripts/dzVents/runtime/tests/scandir/lua.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/global_data.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script1.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script2.lua
@@ -481,25 +532,33 @@ domoticz/scripts/dzVents/runtime/tests/scripts/script_error.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_inactive.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_incomplete_missing_execute.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_incomplete_missing_on.lua
+domoticz/scripts/dzVents/runtime/tests/scripts/script_logging.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_notable.lua
+domoticz/scripts/dzVents/runtime/tests/scripts/script_security.lua
+domoticz/scripts/dzVents/runtime/tests/scripts/script_security_grouped.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_timer_classic.lua
+domoticz/scripts/dzVents/runtime/tests/scripts/script_timer_function.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_timer_single.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_timer_table.lua
+domoticz/scripts/dzVents/runtime/tests/scripts/script_variable1.lua
+domoticz/scripts/dzVents/runtime/tests/scripts/script_variable2.lua
+domoticz/scripts/dzVents/runtime/tests/scripts/script_variable3.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_wildcard1.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_wildcard2.lua
 domoticz/scripts/dzVents/runtime/tests/scripts/script_with_active_method.lua
+domoticz/scripts/dzVents/runtime/tests/scripts/script_with_time-contrained_device.lua
 domoticz/scripts/dzVents/runtime/tests/testDevice.lua
 domoticz/scripts/dzVents/runtime/tests/testDomoticz.lua
 domoticz/scripts/dzVents/runtime/tests/testEventHelpers.lua
 domoticz/scripts/dzVents/runtime/tests/testEventHelpersStorage.lua
-domoticz/scripts/dzVents/runtime/tests/testScriptDeviceMain.lua
-domoticz/scripts/dzVents/runtime/tests/testScriptTimeMain.lua
+domoticz/scripts/dzVents/runtime/tests/testScriptdzVentsDispatching.lua
 domoticz/scripts/dzVents/runtime/tests/testTime.lua
 domoticz/scripts/dzVents/runtime/tests/testTimedCommand.lua
 domoticz/scripts/dzVents/runtime/tests/testUtils.lua
 domoticz/scripts/dzVents/runtime/tests/testVariable.lua
 domoticz/scripts/dzVents/runtime/tests/testfile
-domoticz/scripts/dzVents/runtime/timer_scripts_dispatcher.lua
+domoticz/scripts/dzVents/runtime/tests/tstData.lua
+domoticz/scripts/dzVents/runtime/todo.md
 domoticz/scripts/dzVents/scripts/README.md
 domoticz/scripts/logrotate/domoticz
 domoticz/scripts/lua/JSON.lua
@@ -518,10 +577,17 @@ domoticz/scripts/readme.txt
 domoticz/scripts/restart_domoticz
 domoticz/scripts/templates/All.Lua
 domoticz/scripts/templates/All.Python
+domoticz/scripts/templates/All.dzVents
+domoticz/scripts/templates/Bare.dzVents
 domoticz/scripts/templates/Device.Lua
+domoticz/scripts/templates/Device.dzVents
 domoticz/scripts/templates/Security.Lua
+domoticz/scripts/templates/Seurity.dzVents
 domoticz/scripts/templates/Time.Lua
+domoticz/scripts/templates/Timer.dzvents
 domoticz/scripts/templates/UserVariable.Lua
+domoticz/scripts/templates/UserVariable.dzVents
+domoticz/scripts/templates/global_data.dzVents
 domoticz/scripts/update_domoticz
 domoticz/server_cert.pem
 domoticz/www/app/AboutController.js
