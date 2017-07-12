@@ -76,6 +76,7 @@
 %%DATADIR%%/Definitions/cinemageddon.yml
 %%DATADIR%%/Definitions/cinematik.yml
 %%DATADIR%%/Definitions/classix.yml
+%%DATADIR%%/Definitions/cpabien.yml
 %%DATADIR%%/Definitions/czteam.yml
 %%DATADIR%%/Definitions/datascene.yml
 %%DATADIR%%/Definitions/deildu.yml
@@ -125,11 +126,13 @@
 %%DATADIR%%/Definitions/losslessclub.yml
 %%DATADIR%%/Definitions/magico.yml
 %%DATADIR%%/Definitions/majomparade.yml
+%%DATADIR%%/Definitions/maniatorrent.yml
 %%DATADIR%%/Definitions/mononokebt.yml
 %%DATADIR%%/Definitions/mteamtp.yml
 %%DATADIR%%/Definitions/myspleen.yml
 %%DATADIR%%/Definitions/nethd.yml
 %%DATADIR%%/Definitions/newretro.yml
+%%DATADIR%%/Definitions/nexttorrent.yml
 %%DATADIR%%/Definitions/nyaa-pantsu.yml
 %%DATADIR%%/Definitions/nyaasi.yml
 %%DATADIR%%/Definitions/nyoo.yml
@@ -182,6 +185,9 @@
 %%DATADIR%%/Definitions/waffles.yml
 %%DATADIR%%/Definitions/worldofp2p.yml
 %%DATADIR%%/Definitions/xtremezone.yml
+%%DATADIR%%/Definitions/yggtorrent.yml
+%%DATADIR%%/Definitions/zamundanet.yml
+%%DATADIR%%/Definitions/zelkaorg.yml
 %%DATADIR%%/Definitions/ztracker.yml
 %%DATADIR%%/ICSharpCode.SharpZipLib.dll
 %%DATADIR%%/Jackett.dll
