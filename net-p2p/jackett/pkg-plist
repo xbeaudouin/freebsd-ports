@@ -63,6 +63,7 @@
 %%DATADIR%%/Definitions/asiandvdclub.yml
 %%DATADIR%%/Definitions/audiobooktorrents.yml
 %%DATADIR%%/Definitions/awesomehd.yml
+%%DATADIR%%/Definitions/b2s-share.yml
 %%DATADIR%%/Definitions/bigtorrent.yml
 %%DATADIR%%/Definitions/bithq.yml
 %%DATADIR%%/Definitions/bithumen.yml
@@ -127,6 +128,7 @@
 %%DATADIR%%/Definitions/magico.yml
 %%DATADIR%%/Definitions/majomparade.yml
 %%DATADIR%%/Definitions/maniatorrent.yml
+%%DATADIR%%/Definitions/manicomioshare.yml
 %%DATADIR%%/Definitions/mononokebt.yml
 %%DATADIR%%/Definitions/mteamtp.yml
 %%DATADIR%%/Definitions/myspleen.yml
