@@ -107,13 +107,14 @@ domoticz/Config/dlink/dch-z120.xml
 domoticz/Config/dlink/dch-z510.xml
 domoticz/Config/domitech/zb22uk.xml
 domoticz/Config/domitech/ze27eu.xml
-domoticz/Config/domux/dx1caz.xml
-domoticz/Config/domux/dx1cgz.xml
-domoticz/Config/domux/dx1dsz.xml
-domoticz/Config/domux/dx1htz.xml
-domoticz/Config/domux/dx1msz.xml
-domoticz/Config/domux/dx1saz.xml
-domoticz/Config/domux/dx1wlz.xml
+domoticz/Config/domux/DX1CA-Z.xml
+domoticz/Config/domux/DX1CG-Z.xml
+domoticz/Config/domux/DX1DS-Z.xml
+domoticz/Config/domux/DX1HT-Z.xml
+domoticz/Config/domux/DX1MS-Z.xml
+domoticz/Config/domux/DX1SA-Z.xml
+domoticz/Config/domux/DX1WL-Z.xml
+domoticz/Config/domux/DX2SK-Z.xml
 domoticz/Config/dragontech/wd-100.xml
 domoticz/Config/duwi/05458.xml
 domoticz/Config/duwi/ZWES1000.xml
@@ -197,6 +198,7 @@ domoticz/Config/ge/12724-dimmer.xml
 domoticz/Config/ge/14282-plugin-switch.xml
 domoticz/Config/ge/14291-switch.xml
 domoticz/Config/ge/14294-dimmer.xml
+domoticz/Config/ge/26931-motion-switch.xml
 domoticz/Config/ge/26933-motion-dimmer.xml
 domoticz/Config/ge/dimmer.xml
 domoticz/Config/ge/dimmer_module.xml
@@ -214,6 +216,14 @@ domoticz/Config/hank/hkzw-so01-smartplug.xml
 domoticz/Config/hank/hkzw-so05-smartplug.xml
 domoticz/Config/hank/scenecontroller1.xml
 domoticz/Config/hank/scenecontroller4.xml
+domoticz/Config/heiman/HS1CA-Z.xml
+domoticz/Config/heiman/HS1CG-Z.xml
+domoticz/Config/heiman/HS1DS-Z.xml
+domoticz/Config/heiman/HS1HT-Z.xml
+domoticz/Config/heiman/HS1MS-Z.xml
+domoticz/Config/heiman/HS1SA-Z.xml
+domoticz/Config/heiman/HS1WL-Z.xml
+domoticz/Config/heiman/HS2SK-Z.xml
 domoticz/Config/homeseer/ezmotionplus.xml
 domoticz/Config/homeseer/hs-wd100plus.xml
 domoticz/Config/homeseer/hs-ws100plus.xml
@@ -247,6 +257,7 @@ domoticz/Config/linear/GC-TBZ48.xml
 domoticz/Config/linear/LB60Z-1.xml
 domoticz/Config/linear/PD300Z-2.xml
 domoticz/Config/linear/WA00Z-1.xml
+domoticz/Config/linear/WA105DBZ-1.xml
 domoticz/Config/linear/WAPIRZ-1.xml
 domoticz/Config/linear/WD500Z-1.xml
 domoticz/Config/linear/WS15Z-1.xml
@@ -281,6 +292,7 @@ domoticz/Config/philio/pan04.xml
 domoticz/Config/philio/pan07.xml
 domoticz/Config/philio/pan08.xml
 domoticz/Config/philio/pan11.xml
+domoticz/Config/philio/pan16.xml
 domoticz/Config/philio/phpab01.xml
 domoticz/Config/philio/phpat02.xml
 domoticz/Config/philio/phpsg01.xml
@@ -391,6 +403,7 @@ domoticz/Config/widom/UME304C_S.xml
 domoticz/Config/widom/WDS.xml
 domoticz/Config/zipato/MiniKeypad.xml
 domoticz/Config/zipato/RGBBulb.xml
+domoticz/Config/zipato/RGBBulb2.xml
 domoticz/Config/zipato/vszd2102.xml
 domoticz/Config/zipato/zp3102.xml
 domoticz/Config/zooz/zen07.xml
@@ -437,6 +450,7 @@ domoticz/scripts/dzVents/documentation/README.md
 domoticz/scripts/dzVents/documentation/README.wiki
 domoticz/scripts/dzVents/documentation/dzvents-smoothing.png
 domoticz/scripts/dzVents/documentation/history.md
+domoticz/scripts/dzVents/documentation/pandoc.md
 domoticz/scripts/dzVents/examples/calc temp delta.lua
 domoticz/scripts/dzVents/examples/check battery levels.lua
 domoticz/scripts/dzVents/examples/check dead devices by desc.lua
@@ -471,6 +485,8 @@ domoticz/scripts/dzVents/runtime/Variable.lua
 domoticz/scripts/dzVents/runtime/device-adapters/Adapters.lua
 domoticz/scripts/dzVents/runtime/device-adapters/airquality_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/alert_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/ampere_1_phase_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/ampere_3_phase_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/barometer_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/counter_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/custom_sensor_device.lua
@@ -480,19 +496,23 @@ domoticz/scripts/dzVents/runtime/device-adapters/evohome_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/gas_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/generic_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/group_device.lua
-domoticz/scripts/dzVents/runtime/device-adapters/hue_light_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/humidity_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/kodi_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/kwh_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/leafwetness_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/lux_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/opentherm_gateway_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/p1_smartmeter_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/percentage_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/pressure_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/rain_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/rgbw_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/scaleweight_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/scene_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/security_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/soilmoisture_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/solar_radiation_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/soundlevel_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/switch_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/temperature_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/temperature_humidity_barometer_device.lua
@@ -500,14 +520,22 @@ domoticz/scripts/dzVents/runtime/device-adapters/temperature_humidity_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/text_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/thermostat_setpoint_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/uv_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/visibility_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/voltage_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/waterflow_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/wind_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/zone_heating_device.lua
 domoticz/scripts/dzVents/runtime/dzVents.lua
+domoticz/scripts/dzVents/runtime/integration-tests/File.lua
+domoticz/scripts/dzVents/runtime/integration-tests/README.md
+domoticz/scripts/dzVents/runtime/integration-tests/stage1.lua
+domoticz/scripts/dzVents/runtime/integration-tests/stage2.lua
+domoticz/scripts/dzVents/runtime/integration-tests/testIntegration.lua
 domoticz/scripts/dzVents/runtime/misc/smoothing.xlsx
 domoticz/scripts/dzVents/runtime/persistence.lua
 domoticz/scripts/dzVents/runtime/tests/.luacov
 domoticz/scripts/dzVents/runtime/tests/README.md
+domoticz/scripts/dzVents/runtime/tests/data/README.md
 domoticz/scripts/dzVents/runtime/tests/devices.lua
 domoticz/scripts/dzVents/runtime/tests/generated_scripts/internal1.lua
 domoticz/scripts/dzVents/runtime/tests/generated_scripts/internal2.lua
