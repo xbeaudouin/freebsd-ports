@@ -10,6 +10,7 @@ domoticz/Config/BeNext/DoorSensor.xml
 domoticz/Config/BeNext/EnergySwitch.xml
 domoticz/Config/BeNext/HeatingControl.xml
 domoticz/Config/BeNext/Molite.xml
+domoticz/Config/BeNext/P1dongle.xml
 domoticz/Config/BeNext/PanicButton.xml
 domoticz/Config/BeNext/PanicWatch.xml
 domoticz/Config/BeNext/PluginDimmer.xml
@@ -162,6 +163,7 @@ domoticz/Config/fakro/zwrs.xml
 domoticz/Config/fakro/zws12.xml
 domoticz/Config/fakro/zws230.xml
 domoticz/Config/fibaro/fgbs001.xml
+domoticz/Config/fibaro/fgcd001.xml
 domoticz/Config/fibaro/fgd211.xml
 domoticz/Config/fibaro/fgd212.xml
 domoticz/Config/fibaro/fgdw2.xml
@@ -258,6 +260,7 @@ domoticz/Config/linear/LB60Z-1.xml
 domoticz/Config/linear/PD300Z-2.xml
 domoticz/Config/linear/WA00Z-1.xml
 domoticz/Config/linear/WA105DBZ-1.xml
+domoticz/Config/linear/WADWAZ-1.xml
 domoticz/Config/linear/WAPIRZ-1.xml
 domoticz/Config/linear/WD500Z-1.xml
 domoticz/Config/linear/WS15Z-1.xml
@@ -355,8 +358,8 @@ domoticz/Config/remotec/zrc-90.xml
 domoticz/Config/remotec/zts-110.xml
 domoticz/Config/remotec/zurc.xml
 domoticz/Config/remotec/zxt-120.xml
-domoticz/Config/schlage/BE468CAM619.xml
-domoticz/Config/schlage/BE469NXCEN.xml
+domoticz/Config/schlage/BE468.xml
+domoticz/Config/schlage/BE469.xml
 domoticz/Config/schlagelink/itemp.xml
 domoticz/Config/schlagelink/minikeypad.xml
 domoticz/Config/sensative/strips.xml
@@ -407,6 +410,9 @@ domoticz/Config/zipato/RGBBulb2.xml
 domoticz/Config/zipato/vszd2102.xml
 domoticz/Config/zipato/zp3102.xml
 domoticz/Config/zooz/zen07.xml
+domoticz/Config/zooz/zen20.xml
+domoticz/Config/zooz/zen23.xml
+domoticz/Config/zooz/zen24.xml
 domoticz/Config/zooz/zse08.xml
 domoticz/Config/zooz/zse09.xml
 domoticz/Config/zooz/zse33.xml
@@ -639,6 +645,7 @@ domoticz/www/app/LightsController.js
 domoticz/www/app/LogController.js
 domoticz/www/app/LoginController.js
 domoticz/www/app/LogoutController.js
+domoticz/www/app/MobileNotificationsController.js
 domoticz/www/app/NotificationController.js
 domoticz/www/app/OfflineController.js
 domoticz/www/app/RFXComFirmwareController.js
@@ -1298,6 +1305,7 @@ domoticz/www/views/lights.html
 domoticz/www/views/log.html
 domoticz/www/views/login.html
 domoticz/www/views/logout.html
+domoticz/www/views/mobile_notifications.html
 domoticz/www/views/notification.html
 domoticz/www/views/offline.html
 domoticz/www/views/restoredatabase.html
