@@ -1,7 +1,8 @@
-# $FreeBSD: head/www/domoticz/Makefile 429660 2016-12-27 20:59:17Z matthew $
+# $FreeBSD: head/www/domoticz/Makefile 441819 2017-05-27 00:20:19Z linimon $
 
 PORTNAME=	domoticz
 PORTVERSION=	3.${DOMOTICZ_REL}
+PORTREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -13,6 +14,8 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
 		libtelldus-core.so:comms/telldus-core
+
+BROKEN_armv6=		fails to compile: HarmonyHub.cpp: ordered comparison between pointer and zero
 
 CONFLICTS_INSTALL?=	domoticz-[23]*
 
