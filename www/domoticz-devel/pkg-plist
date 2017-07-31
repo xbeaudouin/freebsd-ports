@@ -462,6 +462,7 @@ domoticz/scripts/dzVents/examples/check battery levels.lua
 domoticz/scripts/dzVents/examples/check dead devices by desc.lua
 domoticz/scripts/dzVents/examples/check dead devices.lua
 domoticz/scripts/dzVents/examples/external_light.lua
+domoticz/scripts/dzVents/examples/fake presence.lua
 domoticz/scripts/dzVents/examples/garage door.lua
 domoticz/scripts/dzVents/examples/get sensor values.lua
 domoticz/scripts/dzVents/examples/intruder alert.lua
@@ -531,12 +532,17 @@ domoticz/scripts/dzVents/runtime/device-adapters/voltage_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/waterflow_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/wind_device.lua
 domoticz/scripts/dzVents/runtime/device-adapters/zone_heating_device.lua
+domoticz/scripts/dzVents/runtime/device-adapters/zwave_thermostat_mode_device.lua
 domoticz/scripts/dzVents/runtime/dzVents.lua
 domoticz/scripts/dzVents/runtime/integration-tests/File.lua
 domoticz/scripts/dzVents/runtime/integration-tests/README.md
+domoticz/scripts/dzVents/runtime/integration-tests/global_data.lua
+domoticz/scripts/dzVents/runtime/integration-tests/secArmedAway.lua
 domoticz/scripts/dzVents/runtime/integration-tests/stage1.lua
 domoticz/scripts/dzVents/runtime/integration-tests/stage2.lua
 domoticz/scripts/dzVents/runtime/integration-tests/testIntegration.lua
+domoticz/scripts/dzVents/runtime/integration-tests/varString.lua
+domoticz/scripts/dzVents/runtime/integration-tests/vdSwitchDimmer.lua
 domoticz/scripts/dzVents/runtime/misc/smoothing.xlsx
 domoticz/scripts/dzVents/runtime/persistence.lua
 domoticz/scripts/dzVents/runtime/tests/.luacov
