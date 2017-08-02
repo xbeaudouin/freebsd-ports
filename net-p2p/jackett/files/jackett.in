@@ -1,6 +1,7 @@
 #!/bin/sh
 #
-# Author: Mark Felder <feld@FreeBSD.org>
+# Author: Xavier Beaudouin <kiwi@oav.net>
+# Original Author: Mark Felder <feld@FreeBSD.org>
 #
 # $FreeBSD$
 #

@@ -443,6 +443,7 @@ domoticz/plugins/AwoxSMP/plugin.py
 domoticz/plugins/examples/BaseTemplate.py
 domoticz/plugins/examples/DenonMarantz.py
 domoticz/plugins/examples/Dlink DSP-W215.py
+domoticz/plugins/examples/HTTP Listener.py
 domoticz/plugins/examples/HTTP.py
 domoticz/plugins/examples/Kodi.py
 domoticz/plugins/examples/RAVEn.py
@@ -1241,6 +1242,7 @@ domoticz/www/media/tree.png
 domoticz/www/ozwcp/cp.html
 domoticz/www/ozwcp/cp.js
 domoticz/www/ozwcp/ozwcp.html
+domoticz/www/robots.txt
 domoticz/www/secpanel/bg.jpg
 domoticz/www/secpanel/css/font.less
 domoticz/www/secpanel/css/reset.less
