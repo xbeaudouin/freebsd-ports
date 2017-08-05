@@ -207,6 +207,7 @@ domoticz/Config/ge/dimmer_module.xml
 domoticz/Config/ge/hinge-pin.xml
 domoticz/Config/ge/receptacle.xml
 domoticz/Config/ge/relay.xml
+domoticz/Config/ge/zw4001-switch.xml
 domoticz/Config/gocontrol/GC-TBZ48L.xml
 domoticz/Config/gr/gr105.xml
 domoticz/Config/gr/gr105n.xml
@@ -243,6 +244,7 @@ domoticz/Config/horstmann/srt323.xml
 domoticz/Config/horstmann/ssr302.xml
 domoticz/Config/idlock/idlock101.xml
 domoticz/Config/ingersoll/dwzwave1.xml
+domoticz/Config/inovelli/simple_module.xml
 domoticz/Config/intermatic/ca8900.xml
 domoticz/Config/iris/rangeextender.xml
 domoticz/Config/kaipule/im20.xml
