@@ -12,6 +12,7 @@ bin/ozw_config
 %%ETCDIR%%/BeNext/EnergySwitch.xml
 %%ETCDIR%%/BeNext/HeatingControl.xml
 %%ETCDIR%%/BeNext/Molite.xml
+%%ETCDIR%%/BeNext/P1dongle.xml
 %%ETCDIR%%/BeNext/PanicButton.xml
 %%ETCDIR%%/BeNext/PanicWatch.xml
 %%ETCDIR%%/BeNext/PluginDimmer.xml
@@ -164,6 +165,7 @@ bin/ozw_config
 %%ETCDIR%%/fakro/zws12.xml
 %%ETCDIR%%/fakro/zws230.xml
 %%ETCDIR%%/fibaro/fgbs001.xml
+%%ETCDIR%%/fibaro/fgcd001.xml
 %%ETCDIR%%/fibaro/fgd211.xml
 %%ETCDIR%%/fibaro/fgd212.xml
 %%ETCDIR%%/fibaro/fgdw2.xml
@@ -207,6 +209,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/hinge-pin.xml
 %%ETCDIR%%/ge/receptacle.xml
 %%ETCDIR%%/ge/relay.xml
+%%ETCDIR%%/ge/zw4001-switch.xml
 %%ETCDIR%%/gocontrol/GC-TBZ48L.xml
 %%ETCDIR%%/gr/gr105.xml
 %%ETCDIR%%/gr/gr105n.xml
@@ -243,6 +246,7 @@ bin/ozw_config
 %%ETCDIR%%/horstmann/ssr302.xml
 %%ETCDIR%%/idlock/idlock101.xml
 %%ETCDIR%%/ingersoll/dwzwave1.xml
+%%ETCDIR%%/inovelli/simple_module.xml
 %%ETCDIR%%/intermatic/ca8900.xml
 %%ETCDIR%%/iris/rangeextender.xml
 %%ETCDIR%%/kaipule/im20.xml
@@ -260,6 +264,7 @@ bin/ozw_config
 %%ETCDIR%%/linear/PD300Z-2.xml
 %%ETCDIR%%/linear/WA00Z-1.xml
 %%ETCDIR%%/linear/WA105DBZ-1.xml
+%%ETCDIR%%/linear/WADWAZ-1.xml
 %%ETCDIR%%/linear/WAPIRZ-1.xml
 %%ETCDIR%%/linear/WD500Z-1.xml
 %%ETCDIR%%/linear/WS15Z-1.xml
@@ -357,8 +362,8 @@ bin/ozw_config
 %%ETCDIR%%/remotec/zts-110.xml
 %%ETCDIR%%/remotec/zurc.xml
 %%ETCDIR%%/remotec/zxt-120.xml
-%%ETCDIR%%/schlage/BE468CAM619.xml
-%%ETCDIR%%/schlage/BE469NXCEN.xml
+%%ETCDIR%%/schlage/BE468.xml
+%%ETCDIR%%/schlage/BE469.xml
 %%ETCDIR%%/schlagelink/itemp.xml
 %%ETCDIR%%/schlagelink/minikeypad.xml
 %%ETCDIR%%/sensative/strips.xml
@@ -409,6 +414,9 @@ bin/ozw_config
 %%ETCDIR%%/zipato/vszd2102.xml
 %%ETCDIR%%/zipato/zp3102.xml
 %%ETCDIR%%/zooz/zen07.xml
+%%ETCDIR%%/zooz/zen20.xml
+%%ETCDIR%%/zooz/zen23.xml
+%%ETCDIR%%/zooz/zen24.xml
 %%ETCDIR%%/zooz/zse08.xml
 %%ETCDIR%%/zooz/zse09.xml
 %%ETCDIR%%/zooz/zse33.xml
