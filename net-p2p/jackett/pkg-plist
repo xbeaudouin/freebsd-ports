@@ -37,6 +37,7 @@
 %%DATADIR%%/Content/images/sort_desc_disabled.png
 %%DATADIR%%/Content/index.html
 %%DATADIR%%/Content/jacket_medium.png
+%%DATADIR%%/Content/libs/api.js
 %%DATADIR%%/Content/libs/bootstrap-notify.js
 %%DATADIR%%/Content/libs/filesize.min.js
 %%DATADIR%%/Content/libs/handlebars.min.js
@@ -46,7 +47,6 @@
 %%DATADIR%%/Content/libs/jquery.min.js
 %%DATADIR%%/Content/libs/moment.min.js
 %%DATADIR%%/Content/login.html
-%%DATADIR%%/Content/setup_indexer.html
 %%DATADIR%%/CsQuery.dll
 %%DATADIR%%/CurlSharp.dll
 %%DATADIR%%/CurlSharp.dll.config
@@ -127,7 +127,6 @@
 %%DATADIR%%/Definitions/losslessclub.yml
 %%DATADIR%%/Definitions/magico.yml
 %%DATADIR%%/Definitions/majomparade.yml
-%%DATADIR%%/Definitions/maniatorrent.yml
 %%DATADIR%%/Definitions/manicomioshare.yml
 %%DATADIR%%/Definitions/mononokebt.yml
 %%DATADIR%%/Definitions/mteamtp.yml
@@ -154,6 +153,7 @@
 %%DATADIR%%/Definitions/skytorrents.yml
 %%DATADIR%%/Definitions/sporthd.yml
 %%DATADIR%%/Definitions/sportscult.yml
+%%DATADIR%%/Definitions/t411v2.yml
 %%DATADIR%%/Definitions/tasmanit.yml
 %%DATADIR%%/Definitions/tenyardtracker.yml
 %%DATADIR%%/Definitions/theempire.yml
@@ -191,6 +191,7 @@
 %%DATADIR%%/Definitions/yggtorrent.yml
 %%DATADIR%%/Definitions/zamundanet.yml
 %%DATADIR%%/Definitions/zelkaorg.yml
+%%DATADIR%%/Definitions/zetorrents.yml
 %%DATADIR%%/Definitions/ztracker.yml
 %%DATADIR%%/ICSharpCode.SharpZipLib.dll
 %%DATADIR%%/Jackett.dll

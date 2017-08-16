@@ -1,7 +1,7 @@
 # $FreeBSD: head/net-p2p/jackett/Makefile 447248 2017-08-03 16:47:31Z feld $
 
 PORTNAME=	jackett
-PORTVERSION=	0.7.1622
+PORTVERSION=	0.8.55
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://github.com/Jackett/Jackett/releases/download/
 DISTNAME=	v${PORTVERSION}/Jackett.Binaries.Mono
