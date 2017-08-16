@@ -1,9 +1,8 @@
 #!/bin/sh
 #
-# Author: Xavier Beaudouin <kiwi@oav.net>
-# Original Author: Mark Felder <feld@FreeBSD.org>
+# Author: Mark Felder <feld@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: head/net-p2p/jackett/files/jackett.in 447248 2017-08-03 16:47:31Z feld $
 #
 
 # PROVIDE: jackett
@@ -34,9 +33,9 @@ pidfile="${jackett_data_dir}/jackett.pid"
 procname="%%PREFIX%%/bin/mono"
 command="/usr/sbin/daemon"
 command_args="-f -p ${pidfile} ${procname} %%DATADIR%%/JackettConsole.exe -d ${jackett_data_dir}"
-start_precmd=sonarr_precmd
+start_precmd=jackett_precmd
 
-sonarr_precmd()
+jackett_precmd()
 {
 	export XDG_CONFIG_HOME=${jackett_data_dir}
 

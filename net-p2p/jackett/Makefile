@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-p2p/sonarr/Makefile 430494 2017-01-03 18:28:10Z feld $
+# $FreeBSD: head/net-p2p/jackett/Makefile 447248 2017-08-03 16:47:31Z feld $
 
 PORTNAME=	jackett
 PORTVERSION=	0.7.1622
@@ -7,7 +7,7 @@ MASTER_SITES=	https://github.com/Jackett/Jackett/releases/download/
 DISTNAME=	v${PORTVERSION}/Jackett.Binaries.Mono
 
 MAINTAINER=	kiwi@oav.net
-COMMENT=	Torznab proxy
+COMMENT=	Torznab proxy implementation of the Newznab API
 
 LICENSE=	GPLv2
 
@@ -19,8 +19,8 @@ USE_RC_SUBR=	jackett
 NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/Jackett
 
-#USERS=	jackett
-USERS=	nobody
+USERS=	jackett
+GROUPS=	jackett
 
 .include <bsd.port.options.mk>
 

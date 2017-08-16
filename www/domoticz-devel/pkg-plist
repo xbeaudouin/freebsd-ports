@@ -449,6 +449,7 @@ domoticz/plugins/examples/HTTP Listener.py
 domoticz/plugins/examples/HTTP.py
 domoticz/plugins/examples/Kodi.py
 domoticz/plugins/examples/RAVEn.py
+domoticz/plugins/examples/UDP Discovery.py
 domoticz/scripts/_domoticz_main
 domoticz/scripts/_domoticz_main.bat
 domoticz/scripts/buienradar_rain_example.pl
@@ -951,6 +952,7 @@ domoticz/www/images/forward_enabled.png
 domoticz/www/images/forward_enabled_hover.png
 domoticz/www/images/gauge.png
 domoticz/www/images/gauge48.png
+domoticz/www/images/general.png
 domoticz/www/images/glyphicons-halflings-white.png
 domoticz/www/images/glyphicons-halflings.png
 domoticz/www/images/handle.png
@@ -1071,6 +1073,7 @@ domoticz/www/images/text.png
 domoticz/www/images/text48.png
 domoticz/www/images/unknown.png
 domoticz/www/images/up.png
+domoticz/www/images/update.png
 domoticz/www/images/users.png
 domoticz/www/images/utility.png
 domoticz/www/images/uv.png
@@ -1275,8 +1278,12 @@ domoticz/www/styles/dark-th3me/custom.css
 domoticz/www/styles/dark-th3me/custom.js
 domoticz/www/styles/dark-th3me/fonts/Ubuntu.ttf
 domoticz/www/styles/dark-th3me/images/domoticz.jpg
+domoticz/www/styles/default/base.css
 domoticz/www/styles/default/custom.css
 domoticz/www/styles/default/custom.js
+domoticz/www/styles/default/extras_and_animations.css
+domoticz/www/styles/default/images/ui-bg_gloss-wave_25_333333_500x100.png
+domoticz/www/styles/default/show_version_number.css
 domoticz/www/styles/element-dark/custom.css
 domoticz/www/styles/element-dark/custom.js
 domoticz/www/styles/element-dark/fonts/DroidSans.ttf
