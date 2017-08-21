@@ -190,6 +190,7 @@ domoticz/Config/fibaro/fgss101.xml
 domoticz/Config/fibaro/fgwpe.xml
 domoticz/Config/fibaro/fgwpfzw5.xml
 domoticz/Config/firstalert/zcombo.xml
+domoticz/Config/forest/fs2z5232000002.xml
 domoticz/Config/fortrezz/mimolite.xml
 domoticz/Config/fortrezz/ssa2.xml
 domoticz/Config/fortrezz/ssa3.xml
@@ -384,6 +385,7 @@ domoticz/Config/vision/zd2201.xml
 domoticz/Config/vision/zd2301.xml
 domoticz/Config/vision/zf5201.xml
 domoticz/Config/vision/zg8101.xml
+domoticz/Config/vision/zl7261.xml
 domoticz/Config/vision/zm1601eu.xml
 domoticz/Config/vision/zm1601eu5.xml
 domoticz/Config/vision/zm1602eu.xml
@@ -417,6 +419,7 @@ domoticz/Config/zooz/zen23.xml
 domoticz/Config/zooz/zen24.xml
 domoticz/Config/zooz/zse08.xml
 domoticz/Config/zooz/zse09.xml
+domoticz/Config/zooz/zse30.xml
 domoticz/Config/zooz/zse33.xml
 domoticz/Config/zooz/zse40.xml
 domoticz/Config/zwave.me/ZME_05431.xml
@@ -1283,6 +1286,7 @@ domoticz/www/styles/default/custom.css
 domoticz/www/styles/default/custom.js
 domoticz/www/styles/default/extras_and_animations.css
 domoticz/www/styles/default/images/ui-bg_gloss-wave_25_333333_500x100.png
+domoticz/www/styles/default/navigation_main_sidebar.css
 domoticz/www/styles/default/show_version_number.css
 domoticz/www/styles/element-dark/custom.css
 domoticz/www/styles/element-dark/custom.js

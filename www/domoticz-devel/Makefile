@@ -19,6 +19,7 @@ CONFLICTS_INSTALL?=	domoticz-[23]*
 OPTIONS_SUB=	YES
 OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE PYTHON TELLDUS
 SBOOST_DESC=	Use static Boost instead of dynamic linking
+SSSL_DESC=	Use static OpenSSL library instead of dynamic linking
 SLUA_DESC=	Use domoticz provided LUA instead of ports one
 SMQTT_DESC=	Use domoticz mosquitto instead of ports one
 SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
@@ -29,12 +30,12 @@ TELLDUS_DESC=	Enable support for Telldus
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	8300
-DOMOTICZ_TS=	1502860993
+DOMOTICZ_REL=	8342
+DOMOTICZ_TS=	1503244397
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz 
 GH_PROJECT=	domoticz
-GH_TAGNAME=	3c87c91f
+GH_TAGNAME=	88c492e7
 
 USES=		cmake iconv pkgconfig execinfo ssl
 
@@ -46,6 +47,12 @@ GROUPS=		domoticz
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
 		-DUSE_BUILTIN_ZLIB="NO" \
 		-DUSE_STATIC_OPENZWAVE="NO"
+
+.if ${PORT_OPTIONS:MSSSL}
+CMAKE_ARGS+=	-DOPENSSL_USE_STATIC_LIBS="YES"
+.else
+CMAKE_ARGS+=	-DOPENSSL_USE_STATIC_LIBS="NO"
+.endif
 
 .if ${PORT_OPTIONS:MSBOOST}
 CMAKE_ARGS+=	-DUSE_STATIC_BOOST="YES"
