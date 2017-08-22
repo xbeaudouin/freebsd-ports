@@ -192,6 +192,7 @@ bin/ozw_config
 %%ETCDIR%%/fibaro/fgwpe.xml
 %%ETCDIR%%/fibaro/fgwpfzw5.xml
 %%ETCDIR%%/firstalert/zcombo.xml
+%%ETCDIR%%/forest/fs2z5232000002.xml
 %%ETCDIR%%/fortrezz/mimolite.xml
 %%ETCDIR%%/fortrezz/ssa2.xml
 %%ETCDIR%%/fortrezz/ssa3.xml
@@ -386,6 +387,7 @@ bin/ozw_config
 %%ETCDIR%%/vision/zd2301.xml
 %%ETCDIR%%/vision/zf5201.xml
 %%ETCDIR%%/vision/zg8101.xml
+%%ETCDIR%%/vision/zl7261.xml
 %%ETCDIR%%/vision/zm1601eu.xml
 %%ETCDIR%%/vision/zm1601eu5.xml
 %%ETCDIR%%/vision/zm1602eu.xml
@@ -419,6 +421,7 @@ bin/ozw_config
 %%ETCDIR%%/zooz/zen24.xml
 %%ETCDIR%%/zooz/zse08.xml
 %%ETCDIR%%/zooz/zse09.xml
+%%ETCDIR%%/zooz/zse30.xml
 %%ETCDIR%%/zooz/zse33.xml
 %%ETCDIR%%/zooz/zse40.xml
 %%ETCDIR%%/zwave.me/ZME_05431.xml
