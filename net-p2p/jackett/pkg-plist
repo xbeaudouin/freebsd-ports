@@ -93,6 +93,8 @@
 %%DATADIR%%/Definitions/freedomhd.yml
 %%DATADIR%%/Definitions/fullmixmusic.yml
 %%DATADIR%%/Definitions/funkytorrents.yml
+%%DATADIR%%/Definitions/gay-torrents.yml
+%%DATADIR%%/Definitions/gaytorrentru.yml
 %%DATADIR%%/Definitions/gfxpeers.yml
 %%DATADIR%%/Definitions/gigatorrents.yml
 %%DATADIR%%/Definitions/gods.yml
@@ -121,7 +123,6 @@
 %%DATADIR%%/Definitions/karagarga.yml
 %%DATADIR%%/Definitions/kickasstorrent-kathow.yml
 %%DATADIR%%/Definitions/kickasstorrent.yml
-%%DATADIR%%/Definitions/leparadisdunet.yml
 %%DATADIR%%/Definitions/limetorrents.yml
 %%DATADIR%%/Definitions/linkomanija.yml
 %%DATADIR%%/Definitions/losslessclub.yml
@@ -142,7 +143,6 @@
 %%DATADIR%%/Definitions/polishsource.yml
 %%DATADIR%%/Definitions/polishtracker.yml
 %%DATADIR%%/Definitions/ptfiles.yml
-%%DATADIR%%/Definitions/qctorrent.yml
 %%DATADIR%%/Definitions/rockhardlossless.yml
 %%DATADIR%%/Definitions/rodvd.yml
 %%DATADIR%%/Definitions/sdbits.yml
@@ -168,6 +168,7 @@
 %%DATADIR%%/Definitions/thevault.yml
 %%DATADIR%%/Definitions/tntvillage.yml
 %%DATADIR%%/Definitions/tokyotosho.yml
+%%DATADIR%%/Definitions/torlock.yml
 %%DATADIR%%/Definitions/torrent9.yml
 %%DATADIR%%/Definitions/torrentbd.yml
 %%DATADIR%%/Definitions/torrentccf.yml
