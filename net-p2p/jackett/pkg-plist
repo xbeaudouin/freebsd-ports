@@ -13,6 +13,7 @@
 %%DATADIR%%/Content/common.js
 %%DATADIR%%/Content/congruent_outline.png
 %%DATADIR%%/Content/crissXcross.png
+%%DATADIR%%/Content/css/bootstrap-multiselect.css
 %%DATADIR%%/Content/css/font-awesome.min.css
 %%DATADIR%%/Content/css/jquery.dataTables.min.css
 %%DATADIR%%/Content/custom.css
@@ -38,6 +39,7 @@
 %%DATADIR%%/Content/index.html
 %%DATADIR%%/Content/jacket_medium.png
 %%DATADIR%%/Content/libs/api.js
+%%DATADIR%%/Content/libs/bootstrap-multiselect.js
 %%DATADIR%%/Content/libs/bootstrap-notify.js
 %%DATADIR%%/Content/libs/filesize.min.js
 %%DATADIR%%/Content/libs/handlebars.min.js
@@ -61,6 +63,7 @@
 %%DATADIR%%/Definitions/apollo.yml
 %%DATADIR%%/Definitions/arabafenice.yml
 %%DATADIR%%/Definitions/asiandvdclub.yml
+%%DATADIR%%/Definitions/ast4u.yml
 %%DATADIR%%/Definitions/audiobooktorrents.yml
 %%DATADIR%%/Definitions/awesomehd.yml
 %%DATADIR%%/Definitions/b2s-share.yml
@@ -79,10 +82,10 @@
 %%DATADIR%%/Definitions/classix.yml
 %%DATADIR%%/Definitions/cpabien.yml
 %%DATADIR%%/Definitions/czteam.yml
+%%DATADIR%%/Definitions/cztorrent.yml
 %%DATADIR%%/Definitions/datascene.yml
 %%DATADIR%%/Definitions/deildu.yml
 %%DATADIR%%/Definitions/diablotorrent.yml
-%%DATADIR%%/Definitions/dragonworld.yml
 %%DATADIR%%/Definitions/dragonworldreloaded.yml
 %%DATADIR%%/Definitions/dreamteam.yml
 %%DATADIR%%/Definitions/eotforum.yml
@@ -151,6 +154,7 @@
 %%DATADIR%%/Definitions/sharespacedb.yml
 %%DATADIR%%/Definitions/shellife.yml
 %%DATADIR%%/Definitions/skytorrents.yml
+%%DATADIR%%/Definitions/speedtorrentreloaded.yml
 %%DATADIR%%/Definitions/sporthd.yml
 %%DATADIR%%/Definitions/sportscult.yml
 %%DATADIR%%/Definitions/t411v2.yml
@@ -230,3 +234,4 @@
 %%DATADIR%%/System.Web.Http.dll
 %%DATADIR%%/Upstart.config
 %%DATADIR%%/YamlDotNet.dll
+%%DATADIR%%/install_service_macos.sh
