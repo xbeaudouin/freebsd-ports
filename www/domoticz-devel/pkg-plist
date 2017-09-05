@@ -366,6 +366,7 @@ domoticz/Config/schlage/BE469.xml
 domoticz/Config/schlagelink/itemp.xml
 domoticz/Config/schlagelink/minikeypad.xml
 domoticz/Config/sensative/strips.xml
+domoticz/Config/shenzen_neo/ls02ch.xml
 domoticz/Config/shenzen_neo/nas-ab01z.xml
 domoticz/Config/shenzen_neo/nas-ds01z.xml
 domoticz/Config/shenzen_neo/nas-pd01z.xml
