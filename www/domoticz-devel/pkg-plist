@@ -481,6 +481,7 @@ domoticz/scripts/dzVents/examples/random night light.lua
 domoticz/scripts/dzVents/examples/respond to switch.lua
 domoticz/scripts/dzVents/examples/schedule fish pond pump.lua
 domoticz/scripts/dzVents/examples/simple room heating with hysteresis control.lua
+domoticz/scripts/dzVents/examples/sunscreen.lua
 domoticz/scripts/dzVents/examples/templates/bare.lua
 domoticz/scripts/dzVents/examples/templates/complete.lua
 domoticz/scripts/dzVents/examples/templates/device.lua
