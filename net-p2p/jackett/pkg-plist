@@ -67,6 +67,7 @@
 %%DATADIR%%/Definitions/audiobooktorrents.yml
 %%DATADIR%%/Definitions/awesomehd.yml
 %%DATADIR%%/Definitions/b2s-share.yml
+%%DATADIR%%/Definitions/backups.yml
 %%DATADIR%%/Definitions/bigtorrent.yml
 %%DATADIR%%/Definitions/bithq.yml
 %%DATADIR%%/Definitions/bithumen.yml
@@ -100,6 +101,7 @@
 %%DATADIR%%/Definitions/gaytorrentru.yml
 %%DATADIR%%/Definitions/gfxpeers.yml
 %%DATADIR%%/Definitions/gigatorrents.yml
+%%DATADIR%%/Definitions/gktorrent.yml
 %%DATADIR%%/Definitions/gods.yml
 %%DATADIR%%/Definitions/gormogon.yml
 %%DATADIR%%/Definitions/greekteam.yml
@@ -143,7 +145,6 @@
 %%DATADIR%%/Definitions/ourbits.yml
 %%DATADIR%%/Definitions/passionetorrent.yml
 %%DATADIR%%/Definitions/polishsource.yml
-%%DATADIR%%/Definitions/polishtracker.yml
 %%DATADIR%%/Definitions/ptfiles.yml
 %%DATADIR%%/Definitions/rockhardlossless.yml
 %%DATADIR%%/Definitions/rodvd.yml
@@ -152,6 +153,7 @@
 %%DATADIR%%/Definitions/shareisland.yml
 %%DATADIR%%/Definitions/sharespacedb.yml
 %%DATADIR%%/Definitions/shellife.yml
+%%DATADIR%%/Definitions/sktorrent.yml
 %%DATADIR%%/Definitions/skytorrents.yml
 %%DATADIR%%/Definitions/speedtorrentreloaded.yml
 %%DATADIR%%/Definitions/sporthd.yml
@@ -181,6 +183,7 @@
 %%DATADIR%%/Definitions/torrentproject.yml
 %%DATADIR%%/Definitions/torrentsectorcrew.yml
 %%DATADIR%%/Definitions/torrentsmd.yml
+%%DATADIR%%/Definitions/torrentvault.yml
 %%DATADIR%%/Definitions/torrentz2.yml
 %%DATADIR%%/Definitions/torviet.yml
 %%DATADIR%%/Definitions/totheglory.yml
@@ -195,7 +198,7 @@
 %%DATADIR%%/Definitions/yggtorrent.yml
 %%DATADIR%%/Definitions/zamundanet.yml
 %%DATADIR%%/Definitions/zelkaorg.yml
-%%DATADIR%%/Definitions/zetorrents.yml
+%%DATADIR%%/Definitions/zooqle.yml
 %%DATADIR%%/Definitions/ztracker.yml
 %%DATADIR%%/ICSharpCode.SharpZipLib.dll
 %%DATADIR%%/Jackett.dll
@@ -233,4 +236,4 @@
 %%DATADIR%%/System.Web.Http.dll
 %%DATADIR%%/Upstart.config
 %%DATADIR%%/YamlDotNet.dll
-%%DATADIR%%/install_service_macos.sh
+%%DATADIR%%/install_service_macos
