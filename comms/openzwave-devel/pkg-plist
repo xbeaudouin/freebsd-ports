@@ -108,6 +108,7 @@ bin/ozw_config
 %%ETCDIR%%/dlink/dch-z110.xml
 %%ETCDIR%%/dlink/dch-z120.xml
 %%ETCDIR%%/dlink/dch-z510.xml
+%%ETCDIR%%/dome/0101.xml
 %%ETCDIR%%/domitech/zb22uk.xml
 %%ETCDIR%%/domitech/ze27eu.xml
 %%ETCDIR%%/domux/DX1CA-Z.xml
@@ -202,7 +203,9 @@ bin/ozw_config
 %%ETCDIR%%/ge/12724-dimmer.xml
 %%ETCDIR%%/ge/14282-plugin-switch.xml
 %%ETCDIR%%/ge/14291-switch.xml
+%%ETCDIR%%/ge/14292-toggle-switch.xml
 %%ETCDIR%%/ge/14294-dimmer.xml
+%%ETCDIR%%/ge/14295-dimmer-toggle.xml
 %%ETCDIR%%/ge/26931-motion-switch.xml
 %%ETCDIR%%/ge/26933-motion-dimmer.xml
 %%ETCDIR%%/ge/dimmer.xml
@@ -368,6 +371,8 @@ bin/ozw_config
 %%ETCDIR%%/schlagelink/itemp.xml
 %%ETCDIR%%/schlagelink/minikeypad.xml
 %%ETCDIR%%/sensative/strips.xml
+%%ETCDIR%%/shenzen_neo/ls01ch.xml
+%%ETCDIR%%/shenzen_neo/ls02ch.xml
 %%ETCDIR%%/shenzen_neo/nas-ab01z.xml
 %%ETCDIR%%/shenzen_neo/nas-ds01z.xml
 %%ETCDIR%%/shenzen_neo/nas-pd01z.xml
@@ -415,8 +420,12 @@ bin/ozw_config
 %%ETCDIR%%/zipato/RGBBulb2.xml
 %%ETCDIR%%/zipato/vszd2102.xml
 %%ETCDIR%%/zipato/zp3102.xml
+%%ETCDIR%%/zooz/zen06.xml
 %%ETCDIR%%/zooz/zen07.xml
 %%ETCDIR%%/zooz/zen20.xml
+%%ETCDIR%%/zooz/zen21.xml
+%%ETCDIR%%/zooz/zen22.xml
+%%ETCDIR%%/zooz/zen22v2.xml
 %%ETCDIR%%/zooz/zen23.xml
 %%ETCDIR%%/zooz/zen24.xml
 %%ETCDIR%%/zooz/zse08.xml
@@ -440,6 +449,7 @@ bin/ozw_config
 %%ETCDIR%%/zwave.me/popp_kfob-c.xml
 %%ETCDIR%%/zwave.me/zweather.xml
 %%ETCDIR%%/zwcfg.xsd
+%%ETCDIR%%/zwp/WD-100.xml
 %%ETCDIR%%/zwscene.xsd
 include/openzwave/Bitfield.h
 include/openzwave/Defs.h

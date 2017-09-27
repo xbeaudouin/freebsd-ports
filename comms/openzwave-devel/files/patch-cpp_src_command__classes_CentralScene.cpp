@@ -1,5 +1,5 @@
---- cpp/src/command_classes/CentralScene.cpp.orig	2017-08-04 02:58:35.000000000 +0200
-+++ cpp/src/command_classes/CentralScene.cpp	2017-08-22 10:22:17.242394000 +0200
+--- cpp/src/command_classes/CentralScene.cpp.orig	2017-09-27 14:30:32 UTC
++++ cpp/src/command_classes/CentralScene.cpp
 @@ -33,6 +33,8 @@
  #include "Driver.h"
  #include "platform/Log.h"
@@ -9,7 +9,7 @@
  
  #include "tinyxml.h"
  
-@@ -48,9 +50,53 @@
+@@ -48,9 +50,53 @@ enum CentralSceneCmd
  
  enum CentralScene_ValueID_Index
  {
@@ -64,7 +64,7 @@
  //-----------------------------------------------------------------------------
  // <CentralScene::CentralScene>
  // Constructor
-@@ -63,6 +109,7 @@
+@@ -63,6 +109,7 @@ CentralScene::CentralScene
  CommandClass( _homeId, _nodeId ),
  m_scenecount(0)
  {
@@ -72,7 +72,7 @@
  	Log::Write(LogLevel_Info, GetNodeId(), "CentralScene - Created %d", HasStaticRequest( StaticRequest_Values ));
  }
  
-@@ -80,7 +127,7 @@
+@@ -80,7 +127,7 @@ bool CentralScene::RequestState
  {
  	Log::Write(LogLevel_Info, GetNodeId(), "CentralScene RequestState: %d", _requestFlags);
  	bool requests = false;
@@ -81,7 +81,7 @@
  	{
  			requests = RequestValue( _requestFlags, CentralSceneCmd_Capability_Get, _instance, _queue );
  	} else {
-@@ -162,36 +209,85 @@
+@@ -162,36 +209,85 @@ bool CentralScene::HandleMsg
  	if( CentralSceneCmd_Set == (CentralSceneCmd)_data[0] )
  	{
  		// Central Scene Set received so send notification
@@ -183,7 +183,7 @@
  		{
  			value->OnValueRefreshed(m_scenecount);
  			value->Release();
-@@ -199,16 +295,40 @@
+@@ -199,16 +295,40 @@ bool CentralScene::HandleMsg
  			Log::Write( LogLevel_Warning, GetNodeId(), "Can't find ValueID for SceneCount");
  		}
  
@@ -234,7 +234,7 @@
  		}
  	}
  
-@@ -226,8 +346,101 @@
+@@ -226,8 +346,101 @@ void CentralScene::CreateVars
  {
  	if( Node* node = GetNodeUnsafe() )
  	{
@@ -259,13 +259,12 @@
  	}
  }
  
--
 +void CentralScene::createSupportedKeyAttributesValues(uint8 keyAttributes, uint8 sceneNumber, uint8 index, uint8 instance)
 +{
 +    if( Node* node = GetNodeUnsafe() )
 +    {
 +        vector<ValueList::Item> items;
-+
+ 
 +        for(int i = 0; i < 8; i++)
 +        {
 +            if ( keyAttributes & ( 1 << i) )

@@ -54,6 +54,7 @@
 %%DATADIR%%/CurlSharp.dll.config
 %%DATADIR%%/CurlSharp.dll.mdb
 %%DATADIR%%/DateTimeRoutines.dll
+%%DATADIR%%/Definitions/1337x.yml
 %%DATADIR%%/Definitions/2fast4you.yml
 %%DATADIR%%/Definitions/3dtorrents.yml
 %%DATADIR%%/Definitions/acidlounge.yml
@@ -75,6 +76,7 @@
 %%DATADIR%%/Definitions/blubits.yml
 %%DATADIR%%/Definitions/bluebird.yml
 %%DATADIR%%/Definitions/blutopia.yml
+%%DATADIR%%/Definitions/btdb.yml
 %%DATADIR%%/Definitions/btnext.yml
 %%DATADIR%%/Definitions/carpathians.yml
 %%DATADIR%%/Definitions/chdbits.yml
@@ -116,6 +118,7 @@
 %%DATADIR%%/Definitions/horriblesubs.yml
 %%DATADIR%%/Definitions/hyperay.yml
 %%DATADIR%%/Definitions/icetorrent.yml
+%%DATADIR%%/Definitions/idope.yml
 %%DATADIR%%/Definitions/ilcorsaronero.yml
 %%DATADIR%%/Definitions/iloveclassics.yml
 %%DATADIR%%/Definitions/infinityt.yml
@@ -131,6 +134,7 @@
 %%DATADIR%%/Definitions/linkomanija.yml
 %%DATADIR%%/Definitions/losslessclub.yml
 %%DATADIR%%/Definitions/magico.yml
+%%DATADIR%%/Definitions/magnetdl.yml
 %%DATADIR%%/Definitions/majomparade.yml
 %%DATADIR%%/Definitions/manicomioshare.yml
 %%DATADIR%%/Definitions/mononokebt.yml
@@ -188,12 +192,14 @@
 %%DATADIR%%/Definitions/torviet.yml
 %%DATADIR%%/Definitions/totheglory.yml
 %%DATADIR%%/Definitions/trancetraffic.yml
+%%DATADIR%%/Definitions/trezzor.yml
 %%DATADIR%%/Definitions/uhdbits.yml
 %%DATADIR%%/Definitions/ultimategamerclub.yml
 %%DATADIR%%/Definitions/ultrahdclub.yml
 %%DATADIR%%/Definitions/utorrents.yml
 %%DATADIR%%/Definitions/waffles.yml
 %%DATADIR%%/Definitions/worldofp2p.yml
+%%DATADIR%%/Definitions/worldwidetorrents.yml
 %%DATADIR%%/Definitions/xtremezone.yml
 %%DATADIR%%/Definitions/yggtorrent.yml
 %%DATADIR%%/Definitions/zamundanet.yml
