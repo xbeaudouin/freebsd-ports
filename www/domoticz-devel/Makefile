@@ -37,7 +37,7 @@ GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
 GH_TAGNAME=	8cb2dd04
 
-USES=		cmake iconv pkgconfig execinfo ssl
+USES=		cmake iconv pkgconfig ssl
 
 USE_RC_SUBR=	domoticz
 
