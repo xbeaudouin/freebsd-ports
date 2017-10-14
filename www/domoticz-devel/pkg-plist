@@ -452,6 +452,7 @@ domoticz/plugins/examples/Dlink DSP-W215.py
 domoticz/plugins/examples/HTTP Listener.py
 domoticz/plugins/examples/HTTP.py
 domoticz/plugins/examples/Kodi.py
+domoticz/plugins/examples/Pinger.py
 domoticz/plugins/examples/RAVEn.py
 domoticz/plugins/examples/UDP Discovery.py
 domoticz/scripts/_domoticz_main
