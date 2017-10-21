@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2017-06-07 08:41:02.000000000 +0200
-+++ CMakeLists.txt	2017-06-08 09:55:44.434914000 +0200
-@@ -241,7 +241,7 @@
+--- CMakeLists.txt.orig	2017-10-21 15:33:56.000000000 +0200
++++ CMakeLists.txt	2017-10-21 21:43:45.057536000 +0200
+@@ -246,7 +246,7 @@
    ENDIF(CMAKE_COMPILER_IS_GNUCXX)
  ENDMACRO()
  
@@ -9,7 +9,7 @@
    DOC "git command line client")
  
  
-@@ -680,7 +680,7 @@
+@@ -711,7 +711,7 @@
  
  SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${domoticz}-dev")
  SET(CPACK_PACKAGING_INSTALL_PREFIX "/")
@@ -18,7 +18,7 @@
  SET(CPACK_PACKAGE_EXECUTABLES "domoticz;Home Automation System (Domotica).")
  
  #set(CPACK_DEB_COMPONENT_INSTALL TRUE)
-@@ -689,18 +689,17 @@
+@@ -720,16 +720,15 @@
  INCLUDE(CPack)
  
  IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
@@ -43,6 +43,4 @@
 +install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/scripts DESTINATION "/usr/local/domoticz" USE_SOURCE_PERMISSIONS)
 +install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/plugins DESTINATION "/usr/local/domoticz")
 +install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Config DESTINATION "/usr/local/domoticz")
- 
- INCLUDE(TestBigEndian)
  
