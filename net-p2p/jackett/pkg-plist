@@ -63,6 +63,7 @@
 %%DATADIR%%/Definitions/aox.yml
 %%DATADIR%%/Definitions/apollo.yml
 %%DATADIR%%/Definitions/arabafenice.yml
+%%DATADIR%%/Definitions/archetorrent.yml
 %%DATADIR%%/Definitions/asiandvdclub.yml
 %%DATADIR%%/Definitions/ast4u.yml
 %%DATADIR%%/Definitions/audiobooktorrents.yml
@@ -138,6 +139,7 @@
 %%DATADIR%%/Definitions/magnetdl.yml
 %%DATADIR%%/Definitions/majomparade.yml
 %%DATADIR%%/Definitions/manicomioshare.yml
+%%DATADIR%%/Definitions/metaltracker.yml
 %%DATADIR%%/Definitions/mononokebt.yml
 %%DATADIR%%/Definitions/mteamtp.yml
 %%DATADIR%%/Definitions/myspleen.yml
