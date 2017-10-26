@@ -142,6 +142,8 @@
 %%DATADIR%%/Definitions/metaltracker.yml
 %%DATADIR%%/Definitions/mononokebt.yml
 %%DATADIR%%/Definitions/mteamtp.yml
+%%DATADIR%%/Definitions/mvgroupforum.yml
+%%DATADIR%%/Definitions/mvgroupmain.yml
 %%DATADIR%%/Definitions/myspleen.yml
 %%DATADIR%%/Definitions/nethd.yml
 %%DATADIR%%/Definitions/newretro.yml
@@ -162,6 +164,7 @@
 %%DATADIR%%/Definitions/shellife.yml
 %%DATADIR%%/Definitions/sktorrent.yml
 %%DATADIR%%/Definitions/skytorrents.yml
+%%DATADIR%%/Definitions/speed-share.yml
 %%DATADIR%%/Definitions/speedtorrentreloaded.yml
 %%DATADIR%%/Definitions/sporthd.yml
 %%DATADIR%%/Definitions/sportscult.yml
