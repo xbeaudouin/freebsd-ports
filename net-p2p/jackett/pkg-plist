@@ -73,6 +73,7 @@
 %%DATADIR%%/Definitions/bigtorrent.yml
 %%DATADIR%%/Definitions/bithq.yml
 %%DATADIR%%/Definitions/bithumen.yml
+%%DATADIR%%/Definitions/bitme.yml
 %%DATADIR%%/Definitions/bitspyder.yml
 %%DATADIR%%/Definitions/blubits.yml
 %%DATADIR%%/Definitions/bluebird.yml
