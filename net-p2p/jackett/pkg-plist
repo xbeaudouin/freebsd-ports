@@ -54,7 +54,6 @@
 %%DATADIR%%/CurlSharp.dll.config
 %%DATADIR%%/CurlSharp.pdb
 %%DATADIR%%/DateTimeRoutines.dll
-%%DATADIR%%/DateTimeRoutines.pdb
 %%DATADIR%%/Definitions/1337x.yml
 %%DATADIR%%/Definitions/2fast4you.yml
 %%DATADIR%%/Definitions/3dtorrents.yml
@@ -106,7 +105,6 @@
 %%DATADIR%%/Definitions/funkytorrents.yml
 %%DATADIR%%/Definitions/gay-torrents.yml
 %%DATADIR%%/Definitions/gaytorrentru.yml
-%%DATADIR%%/Definitions/gfxnews.yml
 %%DATADIR%%/Definitions/gfxpeers.yml
 %%DATADIR%%/Definitions/gigatorrents.yml
 %%DATADIR%%/Definitions/gktorrent.yml
@@ -243,7 +241,6 @@
 %%DATADIR%%/Owin.dll
 %%DATADIR%%/README.md
 %%DATADIR%%/System.Net.Http.Formatting.dll
-%%DATADIR%%/System.Runtime.InteropServices.RuntimeInformation.dll
 %%DATADIR%%/System.Web.Http.Owin.dll
 %%DATADIR%%/System.Web.Http.Tracing.dll
 %%DATADIR%%/System.Web.Http.dll
