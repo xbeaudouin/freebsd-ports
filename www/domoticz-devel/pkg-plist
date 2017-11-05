@@ -1046,6 +1046,7 @@ domoticz/www/js/angular-route.min.js.gz
 domoticz/www/js/angular-sanitize.min.js.gz
 domoticz/www/js/angular-scrollglue.js.gz
 domoticz/www/js/angular-tree-control.js.gz
+domoticz/www/js/angular-websocket.js
 domoticz/www/js/angular.min.js.gz
 domoticz/www/js/angularAMD.min.js.gz
 domoticz/www/js/blockly_compressed.js.gz
