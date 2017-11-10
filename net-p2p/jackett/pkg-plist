@@ -1,7 +1,5 @@
 %%DATADIR%%/AngleSharp.dll
 %%DATADIR%%/AutoMapper.dll
-%%DATADIR%%/Autofac.Integration.Owin.dll
-%%DATADIR%%/Autofac.Integration.WebApi.Owin.dll
 %%DATADIR%%/Autofac.Integration.WebApi.dll
 %%DATADIR%%/Autofac.dll
 %%DATADIR%%/BencodeNET.dll
@@ -98,6 +96,7 @@
 %%DATADIR%%/Definitions/eotforum.yml
 %%DATADIR%%/Definitions/estone.yml
 %%DATADIR%%/Definitions/ethor.yml
+%%DATADIR%%/Definitions/ettv.yml
 %%DATADIR%%/Definitions/eztv.yml
 %%DATADIR%%/Definitions/fanoin.yml
 %%DATADIR%%/Definitions/freedomhd.yml
@@ -195,7 +194,6 @@
 %%DATADIR%%/Definitions/torrentdownloads.yml
 %%DATADIR%%/Definitions/torrenthr.yml
 %%DATADIR%%/Definitions/torrenting.yml
-%%DATADIR%%/Definitions/torrentproject.yml
 %%DATADIR%%/Definitions/torrentsectorcrew.yml
 %%DATADIR%%/Definitions/torrentsmd.yml
 %%DATADIR%%/Definitions/torrentvault.yml
