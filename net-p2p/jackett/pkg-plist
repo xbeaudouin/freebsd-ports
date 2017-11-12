@@ -90,9 +90,11 @@
 %%DATADIR%%/Definitions/datascene.yml
 %%DATADIR%%/Definitions/deildu.yml
 %%DATADIR%%/Definitions/diablotorrent.yml
+%%DATADIR%%/Definitions/downloadville.yml
 %%DATADIR%%/Definitions/dragonworldreloaded.yml
 %%DATADIR%%/Definitions/dreamteam.yml
 %%DATADIR%%/Definitions/elitehd.yml
+%%DATADIR%%/Definitions/elittracker.yml
 %%DATADIR%%/Definitions/eotforum.yml
 %%DATADIR%%/Definitions/estone.yml
 %%DATADIR%%/Definitions/ethor.yml
@@ -224,12 +226,9 @@
 %%DATADIR%%/JackettConsole.exe
 %%DATADIR%%/JackettConsole.exe.config
 %%DATADIR%%/JackettConsole.pdb
-%%DATADIR%%/JackettService.exe
-%%DATADIR%%/JackettService.exe.config
-%%DATADIR%%/JackettTray.exe
-%%DATADIR%%/JackettTray.exe.config
 %%DATADIR%%/JackettUpdater.exe
 %%DATADIR%%/JackettUpdater.exe.config
+%%DATADIR%%/JackettUpdater.pdb
 %%DATADIR%%/LICENSE
 %%DATADIR%%/Microsoft.AspNetCore.WebUtilities.dll
 %%DATADIR%%/Microsoft.Extensions.Primitives.dll
