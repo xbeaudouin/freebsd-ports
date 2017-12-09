@@ -60,7 +60,6 @@
 %%DATADIR%%/Definitions/anidex.yml
 %%DATADIR%%/Definitions/anirena.yml
 %%DATADIR%%/Definitions/aox.yml
-%%DATADIR%%/Definitions/apollo.yml
 %%DATADIR%%/Definitions/arabafenice.yml
 %%DATADIR%%/Definitions/archetorrent.yml
 %%DATADIR%%/Definitions/asiandvdclub.yml
@@ -70,6 +69,7 @@
 %%DATADIR%%/Definitions/b2s-share.yml
 %%DATADIR%%/Definitions/backups.yml
 %%DATADIR%%/Definitions/bigtorrent.yml
+%%DATADIR%%/Definitions/bithorlo.yml
 %%DATADIR%%/Definitions/bithumen.yml
 %%DATADIR%%/Definitions/bitme.yml
 %%DATADIR%%/Definitions/bitspyder.yml
@@ -80,6 +80,7 @@
 %%DATADIR%%/Definitions/btdb.yml
 %%DATADIR%%/Definitions/btnext.yml
 %%DATADIR%%/Definitions/carpathians.yml
+%%DATADIR%%/Definitions/ccfbits.yml
 %%DATADIR%%/Definitions/chdbits.yml
 %%DATADIR%%/Definitions/cinemageddon.yml
 %%DATADIR%%/Definitions/cinematik.yml
@@ -155,6 +156,7 @@
 %%DATADIR%%/Definitions/newretro.yml
 %%DATADIR%%/Definitions/newstudio.yml
 %%DATADIR%%/Definitions/nexttorrent.yml
+%%DATADIR%%/Definitions/nnm-club.yml
 %%DATADIR%%/Definitions/nyaa-pantsu.yml
 %%DATADIR%%/Definitions/nyaasi.yml
 %%DATADIR%%/Definitions/nyoo.yml
@@ -199,7 +201,6 @@
 %%DATADIR%%/Definitions/torrenting.yml
 %%DATADIR%%/Definitions/torrentsectorcrew.yml
 %%DATADIR%%/Definitions/torrentsmd.yml
-%%DATADIR%%/Definitions/torrentvault.yml
 %%DATADIR%%/Definitions/torrentz2.yml
 %%DATADIR%%/Definitions/torviet.yml
 %%DATADIR%%/Definitions/totheglory.yml
