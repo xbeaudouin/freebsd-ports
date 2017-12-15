@@ -30,12 +30,12 @@ TELLDUS_DESC=	Enable support for Telldus
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	8781
-DOMOTICZ_TS=	1513171293
+DOMOTICZ_REL=	8785
+DOMOTICZ_TS=	15131240132
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	5aebc55b
+GH_TAGNAME=	35a5f507
 
 USES=		cmake iconv pkgconfig ssl
 
