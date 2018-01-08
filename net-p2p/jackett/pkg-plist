@@ -96,6 +96,7 @@
 %%DATADIR%%/Definitions/dreamteam.yml
 %%DATADIR%%/Definitions/elitehd.yml
 %%DATADIR%%/Definitions/elittracker.yml
+%%DATADIR%%/Definitions/empornium.yml
 %%DATADIR%%/Definitions/eotforum.yml
 %%DATADIR%%/Definitions/estone.yml
 %%DATADIR%%/Definitions/ethor.yml
@@ -115,6 +116,7 @@
 %%DATADIR%%/Definitions/gods.yml
 %%DATADIR%%/Definitions/gormogon.yml
 %%DATADIR%%/Definitions/greekteam.yml
+%%DATADIR%%/Definitions/hd4Free.yml
 %%DATADIR%%/Definitions/hdbits.yml
 %%DATADIR%%/Definitions/hdbitscom.yml
 %%DATADIR%%/Definitions/hdchina.yml
@@ -162,14 +164,15 @@
 %%DATADIR%%/Definitions/nyaasi.yml
 %%DATADIR%%/Definitions/nyoo.yml
 %%DATADIR%%/Definitions/ourbits.yml
+%%DATADIR%%/Definitions/oxtorrent.yml
 %%DATADIR%%/Definitions/passionetorrent.yml
 %%DATADIR%%/Definitions/polishsource.yml
 %%DATADIR%%/Definitions/ptfiles.yml
 %%DATADIR%%/Definitions/rockhardlossless.yml
 %%DATADIR%%/Definitions/rodvd.yml
 %%DATADIR%%/Definitions/rutor.yml
+%%DATADIR%%/Definitions/scenefz.yml
 %%DATADIR%%/Definitions/sdbits.yml
-%%DATADIR%%/Definitions/secretcinema.yml
 %%DATADIR%%/Definitions/shareisland.yml
 %%DATADIR%%/Definitions/sharespacedb.yml
 %%DATADIR%%/Definitions/shellife.yml
@@ -200,6 +203,7 @@
 %%DATADIR%%/Definitions/torrentdownloads.yml
 %%DATADIR%%/Definitions/torrenthr.yml
 %%DATADIR%%/Definitions/torrenting.yml
+%%DATADIR%%/Definitions/torrentlt.yml
 %%DATADIR%%/Definitions/torrentsectorcrew.yml
 %%DATADIR%%/Definitions/torrentsmd.yml
 %%DATADIR%%/Definitions/torrentz2.yml
