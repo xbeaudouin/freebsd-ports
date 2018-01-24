@@ -264,6 +264,5 @@
 %%DATADIR%%/System.Web.Http.Owin.dll
 %%DATADIR%%/System.Web.Http.Tracing.dll
 %%DATADIR%%/System.Web.Http.dll
-%%DATADIR%%/Upstart.config
 %%DATADIR%%/YamlDotNet.dll
 %%DATADIR%%/install_service_macos
