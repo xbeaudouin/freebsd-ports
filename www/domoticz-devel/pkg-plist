@@ -1,6 +1,7 @@
 domoticz/Config/2gig/ct100.xml
 domoticz/Config/2gig/ct101.xml
 domoticz/Config/2gig/ct30.xml
+domoticz/Config/2gig/ct32.xml
 domoticz/Config/2gig/ct50e.xml
 domoticz/Config/2gig/ct80.xml
 domoticz/Config/BeNext/1poleswitch.xml
@@ -76,6 +77,8 @@ domoticz/Config/aeotec/zw130.xml
 domoticz/Config/aeotec/zw132.xml
 domoticz/Config/aeotec/zw139.xml
 domoticz/Config/aeotec/zw140.xml
+domoticz/Config/assa_abloy/ConexisL1.xml
+domoticz/Config/assa_abloy/KeyfreeConnected-plus.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
 domoticz/Config/assa_abloy/PushButtonDeadbolt.xml
 domoticz/Config/assa_abloy/PushButtonLever.xml
@@ -215,6 +218,7 @@ domoticz/Config/frostdale/fdn2nxx.xml
 domoticz/Config/ge/12719-plugin-switch.xml
 domoticz/Config/ge/12724-dimmer.xml
 domoticz/Config/ge/14282-plugin-switch.xml
+domoticz/Config/ge/14288-outlet.xml
 domoticz/Config/ge/14291-switch.xml
 domoticz/Config/ge/14292-toggle-switch.xml
 domoticz/Config/ge/14294-dimmer.xml
@@ -252,10 +256,12 @@ domoticz/Config/heiman/HS1WL-Z.xml
 domoticz/Config/heiman/HS2SK-Z.xml
 domoticz/Config/homeseer/ezmotionplus.xml
 domoticz/Config/homeseer/hs-wd100plus.xml
+domoticz/Config/homeseer/hs-wd200plus.xml
 domoticz/Config/homeseer/hs-ws100plus.xml
 domoticz/Config/homeseer/hsm100.xml
 domoticz/Config/homeseer/hsm200.xml
 domoticz/Config/homeseer/ztroller.xml
+domoticz/Config/honeywell/lynx-touch-l5100.xml
 domoticz/Config/honeywell/th8320zw1000.xml
 domoticz/Config/horstmann/asrzw.xml
 domoticz/Config/horstmann/hrt4zw.xml
@@ -271,6 +277,7 @@ domoticz/Config/inovelli/simple_module.xml
 domoticz/Config/intermatic/ca8900.xml
 domoticz/Config/iris/rangeextender.xml
 domoticz/Config/kaipule/im20.xml
+domoticz/Config/kaipule/ix32.xml
 domoticz/Config/kwikset/smartcode.xml
 domoticz/Config/leviton/dz15s.xml
 domoticz/Config/leviton/dz6hd.xml
@@ -288,6 +295,7 @@ domoticz/Config/linear/WA105DBZ-1.xml
 domoticz/Config/linear/WADWAZ-1.xml
 domoticz/Config/linear/WAPIRZ-1.xml
 domoticz/Config/linear/WD500Z-1.xml
+domoticz/Config/linear/WD500Z5-1.xml
 domoticz/Config/linear/WS15Z-1.xml
 domoticz/Config/linear/WT00Z-1.xml
 domoticz/Config/logicsoft/ZHC5002.xml
@@ -314,6 +322,8 @@ domoticz/Config/nodon/msp31xxMicroSmartPlug.xml
 domoticz/Config/northq/nq9021.xml
 domoticz/Config/northq/nq9121.xml
 domoticz/Config/northq/nq92021.xml
+domoticz/Config/oomi/ft100.xml
+domoticz/Config/oomi/ft111.xml
 domoticz/Config/options.xml
 domoticz/Config/options.xsd
 domoticz/Config/philio/pan03.xml
@@ -397,6 +407,7 @@ domoticz/Config/shenzen_neo/ls02ch.xml
 domoticz/Config/shenzen_neo/nas-ab01z.xml
 domoticz/Config/shenzen_neo/nas-ds01z.xml
 domoticz/Config/shenzen_neo/nas-pd01z.xml
+domoticz/Config/shenzen_neo/nas-rc01z.xml
 domoticz/Config/shenzen_neo/nas-wr01z.xml
 domoticz/Config/shenzen_neo/nas-ws02z.xml
 domoticz/Config/steinel/is140-2.xml
@@ -448,6 +459,7 @@ domoticz/Config/zipato/vszd2102.xml
 domoticz/Config/zipato/zp3102.xml
 domoticz/Config/zooz/zen06.xml
 domoticz/Config/zooz/zen07.xml
+domoticz/Config/zooz/zen15.xml
 domoticz/Config/zooz/zen20.xml
 domoticz/Config/zooz/zen21.xml
 domoticz/Config/zooz/zen22.xml
