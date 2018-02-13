@@ -105,6 +105,7 @@
 %%DATADIR%%/Definitions/extratorrent-ag.yml
 %%DATADIR%%/Definitions/eztv.yml
 %%DATADIR%%/Definitions/fanoin.yml
+%%DATADIR%%/Definitions/femdomcult.yml
 %%DATADIR%%/Definitions/freedomhd.yml
 %%DATADIR%%/Definitions/frozenlayer.yml
 %%DATADIR%%/Definitions/fullmixmusic.yml
@@ -220,11 +221,13 @@
 %%DATADIR%%/Definitions/trezzor.yml
 %%DATADIR%%/Definitions/uhdbits.yml
 %%DATADIR%%/Definitions/ultimategamerclub.yml
+%%DATADIR%%/Definitions/unionfansub.yml
 %%DATADIR%%/Definitions/waffles.yml
 %%DATADIR%%/Definitions/worldofp2p.yml
 %%DATADIR%%/Definitions/worldwidetorrents.yml
 %%DATADIR%%/Definitions/xtremezone.yml
 %%DATADIR%%/Definitions/yggtorrent.yml
+%%DATADIR%%/Definitions/yourexotic.yml
 %%DATADIR%%/Definitions/zamundanet.yml
 %%DATADIR%%/Definitions/zelkaorg.yml
 %%DATADIR%%/Definitions/zooqle.yml
