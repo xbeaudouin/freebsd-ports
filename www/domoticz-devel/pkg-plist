@@ -402,6 +402,7 @@ domoticz/Config/schlage/BE469.xml
 domoticz/Config/schlagelink/itemp.xml
 domoticz/Config/schlagelink/minikeypad.xml
 domoticz/Config/sensative/strips.xml
+domoticz/Config/sensative/stripsconfort.xml
 domoticz/Config/shenzen_neo/ls01ch.xml
 domoticz/Config/shenzen_neo/ls02ch.xml
 domoticz/Config/shenzen_neo/nas-ab01z.xml
@@ -1123,8 +1124,7 @@ domoticz/www/js/highcharts-ng.min.js.gz
 domoticz/www/js/highcharts.js.gz
 domoticz/www/js/html5shiv.js.gz
 domoticz/www/js/i18next-1.8.0.min.js.gz
-domoticz/www/js/jquery-1.12.0.min.js.gz
-domoticz/www/js/jquery-migrate-1.2.1.min.js.gz
+domoticz/www/js/jquery-3.3.1.min.js.gz
 domoticz/www/js/jquery-ui-timepicker-addon.js.gz
 domoticz/www/js/jquery-ui.min.js.gz
 domoticz/www/js/jquery.dataTables.min.js.gz
