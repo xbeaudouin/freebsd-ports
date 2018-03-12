@@ -582,6 +582,7 @@ domoticz/www/app/DPGooglePubSubController.js
 domoticz/www/app/DPHttpController.js
 domoticz/www/app/DPInfluxController.js
 domoticz/www/app/DashboardController.js
+domoticz/www/app/DeviceTimers.js
 domoticz/www/app/DevicesController.js
 domoticz/www/app/DummyController.js
 domoticz/www/app/EventsController.js
@@ -1105,12 +1106,14 @@ domoticz/www/js/angular-tree-control.js.gz
 domoticz/www/js/angular-websocket.js.gz
 domoticz/www/js/angular.min.js.gz
 domoticz/www/js/angularAMD.min.js.gz
+domoticz/www/js/babel-polyfill-6.26.0.js.gz
 domoticz/www/js/blockly_compressed.js.gz
 domoticz/www/js/blocks_compressed.js.gz
 domoticz/www/js/bootbox.min.js.gz
 domoticz/www/js/bootstrap.min.js.gz
 domoticz/www/js/colpick.js.gz
 domoticz/www/js/d3.min.js.gz
+domoticz/www/js/dataTables.select.min.js.gz
 domoticz/www/js/dataTables.tableTools.min.js.gz
 domoticz/www/js/date.format.js.gz
 domoticz/www/js/domoticz.js.gz
@@ -1281,6 +1284,7 @@ domoticz/www/views/temperature.html
 domoticz/www/views/temperature_custom_temp_log.html
 domoticz/www/views/temperature_widget.html
 domoticz/www/views/timerplan.html
+domoticz/www/views/timers.html
 domoticz/www/views/update.html
 domoticz/www/views/users.html
 domoticz/www/views/uservariables.html
