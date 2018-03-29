@@ -614,6 +614,9 @@ domoticz/www/app/UtilityController.js
 domoticz/www/app/WeatherController.js
 domoticz/www/app/ZWaveTopologyController.js
 domoticz/www/app/app.js
+domoticz/www/app/device-log/LightLog.js
+domoticz/www/app/device-log/TemperatureLog.js
+domoticz/www/app/device-log/TemperatureReport.js
 domoticz/www/app/main.js
 domoticz/www/css/bootstrap-responsive.css
 domoticz/www/css/bootstrap.css
@@ -1255,6 +1258,9 @@ domoticz/www/views/about.html
 domoticz/www/views/cam.html
 domoticz/www/views/customicons.html
 domoticz/www/views/dashboard.html
+domoticz/www/views/device_light_log.html
+domoticz/www/views/device_temperature_log.html
+domoticz/www/views/device_temperature_report.html
 domoticz/www/views/devices.html
 domoticz/www/views/dpfibaro.html
 domoticz/www/views/dpgooglepubsub.html
