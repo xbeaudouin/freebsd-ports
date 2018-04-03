@@ -674,6 +674,7 @@ domoticz/www/css/ui-darkness/images/ui-icons_a83300_256x240.png
 domoticz/www/css/ui-darkness/images/ui-icons_cccccc_256x240.png
 domoticz/www/css/ui-darkness/images/ui-icons_ffffff_256x240.png
 domoticz/www/css/ui-darkness/jquery-ui.min.css
+domoticz/www/css/wheelcolorpicker.css
 domoticz/www/eventsframe.html
 domoticz/www/favicon.ico
 domoticz/www/html5.appcache
@@ -725,6 +726,8 @@ domoticz/www/images/Amplifier48_On.png
 domoticz/www/images/ChristmasTree.png
 domoticz/www/images/ChristmasTree48_Off.png
 domoticz/www/images/ChristmasTree48_On.png
+domoticz/www/images/Coltemp48.png
+domoticz/www/images/Coltemp48_Sel.png
 domoticz/www/images/Computer.png
 domoticz/www/images/Computer48_Off.png
 domoticz/www/images/Computer48_On.png
@@ -738,6 +741,10 @@ domoticz/www/images/Counter48.png
 domoticz/www/images/Custom.png
 domoticz/www/images/Custom48_Off.png
 domoticz/www/images/Custom48_On.png
+domoticz/www/images/Customw48.png
+domoticz/www/images/Customw48_Sel.png
+domoticz/www/images/Customww48.png
+domoticz/www/images/Customww48_Sel.png
 domoticz/www/images/Dimmer48_Off.png
 domoticz/www/images/Dimmer48_On.png
 domoticz/www/images/Down48.png
@@ -775,8 +782,10 @@ domoticz/www/images/Printer.png
 domoticz/www/images/Printer48_Off.png
 domoticz/www/images/Printer48_On.png
 domoticz/www/images/RGB.png
+domoticz/www/images/RGB48.png
 domoticz/www/images/RGB48_Off.png
 domoticz/www/images/RGB48_On.png
+domoticz/www/images/RGB48_Sel.png
 domoticz/www/images/Speaker.png
 domoticz/www/images/Speaker48_Off.png
 domoticz/www/images/Speaker48_On.png
@@ -792,6 +801,8 @@ domoticz/www/images/WallSocket48_On.png
 domoticz/www/images/Water.png
 domoticz/www/images/Water48_Off.png
 domoticz/www/images/Water48_On.png
+domoticz/www/images/White48.png
+domoticz/www/images/White48_Sel.png
 domoticz/www/images/Wind0.png
 domoticz/www/images/WindE.png
 domoticz/www/images/WindENE.png
@@ -1119,7 +1130,7 @@ domoticz/www/js/d3.min.js.gz
 domoticz/www/js/dataTables.select.min.js.gz
 domoticz/www/js/dataTables.tableTools.min.js.gz
 domoticz/www/js/date.format.js.gz
-domoticz/www/js/domoticz.js.gz
+domoticz/www/js/domoticz.js
 domoticz/www/js/domoticzblocks.js.gz
 domoticz/www/js/domoticzblocks_messages_en.js.gz
 domoticz/www/js/domoticzdevices.js.gz
@@ -1139,6 +1150,7 @@ domoticz/www/js/jquery.isotope.min.js.gz
 domoticz/www/js/jquery.jeditable.mini.js.gz
 domoticz/www/js/jquery.ui.touch-punch.min.js.gz
 domoticz/www/js/jquery.uix.multiselect.min.js.gz
+domoticz/www/js/jquery.wheelcolorpicker.js.gz
 domoticz/www/js/md5.js.gz
 domoticz/www/js/modules/exporting.js.gz
 domoticz/www/js/ng-grid-flexible-height.js.gz
