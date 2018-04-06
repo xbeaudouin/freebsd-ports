@@ -77,6 +77,7 @@ domoticz/Config/aeotec/zw130.xml
 domoticz/Config/aeotec/zw132.xml
 domoticz/Config/aeotec/zw139.xml
 domoticz/Config/aeotec/zw140.xml
+domoticz/Config/aeotec/zwa001.xml
 domoticz/Config/assa_abloy/ConexisL1.xml
 domoticz/Config/assa_abloy/KeyfreeConnected-plus.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
@@ -85,6 +86,7 @@ domoticz/Config/assa_abloy/PushButtonLever.xml
 domoticz/Config/assa_abloy/TouchDeadbolt.xml
 domoticz/Config/assa_abloy/TouchLever.xml
 domoticz/Config/assa_abloy/nexTouch.xml
+domoticz/Config/august/asl-03.xml
 domoticz/Config/cooper/RF9501.xml
 domoticz/Config/cooper/RF9505-T.xml
 domoticz/Config/cooper/RF9517.xml
@@ -258,6 +260,7 @@ domoticz/Config/homeseer/ezmotionplus.xml
 domoticz/Config/homeseer/hs-wd100plus.xml
 domoticz/Config/homeseer/hs-wd200plus.xml
 domoticz/Config/homeseer/hs-ws100plus.xml
+domoticz/Config/homeseer/hs-ws200plus.xml
 domoticz/Config/homeseer/hsm100.xml
 domoticz/Config/homeseer/hsm200.xml
 domoticz/Config/homeseer/ztroller.xml
@@ -269,10 +272,14 @@ domoticz/Config/horstmann/scsc17.xml
 domoticz/Config/horstmann/ses302.xml
 domoticz/Config/horstmann/ses303.xml
 domoticz/Config/horstmann/sir321.xml
+domoticz/Config/horstmann/srt321.xml
 domoticz/Config/horstmann/srt323.xml
 domoticz/Config/horstmann/ssr302.xml
 domoticz/Config/idlock/idlock101.xml
 domoticz/Config/ingersoll/dwzwave1.xml
+domoticz/Config/inovelli/nzw30.xml
+domoticz/Config/inovelli/nzw31.xml
+domoticz/Config/inovelli/nzw97.xml
 domoticz/Config/inovelli/simple_module.xml
 domoticz/Config/intermatic/ca8900.xml
 domoticz/Config/iris/rangeextender.xml
@@ -402,7 +409,7 @@ domoticz/Config/schlage/BE469.xml
 domoticz/Config/schlagelink/itemp.xml
 domoticz/Config/schlagelink/minikeypad.xml
 domoticz/Config/sensative/strips.xml
-domoticz/Config/sensative/stripsconfort.xml
+domoticz/Config/sensative/stripscomfort.xml
 domoticz/Config/shenzen_neo/ls01ch.xml
 domoticz/Config/shenzen_neo/ls02ch.xml
 domoticz/Config/shenzen_neo/nas-ab01z.xml
@@ -412,6 +419,7 @@ domoticz/Config/shenzen_neo/nas-rc01z.xml
 domoticz/Config/shenzen_neo/nas-wr01z.xml
 domoticz/Config/shenzen_neo/nas-ws02z.xml
 domoticz/Config/steinel/is140-2.xml
+domoticz/Config/steinel/rs-led-d2.xml
 domoticz/Config/stelpro/stzw402.xml
 domoticz/Config/swiid/swiidinter.xml
 domoticz/Config/swiid/swiidplug.xml
