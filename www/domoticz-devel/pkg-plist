@@ -590,6 +590,7 @@ domoticz/www/app/DPGooglePubSubController.js
 domoticz/www/app/DPHttpController.js
 domoticz/www/app/DPInfluxController.js
 domoticz/www/app/DashboardController.js
+domoticz/www/app/DeviceLightEdit.js
 domoticz/www/app/DeviceTimers.js
 domoticz/www/app/DevicesController.js
 domoticz/www/app/DummyController.js
@@ -1278,6 +1279,7 @@ domoticz/www/views/about.html
 domoticz/www/views/cam.html
 domoticz/www/views/customicons.html
 domoticz/www/views/dashboard.html
+domoticz/www/views/device_light_edit.html
 domoticz/www/views/device_light_log.html
 domoticz/www/views/device_temperature_log.html
 domoticz/www/views/device_temperature_report.html
