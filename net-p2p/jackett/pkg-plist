@@ -1,3 +1,4 @@
+etc/rc.d/jackett
 %%DATADIR%%/AngleSharp.dll
 %%DATADIR%%/AutoMapper.dll
 %%DATADIR%%/Autofac.Integration.WebApi.dll
@@ -165,7 +166,6 @@
 %%DATADIR%%/Definitions/nyaasi.yml
 %%DATADIR%%/Definitions/nyoo.yml
 %%DATADIR%%/Definitions/ourbits.yml
-%%DATADIR%%/Definitions/oxtorrent.yml
 %%DATADIR%%/Definitions/passionetorrent.yml
 %%DATADIR%%/Definitions/polishsource.yml
 %%DATADIR%%/Definitions/ptfiles.yml
@@ -183,8 +183,11 @@
 %%DATADIR%%/Definitions/speedtorrentreloaded.yml
 %%DATADIR%%/Definitions/sporthd.yml
 %%DATADIR%%/Definitions/sportscult.yml
+%%DATADIR%%/Definitions/sukebei-pantsu.yml
+%%DATADIR%%/Definitions/sukebeinyaasi.yml
 %%DATADIR%%/Definitions/tasmanit.yml
 %%DATADIR%%/Definitions/tbplus.yml
+%%DATADIR%%/Definitions/tehconnection.yml
 %%DATADIR%%/Definitions/tenyardtracker.yml
 %%DATADIR%%/Definitions/theempire.yml
 %%DATADIR%%/Definitions/thegeeks.yml
