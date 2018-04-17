@@ -1,4 +1,3 @@
-etc/rc.d/jackett
 %%DATADIR%%/AngleSharp.dll
 %%DATADIR%%/AutoMapper.dll
 %%DATADIR%%/Autofac.Integration.WebApi.dll
@@ -170,6 +169,7 @@ etc/rc.d/jackett
 %%DATADIR%%/Definitions/polishsource.yml
 %%DATADIR%%/Definitions/ptfiles.yml
 %%DATADIR%%/Definitions/puntotorrent.yml
+%%DATADIR%%/Definitions/racing4everyone.yml
 %%DATADIR%%/Definitions/rodvd.yml
 %%DATADIR%%/Definitions/rutor.yml
 %%DATADIR%%/Definitions/scenefz.yml
