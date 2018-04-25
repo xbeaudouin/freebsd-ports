@@ -78,6 +78,8 @@ domoticz/Config/aeotec/zw132.xml
 domoticz/Config/aeotec/zw139.xml
 domoticz/Config/aeotec/zw140.xml
 domoticz/Config/aeotec/zwa001.xml
+domoticz/Config/aeotec/zwa003.xml
+domoticz/Config/aeotec/zwa004.xml
 domoticz/Config/assa_abloy/ConexisL1.xml
 domoticz/Config/assa_abloy/KeyfreeConnected-plus.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
@@ -241,6 +243,7 @@ domoticz/Config/gr/gr105n.xml
 domoticz/Config/greenwave/powernode1.xml
 domoticz/Config/greenwave/powernode6.xml
 domoticz/Config/hank/hkzw-dws01.xml
+domoticz/Config/hank/hkzw-fld01.xml
 domoticz/Config/hank/hkzw-ms01.xml
 domoticz/Config/hank/hkzw-rgb01.xml
 domoticz/Config/hank/hkzw-so01-smartplug.xml
