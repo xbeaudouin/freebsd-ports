@@ -1309,7 +1309,7 @@ domoticz/www/js/date.format.js.gz
 domoticz/www/js/domoticz.js
 domoticz/www/js/domoticzblocks.js.gz
 domoticz/www/js/domoticzblocks_messages_en.js.gz
-domoticz/www/js/domoticzdevices.js.gz
+domoticz/www/js/domoticzdevices.js
 domoticz/www/js/en_compressed.js.gz
 domoticz/www/js/export-csv.js.gz
 domoticz/www/js/highcharts-more.js.gz
