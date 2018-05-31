@@ -17,12 +17,13 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 CONFLICTS_INSTALL?=	domoticz-[23]*
 
 OPTIONS_SUB=	YES
-OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE PYTHON TELLDUS
+OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE SMINIZIP PYTHON TELLDUS
 SBOOST_DESC=	Use static Boost instead of dynamic linking
 SSSL_DESC=	Use static OpenSSL library instead of dynamic linking
 SLUA_DESC=	Use domoticz provided LUA instead of ports one
 SMQTT_DESC=	Use domoticz mosquitto instead of ports one
 SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
+SMINIZIP_DESC=	Use domoticz minizip instead of ports one
 PYTHON_DESC=	Enable support for Python Plugins
 TELLDUS_DESC=	Enable support for Telldus
 
@@ -30,12 +31,12 @@ TELLDUS_DESC=	Enable support for Telldus
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	9389
-DOMOTICZ_TS=	1525126646
+DOMOTICZ_REL=	9541
+DOMOTICZ_TS=	1527755661
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	28d24885
+GH_TAGNAME=	21dd200b
 
 USES=		cmake iconv pkgconfig ssl
 
@@ -81,6 +82,13 @@ CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="YES"
 .else
 CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO"
 USES+=		sqlite
+.endif
+
+.if ${PORT_OPTIONS:MSMINIZIP}
+CMAKE_ARGS+= 	-DUSE_BUILTIN_MINIZIP="YES"
+.else
+CMAKE_ARGS+= 	-DUSE_BUILTIN_MINIZIP="NO"
+LIB_DEPENDS+=	libminizip.so:archivers/minizip
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}

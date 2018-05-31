@@ -78,8 +78,10 @@ domoticz/Config/aeotec/zw132.xml
 domoticz/Config/aeotec/zw139.xml
 domoticz/Config/aeotec/zw140.xml
 domoticz/Config/aeotec/zwa001.xml
+domoticz/Config/aeotec/zwa002.xml
 domoticz/Config/aeotec/zwa003.xml
 domoticz/Config/aeotec/zwa004.xml
+domoticz/Config/aeotec/zwa005.xml
 domoticz/Config/assa_abloy/ConexisL1.xml
 domoticz/Config/assa_abloy/KeyfreeConnected-plus.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
@@ -108,6 +110,7 @@ domoticz/Config/devolo/mt02758.xml
 domoticz/Config/devolo/mt02792.xml
 domoticz/Config/devolo/mt2646.xml
 domoticz/Config/devolo/mt2647.xml
+domoticz/Config/devolo/mt2651.xml
 domoticz/Config/devolo/mt2652.xml
 domoticz/Config/devolo/mt2653.xml
 domoticz/Config/devolo/mt2756.xml
@@ -467,6 +470,7 @@ domoticz/Config/widom/WDS.xml
 domoticz/Config/zipato/MiniKeypad.xml
 domoticz/Config/zipato/RGBBulb.xml
 domoticz/Config/zipato/RGBBulb2.xml
+domoticz/Config/zipato/pan04.xml
 domoticz/Config/zipato/vszd2102.xml
 domoticz/Config/zipato/zp3102.xml
 domoticz/Config/zooz/zen06.xml
@@ -567,6 +571,7 @@ domoticz/dzVents/runtime/device-adapters/visibility_device.lua
 domoticz/dzVents/runtime/device-adapters/voltage_device.lua
 domoticz/dzVents/runtime/device-adapters/waterflow_device.lua
 domoticz/dzVents/runtime/device-adapters/wind_device.lua
+domoticz/dzVents/runtime/device-adapters/youless_device.lua
 domoticz/dzVents/runtime/device-adapters/zone_heating_device.lua
 domoticz/dzVents/runtime/device-adapters/zwave_thermostat_mode_device.lua
 domoticz/dzVents/runtime/dzVents.lua
@@ -679,6 +684,7 @@ domoticz/plugins/examples/UDP Discovery.py
 domoticz/scripts/_domoticz_main
 domoticz/scripts/_domoticz_main.bat
 domoticz/scripts/buienradar_rain_example.pl
+domoticz/scripts/domoticz.conf
 domoticz/scripts/download_update.sh
 domoticz/scripts/dzVents/data/README.md
 domoticz/scripts/dzVents/examples/calc temp delta.lua
@@ -693,6 +699,7 @@ domoticz/scripts/dzVents/examples/intruder alert.lua
 domoticz/scripts/dzVents/examples/leak_detection.lua
 domoticz/scripts/dzVents/examples/notify for dead system-alive check devices.lua
 domoticz/scripts/dzVents/examples/only run script when button pressed.lua
+domoticz/scripts/dzVents/examples/plant watering notification.lua
 domoticz/scripts/dzVents/examples/random night light.lua
 domoticz/scripts/dzVents/examples/respond to switch.lua
 domoticz/scripts/dzVents/examples/schedule fish pond pump.lua
@@ -787,8 +794,12 @@ domoticz/www/app/log/LightLog.js
 domoticz/www/app/log/SceneLog.js
 domoticz/www/app/log/TemperatureLog.js
 domoticz/www/app/log/TemperatureReport.js
+domoticz/www/app/log/TextLog.js
 domoticz/www/app/log/components.js
 domoticz/www/app/main.js
+domoticz/www/app/notifications/DeviceNotifications.js
+domoticz/www/app/notifications/constants.js
+domoticz/www/app/notifications/factories.js
 domoticz/www/app/scenes/factories.js
 domoticz/www/app/timers/DeviceTimersController.js
 domoticz/www/app/timers/SceneTimersController.js
@@ -856,6 +867,7 @@ domoticz/www/favicon.ico
 domoticz/www/html5.appcache
 domoticz/www/i18n/domoticz-ar.json.gz
 domoticz/www/i18n/domoticz-bg.json.gz
+domoticz/www/i18n/domoticz-bs.json.gz
 domoticz/www/i18n/domoticz-ca.json.gz
 domoticz/www/i18n/domoticz-cs.json.gz
 domoticz/www/i18n/domoticz-da.json.gz
@@ -864,6 +876,7 @@ domoticz/www/i18n/domoticz-el.json.gz
 domoticz/www/i18n/domoticz-en.json.gz
 domoticz/www/i18n/domoticz-es.json.gz
 domoticz/www/i18n/domoticz-et.json.gz
+domoticz/www/i18n/domoticz-fa.json.gz
 domoticz/www/i18n/domoticz-fi.json.gz
 domoticz/www/i18n/domoticz-fr.json.gz
 domoticz/www/i18n/domoticz-he.json.gz
@@ -881,6 +894,7 @@ domoticz/www/i18n/domoticz-ro.json.gz
 domoticz/www/i18n/domoticz-ru.json.gz
 domoticz/www/i18n/domoticz-sk.json.gz
 domoticz/www/i18n/domoticz-sl.json.gz
+domoticz/www/i18n/domoticz-sq.json.gz
 domoticz/www/i18n/domoticz-sr.json.gz
 domoticz/www/i18n/domoticz-sv.json.gz
 domoticz/www/i18n/domoticz-th.json.gz
@@ -1307,8 +1321,8 @@ domoticz/www/js/dataTables.select.min.js.gz
 domoticz/www/js/dataTables.tableTools.min.js.gz
 domoticz/www/js/date.format.js.gz
 domoticz/www/js/domoticz.js
-domoticz/www/js/domoticzblocks.js.gz
-domoticz/www/js/domoticzblocks_messages_en.js.gz
+domoticz/www/js/domoticzblocks.js
+domoticz/www/js/domoticzblocks_messages_en.js
 domoticz/www/js/domoticzdevices.js
 domoticz/www/js/en_compressed.js.gz
 domoticz/www/js/export-csv.js.gz
@@ -1470,6 +1484,7 @@ domoticz/www/views/login.html
 domoticz/www/views/logout.html
 domoticz/www/views/mobile_notifications.html
 domoticz/www/views/notification.html
+domoticz/www/views/notifications.html
 domoticz/www/views/offline.html
 domoticz/www/views/restoredatabase.html
 domoticz/www/views/rfxcomfirmware.html
