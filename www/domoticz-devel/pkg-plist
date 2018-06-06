@@ -243,6 +243,8 @@ domoticz/Config/ge/zw6302.xml
 domoticz/Config/gocontrol/GC-TBZ48L.xml
 domoticz/Config/gr/gr105.xml
 domoticz/Config/gr/gr105n.xml
+domoticz/Config/graber/brz1.xml
+domoticz/Config/graber/vcz1.xml
 domoticz/Config/greenwave/powernode1.xml
 domoticz/Config/greenwave/powernode6.xml
 domoticz/Config/hank/hkzw-dws01.xml
@@ -263,6 +265,7 @@ domoticz/Config/heiman/HS1SA-Z.xml
 domoticz/Config/heiman/HS1WL-Z.xml
 domoticz/Config/heiman/HS2SK-Z.xml
 domoticz/Config/homeseer/ezmotionplus.xml
+domoticz/Config/homeseer/hs-ms100plus.xml
 domoticz/Config/homeseer/hs-wd100plus.xml
 domoticz/Config/homeseer/hs-wd200plus.xml
 domoticz/Config/homeseer/hs-ws100plus.xml
@@ -462,6 +465,7 @@ domoticz/Config/wenzhou/tz66d.xml
 domoticz/Config/wenzhou/tz67.xml
 domoticz/Config/wenzhou/tz68.xml
 domoticz/Config/wenzhou/tz69.xml
+domoticz/Config/wenzhou/tz74.xml
 domoticz/Config/wenzhou/tz79.xml
 domoticz/Config/wenzhou/tz88.xml
 domoticz/Config/widom/UBS104.xml
