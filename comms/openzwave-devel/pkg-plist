@@ -80,8 +80,10 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zw139.xml
 %%ETCDIR%%/aeotec/zw140.xml
 %%ETCDIR%%/aeotec/zwa001.xml
+%%ETCDIR%%/aeotec/zwa002.xml
 %%ETCDIR%%/aeotec/zwa003.xml
 %%ETCDIR%%/aeotec/zwa004.xml
+%%ETCDIR%%/aeotec/zwa005.xml
 %%ETCDIR%%/assa_abloy/ConexisL1.xml
 %%ETCDIR%%/assa_abloy/KeyfreeConnected-plus.xml
 %%ETCDIR%%/assa_abloy/KeyfreeConnected.xml
@@ -110,6 +112,7 @@ bin/ozw_config
 %%ETCDIR%%/devolo/mt02792.xml
 %%ETCDIR%%/devolo/mt2646.xml
 %%ETCDIR%%/devolo/mt2647.xml
+%%ETCDIR%%/devolo/mt2651.xml
 %%ETCDIR%%/devolo/mt2652.xml
 %%ETCDIR%%/devolo/mt2653.xml
 %%ETCDIR%%/devolo/mt2756.xml
@@ -242,9 +245,12 @@ bin/ozw_config
 %%ETCDIR%%/gocontrol/GC-TBZ48L.xml
 %%ETCDIR%%/gr/gr105.xml
 %%ETCDIR%%/gr/gr105n.xml
+%%ETCDIR%%/graber/brz1.xml
+%%ETCDIR%%/graber/vcz1.xml
 %%ETCDIR%%/greenwave/powernode1.xml
 %%ETCDIR%%/greenwave/powernode6.xml
 %%ETCDIR%%/hank/hkzw-dws01.xml
+%%ETCDIR%%/hank/hkzw-fld01.xml
 %%ETCDIR%%/hank/hkzw-ms01.xml
 %%ETCDIR%%/hank/hkzw-rgb01.xml
 %%ETCDIR%%/hank/hkzw-so01-smartplug.xml
@@ -261,6 +267,7 @@ bin/ozw_config
 %%ETCDIR%%/heiman/HS1WL-Z.xml
 %%ETCDIR%%/heiman/HS2SK-Z.xml
 %%ETCDIR%%/homeseer/ezmotionplus.xml
+%%ETCDIR%%/homeseer/hs-ms100plus.xml
 %%ETCDIR%%/homeseer/hs-wd100plus.xml
 %%ETCDIR%%/homeseer/hs-wd200plus.xml
 %%ETCDIR%%/homeseer/hs-ws100plus.xml
@@ -460,6 +467,7 @@ bin/ozw_config
 %%ETCDIR%%/wenzhou/tz67.xml
 %%ETCDIR%%/wenzhou/tz68.xml
 %%ETCDIR%%/wenzhou/tz69.xml
+%%ETCDIR%%/wenzhou/tz74.xml
 %%ETCDIR%%/wenzhou/tz79.xml
 %%ETCDIR%%/wenzhou/tz88.xml
 %%ETCDIR%%/widom/UBS104.xml
@@ -468,6 +476,7 @@ bin/ozw_config
 %%ETCDIR%%/zipato/MiniKeypad.xml
 %%ETCDIR%%/zipato/RGBBulb.xml
 %%ETCDIR%%/zipato/RGBBulb2.xml
+%%ETCDIR%%/zipato/pan04.xml
 %%ETCDIR%%/zipato/vszd2102.xml
 %%ETCDIR%%/zipato/zp3102.xml
 %%ETCDIR%%/zooz/zen06.xml
