@@ -1399,10 +1399,7 @@ domoticz/www/ozwcp/cp.html
 domoticz/www/ozwcp/cp.js
 domoticz/www/ozwcp/ozwcp.html
 domoticz/www/robots.txt
-domoticz/www/secpanel/bg.jpg
-domoticz/www/secpanel/css/font.less
-domoticz/www/secpanel/css/reset.less
-domoticz/www/secpanel/css/style.less
+domoticz/www/secpanel/css/style.css
 domoticz/www/secpanel/font/Audiowide.eot
 domoticz/www/secpanel/font/Audiowide.svg
 domoticz/www/secpanel/font/Audiowide.ttf
@@ -1411,9 +1408,9 @@ domoticz/www/secpanel/font/Digital.eot
 domoticz/www/secpanel/font/Digital.svg
 domoticz/www/secpanel/font/Digital.ttf
 domoticz/www/secpanel/font/Digital.woff
+domoticz/www/secpanel/img/bg.jpg
 domoticz/www/secpanel/index.html
 domoticz/www/secpanel/js/ion.sound.min.js.gz
-domoticz/www/secpanel/js/less.js.gz
 domoticz/www/secpanel/media/arm.aac
 domoticz/www/secpanel/media/arm.mp3
 domoticz/www/secpanel/media/arm.ogg
