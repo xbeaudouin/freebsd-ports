@@ -1,3 +1,5 @@
+https://github.com/domoticz/domoticz/commit/388c7b51716c
+
 --- webserver/proxyclient.cpp.orig	2017-07-30 10:19:41 UTC
 +++ webserver/proxyclient.cpp
 @@ -639,7 +639,7 @@ namespace http {

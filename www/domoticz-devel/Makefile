@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	domoticz-devel
-PORTVERSION=	3.${DOMOTICZ_REL}
+PORTVERSION=	4.${DOMOTICZ_REL}
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -31,12 +31,12 @@ TELLDUS_DESC=	Enable support for Telldus
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	9639
-DOMOTICZ_TS=	1528987492
+DOMOTICZ_REL=	9673
+DOMOTICZ_TS=	1529645322
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	786b9638
+GH_TAGNAME=	1ff47d30
 
 USES=		cmake iconv pkgconfig ssl
 

@@ -432,9 +432,11 @@ domoticz/Config/steinel/rs-led-d2.xml
 domoticz/Config/stelpro/stzw402.xml
 domoticz/Config/swiid/swiidinter.xml
 domoticz/Config/swiid/swiidplug.xml
+domoticz/Config/telldus/TZWP102.xml
 domoticz/Config/telldus/tzdw100.xml
 domoticz/Config/telldus/tzwp100.xml
 domoticz/Config/thermofloor/heatit021.xml
+domoticz/Config/thermofloor/heatitztrm2.xml
 domoticz/Config/trane/TZEMT400AB32MAA.xml
 domoticz/Config/trane/TZEMT400BB32MAA.xml
 domoticz/Config/trane/TZEMT524AA21MA.xml
