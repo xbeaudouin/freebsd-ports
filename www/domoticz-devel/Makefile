@@ -14,10 +14,10 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
 		libopenzwave.so:comms/openzwave-devel
 
-CONFLICTS_INSTALL?=	domoticz-[23]*
+CONFLICTS_INSTALL?=	domoticz-[234]*
 
 OPTIONS_SUB=	YES
-OPTIONS_DEFINE=	SBOOST SLUA SMQTT SSQLITE SMINIZIP PYTHON TELLDUS
+OPTIONS_DEFINE=	SSSL SBOOST SLUA SMQTT SSQLITE SMINIZIP PYTHON TELLDUS
 SBOOST_DESC=	Use static Boost instead of dynamic linking
 SSSL_DESC=	Use static OpenSSL library instead of dynamic linking
 SLUA_DESC=	Use domoticz provided LUA instead of ports one
@@ -29,6 +29,8 @@ TELLDUS_DESC=	Enable support for Telldus
 
 .include <bsd.port.options.mk>
 
+USES=		cmake iconv pkgconfig ssl
+
 # This hack is to get rid of dependency of git while building
 # the package.
 DOMOTICZ_REL=	9673
@@ -37,8 +39,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
 GH_TAGNAME=	1ff47d30
-
-USES=		cmake iconv pkgconfig ssl
 
 USE_RC_SUBR=	domoticz
 
