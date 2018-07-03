@@ -250,6 +250,7 @@ domoticz/Config/greenwave/powernode6.xml
 domoticz/Config/hank/hkzw-dws01.xml
 domoticz/Config/hank/hkzw-fld01.xml
 domoticz/Config/hank/hkzw-ms01.xml
+domoticz/Config/hank/hkzw-ms02.xml
 domoticz/Config/hank/hkzw-rgb01.xml
 domoticz/Config/hank/hkzw-so01-smartplug.xml
 domoticz/Config/hank/hkzw-so03.xml
@@ -429,6 +430,7 @@ domoticz/Config/shenzen_neo/nas-wr01z.xml
 domoticz/Config/shenzen_neo/nas-ws02z.xml
 domoticz/Config/steinel/is140-2.xml
 domoticz/Config/steinel/rs-led-d2.xml
+domoticz/Config/steinel/xled-home-2.xml
 domoticz/Config/stelpro/stzw402.xml
 domoticz/Config/swiid/swiidinter.xml
 domoticz/Config/swiid/swiidplug.xml
@@ -796,12 +798,14 @@ domoticz/www/app/UtilityController.js
 domoticz/www/app/WeatherController.js
 domoticz/www/app/ZWaveTopologyController.js
 domoticz/www/app/app.js
+domoticz/www/app/log/GraphLog.js
 domoticz/www/app/log/LightLog.js
 domoticz/www/app/log/SceneLog.js
 domoticz/www/app/log/TemperatureLog.js
 domoticz/www/app/log/TemperatureReport.js
 domoticz/www/app/log/TextLog.js
 domoticz/www/app/log/components.js
+domoticz/www/app/log/factories.js
 domoticz/www/app/main.js
 domoticz/www/app/notifications/DeviceNotifications.js
 domoticz/www/app/notifications/constants.js
@@ -1479,6 +1483,7 @@ domoticz/www/views/hardware.html
 domoticz/www/views/history.html
 domoticz/www/views/lights.html
 domoticz/www/views/log.html
+domoticz/www/views/log/device_graph_log.html
 domoticz/www/views/log/device_light_log.html
 domoticz/www/views/log/device_temperature_log.html
 domoticz/www/views/log/device_temperature_report.html

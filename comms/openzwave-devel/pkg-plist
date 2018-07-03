@@ -252,6 +252,7 @@ bin/ozw_config
 %%ETCDIR%%/hank/hkzw-dws01.xml
 %%ETCDIR%%/hank/hkzw-fld01.xml
 %%ETCDIR%%/hank/hkzw-ms01.xml
+%%ETCDIR%%/hank/hkzw-ms02.xml
 %%ETCDIR%%/hank/hkzw-rgb01.xml
 %%ETCDIR%%/hank/hkzw-so01-smartplug.xml
 %%ETCDIR%%/hank/hkzw-so03.xml
@@ -431,12 +432,15 @@ bin/ozw_config
 %%ETCDIR%%/shenzen_neo/nas-ws02z.xml
 %%ETCDIR%%/steinel/is140-2.xml
 %%ETCDIR%%/steinel/rs-led-d2.xml
+%%ETCDIR%%/steinel/xled-home-2.xml
 %%ETCDIR%%/stelpro/stzw402.xml
 %%ETCDIR%%/swiid/swiidinter.xml
 %%ETCDIR%%/swiid/swiidplug.xml
 %%ETCDIR%%/telldus/tzdw100.xml
 %%ETCDIR%%/telldus/tzwp100.xml
+%%ETCDIR%%/telldus/tzwp102.xml
 %%ETCDIR%%/thermofloor/heatit021.xml
+%%ETCDIR%%/thermofloor/heatitztrm2.xml
 %%ETCDIR%%/trane/TZEMT400AB32MAA.xml
 %%ETCDIR%%/trane/TZEMT400BB32MAA.xml
 %%ETCDIR%%/trane/TZEMT524AA21MA.xml
