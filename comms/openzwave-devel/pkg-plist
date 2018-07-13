@@ -79,6 +79,7 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zw132.xml
 %%ETCDIR%%/aeotec/zw139.xml
 %%ETCDIR%%/aeotec/zw140.xml
+%%ETCDIR%%/aeotec/zw141.xml
 %%ETCDIR%%/aeotec/zwa001.xml
 %%ETCDIR%%/aeotec/zwa002.xml
 %%ETCDIR%%/aeotec/zwa003.xml
@@ -440,7 +441,7 @@ bin/ozw_config
 %%ETCDIR%%/telldus/tzwp100.xml
 %%ETCDIR%%/telldus/tzwp102.xml
 %%ETCDIR%%/thermofloor/heatit021.xml
-%%ETCDIR%%/thermofloor/heatitztrm2.xml
+%%ETCDIR%%/thermofloor/heatit033.xml
 %%ETCDIR%%/trane/TZEMT400AB32MAA.xml
 %%ETCDIR%%/trane/TZEMT400BB32MAA.xml
 %%ETCDIR%%/trane/TZEMT524AA21MA.xml
