@@ -77,6 +77,7 @@ domoticz/Config/aeotec/zw130.xml
 domoticz/Config/aeotec/zw132.xml
 domoticz/Config/aeotec/zw139.xml
 domoticz/Config/aeotec/zw140.xml
+domoticz/Config/aeotec/zw141.xml
 domoticz/Config/aeotec/zwa001.xml
 domoticz/Config/aeotec/zwa002.xml
 domoticz/Config/aeotec/zwa003.xml
@@ -266,6 +267,7 @@ domoticz/Config/heiman/HS1SA-Z.xml
 domoticz/Config/heiman/HS1WL-Z.xml
 domoticz/Config/heiman/HS2SK-Z.xml
 domoticz/Config/homeseer/ezmotionplus.xml
+domoticz/Config/homeseer/hs-ls100plus.xml
 domoticz/Config/homeseer/hs-ms100plus.xml
 domoticz/Config/homeseer/hs-wd100plus.xml
 domoticz/Config/homeseer/hs-wd200plus.xml
@@ -287,8 +289,13 @@ domoticz/Config/horstmann/srt323.xml
 domoticz/Config/horstmann/ssr302.xml
 domoticz/Config/idlock/idlock101.xml
 domoticz/Config/ingersoll/dwzwave1.xml
+domoticz/Config/inovelli/nzw1201.xml
 domoticz/Config/inovelli/nzw30.xml
 domoticz/Config/inovelli/nzw31.xml
+domoticz/Config/inovelli/nzw36.xml
+domoticz/Config/inovelli/nzw37.xml
+domoticz/Config/inovelli/nzw39.xml
+domoticz/Config/inovelli/nzw96.xml
 domoticz/Config/inovelli/nzw97.xml
 domoticz/Config/inovelli/simple_module.xml
 domoticz/Config/intermatic/ca8900.xml
@@ -319,6 +326,7 @@ domoticz/Config/logicsoft/ZHC5002.xml
 domoticz/Config/logicsoft/ZHC5010.xml
 domoticz/Config/manufacturer_specific.xml
 domoticz/Config/manufacturer_specific.xsd
+domoticz/Config/mcohome/a8-9.xml
 domoticz/Config/mcohome/mh8fceu.xml
 domoticz/Config/mcohome/mh9co2.xml
 domoticz/Config/mcohome/mhp210.xml
@@ -372,6 +380,7 @@ domoticz/Config/popp/012501.xml
 domoticz/Config/popp/123580.xml
 domoticz/Config/popp/123601.xml
 domoticz/Config/popp/123658.xml
+domoticz/Config/popp/700045.xml
 domoticz/Config/popp/700168.xml
 domoticz/Config/popp/smoke-detector.xml
 domoticz/Config/popp/solar-siren.xml
@@ -402,6 +411,7 @@ domoticz/Config/qubino/ZMNHTDxS3.xml
 domoticz/Config/qubino/ZMNHUD1.xml
 domoticz/Config/qubino/ZMNHVDx.xml
 domoticz/Config/qubino/ZMNHWD1.xml
+domoticz/Config/qubino/ZMNHXDx.xml
 domoticz/Config/qubino/ZMNHZDx.xml
 domoticz/Config/rcs/em52-zw.xml
 domoticz/Config/rcs/pm12-zw.xml
@@ -438,7 +448,7 @@ domoticz/Config/telldus/TZWP102.xml
 domoticz/Config/telldus/tzdw100.xml
 domoticz/Config/telldus/tzwp100.xml
 domoticz/Config/thermofloor/heatit021.xml
-domoticz/Config/thermofloor/heatitztrm2.xml
+domoticz/Config/thermofloor/heatit033.xml
 domoticz/Config/trane/TZEMT400AB32MAA.xml
 domoticz/Config/trane/TZEMT400BB32MAA.xml
 domoticz/Config/trane/TZEMT524AA21MA.xml
@@ -798,6 +808,7 @@ domoticz/www/app/UtilityController.js
 domoticz/www/app/WeatherController.js
 domoticz/www/app/ZWaveTopologyController.js
 domoticz/www/app/app.js
+domoticz/www/app/log/DeviceLog.js
 domoticz/www/app/log/GraphLog.js
 domoticz/www/app/log/LightLog.js
 domoticz/www/app/log/SceneLog.js
@@ -1485,8 +1496,10 @@ domoticz/www/views/lights.html
 domoticz/www/views/log.html
 domoticz/www/views/log/device_graph_log.html
 domoticz/www/views/log/device_light_log.html
+domoticz/www/views/log/device_log.html
 domoticz/www/views/log/device_temperature_log.html
 domoticz/www/views/log/device_temperature_report.html
+domoticz/www/views/log/device_text_log.html
 domoticz/www/views/log/scene_log.html
 domoticz/www/views/login.html
 domoticz/www/views/logout.html
