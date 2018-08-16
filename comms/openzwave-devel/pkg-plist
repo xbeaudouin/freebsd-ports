@@ -269,6 +269,7 @@ bin/ozw_config
 %%ETCDIR%%/heiman/HS1WL-Z.xml
 %%ETCDIR%%/heiman/HS2SK-Z.xml
 %%ETCDIR%%/homeseer/ezmotionplus.xml
+%%ETCDIR%%/homeseer/hs-ls100plus.xml
 %%ETCDIR%%/homeseer/hs-ms100plus.xml
 %%ETCDIR%%/homeseer/hs-wd100plus.xml
 %%ETCDIR%%/homeseer/hs-wd200plus.xml
@@ -290,8 +291,13 @@ bin/ozw_config
 %%ETCDIR%%/horstmann/ssr302.xml
 %%ETCDIR%%/idlock/idlock101.xml
 %%ETCDIR%%/ingersoll/dwzwave1.xml
+%%ETCDIR%%/inovelli/nzw1201.xml
 %%ETCDIR%%/inovelli/nzw30.xml
 %%ETCDIR%%/inovelli/nzw31.xml
+%%ETCDIR%%/inovelli/nzw36.xml
+%%ETCDIR%%/inovelli/nzw37.xml
+%%ETCDIR%%/inovelli/nzw39.xml
+%%ETCDIR%%/inovelli/nzw96.xml
 %%ETCDIR%%/inovelli/nzw97.xml
 %%ETCDIR%%/inovelli/simple_module.xml
 %%ETCDIR%%/intermatic/ca8900.xml
@@ -322,6 +328,7 @@ bin/ozw_config
 %%ETCDIR%%/logicsoft/ZHC5010.xml
 %%ETCDIR%%/manufacturer_specific.xml
 %%ETCDIR%%/manufacturer_specific.xsd
+%%ETCDIR%%/mcohome/a8-9.xml
 %%ETCDIR%%/mcohome/mh8fceu.xml
 %%ETCDIR%%/mcohome/mh9co2.xml
 %%ETCDIR%%/mcohome/mhp210.xml
@@ -375,6 +382,7 @@ bin/ozw_config
 %%ETCDIR%%/popp/123580.xml
 %%ETCDIR%%/popp/123601.xml
 %%ETCDIR%%/popp/123658.xml
+%%ETCDIR%%/popp/700045.xml
 %%ETCDIR%%/popp/700168.xml
 %%ETCDIR%%/popp/smoke-detector.xml
 %%ETCDIR%%/popp/solar-siren.xml
@@ -405,6 +413,7 @@ bin/ozw_config
 %%ETCDIR%%/qubino/ZMNHUD1.xml
 %%ETCDIR%%/qubino/ZMNHVDx.xml
 %%ETCDIR%%/qubino/ZMNHWD1.xml
+%%ETCDIR%%/qubino/ZMNHXDx.xml
 %%ETCDIR%%/qubino/ZMNHZDx.xml
 %%ETCDIR%%/rcs/em52-zw.xml
 %%ETCDIR%%/rcs/pm12-zw.xml
