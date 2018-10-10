@@ -272,6 +272,7 @@ bin/ozw_config
 %%ETCDIR%%/heiman/HS1WL-Z.xml
 %%ETCDIR%%/heiman/HS2SK-Z.xml
 %%ETCDIR%%/homeseer/ezmotionplus.xml
+%%ETCDIR%%/homeseer/hs-fls100plus.xml
 %%ETCDIR%%/homeseer/hs-ls100plus.xml
 %%ETCDIR%%/homeseer/hs-ms100plus.xml
 %%ETCDIR%%/homeseer/hs-wd100plus.xml
@@ -281,6 +282,7 @@ bin/ozw_config
 %%ETCDIR%%/homeseer/hsm100.xml
 %%ETCDIR%%/homeseer/hsm200.xml
 %%ETCDIR%%/homeseer/ztroller.xml
+%%ETCDIR%%/honeywell/39351-ZW3005.xml
 %%ETCDIR%%/honeywell/lynx-touch-l5100.xml
 %%ETCDIR%%/honeywell/th8320zw1000.xml
 %%ETCDIR%%/horstmann/asrzw.xml
@@ -314,6 +316,7 @@ bin/ozw_config
 %%ETCDIR%%/leviton/dzpd3.xml
 %%ETCDIR%%/leviton/rzi10.xml
 %%ETCDIR%%/leviton/vrcpg.xml
+%%ETCDIR%%/leviton/vre06.xml
 %%ETCDIR%%/leviton/vrf01.xml
 %%ETCDIR%%/leviton/vri06.xml
 %%ETCDIR%%/leviton/vri10.xml
@@ -383,6 +386,7 @@ bin/ozw_config
 %%ETCDIR%%/popp/009105.xml
 %%ETCDIR%%/popp/009303.xml
 %%ETCDIR%%/popp/009402.xml
+%%ETCDIR%%/popp/009501.xml
 %%ETCDIR%%/popp/012501.xml
 %%ETCDIR%%/popp/123580.xml
 %%ETCDIR%%/popp/123601.xml
