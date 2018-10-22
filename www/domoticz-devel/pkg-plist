@@ -172,6 +172,7 @@ domoticz/Config/everspring/sf812.xml
 domoticz/Config/everspring/sm103.xml
 domoticz/Config/everspring/sp103.xml
 domoticz/Config/everspring/sp814.xml
+domoticz/Config/everspring/sp815.xml
 domoticz/Config/everspring/sp816.xml
 domoticz/Config/everspring/st812.xml
 domoticz/Config/everspring/st814.xml
@@ -213,6 +214,7 @@ domoticz/Config/fibaro/fgss101.xml
 domoticz/Config/fibaro/fgt001.xml
 domoticz/Config/fibaro/fgwpe.xml
 domoticz/Config/fibaro/fgwpfzw5.xml
+domoticz/Config/fibaro/fgwpg111.xml
 domoticz/Config/firstalert/zcombo.xml
 domoticz/Config/forest/fs2z5232000002.xml
 domoticz/Config/fortrezz/fmi.xml
@@ -233,6 +235,7 @@ domoticz/Config/ge/14294-dimmer.xml
 domoticz/Config/ge/14295-dimmer-toggle.xml
 domoticz/Config/ge/26931-motion-switch.xml
 domoticz/Config/ge/26933-motion-dimmer.xml
+domoticz/Config/ge/28167-plugin-dimmer.xml
 domoticz/Config/ge/dimmer.xml
 domoticz/Config/ge/dimmer_module.xml
 domoticz/Config/ge/hinge-pin.xml
@@ -267,6 +270,7 @@ domoticz/Config/heiman/HS1SA-Z.xml
 domoticz/Config/heiman/HS1WL-Z.xml
 domoticz/Config/heiman/HS2SK-Z.xml
 domoticz/Config/homeseer/ezmotionplus.xml
+domoticz/Config/homeseer/hs-fls100plus.xml
 domoticz/Config/homeseer/hs-ls100plus.xml
 domoticz/Config/homeseer/hs-ms100plus.xml
 domoticz/Config/homeseer/hs-wd100plus.xml
@@ -276,6 +280,7 @@ domoticz/Config/homeseer/hs-ws200plus.xml
 domoticz/Config/homeseer/hsm100.xml
 domoticz/Config/homeseer/hsm200.xml
 domoticz/Config/homeseer/ztroller.xml
+domoticz/Config/honeywell/39351-ZW3005.xml
 domoticz/Config/honeywell/lynx-touch-l5100.xml
 domoticz/Config/honeywell/th8320zw1000.xml
 domoticz/Config/horstmann/asrzw.xml
@@ -287,6 +292,7 @@ domoticz/Config/horstmann/sir321.xml
 domoticz/Config/horstmann/srt321.xml
 domoticz/Config/horstmann/srt323.xml
 domoticz/Config/horstmann/ssr302.xml
+domoticz/Config/horstmann/ssr303.xml
 domoticz/Config/idlock/idlock101.xml
 domoticz/Config/ingersoll/dwzwave1.xml
 domoticz/Config/inovelli/nzw1201.xml
@@ -308,6 +314,7 @@ domoticz/Config/leviton/dz6hd.xml
 domoticz/Config/leviton/dzpd3.xml
 domoticz/Config/leviton/rzi10.xml
 domoticz/Config/leviton/vrcpg.xml
+domoticz/Config/leviton/vre06.xml
 domoticz/Config/leviton/vrf01.xml
 domoticz/Config/leviton/vri06.xml
 domoticz/Config/leviton/vri10.xml
@@ -351,6 +358,7 @@ domoticz/Config/oomi/ft100.xml
 domoticz/Config/oomi/ft111.xml
 domoticz/Config/options.xml
 domoticz/Config/options.xsd
+domoticz/Config/philio/pad02.xml
 domoticz/Config/philio/pan03.xml
 domoticz/Config/philio/pan04.xml
 domoticz/Config/philio/pan06.xml
@@ -376,6 +384,7 @@ domoticz/Config/popp/004407.xml
 domoticz/Config/popp/009105.xml
 domoticz/Config/popp/009303.xml
 domoticz/Config/popp/009402.xml
+domoticz/Config/popp/009501.xml
 domoticz/Config/popp/012501.xml
 domoticz/Config/popp/123580.xml
 domoticz/Config/popp/123601.xml
@@ -412,6 +421,7 @@ domoticz/Config/qubino/ZMNHUD1.xml
 domoticz/Config/qubino/ZMNHVDx.xml
 domoticz/Config/qubino/ZMNHWD1.xml
 domoticz/Config/qubino/ZMNHXDx.xml
+domoticz/Config/qubino/ZMNHYDx.xml
 domoticz/Config/qubino/ZMNHZDx.xml
 domoticz/Config/rcs/em52-zw.xml
 domoticz/Config/rcs/pm12-zw.xml
@@ -424,6 +434,7 @@ domoticz/Config/remotec/zts-110.xml
 domoticz/Config/remotec/zts-500.xml
 domoticz/Config/remotec/zurc.xml
 domoticz/Config/remotec/zxt-120.xml
+domoticz/Config/remotec/zxt-600.xml
 domoticz/Config/schlage/BE468.xml
 domoticz/Config/schlage/BE469.xml
 domoticz/Config/schlagelink/itemp.xml
@@ -439,6 +450,7 @@ domoticz/Config/shenzen_neo/nas-rc01z.xml
 domoticz/Config/shenzen_neo/nas-wr01z.xml
 domoticz/Config/shenzen_neo/nas-ws02z.xml
 domoticz/Config/steinel/is140-2.xml
+domoticz/Config/steinel/l810-led-ihf.xml
 domoticz/Config/steinel/rs-led-d2.xml
 domoticz/Config/steinel/xled-home-2.xml
 domoticz/Config/stelpro/stzw402.xml
@@ -474,6 +486,7 @@ domoticz/Config/wenzhou/sm103.xml
 domoticz/Config/wenzhou/tsp01.xml
 domoticz/Config/wenzhou/tz55.xml
 domoticz/Config/wenzhou/tz56.xml
+domoticz/Config/wenzhou/tz57.xml
 domoticz/Config/wenzhou/tz65d.xml
 domoticz/Config/wenzhou/tz66d.xml
 domoticz/Config/wenzhou/tz67.xml
@@ -502,6 +515,7 @@ domoticz/Config/zooz/zen23.xml
 domoticz/Config/zooz/zen24.xml
 domoticz/Config/zooz/zse08.xml
 domoticz/Config/zooz/zse09.xml
+domoticz/Config/zooz/zse18.xml
 domoticz/Config/zooz/zse30.xml
 domoticz/Config/zooz/zse33.xml
 domoticz/Config/zooz/zse40.xml
@@ -808,12 +822,12 @@ domoticz/www/app/UtilityController.js
 domoticz/www/app/WeatherController.js
 domoticz/www/app/ZWaveTopologyController.js
 domoticz/www/app/app.js
+domoticz/www/app/devices/deviceFactory.js
 domoticz/www/app/log/DeviceLog.js
 domoticz/www/app/log/GraphLog.js
 domoticz/www/app/log/LightLog.js
 domoticz/www/app/log/SceneLog.js
 domoticz/www/app/log/TemperatureLog.js
-domoticz/www/app/log/TemperatureReport.js
 domoticz/www/app/log/TextLog.js
 domoticz/www/app/log/components.js
 domoticz/www/app/log/factories.js
@@ -821,6 +835,15 @@ domoticz/www/app/main.js
 domoticz/www/app/notifications/DeviceNotifications.js
 domoticz/www/app/notifications/constants.js
 domoticz/www/app/notifications/factories.js
+domoticz/www/app/report/CounterReport.html
+domoticz/www/app/report/CounterReport.js
+domoticz/www/app/report/DeviceReport.html
+domoticz/www/app/report/DeviceReport.js
+domoticz/www/app/report/EnergyMultiCounterReport.html
+domoticz/www/app/report/EnergyMultiCounterReport.js
+domoticz/www/app/report/TemperatureReport.html
+domoticz/www/app/report/TemperatureReport.js
+domoticz/www/app/report/helpers.js
 domoticz/www/app/scenes/factories.js
 domoticz/www/app/timers/DeviceTimersController.js
 domoticz/www/app/timers/SceneTimersController.js
@@ -1498,7 +1521,6 @@ domoticz/www/views/log/device_graph_log.html
 domoticz/www/views/log/device_light_log.html
 domoticz/www/views/log/device_log.html
 domoticz/www/views/log/device_temperature_log.html
-domoticz/www/views/log/device_temperature_report.html
 domoticz/www/views/log/device_text_log.html
 domoticz/www/views/log/scene_log.html
 domoticz/www/views/login.html

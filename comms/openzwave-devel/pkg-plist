@@ -159,6 +159,7 @@ bin/ozw_config
 %%ETCDIR%%/enerwave/zwnrsm1plus.xml
 %%ETCDIR%%/enerwave/zwnrsm2plus.xml
 %%ETCDIR%%/eurotronic/eur_cometz.xml
+%%ETCDIR%%/eurotronic/eur_spiritz.xml
 %%ETCDIR%%/eurotronic/eur_stellaz.xml
 %%ETCDIR%%/everspring/ad146.xml
 %%ETCDIR%%/everspring/ad147.xml
@@ -272,6 +273,7 @@ bin/ozw_config
 %%ETCDIR%%/heiman/HS1WL-Z.xml
 %%ETCDIR%%/heiman/HS2SK-Z.xml
 %%ETCDIR%%/homeseer/ezmotionplus.xml
+%%ETCDIR%%/homeseer/hs-fc200plus.xml
 %%ETCDIR%%/homeseer/hs-fls100plus.xml
 %%ETCDIR%%/homeseer/hs-ls100plus.xml
 %%ETCDIR%%/homeseer/hs-ms100plus.xml
