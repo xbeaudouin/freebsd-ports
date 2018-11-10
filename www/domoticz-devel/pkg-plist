@@ -157,6 +157,7 @@ domoticz/Config/enerwave/zwn-sc7.xml
 domoticz/Config/enerwave/zwnrsm1plus.xml
 domoticz/Config/enerwave/zwnrsm2plus.xml
 domoticz/Config/eurotronic/eur_cometz.xml
+domoticz/Config/eurotronic/eur_spiritz.xml
 domoticz/Config/eurotronic/eur_stellaz.xml
 domoticz/Config/everspring/ad146.xml
 domoticz/Config/everspring/ad147.xml
@@ -270,6 +271,7 @@ domoticz/Config/heiman/HS1SA-Z.xml
 domoticz/Config/heiman/HS1WL-Z.xml
 domoticz/Config/heiman/HS2SK-Z.xml
 domoticz/Config/homeseer/ezmotionplus.xml
+domoticz/Config/homeseer/hs-fc200plus.xml
 domoticz/Config/homeseer/hs-fls100plus.xml
 domoticz/Config/homeseer/hs-ls100plus.xml
 domoticz/Config/homeseer/hs-ms100plus.xml
@@ -793,7 +795,6 @@ domoticz/www/app/DashboardController.js
 domoticz/www/app/DeviceLightEdit.js
 domoticz/www/app/DevicesController.js
 domoticz/www/app/DummyController.js
-domoticz/www/app/EventsController.js
 domoticz/www/app/FloorplanController.js
 domoticz/www/app/FloorplanEditController.js
 domoticz/www/app/ForecastController.js
@@ -822,7 +823,22 @@ domoticz/www/app/UtilityController.js
 domoticz/www/app/WeatherController.js
 domoticz/www/app/ZWaveTopologyController.js
 domoticz/www/app/app.js
+domoticz/www/app/app.routes.js
+domoticz/www/app/components/rgbw-picker/RgbwPicker.html
+domoticz/www/app/components/rgbw-picker/RgbwPicker.js
 domoticz/www/app/devices/deviceFactory.js
+domoticz/www/app/events/CurrentStates.html
+domoticz/www/app/events/CurrentStates.js
+domoticz/www/app/events/EventViewer.html
+domoticz/www/app/events/EventViewer.js
+domoticz/www/app/events/Events.css
+domoticz/www/app/events/Events.html
+domoticz/www/app/events/Events.js
+domoticz/www/app/events/blockly_blocks_domoticz.js
+domoticz/www/app/events/blockly_messages_domoticz_en.js
+domoticz/www/app/events/blockly_toolbox.xml
+domoticz/www/app/events/blockly_xml_parser.js
+domoticz/www/app/events/factories.js
 domoticz/www/app/log/DeviceLog.js
 domoticz/www/app/log/GraphLog.js
 domoticz/www/app/log/LightLog.js
@@ -906,7 +922,6 @@ domoticz/www/css/ui-darkness/images/ui-icons_cccccc_256x240.png
 domoticz/www/css/ui-darkness/images/ui-icons_ffffff_256x240.png
 domoticz/www/css/ui-darkness/jquery-ui.min.css
 domoticz/www/css/wheelcolorpicker.css
-domoticz/www/eventsframe.html
 domoticz/www/favicon.ico
 domoticz/www/html5.appcache
 domoticz/www/i18n/domoticz-ar.json.gz
@@ -945,6 +960,7 @@ domoticz/www/i18n/domoticz-th.json.gz
 domoticz/www/i18n/domoticz-tr.json.gz
 domoticz/www/i18n/domoticz-uk.json.gz
 domoticz/www/i18n/domoticz-zh.json.gz
+domoticz/www/i18n/domoticz-zh_TW.json.gz
 domoticz/www/images/Alarm.png
 domoticz/www/images/Alarm48_Off.png
 domoticz/www/images/Alarm48_On.png
@@ -1221,6 +1237,7 @@ domoticz/www/images/restart.png
 domoticz/www/images/scale.png
 domoticz/www/images/scale48.png
 domoticz/www/images/scenes.png
+domoticz/www/images/script.png
 domoticz/www/images/security.png
 domoticz/www/images/security48.png
 domoticz/www/images/setup.png
@@ -1355,8 +1372,9 @@ domoticz/www/js/angular-websocket.js.gz
 domoticz/www/js/angular.min.js.gz
 domoticz/www/js/angularAMD.min.js.gz
 domoticz/www/js/babel-polyfill-6.26.0.js.gz
-domoticz/www/js/blockly_compressed.js.gz
-domoticz/www/js/blocks_compressed.js.gz
+domoticz/www/js/blockly/blockly_compressed.js
+domoticz/www/js/blockly/blocks_compressed.js
+domoticz/www/js/blockly/msg/en.js
 domoticz/www/js/bootbox.min.js.gz
 domoticz/www/js/bootstrap.min.js.gz
 domoticz/www/js/colpick.js.gz
@@ -1365,10 +1383,7 @@ domoticz/www/js/dataTables.select.min.js.gz
 domoticz/www/js/dataTables.tableTools.min.js.gz
 domoticz/www/js/date.format.js.gz
 domoticz/www/js/domoticz.js
-domoticz/www/js/domoticzblocks.js
-domoticz/www/js/domoticzblocks_messages_en.js
 domoticz/www/js/domoticzdevices.js
-domoticz/www/js/en_compressed.js.gz
 domoticz/www/js/export-csv.js.gz
 domoticz/www/js/highcharts-more.js.gz
 domoticz/www/js/highcharts-ng.min.js.gz
@@ -1507,7 +1522,6 @@ domoticz/www/views/dpfibaro.html
 domoticz/www/views/dpgooglepubsub.html
 domoticz/www/views/dphttp.html
 domoticz/www/views/dpinflux.html
-domoticz/www/views/events.html
 domoticz/www/views/floorplanedit.html
 domoticz/www/views/floorplans.html
 domoticz/www/views/forecast.html
