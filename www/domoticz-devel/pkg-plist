@@ -78,6 +78,7 @@ domoticz/Config/aeotec/zw132.xml
 domoticz/Config/aeotec/zw139.xml
 domoticz/Config/aeotec/zw140.xml
 domoticz/Config/aeotec/zw141.xml
+domoticz/Config/aeotec/zw162.xml
 domoticz/Config/aeotec/zwa001.xml
 domoticz/Config/aeotec/zwa002.xml
 domoticz/Config/aeotec/zwa003.xml
@@ -237,6 +238,7 @@ domoticz/Config/ge/14295-dimmer-toggle.xml
 domoticz/Config/ge/26931-motion-switch.xml
 domoticz/Config/ge/26933-motion-dimmer.xml
 domoticz/Config/ge/28167-plugin-dimmer.xml
+domoticz/Config/ge/28169-plugin-switch.xml
 domoticz/Config/ge/dimmer.xml
 domoticz/Config/ge/dimmer_module.xml
 domoticz/Config/ge/hinge-pin.xml
@@ -448,6 +450,7 @@ domoticz/Config/shenzen_neo/ls02ch.xml
 domoticz/Config/shenzen_neo/nas-ab01z.xml
 domoticz/Config/shenzen_neo/nas-ds01z.xml
 domoticz/Config/shenzen_neo/nas-pd01z.xml
+domoticz/Config/shenzen_neo/nas-pd02z.xml
 domoticz/Config/shenzen_neo/nas-rc01z.xml
 domoticz/Config/shenzen_neo/nas-wr01z.xml
 domoticz/Config/shenzen_neo/nas-ws02z.xml
