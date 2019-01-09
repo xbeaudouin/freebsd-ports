@@ -33,12 +33,12 @@ USES=		cmake iconv pkgconfig ssl
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	10303
-DOMOTICZ_TS=	1545750429
+DOMOTICZ_REL=	10338
+DOMOTICZ_TS=	1546936956
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	f39f9513
+GH_TAGNAME=	d5901c50
 
 USE_RC_SUBR=	domoticz
 
@@ -93,7 +93,7 @@ LIB_DEPENDS+=	libminizip.so:archivers/minizip
 
 .if ${PORT_OPTIONS:MPYTHON}
 CMAKE_ARGS+=	-DUSE_PYTHON="YES"
-USES+=		python:3.4
+USES+=		python:3.6
 .else
 CMAKE_ARGS+=	-DUSE_PYTHON="NO"
 .endif
