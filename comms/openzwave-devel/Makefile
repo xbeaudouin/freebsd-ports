@@ -13,13 +13,13 @@ LICENSE=	LGPL20
 
 # Manually update this when makefile is updated
 # echo $(git describe --long --tags --dirty 2>/dev/null | sed s/^v//) | awk '{split($$0,a,"-"); print a[2]}'
-VERSION_REV=	3255
+VERSION_REV=	3319
 
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenZWave
 GH_PROJECT=	open-zwave
-GH_TAGNAME=	7263e90b
+GH_TAGNAME=	c701f5f7
 
 USES=		gmake tar:bz2 iconv pkgconfig
 

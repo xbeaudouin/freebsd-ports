@@ -80,6 +80,7 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zw139.xml
 %%ETCDIR%%/aeotec/zw140.xml
 %%ETCDIR%%/aeotec/zw141.xml
+%%ETCDIR%%/aeotec/zw162.xml
 %%ETCDIR%%/aeotec/zwa001.xml
 %%ETCDIR%%/aeotec/zwa002.xml
 %%ETCDIR%%/aeotec/zwa003.xml
@@ -204,6 +205,7 @@ bin/ozw_config
 %%ETCDIR%%/fibaro/fgmszw5.xml
 %%ETCDIR%%/fibaro/fgpb101.xml
 %%ETCDIR%%/fibaro/fgr221.xml
+%%ETCDIR%%/fibaro/fgr223.xml
 %%ETCDIR%%/fibaro/fgrgbwm441.xml
 %%ETCDIR%%/fibaro/fgrm222.xml
 %%ETCDIR%%/fibaro/fgs211.xml
@@ -239,6 +241,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/26931-motion-switch.xml
 %%ETCDIR%%/ge/26933-motion-dimmer.xml
 %%ETCDIR%%/ge/28167-plugin-dimmer.xml
+%%ETCDIR%%/ge/28169-plugin-switch.xml
 %%ETCDIR%%/ge/dimmer.xml
 %%ETCDIR%%/ge/dimmer_module.xml
 %%ETCDIR%%/ge/hinge-pin.xml
@@ -298,6 +301,7 @@ bin/ozw_config
 %%ETCDIR%%/horstmann/ssr302.xml
 %%ETCDIR%%/horstmann/ssr303.xml
 %%ETCDIR%%/idlock/idlock101.xml
+%%ETCDIR%%/idlock/idlock150.xml
 %%ETCDIR%%/ingersoll/dwzwave1.xml
 %%ETCDIR%%/inovelli/nzw1201.xml
 %%ETCDIR%%/inovelli/nzw30.xml
@@ -376,6 +380,7 @@ bin/ozw_config
 %%ETCDIR%%/philio/pse02.xml
 %%ETCDIR%%/philio/psm02.xml
 %%ETCDIR%%/philio/psp05.xml
+%%ETCDIR%%/philio/psr03-1b.xml
 %%ETCDIR%%/philio/psr04.xml
 %%ETCDIR%%/philio/pst02-1c.xml
 %%ETCDIR%%/philio/pst02-b.xml
@@ -450,9 +455,11 @@ bin/ozw_config
 %%ETCDIR%%/shenzen_neo/nas-ab01z.xml
 %%ETCDIR%%/shenzen_neo/nas-ds01z.xml
 %%ETCDIR%%/shenzen_neo/nas-pd01z.xml
+%%ETCDIR%%/shenzen_neo/nas-pd02z.xml
 %%ETCDIR%%/shenzen_neo/nas-rc01z.xml
 %%ETCDIR%%/shenzen_neo/nas-wr01z.xml
 %%ETCDIR%%/shenzen_neo/nas-ws02z.xml
+%%ETCDIR%%/simon/10002034-13X.xml
 %%ETCDIR%%/steinel/is140-2.xml
 %%ETCDIR%%/steinel/l810-led-ihf.xml
 %%ETCDIR%%/steinel/rs-led-d2.xml
@@ -490,6 +497,7 @@ bin/ozw_config
 %%ETCDIR%%/wenzhou/tsp01.xml
 %%ETCDIR%%/wenzhou/tz55.xml
 %%ETCDIR%%/wenzhou/tz56.xml
+%%ETCDIR%%/wenzhou/tz56s.xml
 %%ETCDIR%%/wenzhou/tz57.xml
 %%ETCDIR%%/wenzhou/tz65d.xml
 %%ETCDIR%%/wenzhou/tz66d.xml
@@ -517,6 +525,8 @@ bin/ozw_config
 %%ETCDIR%%/zooz/zen22v2.xml
 %%ETCDIR%%/zooz/zen23.xml
 %%ETCDIR%%/zooz/zen24.xml
+%%ETCDIR%%/zooz/zen26.xml
+%%ETCDIR%%/zooz/zen27.xml
 %%ETCDIR%%/zooz/zse08.xml
 %%ETCDIR%%/zooz/zse09.xml
 %%ETCDIR%%/zooz/zse18.xml
