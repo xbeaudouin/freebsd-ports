@@ -445,6 +445,7 @@ domoticz/Config/remotec/zxt-120.xml
 domoticz/Config/remotec/zxt-600.xml
 domoticz/Config/schlage/BE468.xml
 domoticz/Config/schlage/BE469.xml
+domoticz/Config/schlage/BE469ZP.xml
 domoticz/Config/schlagelink/itemp.xml
 domoticz/Config/schlagelink/minikeypad.xml
 domoticz/Config/sensative/strips.xml
@@ -520,6 +521,7 @@ domoticz/Config/zooz/zen06.xml
 domoticz/Config/zooz/zen07.xml
 domoticz/Config/zooz/zen15.xml
 domoticz/Config/zooz/zen20.xml
+domoticz/Config/zooz/zen20v2.xml
 domoticz/Config/zooz/zen21.xml
 domoticz/Config/zooz/zen22.xml
 domoticz/Config/zooz/zen22v2.xml
@@ -530,6 +532,7 @@ domoticz/Config/zooz/zen27.xml
 domoticz/Config/zooz/zse08.xml
 domoticz/Config/zooz/zse09.xml
 domoticz/Config/zooz/zse18.xml
+domoticz/Config/zooz/zse19.xml
 domoticz/Config/zooz/zse30.xml
 domoticz/Config/zooz/zse33.xml
 domoticz/Config/zooz/zse40.xml
@@ -560,6 +563,7 @@ domoticz/dzVents/documentation/README.wiki
 domoticz/dzVents/documentation/dzvents-smoothing.png
 domoticz/dzVents/documentation/history.md
 domoticz/dzVents/documentation/pandoc.md
+domoticz/dzVents/runtime/Camera.lua
 domoticz/dzVents/runtime/Device.lua
 domoticz/dzVents/runtime/Domoticz.lua
 domoticz/dzVents/runtime/EventHelpers.lua
@@ -651,6 +655,7 @@ domoticz/dzVents/runtime/integration-tests/vdRepeatSwitch.lua
 domoticz/dzVents/runtime/integration-tests/vdSwitchDimmer.lua
 domoticz/dzVents/runtime/lodash.lua
 domoticz/dzVents/runtime/misc/smoothing.xlsx
+domoticz/dzVents/runtime/misc/testdzVents.sh
 domoticz/dzVents/runtime/persistence.lua
 domoticz/dzVents/runtime/tests/.luacov
 domoticz/dzVents/runtime/tests/README.md
@@ -724,6 +729,7 @@ domoticz/plugins/examples/HTTP.py
 domoticz/plugins/examples/Kodi.py
 domoticz/plugins/examples/MQTT Publish.py
 domoticz/plugins/examples/MQTT Subscribe.py
+domoticz/plugins/examples/Mutli-Threaded.py
 domoticz/plugins/examples/Pinger.py
 domoticz/plugins/examples/RAVEn.py
 domoticz/plugins/examples/UDP Discovery.py
