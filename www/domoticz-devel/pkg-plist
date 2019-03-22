@@ -84,6 +84,7 @@ domoticz/Config/aeotec/zwa002.xml
 domoticz/Config/aeotec/zwa003.xml
 domoticz/Config/aeotec/zwa004.xml
 domoticz/Config/aeotec/zwa005.xml
+domoticz/Config/aeotec/zwa006.xml
 domoticz/Config/assa_abloy/ConexisL1.xml
 domoticz/Config/assa_abloy/KeyfreeConnected-plus.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
@@ -164,6 +165,7 @@ domoticz/Config/everspring/ad146.xml
 domoticz/Config/everspring/ad147.xml
 domoticz/Config/everspring/an145.xml
 domoticz/Config/everspring/an158.xml
+domoticz/Config/everspring/an163.xml
 domoticz/Config/everspring/an179.xml
 domoticz/Config/everspring/an180.xml
 domoticz/Config/everspring/an181.xml
@@ -273,6 +275,7 @@ domoticz/Config/heiman/HS1MS-Z.xml
 domoticz/Config/heiman/HS1SA-Z.xml
 domoticz/Config/heiman/HS1WL-Z.xml
 domoticz/Config/heiman/HS2SK-Z.xml
+domoticz/Config/heltun/he-zw-therm-fl2.xml
 domoticz/Config/homeseer/ezmotionplus.xml
 domoticz/Config/homeseer/hs-fc200plus.xml
 domoticz/Config/homeseer/hs-fls100plus.xml
@@ -458,6 +461,7 @@ domoticz/Config/shenzen_neo/nas-pd01z.xml
 domoticz/Config/shenzen_neo/nas-pd02z.xml
 domoticz/Config/shenzen_neo/nas-rc01z.xml
 domoticz/Config/shenzen_neo/nas-wr01z.xml
+domoticz/Config/shenzen_neo/nas-wr01ze.xml
 domoticz/Config/shenzen_neo/nas-ws02z.xml
 domoticz/Config/simon/10002034-13X.xml
 domoticz/Config/simon/10002041-13X.xml
@@ -473,6 +477,7 @@ domoticz/Config/telldus/tzdw100.xml
 domoticz/Config/telldus/tzwp100.xml
 domoticz/Config/thermofloor/heatit021.xml
 domoticz/Config/thermofloor/heatit033.xml
+domoticz/Config/thermofloor/heatit056.xml
 domoticz/Config/trane/TZEMT400AB32MAA.xml
 domoticz/Config/trane/TZEMT400BB32MAA.xml
 domoticz/Config/trane/TZEMT524AA21MA.xml

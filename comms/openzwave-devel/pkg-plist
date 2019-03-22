@@ -86,6 +86,7 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zwa003.xml
 %%ETCDIR%%/aeotec/zwa004.xml
 %%ETCDIR%%/aeotec/zwa005.xml
+%%ETCDIR%%/aeotec/zwa006.xml
 %%ETCDIR%%/assa_abloy/ConexisL1.xml
 %%ETCDIR%%/assa_abloy/KeyfreeConnected-plus.xml
 %%ETCDIR%%/assa_abloy/KeyfreeConnected.xml
@@ -166,6 +167,7 @@ bin/ozw_config
 %%ETCDIR%%/everspring/ad147.xml
 %%ETCDIR%%/everspring/an145.xml
 %%ETCDIR%%/everspring/an158.xml
+%%ETCDIR%%/everspring/an163.xml
 %%ETCDIR%%/everspring/an179.xml
 %%ETCDIR%%/everspring/an180.xml
 %%ETCDIR%%/everspring/an181.xml
@@ -191,6 +193,7 @@ bin/ozw_config
 %%ETCDIR%%/fakro/zws12.xml
 %%ETCDIR%%/fakro/zws230.xml
 %%ETCDIR%%/fibaro/fgbs001.xml
+%%ETCDIR%%/fibaro/fgbs222.xml
 %%ETCDIR%%/fibaro/fgcd001.xml
 %%ETCDIR%%/fibaro/fgd211.xml
 %%ETCDIR%%/fibaro/fgd212.xml
@@ -275,6 +278,7 @@ bin/ozw_config
 %%ETCDIR%%/heiman/HS1SA-Z.xml
 %%ETCDIR%%/heiman/HS1WL-Z.xml
 %%ETCDIR%%/heiman/HS2SK-Z.xml
+%%ETCDIR%%/heltun/he-zw-therm-fl2.xml
 %%ETCDIR%%/homeseer/ezmotionplus.xml
 %%ETCDIR%%/homeseer/hs-fc200plus.xml
 %%ETCDIR%%/homeseer/hs-fls100plus.xml
@@ -322,6 +326,7 @@ bin/ozw_config
 %%ETCDIR%%/leviton/dzpd3.xml
 %%ETCDIR%%/leviton/rzi10.xml
 %%ETCDIR%%/leviton/vrcpg.xml
+%%ETCDIR%%/leviton/vrcz4.xml
 %%ETCDIR%%/leviton/vre06.xml
 %%ETCDIR%%/leviton/vrf01.xml
 %%ETCDIR%%/leviton/vri06.xml
@@ -370,6 +375,7 @@ bin/ozw_config
 %%ETCDIR%%/philio/pad02.xml
 %%ETCDIR%%/philio/pan03.xml
 %%ETCDIR%%/philio/pan04.xml
+%%ETCDIR%%/philio/pan05.xml
 %%ETCDIR%%/philio/pan06.xml
 %%ETCDIR%%/philio/pan07.xml
 %%ETCDIR%%/philio/pan08.xml
@@ -401,6 +407,7 @@ bin/ozw_config
 %%ETCDIR%%/popp/123658.xml
 %%ETCDIR%%/popp/700045.xml
 %%ETCDIR%%/popp/700168.xml
+%%ETCDIR%%/popp/700397.xml
 %%ETCDIR%%/popp/smoke-detector.xml
 %%ETCDIR%%/popp/solar-siren.xml
 %%ETCDIR%%/popp/zweather.xml
@@ -460,6 +467,7 @@ bin/ozw_config
 %%ETCDIR%%/shenzen_neo/nas-pd02z.xml
 %%ETCDIR%%/shenzen_neo/nas-rc01z.xml
 %%ETCDIR%%/shenzen_neo/nas-wr01z.xml
+%%ETCDIR%%/shenzen_neo/nas-wr01ze.xml
 %%ETCDIR%%/shenzen_neo/nas-ws02z.xml
 %%ETCDIR%%/simon/10002034-13X.xml
 %%ETCDIR%%/simon/10002041-13X.xml
@@ -475,10 +483,13 @@ bin/ozw_config
 %%ETCDIR%%/telldus/tzwp102.xml
 %%ETCDIR%%/thermofloor/heatit021.xml
 %%ETCDIR%%/thermofloor/heatit033.xml
+%%ETCDIR%%/thermofloor/heatit056.xml
 %%ETCDIR%%/trane/TZEMT400AB32MAA.xml
 %%ETCDIR%%/trane/TZEMT400BB32MAA.xml
 %%ETCDIR%%/trane/TZEMT524AA21MA.xml
 %%ETCDIR%%/tronika/zsc01d.xml
+%%ETCDIR%%/tronika/zv9040.xml
+%%ETCDIR%%/tronika/zv9101.xml
 %%ETCDIR%%/vision/zd2102.xml
 %%ETCDIR%%/vision/zd2105us5.xml
 %%ETCDIR%%/vision/zd2201.xml
