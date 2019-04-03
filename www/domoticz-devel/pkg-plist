@@ -632,6 +632,7 @@ domoticz/dzVents/runtime/device-adapters/zwave_thermostat_mode_device.lua
 domoticz/dzVents/runtime/dzVents.lua
 domoticz/dzVents/runtime/integration-tests/File.lua
 domoticz/dzVents/runtime/integration-tests/README.md
+domoticz/dzVents/runtime/integration-tests/descriptionScript.lua
 domoticz/dzVents/runtime/integration-tests/domoticzTestTools.lua
 domoticz/dzVents/runtime/integration-tests/global_data.lua
 domoticz/dzVents/runtime/integration-tests/httpResponseScript.lua
