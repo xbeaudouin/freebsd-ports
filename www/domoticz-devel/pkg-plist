@@ -631,6 +631,7 @@ domoticz/dzVents/runtime/device-adapters/zone_heating_device.lua
 domoticz/dzVents/runtime/device-adapters/zwave_thermostat_mode_device.lua
 domoticz/dzVents/runtime/dzVents.lua
 domoticz/dzVents/runtime/integration-tests/File.lua
+domoticz/dzVents/runtime/integration-tests/IconScript.lua
 domoticz/dzVents/runtime/integration-tests/README.md
 domoticz/dzVents/runtime/integration-tests/descriptionScript.lua
 domoticz/dzVents/runtime/integration-tests/domoticzTestTools.lua
@@ -844,6 +845,7 @@ domoticz/www/app/UsersController.js
 domoticz/www/app/UtilityController.js
 domoticz/www/app/WeatherController.js
 domoticz/www/app/ZWaveTopologyController.js
+domoticz/www/app/app.constants.js
 domoticz/www/app/app.js
 domoticz/www/app/app.permissions.js
 domoticz/www/app/app.routes.js
