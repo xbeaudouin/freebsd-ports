@@ -87,6 +87,7 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zwa004.xml
 %%ETCDIR%%/aeotec/zwa005.xml
 %%ETCDIR%%/aeotec/zwa006.xml
+%%ETCDIR%%/aeotec/zwa008.xml
 %%ETCDIR%%/assa_abloy/ConexisL1.xml
 %%ETCDIR%%/assa_abloy/KeyfreeConnected-plus.xml
 %%ETCDIR%%/assa_abloy/KeyfreeConnected.xml
@@ -263,7 +264,8 @@ bin/ozw_config
 %%ETCDIR%%/hank/hkzw-dws01.xml
 %%ETCDIR%%/hank/hkzw-fld01.xml
 %%ETCDIR%%/hank/hkzw-ms01.xml
-%%ETCDIR%%/hank/hkzw-ms02.xml
+%%ETCDIR%%/hank/hkzw-ms02-200.xml
+%%ETCDIR%%/hank/hkzw-ms02-300.xml
 %%ETCDIR%%/hank/hkzw-rgb01.xml
 %%ETCDIR%%/hank/hkzw-so01-smartplug.xml
 %%ETCDIR%%/hank/hkzw-so03.xml
@@ -278,10 +280,12 @@ bin/ozw_config
 %%ETCDIR%%/heiman/HS1SA-Z.xml
 %%ETCDIR%%/heiman/HS1WL-Z.xml
 %%ETCDIR%%/heiman/HS2SK-Z.xml
+%%ETCDIR%%/heiman/HS2WD-Z.xml
 %%ETCDIR%%/heltun/he-zw-therm-fl2.xml
 %%ETCDIR%%/homeseer/ezmotionplus.xml
 %%ETCDIR%%/homeseer/hs-fc200plus.xml
 %%ETCDIR%%/homeseer/hs-fls100plus.xml
+%%ETCDIR%%/homeseer/hs-fs100plus.xml
 %%ETCDIR%%/homeseer/hs-ls100plus.xml
 %%ETCDIR%%/homeseer/hs-ms100plus.xml
 %%ETCDIR%%/homeseer/hs-wd100plus.xml
@@ -293,6 +297,7 @@ bin/ozw_config
 %%ETCDIR%%/homeseer/ztroller.xml
 %%ETCDIR%%/honeywell/39351-ZW3005.xml
 %%ETCDIR%%/honeywell/lynx-touch-l5100.xml
+%%ETCDIR%%/honeywell/th6320zw2003.xml
 %%ETCDIR%%/honeywell/th8320zw1000.xml
 %%ETCDIR%%/horstmann/asrzw.xml
 %%ETCDIR%%/horstmann/hrt4zw.xml
@@ -408,6 +413,7 @@ bin/ozw_config
 %%ETCDIR%%/popp/700045.xml
 %%ETCDIR%%/popp/700168.xml
 %%ETCDIR%%/popp/700397.xml
+%%ETCDIR%%/popp/700793.xml
 %%ETCDIR%%/popp/smoke-detector.xml
 %%ETCDIR%%/popp/solar-siren.xml
 %%ETCDIR%%/popp/zweather.xml
@@ -440,6 +446,7 @@ bin/ozw_config
 %%ETCDIR%%/qubino/ZMNHXDx.xml
 %%ETCDIR%%/qubino/ZMNHYDx.xml
 %%ETCDIR%%/qubino/ZMNHZDx.xml
+%%ETCDIR%%/qubino/ZMNKIDx.xml
 %%ETCDIR%%/rcs/em52-zw.xml
 %%ETCDIR%%/rcs/pm12-zw.xml
 %%ETCDIR%%/rcs/therm0005.xml
@@ -471,11 +478,15 @@ bin/ozw_config
 %%ETCDIR%%/shenzen_neo/nas-ws02z.xml
 %%ETCDIR%%/simon/10002034-13X.xml
 %%ETCDIR%%/simon/10002041-13X.xml
+%%ETCDIR%%/somfy/1811265_ZRTSI.xml
 %%ETCDIR%%/steinel/is140-2.xml
 %%ETCDIR%%/steinel/l810-led-ihf.xml
 %%ETCDIR%%/steinel/rs-led-d2.xml
 %%ETCDIR%%/steinel/xled-home-2.xml
 %%ETCDIR%%/stelpro/stzw402.xml
+%%ETCDIR%%/sunricher/srzv9001t4dimeu.xml
+%%ETCDIR%%/sunricher/srzv9101sachpeu.xml
+%%ETCDIR%%/sunricher/zv9101.xml
 %%ETCDIR%%/swiid/swiidinter.xml
 %%ETCDIR%%/swiid/swiidplug.xml
 %%ETCDIR%%/telldus/tzdw100.xml
@@ -487,9 +498,6 @@ bin/ozw_config
 %%ETCDIR%%/trane/TZEMT400AB32MAA.xml
 %%ETCDIR%%/trane/TZEMT400BB32MAA.xml
 %%ETCDIR%%/trane/TZEMT524AA21MA.xml
-%%ETCDIR%%/tronika/zsc01d.xml
-%%ETCDIR%%/tronika/zv9040.xml
-%%ETCDIR%%/tronika/zv9101.xml
 %%ETCDIR%%/vision/zd2102.xml
 %%ETCDIR%%/vision/zd2105us5.xml
 %%ETCDIR%%/vision/zd2201.xml
@@ -540,6 +548,7 @@ bin/ozw_config
 %%ETCDIR%%/zooz/zen22v2.xml
 %%ETCDIR%%/zooz/zen23.xml
 %%ETCDIR%%/zooz/zen24.xml
+%%ETCDIR%%/zooz/zen25.xml
 %%ETCDIR%%/zooz/zen26.xml
 %%ETCDIR%%/zooz/zen27.xml
 %%ETCDIR%%/zooz/zse08.xml
@@ -565,6 +574,7 @@ bin/ozw_config
 %%ETCDIR%%/zwave.me/popp_kfob-c.xml
 %%ETCDIR%%/zwave.me/zweather.xml
 %%ETCDIR%%/zwcfg.xsd
+%%ETCDIR%%/zwp/PA-100.xml
 %%ETCDIR%%/zwp/WD-100.xml
 %%ETCDIR%%/zwscene.xsd
 include/openzwave/Bitfield.h
