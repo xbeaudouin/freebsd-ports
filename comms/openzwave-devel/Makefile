@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	openzwave
-PORTVERSION=	1.4.${VERSION_REV}
+PORTVERSION=	1.6.${VERSION_REV}
 CATEGORIES=	comms
 PKGNAMESUFFIX=	-devel
 
@@ -13,13 +13,13 @@ LICENSE=	LGPL20
 
 # Manually update this when makefile is updated
 # echo $(git describe --long --tags --dirty 2>/dev/null | sed s/^v//) | awk '{split($$0,a,"-"); print a[2]}'
-VERSION_REV=	3489
+VERSION_REV=	158
 
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenZWave
 GH_PROJECT=	open-zwave
-GH_TAGNAME=	facd1302
+GH_TAGNAME=	e4fb59d5
 
 USES=		gmake tar:bz2 iconv pkgconfig
 
@@ -39,7 +39,7 @@ PORTDOCS=api/* default.htm general/* images+css/*
 .endif
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${LOCALBASE}/lib/libopenzwave.so.1.4
+	${STRIP_CMD} ${STAGEDIR}${LOCALBASE}/lib/libopenzwave.so.1.6
 	${STRIP_CMD} ${STAGEDIR}${LOCALBASE}/bin/MinOZW
 .if ! ${PORT_OPTIONS:MDOXYGEN}
 # If doxygen was installed in env, it was built anyway..
