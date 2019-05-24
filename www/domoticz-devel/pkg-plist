@@ -580,8 +580,8 @@ domoticz/Config/vision/zs610eu.xml
 domoticz/Config/vision/zu1401jp.xml
 domoticz/Config/vitrum/vitrumI-Dimmer.xml
 domoticz/Config/vitrum/vitrumI-Switch.xml
-domoticz/Config/vitrum/vitrumII-Blind.xml
 domoticz/Config/vitrum/vitrumII-Dimmer.xml
+domoticz/Config/vitrum/vitrumII-RollerBlind.xml
 domoticz/Config/vitrum/vitrumII-Switch.xml
 domoticz/Config/vitrum/vitrumIII-Dimmer.xml
 domoticz/Config/vitrum/vitrumIII-Switch.xml

@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2018-04-13 07:02:16.000000000 +0200
-+++ CMakeLists.txt	2018-04-13 09:37:12.450701000 +0200
-@@ -248,7 +248,7 @@
+--- CMakeLists.txt.orig	2019-05-23 11:13:42.000000000 +0200
++++ CMakeLists.txt	2019-05-24 11:18:04.319626000 +0200
+@@ -287,21 +287,13 @@
    ENDIF(CMAKE_COMPILER_IS_GNUCXX)
  ENDMACRO()
  
@@ -9,7 +9,31 @@
    DOC "git command line client")
  
  
-@@ -728,7 +728,7 @@
+ include_directories(${CMAKE_SOURCE_DIR}/main)
+ include_directories(${CMAKE_SOURCE_DIR}/tinyxpath)
+ 
+-# a custom target that is always built
+-ADD_CUSTOM_TARGET(revisiontag ALL)
+-
+-# creates appversion.h using cmake script
+-ADD_CUSTOM_COMMAND(TARGET revisiontag COMMAND ${CMAKE_COMMAND}
+-   -DSOURCE_DIR=${CMAKE_CURRENT_SOURCE_DIR}
+-   -P ${CMAKE_CURRENT_SOURCE_DIR}/getgit.cmake)
+-
+ ## Target
+ set(
+ domoticz_SRCS
+@@ -544,9 +536,6 @@
+ )
+ add_executable(domoticz ${domoticz_SRCS})
+ 
+-# explicitly say that the executable depends on the revisiontag
+-add_dependencies(domoticz revisiontag)
+-
+ INCLUDE(TestBigEndian)
+ TEST_BIG_ENDIAN(BIGENDIAN)
+ IF(${BIGENDIAN})
+@@ -803,7 +792,7 @@
  
  SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${domoticz}-dev")
  SET(CPACK_PACKAGING_INSTALL_PREFIX "/")
@@ -18,7 +42,7 @@
  SET(CPACK_PACKAGE_EXECUTABLES "domoticz;Home Automation System (Domotica).")
  
  #set(CPACK_DEB_COMPONENT_INSTALL TRUE)
-@@ -737,16 +737,15 @@
+@@ -812,16 +801,15 @@
  INCLUDE(CPack)
  
  IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
