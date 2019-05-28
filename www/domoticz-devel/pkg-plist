@@ -268,6 +268,7 @@ domoticz/Config/ge/12719-plugin-switch.xml
 domoticz/Config/ge/12724-dimmer.xml
 domoticz/Config/ge/12727.xml
 domoticz/Config/ge/14282-plugin-switch.xml
+domoticz/Config/ge/14284.xml
 domoticz/Config/ge/14288-outlet.xml
 domoticz/Config/ge/14291-switch.xml
 domoticz/Config/ge/14292-toggle-switch.xml
@@ -287,10 +288,13 @@ domoticz/Config/ge/ze26i.xml
 domoticz/Config/ge/zw4001-switch.xml
 domoticz/Config/ge/zw6302.xml
 domoticz/Config/gocontrol/GC-TBZ48L.xml
+domoticz/Config/gr/gr-302n.xml
 domoticz/Config/gr/gr105.xml
 domoticz/Config/gr/gr105n.xml
 domoticz/Config/gr/grb3.xml
 domoticz/Config/graber/brz1.xml
+domoticz/Config/graber/csz1.xml
+domoticz/Config/graber/rsz1.xml
 domoticz/Config/graber/vcz1.xml
 domoticz/Config/greenwave/gs1110-1-gr-1.xml
 domoticz/Config/greenwave/powernode1.xml
@@ -424,6 +428,8 @@ domoticz/Config/oomi/ft100.xml
 domoticz/Config/oomi/ft111.xml
 domoticz/Config/options.xml
 domoticz/Config/options.xsd
+domoticz/Config/permundo/psc132zw.xml
+domoticz/Config/permundo/psc234zw.xml
 domoticz/Config/philio/pad02.xml
 domoticz/Config/philio/pan03.xml
 domoticz/Config/philio/pan04.xml
@@ -504,6 +510,7 @@ domoticz/Config/rcs/therm0007.xml
 domoticz/Config/rcs/therm0009.xml
 domoticz/Config/remotec/bw8120eu.xml
 domoticz/Config/remotec/zfm-80.xml
+domoticz/Config/remotec/zrc-100eu.xml
 domoticz/Config/remotec/zrc-90.xml
 domoticz/Config/remotec/zts-110.xml
 domoticz/Config/remotec/zts-500.xml
@@ -512,6 +519,7 @@ domoticz/Config/remotec/zxt-120.xml
 domoticz/Config/remotec/zxt-310.xml
 domoticz/Config/remotec/zxt-600.xml
 domoticz/Config/schlage/BE468.xml
+domoticz/Config/schlage/BE468ZP.xml
 domoticz/Config/schlage/BE469.xml
 domoticz/Config/schlage/BE469ZP.xml
 domoticz/Config/schlage/fe599.xml
@@ -568,6 +576,7 @@ domoticz/Config/vision/zl7101us.xml
 domoticz/Config/vision/zl7201us.xml
 domoticz/Config/vision/zl7261.xml
 domoticz/Config/vision/zl7431.xml
+domoticz/Config/vision/zl7432us.xml
 domoticz/Config/vision/zm1601eu.xml
 domoticz/Config/vision/zm1601eu5.xml
 domoticz/Config/vision/zm1602eu.xml
@@ -629,6 +638,7 @@ domoticz/Config/zooz/zse08.xml
 domoticz/Config/zooz/zse09.xml
 domoticz/Config/zooz/zse18.xml
 domoticz/Config/zooz/zse19.xml
+domoticz/Config/zooz/zse29.xml
 domoticz/Config/zooz/zse30.xml
 domoticz/Config/zooz/zse33.xml
 domoticz/Config/zooz/zse40.xml
