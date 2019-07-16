@@ -11,6 +11,10 @@ COMMENT=	Gem TESLA API
 
 LICENSE=	MIT
 
+RUN_DEPENDS=	rubygem-httparty>=0.16.4:www/rubygem-httparty \
+		rubygem-faye-websocket>=0.10.7:www/rubygem-faye-websocket \
+		rubygem-em-http-request>=1.1.5:www/rubygem-em-http-request
+
 NO_ARCH=	yes
 
 USE_RUBY=	yes
