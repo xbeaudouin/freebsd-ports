@@ -1,9 +1,12 @@
-# $FreeBSD: head/www/domoticz/Makefile 476723 2018-08-09 06:58:30Z jbeich $
+# $FreeBSD: head/www/domoticz/Makefile 507372 2019-07-26 20:46:53Z gerald $
 
 PORTNAME=	domoticz
 PORTVERSION=	4.${DOMOTICZ_REL}
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	www
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	9d226dab339f.patch:-p1
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Home Automation System
@@ -29,7 +32,7 @@ TELLDUS_DESC=	Enable support for Telldus
 
 .include <bsd.port.options.mk>
 
-USES=		cmake iconv pkgconfig ssl
+USES=		cmake compiler:c++11-lang iconv pkgconfig ssl
 
 # This hack is to get rid of dependency of git while building
 # the package.
