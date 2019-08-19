@@ -94,6 +94,7 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zw140.xml
 %%ETCDIR%%/aeotec/zw141.xml
 %%ETCDIR%%/aeotec/zw162.xml
+%%ETCDIR%%/aeotec/zw164.xml
 %%ETCDIR%%/aeotec/zw175.xml
 %%ETCDIR%%/aeotec/zwa001.xml
 %%ETCDIR%%/aeotec/zwa002.xml
@@ -255,6 +256,7 @@ bin/ozw_config
 %%ETCDIR%%/fibaro/fgt001.xml
 %%ETCDIR%%/fibaro/fgwd111.xml
 %%ETCDIR%%/fibaro/fgwds221.xml
+%%ETCDIR%%/fibaro/fgwoe.xml
 %%ETCDIR%%/fibaro/fgwpe.xml
 %%ETCDIR%%/fibaro/fgwpfzw5.xml
 %%ETCDIR%%/fibaro/fgwpg111.xml
@@ -332,6 +334,7 @@ bin/ozw_config
 %%ETCDIR%%/heltun/he-zw-therm-fc1.xml
 %%ETCDIR%%/heltun/he-zw-therm-fl2.xml
 %%ETCDIR%%/homeseer/ezmotionplus.xml
+%%ETCDIR%%/homeseer/hs-ds100plus.xml
 %%ETCDIR%%/homeseer/hs-fc200plus.xml
 %%ETCDIR%%/homeseer/hs-fls100plus.xml
 %%ETCDIR%%/homeseer/hs-fs100plus.xml
@@ -427,6 +430,7 @@ bin/ozw_config
 %%ETCDIR%%/images/aeotec/zw140.png
 %%ETCDIR%%/images/aeotec/zw141.png
 %%ETCDIR%%/images/aeotec/zw162.png
+%%ETCDIR%%/images/aeotec/zw164.png
 %%ETCDIR%%/images/aeotec/zw195.png
 %%ETCDIR%%/images/aeotec/zwa001.png
 %%ETCDIR%%/images/aeotec/zwa002.png
@@ -540,6 +544,7 @@ bin/ozw_config
 %%ETCDIR%%/images/fibaro/fgsd002.png
 %%ETCDIR%%/images/fibaro/fgt001.png
 %%ETCDIR%%/images/fibaro/fgwd111.png
+%%ETCDIR%%/images/fibaro/fgwoe.png
 %%ETCDIR%%/images/fibaro/fgwpe.png
 %%ETCDIR%%/images/fibaro/fgwpfzw5.png
 %%ETCDIR%%/images/fibaro/fgwpg111.png
@@ -607,6 +612,7 @@ bin/ozw_config
 %%ETCDIR%%/images/heiman/HS1SA-Z.png
 %%ETCDIR%%/images/heiman/HS1WL-Z.png
 %%ETCDIR%%/images/heiman/HS2SK-Z.png
+%%ETCDIR%%/images/homeseer/hs-ds100plus.png
 %%ETCDIR%%/images/homeseer/hs-fc200plus.png
 %%ETCDIR%%/images/homeseer/hs-fls100plus.png
 %%ETCDIR%%/images/homeseer/hs-ls100plus.png

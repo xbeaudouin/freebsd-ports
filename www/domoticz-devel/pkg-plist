@@ -92,6 +92,7 @@ domoticz/Config/aeotec/zw139.xml
 domoticz/Config/aeotec/zw140.xml
 domoticz/Config/aeotec/zw141.xml
 domoticz/Config/aeotec/zw162.xml
+domoticz/Config/aeotec/zw164.xml
 domoticz/Config/aeotec/zw175.xml
 domoticz/Config/aeotec/zwa001.xml
 domoticz/Config/aeotec/zwa002.xml
@@ -253,6 +254,7 @@ domoticz/Config/fibaro/fgss101.xml
 domoticz/Config/fibaro/fgt001.xml
 domoticz/Config/fibaro/fgwd111.xml
 domoticz/Config/fibaro/fgwds221.xml
+domoticz/Config/fibaro/fgwoe.xml
 domoticz/Config/fibaro/fgwpe.xml
 domoticz/Config/fibaro/fgwpfzw5.xml
 domoticz/Config/fibaro/fgwpg111.xml
@@ -330,6 +332,7 @@ domoticz/Config/heltun/he-zw-sw-5a-1.xml
 domoticz/Config/heltun/he-zw-therm-fc1.xml
 domoticz/Config/heltun/he-zw-therm-fl2.xml
 domoticz/Config/homeseer/ezmotionplus.xml
+domoticz/Config/homeseer/hs-ds100plus.xml
 domoticz/Config/homeseer/hs-fc200plus.xml
 domoticz/Config/homeseer/hs-fls100plus.xml
 domoticz/Config/homeseer/hs-fs100plus.xml
@@ -765,6 +768,7 @@ domoticz/dzVents/runtime/integration-tests/scriptContactDoorLockInvertedSwitch.l
 domoticz/dzVents/runtime/integration-tests/scriptDelayedVariableScene.lua
 domoticz/dzVents/runtime/integration-tests/scriptSelectorSwitch.lua
 domoticz/dzVents/runtime/integration-tests/scriptTestEventState.lua
+domoticz/dzVents/runtime/integration-tests/scriptTestProtect.lua
 domoticz/dzVents/runtime/integration-tests/scriptTestRename.lua
 domoticz/dzVents/runtime/integration-tests/scriptTestUpdatedDocumentation.lua
 domoticz/dzVents/runtime/integration-tests/scriptTestWildcards.lua

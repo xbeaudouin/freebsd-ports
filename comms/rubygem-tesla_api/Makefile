@@ -3,7 +3,7 @@
 
 PORTNAME=	tesla_api
 PORTVERSION=	1.5.0
-CATEGORIES=	devel rubygems
+CATEGORIES=	comms rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	kiwi@oav.net
