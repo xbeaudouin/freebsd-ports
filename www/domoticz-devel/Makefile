@@ -33,12 +33,12 @@ USES=		cmake iconv pkgconfig ssl
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11213
-DOMOTICZ_TS=	1566124855
+DOMOTICZ_REL=	11215
+DOMOTICZ_TS=	1566210466
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	aea5c0c52
+GH_TAGNAME=	3f2677818
 
 USE_RC_SUBR=	domoticz
 
