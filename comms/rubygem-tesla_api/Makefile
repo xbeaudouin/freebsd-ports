@@ -1,5 +1,5 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: head/devel/rubygem-ansi/Makefile 414136 2016-04-27 21:57:31Z swills $
+# Created by: Xavier Beaudouin <kiwi@oav.net>
+# $FreeBSD$
 
 PORTNAME=	tesla_api
 PORTVERSION=	1.5.0
