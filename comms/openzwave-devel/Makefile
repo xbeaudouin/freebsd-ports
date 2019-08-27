@@ -11,17 +11,17 @@ COMMENT=	Open-zwave - An open-source interface to Z-Wave networks
 
 LICENSE=	LGPL20
 
+USES=		gmake tar:bz2 iconv pkgconfig
+
 # Manually update this when makefile is updated
 # echo $(git describe --long --tags --dirty 2>/dev/null | sed s/^v//) | awk '{split($$0,a,"-"); print a[2]}'
-VERSION_REV=	8%81
+VERSION_REV=	897
 
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenZWave
 GH_PROJECT=	open-zwave
-GH_TAGNAME=	a2f8a143
-
-USES=		gmake tar:bz2 iconv pkgconfig
+GH_TAGNAME=	1e2d123c
 
 OPTIONS_DEFINE=	DOXYGEN
 OPTIONS_DEFAULT=

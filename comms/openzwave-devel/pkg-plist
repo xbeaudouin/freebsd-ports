@@ -104,6 +104,7 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zwa006.xml
 %%ETCDIR%%/aeotec/zwa008.xml
 %%ETCDIR%%/airlinemechanical/zds-ud10.xml
+%%ETCDIR%%/alfred/DB2.xml
 %%ETCDIR%%/assa_abloy/ConexisL1.xml
 %%ETCDIR%%/assa_abloy/KeyfreeConnected-plus.xml
 %%ETCDIR%%/assa_abloy/KeyfreeConnected.xml
@@ -439,6 +440,7 @@ bin/ozw_config
 %%ETCDIR%%/images/aeotec/zwa005.png
 %%ETCDIR%%/images/aeotec/zwa006.png
 %%ETCDIR%%/images/airlinemechanical/zds-ud10.png
+%%ETCDIR%%/images/alfred/DB2.png
 %%ETCDIR%%/images/assa_abloy/ConexisL1.png
 %%ETCDIR%%/images/assa_abloy/KeyfreeConnected-plus.png
 %%ETCDIR%%/images/assa_abloy/KeyfreeConnected.png
