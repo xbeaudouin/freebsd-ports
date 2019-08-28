@@ -14,6 +14,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
 		libopenzwave.so:comms/openzwave-devel
 
+USES=		cmake iconv pkgconfig ssl
+
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
 OPTIONS_SUB=	YES
@@ -28,8 +30,6 @@ PYTHON_DESC=	Enable support for Python Plugins
 TELLDUS_DESC=	Enable support for Telldus
 
 .include <bsd.port.options.mk>
-
-USES=		cmake iconv pkgconfig ssl
 
 # This hack is to get rid of dependency of git while building
 # the package.
@@ -78,16 +78,16 @@ LIB_DEPENDS+=	libmosquitto.so:net/mosquitto
 .endif
 
 .if ${PORT_OPTIONS:MSSQLITE}
-CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="YES"
+CMAKE_ARGS+=	-DUSE_BUILTIN_SQLITE="YES"
 .else
-CMAKE_ARGS+= 	-DUSE_BUILTIN_SQLITE="NO"
+CMAKE_ARGS+=	-DUSE_BUILTIN_SQLITE="NO"
 USES+=		sqlite
 .endif
 
 .if ${PORT_OPTIONS:MSMINIZIP}
-CMAKE_ARGS+= 	-DUSE_BUILTIN_MINIZIP="YES"
+CMAKE_ARGS+=	-DUSE_BUILTIN_MINIZIP="YES"
 .else
-CMAKE_ARGS+= 	-DUSE_BUILTIN_MINIZIP="NO"
+CMAKE_ARGS+=	-DUSE_BUILTIN_MINIZIP="NO"
 LIB_DEPENDS+=	libminizip.so:archivers/minizip
 .endif
 
@@ -109,7 +109,7 @@ post-patch:
 	@${REINPLACE_CMD} -e "s/\(#define APPVERSION\)\(.*\)/\1 ${DOMOTICZ_REL}/" ${WRKSRC}/appversion.h
 	@${REINPLACE_CMD} -e "s/\(#define APPHASH\)\(.*\)/\1 \"${GH_TAGNAME}\"/" ${WRKSRC}/appversion.h
 	@${REINPLACE_CMD} -e "s/\(#define APPDATE\)\(.*\)/\1 ${DOMOTICZ_TS}/" ${WRKSRC}/appversion.h
- 
+
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
 
