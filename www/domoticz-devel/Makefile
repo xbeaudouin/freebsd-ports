@@ -5,7 +5,7 @@ PORTVERSION=	4.${DOMOTICZ_REL}
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
-COMMENT=	Home Automation System
+COMMENT=	Home Automation System (Development Branch)
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
