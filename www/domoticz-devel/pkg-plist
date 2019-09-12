@@ -102,6 +102,7 @@ domoticz/Config/aeotec/zwa005.xml
 domoticz/Config/aeotec/zwa006.xml
 domoticz/Config/aeotec/zwa008.xml
 domoticz/Config/airlinemechanical/zds-ud10.xml
+domoticz/Config/alfred/DB2.xml
 domoticz/Config/assa_abloy/ConexisL1.xml
 domoticz/Config/assa_abloy/KeyfreeConnected-plus.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
@@ -172,6 +173,7 @@ domoticz/Config/duwi/zwfb.xml
 domoticz/Config/duwi/zwws.xml
 domoticz/Config/ecolink/doorwindow.xml
 domoticz/Config/ecolink/firefighter.xml
+domoticz/Config/ecolink/floodfreeze.xml
 domoticz/Config/ecolink/motion.xml
 domoticz/Config/ecolink/sensor.xml
 domoticz/Config/ecolink/tiltsensor.xml
@@ -483,6 +485,7 @@ domoticz/Config/popp/700045.xml
 domoticz/Config/popp/700168.xml
 domoticz/Config/popp/700397.xml
 domoticz/Config/popp/700793.xml
+domoticz/Config/popp/dwt.xml
 domoticz/Config/popp/smoke-detector.xml
 domoticz/Config/popp/solar-siren.xml
 domoticz/Config/popp/zweather.xml
@@ -1014,6 +1017,7 @@ domoticz/www/app/hardware/setup/WakeOnLan.html
 domoticz/www/app/hardware/setup/WakeOnLan.js
 domoticz/www/app/hardware/setup/ZWave.html
 domoticz/www/app/hardware/setup/ZWave.js
+domoticz/www/app/livesocket.js
 domoticz/www/app/log/DeviceLog.html
 domoticz/www/app/log/DeviceLog.js
 domoticz/www/app/log/GraphLog.js
@@ -1224,10 +1228,15 @@ domoticz/www/images/RGB48.png
 domoticz/www/images/RGB48_Off.png
 domoticz/www/images/RGB48_On.png
 domoticz/www/images/RGB48_Sel.png
+domoticz/www/images/Rain48_Off.png
+domoticz/www/images/Rain48_On.png
 domoticz/www/images/Speaker.png
 domoticz/www/images/Speaker48_Off.png
 domoticz/www/images/Speaker48_On.png
 domoticz/www/images/Stop48.png
+domoticz/www/images/Sun.png
+domoticz/www/images/Sun48_Off.png
+domoticz/www/images/Sun48_On.png
 domoticz/www/images/TV.png
 domoticz/www/images/TV48_Off.png
 domoticz/www/images/TV48_On.png
@@ -1413,7 +1422,6 @@ domoticz/www/images/pushon48.png
 domoticz/www/images/radiation.png
 domoticz/www/images/radiation48.png
 domoticz/www/images/rain.png
-domoticz/www/images/rain48.png
 domoticz/www/images/rainraining.png
 domoticz/www/images/remote.png
 domoticz/www/images/remote48.png
