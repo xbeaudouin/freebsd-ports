@@ -1,0 +1,31 @@
+# $FreeBSD$
+
+PORTNAME=	myTesla
+PORTVERSION=	1.0.0
+CATEGORIES=	www python
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	kiwi@oav.net
+COMMENT=	Tesla API for python
+
+NO_ARCH=	yes
+USES=		python
+USE_GITHUB=	yes
+USE_PYTHON=	distutils autoplist
+
+GH_ACCOUNT=	zmsp
+GH_PROJECT=	python-my-tesla
+GH_TAGNAME=	17fe6a3
+
+DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
+EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
+PORTDOCS=	*
+PORTEXAMPLES=	*
+
+OPTIONS_DEFINE=	EXAMPLES
+
+post-install:
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	(cd ${WRKSRC}/example && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}/)
+
+.include <bsd.port.mk>
