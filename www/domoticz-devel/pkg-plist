@@ -290,6 +290,7 @@ domoticz/Config/ge/26933-motion-dimmer.xml
 domoticz/Config/ge/28167-plugin-dimmer.xml
 domoticz/Config/ge/28169-plugin-switch.xml
 domoticz/Config/ge/45604.xml
+domoticz/Config/ge/46201-switch.xml
 domoticz/Config/ge/dimmer.xml
 domoticz/Config/ge/dimmer_module.xml
 domoticz/Config/ge/hinge-pin.xml
@@ -310,6 +311,7 @@ domoticz/Config/graber/vcz1.xml
 domoticz/Config/greenwave/gs1110-1-gr-1.xml
 domoticz/Config/greenwave/powernode1.xml
 domoticz/Config/greenwave/powernode6.xml
+domoticz/Config/guardtec/gkw2000d.xml
 domoticz/Config/hank/hkzw-dws01.xml
 domoticz/Config/hank/hkzw-fld01.xml
 domoticz/Config/hank/hkzw-ms01.xml
@@ -366,6 +368,8 @@ domoticz/Config/icare/zw-66.xml
 domoticz/Config/idlock/idlock101.xml
 domoticz/Config/idlock/idlock150.xml
 domoticz/Config/ingersoll/dwzwave1.xml
+domoticz/Config/inovelli/lzw30-sn.xml
+domoticz/Config/inovelli/lzw30.xml
 domoticz/Config/inovelli/nzw1201.xml
 domoticz/Config/inovelli/nzw30.xml
 domoticz/Config/inovelli/nzw31.xml
