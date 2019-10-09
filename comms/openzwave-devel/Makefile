@@ -15,13 +15,13 @@ USES=		gmake tar:bz2 iconv pkgconfig
 
 # Manually update this when makefile is updated
 # echo $(git describe --long --tags --dirty 2>/dev/null | sed s/^v//) | awk '{split($$0,a,"-"); print a[2]}'
-VERSION_REV=	897
+VERSION_REV=	935
 
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenZWave
 GH_PROJECT=	open-zwave
-GH_TAGNAME=	1e2d123c
+GH_TAGNAME=	8f5e714b
 MAKE_ARGS=	VERSION_REV=${VERSION_REV} LIBDIR=${WRKSRC} docdir=${DOCSDIR}
 
 OPTIONS_DEFINE=	DOXYGEN

@@ -1,6 +1,6 @@
---- cpp/build/support.mk.orig	2016-06-06 16:02:21.113321000 +0200
-+++ cpp/build/support.mk	2016-06-06 16:02:42.530037000 +0200
-@@ -31,8 +31,8 @@
+--- cpp/build/support.mk.orig	2019-10-08 02:43:56 UTC
++++ cpp/build/support.mk
+@@ -46,8 +46,8 @@ VERSION_REV ?= 0
  else
  GITVERSION	:= $(shell $(GIT) --git-dir $(top_srcdir)/.git describe --long --tags --dirty 2>/dev/null | sed s/^v//)
  ifeq ($(GITVERSION),)

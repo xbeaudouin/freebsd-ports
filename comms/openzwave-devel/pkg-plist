@@ -175,6 +175,7 @@ bin/ozw_config
 %%ETCDIR%%/duwi/zwws.xml
 %%ETCDIR%%/ecolink/doorwindow.xml
 %%ETCDIR%%/ecolink/firefighter.xml
+%%ETCDIR%%/ecolink/floodfreeze.xml
 %%ETCDIR%%/ecolink/motion.xml
 %%ETCDIR%%/ecolink/sensor.xml
 %%ETCDIR%%/ecolink/tiltsensor.xml
@@ -291,6 +292,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/28167-plugin-dimmer.xml
 %%ETCDIR%%/ge/28169-plugin-switch.xml
 %%ETCDIR%%/ge/45604.xml
+%%ETCDIR%%/ge/46201-switch.xml
 %%ETCDIR%%/ge/dimmer.xml
 %%ETCDIR%%/ge/dimmer_module.xml
 %%ETCDIR%%/ge/hinge-pin.xml
@@ -311,6 +313,7 @@ bin/ozw_config
 %%ETCDIR%%/greenwave/gs1110-1-gr-1.xml
 %%ETCDIR%%/greenwave/powernode1.xml
 %%ETCDIR%%/greenwave/powernode6.xml
+%%ETCDIR%%/guardtec/gkw2000d.xml
 %%ETCDIR%%/hank/hkzw-dws01.xml
 %%ETCDIR%%/hank/hkzw-fld01.xml
 %%ETCDIR%%/hank/hkzw-ms01.xml
@@ -485,6 +488,7 @@ bin/ozw_config
 %%ETCDIR%%/images/duwi/zwws.png
 %%ETCDIR%%/images/ecolink/doorwindow.png
 %%ETCDIR%%/images/ecolink/firefighter.png
+%%ETCDIR%%/images/ecolink/floodfreeze.png
 %%ETCDIR%%/images/ecolink/motion.png
 %%ETCDIR%%/images/ecolink/sensor.png
 %%ETCDIR%%/images/ecolink/tiltsensor.png
@@ -579,6 +583,7 @@ bin/ozw_config
 %%ETCDIR%%/images/ge/28167-plugin-dimmer.png
 %%ETCDIR%%/images/ge/28169-plugin-switch.png
 %%ETCDIR%%/images/ge/45604.png
+%%ETCDIR%%/images/ge/46201-switch.png
 %%ETCDIR%%/images/ge/dimmer.png
 %%ETCDIR%%/images/ge/dimmer_module.png
 %%ETCDIR%%/images/ge/hinge-pin.png
@@ -596,6 +601,7 @@ bin/ozw_config
 %%ETCDIR%%/images/greenwave/gs1110-1-gr-1.png
 %%ETCDIR%%/images/greenwave/powernode1.png
 %%ETCDIR%%/images/greenwave/powernode6.png
+%%ETCDIR%%/images/guardtec/gkw2000d.png
 %%ETCDIR%%/images/hank/hkzw-dws01.png
 %%ETCDIR%%/images/hank/hkzw-fld01.png
 %%ETCDIR%%/images/hank/hkzw-ms01.png
@@ -643,6 +649,8 @@ bin/ozw_config
 %%ETCDIR%%/images/idlock/idlock101.png
 %%ETCDIR%%/images/idlock/idlock150.png
 %%ETCDIR%%/images/ingersoll/dwzwave1.png
+%%ETCDIR%%/images/inovelli/lzw30-sn.png
+%%ETCDIR%%/images/inovelli/lzw30.png
 %%ETCDIR%%/images/inovelli/simple_module.png
 %%ETCDIR%%/images/iwatsu/ne-4ct-2p.png
 %%ETCDIR%%/images/iwatsu/ne-4ct.png
@@ -708,6 +716,7 @@ bin/ozw_config
 %%ETCDIR%%/images/popp/700045.png
 %%ETCDIR%%/images/popp/700168.png
 %%ETCDIR%%/images/popp/700397.png
+%%ETCDIR%%/images/popp/dwt.png
 %%ETCDIR%%/images/popp/smoke-detector.png
 %%ETCDIR%%/images/popp/solar-siren.png
 %%ETCDIR%%/images/popp/zweather.png
@@ -719,6 +728,7 @@ bin/ozw_config
 %%ETCDIR%%/images/qubino/ZMNHCDx.png
 %%ETCDIR%%/images/qubino/ZMNHDA2.png
 %%ETCDIR%%/images/qubino/ZMNHDDx.png
+%%ETCDIR%%/images/qubino/ZMNHIDx.png
 %%ETCDIR%%/images/qubino/ZMNHNDx.png
 %%ETCDIR%%/images/qubino/ZMNHODx.png
 %%ETCDIR%%/images/qubino/ZMNHSDx.png
@@ -848,6 +858,8 @@ bin/ozw_config
 %%ETCDIR%%/images/zwave.me/zweather.png
 %%ETCDIR%%/images/zwp/WD-100.png
 %%ETCDIR%%/ingersoll/dwzwave1.xml
+%%ETCDIR%%/inovelli/lzw30-sn.xml
+%%ETCDIR%%/inovelli/lzw30.xml
 %%ETCDIR%%/inovelli/nzw1201.xml
 %%ETCDIR%%/inovelli/nzw30.xml
 %%ETCDIR%%/inovelli/nzw31.xml
@@ -967,6 +979,7 @@ bin/ozw_config
 %%ETCDIR%%/popp/700168.xml
 %%ETCDIR%%/popp/700397.xml
 %%ETCDIR%%/popp/700793.xml
+%%ETCDIR%%/popp/dwt.xml
 %%ETCDIR%%/popp/smoke-detector.xml
 %%ETCDIR%%/popp/solar-siren.xml
 %%ETCDIR%%/popp/zweather.xml
@@ -1295,3 +1308,19 @@ include/openzwave/value_classes/ValueString.h
 lib/libopenzwave.so
 lib/libopenzwave.so.1.6
 libdata/pkgconfig/libopenzwave.pc
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog.old
+%%PORTDOCS%%%%DOCSDIR%%/Doxyfile.in
+%%PORTDOCS%%%%DOCSDIR%%/default.htm
+%%PORTDOCS%%%%DOCSDIR%%/general/DoxygenStepByStep.html
+%%PORTDOCS%%%%DOCSDIR%%/general/GettingHelp.html
+%%PORTDOCS%%%%DOCSDIR%%/general/Index.htm
+%%PORTDOCS%%%%DOCSDIR%%/general/MakingDocumentation.html
+%%PORTDOCS%%%%DOCSDIR%%/general/Notifications.html
+%%PORTDOCS%%%%DOCSDIR%%/images+css/Doxywizard1.JPG
+%%PORTDOCS%%%%DOCSDIR%%/images+css/Doxywizard2.JPG
+%%PORTDOCS%%%%DOCSDIR%%/images+css/Doxywizard3.JPG
+%%PORTDOCS%%%%DOCSDIR%%/images+css/Doxywizard4.JPG
+%%PORTDOCS%%%%DOCSDIR%%/images+css/Doxywizard5.JPG
+%%PORTDOCS%%%%DOCSDIR%%/images+css/OpenZWave.css
+%%PORTDOCS%%%%DOCSDIR%%/images+css/image003.gif
+%%PORTDOCS%%%%DOCSDIR%%/images+css/zwalliance_250x100.jpg
