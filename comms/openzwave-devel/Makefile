@@ -3,7 +3,7 @@
 
 PORTNAME=	openzwave
 PORTVERSION=	1.6.${VERSION_REV}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	comms
 PKGNAMESUFFIX=	-devel
 
@@ -25,7 +25,7 @@ GH_PROJECT=	open-zwave
 GH_TAGNAME=	3147be97
 MAKE_ARGS=	VERSION_REV=${VERSION_REV} LIBDIR=${WRKSRC} docdir=${DOCSDIR}
 
-OPTIONS_DEFINE=	DOXYGEN
+OPTIONS_DEFINE=	DOXYGEN DOCS
 OPTIONS_DEFAULT=
 OPTIONS_SUB=	yes
 
@@ -33,7 +33,7 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 DOXYGEN_DESCR=	Build docs (requires doxygen + graphviz)
 DOXYGEN_BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen dot:${PORTSDIR}/graphics/graphviz
-DOXYGEN_PORTDOCS=	api/* default.htm general/* images+css/*
+DOXYGEN_PORTDOCS=	*
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${LOCALBASE}/lib/libopenzwave.so.1.6
