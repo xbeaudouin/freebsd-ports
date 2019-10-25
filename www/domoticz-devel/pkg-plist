@@ -1593,7 +1593,7 @@ domoticz/www/js/highcharts/modules/xrange.js
 domoticz/www/js/highcharts/themes/dark-unica.js
 domoticz/www/js/html5shiv.js.gz
 domoticz/www/js/i18next-1.8.0.min.js.gz
-domoticz/www/js/jquery-3.3.1.min.js.gz
+domoticz/www/js/jquery-3.4.1.min.js.gz
 domoticz/www/js/jquery-ui-timepicker-addon.js.gz
 domoticz/www/js/jquery-ui.min.js.gz
 domoticz/www/js/jquery.ddslick.min.js.gz
