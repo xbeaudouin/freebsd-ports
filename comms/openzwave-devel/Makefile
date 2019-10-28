@@ -3,7 +3,7 @@
 
 PORTNAME=	openzwave
 PORTVERSION=	1.6.${VERSION_REV}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	comms
 PKGNAMESUFFIX=	-devel
 
@@ -16,13 +16,13 @@ USES=		gmake tar:bz2 iconv pkgconfig
 
 # Manually update this when makefile is updated
 # echo $(git describe --long --tags --dirty 2>/dev/null | sed s/^v//) | awk '{split($$0,a,"-"); print a[2]}'
-VERSION_REV=	941
+VERSION_REV=	945
 
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenZWave
 GH_PROJECT=	open-zwave
-GH_TAGNAME=	3147be97
+GH_TAGNAME=	24e01bee
 MAKE_ARGS=	VERSION_REV=${VERSION_REV} LIBDIR=${WRKSRC} docdir=${DOCSDIR}
 
 OPTIONS_DEFINE=	DOXYGEN DOCS

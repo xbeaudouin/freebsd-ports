@@ -1005,6 +1005,7 @@ bin/ozw_config
 %%ETCDIR%%/qubino/ZMNHLDx.xml
 %%ETCDIR%%/qubino/ZMNHNDx.xml
 %%ETCDIR%%/qubino/ZMNHODx.xml
+%%ETCDIR%%/qubino/ZMNHQDx.xml
 %%ETCDIR%%/qubino/ZMNHSDx.xml
 %%ETCDIR%%/qubino/ZMNHTDx.xml
 %%ETCDIR%%/qubino/ZMNHTDxS3.xml
