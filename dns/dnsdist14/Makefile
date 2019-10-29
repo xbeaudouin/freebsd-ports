@@ -1,8 +1,8 @@
 # Created by: Carlos J Puga Medina <cpm@fbsd.es>
 # $FreeBSD$
 
-PORTNAME=	dnsdist14
-DISTVERSION=	1.4.0-rc3
+PORTNAME=	dnsdist
+DISTVERSION=	1.4.0-rc4
 CATEGORIES=	dns net
 MASTER_SITES=	https://downloads.powerdns.com/releases/ \
 		LOCAL/cpm
