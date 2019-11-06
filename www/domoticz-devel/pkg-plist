@@ -1570,6 +1570,7 @@ domoticz/www/js/angular-websocket.js.gz
 domoticz/www/js/angular.min.js.gz
 domoticz/www/js/angularAMD.min.js.gz
 domoticz/www/js/babel-polyfill-6.26.0.js.gz
+domoticz/www/js/base64.min.js.gz
 domoticz/www/js/blockly/blockly_compressed.js
 domoticz/www/js/blockly/blocks_compressed.js
 domoticz/www/js/blockly/msg/en.js

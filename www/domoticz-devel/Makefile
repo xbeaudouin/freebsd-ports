@@ -33,12 +33,12 @@ TELLDUS_DESC=	Enable support for Telldus
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11426
-DOMOTICZ_TS=	1572331585
+DOMOTICZ_REL=	11468
+DOMOTICZ_TS=	1572966344
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	1016549ac
+GH_TAGNAME=	508cc66a1
 
 USE_RC_SUBR=	domoticz
 
@@ -67,7 +67,7 @@ LIB_DEPENDS+=	libboost_system.so:devel/boost-libs
 CMAKE_ARGS+=	-DUSE_BUILTIN_LUA="YES"
 .else
 CMAKE_ARGS+=	-DUSE_BUILTIN_LUA="NO"
-USES+=		lua:52
+USES+=		lua:53
 .endif
 
 .if ${PORT_OPTIONS:MSMQTT}
