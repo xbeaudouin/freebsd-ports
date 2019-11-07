@@ -2,7 +2,7 @@
 # $FreeBSD: $
 
 PORTNAME=	librenms-agent
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	kiwi@oav.net
@@ -15,7 +15,9 @@ NO_ARCH=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	librenms
 GH_PROJECT=	librenms-agent
-GH_TAGNAME=	fb678cb
+GH_TAGNAME=	8481de5
+
+USES+=		python:3.7
 
 NO_BUILD=	yes
 
@@ -34,6 +36,7 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/check_mk_agent/plugins
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/check_mk_agent/repo
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/check_mk_agent/local
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/librenms-agent/snmp
 	${INSTALL_SCRIPT} ${WRKSRC}/check_mk_agent_freebsd ${STAGEDIR}${PREFIX}/bin/check_mk_agent
 	${INSTALL_SCRIPT} ${WRKSRC}/mk_enplug ${STAGEDIR}${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/check_mk_xinetd ${STAGEDIR}${PREFIX}/etc/xinetd.d/check_mk
@@ -42,6 +45,9 @@ do-install:
 	cd ${WRKSRC} ; \
 	for agent_local in $$( ${FIND} ./agent-local -type f ! -name README ); do \
 		${INSTALL_SCRIPT} "$$agent_local" ${STAGEDIR}${PREFIX}/lib/check_mk_agent/repo/ ; \
+	done; \
+	for agent_snmp in $$( ${FIND} ./snmp -type f ! -name README ); do \
+		${INSTALL_SCRIPT} "$$agent_snmp" ${STAGEDIR}${PREFIX}/lib/librenms-agent/snmp/ ; \
 	done
 
 .include <bsd.port.mk>

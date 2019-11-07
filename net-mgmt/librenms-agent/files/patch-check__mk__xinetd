@@ -1,11 +1,11 @@
---- check_mk_xinetd.orig	2016-08-01 16:26:27 UTC
-+++ check_mk_xinetd
-@@ -30,7 +30,7 @@ service check_mk
- 	protocol       = tcp
- 	wait           = no
- 	user           = root
--	server         = /usr/bin/check_mk_agent
-+	server         = XXXPREFIXXXX/bin/check_mk_agent
+--- check_mk_xinetd.orig	2019-11-07 09:29:00.950252000 +0100
++++ check_mk_xinetd	2019-11-07 09:30:07.589360000 +0100
+@@ -31,7 +31,7 @@
+     bind           = ::
+     wait           = no
+     user           = root
+-    server         = /usr/bin/check_mk_agent
++    server         = XXXPREFIXXXX/bin/check_mk_agent
  
- 	# If you use fully redundant monitoring and poll the client
- 	# from more then one monitoring servers in parallel you might
+     # If you use fully redundant monitoring and poll the client
+     # from more then one monitoring servers in parallel you might
