@@ -19,7 +19,7 @@ USES=		cmake iconv pkgconfig ssl
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
 OPTIONS_SUB=	YES
-OPTIONS_DEFINE=	SSSL SBOOST SLUA SMQTT SSQLITE SMINIZIP PYTHON TELLDUS
+OPTIONS_DEFINE=	SSSL SBOOST SLUA SMQTT SSQLITE SMINIZIP PYTHON TELLDUS PRECOMP
 SBOOST_DESC=	Use static Boost instead of dynamic linking
 SSSL_DESC=	Use static OpenSSL library instead of dynamic linking
 SLUA_DESC=	Use domoticz provided LUA instead of ports one
@@ -28,17 +28,18 @@ SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
 SMINIZIP_DESC=	Use domoticz minizip instead of ports one
 PYTHON_DESC=	Enable support for Python Plugins
 TELLDUS_DESC=	Enable support for Telldus
+PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 .include <bsd.port.options.mk>
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11468
-DOMOTICZ_TS=	1572966344
+DOMOTICZ_REL=	11476
+DOMOTICZ_TS=	1573232345
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	508cc66a1
+GH_TAGNAME=	5c5f579c3
 
 USE_RC_SUBR=	domoticz
 
@@ -100,6 +101,12 @@ CMAKE_ARGS+=	-DUSE_PYTHON="NO"
 
 .if ${PORT_OPTIONS:MTELLDUS}
 LIB_DEPENDS+=	libtelldus-core.so:comms/telldus-core
+.endif
+
+.if ${PORT_OPTIONS:MPRECOMP}
+CMAKE_ARGS+=	-DUSE_PRECOMPILED_HEADER="YES"
+.else
+CMAKE_ARGS+=	-DUSE_PRECOMPILED_HEADER="NO"
 .endif
 
 post-patch:

@@ -96,6 +96,8 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zw162.xml
 %%ETCDIR%%/aeotec/zw164.xml
 %%ETCDIR%%/aeotec/zw175.xml
+%%ETCDIR%%/aeotec/zw187.xml
+%%ETCDIR%%/aeotec/zw189.xml
 %%ETCDIR%%/aeotec/zwa001.xml
 %%ETCDIR%%/aeotec/zwa002.xml
 %%ETCDIR%%/aeotec/zwa003.xml
@@ -435,6 +437,8 @@ bin/ozw_config
 %%ETCDIR%%/images/aeotec/zw141.png
 %%ETCDIR%%/images/aeotec/zw162.png
 %%ETCDIR%%/images/aeotec/zw164.png
+%%ETCDIR%%/images/aeotec/zw187.png
+%%ETCDIR%%/images/aeotec/zw189.png
 %%ETCDIR%%/images/aeotec/zw195.png
 %%ETCDIR%%/images/aeotec/zwa001.png
 %%ETCDIR%%/images/aeotec/zwa002.png
@@ -841,6 +845,7 @@ bin/ozw_config
 %%ETCDIR%%/images/zooz/zen21.png
 %%ETCDIR%%/images/zooz/zen22.png
 %%ETCDIR%%/images/zooz/zen26.png
+%%ETCDIR%%/images/zooz/zen27.png
 %%ETCDIR%%/images/zooz/zse09.png
 %%ETCDIR%%/images/zooz/zse19.png
 %%ETCDIR%%/images/zooz/zse29.png
