@@ -2,7 +2,7 @@
 # $FreeBSD: head/lang/mono/Makefile 507372 2019-07-26 20:46:53Z gerald $
 
 PORTNAME=	mono
-PORTVERSION=	5.10.1.57
+PORTVERSION=	5.20.1.19
 PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
