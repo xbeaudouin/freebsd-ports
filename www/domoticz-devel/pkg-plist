@@ -94,6 +94,8 @@ domoticz/Config/aeotec/zw141.xml
 domoticz/Config/aeotec/zw162.xml
 domoticz/Config/aeotec/zw164.xml
 domoticz/Config/aeotec/zw175.xml
+domoticz/Config/aeotec/zw187.xml
+domoticz/Config/aeotec/zw189.xml
 domoticz/Config/aeotec/zwa001.xml
 domoticz/Config/aeotec/zwa002.xml
 domoticz/Config/aeotec/zwa003.xml
@@ -515,6 +517,7 @@ domoticz/Config/qubino/ZMNHLAx.xml
 domoticz/Config/qubino/ZMNHLDx.xml
 domoticz/Config/qubino/ZMNHNDx.xml
 domoticz/Config/qubino/ZMNHODx.xml
+domoticz/Config/qubino/ZMNHQDx.xml
 domoticz/Config/qubino/ZMNHSDx.xml
 domoticz/Config/qubino/ZMNHTDx.xml
 domoticz/Config/qubino/ZMNHTDxS3.xml
