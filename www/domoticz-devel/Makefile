@@ -20,6 +20,7 @@ CONFLICTS_INSTALL?=	domoticz-[234]*
 
 OPTIONS_SUB=	YES
 OPTIONS_DEFINE=	SSSL SBOOST SLUA SMQTT SSQLITE SMINIZIP PYTHON TELLDUS PRECOMP
+OPTIONS_DEFAULT=	PYTHON
 SBOOST_DESC=	Use static Boost instead of dynamic linking
 SSSL_DESC=	Use static OpenSSL library instead of dynamic linking
 SLUA_DESC=	Use domoticz provided LUA instead of ports one
@@ -34,12 +35,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11484
-DOMOTICZ_TS=	1573647390
+DOMOTICZ_REL=	11547
+DOMOTICZ_TS=	1575382605
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	c6830ac50
+GH_TAGNAME=	db289ac25
 
 USE_RC_SUBR=	domoticz
 
@@ -94,7 +95,7 @@ LIB_DEPENDS+=	libminizip.so:archivers/minizip
 
 .if ${PORT_OPTIONS:MPYTHON}
 CMAKE_ARGS+=	-DUSE_PYTHON="YES"
-USES+=		python:3.6
+USES+=		python:3.7
 .else
 CMAKE_ARGS+=	-DUSE_PYTHON="NO"
 .endif

@@ -916,8 +916,13 @@ domoticz/scripts/dzVents/generated_scripts/README.md
 domoticz/scripts/dzVents/scripts/README.md
 domoticz/scripts/logrotate/domoticz
 domoticz/scripts/lua/JSON.lua
+domoticz/scripts/lua/XmlParser.lua
 domoticz/scripts/lua/script_device_demo.lua
 domoticz/scripts/lua/script_time_demo.lua
+domoticz/scripts/lua/xml2lua.lua
+domoticz/scripts/lua/xmlhandler/dom.lua
+domoticz/scripts/lua/xmlhandler/print.lua
+domoticz/scripts/lua/xmlhandler/tree.lua
 domoticz/scripts/lua_parsers/example.lua
 domoticz/scripts/lua_parsers/example_json.lua
 domoticz/scripts/lua_parsers/example_owm.lua
@@ -978,6 +983,7 @@ domoticz/www/app/TemperatureController.js
 domoticz/www/app/TemperatureCustomLogController.js
 domoticz/www/app/TimerplanController.js
 domoticz/www/app/UpdateController.js
+domoticz/www/app/UpdateController2.js
 domoticz/www/app/UserVariablesController.js
 domoticz/www/app/UsersController.js
 domoticz/www/app/UtilityController.js
@@ -1736,6 +1742,7 @@ domoticz/www/views/temperature_widget.html
 domoticz/www/views/timerplan.html
 domoticz/www/views/timers.html
 domoticz/www/views/update.html
+domoticz/www/views/update2.html
 domoticz/www/views/users.html
 domoticz/www/views/uservariables.html
 domoticz/www/views/utility.html
