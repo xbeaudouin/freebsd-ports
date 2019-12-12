@@ -639,6 +639,7 @@ domoticz/Config/wenzhou/tz69.xml
 domoticz/Config/wenzhou/tz74.xml
 domoticz/Config/wenzhou/tz79.xml
 domoticz/Config/wenzhou/tz88.xml
+domoticz/Config/widom/DRY.xml
 domoticz/Config/widom/UBS104.xml
 domoticz/Config/widom/UME304C_S.xml
 domoticz/Config/widom/WDS.xml
@@ -1383,6 +1384,7 @@ domoticz/www/images/leaf.png
 domoticz/www/images/leaf48.png
 domoticz/www/images/lightbulb.png
 domoticz/www/images/lightbulboff.png
+domoticz/www/images/location.png
 domoticz/www/images/lock_closed.png
 domoticz/www/images/lock_open.png
 domoticz/www/images/log.png
