@@ -1,4 +1,0 @@
-%%ETCDIR%%.conf.sample
-etc/rc.d/dnsdist
-man/man1/dnsdist.1.gz
-sbin/dnsdist
