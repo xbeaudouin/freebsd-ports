@@ -105,6 +105,7 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zwa005.xml
 %%ETCDIR%%/aeotec/zwa006.xml
 %%ETCDIR%%/aeotec/zwa008.xml
+%%ETCDIR%%/aeotec/zwa021.xml
 %%ETCDIR%%/airlinemechanical/zds-ud10.xml
 %%ETCDIR%%/alfred/DB2.xml
 %%ETCDIR%%/assa_abloy/ConexisL1.xml
@@ -269,6 +270,7 @@ bin/ozw_config
 %%ETCDIR%%/followgood/swz-1002.xml
 %%ETCDIR%%/forest/fs2z5232000002.xml
 %%ETCDIR%%/fortrezz/fmi.xml
+%%ETCDIR%%/fortrezz/fts05p.xml
 %%ETCDIR%%/fortrezz/gdc1_fortrezz_1501.xml
 %%ETCDIR%%/fortrezz/mimo2plus.xml
 %%ETCDIR%%/fortrezz/mimolite.xml
@@ -295,6 +297,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/28169-plugin-switch.xml
 %%ETCDIR%%/ge/45604.xml
 %%ETCDIR%%/ge/46201-switch.xml
+%%ETCDIR%%/ge/46203-dimmer.xml
 %%ETCDIR%%/ge/dimmer.xml
 %%ETCDIR%%/ge/dimmer_module.xml
 %%ETCDIR%%/ge/hinge-pin.xml
@@ -336,6 +339,8 @@ bin/ozw_config
 %%ETCDIR%%/heiman/HS1WL-Z.xml
 %%ETCDIR%%/heiman/HS2SK-Z.xml
 %%ETCDIR%%/heiman/HS2WD-Z.xml
+%%ETCDIR%%/heltun/he-ft01.xml
+%%ETCDIR%%/heltun/he-ht01.xml
 %%ETCDIR%%/heltun/he-zw-sw-5a-1.xml
 %%ETCDIR%%/heltun/he-zw-therm-fc1.xml
 %%ETCDIR%%/heltun/he-zw-therm-fl2.xml
@@ -353,7 +358,9 @@ bin/ozw_config
 %%ETCDIR%%/homeseer/hsm100.xml
 %%ETCDIR%%/homeseer/hsm200.xml
 %%ETCDIR%%/homeseer/ztroller.xml
+%%ETCDIR%%/honeywell/39348-zw4008.xml
 %%ETCDIR%%/honeywell/39351-ZW3005.xml
+%%ETCDIR%%/honeywell/39357-ZW3004.xml
 %%ETCDIR%%/honeywell/lynx-touch-l5100.xml
 %%ETCDIR%%/honeywell/th6320zw2003.xml
 %%ETCDIR%%/honeywell/th8320zw1000.xml
@@ -446,6 +453,7 @@ bin/ozw_config
 %%ETCDIR%%/images/aeotec/zwa004.png
 %%ETCDIR%%/images/aeotec/zwa005.png
 %%ETCDIR%%/images/aeotec/zwa006.png
+%%ETCDIR%%/images/aeotec/zwa021.png
 %%ETCDIR%%/images/airlinemechanical/zds-ud10.png
 %%ETCDIR%%/images/alfred/DB2.png
 %%ETCDIR%%/images/assa_abloy/ConexisL1.png
@@ -563,6 +571,7 @@ bin/ozw_config
 %%ETCDIR%%/images/followgood/swz-1002.png
 %%ETCDIR%%/images/forest/fs2z5232000002.png
 %%ETCDIR%%/images/fortrezz/fmi.png
+%%ETCDIR%%/images/fortrezz/fts05p.png
 %%ETCDIR%%/images/fortrezz/gdc1_fortrezz_1501.png
 %%ETCDIR%%/images/fortrezz/mimo2plus.png
 %%ETCDIR%%/images/fortrezz/mimolite.png
@@ -588,6 +597,7 @@ bin/ozw_config
 %%ETCDIR%%/images/ge/28169-plugin-switch.png
 %%ETCDIR%%/images/ge/45604.png
 %%ETCDIR%%/images/ge/46201-switch.png
+%%ETCDIR%%/images/ge/46203-dimmer.png
 %%ETCDIR%%/images/ge/dimmer.png
 %%ETCDIR%%/images/ge/dimmer_module.png
 %%ETCDIR%%/images/ge/hinge-pin.png
@@ -624,6 +634,8 @@ bin/ozw_config
 %%ETCDIR%%/images/heiman/HS1SA-Z.png
 %%ETCDIR%%/images/heiman/HS1WL-Z.png
 %%ETCDIR%%/images/heiman/HS2SK-Z.png
+%%ETCDIR%%/images/heltun/he-ft01.png
+%%ETCDIR%%/images/heltun/he-ht01.png
 %%ETCDIR%%/images/homeseer/hs-ds100plus.png
 %%ETCDIR%%/images/homeseer/hs-fc200plus.png
 %%ETCDIR%%/images/homeseer/hs-fls100plus.png
@@ -634,7 +646,9 @@ bin/ozw_config
 %%ETCDIR%%/images/homeseer/hs-ws100plus.png
 %%ETCDIR%%/images/homeseer/hs-ws200plus.png
 %%ETCDIR%%/images/homeseer/hsm200.png
+%%ETCDIR%%/images/honeywell/39348-zw4008.png
 %%ETCDIR%%/images/honeywell/39351-ZW3005.png
+%%ETCDIR%%/images/honeywell/39357-ZW3004.png
 %%ETCDIR%%/images/honeywell/lynx-touch-l5100.png
 %%ETCDIR%%/images/honeywell/th6320zw2003.png
 %%ETCDIR%%/images/honeywell/th8320zw1000.png
@@ -660,6 +674,7 @@ bin/ozw_config
 %%ETCDIR%%/images/iwatsu/ne-4ct.png
 %%ETCDIR%%/images/jasco/45601.png
 %%ETCDIR%%/images/kaipule/im20.png
+%%ETCDIR%%/images/kwikset/914c.png
 %%ETCDIR%%/images/kwikset/smartcode.png
 %%ETCDIR%%/images/leviton/dz15s.png
 %%ETCDIR%%/images/leviton/dz6hd.png
@@ -787,6 +802,7 @@ bin/ozw_config
 %%ETCDIR%%/images/there/800z.png
 %%ETCDIR%%/images/thermofloor/heatit021.png
 %%ETCDIR%%/images/thermofloor/heatit056.png
+%%ETCDIR%%/images/thermofloor/heatit_zdim.png
 %%ETCDIR%%/images/trane/TZEMT400AB32MAA.png
 %%ETCDIR%%/images/trane/TZEMT400BB32MAA.png
 %%ETCDIR%%/images/trane/TZEMT524AA21MA.png
@@ -831,6 +847,7 @@ bin/ozw_config
 %%ETCDIR%%/images/zipato/HS1SA-Z.png
 %%ETCDIR%%/images/zipato/HS1WL-Z.png
 %%ETCDIR%%/images/zipato/RGBBulb.png
+%%ETCDIR%%/images/zipato/ne-nas-ab01z.png
 %%ETCDIR%%/images/zipato/pan04.png
 %%ETCDIR%%/images/zipato/phpab01.png
 %%ETCDIR%%/images/zipato/pse02.png
@@ -881,6 +898,7 @@ bin/ozw_config
 %%ETCDIR%%/jasco/45601.xml
 %%ETCDIR%%/kaipule/im20.xml
 %%ETCDIR%%/kaipule/ix32.xml
+%%ETCDIR%%/kwikset/914c.xml
 %%ETCDIR%%/kwikset/smartcode.xml
 %%ETCDIR%%/leviton/dz15s.xml
 %%ETCDIR%%/leviton/dz6hd.xml
@@ -982,6 +1000,7 @@ bin/ozw_config
 %%ETCDIR%%/popp/123658.xml
 %%ETCDIR%%/popp/700045.xml
 %%ETCDIR%%/popp/700168.xml
+%%ETCDIR%%/popp/700342.xml
 %%ETCDIR%%/popp/700397.xml
 %%ETCDIR%%/popp/700793.xml
 %%ETCDIR%%/popp/dwt.xml
@@ -1079,6 +1098,7 @@ bin/ozw_config
 %%ETCDIR%%/telldus/tzwp100.xml
 %%ETCDIR%%/telldus/tzwp102.xml
 %%ETCDIR%%/there/800z.xml
+%%ETCDIR%%/thermofloor/heatit-zdim.xml
 %%ETCDIR%%/thermofloor/heatit021.xml
 %%ETCDIR%%/thermofloor/heatit056.xml
 %%ETCDIR%%/trane/TZEMT400AB32MAA.xml
@@ -1132,12 +1152,14 @@ bin/ozw_config
 %%ETCDIR%%/wenzhou/tz74.xml
 %%ETCDIR%%/wenzhou/tz79.xml
 %%ETCDIR%%/wenzhou/tz88.xml
+%%ETCDIR%%/widom/DRY.xml
 %%ETCDIR%%/widom/UBS104.xml
 %%ETCDIR%%/widom/UME304C_S.xml
 %%ETCDIR%%/widom/WDS.xml
 %%ETCDIR%%/zipato/MiniKeypad.xml
 %%ETCDIR%%/zipato/RGBBulb.xml
 %%ETCDIR%%/zipato/RGBBulb2.xml
+%%ETCDIR%%/zipato/ne-nas-ab02z.xml
 %%ETCDIR%%/zipato/pan04.xml
 %%ETCDIR%%/zipato/vszd2102.xml
 %%ETCDIR%%/zipato/zp3102.xml

@@ -103,6 +103,7 @@ domoticz/Config/aeotec/zwa004.xml
 domoticz/Config/aeotec/zwa005.xml
 domoticz/Config/aeotec/zwa006.xml
 domoticz/Config/aeotec/zwa008.xml
+domoticz/Config/aeotec/zwa021.xml
 domoticz/Config/airlinemechanical/zds-ud10.xml
 domoticz/Config/alfred/DB2.xml
 domoticz/Config/assa_abloy/ConexisL1.xml
@@ -293,6 +294,7 @@ domoticz/Config/ge/28167-plugin-dimmer.xml
 domoticz/Config/ge/28169-plugin-switch.xml
 domoticz/Config/ge/45604.xml
 domoticz/Config/ge/46201-switch.xml
+domoticz/Config/ge/46203-dimmer.xml
 domoticz/Config/ge/dimmer.xml
 domoticz/Config/ge/dimmer_module.xml
 domoticz/Config/ge/hinge-pin.xml
@@ -351,6 +353,7 @@ domoticz/Config/homeseer/hs-ws200plus.xml
 domoticz/Config/homeseer/hsm100.xml
 domoticz/Config/homeseer/hsm200.xml
 domoticz/Config/homeseer/ztroller.xml
+domoticz/Config/honeywell/39348-zw4008.xml
 domoticz/Config/honeywell/39351-ZW3005.xml
 domoticz/Config/honeywell/lynx-touch-l5100.xml
 domoticz/Config/honeywell/th6320zw2003.xml
@@ -388,6 +391,7 @@ domoticz/Config/iwatsu/ne-4ct.xml
 domoticz/Config/jasco/45601.xml
 domoticz/Config/kaipule/im20.xml
 domoticz/Config/kaipule/ix32.xml
+domoticz/Config/kwikset/914c.xml
 domoticz/Config/kwikset/smartcode.xml
 domoticz/Config/leviton/dz15s.xml
 domoticz/Config/leviton/dz6hd.xml
@@ -762,7 +766,7 @@ domoticz/dzVents/runtime/device-adapters/waterflow_device.lua
 domoticz/dzVents/runtime/device-adapters/wind_device.lua
 domoticz/dzVents/runtime/device-adapters/youless_device.lua
 domoticz/dzVents/runtime/device-adapters/zone_heating_device.lua
-domoticz/dzVents/runtime/device-adapters/zwave_thermostat_mode_device.lua
+domoticz/dzVents/runtime/device-adapters/zwave_mode_type_device.lua
 domoticz/dzVents/runtime/dzVents.lua
 domoticz/dzVents/runtime/integration-tests/File.lua
 domoticz/dzVents/runtime/integration-tests/IconScript.lua
@@ -849,6 +853,7 @@ domoticz/dzVents/runtime/tests/scripts/script_variable2.lua
 domoticz/dzVents/runtime/tests/scripts/script_variable3.lua
 domoticz/dzVents/runtime/tests/scripts/script_wildcard1.lua
 domoticz/dzVents/runtime/tests/scripts/script_wildcard2.lua
+domoticz/dzVents/runtime/tests/scripts/script_wildcard3.lua
 domoticz/dzVents/runtime/tests/scripts/script_with_active_method.lua
 domoticz/dzVents/runtime/tests/scripts/script_with_time-contrained_device.lua
 domoticz/dzVents/runtime/tests/testDevice.lua
@@ -856,6 +861,7 @@ domoticz/dzVents/runtime/tests/testDomoticz.lua
 domoticz/dzVents/runtime/tests/testEventHelpers.lua
 domoticz/dzVents/runtime/tests/testEventHelpersStorage.lua
 domoticz/dzVents/runtime/tests/testHTTPResponse.lua
+domoticz/dzVents/runtime/tests/testLodash.lua
 domoticz/dzVents/runtime/tests/testScriptdzVentsDispatching.lua
 domoticz/dzVents/runtime/tests/testTime.lua
 domoticz/dzVents/runtime/tests/testTimedCommand.lua
@@ -977,7 +983,6 @@ domoticz/www/app/NotificationController.js
 domoticz/www/app/OfflineController.js
 domoticz/www/app/RFXComFirmwareController.js
 domoticz/www/app/RestoreDatabaseController.js
-domoticz/www/app/RoomplanController.js
 domoticz/www/app/ScenesController.js
 domoticz/www/app/SetupController.js
 domoticz/www/app/TemperatureController.js
@@ -1050,6 +1055,8 @@ domoticz/www/app/main.js
 domoticz/www/app/notifications/DeviceNotifications.js
 domoticz/www/app/notifications/constants.js
 domoticz/www/app/notifications/factories.js
+domoticz/www/app/plans/RoomPlans.html
+domoticz/www/app/plans/RoomPlans.js
 domoticz/www/app/report/CounterReport.html
 domoticz/www/app/report/CounterReport.js
 domoticz/www/app/report/DeviceReport.html
@@ -1351,6 +1358,7 @@ domoticz/www/images/evohome/DayOffInv.png
 domoticz/www/images/evohome/HeatingOff.png
 domoticz/www/images/evohome/HeatingOffInv.png
 domoticz/www/images/evohome/Off.png
+domoticz/www/images/evohome/Offline.png
 domoticz/www/images/evohome/On.png
 domoticz/www/images/evohome/OpenWindow.png
 domoticz/www/images/evohome/PermanentOverride.png
@@ -1735,7 +1743,6 @@ domoticz/www/views/notifications.html
 domoticz/www/views/offline.html
 domoticz/www/views/restoredatabase.html
 domoticz/www/views/rfxcomfirmware.html
-domoticz/www/views/roomplan.html
 domoticz/www/views/scenes.html
 domoticz/www/views/setup.html
 domoticz/www/views/temperature.html

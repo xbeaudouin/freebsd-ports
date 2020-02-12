@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2019-05-23 11:13:42.000000000 +0200
-+++ CMakeLists.txt	2019-05-24 11:18:04.319626000 +0200
-@@ -287,21 +287,13 @@
+--- CMakeLists.txt.orig	2020-02-09 09:00:09 UTC
++++ CMakeLists.txt
+@@ -287,21 +287,13 @@ MACRO(ADD_PRECOMPILED_HEADER _targetName _input)
    ENDIF(CMAKE_COMPILER_IS_GNUCXX)
  ENDMACRO()
  
@@ -23,7 +23,7 @@
  ## Target
  set(
  domoticz_SRCS
-@@ -544,9 +536,6 @@
+@@ -548,9 +540,6 @@ tinyxpath/xpath_syntax.cpp
  )
  add_executable(domoticz ${domoticz_SRCS})
  
@@ -33,7 +33,7 @@
  INCLUDE(TestBigEndian)
  TEST_BIG_ENDIAN(BIGENDIAN)
  IF(${BIGENDIAN})
-@@ -803,7 +792,7 @@
+@@ -786,7 +775,7 @@ SET(CPACK_PACKAGE_INSTALL_DIRECTORY "domoticz")
  
  SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${domoticz}-dev")
  SET(CPACK_PACKAGING_INSTALL_PREFIX "/")
@@ -42,12 +42,12 @@
  SET(CPACK_PACKAGE_EXECUTABLES "domoticz;Home Automation System (Domotica).")
  
  #set(CPACK_DEB_COMPONENT_INSTALL TRUE)
-@@ -812,16 +801,15 @@
+@@ -795,16 +784,15 @@ SET(CPACK_DEBIAN_ARCHITECTURE ${CMAKE_SYSTEM_PROCESSOR
  INCLUDE(CPack)
  
  IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 -  set(CMAKE_INSTALL_PREFIX "/opt/${CPACK_PACKAGE_NAME}" CACHE PATH "Install path prefix, prepended onto install directories." FORCE)
-+	set(CMAKE_INSTALL_PREFIX "XXXPREFIXXXX/${CPACK_PACKAGE_NAME}" CACHE PATH "Install path prefix, prepended onto install directories." FORCE)
++	set(CMAKE_INSTALL_PREFIX "XXXPREFIXXXX${CPACK_PACKAGE_NAME}" CACHE PATH "Install path prefix, prepended onto install directories." FORCE)
  ENDIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
  
 -install(TARGETS domoticz DESTINATION ${CMAKE_INSTALL_PREFIX})
