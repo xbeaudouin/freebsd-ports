@@ -706,18 +706,21 @@ domoticz/dzVents/documentation/dzvents-smoothing.png
 domoticz/dzVents/documentation/history.md
 domoticz/dzVents/documentation/pandoc.md
 domoticz/dzVents/runtime/Camera.lua
+domoticz/dzVents/runtime/CustomEvent.lua
 domoticz/dzVents/runtime/Device.lua
 domoticz/dzVents/runtime/Domoticz.lua
 domoticz/dzVents/runtime/EventHelpers.lua
 domoticz/dzVents/runtime/HTTPResponse.lua
 domoticz/dzVents/runtime/HistoricalStorage.lua
 domoticz/dzVents/runtime/Security.lua
+domoticz/dzVents/runtime/SystemEvent.lua
 domoticz/dzVents/runtime/Time.lua
 domoticz/dzVents/runtime/TimedCommand.lua
 domoticz/dzVents/runtime/TimedCommandOptions.lua
 domoticz/dzVents/runtime/Timer.lua
 domoticz/dzVents/runtime/Utils.lua
 domoticz/dzVents/runtime/Variable.lua
+domoticz/dzVents/runtime/constants.lua
 domoticz/dzVents/runtime/device-adapters/Adapters.lua
 domoticz/dzVents/runtime/device-adapters/airquality_device.lua
 domoticz/dzVents/runtime/device-adapters/alert_device.lua
@@ -768,6 +771,7 @@ domoticz/dzVents/runtime/device-adapters/youless_device.lua
 domoticz/dzVents/runtime/device-adapters/zone_heating_device.lua
 domoticz/dzVents/runtime/device-adapters/zwave_mode_type_device.lua
 domoticz/dzVents/runtime/dzVents.lua
+domoticz/dzVents/runtime/eventItemIdentifier.lua
 domoticz/dzVents/runtime/integration-tests/File.lua
 domoticz/dzVents/runtime/integration-tests/IconScript.lua
 domoticz/dzVents/runtime/integration-tests/README.md
@@ -782,6 +786,7 @@ domoticz/dzVents/runtime/integration-tests/scScene.lua
 domoticz/dzVents/runtime/integration-tests/scriptContactDoorLockInvertedSwitch.lua
 domoticz/dzVents/runtime/integration-tests/scriptDelayedVariableScene.lua
 domoticz/dzVents/runtime/integration-tests/scriptSelectorSwitch.lua
+domoticz/dzVents/runtime/integration-tests/scriptTestCustomAndSystemEventsScript.lua
 domoticz/dzVents/runtime/integration-tests/scriptTestEventState.lua
 domoticz/dzVents/runtime/integration-tests/scriptTestProtect.lua
 domoticz/dzVents/runtime/integration-tests/scriptTestRename.lua
@@ -798,6 +803,7 @@ domoticz/dzVents/runtime/integration-tests/testDelayedVariableScene.lua
 domoticz/dzVents/runtime/integration-tests/testEventState.lua
 domoticz/dzVents/runtime/integration-tests/testIntegration.lua
 domoticz/dzVents/runtime/integration-tests/testSelectorSwitch.lua
+domoticz/dzVents/runtime/integration-tests/testSystemAndCustomEvents.lua
 domoticz/dzVents/runtime/integration-tests/varCancelled.lua
 domoticz/dzVents/runtime/integration-tests/varString.lua
 domoticz/dzVents/runtime/integration-tests/vdCancelledRepeatSwitch.lua
@@ -891,6 +897,7 @@ domoticz/scripts/buienradar_rain_example.pl
 domoticz/scripts/domoticz.conf
 domoticz/scripts/download_update.sh
 domoticz/scripts/dzVents/data/README.md
+domoticz/scripts/dzVents/dumps/.gitignore
 domoticz/scripts/dzVents/examples/calc temp delta.lua
 domoticz/scripts/dzVents/examples/check battery levels.lua
 domoticz/scripts/dzVents/examples/check dead devices by desc.lua
@@ -945,6 +952,7 @@ domoticz/scripts/templates/All.Lua
 domoticz/scripts/templates/All.Python
 domoticz/scripts/templates/All.dzVents
 domoticz/scripts/templates/Bare.dzVents
+domoticz/scripts/templates/CustomEvents.dzVents
 domoticz/scripts/templates/Device.Lua
 domoticz/scripts/templates/Device.dzVents
 domoticz/scripts/templates/Group.dzVents
@@ -952,6 +960,7 @@ domoticz/scripts/templates/HTTPRequest.dzVents
 domoticz/scripts/templates/Scene.dzVents
 domoticz/scripts/templates/Security.Lua
 domoticz/scripts/templates/Security.dzVents
+domoticz/scripts/templates/System.dzVents
 domoticz/scripts/templates/Time.Lua
 domoticz/scripts/templates/Timer.dzVents
 domoticz/scripts/templates/UserVariable.Lua
@@ -997,6 +1006,7 @@ domoticz/www/app/WeatherController.js
 domoticz/www/app/ZWaveTopologyController.js
 domoticz/www/app/app.constants.js
 domoticz/www/app/app.js
+domoticz/www/app/app.notifications.js
 domoticz/www/app/app.permissions.js
 domoticz/www/app/app.routes.js
 domoticz/www/app/components/rgbw-picker/RgbwPicker.html
