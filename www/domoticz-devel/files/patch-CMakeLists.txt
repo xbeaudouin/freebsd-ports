@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2020-02-09 09:00:09 UTC
-+++ CMakeLists.txt
-@@ -287,21 +287,13 @@ MACRO(ADD_PRECOMPILED_HEADER _targetName _input)
+--- CMakeLists.txt.orig	2020-02-28 14:03:59.000000000 +0100
++++ CMakeLists.txt	2020-02-28 16:28:09.942860000 +0100
+@@ -287,21 +287,13 @@
    ENDIF(CMAKE_COMPILER_IS_GNUCXX)
  ENDMACRO()
  
@@ -23,7 +23,7 @@
  ## Target
  set(
  domoticz_SRCS
-@@ -548,9 +540,6 @@ tinyxpath/xpath_syntax.cpp
+@@ -554,9 +546,6 @@
  )
  add_executable(domoticz ${domoticz_SRCS})
  
@@ -33,7 +33,7 @@
  INCLUDE(TestBigEndian)
  TEST_BIG_ENDIAN(BIGENDIAN)
  IF(${BIGENDIAN})
-@@ -786,7 +775,7 @@ SET(CPACK_PACKAGE_INSTALL_DIRECTORY "domoticz")
+@@ -792,7 +781,7 @@
  
  SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${domoticz}-dev")
  SET(CPACK_PACKAGING_INSTALL_PREFIX "/")
@@ -42,7 +42,7 @@
  SET(CPACK_PACKAGE_EXECUTABLES "domoticz;Home Automation System (Domotica).")
  
  #set(CPACK_DEB_COMPONENT_INSTALL TRUE)
-@@ -795,16 +784,15 @@ SET(CPACK_DEBIAN_ARCHITECTURE ${CMAKE_SYSTEM_PROCESSOR
+@@ -801,16 +790,15 @@
  INCLUDE(CPack)
  
  IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
