@@ -11,10 +11,12 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
-		libexpat.so:textproc/expat2 \
-		libopenzwave.so:comms/openzwave-devel
+		libopenzwave.so:comms/openzwave-devel \
+		libjsoncpp.so:devel/jsoncpp
+#		libexpat.so:textproc/expat2 \
 
-USES=		cmake iconv pkgconfig ssl
+#USES=		cmake iconv pkgconfig ssl
+USES=		cmake pkgconfig ssl
 
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
@@ -35,12 +37,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11740
-DOMOTICZ_TS=	1582744866
+DOMOTICZ_REL=	11748
+DOMOTICZ_TS=	1582895039
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	a1f0d3d83
+GH_TAGNAME=	b0db4e654
 
 USE_RC_SUBR=	domoticz
 
@@ -49,7 +51,8 @@ GROUPS=		domoticz
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
 		-DUSE_BUILTIN_ZLIB="NO" \
-		-DUSE_STATIC_OPENZWAVE="NO"
+		-DUSE_STATIC_OPENZWAVE="NO" \
+		-DUSE_BUILTIN_JSONCPP="NO"
 
 .if ${PORT_OPTIONS:MSSSL}
 CMAKE_ARGS+=	-DUSE_OPENSSL_STATIC="YES"
