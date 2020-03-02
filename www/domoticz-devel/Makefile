@@ -13,9 +13,7 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libopenzwave.so:comms/openzwave-devel \
 		libjsoncpp.so:devel/jsoncpp
-#		libexpat.so:textproc/expat2 \
 
-#USES=		cmake iconv pkgconfig ssl
 USES=		cmake pkgconfig ssl
 
 CONFLICTS_INSTALL?=	domoticz-[234]*
@@ -37,12 +35,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11748
-DOMOTICZ_TS=	1582895039
+DOMOTICZ_REL=	11765
+DOMOTICZ_TS=	1583150165
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	b0db4e654
+GH_TAGNAME=	0ebe1e951
 
 USE_RC_SUBR=	domoticz
 
