@@ -13,6 +13,7 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libopenzwave.so:comms/openzwave-devel \
 		libjsoncpp.so:devel/jsoncpp
+BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 
 USES=		cmake pkgconfig ssl
 
@@ -35,12 +36,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11765
-DOMOTICZ_TS=	1583150165
+DOMOTICZ_REL=	11780
+DOMOTICZ_TS=	1583828103
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	0ebe1e951
+GH_TAGNAME=	10a4759be
 
 USE_RC_SUBR=	domoticz
 
@@ -50,7 +51,8 @@ GROUPS=		domoticz
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
 		-DUSE_BUILTIN_ZLIB="NO" \
 		-DUSE_STATIC_OPENZWAVE="NO" \
-		-DUSE_BUILTIN_JSONCPP="NO"
+		-DUSE_BUILTIN_JSONCPP="NO" \
+		-DUSE_BUILTIN_CEREAL="NO"
 
 .if ${PORT_OPTIONS:MSSSL}
 CMAKE_ARGS+=	-DUSE_OPENSSL_STATIC="YES"
