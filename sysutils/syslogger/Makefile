@@ -3,6 +3,7 @@
 
 PORTNAME=	syslogger
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://oav.net/projects/syslogger/
 
