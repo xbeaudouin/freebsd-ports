@@ -1768,5 +1768,5 @@ domoticz/www/views/uservariables.html
 domoticz/www/views/utility.html
 domoticz/www/views/weather.html
 domoticz/www/views/weather_widget.html
-@dir(domoticz:domoticz) /var/db/domoticz
-@dir(domoticz:domoticz) /var/run/domoticz
+@dir(domoticz,domoticz) /var/db/domoticz
+@dir(domoticz,domoticz) /var/run/domoticz
