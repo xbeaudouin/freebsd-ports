@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	domoticz
-PORTVERSION=	${DOMOTICZ_REL}
+PORTVERSION=	2020.1
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
-COMMENT=	Home Automation System (Development Branch)
+COMMENT=	Home Automation System 
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
@@ -34,9 +34,6 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 .include <bsd.port.options.mk>
 
-# This hack is to get rid of dependency of git while building
-# the package.
-DOMOTICZ_REL=	2020.1
 USE_GITHUB=	yes
 
 USE_RC_SUBR=	domoticz
@@ -112,10 +109,6 @@ CMAKE_ARGS+=	-DUSE_PRECOMPILED_HEADER="NO"
 post-patch:
 	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e "s,XXXPREFIXXXX,${PREFIX}/domoticz,g" ${WRKSRC}/CMakeLists.txt
-	@${REINPLACE_CMD} -e "/^ADD_PRECOMPILED_HEADER/ d" ${WRKSRC}/CMakeLists.txt
-#	@${REINPLACE_CMD} -e "s/\(#define APPVERSION\)\(.*\)/\1 ${DOMOTICZ_REL}/" ${WRKSRC}/appversion.h
-#	@${REINPLACE_CMD} -e "s/\(#define APPHASH\)\(.*\)/\1 \"${GH_TAGNAME}\"/" ${WRKSRC}/appversion.h
-#	@${REINPLACE_CMD} -e "s/\(#define APPDATE\)\(.*\)/\1 ${DOMOTICZ_TS}/" ${WRKSRC}/appversion.h
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
