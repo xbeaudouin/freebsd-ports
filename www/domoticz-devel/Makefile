@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	domoticz-devel
-PORTVERSION=	4.${DOMOTICZ_REL}
+PORTVERSION=	2020.1.${DOMOTICZ_REL}
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -36,12 +36,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11839
-DOMOTICZ_TS=	1585288381
+DOMOTICZ_REL=	11851
+DOMOTICZ_TS=	1585639099
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	139d994e5
+GH_TAGNAME=	dbd7cddcd
 
 USE_RC_SUBR=	domoticz
 
