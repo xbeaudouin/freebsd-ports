@@ -360,6 +360,7 @@ bin/ozw_config
 %%ETCDIR%%/homeseer/hsm100.xml
 %%ETCDIR%%/homeseer/hsm200.xml
 %%ETCDIR%%/homeseer/ztroller.xml
+%%ETCDIR%%/honeywell/39348-ZW4005.xml
 %%ETCDIR%%/honeywell/39348-zw4008.xml
 %%ETCDIR%%/honeywell/39351-ZW3005.xml
 %%ETCDIR%%/honeywell/39351-ZW3010.xml
@@ -651,6 +652,7 @@ bin/ozw_config
 %%ETCDIR%%/images/homeseer/hs-ws100plus.png
 %%ETCDIR%%/images/homeseer/hs-ws200plus.png
 %%ETCDIR%%/images/homeseer/hsm200.png
+%%ETCDIR%%/images/honeywell/39348-ZW4005.png
 %%ETCDIR%%/images/honeywell/39348-zw4008.png
 %%ETCDIR%%/images/honeywell/39351-ZW3005.png
 %%ETCDIR%%/images/honeywell/39357-ZW3004.png
@@ -697,6 +699,7 @@ bin/ozw_config
 %%ETCDIR%%/images/linear/WD500Z5-1.png
 %%ETCDIR%%/images/linear/gd00z-7.png
 %%ETCDIR%%/images/linear/ngd00z.png
+%%ETCDIR%%/images/logicsoft/ZDB5100.png
 %%ETCDIR%%/images/logicsoft/ZHC5010.png
 %%ETCDIR%%/images/mcohome/mh7h.png
 %%ETCDIR%%/images/mcohome/mhp220.png
@@ -950,6 +953,7 @@ bin/ozw_config
 %%ETCDIR%%/linear/WT00Z-1.xml
 %%ETCDIR%%/linear/gd00z-7.xml
 %%ETCDIR%%/linear/ngd00z.xml
+%%ETCDIR%%/logicsoft/ZDB5100.xml
 %%ETCDIR%%/logicsoft/ZHC5002.xml
 %%ETCDIR%%/logicsoft/ZHC5010.xml
 %%ETCDIR%%/manufacturer_specific.xml
@@ -1065,6 +1069,7 @@ bin/ozw_config
 %%ETCDIR%%/qubino/ZMNHXDx.xml
 %%ETCDIR%%/qubino/ZMNHYDx.xml
 %%ETCDIR%%/qubino/ZMNHZDx.xml
+%%ETCDIR%%/qubino/ZMNKADx.xml
 %%ETCDIR%%/qubino/ZMNKIDx.xml
 %%ETCDIR%%/quby/qb2.xml
 %%ETCDIR%%/rcs/em52-zw.xml
