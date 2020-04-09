@@ -12,22 +12,20 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libopenzwave.so:comms/openzwave-devel \
-		libjsoncpp.so:devel/jsoncpp
+		libjsoncpp.so:devel/jsoncpp \
+		libminizip.so:archivers/minizip \
+		libmosquitto.so:net/mosquitto
 BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 
-USES=		cmake pkgconfig ssl
+USES=		cmake pkgconfig ssl sqlite lua:53
 
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
 OPTIONS_SUB=	YES
-OPTIONS_DEFINE=	SSSL SBOOST SLUA SMQTT SSQLITE SMINIZIP PYTHON TELLDUS PRECOMP
-OPTIONS_DEFAULT=	PYTHON
+OPTIONS_DEFINE=	SSSL SBOOST PYTHON TELLDUS PRECOMP
+OPTIONS_DEFAULT=	PYTHON PRECOMP
 SBOOST_DESC=	Use static Boost instead of dynamic linking
 SSSL_DESC=	Use static OpenSSL library instead of dynamic linking
-SLUA_DESC=	Use domoticz provided LUA instead of ports one
-SMQTT_DESC=	Use domoticz mosquitto instead of ports one
-SSQLITE_DESC=	Use domoticz SQLLite instead of ports one
-SMINIZIP_DESC=	Use domoticz minizip instead of ports one
 PYTHON_DESC=	Enable support for Python Plugins
 TELLDUS_DESC=	Enable support for Telldus
 PRECOMP_DESC=	Enable usage of precompiled header to speed build time
@@ -36,12 +34,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11853
-DOMOTICZ_TS=	1585644559
+DOMOTICZ_REL=	11925
+DOMOTICZ_TS=	1586415433
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	cc1a38a4e
+GH_TAGNAME=	87bad52e2
 
 USE_RC_SUBR=	domoticz
 
@@ -49,10 +47,13 @@ USERS=		domoticz
 GROUPS=		domoticz
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
-		-DUSE_BUILTIN_ZLIB="NO" \
+		-DGIT_SUBMODULE="NO" \
+		-DUSE_LUA_STATIC="NO" \
 		-DUSE_STATIC_OPENZWAVE="NO" \
+		-DUSE_BUILTIN_SQLITE="NO" \
+		-DUSE_BUILTIN_MQTT="NO" \
 		-DUSE_BUILTIN_JSONCPP="NO" \
-		-DUSE_BUILTIN_CEREAL="NO"
+		-DUSE_BUILTIN_MINIZIP="NO"
 
 .if ${PORT_OPTIONS:MSSSL}
 CMAKE_ARGS+=	-DUSE_OPENSSL_STATIC="YES"
@@ -68,37 +69,9 @@ CMAKE_ARGS+=	-DUSE_STATIC_BOOST="NO"
 LIB_DEPENDS+=	libboost_system.so:devel/boost-libs
 .endif
 
-.if ${PORT_OPTIONS:MSLUA}
-CMAKE_ARGS+=	-DUSE_BUILTIN_LUA="YES"
-.else
-CMAKE_ARGS+=	-DUSE_BUILTIN_LUA="NO"
-USES+=		lua:53
-.endif
-
-.if ${PORT_OPTIONS:MSMQTT}
-CMAKE_ARGS+=	-DUSE_BUILTIN_MQTT="YES"
-.else
-CMAKE_ARGS+=	-DUSE_BUILTIN_MQTT="NO"
-LIB_DEPENDS+=	libmosquitto.so:net/mosquitto
-.endif
-
-.if ${PORT_OPTIONS:MSSQLITE}
-CMAKE_ARGS+=	-DUSE_BUILTIN_SQLITE="YES"
-.else
-CMAKE_ARGS+=	-DUSE_BUILTIN_SQLITE="NO"
-USES+=		sqlite
-.endif
-
-.if ${PORT_OPTIONS:MSMINIZIP}
-CMAKE_ARGS+=	-DUSE_BUILTIN_MINIZIP="YES"
-.else
-CMAKE_ARGS+=	-DUSE_BUILTIN_MINIZIP="NO"
-LIB_DEPENDS+=	libminizip.so:archivers/minizip
-.endif
-
 .if ${PORT_OPTIONS:MPYTHON}
 CMAKE_ARGS+=	-DUSE_PYTHON="YES"
-USES+=		python:3.7
+USES+=		python:3.5+
 .else
 CMAKE_ARGS+=	-DUSE_PYTHON="NO"
 .endif

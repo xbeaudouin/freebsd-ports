@@ -191,9 +191,11 @@ domoticz/Config/enerwave/zwn-bpc.xml
 domoticz/Config/enerwave/zwn-sc7.xml
 domoticz/Config/enerwave/zwnrsm1plus.xml
 domoticz/Config/enerwave/zwnrsm2plus.xml
+domoticz/Config/eurotronic/eur_airquality.xml
 domoticz/Config/eurotronic/eur_cometz.xml
 domoticz/Config/eurotronic/eur_spiritz.xml
 domoticz/Config/eurotronic/eur_stellaz.xml
+domoticz/Config/eurotronic/eur_temphumin.xml
 domoticz/Config/everspring/ad146.xml
 domoticz/Config/everspring/ad147.xml
 domoticz/Config/everspring/an145.xml
@@ -356,6 +358,7 @@ domoticz/Config/homeseer/hs-ws200plus.xml
 domoticz/Config/homeseer/hsm100.xml
 domoticz/Config/homeseer/hsm200.xml
 domoticz/Config/homeseer/ztroller.xml
+domoticz/Config/honeywell/39348-ZW4005.xml
 domoticz/Config/honeywell/39348-zw4008.xml
 domoticz/Config/honeywell/39351-ZW3005.xml
 domoticz/Config/honeywell/39351-ZW3010.xml
@@ -428,6 +431,7 @@ domoticz/Config/linear/WS15Z-1.xml
 domoticz/Config/linear/WT00Z-1.xml
 domoticz/Config/linear/gd00z-7.xml
 domoticz/Config/linear/ngd00z.xml
+domoticz/Config/logicsoft/ZDB5100.xml
 domoticz/Config/logicsoft/ZHC5002.xml
 domoticz/Config/logicsoft/ZHC5010.xml
 domoticz/Config/manufacturer_specific.xml
@@ -543,6 +547,7 @@ domoticz/Config/qubino/ZMNHWD1.xml
 domoticz/Config/qubino/ZMNHXDx.xml
 domoticz/Config/qubino/ZMNHYDx.xml
 domoticz/Config/qubino/ZMNHZDx.xml
+domoticz/Config/qubino/ZMNKADx.xml
 domoticz/Config/qubino/ZMNKIDx.xml
 domoticz/Config/quby/qb2.xml
 domoticz/Config/rcs/em52-zw.xml
@@ -938,16 +943,18 @@ domoticz/scripts/dzVents/examples/respond to switch.lua
 domoticz/scripts/dzVents/examples/schedule fish pond pump.lua
 domoticz/scripts/dzVents/examples/simple room heating with hysteresis control.lua
 domoticz/scripts/dzVents/examples/sunscreen.lua
+domoticz/scripts/dzVents/examples/templates/All.lua
+domoticz/scripts/dzVents/examples/templates/Bare.lua
+domoticz/scripts/dzVents/examples/templates/CustomEvents.lua
+domoticz/scripts/dzVents/examples/templates/Device.lua
+domoticz/scripts/dzVents/examples/templates/Group.lua
 domoticz/scripts/dzVents/examples/templates/HTTPRequest.lua
-domoticz/scripts/dzVents/examples/templates/bare.lua
-domoticz/scripts/dzVents/examples/templates/complete.lua
-domoticz/scripts/dzVents/examples/templates/device.lua
+domoticz/scripts/dzVents/examples/templates/Scene.lua
+domoticz/scripts/dzVents/examples/templates/Security.lua
+domoticz/scripts/dzVents/examples/templates/System.lua
+domoticz/scripts/dzVents/examples/templates/Timer.lua
+domoticz/scripts/dzVents/examples/templates/UserVariable.lua
 domoticz/scripts/dzVents/examples/templates/global_data.lua
-domoticz/scripts/dzVents/examples/templates/group.lua
-domoticz/scripts/dzVents/examples/templates/scene.lua
-domoticz/scripts/dzVents/examples/templates/security.lua
-domoticz/scripts/dzVents/examples/templates/timer.lua
-domoticz/scripts/dzVents/examples/templates/variable.lua
 domoticz/scripts/dzVents/generated_scripts/README.md
 domoticz/scripts/dzVents/scripts/README.md
 domoticz/scripts/install.sh
@@ -1072,11 +1079,13 @@ domoticz/www/app/hardware/setup/ZWave.js
 domoticz/www/app/livesocket.js
 domoticz/www/app/log/DeviceLog.html
 domoticz/www/app/log/DeviceLog.js
+domoticz/www/app/log/GraphLog.html
 domoticz/www/app/log/GraphLog.js
 domoticz/www/app/log/LightLog.html
 domoticz/www/app/log/LightLog.js
 domoticz/www/app/log/SceneLog.html
 domoticz/www/app/log/SceneLog.js
+domoticz/www/app/log/TemperatureLog.html
 domoticz/www/app/log/TemperatureLog.js
 domoticz/www/app/log/TextLog.html
 domoticz/www/app/log/TextLog.js
@@ -1765,8 +1774,6 @@ domoticz/www/views/frontpage_example.html
 domoticz/www/views/history.html
 domoticz/www/views/lights.html
 domoticz/www/views/log.html
-domoticz/www/views/log/device_graph_log.html
-domoticz/www/views/log/device_temperature_log.html
 domoticz/www/views/login.html
 domoticz/www/views/logout.html
 domoticz/www/views/mobile_notifications.html
