@@ -642,7 +642,7 @@ sbin/radmin
 %%EXAMPLESDIR%%/raddb/mods-config/sql/ippool/mysql/procedure.sql
 %%EXAMPLESDIR%%/raddb/mods-config/sql/ippool/mysql/queries.conf
 %%EXAMPLESDIR%%/raddb/mods-config/sql/ippool/mysql/schema.sql
-%%EXAMPLESDIR%%/raddb/mods-config/sql/ippool/oracle/procedures.sql
+%%EXAMPLESDIR%%/raddb/mods-config/sql/ippool/oracle/procedure.sql
 %%EXAMPLESDIR%%/raddb/mods-config/sql/ippool/oracle/queries.conf
 %%EXAMPLESDIR%%/raddb/mods-config/sql/ippool/oracle/schema.sql
 %%EXAMPLESDIR%%/raddb/mods-config/sql/ippool/postgresql/procedure.sql
