@@ -1028,7 +1028,6 @@ domoticz/www/app/TemperatureController.js
 domoticz/www/app/TemperatureCustomLogController.js
 domoticz/www/app/TimerplanController.js
 domoticz/www/app/UpdateController.js
-domoticz/www/app/UpdateController2.js
 domoticz/www/app/UserVariablesController.js
 domoticz/www/app/UsersController.js
 domoticz/www/app/UtilityController.js
@@ -1790,7 +1789,6 @@ domoticz/www/views/temperature_widget.html
 domoticz/www/views/timerplan.html
 domoticz/www/views/timers.html
 domoticz/www/views/update.html
-domoticz/www/views/update2.html
 domoticz/www/views/users.html
 domoticz/www/views/uservariables.html
 domoticz/www/views/utility.html
