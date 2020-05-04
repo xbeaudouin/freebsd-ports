@@ -34,12 +34,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	11998
-DOMOTICZ_TS=	1588020245
+DOMOTICZ_REL=	12016
+DOMOTICZ_TS=	1588579748
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	219ed6439
+GH_TAGNAME=	9f752c965
 
 USE_RC_SUBR=	domoticz
 

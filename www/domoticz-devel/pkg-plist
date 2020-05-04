@@ -147,6 +147,7 @@ domoticz/Config/devolo/rs014G0159.xml
 domoticz/Config/diehlcontrols/766366.xml
 domoticz/Config/dlink/dch-z110.xml
 domoticz/Config/dlink/dch-z120.xml
+domoticz/Config/dlink/dch-z210.xml
 domoticz/Config/dlink/dch-z510.xml
 domoticz/Config/dome/0002.xml
 domoticz/Config/dome/0083.xml
@@ -467,6 +468,8 @@ domoticz/Config/northq/nq9121.xml
 domoticz/Config/northq/nq92021.xml
 domoticz/Config/oomi/ft100.xml
 domoticz/Config/oomi/ft111.xml
+domoticz/Config/oomi/ft112.xml
+domoticz/Config/oomi/ft118.xml
 domoticz/Config/options.xml
 domoticz/Config/options.xsd
 domoticz/Config/permundo/psc132zw.xml
