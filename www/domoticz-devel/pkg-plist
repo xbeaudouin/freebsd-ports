@@ -1647,11 +1647,11 @@ domoticz/www/js/data-tables/jquery.dataTables.min.js.gz
 domoticz/www/js/date.format.js.gz
 domoticz/www/js/domoticz.js
 domoticz/www/js/domoticzdevices.js
-domoticz/www/js/export-csv.js.gz
 domoticz/www/js/highcharts-ng.min.js.gz
 domoticz/www/js/highcharts/highcharts-more.js
 domoticz/www/js/highcharts/highcharts.js
 domoticz/www/js/highcharts/modules/dependency-wheel.js
+domoticz/www/js/highcharts/modules/export-data.js
 domoticz/www/js/highcharts/modules/exporting.js
 domoticz/www/js/highcharts/modules/sankey.js
 domoticz/www/js/highcharts/modules/xrange.js
