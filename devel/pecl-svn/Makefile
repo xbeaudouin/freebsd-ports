@@ -10,8 +10,8 @@ COMMENT=	PHP Bindings for the Subversion Revison control system
 
 LICENSE=	PHP301
 
-USES=		php:pecl
-
 LIB_DEPENDS=	libsvn_client-1.so:devel/subversion
+
+USES=		php:pecl
 
 .include <bsd.port.mk>
