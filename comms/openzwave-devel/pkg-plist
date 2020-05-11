@@ -145,10 +145,12 @@ bin/ozw_config
 %%ETCDIR%%/devolo/mt2652.xml
 %%ETCDIR%%/devolo/mt2653.xml
 %%ETCDIR%%/devolo/mt2756.xml
+%%ETCDIR%%/devolo/mt2761.xml
 %%ETCDIR%%/devolo/rs014G0159.xml
 %%ETCDIR%%/diehlcontrols/766366.xml
 %%ETCDIR%%/dlink/dch-z110.xml
 %%ETCDIR%%/dlink/dch-z120.xml
+%%ETCDIR%%/dlink/dch-z210.xml
 %%ETCDIR%%/dlink/dch-z510.xml
 %%ETCDIR%%/dome/0002.xml
 %%ETCDIR%%/dome/0083.xml
@@ -365,6 +367,7 @@ bin/ozw_config
 %%ETCDIR%%/honeywell/39351-ZW3005.xml
 %%ETCDIR%%/honeywell/39351-ZW3010.xml
 %%ETCDIR%%/honeywell/39357-ZW3004.xml
+%%ETCDIR%%/honeywell/39358-ZW4002.xml
 %%ETCDIR%%/honeywell/lynx-touch-l5100.xml
 %%ETCDIR%%/honeywell/th6320zw2003.xml
 %%ETCDIR%%/honeywell/th8320zw1000.xml
@@ -486,6 +489,7 @@ bin/ozw_config
 %%ETCDIR%%/images/devolo/mt2647.png
 %%ETCDIR%%/images/devolo/mt2652.png
 %%ETCDIR%%/images/devolo/mt2756.png
+%%ETCDIR%%/images/devolo/mt2761.png
 %%ETCDIR%%/images/diehlcontrols/766366.png
 %%ETCDIR%%/images/dlink/dch-z110.png
 %%ETCDIR%%/images/dlink/dch-z120.png
@@ -656,6 +660,7 @@ bin/ozw_config
 %%ETCDIR%%/images/honeywell/39348-zw4008.png
 %%ETCDIR%%/images/honeywell/39351-ZW3005.png
 %%ETCDIR%%/images/honeywell/39357-ZW3004.png
+%%ETCDIR%%/images/honeywell/39358-ZW4002.png
 %%ETCDIR%%/images/honeywell/lynx-touch-l5100.png
 %%ETCDIR%%/images/honeywell/th6320zw2003.png
 %%ETCDIR%%/images/honeywell/th8320zw1000.png
@@ -853,6 +858,7 @@ bin/ozw_config
 %%ETCDIR%%/images/wenzhou/tz67.png
 %%ETCDIR%%/images/wenzhou/tz68.png
 %%ETCDIR%%/images/wenzhou/tz69.png
+%%ETCDIR%%/images/wenzhou/tz78.png
 %%ETCDIR%%/images/wenzhou/tz88.png
 %%ETCDIR%%/images/widom/DRY.png
 %%ETCDIR%%/images/widom/UBS104.png
@@ -978,6 +984,7 @@ bin/ozw_config
 %%ETCDIR%%/merten/508244.xml
 %%ETCDIR%%/merten/50x5xx.xml
 %%ETCDIR%%/miyakawaelectric/me-d101.xml
+%%ETCDIR%%/namron/1402756.xml
 %%ETCDIR%%/nexia/db100z.xml
 %%ETCDIR%%/nodon/asp3100SmartPlug.xml
 %%ETCDIR%%/nodon/crc3100OctanRemote.xml
@@ -989,6 +996,8 @@ bin/ozw_config
 %%ETCDIR%%/northq/nq92021.xml
 %%ETCDIR%%/oomi/ft100.xml
 %%ETCDIR%%/oomi/ft111.xml
+%%ETCDIR%%/oomi/ft112.xml
+%%ETCDIR%%/oomi/ft118.xml
 %%ETCDIR%%/options.xml
 %%ETCDIR%%/options.xsd
 %%ETCDIR%%/permundo/psc132zw.xml
@@ -1182,6 +1191,7 @@ bin/ozw_config
 %%ETCDIR%%/wenzhou/tz68.xml
 %%ETCDIR%%/wenzhou/tz69.xml
 %%ETCDIR%%/wenzhou/tz74.xml
+%%ETCDIR%%/wenzhou/tz78.xml
 %%ETCDIR%%/wenzhou/tz79.xml
 %%ETCDIR%%/wenzhou/tz88.xml
 %%ETCDIR%%/widom/DRY.xml
@@ -1358,6 +1368,7 @@ include/openzwave/platform/unix/SerialControllerImpl.h
 include/openzwave/platform/unix/ThreadImpl.h
 include/openzwave/platform/unix/TimeStampImpl.h
 include/openzwave/platform/unix/WaitImpl.h
+include/openzwave/platform/unix/android.h
 include/openzwave/value_classes/Value.h
 include/openzwave/value_classes/ValueBitSet.h
 include/openzwave/value_classes/ValueBool.h
