@@ -105,6 +105,9 @@ bin/ozw_config
 %%ETCDIR%%/aeotec/zwa005.xml
 %%ETCDIR%%/aeotec/zwa006.xml
 %%ETCDIR%%/aeotec/zwa008.xml
+%%ETCDIR%%/aeotec/zwa009.xml
+%%ETCDIR%%/aeotec/zwa012.xml
+%%ETCDIR%%/aeotec/zwa019.xml
 %%ETCDIR%%/aeotec/zwa021.xml
 %%ETCDIR%%/airlinemechanical/zds-ud10.xml
 %%ETCDIR%%/alfred/DB2.xml
@@ -120,6 +123,7 @@ bin/ozw_config
 %%ETCDIR%%/buffalo/hw-100v15a-zw.xml
 %%ETCDIR%%/comfort/ucm.xml
 %%ETCDIR%%/config-template.xml
+%%ETCDIR%%/connecthome/ch-201.xml
 %%ETCDIR%%/cooper/RF9501.xml
 %%ETCDIR%%/cooper/RF9505-T.xml
 %%ETCDIR%%/cooper/RF9505-T.xml.zip
@@ -145,6 +149,8 @@ bin/ozw_config
 %%ETCDIR%%/devolo/mt2652.xml
 %%ETCDIR%%/devolo/mt2653.xml
 %%ETCDIR%%/devolo/mt2756.xml
+%%ETCDIR%%/devolo/mt2759.xml
+%%ETCDIR%%/devolo/mt2760.xml
 %%ETCDIR%%/devolo/mt2761.xml
 %%ETCDIR%%/devolo/rs014G0159.xml
 %%ETCDIR%%/diehlcontrols/766366.xml
@@ -286,10 +292,12 @@ bin/ozw_config
 %%ETCDIR%%/frostdale/fdn2311.xml
 %%ETCDIR%%/frostdale/fdn2nxx.xml
 %%ETCDIR%%/ge/12719-plugin-switch.xml
+%%ETCDIR%%/ge/12720.xml
 %%ETCDIR%%/ge/12724-dimmer.xml
 %%ETCDIR%%/ge/12727.xml
 %%ETCDIR%%/ge/14282-plugin-switch.xml
 %%ETCDIR%%/ge/14284.xml
+%%ETCDIR%%/ge/14285.xml
 %%ETCDIR%%/ge/14288-outlet.xml
 %%ETCDIR%%/ge/14291-switch.xml
 %%ETCDIR%%/ge/14292-toggle-switch.xml
@@ -368,6 +376,7 @@ bin/ozw_config
 %%ETCDIR%%/honeywell/39351-ZW3010.xml
 %%ETCDIR%%/honeywell/39357-ZW3004.xml
 %%ETCDIR%%/honeywell/39358-ZW4002.xml
+%%ETCDIR%%/honeywell/39449-ZW4106.xml
 %%ETCDIR%%/honeywell/lynx-touch-l5100.xml
 %%ETCDIR%%/honeywell/th6320zw2003.xml
 %%ETCDIR%%/honeywell/th8320zw1000.xml
@@ -390,6 +399,7 @@ bin/ozw_config
 %%ETCDIR%%/images/BeNext/AlarmSound.png
 %%ETCDIR%%/images/BeNext/DoorSensor.png
 %%ETCDIR%%/images/BeNext/Molite.png
+%%ETCDIR%%/images/BeNext/P1dongle.png
 %%ETCDIR%%/images/BeNext/TagReader.png
 %%ETCDIR%%/images/BeNext/TagReader500.png
 %%ETCDIR%%/images/BeNext/mydisplay.png
@@ -460,6 +470,9 @@ bin/ozw_config
 %%ETCDIR%%/images/aeotec/zwa004.png
 %%ETCDIR%%/images/aeotec/zwa005.png
 %%ETCDIR%%/images/aeotec/zwa006.png
+%%ETCDIR%%/images/aeotec/zwa009.png
+%%ETCDIR%%/images/aeotec/zwa012.png
+%%ETCDIR%%/images/aeotec/zwa019.png
 %%ETCDIR%%/images/aeotec/zwa021.png
 %%ETCDIR%%/images/airlinemechanical/zds-ud10.png
 %%ETCDIR%%/images/alfred/DB2.png
@@ -473,6 +486,7 @@ bin/ozw_config
 %%ETCDIR%%/images/august/asl-03.png
 %%ETCDIR%%/images/buffalo/hw-100v15a-zw.png
 %%ETCDIR%%/images/comfort/ucm.png
+%%ETCDIR%%/images/connecthome/CH_201.png
 %%ETCDIR%%/images/cooper/RF9501.png
 %%ETCDIR%%/images/cooper/RF9505-T.png
 %%ETCDIR%%/images/cooper/RF9517.png
@@ -489,10 +503,13 @@ bin/ozw_config
 %%ETCDIR%%/images/devolo/mt2647.png
 %%ETCDIR%%/images/devolo/mt2652.png
 %%ETCDIR%%/images/devolo/mt2756.png
+%%ETCDIR%%/images/devolo/mt2759.png
+%%ETCDIR%%/images/devolo/mt2760.png
 %%ETCDIR%%/images/devolo/mt2761.png
 %%ETCDIR%%/images/diehlcontrols/766366.png
 %%ETCDIR%%/images/dlink/dch-z110.png
 %%ETCDIR%%/images/dlink/dch-z120.png
+%%ETCDIR%%/images/dlink/dch-z210.png
 %%ETCDIR%%/images/dlink/dch-z510.png
 %%ETCDIR%%/images/dome/0002.png
 %%ETCDIR%%/images/dome/0085.png
@@ -519,6 +536,7 @@ bin/ozw_config
 %%ETCDIR%%/images/enerwave/zw20rm.png
 %%ETCDIR%%/images/enerwave/zwn-bpc.png
 %%ETCDIR%%/images/enerwave/zwnrsm1plus.png
+%%ETCDIR%%/images/enerwave/zwnrsm2plus.png
 %%ETCDIR%%/images/eurotronic/eur_airquality.png
 %%ETCDIR%%/images/eurotronic/eur_cometz.png
 %%ETCDIR%%/images/eurotronic/eur_spiritz.png
@@ -572,6 +590,7 @@ bin/ozw_config
 %%ETCDIR%%/images/fibaro/fgsd002.png
 %%ETCDIR%%/images/fibaro/fgt001.png
 %%ETCDIR%%/images/fibaro/fgwd111.png
+%%ETCDIR%%/images/fibaro/fgwds221.png
 %%ETCDIR%%/images/fibaro/fgwoe.png
 %%ETCDIR%%/images/fibaro/fgwpe.png
 %%ETCDIR%%/images/fibaro/fgwpfzw5.png
@@ -596,6 +615,7 @@ bin/ozw_config
 %%ETCDIR%%/images/ge/12727.png
 %%ETCDIR%%/images/ge/14282-plugin-switch.png
 %%ETCDIR%%/images/ge/14284.png
+%%ETCDIR%%/images/ge/14285.png
 %%ETCDIR%%/images/ge/14288-outlet.png
 %%ETCDIR%%/images/ge/14291-switch.png
 %%ETCDIR%%/images/ge/14292-toggle-switch.png
@@ -657,10 +677,11 @@ bin/ozw_config
 %%ETCDIR%%/images/homeseer/hs-ws200plus.png
 %%ETCDIR%%/images/homeseer/hsm200.png
 %%ETCDIR%%/images/honeywell/39348-ZW4005.png
-%%ETCDIR%%/images/honeywell/39348-zw4008.png
+%%ETCDIR%%/images/honeywell/39348-ZW4008.png
 %%ETCDIR%%/images/honeywell/39351-ZW3005.png
 %%ETCDIR%%/images/honeywell/39357-ZW3004.png
 %%ETCDIR%%/images/honeywell/39358-ZW4002.png
+%%ETCDIR%%/images/honeywell/39449-ZW4106.png
 %%ETCDIR%%/images/honeywell/lynx-touch-l5100.png
 %%ETCDIR%%/images/honeywell/th6320zw2003.png
 %%ETCDIR%%/images/honeywell/th8320zw1000.png
@@ -686,11 +707,13 @@ bin/ozw_config
 %%ETCDIR%%/images/inovelli/lzw40.png
 %%ETCDIR%%/images/inovelli/lzw41.png
 %%ETCDIR%%/images/inovelli/lzw42.png
+%%ETCDIR%%/images/inovelli/lzw60.png
 %%ETCDIR%%/images/inovelli/simple_module.png
 %%ETCDIR%%/images/iwatsu/ne-4ct-2p.png
 %%ETCDIR%%/images/iwatsu/ne-4ct.png
 %%ETCDIR%%/images/jasco/45601.png
 %%ETCDIR%%/images/kaipule/im20.png
+%%ETCDIR%%/images/kwikset/888.png
 %%ETCDIR%%/images/kwikset/914c.png
 %%ETCDIR%%/images/kwikset/smartcode.png
 %%ETCDIR%%/images/leviton/dz15s.png
@@ -702,11 +725,13 @@ bin/ozw_config
 %%ETCDIR%%/images/leviton/vrs15.png
 %%ETCDIR%%/images/linear/LB60Z-1.png
 %%ETCDIR%%/images/linear/WD500Z5-1.png
+%%ETCDIR%%/images/linear/WT00Z5-1.png
 %%ETCDIR%%/images/linear/gd00z-7.png
 %%ETCDIR%%/images/linear/ngd00z.png
 %%ETCDIR%%/images/logicsoft/ZDB5100.png
 %%ETCDIR%%/images/logicsoft/ZHC5010.png
 %%ETCDIR%%/images/mcohome/mh7h.png
+%%ETCDIR%%/images/mcohome/mh8fceu0803.png
 %%ETCDIR%%/images/mcohome/mhp220.png
 %%ETCDIR%%/images/mcohome/mhp511.png
 %%ETCDIR%%/images/merten/5044xx.png
@@ -714,6 +739,7 @@ bin/ozw_config
 %%ETCDIR%%/images/merten/506004.png
 %%ETCDIR%%/images/merten/508244.png
 %%ETCDIR%%/images/miyakawaelectric/me-d101.png
+%%ETCDIR%%/images/namron/1402756.png
 %%ETCDIR%%/images/nexia/db100z.png
 %%ETCDIR%%/images/nodon/asp3100SmartPlug.png
 %%ETCDIR%%/images/nodon/crc3100OctanRemote.png
@@ -723,6 +749,8 @@ bin/ozw_config
 %%ETCDIR%%/images/northq/nq92021.png
 %%ETCDIR%%/images/oomi/ft100.png
 %%ETCDIR%%/images/oomi/ft111.png
+%%ETCDIR%%/images/oomi/ft112.png
+%%ETCDIR%%/images/oomi/ft118.png
 %%ETCDIR%%/images/permundo/psc132zw.png
 %%ETCDIR%%/images/permundo/psc234zw.png
 %%ETCDIR%%/images/philio/pad02.png
@@ -759,6 +787,9 @@ bin/ozw_config
 %%ETCDIR%%/images/popp/solar-siren.png
 %%ETCDIR%%/images/popp/zweather.png
 %%ETCDIR%%/images/prowell/zw-702.png
+%%ETCDIR%%/images/q-light/q-light_puck.png
+%%ETCDIR%%/images/q-light/q-light_zerodim.png
+%%ETCDIR%%/images/q-light/q-light_zerodim_2pol.png
 %%ETCDIR%%/images/qees/reto-dimmer-plus.png
 %%ETCDIR%%/images/qees/reto-plugin-switch.png
 %%ETCDIR%%/images/qubino/ZMNHADx.png
@@ -769,11 +800,13 @@ bin/ozw_config
 %%ETCDIR%%/images/qubino/ZMNHIDx.png
 %%ETCDIR%%/images/qubino/ZMNHNDx.png
 %%ETCDIR%%/images/qubino/ZMNHODx.png
+%%ETCDIR%%/images/qubino/ZMNHQDx.png
 %%ETCDIR%%/images/qubino/ZMNHSDx.png
 %%ETCDIR%%/images/qubino/ZMNHTDx.png
 %%ETCDIR%%/images/qubino/ZMNHVDx.png
 %%ETCDIR%%/images/qubino/ZMNHWD1.png
 %%ETCDIR%%/images/qubino/ZMNHYDx.png
+%%ETCDIR%%/images/qubino/ZMNKADx.png
 %%ETCDIR%%/images/qubino/zmnhxdx.png
 %%ETCDIR%%/images/quby/qb2.png
 %%ETCDIR%%/images/rcs/em52-zw.png
@@ -788,6 +821,7 @@ bin/ozw_config
 %%ETCDIR%%/images/remotec/zxt-120.png
 %%ETCDIR%%/images/remotec/zxt-310.png
 %%ETCDIR%%/images/remotec/zxt-600.png
+%%ETCDIR%%/images/ring/PIR-SS.png
 %%ETCDIR%%/images/schlage/BE468ZP.png
 %%ETCDIR%%/images/schlage/BE469.png
 %%ETCDIR%%/images/schlage/BE469ZP.png
@@ -799,6 +833,7 @@ bin/ozw_config
 %%ETCDIR%%/images/shenzen_neo/nas-ab01z.png
 %%ETCDIR%%/images/shenzen_neo/nas-ds01z.png
 %%ETCDIR%%/images/shenzen_neo/nas-pd01z.png
+%%ETCDIR%%/images/shenzen_neo/nas-pd02z.png
 %%ETCDIR%%/images/shenzen_neo/nas-wr01z.png
 %%ETCDIR%%/images/shenzen_neo/nas-ws02z.png
 %%ETCDIR%%/images/simon/10002034-13X.png
@@ -815,6 +850,8 @@ bin/ozw_config
 %%ETCDIR%%/images/sunricher/srzv9101sachpeu.png
 %%ETCDIR%%/images/sunricher/zv9101.png
 %%ETCDIR%%/images/swiid/swiidinter.png
+%%ETCDIR%%/images/technisat/03009496.png
+%%ETCDIR%%/images/technisat/03009499.png
 %%ETCDIR%%/images/telldus/tzdw100.png
 %%ETCDIR%%/images/telldus/tzwp100.png
 %%ETCDIR%%/images/telldus/tzwp102.png
@@ -868,6 +905,7 @@ bin/ozw_config
 %%ETCDIR%%/images/widom/WDS2.png
 %%ETCDIR%%/images/widom/WSP.png
 %%ETCDIR%%/images/widom/WTED.png
+%%ETCDIR%%/images/wink/wnk-mot1.png
 %%ETCDIR%%/images/zipato/HS1CA-Z.png
 %%ETCDIR%%/images/zipato/HS1CG-Z.png
 %%ETCDIR%%/images/zipato/HS1SA-Z.png
@@ -887,7 +925,10 @@ bin/ozw_config
 %%ETCDIR%%/images/zooz/zen20.png
 %%ETCDIR%%/images/zooz/zen20v2.png
 %%ETCDIR%%/images/zooz/zen21.png
+%%ETCDIR%%/images/zooz/zen21v3.png
 %%ETCDIR%%/images/zooz/zen22.png
+%%ETCDIR%%/images/zooz/zen23v3.png
+%%ETCDIR%%/images/zooz/zen24v2.png
 %%ETCDIR%%/images/zooz/zen26.png
 %%ETCDIR%%/images/zooz/zen27.png
 %%ETCDIR%%/images/zooz/zen30.png
@@ -907,6 +948,7 @@ bin/ozw_config
 %%ETCDIR%%/images/zwave.me/popp_kfob-c.png
 %%ETCDIR%%/images/zwave.me/zme_raz5.png
 %%ETCDIR%%/images/zwave.me/zweather.png
+%%ETCDIR%%/images/zwp/PA-100.png
 %%ETCDIR%%/images/zwp/WD-100.png
 %%ETCDIR%%/ingersoll/dwzwave1.xml
 %%ETCDIR%%/inovelli/lzw30-sn.xml
@@ -916,6 +958,7 @@ bin/ozw_config
 %%ETCDIR%%/inovelli/lzw40.xml
 %%ETCDIR%%/inovelli/lzw41.xml
 %%ETCDIR%%/inovelli/lzw42.xml
+%%ETCDIR%%/inovelli/lzw60.xml
 %%ETCDIR%%/inovelli/nzw1201.xml
 %%ETCDIR%%/inovelli/nzw30.xml
 %%ETCDIR%%/inovelli/nzw31.xml
@@ -932,6 +975,7 @@ bin/ozw_config
 %%ETCDIR%%/jasco/45601.xml
 %%ETCDIR%%/kaipule/im20.xml
 %%ETCDIR%%/kaipule/ix32.xml
+%%ETCDIR%%/kwikset/888.xml
 %%ETCDIR%%/kwikset/914c.xml
 %%ETCDIR%%/kwikset/smartcode.xml
 %%ETCDIR%%/leviton/dz15s.xml
@@ -957,6 +1001,7 @@ bin/ozw_config
 %%ETCDIR%%/linear/WD500Z5-1.xml
 %%ETCDIR%%/linear/WS15Z-1.xml
 %%ETCDIR%%/linear/WT00Z-1.xml
+%%ETCDIR%%/linear/WT00Z5-1.xml
 %%ETCDIR%%/linear/gd00z-7.xml
 %%ETCDIR%%/linear/ngd00z.xml
 %%ETCDIR%%/logicsoft/ZDB5100.xml
@@ -967,6 +1012,7 @@ bin/ozw_config
 %%ETCDIR%%/mcohome/a8-9.xml
 %%ETCDIR%%/mcohome/mh7h.xml
 %%ETCDIR%%/mcohome/mh8fceu.xml
+%%ETCDIR%%/mcohome/mh8fceu0803.xml
 %%ETCDIR%%/mcohome/mh9co2.xml
 %%ETCDIR%%/mcohome/mhp210.xml
 %%ETCDIR%%/mcohome/mhp220.xml
@@ -1047,6 +1093,9 @@ bin/ozw_config
 %%ETCDIR%%/popp/solar-siren.xml
 %%ETCDIR%%/popp/zweather.xml
 %%ETCDIR%%/prowell/zw-702.xml
+%%ETCDIR%%/q-light/q-light_puck.xml
+%%ETCDIR%%/q-light/q-light_zerodim.xml
+%%ETCDIR%%/q-light/q-light_zerodim_2pol.xml
 %%ETCDIR%%/qees/reto-dimmer-plus.xml
 %%ETCDIR%%/qees/reto-plugin-switch.xml
 %%ETCDIR%%/qubino/ZMNHAA2.xml
@@ -1096,6 +1145,7 @@ bin/ozw_config
 %%ETCDIR%%/remotec/zxt-120.xml
 %%ETCDIR%%/remotec/zxt-310.xml
 %%ETCDIR%%/remotec/zxt-600.xml
+%%ETCDIR%%/ring/PIR-SS.xml
 %%ETCDIR%%/schlage/BE468.xml
 %%ETCDIR%%/schlage/BE468ZP.xml
 %%ETCDIR%%/schlage/BE469.xml
@@ -1134,6 +1184,8 @@ bin/ozw_config
 %%ETCDIR%%/sunricher/zv9101.xml
 %%ETCDIR%%/swiid/swiidinter.xml
 %%ETCDIR%%/swiid/swiidplug.xml
+%%ETCDIR%%/technisat/03009496.xml
+%%ETCDIR%%/technisat/03009499.xml
 %%ETCDIR%%/telldus/tzdw100.xml
 %%ETCDIR%%/telldus/tzwp100.xml
 %%ETCDIR%%/telldus/tzwp102.xml
@@ -1202,6 +1254,7 @@ bin/ozw_config
 %%ETCDIR%%/widom/WDS2.xml
 %%ETCDIR%%/widom/WSP.xml
 %%ETCDIR%%/widom/WTED.xml
+%%ETCDIR%%/wink/wnk-mot1.xml
 %%ETCDIR%%/zipato/MiniKeypad.xml
 %%ETCDIR%%/zipato/RGBBulb.xml
 %%ETCDIR%%/zipato/RGBBulb2.xml
@@ -1216,11 +1269,13 @@ bin/ozw_config
 %%ETCDIR%%/zooz/zen20.xml
 %%ETCDIR%%/zooz/zen20v2.xml
 %%ETCDIR%%/zooz/zen21.xml
-%%ETCDIR%%/zooz/zen21v2.xml
+%%ETCDIR%%/zooz/zen21v3.xml
 %%ETCDIR%%/zooz/zen22.xml
 %%ETCDIR%%/zooz/zen22v2.xml
 %%ETCDIR%%/zooz/zen23.xml
+%%ETCDIR%%/zooz/zen23v3.xml
 %%ETCDIR%%/zooz/zen24.xml
+%%ETCDIR%%/zooz/zen24v2.xml
 %%ETCDIR%%/zooz/zen25.xml
 %%ETCDIR%%/zooz/zen26.xml
 %%ETCDIR%%/zooz/zen27.xml
