@@ -166,6 +166,7 @@ bin/ozw_config
 %%ETCDIR%%/dome/0088.xml
 %%ETCDIR%%/dome/0101.xml
 %%ETCDIR%%/dome/0201.xml
+%%ETCDIR%%/dome/dmex1.xml
 %%ETCDIR%%/domitech/zb22uk.xml
 %%ETCDIR%%/domitech/ze27eu.xml
 %%ETCDIR%%/domux/DX1CA-Z.xml
@@ -303,6 +304,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/14292-toggle-switch.xml
 %%ETCDIR%%/ge/14294-dimmer.xml
 %%ETCDIR%%/ge/14295-dimmer-toggle.xml
+%%ETCDIR%%/ge/14298.xml
 %%ETCDIR%%/ge/26931-motion-switch.xml
 %%ETCDIR%%/ge/26933-motion-dimmer.xml
 %%ETCDIR%%/ge/28167-plugin-dimmer.xml
@@ -310,6 +312,7 @@ bin/ozw_config
 %%ETCDIR%%/ge/45604.xml
 %%ETCDIR%%/ge/46201-switch.xml
 %%ETCDIR%%/ge/46203-dimmer.xml
+%%ETCDIR%%/ge/46204-dimmer-toggle.xml
 %%ETCDIR%%/ge/dimmer.xml
 %%ETCDIR%%/ge/dimmer_module.xml
 %%ETCDIR%%/ge/hinge-pin.xml
@@ -325,6 +328,7 @@ bin/ozw_config
 %%ETCDIR%%/gr/grb3.xml
 %%ETCDIR%%/graber/brz1.xml
 %%ETCDIR%%/graber/csz1.xml
+%%ETCDIR%%/graber/mcz1.xml
 %%ETCDIR%%/graber/rsz1.xml
 %%ETCDIR%%/graber/vcz1.xml
 %%ETCDIR%%/greenwave/gs1110-1-gr-1.xml
@@ -516,6 +520,7 @@ bin/ozw_config
 %%ETCDIR%%/images/dome/0086.png
 %%ETCDIR%%/images/dome/0088.png
 %%ETCDIR%%/images/dome/0201.png
+%%ETCDIR%%/images/dome/dmex1.png
 %%ETCDIR%%/images/domitech/zb22uk.png
 %%ETCDIR%%/images/domitech/ze27eu.png
 %%ETCDIR%%/images/dragontech/wd-100.png
@@ -621,6 +626,7 @@ bin/ozw_config
 %%ETCDIR%%/images/ge/14292-toggle-switch.png
 %%ETCDIR%%/images/ge/14294-dimmer.png
 %%ETCDIR%%/images/ge/14295-dimmer-toggle.png
+%%ETCDIR%%/images/ge/14298.png
 %%ETCDIR%%/images/ge/26931-motion-switch.png
 %%ETCDIR%%/images/ge/26933-motion-dimmer.png
 %%ETCDIR%%/images/ge/28167-plugin-dimmer.png
@@ -628,6 +634,7 @@ bin/ozw_config
 %%ETCDIR%%/images/ge/45604.png
 %%ETCDIR%%/images/ge/46201-switch.png
 %%ETCDIR%%/images/ge/46203-dimmer.png
+%%ETCDIR%%/images/ge/46204-dimmer-toggle.png
 %%ETCDIR%%/images/ge/dimmer.png
 %%ETCDIR%%/images/ge/dimmer_module.png
 %%ETCDIR%%/images/ge/hinge-pin.png
@@ -640,6 +647,7 @@ bin/ozw_config
 %%ETCDIR%%/images/gr/gr105n.png
 %%ETCDIR%%/images/graber/brz1.png
 %%ETCDIR%%/images/graber/csz1.png
+%%ETCDIR%%/images/graber/mcz1.png
 %%ETCDIR%%/images/graber/rsz1.png
 %%ETCDIR%%/images/graber/vcz1.png
 %%ETCDIR%%/images/greenwave/gs1110-1-gr-1.png
@@ -704,6 +712,7 @@ bin/ozw_config
 %%ETCDIR%%/images/inovelli/lzw30.png
 %%ETCDIR%%/images/inovelli/lzw31-sn.png
 %%ETCDIR%%/images/inovelli/lzw31.png
+%%ETCDIR%%/images/inovelli/lzw36.png
 %%ETCDIR%%/images/inovelli/lzw40.png
 %%ETCDIR%%/images/inovelli/lzw41.png
 %%ETCDIR%%/images/inovelli/lzw42.png
@@ -715,13 +724,16 @@ bin/ozw_config
 %%ETCDIR%%/images/kaipule/im20.png
 %%ETCDIR%%/images/kwikset/888.png
 %%ETCDIR%%/images/kwikset/914c.png
+%%ETCDIR%%/images/kwikset/916.jpg
 %%ETCDIR%%/images/kwikset/smartcode.png
 %%ETCDIR%%/images/leviton/dz15s.png
 %%ETCDIR%%/images/leviton/dz6hd.png
+%%ETCDIR%%/images/leviton/dzpa1.png
 %%ETCDIR%%/images/leviton/dzpd3.png
 %%ETCDIR%%/images/leviton/vrcs2.png
 %%ETCDIR%%/images/leviton/vrf01.png
 %%ETCDIR%%/images/leviton/vri10.png
+%%ETCDIR%%/images/leviton/vrpa1.png
 %%ETCDIR%%/images/leviton/vrs15.png
 %%ETCDIR%%/images/linear/LB60Z-1.png
 %%ETCDIR%%/images/linear/WD500Z5-1.png
@@ -741,6 +753,7 @@ bin/ozw_config
 %%ETCDIR%%/images/miyakawaelectric/me-d101.png
 %%ETCDIR%%/images/namron/1402756.png
 %%ETCDIR%%/images/nexia/db100z.png
+%%ETCDIR%%/images/nexia/th100nx.png
 %%ETCDIR%%/images/nodon/asp3100SmartPlug.png
 %%ETCDIR%%/images/nodon/crc3100OctanRemote.png
 %%ETCDIR%%/images/nodon/crc360xSofremote.png
@@ -859,6 +872,7 @@ bin/ozw_config
 %%ETCDIR%%/images/thermofloor/Heatit-Z-Push-button-8-white.png
 %%ETCDIR%%/images/thermofloor/heatit021.png
 %%ETCDIR%%/images/thermofloor/heatit056.png
+%%ETCDIR%%/images/thermofloor/heatit20a.png
 %%ETCDIR%%/images/thermofloor/heatit_zdim.png
 %%ETCDIR%%/images/trane/TZEMT400AB32MAA.png
 %%ETCDIR%%/images/trane/TZEMT400BB32MAA.png
@@ -906,6 +920,7 @@ bin/ozw_config
 %%ETCDIR%%/images/widom/WSP.png
 %%ETCDIR%%/images/widom/WTED.png
 %%ETCDIR%%/images/wink/wnk-mot1.png
+%%ETCDIR%%/images/wink/wnk-sir1p.png
 %%ETCDIR%%/images/zipato/HS1CA-Z.png
 %%ETCDIR%%/images/zipato/HS1CG-Z.png
 %%ETCDIR%%/images/zipato/HS1SA-Z.png
@@ -955,6 +970,7 @@ bin/ozw_config
 %%ETCDIR%%/inovelli/lzw30.xml
 %%ETCDIR%%/inovelli/lzw31-sn.xml
 %%ETCDIR%%/inovelli/lzw31.xml
+%%ETCDIR%%/inovelli/lzw36.xml
 %%ETCDIR%%/inovelli/lzw40.xml
 %%ETCDIR%%/inovelli/lzw41.xml
 %%ETCDIR%%/inovelli/lzw42.xml
@@ -976,10 +992,13 @@ bin/ozw_config
 %%ETCDIR%%/kaipule/im20.xml
 %%ETCDIR%%/kaipule/ix32.xml
 %%ETCDIR%%/kwikset/888.xml
+%%ETCDIR%%/kwikset/910.xml
 %%ETCDIR%%/kwikset/914c.xml
+%%ETCDIR%%/kwikset/916.xml
 %%ETCDIR%%/kwikset/smartcode.xml
 %%ETCDIR%%/leviton/dz15s.xml
 %%ETCDIR%%/leviton/dz6hd.xml
+%%ETCDIR%%/leviton/dzpa1.xml
 %%ETCDIR%%/leviton/dzpd3.xml
 %%ETCDIR%%/leviton/rzi10.xml
 %%ETCDIR%%/leviton/vrcpg.xml
@@ -989,6 +1008,7 @@ bin/ozw_config
 %%ETCDIR%%/leviton/vrf01.xml
 %%ETCDIR%%/leviton/vri06.xml
 %%ETCDIR%%/leviton/vri10.xml
+%%ETCDIR%%/leviton/vrpa1.xml
 %%ETCDIR%%/leviton/vrs15.xml
 %%ETCDIR%%/linear/GC-TBZ48.xml
 %%ETCDIR%%/linear/LB60Z-1.xml
@@ -1032,6 +1052,7 @@ bin/ozw_config
 %%ETCDIR%%/miyakawaelectric/me-d101.xml
 %%ETCDIR%%/namron/1402756.xml
 %%ETCDIR%%/nexia/db100z.xml
+%%ETCDIR%%/nexia/th100nx.xml
 %%ETCDIR%%/nodon/asp3100SmartPlug.xml
 %%ETCDIR%%/nodon/crc3100OctanRemote.xml
 %%ETCDIR%%/nodon/crc360xSofremote.xml
@@ -1193,6 +1214,7 @@ bin/ozw_config
 %%ETCDIR%%/thermofloor/heatit-zdim.xml
 %%ETCDIR%%/thermofloor/heatit021.xml
 %%ETCDIR%%/thermofloor/heatit056.xml
+%%ETCDIR%%/thermofloor/heatit20a.xml
 %%ETCDIR%%/thermofloor/heatitz8.xml
 %%ETCDIR%%/trane/TZEMT400AB32MAA.xml
 %%ETCDIR%%/trane/TZEMT400BB32MAA.xml
@@ -1255,6 +1277,7 @@ bin/ozw_config
 %%ETCDIR%%/widom/WSP.xml
 %%ETCDIR%%/widom/WTED.xml
 %%ETCDIR%%/wink/wnk-mot1.xml
+%%ETCDIR%%/wink/wnk-sir1p.xml
 %%ETCDIR%%/zipato/MiniKeypad.xml
 %%ETCDIR%%/zipato/RGBBulb.xml
 %%ETCDIR%%/zipato/RGBBulb2.xml
