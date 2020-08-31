@@ -374,6 +374,7 @@ bin/ozw_config
 %%ETCDIR%%/homeseer/hsm100.xml
 %%ETCDIR%%/homeseer/hsm200.xml
 %%ETCDIR%%/homeseer/ztroller.xml
+%%ETCDIR%%/honeywell/2681-plugin-dimmer.xml
 %%ETCDIR%%/honeywell/39348-ZW4005.xml
 %%ETCDIR%%/honeywell/39348-zw4008.xml
 %%ETCDIR%%/honeywell/39351-ZW3005.xml
@@ -684,6 +685,7 @@ bin/ozw_config
 %%ETCDIR%%/images/homeseer/hs-ws100plus.png
 %%ETCDIR%%/images/homeseer/hs-ws200plus.png
 %%ETCDIR%%/images/homeseer/hsm200.png
+%%ETCDIR%%/images/honeywell/2681-plugin-dimmer.png
 %%ETCDIR%%/images/honeywell/39348-ZW4005.png
 %%ETCDIR%%/images/honeywell/39348-ZW4008.png
 %%ETCDIR%%/images/honeywell/39351-ZW3005.png
@@ -848,7 +850,9 @@ bin/ozw_config
 %%ETCDIR%%/images/shenzen_neo/nas-pd01z.png
 %%ETCDIR%%/images/shenzen_neo/nas-pd02z.png
 %%ETCDIR%%/images/shenzen_neo/nas-wr01z.png
+%%ETCDIR%%/images/shenzen_neo/nas-wr01ze.png
 %%ETCDIR%%/images/shenzen_neo/nas-ws02z.png
+%%ETCDIR%%/images/shenzen_saykey/SK-3007-05.png
 %%ETCDIR%%/images/simon/10002034-13X.png
 %%ETCDIR%%/images/smartthings/pgc401m.png
 %%ETCDIR%%/images/smartthings/sth-eth200.png
@@ -872,6 +876,7 @@ bin/ozw_config
 %%ETCDIR%%/images/thermofloor/Heatit-Z-Push-button-8-white.png
 %%ETCDIR%%/images/thermofloor/heatit021.png
 %%ETCDIR%%/images/thermofloor/heatit056.png
+%%ETCDIR%%/images/thermofloor/heatit058.png
 %%ETCDIR%%/images/thermofloor/heatit20a.png
 %%ETCDIR%%/images/thermofloor/heatit_zdim.png
 %%ETCDIR%%/images/trane/TZEMT400AB32MAA.png
@@ -1188,6 +1193,7 @@ bin/ozw_config
 %%ETCDIR%%/shenzen_neo/nas-wr01z.xml
 %%ETCDIR%%/shenzen_neo/nas-wr01ze.xml
 %%ETCDIR%%/shenzen_neo/nas-ws02z.xml
+%%ETCDIR%%/shenzen_saykey/sk-3007-05.xml
 %%ETCDIR%%/simon/10002034-13X.xml
 %%ETCDIR%%/simon/10002041-13X.xml
 %%ETCDIR%%/smartthings/pgc401m.xml
@@ -1214,6 +1220,7 @@ bin/ozw_config
 %%ETCDIR%%/thermofloor/heatit-zdim.xml
 %%ETCDIR%%/thermofloor/heatit021.xml
 %%ETCDIR%%/thermofloor/heatit056.xml
+%%ETCDIR%%/thermofloor/heatit058.xml
 %%ETCDIR%%/thermofloor/heatit20a.xml
 %%ETCDIR%%/thermofloor/heatitz8.xml
 %%ETCDIR%%/trane/TZEMT400AB32MAA.xml
