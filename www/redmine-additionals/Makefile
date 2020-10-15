@@ -11,7 +11,7 @@ COMMENT=        Redmine Additionals Plugin
 
 LICENSE=        GPLv2
 
-RUN_DEPENDS=	rubygem-deface>=1.5:devel/rubygem-deface \
+RUN_DEPENDS=	rubygem-deface>=1.5:devel/rubygem-deface-rails52 \
 		rubygem-gemoji>=3:textproc/rubygem-gemoji
 # GEM invisible_captcha et slim-rails a faire
 
