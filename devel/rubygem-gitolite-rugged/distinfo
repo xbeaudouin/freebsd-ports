@@ -1,3 +1,3 @@
-TIMESTAMP = 1602768418
-SHA256 (jbox-web-gitolite-rugged-1.4.0_GH0.tar.gz) = 38e9ab8def8f20c59d2801848ea6195a1d5b4ea1b40097ae99024a82c5f3fc54
-SIZE (jbox-web-gitolite-rugged-1.4.0_GH0.tar.gz) = 43779
+TIMESTAMP = 1602768732
+SHA256 (rubygem/gitolite-rugged-1.2.2.gem) = 2df0dfa6bd021b024aa379d00e73c6f8a5aaa3887b575da71981dce8e3b8508a
+SIZE (rubygem/gitolite-rugged-1.2.2.gem) = 44032
