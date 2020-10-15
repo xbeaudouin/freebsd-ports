@@ -12,21 +12,21 @@ COMMENT=        Redmine Git Hosting Plugin
 LICENSE=        MIT
 
 RUN_DEPENDS=	rubygem-gitlab-grack>=2.0:www/rubygem-gitlab-grack \
-		rubygem-dalli:databases/rubygem-dalli \
-		rubygem-redis:databases/rubygem-redis \
-		rubygem-hiredis:databases/rubygem-hiredis \
-		rubygem-escape_utils:textproc/rubygem-escape_utils \
-		rubygem-html-pipeline:textproc/rubygem-html-pipeline \
-		rubygem-rinku:www/rubygem-rinku \
-		rubygem-github-markup:textproc/rubygem-github-markup \
-		rubygem-redcloth:www/rubygem-redcloth \
-		rubygem-org-ruby:textproc/rubygem-org-ruby \
-		rubygem-creole:textproc/rubygem-creole \
-		rubygem-asciidoctor:textproc/rubygem-asciidoctor \
-		rubygem-sidekiq:devel/rubygem-sidekiq \
-		rubygem-sshkey:security/rubygem-sshkey \
-		rubygem-gitolite-rugged:devel/rubygem-rugged \
-		rubygem-rack-parser:www/rubygem-rack-parser
+		rubygem-dalli>=0:databases/rubygem-dalli \
+		rubygem-redis>=0:databases/rubygem-redis \
+		rubygem-hiredis>=0:databases/rubygem-hiredis \
+		rubygem-escape_utils>=0:textproc/rubygem-escape_utils \
+		rubygem-html-pipeline>=0:textproc/rubygem-html-pipeline \
+		rubygem-rinku>=0:www/rubygem-rinku \
+		rubygem-github-markup>=0:textproc/rubygem-github-markup \
+		rubygem-redcloth>=0:www/rubygem-redcloth \
+		rubygem-org-ruby>=0:textproc/rubygem-org-ruby \
+		rubygem-creole>=0:textproc/rubygem-creole \
+		rubygem-asciidoctor>=0:textproc/rubygem-asciidoctor \
+		rubygem-sidekiq>=0:devel/rubygem-sidekiq \
+		rubygem-sshkey>=0:security/rubygem-sshkey \
+		rubygem-gitolite-rugged>=0:devel/rubygem-rugged \
+		rubygem-rack-parser>=0:www/rubygem-rack-parser
 
 NO_ARCH=        yes
 
