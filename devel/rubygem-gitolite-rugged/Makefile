@@ -4,6 +4,7 @@
 PORTNAME=	gitolite-rugged
 PORTVERSION=	1.4.0
 CATEGORIES=	devel rubygems
+PKGNAMEPREFIX=	rubygem-
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Ruby Interface to manage Gitolite
