@@ -25,7 +25,7 @@ RUN_DEPENDS=	rubygem-gitlab-grack>=2.0:www/rubygem-gitlab-grack \
 		rubygem-asciidoctor>=0:textproc/rubygem-asciidoctor \
 		rubygem-sidekiq>=0:devel/rubygem-sidekiq \
 		rubygem-sshkey>=0:security/rubygem-sshkey \
-		rubygem-gitolite-rugged>=0:devel/rubygem-rugged \
+		rubygem-gitolite-rugged>=0:devel/rubygem-gitolite-rugged \
 		rubygem-rack-parser>=0:www/rubygem-rack-parser
 
 NO_ARCH=        yes
