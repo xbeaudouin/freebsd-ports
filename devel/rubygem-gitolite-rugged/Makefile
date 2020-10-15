@@ -12,8 +12,7 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-rugged>=0:devel/rubygem-rugged
 
-USES=		gem
-
+#USES=		gem
 USE_GITHUB=	yes
 GH_ACCOUNT=	jbox-web
 GH_PROJECT=	gitolite-rugged
