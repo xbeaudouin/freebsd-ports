@@ -790,6 +790,7 @@ domoticz/dzVents/documentation/README.md
 domoticz/dzVents/documentation/README.wiki
 domoticz/dzVents/documentation/dzvents-smoothing.png
 domoticz/dzVents/documentation/history.md
+domoticz/dzVents/documentation/history.wiki
 domoticz/dzVents/documentation/pandoc.md
 domoticz/dzVents/runtime/Camera.lua
 domoticz/dzVents/runtime/CustomEvent.lua
@@ -849,6 +850,7 @@ domoticz/dzVents/runtime/device-adapters/temperature_humidity_barometer_device.l
 domoticz/dzVents/runtime/device-adapters/temperature_humidity_device.lua
 domoticz/dzVents/runtime/device-adapters/text_device.lua
 domoticz/dzVents/runtime/device-adapters/thermostat_setpoint_device.lua
+domoticz/dzVents/runtime/device-adapters/thermostat_type_3_device.lua
 domoticz/dzVents/runtime/device-adapters/uv_device.lua
 domoticz/dzVents/runtime/device-adapters/visibility_device.lua
 domoticz/dzVents/runtime/device-adapters/voltage_device.lua
