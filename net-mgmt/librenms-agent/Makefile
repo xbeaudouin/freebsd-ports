@@ -2,7 +2,7 @@
 # $FreeBSD: $
 
 PORTNAME=	librenms-agent
-PORTVERSION=	0.4
+PORTVERSION=	0.5
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	kiwi@oav.net
@@ -15,7 +15,7 @@ NO_ARCH=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	librenms
 GH_PROJECT=	librenms-agent
-GH_TAGNAME=	8481de5
+GH_TAGNAME=	9be1b41
 
 USES+=		python:3.7
 
