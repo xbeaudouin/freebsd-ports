@@ -2,7 +2,7 @@
 
 PORTNAME=       redmine-pro
 PORTVERSION=    1.0.0
-CATEGORIES=     www
+CATEGORIES=     hotcity
 MASTER_SITES=	http://wpad.home.oav.net/kiwi/
 
 MAINTAINER=     xbeaudouin@hotcity.lu
