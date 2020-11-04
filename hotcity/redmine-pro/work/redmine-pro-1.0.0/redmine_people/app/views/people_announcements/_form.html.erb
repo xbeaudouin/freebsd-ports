@@ -1,0 +1,22 @@
+<%= error_messages_for @note %>
+<p>
+  <%= f.text_area :description, :cols => 80, :rows => 15, :required => true, :class => 'wiki-edit', :id => 'announcement_description' %>
+  <%= wikitoolbar_for 'announcement_description' %>
+</p>
+<p>
+  <%= f.select :frequency, PeopleAnnouncement::FREQUENCY.map{ |fq| [l("frequency_#{fq}"), fq] } %>
+</p>
+<p>
+  <%= f.text_field :start_date, :class => 'datepicker', :type => Redmine::VERSION.to_s >= '3.3' ? 'date' : 'text'  %>
+  <%= calendar_for('people_announcement_start_date') %>
+</p>
+<p>
+  <%= f.text_field :end_date, :type => Redmine::VERSION.to_s >= '3.3' ? 'date' : 'text' , :required => true %>
+  <%= calendar_for('people_announcement_end_date') %>
+</p>
+<p>
+  <%= f.check_box :active %>
+</p>
+<p>
+  <%= f.select :kind, PeopleAnnouncement::KIND.map{ |k| [l("announcement_kind_#{k}"), k] }, :include_blank => true %>
+</p>

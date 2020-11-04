@@ -1,0 +1,28 @@
+<% if invoice_templates.any? %>
+  <table class="list">
+    <thead><tr>
+    <th><%= l(:field_name) %></th>
+    <th><%= l(:field_description) %></th>
+    <th><%= l(:field_is_for_all) %></th>
+    <th></th>
+    </tr></thead>
+    <tbody>
+  <% invoice_templates.each do |invoice_template| %>
+    <tr class="<%= cycle 'odd', 'even' %>">
+      <td class="name"><%= invoice_template.name  %></td>
+      <td class="description"><em class="info"><%= invoice_template.description.to_s.truncate(250) %></em></td>
+      <td class="tick"><%= checked_image invoice_template.project.blank? %></td>
+      <td class="buttons">
+        <%= link_to l(:label_preview), preview_invoice_template_path(invoice_template), :class => 'icon icon-pdf' if Invoice.visible.any? %>
+        <% if User.current.allowed_to?(:manage_invoices, @project, :global => true) %>
+          <%= link_to l(:button_edit), edit_invoice_template_path(invoice_template, :project_id => @project), :class => 'icon icon-edit' %>
+          <%= delete_link invoice_template_path(invoice_template, :project_id => @project) %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+      </tbody>
+  </table>
+<% else %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>

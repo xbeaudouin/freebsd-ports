@@ -1,0 +1,6 @@
+<%= link_to "", questions_votes_path(:source_id => question_item, :source_type => question_item.class.name.underscore, :up => true), :class => "vote-up#{allow_voting?(question_item) ? '' : ' disabled'}", :remote => true, :disabled => !allow_voting?(question_item) %>
+<span class="vote-count"><%= question_item.weighted_score %></span>
+<%= link_to "", questions_votes_path(:source_id => question_item, :source_type => question_item.class.name.underscore, :down => true), :class => "vote-down#{allow_voting?(question_item) ? '' : ' disabled'}", :remote => true, :disabled => !allow_voting?(question_item) %>
+<% if question_item.is_a?(QuestionsAnswer) && question_item.accepted? %>
+<span class="accepted"></span>
+<% end %>

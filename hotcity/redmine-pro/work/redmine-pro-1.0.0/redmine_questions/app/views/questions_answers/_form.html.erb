@@ -1,0 +1,15 @@
+<%= error_messages_for @answer %>
+<div class="box">
+  <% if @answer.safe_attribute?('accepted') %>
+    <div class="accepted_answer">
+        <%= f.check_box :accepted, :no_label => true %> <%= f.label :accepted, l(:label_questions_accept) %>
+    </div>
+  <% end %>
+  <%= f.text_area :content, :cols => 80, :rows => 15, :class => 'wiki-edit', :id => 'answer_content', :no_label => true %>
+  <%= wikitoolbar_for 'answer_content' %>
+
+  <p>
+    <%= l(:label_attachment_plural) %><br />
+    <%= render :partial => 'attachments/form', :locals => {:container => @answer} %>
+  </p>
+</div>

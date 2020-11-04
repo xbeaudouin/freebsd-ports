@@ -1,0 +1,11 @@
+var $driveInputs = $('#drive-inputs');
+var sharedFileFields = <%= raw_json shared_file_fields(@shared_files) %>;
+jQuery.each(sharedFileFields, function (key, value) {
+  var $sharedFileField = $driveInputs.find('#shared-file-field-' + key);
+  if ($sharedFileField.lenght > 0) {
+    $sharedFileField.find('.destroy-value').val(false);
+    $sharedFileField.show();
+  } else {
+    $driveInputs.append(value);
+  }
+});

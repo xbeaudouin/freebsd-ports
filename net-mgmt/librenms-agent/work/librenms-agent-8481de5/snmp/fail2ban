@@ -1,0 +1,238 @@
+#!/usr/bin/env perl
+# Author: Zane C. Bowers-Hadley <vvelox@vvelox.net>
+
+# https://docs.librenms.org/#Extensions/Applications/#fail2ban
+# See the above for additional information not documented in the POD below.
+
+=head1 DESCRIPTION
+
+A basic SNMP extend for polling fail2ban for LibreNMS.
+
+=head1 SWITCHES
+
+=head2 -c
+
+Prints the cache file.
+
+=head2 -C <file>
+
+Uses the specified file as the cache file.
+
+If not specified, /var/cache/fail2ban is used.
+
+=head2 -f <fail2ban-client>
+
+This is the path to the fail2ban-client if needed.
+
+If not specified, "/usr/bin/env fail2ban-client" is used.
+
+=head2 -p
+
+Pretty prints the JSON.
+
+=head2 -u
+
+Updates the cache.
+
+=head2 -U
+
+When used with -c, allows attempted cache updating if the file is older
+than 360 seconds or does not exist.
+
+=head1 CRON EXAMPLE
+
+    */3 * * * * /etc/snmp/fail2ban -u
+
+or
+
+    */3 * * * * /etc/snmp/fail2ban -u -C /foo/bar/cache
+
+3 minutes is used as LibreNMS runs every 5 minutes, this helps ensure it
+is most likely up to date in between runs.
+
+
+=head1 SNMPD SETUP EXAMPLES
+
+    extend fail2ban /etc/snmp/fail2ban
+
+The above will set it up for basic uncached usage.
+
+This is likely fine for most configurations.
+
+    extend fail2ban /etc/snmp/fail2ban -c
+
+Will use the cache.
+
+    extend fail2ban /etc/snmp/fail2ban -c -U
+
+Will use the cache and update if needed.
+
+    extend fail2ban /etc/snmp/fail2ban -f /foo/bin/fail2ban-client
+
+Run it with fail2ban being installed under /foo the the path to
+fail2ban-cleint being /foo/bin/fail2ban-client.
+
+=cut
+
+use strict;
+use warnings;
+use Getopt::Std;
+use JSON;
+
+#fail2ban-client path
+my $f2bc="/usr/bin/env fail2ban-client";
+
+#the path to the cache
+my $cache='/var/cache/fail2ban';
+
+$Getopt::Std::STANDARD_HELP_VERSION = 1;
+sub main::VERSION_MESSAGE {
+        print "fail2ban-client SNMP extend 1.0.0\n";
+};
+
+sub main::HELP_MESSAGE {
+	print "\n".
+		"-c   Print from the cache.\n".
+		"-C <file>   Use this as the cache file.\n".
+		"-f <fail2ban-client>   The fail2ban-client path if needed.".
+		"-p   Pretty prints the JSON.\n".
+		"-u   Update the cache, '".$cache."'\n".
+		"-U   When used with -c, allow update of the cache file if it does not exist or is older than 360 seconds.".
+		"\n".
+		"Unless -c or -u is given, it just talks to fail2ban-client and prints the results.\n";
+}
+
+#generats stats
+sub stats{
+	my %toReturn;
+	$toReturn{data}={};
+	$toReturn{data}{total}=0; # total number in jails
+	$toReturn{data}{jails}={}; # each jail
+	$toReturn{error}=0; # error code, 0 if good
+	$toReturn{errorString}=''; # detailed description of any errors
+	$toReturn{version}='1'; # format version of the returned data
+
+	#gets a list of jails
+	my $jailsOutput=`$f2bc status`;
+	$toReturn{error}=$?;
+	
+	if ( $? == -1){
+		$toReturn{errorString}='failed to run fail2ban-client';
+	}
+	elsif ($? & 127) {
+        $toReturn{errorString}= sprintf "fail2ban-client died with signal %d, %s coredump\n",
+            ($? & 127),  ($? & 128) ? 'with' : 'without';
+    }
+    else {
+		$toReturn{error}=$? >> 8;
+		$toReturn{errorString}="fail2ban-client exited with ".$toReturn{error};
+    }
+
+	if ( $toReturn{error} == 0 ){
+		
+		my @jailsOutputA=split(/\n/, $jailsOutput);
+		my ( $jailsS )=grep( /Jail\ list/, @jailsOutputA );
+		$jailsS=~s/.*\://;
+		$jailsS=~s/\s//g;
+		my @jails=split(/\,/, $jailsS);
+		
+		#process jails
+		my $int=0;
+		while(defined($jails[$int])){
+			
+			#get the total for this jail
+			my $jailStatusOutput=`$f2bc status $jails[$int]`;
+			my @jailStatusOutputA=split(/\n/, $jailStatusOutput);
+			my ( $jailTotal )=grep(/Currently\ banned\:/, @jailStatusOutputA);
+			$jailTotal=~s/.*\://;
+			$jailTotal=~s/\s//g;
+			
+			#tally the total and add this jail to the list
+			$toReturn{data}{total} = $toReturn{data}{total} + $jailTotal;
+			$toReturn{data}{jails}{ $jails[$int] } = $jailTotal;
+			
+			$int++;
+		}
+		
+	}
+	
+	my $j=JSON->new;
+
+	if ( $_[0] ){
+        $j->pretty(1);
+		return $j->encode( \%toReturn );
+	}
+
+	return $j->encode( \%toReturn )."\n";
+}
+
+#updates $cache
+sub cacheUpdate{
+	my $stats=stats($_[0]);
+
+	open(my $writefh, ">", $cache) or die "Can't open '".$cache."'";
+	print $writefh $stats;
+	close($writefh);
+}
+
+#prints $cache
+sub cachePrint{
+		my $old='';
+		open(my $readfh, "<", $cache) or die "Can't open '".$cache."'";
+		# if this is over 2048, something is most likely wrong
+		read($readfh , $old , 10240);
+		close($readfh);
+		print $old;
+}
+
+#gets the options
+my %opts=();
+getopts('puUcC:f:', \%opts);
+
+#use custom cache file if needed
+if ( defined( $opts{C} ) ){
+	$cache=$opts{C};
+}
+
+#use custom fail2ban location if needed
+if ( defined( $opts{f} ) ){
+	$f2bc=$opts{f};
+}
+
+#use the cache	 
+if ( defined( $opts{c} ) ){
+	my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
+		$atime,$mtime,$ctime,$blksize,$blocks) = stat($cache);
+	
+	if (( -f $cache ) && defined( $mtime ) && ( (time-$mtime) < 360 )){
+		#cache exists and time is fine
+		cachePrint;
+		exit 0;
+	}else{
+		#cache does not exist or is old
+		if ( $opts{U} ){
+			#allowed to update it via -U
+			cacheUpdate( $opts{p} );
+			cachePrint;
+			exit 0;
+		}else{
+			#-U not given
+			warn("'".$cache."' does not exist or is to old and -U was not given");
+			exit 1;
+		}
+	}
+	warn('we should never get here...');
+	exit 2;
+}
+
+#update the cache
+if (defined( $opts{u} )){
+	cacheUpdate( $opts{p} );
+	
+	exit 0;
+}
+
+#no cache opions given, just print it
+print &stats( $opts{p} );
+
+exit 0;

@@ -1,0 +1,36 @@
+<% html_title l(:label_drive) %>
+
+<h2 class="drive_header"><%= l(:label_redmine_drive) %></h2>
+
+<% if @drive_entries.any? %>
+  <%= form_tag do %>
+    <div class="autoscroll">
+      <table class="list files odd-even <%= @query.css_classes %>">
+        <thead>
+        <tr>
+          <% @query.public_columns.each do |column| %>
+            <%= content_tag('th', column.caption) %>
+          <% end %>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @drive_entries.each do |drive_entry| %>
+          <tr id="drive-entry-<%= drive_entry.id %>" class="hascontextmenu odd <%= drive_entry.entry_type %>" data-id="<%= drive_entry.id %>">
+            <% @query.public_columns.each do |column| %>
+              <%= content_tag('td', public_drive_entry_column_content(column, drive_entry), class: column.css_classes) %>
+            <% end %>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+<% else %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag :redmine_drive, plugin: 'redmine_drive' %>
+  <%= stylesheet_link_tag 'context_menu' %>
+<% end %>

@@ -1,0 +1,25 @@
+<div class="contextual">
+	<%= link_to_if_authorized l(:button_send_mail), {:controller => 'expense_mails', :action => 'send', :id => @expense}, :class => 'icon icon-email' unless @expense.nil? %>
+	<%= link_to l(:button_delete), {:controller => 'expenses', :action => 'destroy', :id => @expense}, :confirm => l(:text_are_you_sure), :method => :delete, :class => 'icon icon-del' if  !@expense.nil? && @expense.destroyable_by?(User.current) %>
+</div>
+
+<h2><%= l(:label_expense_edit) %></h2>
+
+<%= labelled_form_for :expense, @expense, :url => {:action => 'update', :id => @expense.id}, :html => { :multipart => true, :method => :put, :id => 'expense_form'} do |f|  %>
+  <%= render :partial => 'form',
+             :locals => {:f => f} %>
+  <%= submit_tag l(:button_save) -%>
+<% end -%>
+
+<% content_for :sidebar do %>
+	<div class="contact-card small-card">
+	    <h3><%= l(:label_contact) %></h3>
+	    <%= render :partial => 'contacts/contact_card', :object => @expense.contact %>
+	</div>
+  <%= render :partial => 'stat_by_period' %>
+  <%= render :partial => 'stat_by_status' %>
+<% end if @expense.contact %>
+
+<% content_for :header_tags do %>
+  <%= select2_assets %>
+<% end %>

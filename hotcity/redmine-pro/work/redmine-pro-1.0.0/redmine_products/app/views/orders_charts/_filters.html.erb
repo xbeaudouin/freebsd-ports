@@ -1,0 +1,59 @@
+<%= form_tag({ :controller => 'orders_charts', :action => 'show', :project_id => @project },
+    :method => :get, :id => 'query_form') do %>
+  <div id="query_form_with_buttons" class="hide-when-print">
+    <%= hidden_field_tag 'set_filter', '1' %>
+  <div id="query_form_content">
+    <fieldset id="filters" class="collapsible <%= @query.new_record? ? "" : "collapsed" %>">
+    <legend class="icon icon-<%= @query.new_record? ? 'expended' : 'collapsed' %>" onclick="toggleFieldset(this);"><%= l(:label_filter_plural) %></legend>
+    <div style="<%= @query.new_record? ? "" : "display: none;" %>">
+    <%= render :partial => 'queries/filters', :locals => {:query => @query} %>
+  </div>
+  </fieldset>
+  <fieldset class="collapsible <%= @query.new_record? ? '' : 'collapsed' %>">
+    <legend class="icon icon-<%= @query.new_record? ? 'expended' : 'collapsed' %>" onclick="toggleFieldset(this);"><%= l(:label_options) %></legend>
+    <div style="<%= @query.new_record? ? '' : 'display: none;' %>">
+      <table>
+        <tr>
+          <td><label for='chart'><%= l(:label_products_chart) %></label></td>
+          <td><%= select_tag 'chart', options_for_select(OrdersChartsQuery::CHARTS.map { |i| [l("label_products_#{i}"), i] }, @chart),
+                             onchange: "toggleIntervalSize($(this).val(), 'interval_size_row');" %></td>
+        </tr>
+        <tr id="interval_size_row">
+          <td><%= l(:label_products_interval_size) %></td>
+          <td>
+            <%= select_tag 'interval_size', options_for_select(OrdersChartsQuery::TIME_INTERVALS.map { |i| [l("label_products_#{i}"), i] }, @query.interval_size) %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </fieldset>
+  </div>
+  <p class="buttons">
+    <%= link_to_function l(:button_apply), '$("#query_form").submit()', :class => 'icon icon-checked' %>
+    <%= link_to l(:button_clear), { :set_filter => 1, :project_id => @project }, :class => 'icon icon-reload'  %>
+    <% if @query.new_record? %>
+      <% if User.current.allowed_to?(:save_orders_queries, @project, global: true) %>
+        <%= link_to_function l(:button_save),
+                             "$('#query_form').attr('action', '#{ @project ? new_project_orders_charts_query_path(@project) : new_orders_charts_query_path }').submit()",
+                             class: 'icon icon-save' %>
+      <% end %>
+    <% elsif @query.editable_by?(User.current) %>
+      <%= link_to l(:button_edit), edit_orders_charts_query_path(@query), class: 'icon icon-edit' %>
+      <%= delete_link orders_charts_query_path(@query) %>
+    <% end %>
+  </p>
+  </div>
+<% end %>
+
+<%= error_messages_for 'query' %>
+
+<% content_for :header_tags do %>
+  <%= javascript_include_tag :products, plugin: 'redmine_products' %>
+<% end %>
+
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    toggleIntervalSize($('#chart').val(), 'interval_size_row');
+    hideFilterCheckbox('report_date_period');
+  });
+<% end %>

@@ -1,0 +1,13 @@
+<div class="box autoscroll">
+  <table id="folders" class="list files odd-even">
+    <tbody>
+    <% folder = RedmineDrive::VirtualFileSystem.root_folder %>
+    <tr id="folder-<%= folder.id %>" class="even open <%= folder.css_classes %>" data-id="<%= folder.id %>" data-level="0">
+      <td class="checkbox"><%= radio_button_tag('folder_id', folder.id, false, id: nil) %></td>
+      <%= content_tag('td', folder_name_tag(folder, clickable: false, only_folders: true), class: 'filename') %>
+    </tr>
+
+    <%= render partial: 'sub_folders', locals: { parent: folder, offset: 1, sub_folders: folder.sub_folders } %>
+    </tbody>
+  </table>
+</div>

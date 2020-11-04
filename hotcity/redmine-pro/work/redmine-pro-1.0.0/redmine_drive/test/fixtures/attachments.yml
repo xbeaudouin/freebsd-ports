@@ -1,0 +1,91 @@
+---
+attachment_1:
+  id: 1
+  container_id: 1
+  container_type: DriveEntry
+  filename: logo.png
+  disk_filename: 180729044228_logo.png
+  disk_directory: '2019/01'
+  filesize: 3582
+  content_type: image/png
+  digest: b91e08d0cf966d5c6ff411bd8c4cc3a2
+  author_id: 1
+  created_on: 2019-01-01 09:01:00
+
+attachment_2:
+  id: 2
+  container_id: 5
+  container_type: DriveEntry
+  filename: organization rules.doc
+  disk_filename: 180729044228_organization rules.doc
+  disk_directory: '2019/01'
+  filesize: 9216
+  content_type: application/msword
+  digest: b91e08d0cf966d5c6ff411bd8c4cc3a2
+  author_id: 1
+  created_on: 2019-01-01 09:04:00
+
+attachment_3:
+  id: 3
+  container_id: 6
+  container_type: DriveEntry
+  filename: English.pdf
+  disk_filename: 180729044228_English.pdf
+  disk_directory: '2019/02'
+  filesize: 6530
+  content_type: application/pdf
+  digest: b91e08d0cf966d5c6ff411bd8c4cc3a2
+  author_id: 1
+  created_on: 2019-02-10 12:30:00
+
+attachment_4:
+  id: 4
+  container_id: 7
+  container_type: DriveEntry
+  filename: management.ppt
+  disk_filename: 180729044228_management.ppt
+  disk_directory: '2019/02'
+  filesize: 162304
+  content_type: application/vnd.ms-powerpoint
+  digest: b91e08d0cf966d5c6ff411bd8c4cc3a2
+  author_id: 1
+  created_on: 2019-02-10 14:00:00
+
+attachment_5:
+  id: 5
+  container_id: 9
+  container_type: DriveEntry
+  filename: tests.doc
+  disk_filename: 180729044228_tests.doc
+  disk_directory: '2019/02'
+  filesize: 9216
+  content_type: application/msword
+  digest: b91e08d0cf966d5c6ff411bd8c4cc3a2
+  author_id: 1
+  created_on: 2019-02-01 09:00:00
+
+attachment_6:
+  id: 6
+  container_id: 10
+  container_type: DriveEntry
+  filename: test-app.txt
+  disk_filename: 180729044228_test-app.txt
+  disk_directory: '2019/02'
+  filesize: 59
+  content_type: text/plain
+  digest: b91e08d0cf966d5c6ff411bd8c4cc3a2
+  author_id: 1
+  created_on: 2019-02-01 09:30:00
+
+attachment_7:
+  id: 7
+  container_id: 12
+  container_type: DriveEntry
+  filename: testfile.txt
+  disk_filename: 180729044228_testfile.txt
+  disk_directory: '2019/04'
+  filesize: 59
+  content_type: text/plain
+  digest: b91e08d0cf966d5c6ff411bd8c4cc3a2
+  author_id: 1
+  created_on: 2019-04-01 10:30:00

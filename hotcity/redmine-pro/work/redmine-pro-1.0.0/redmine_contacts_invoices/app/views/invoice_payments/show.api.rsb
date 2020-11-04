@@ -1,0 +1,12 @@
+api.payment do
+  api.id @invoice_payment.id
+  api.amount @invoice_payment.amount
+  api.payment_date @invoice_payment.payment_date
+  api.description @invoice_payment.description
+  api.invoice(:id => @invoice_payment.invoice_id, :number => @invoice_payment.invoice.number) unless @invoice_payment.invoice.blank?
+  api.author(:id => @invoice_payment.author_id, :name => @invoice_payment.author.name) unless @invoice_payment.author.nil?
+  api.contact(:id => @invoice_payment.invoice.contact_id, :name => @invoice_payment.invoice.contact.name) if !@invoice_payment.invoice.blank? && !@invoice_payment.invoice.contact.blank?
+
+  api.created_on @invoice_payment.created_at
+  api.updated_on @invoice_payment.updated_at
+end

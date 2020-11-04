@@ -1,0 +1,18 @@
+api.expense do
+  api.id @expense.id
+  api.expense_date @expense.expense_date.to_date if @expense.expense_date
+  api.currency @expense.currency
+  api.price @expense.price
+  api.description @expense.description
+  api.project(:id => @expense.project_id, :name => @expense.project.name) unless @expense.project.nil?
+  api.status(:id => @expense.status_id, :name => @expense.status) unless @expense.status_id.blank?
+  api.contact(:id => @expense.contact_id, :name => @expense.contact.name) unless @expense.contact.nil?
+  api.author(:id => @expense.author_id, :name => @expense.author.name) unless @expense.author.nil?
+  api.assigned_to(:id => @expense.assigned_to_id, :name => @expense.assigned_to.name) unless @expense.assigned_to.nil?
+
+  api.is_billable @expense.is_billable
+  api.created_on @expense.created_at
+  api.updated_on @expense.updated_at
+
+  render_api_custom_values @expense.custom_field_values, api
+end

@@ -1,0 +1,27 @@
+<p>  
+  <label><%= l(:label_invoice_company_name) %></label>
+  <%= text_field_tag 'settings[invoices_company_name]', @settings["invoices_company_name"], :size => 60 %>
+</p>
+
+<p>  
+  <label><%= l(:label_invoice_company_representative) %></label>
+  <%= text_field_tag 'settings[invoices_company_representative]', @settings["invoices_company_representative"], :size => 60 %>
+</p>
+<p>  
+  <label><%= l(:label_invoice_company_logo_url) %></label>
+  <%= text_field_tag 'settings[invoices_company_logo_url]', @settings["invoices_company_logo_url"], :size => 60, :onchange => "$('#company_logo_img').src=this.value;" %>
+</p>
+<p>
+  <%= image_tag @settings["invoices_company_logo_url"] , :width  => 180, :id => 'company_logo_img' unless @settings["invoices_company_logo_url"].blank? %>
+</p>
+
+
+<p>  
+  <label><%= l(:label_invoice_company_info) %></label>
+  <%= text_area_tag 'settings[invoices_company_info]', @settings["invoices_company_info"], :rows => 8, :cols => 50 %>
+</p>
+
+<p>  
+  <label><%= l(:label_invoice_bill_info) %></label>
+  <%= text_area_tag 'settings[invoices_bill_info]', @settings["invoices_bill_info"], :rows => 8, :cols => 50 %>
+</p>

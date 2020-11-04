@@ -1,0 +1,8 @@
+<% if User.current.logged? && RedminePeople.use_announcements? && ((@today_announcements && @today_announcements.any?) || @birthdays)%>
+  <div id="announcement-show" style="display:none;">
+    <%= render :partial => 'people_announcements/announcement', :locals => {:announcements => @today_announcements} %>
+  </div>
+  <script type="text/javascript">
+    showModal('announcement-show', '830px');
+  </script>
+<% end %>

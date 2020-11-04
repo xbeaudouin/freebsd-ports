@@ -1,0 +1,10 @@
+<span class="question-tags-edit">
+  <%= select2_tag 'question[tag_list]',
+                  options_from_collection_for_select(@question_item.tags, 'name', 'name', @question_item.tags.map(&:name)),
+                  :multiple => true,
+                  :style => 'width: 90%;',
+                  :url => auto_complete_questions_tags_path(:names => true),
+                  :placeholder => l(:label_questions_add_tag),
+                  :tags => User.current.allowed_to?(:create_tags, @project, :global => true) %>
+  <%= hidden_field_tag 'question[tag_list][]', '' %>
+</span>

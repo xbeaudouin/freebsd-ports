@@ -1,0 +1,71 @@
+
+<%= form_tag do %>
+  <div class="autoscroll">
+    <table class="list dayoffs odd-even <%= query.css_classes %>">
+      <thead>
+      <tr>
+        <th class="checkbox hide-when-print">
+          <%= check_box_tag 'check_all', '', false, class: 'toggle-selection', title: "#{l(:button_check_all)}/#{l(:button_uncheck_all)}" %>
+        </th>
+        <% query.inline_columns.each do |column| %>
+          <%= Redmine::VERSION.to_s >= '3.4' || Redmine::VERSION::BRANCH != 'stable' ? column_header(query, column) : column_header(column) %>
+        <% end %>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% grouped_dayoff_query_results(dayoffs, query) do |dayoff, group_name, group_count| %>
+        <% if group_name %>
+          <% reset_cycle %>
+          <tr class="group open">
+            <td colspan="<%= query.inline_columns.size + 2 %>">
+              <span class="expander" onclick="toggleRowGroup(this);">&nbsp;</span>
+              <span class="name"><%= group_name %></span>
+              <% if group_count %>
+                <span class="count"><%= group_count %></span>
+              <% end %>
+              <%= link_to_function("#{l(:button_collapse_all)}/#{l(:button_expand_all)}", "toggleAllRowGroups(this)", class: 'toggle-all') %>
+            </td>
+          </tr>
+        <% end %>
+
+        <tr id="dayoff-<%= dayoff.id %>" class="dayoff <%= cycle("odd", "even") %> hascontextmenu">
+          <td class="checkbox hide-when-print"><%= check_box_tag("ids[]", dayoff.id, false, id: nil) %></td>
+          <% query.inline_columns.each do |column| %>
+            <%= content_tag('td', column_content(column, dayoff), class: column.css_classes) %>
+          <% end %>
+          <td class="buttons">
+            <% if User.current.allowed_people_to?(:edit_leave) %>
+              <%= link_to l(:button_edit), edit_dayoff_path(dayoff),
+                          title: l(:button_edit),
+                          remote: true,
+                          method: 'get',
+                          class: 'icon-only icon-edit' %>
+              <%= link_to l(:button_delete), dayoff_path(dayoff),
+                          data: { confirm: l(:text_are_you_sure) },
+                          method: :delete,
+                          title: l(:button_delete),
+                          class: 'icon-only icon-del' %>
+            <% end %>
+          </td>
+        </tr>
+
+        <% query.block_columns.each do |column| %>
+          <% if (text = column_content(column, dayoff)) && text.present? %>
+            <tr class="<%= current_cycle %>">
+              <td colspan="<%= query.inline_columns.size + 1 %>" class="<%= column.css_classes %>">
+                <% if query.block_columns.count > 1 %>
+                  <span><%= column.caption %></span>
+                <% end %>
+                <%= text %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
+
+<span class="pagination"><%= pagination_links_full @dayoff_pages, @dayoff_count %></span>

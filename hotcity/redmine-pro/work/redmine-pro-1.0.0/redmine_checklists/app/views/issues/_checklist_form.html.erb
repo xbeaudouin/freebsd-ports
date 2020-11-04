@@ -1,0 +1,37 @@
+<% if User.current.allowed_to?(:edit_checklists, @project, :global => true) %>
+  <div class="tabular">
+    <p id="checklist_form">
+      <label><%=l(:label_checklist_plural)%></label>
+      <% @issue.checklists.build if @issue.checklists.blank? || @issue.checklists.last.subject.present? %>
+      <%= fields_for :issue, issue do |f| -%>
+        <%= hidden_field_tag 'issue[checklist_template_id]', params[:issue][:checklist_template_id] if params[:issue] %>
+        <span id="checklist_form_items" data-checklist-fields='<%= fields(f, :checklists) %>'>
+          <%= f.fields_for :checklists do |builder| %>
+            <%= render :partial => 'checklist_fields', :locals => {:f => builder, :checklist => @checklist} %>
+          <% end %>
+        </span>
+      <% end %>
+    </p>
+    <ul id="checklist-menu">
+      <li><a href="#" class="icon icon-add add-checklist-item"><%= l(:button_add) %></a></li>
+
+      <% if ChecklistTemplate.visible.in_project_and_global(@project).for_tracker_and_global(@issue.tracker).any? %>
+        <li class="folder">
+          <a href="#" class="submenu"><%= l(:label_checklists_from_template) %></a>
+          <%= templates_menu(@project, @issue.tracker) %>
+        </li>
+      <% end %>
+
+      <li><a href="#" class="add-checklist-section"><%= l(:label_checklist_new_section) %></a></li>
+    </ul>
+  </div>
+<% end %>
+
+<%= javascript_tag do %>
+  <% unless User.current.allowed_to?(:done_checklists, @project) %>
+    $("#checklist_items input").attr("disabled", true);
+  <% end %>
+
+  $("span#checklist_form_items").checklist();
+  $("#checklist_items").checklist();
+<% end %>

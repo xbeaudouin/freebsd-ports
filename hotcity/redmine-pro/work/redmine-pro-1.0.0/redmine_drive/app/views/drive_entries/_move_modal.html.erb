@@ -1,0 +1,9 @@
+<h3 class="title"><%= l(:label_drive_move_to_folder) %></h3>
+
+<%= form_tag move_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id, ids: @drive_entries), { id: 'move-modal-form', method: :post, remote: true } do %>
+  <%= render partial: 'folders_tree' %>
+  <p class="buttons">
+    <%= submit_tag l(:button_move), name: nil, onclick: 'hideModal(this);' %>
+    <%= submit_tag l(:button_cancel), name: nil, onclick: 'hideModal(this);', type: 'button' %>
+  </p>
+<% end %>

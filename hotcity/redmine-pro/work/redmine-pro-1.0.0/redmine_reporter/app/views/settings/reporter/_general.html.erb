@@ -1,0 +1,17 @@
+<p>
+  <label for="settings_public_links"><%= l(:label_reporter_public_links) %></label>
+  <%= check_box_tag 'settings[public_links]', 1, @settings['public_links'] == '1' %>
+</p>
+
+<fieldset class="box"><legend><%= l(:label_reporter_report_css) %></legend>
+  <%= text_area_tag 'settings[report_css]', @settings['report_css'], class: 'wiki-edit', rows: 10 %>
+</fieldset>
+
+<!--<p>-->
+<!--  <label><%#= l(:label_reporter_issue_template) %></label>-->
+  <%# if IssueReportTemplate.any? %>
+    <%#= select_tag 'settings[issue_template]', options_from_collection_for_select(IssueReportTemplate.sorted, :id, :name, @settings['issue_template']) %>
+  <%# else %>
+    <%#= link_to l(:label_reporter_report_templates), '#', onclick: "$('#tab-report_templates').click();" %>
+  <%# end %>
+<!--</p>-->

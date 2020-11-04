@@ -1,0 +1,17 @@
+<%  if @issue.present? && User.current.allowed_to?(:view_helpdesk_tickets, @project) %>
+  <span id="customer_profile_and_issues" data-ticket-path="<%= helpdesk_ticket_path(@issue) %>">
+    <h3><%= l(:label_helpdesk_contact) %></h3>
+    <div class="ajax-loading">
+      <%= l(:label_loading) %>
+    </div>
+  </span>
+
+  <script type="text/javascript">
+    var issue_id = window.location.href.match(/issues\/(\d*)/)[1];
+    $.ajax({
+      method: 'GET',
+      url: $('#customer_profile_and_issues').data("ticketPath"),
+      dataType: 'script'
+    });
+  </script>
+<% end %>

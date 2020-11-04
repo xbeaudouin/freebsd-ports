@@ -1,0 +1,64 @@
+
+<%= error_messages_for 'dayoff' %>
+
+<div class="box tabular">
+  <p id="dayoff_approved_wrap">
+    <%= f.check_box :approved, no_label: true %><label for="dayoff_approved" class="inline"><%= l(:field_approved) %></label>
+  </p>
+
+  <p>
+    <label><%= l(:label_user) %><span class="required"> *</span></label>
+    <%# TODO: Use select2_tag when support for the dropdownParent option will be available
+
+        Problem: Select2 input doesn't work when embedded in a modal window
+        Link: https://select2.org/troubleshooting/common-problems#select2-does-not-function-properly-when-i-use-it-inside-a-bootst
+        ===
+        select2_tag 'dayoff[user_id]',
+                    options_for_select(users.map { |user| [user, user.id] }, @dayoff.user.try(:id)),
+                    include_blank: true,
+                    url: auto_complete_users_dayoffs_path,
+                    allow_clear: true,
+                    dropdown_parent: 'ajax-modal'
+    %>
+    <% user = @dayoff.user%>
+    <%= select_tag 'dayoff[user_id]', options_for_select([[user, user.try(:id)]], user.try(:id)), include_blank: true %>
+    <%= javascript_tag do %>
+      $('#dayoff_user_id').select2({
+        placeholder: '',
+        width: '95%',
+        allowClear: true,
+        templateResult: formatStateWithAvatar,
+        dropdownParent: $('#ajax-modal'),
+        ajax: {
+          url: function () {
+            return '<%= people_auto_complete_users_path %>'
+          },
+          dataType: 'json',
+          delay: 250,
+          data: function (params) {
+            return { q: params.term };
+          },
+          processResults: function (data, params) {
+            return { results: data };
+          },
+          cache: true
+        }
+      });
+    <% end %>
+  </p>
+
+  <p><%= f.select :leave_type_id, options_for_select(LeaveType.all.map { |type| [type.name, type.id] }, @dayoff.leave_type_id), required: true %></p>
+
+  <p><%= f.text_field :start_date, value: @dayoff.start_date.try(:to_date), type: 'date', size: 10, required: true %><%= calendar_for('dayoff_start_date') %></p>
+  <p><%= f.text_field :end_date, value: @dayoff.end_date.try(:to_date), type: 'date', size: 10 %><%= calendar_for('dayoff_end_date') %></p>
+  <%= javascript_tag do %>
+    $('#dayoff_start_date').on('change', function () {
+      if ($('#dayoff_end_date').val() === '') {
+        $('#dayoff_end_date').val($('#dayoff_start_date').val())
+      }
+    });
+  <% end %>
+
+  <p><%= f.text_field :hours_per_day %></p>
+  <p><%= f.text_area :notes, rows: 8, placeholder: l(:label_people_leave_comment) %></p>
+</div>

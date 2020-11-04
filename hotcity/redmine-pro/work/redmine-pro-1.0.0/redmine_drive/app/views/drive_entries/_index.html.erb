@@ -1,0 +1,7 @@
+<% if @query.valid? %>
+  <% if @drive_entries.present? %>
+    <%= render partial: 'list', locals: { query: @query, drive_entries: @drive_entries } %>
+  <% else %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+  <% end %>
+<% end %>

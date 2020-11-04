@@ -1,0 +1,10 @@
+
+<h3 class="title"><%= l(:label_people_leave_new) %></h3>
+
+<%= labelled_form_for @dayoff, url: { action: :create }, remote: true, html: { id: 'dayoff-form', method: :post } do |f| %>
+  <%= render partial: 'form', locals: { f: f } %>
+  <p class="buttons">
+    <%= submit_tag l(:button_create), name: nil, onclick: 'hideModal(this);' %>
+    <%= submit_tag l(:button_cancel), name: nil, onclick: 'hideModal(this);', type: 'button' %>
+  </p>
+<% end %>

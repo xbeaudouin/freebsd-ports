@@ -1,0 +1,97 @@
+<h2><%= l(:people_label_bulk_edit_selected_people) %></h2>
+
+<div class="box" id="duplicates">
+  <ul>
+    <% @people.each do |person| %>
+    <li>
+      <%= link_to avatar(person, :size => "16", :full_size => true), person.avatar %>
+      <%= link_to person.name, {:controller => 'people', :action => 'edit', :id => person} %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<%= form_tag(:action => 'bulk_update') do %>
+<%= @people.collect {|i| hidden_field_tag('ids[]', i.id)}.join.html_safe %>
+<div class="box tabular">
+<fieldset class="attributes">
+<legend><%= l(:label_change_properties) %></legend>
+
+  <p>
+    <label><%= l(:field_status) %></label>
+    <%= select_tag('person[status]', content_tag('option', l(:label_no_change_option), :value => '') +
+      options_for_select([[l(:status_active), User::STATUS_ACTIVE], [l(:status_locked), User::STATUS_LOCKED]])) %>
+  </p>
+
+  <p id="person_information_attributes_manager_id_wrap">
+    <label><%= l(:label_people_manager) %></label>
+    <%= select2_tag 'person[information_attributes][manager_id]',
+                    content_tag('option', l(:label_no_change_option), value: ''),
+                    url: autocomplete_for_manager_person_path(id: 'new'),
+                    placeholder: l(:label_no_change_option),
+                    format_state: 'formatStateWithAvatar',
+                    allow_clear: true %>
+  </p>
+
+  <p>
+    <label><%= l(:label_people_gender) %></label>
+    <%= select_tag('person[information_attributes][gender]', content_tag('option', l(:label_no_change_option), :value => '') +
+      options_for_select(Person.genders)) %>
+  </p>
+
+
+  <p>
+    <label><%= l(:label_people_appearance_date) %></label>
+    <%= text_field_tag('person[information_attributes][appearance_date]', '', :id => 'person_information_attributes_appearance_date') %><%= calendar_for('person_information_attributes_appearance_date') %>
+  </p>
+
+  <p>
+    <label><%= l(:label_people_job_title) %></label>
+    <%= text_field_tag('person[information_attributes][job_title]', '') %>
+  </p>
+
+</fieldset>
+
+<% if @people && @people.collect { |c| User.current.allowed_people_to?(:manage_tags, c) }.inject { |memo, d| memo && d } %>
+<fieldset class="attributes">
+  <legend><%= l(:label_people_tags_plural) %></legend>
+
+  <div class="splitcontentleft">
+    <p id="add_tags" class="contacts-tags-edit">
+      <label><%= l(:label_people_add_tags) %></label>
+      <%= select2_tag 'add_tag_list',
+                      nil,
+                      :multiple => true,
+                      :style => 'width: 100%;',
+                      :url => autocomplete_tags_people_path,
+                      :placeholder => l(:label_people_add_tag),
+                      :tags => true %>
+    </p>
+
+  </div>
+
+  <div class="splitcontentright">
+    <p id="delete_tags" class="contacts-tags-edit">
+      <label><%= l(:label_people_delete_tags) %></label>
+      <%= select2_tag 'delete_tag_list',
+                      nil,
+                      :multiple => true,
+                      :style => 'width: 100%;',
+                      :url => autocomplete_tags_people_path,
+                      :placeholder => l(:label_people_add_tag),
+                      :tags => true %>
+    </p>
+  </div>
+</fieldset>
+<% end %>
+
+</div>
+
+<p><%= submit_tag l(:button_submit) %></p>
+<% end %>
+
+<% content_for :header_tags do %>
+    <%= select2_assets %>
+    <%= javascript_include_tag :redmine_people, :plugin => 'redmine_people'  %>
+    <%= robot_exclusion_tag %>
+<% end %>

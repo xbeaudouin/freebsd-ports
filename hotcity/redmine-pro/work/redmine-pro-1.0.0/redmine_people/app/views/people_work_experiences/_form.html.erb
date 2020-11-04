@@ -1,0 +1,36 @@
+<%= labelled_fields_for :work_experience, @work_experience do |f| %>
+
+    <div class="splitcontent">
+      <div class="splitcontentleft">
+        <p><%= f.text_field :previous_company_name, :label => l(:label_people_previous_company_name), :size => 20, :maxlength => 255, :required => true %></p>
+
+        <p><%= f.text_field :job_title, :label => l(:label_people_job_title), :size => 20, :maxlength => 255, :required => true %></p>
+      </div>
+      <div class="splitcontentright">
+
+        <p id="from_date_area">
+          <%= f.text_field(:from_date, :label => l(:label_people_from_date), :size => 10, :type => :date) %>
+          <%= calendar_for('work_experience_from_date') %>
+        </p>
+
+        <p id="to_date_area">
+          <%= f.text_field(:to_date, :label => l(:label_people_to_date), :size => 10, :type => :date) %>
+          <%= calendar_for('work_experience_to_date') %>
+        </p>
+      </div>
+    </div>
+
+    <p>
+      <%= f.label_for_field :description %>
+      <%= content_tag 'span', :id => "work_experience_description_and_toolbar" do %>
+          <%= f.text_area :description,
+                          :cols => 60,
+                          :rows => (@work_experience.description.blank? ? 10 : [[10, @work_experience.description.length / 50].max, 100].min),
+                          :accesskey => accesskey(:edit),
+                          :class => 'wiki-edit',
+                          :no_label => true %>
+      <% end %>
+    </p>
+    <%= wikitoolbar_for 'work_experience_description' %>
+
+<% end %>

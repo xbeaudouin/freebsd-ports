@@ -1,0 +1,32 @@
+<fieldset class="box"><legend><%= l(:label_invoice_recurring_email_template) %></legend>
+<p class="notify_assigned">
+  <label><%= l(:field_notify_assigned) %></label>
+  <%= check_box_tag 'settings[invoices_recurring_notify_assigned]', 1, @settings["invoices_recurring_notify_assigned"] %>
+</p>
+<p class="from_address">
+  <label><%= l(:field_mail_from) %></label>
+  <%= text_field_tag 'settings[invoices_recurring_email_from_address]', @settings["invoices_recurring_email_from_address"], :style => "width: 100%;" %>
+</p>
+
+<p>
+  <label><%= l(:field_subject) %></label>
+  <%= text_field_tag 'settings[invoices_recurring_email_subject]', @settings["invoices_recurring_email_subject"], :style => "width: 100%;" %>
+  <em class="info"><%= InvoicesSettings::MACRO_LIST %>
+</p>
+<p>
+  <label><%= l(:label_invoice_email_template) %></label>
+  <%= text_area_tag 'settings[invoices_recurring_email_template]', @settings["invoices_recurring_email_template"], :rows => 10 %>
+  <em class="info recurring-mail-macros"><%= InvoicesSettings::MACRO_LIST %></em>
+</p>
+</fieldset>
+
+<script type="text/javascript" charset="utf-8">
+  $(".recurring-mail-macros a.mail-macro").bind("click", function() {
+    $('#settings_invoices_recurring_email_template').insertAtCaret($(this).html());
+    return false;
+  });
+</script>
+
+<% content_for :header_tags do %>
+  <%= javascript_include_tag :contacts, :plugin => 'redmine_contacts'  %>
+<% end %>

@@ -1,0 +1,101 @@
+# English strings go here for Rails i18n
+pt-BR:
+  label_finance: Financeiro
+  label_finance_plural: Finanças
+  label_finance_thousands_delimiter: Limitador de milhares
+  label_finance_decimal_separator: Separador decimal
+  label_finance_default_currency: Moeda padrão
+  project_module_finance: Finanças
+
+  label_account: Conta
+  label_account_plural: Contas
+  label_account_debit: Débitos
+  label_account_credit: Créditos
+  label_account_new: Nova conta
+  label_account_edit: Editar conta
+  label_account_balance: Balanço
+  label_account_currency: Moeda
+
+  field_account: Conta
+  field_account_currency: Moeda
+
+  label_operation: Operação
+  label_operation_plural: Operações
+  label_operation_edit: Editar operação
+  label_operation_new: Nova operação
+  label_operation_date: Data
+  label_operation_income: Recebimento
+  label_operation_expense: Despesa
+  label_operation_category: Categoria
+  label_operation_amount: Montante
+  label_operation_type: Tipo da operação
+
+  field_operation_category: Categoria
+  field_operation_date: Data da operação
+  field_operation_amount: Valor
+
+  label_operation_category_plural: Categorias de operação
+  label_operation_category_new: Nova categoria de operação
+  label_operation_category_is_income: É entrada
+
+  label_finance_show_in_top_menu: Mostrar no menu do topo
+  label_finance_show_in_app_menu: Mostrar no menu de aplicações
+
+  permission_view_finances: Ver finanças
+  permission_edit_operations: Editar operações
+  permission_edit_own_operations: Editar as próprias operações
+  permission_delete_operations: Excluir operações
+  permission_comment_operations: Comentar operações
+  permission_import_operations: Importar operações
+  permission_edit_accounts: Editar contas
+  permission_delete_accounts: Excluir contas
+  permission_manage_operation_invoices: Gerenciar recibos de operação
+  permission_manage_operation_relations: Gerenciar relacionamento entre operações
+
+  label_related_operations: Operações relacionadas
+  text_account_updated: "A conta %{name} foi atualizada por %{author}."
+  text_account_amount_changed: "Montante modificado de %{old} para %{new}"
+  label_finance_account_updated: Conta atualizada
+  label_finance_total: Total
+
+  #1.0.3
+  permission_delete_operation_comments: Apagar comentários
+
+  #1.0.4
+  label_finance_cross_project_contacts: Permitir relação de contatos entre projetos
+  label_finance_filter_companies: Filtrar empresas
+
+  #1.0.7
+  label_finance_operation_comment_added: Comentário adicionado à operação
+
+  #1.0.8
+  label_finance_can_not_delete_account: "Esta conta tem operações e não pode ser excluída."
+  label_finance_can_not_delete_category: "Esta categoria está em uso e não pode ser excluída."
+
+  #1.2.0
+  permission_add_operations: Adicionar operações
+  label_finance_is_approved: É aprovada
+  label_finance_operations_approval: Aprovar operações
+  label_finance_disapproved: Disaprovada
+  permission_approve_operations: Aprovar operações
+  label_finance_disapproved_income: Entrada não aprovada
+  label_finance_disapproved_expense: Gasto não aprovado
+  label_operation_type: Tipo da operação
+  label_finance_approve: Aprovar
+  label_finance_disapprove: Negar
+
+  #1.2.1
+  permission_manage_public_operations_queries: Gerenciar consultas públicas
+  permission_save_operations_queries: Salvar consultas
+  text_finance_planned_operation_changed: Operação planejada alterada
+  text_finance_account_amount_has_not_changed: O montante da conta não foi alterado
+
+  field_operation_category_code: Código
+  field_operation_category_parent_id: Pai
+  text_operation_category_destroy_question: "Algumas operações (%{count}) estão associadas a esta categoria. O que quer fazer?"
+  text_operation_category_reassign_to: Re-associar operação a esta categoria
+  text_operation_category_destroy_assignments: Remover associações à categoria
+
+  label_operation_account: Conta
+  label_operation_description: Descrição
+  label_operation_contact: Contato

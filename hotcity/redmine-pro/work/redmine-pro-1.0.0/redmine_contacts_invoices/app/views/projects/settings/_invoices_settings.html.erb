@@ -1,0 +1,58 @@
+<%= form_tag({:controller => "contacts_settings", :action => "save", :project_id => @project, :tab => 'invoices'}, :method => :post, :class => "tabular") do %>
+
+<div class="box tablular">
+
+  <p>
+    <label><%= l(:label_invoice_template) %></label>
+    <%= select_tag 'contacts_settings[invoices_template]', invoice_templates_options_for_select(ContactsSetting[:invoices_template, @project], :no_change => true) %>
+  </p>
+
+  <p>
+
+    <label><%= l(:label_invoice_disable_taxes) %></label>
+    <%= select_tag 'contacts_settings[disable_taxes]', content_tag('option', l(:label_no_change_option), :value => '') + options_for_select([[l(:general_text_Yes), 1], [l(:general_text_No), 0]], ContactsSetting[:disable_taxes, @project]) %>
+  </p>
+
+  <% if hide_company_profile = ContactsSetting[:invoices_company_name, @project].blank? && ContactsSetting[:invoices_company_representative, @project].blank? && ContactsSetting[:invoices_company_logo_url, @project].blank? && ContactsSetting[:invoices_company_info, @project].blank? && ContactsSetting[:invoices_bill_info, @project].blank? %>
+  <p id="company_profile_edit">
+    <label><%= l(:label_invoice_company_profile) %></label>
+    <%= link_to_function image_tag('edit.png'), '$("#company_profile_edit").hide(); $("#company_profile").show()' %>
+  </p>
+  <% end %>
+  <fieldset class="tabular" id="company_profile", style="<%= "display:none;" if hide_company_profile %>"><legend><%= l(:label_invoice_company_profile) %></legend>
+    <p>
+      <label><%= l(:label_invoice_company_name) %></label>
+      <%= text_field_tag 'contacts_settings[invoices_company_name]', ContactsSetting[:invoices_company_name, @project], :placeholder => l(:label_no_change_option), :size => 60 %>
+    </p>
+
+    <p>
+      <label><%= l(:label_invoice_company_representative) %></label>
+      <%= text_field_tag 'contacts_settings[invoices_company_representative]', ContactsSetting[:invoices_company_representative, @project], :placeholder => l(:label_no_change_option), :size => 60 %>
+    </p>
+
+
+    <p>
+      <label><%= l(:label_invoice_company_logo_url) %></label>
+      <%= text_field_tag 'contacts_settings[invoices_company_logo_url]', ContactsSetting[:invoices_company_logo_url, @project], :placeholder => l(:label_no_change_option), :size => 60, :onchange => "$('#company_logo_img').attr('src', this.value);$('#company_logo_img').show();" %>
+    </p>
+    <p>
+      <%= image_tag ContactsSetting[:invoices_company_logo_url, @project] , :width  => 180, :id => 'company_logo_img', :style => "#{'display: none;' if ContactsSetting[:invoices_company_logo_url, @project].blank? }"%>
+    </p>
+
+
+    <p>
+      <label><%= l(:label_invoice_company_info) %></label>
+      <%= text_area_tag 'contacts_settings[invoices_company_info]', ContactsSetting[:invoices_company_info, @project], :rows => 8, :cols => 50, :placeholder => l(:label_no_change_option) %>
+    </p>
+
+    <p>
+      <label><%= l(:label_invoice_bill_info) %></label>
+      <%= text_area_tag 'contacts_settings[invoices_bill_info]', ContactsSetting[:invoices_bill_info, @project], :rows => 8, :cols => 50, :placeholder => l(:label_no_change_option) %>
+    </p>
+
+  </fieldset>
+</div>
+
+  <%= submit_tag l(:button_save) %>
+<% end %>
+

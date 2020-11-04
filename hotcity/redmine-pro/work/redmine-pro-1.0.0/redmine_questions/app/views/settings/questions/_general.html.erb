@@ -1,0 +1,11 @@
+
+<p>
+  <label for="settings_vote_own"><%= l(:label_questions_vote_own) %></label>
+  <%= hidden_field_tag 'settings[vote_own]', 0, :id => nil %>
+  <%= check_box_tag 'settings[vote_own]', 1, QuestionsSettings.vote_own? %>
+</p>
+<p>
+  <label for="settings_show_popular"><%= l(:label_questions_show_popular) %></label>
+  <%= hidden_field_tag 'settings[show_popular]', 0, :id => nil %>
+  <%= check_box_tag 'settings[show_popular]', 1, QuestionsSettings.show_popular? %>
+</p>

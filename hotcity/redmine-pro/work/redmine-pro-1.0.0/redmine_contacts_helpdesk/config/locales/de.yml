@@ -1,0 +1,310 @@
+# encoding: utf-8
+# German strings go here for Rails i18n
+de:
+  label_helpdesk: Helpdesk
+  label_helpdesk_auto_answer_template: Vorlage für automatische E-Mail Antwort
+  text_helpdesk_answer_macros: Verfügbare Macros %{macro}
+  label_is_send_mail: Kommentar als E-Mail senden
+  label_send_auto_answer: Automatische Anwort senden
+  label_received_from: Erhalten von
+  label_sent_to: Gesendet an
+  project_module_contacts_helpdesk: Helpdesk
+  permission_send_response: Kontakt antworten
+  permission_edit_helpdesk_settings: Hepldesk Einstellungen anpassen
+  label_not_create_contacts: Kontakte Whiteliste
+  field_created_contact_tags: Nach der Anlage Tags hinzufügen
+  label_helpdesk_save_as_attachment: E-Mails als Anhang anfügen
+
+  #1.0.2
+  label_helpdesk_assign_author: E-Mailabsender als Ticket Ersteller
+
+  #1.0.3
+  label_helpdesk_answered_status: Bearbeitungsstatus der Tickets (beantwortet/offen)
+  label_helpdesk_reopen_status: Ticket Status erneut öffnen
+  label_helpdesk_tracker: Ticket- Tracker/Typ
+  label_helpdesk_assigned_to: Ticket zuweisen an
+  label_helpdesk_lifetime: Ticket Lebensdauer
+  label_helpdesk_server_settings: E-Mail Server Einstellungen
+  label_helpdesk_protocol: Protokoll
+  label_helpdesk_host: Host
+  label_helpdesk_port: Port
+  label_helpdesk_username: Benutzername
+  label_helpdesk_password: Kennwort
+  label_helpdesk_ssl: SSL
+  label_helpdesk_imap_folder: IMAP Ordner
+  label_helpdesk_move_on_success: bei Erfolg verschieben
+  label_helpdesk_move_on_failure: bei Misserfolg verschieben
+  label_helpdesk_apop: APOP
+  label_helpdesk_delete_unprocessed: nicht verarbeitete Nachrichten löschen
+  label_helpdesk_first_answer_template: Vorlage
+  label_helpdesk_test_connection: Verbindungstest
+  label_helpdesk_get_mail: E-Mails abholen
+  label_helpdesk_get_mail_success: "Verabeitete %{count} E-Mail(s)"
+  label_helpdesk_css: E-Mail Stylesheet (CSS)
+  label_helpdesk_original: Original
+
+  #1.0.4
+  label_helpdesk_blacklist: Blacklist E-Mails
+  label_helpdesk_contact_activity: weitere Tickets des Kontakt
+  permission_view_helpdesk_tickets: Helpdesk Tickets anzeigen
+  label_helpdesk_last_message: Letzte Nachricht
+  label_helpdesk_enable_modules: Die Projektmodule Kontakte und Ticketverfolgung müssen aktiviert sein.
+  label_helpdesk_contact: Kontaktprofil
+  label_helpdesk_show_contact_card: Kontaktprofil anzeigen
+
+  #2.0.0
+  label_helpdesk_send_note_by_default: immer eine Nachricht schicken
+  label_helpdesk_ticket_attributes: Ticketattribute
+  label_helpdesk_to_address: An Adresse
+  label_helpdesk_from_address: Von Adresse
+  label_helpdesk_ticket_date: Ticketdatum
+  label_helpdesk_customer: Kunde/Kontakt
+  label_helpdesk_from: Von
+  label_email_cc: CC
+  label_email_bcc: BCC
+  label_helpdesk_ticket_plural: Helpdesk Tickets
+  label_helpdesk_template: Helpdesk Vorlagen
+  label_helpdesk_general: Allgemein
+  permission_edit_helpdesk_tickets: Ticket Info bearbeiten
+
+  #2.1.0
+  label_helpdesk_ticket: Helpdesk Ticket
+  label_helpdesk_spam: Junk Mail
+  label_helpdesk_add_cc: Cc/Bcc anfügen
+  label_helpdesk_add_contact_notes: Erste E-Mail als Notiz am Kontakt anhängen
+  text_helpdesk_customer_count: "%{count} Kontakt(e)"
+  text_helpdesk_ticket_count: "%{count} Ticket(s)"
+  label_helpdesk_tickets_report: Helpdesk-Ticketsbericht
+  label_helpdesk_staff_report: Helpdesk Teamreport
+  label_helpdesk_tickets_email: E-Mail
+  label_helpdesk_tickets_phone: Telefon
+  label_helpdesk_tickets_web: Web
+  label_helpdesk_tickets_twitter: Twitter
+  label_helpdesk_ticket_source: Ticketquelle
+  label_helpdesk_ticket_time: Ticketzeit
+  label_helpdesk_save_cc: CC Adressaten als Kontakt ablegen
+  permission_view_helpdesk_reports: Berichte aufrufen
+
+  #2.1.2
+  label_helpdesk_answer_template: Antwortvorlage
+
+  #2.1.3
+  label_helpdesk_previous_tickets: Vorhergehende Tickets
+  label_helpdesk_public_tickets: Veröffentlichen von Tickets erlauben
+  label_helpdesk_public_title: Titel der öffentlichen Helpdesk Webseite
+  label_helpdesk_settings_public: Öffentliche Tickets
+  label_helpdesk_public_comments: Kommentare erlauben
+  label_helpdesk_public_show_spent_time: gebuchten Zeitaufwand anzeigen
+  label_helpdesk_public_link: Öffentliche URL
+
+  #2.1.4
+  label_helpdesk_ticket_new: Neues Ticket
+  label_helpdesk_report_plural: Helpdesk reports
+
+  #2.2.0
+  label_helpdesk_contact_company: Kunde/Unternehmen
+  label_helpdesk_canned_response_plural: Textvorlagen
+  label_helpdesk_new_canned_response: Neue Textvorlage
+  label_helpdesk_canned_response: Textvorlage
+  permission_manage_public_canned_responses: Öffentliche Textvorlagen verwalten
+  permission_manage_canned_responses: Textvorlagen verwalten
+
+  #2.2.1
+  my_helpdesk_tickets: Meine Helpdesk Tickets
+  label_helpdesk_view_all_tickets: Alle Tickets anzeigen
+
+  #2.2.3
+  label_helpdesk_tickets_conversation: Konversation
+
+  #2.2.4
+  label_helpdesk_required_custom_fields_error: Kontakte sollten keine verpflichtenden Benutzerdefinierte Felder beinhalten
+
+  #2.2.6
+  label_helpdesk_last_message_date: Ticket aktualisiert
+  label_helpdesk_ago: "vor %{value}"
+
+  #2.2.8
+  label_helpdesk_to: An
+  label_helpdesk_send_as: Gesendet an
+  label_helpdesk_not_send: "(nicht versendet)"
+  label_helpdesk_send_as_notification: Benachrichtigung versenden
+  label_helpdesk_send_as_message: Ursprüngliche Nachricht versenden
+
+  #2.2.9
+  label_helpdesk_incoming_mail_server: Eingehender Mail-Server
+  label_helpdesk_outgoing_mail_server: Ausgehender Mail-Server
+  label_helpdesk_smtp_use_default_settings: Benutze Standardeinstellungen
+  label_helpdesk_smtp_server: SMTP Server
+  label_helpdesk_smtp_tls: TLS
+  label_helpdesk_authentication: Authentifizierung Methode
+  label_helpdesk_authentication_plain: Plain
+  label_helpdesk_authentication_login: Login
+  label_helpdesk_authentication_cram_md5: MD5 Challenge-Response
+  label_helpdesk_smtp_domain: Domain
+
+  #2.2.10
+  label_helpdesk_email_sending_problems: E-Mail Versandprobleme
+
+  #2.3.0
+  label_helpdesk_ticket_reaction_time: Reaktionszeit
+  label_helpdesk_ticket_first_response_time: Zeit zur ersten Antwort
+  label_helpdesk_ticket_resolve_time: Zeit zur Lösung
+  label_helpdesk_ticket_last_response_time: Zeit der letzten Antwort
+  field_helpdesk_ticket: Helpdesk Ticket
+  text_helpdesk_recipients_cant_be_blank: Empfänger dürfen nicht leer sein
+  text_helpdesk_message_body_cant_be_blank: Nachrichteninhalt darf nicht leer sein
+  text_helpdesk_from_address_cant_be_blank: Absender darf nicht leer sein
+
+  #2.4.0
+  label_helpdesk_vote: Bewertung
+  label_helpdesk_vote_settings: Bewertung erlauben
+  label_helpdesk_vote_comment_settings: Bewertungen kommentieren erlauben
+  label_helpdesk_mark: Bitte bewerten Sie unsere Arbeit!
+  label_helpdesk_mark_awesome: Sehr gut
+  label_helpdesk_mark_justok: Gut
+  label_helpdesk_mark_notgood: Nicht gut
+  label_helpdesk_vote_comment_placeholder: Hinterlassen Sie einen Kommentar
+  label_helpdesk_submit: Absenden
+  label_helpdesk_vote_thank: Vielen Dank für Ihre Bewertung
+  label_helpdesk_close_page: Seite schließen
+  label_helpdesk_contact_vote: Bewertung
+  label_helpdesk_vote_comment: Bewertungshinweis
+
+  field_vote: Bewertung
+  field_vote_comment: Kommentar bewerten
+
+  # 3.0.2
+  label_helpdesk_assign_contact_user: Kontakt zuweisen
+  label_helpdesk_create_private_tickets: Privates Ticket erstellen
+  label_helpdesk_all: Alle
+
+  label_helpdesk_widget: Widget
+  label_helpdesk_widget_enable: Widget aktivieren
+  label_helpdesk_widget_add_privacy_policy_checkbox: Datenschutz-Checkbox aktivieren
+  label_helpdesk_widget_privacy_policy_checkbox_text: Datenschutz-Checkbox Text
+  label_helpdesk_widget_privacy_policy_input_placeholder: Du kannst das Wiki-Markup verwenden um Links zu platzieren
+  label_helpdesk_widget_available_projects: Verfügbare Projekte
+  label_helpdesk_widget_no_available_projects: Sie müssen in mindestens einem Projekt Helpdesk verwenden um das Widget aktivieren zu können
+  label_helpdesk_widget_custom_fields: Verfügbare benutzerdefinierte Felder
+  label_helpdesk_widget_activation_message: Der Code unterhalb muss auf der Seite hinzugeüfgt werden um das Widget zu aktivieren
+
+  label_helpdesk_widget_name: Ihr Name
+  label_helpdesk_widget_email: E-Mail Adresse
+  label_helpdesk_widget_subject: Thema
+  label_helpdesk_widget_description: Ticketbeschreibung
+  label_helpdesk_widget_create_ticket: Ticket erstellen
+  label_helpdesk_widget_file_large: 'Entschuldigung, zu lang'
+  label_helpdesk_widget_ticket_created: Ticket wurde erstellt
+  label_helpdesk_widget_ticket_errors: "Kann Nachricht nicht hinzufügen "
+  label_helpdesk_widget_ticket_error_details: Details
+  label_helpdesk_widget_ticket_error_description: Beschreibung darf nicht leer sein
+
+  label_helpdesk_reports: Helpdesk Berichte
+  label_helpdesk_first_response_time: Zeit zur ersten Antwort
+  label_helpdesk_filter_time_interval: Zeitintvall für Bericht
+  label_helpdesk_first_response_time_interval_0_1h: '0 - 1h'
+  label_helpdesk_first_response_time_interval_1_2h: '1 - 2h'
+  label_helpdesk_first_response_time_interval_2_4h: '2 - 4h'
+  label_helpdesk_first_response_time_interval_4_8h: '4 - 8h'
+  label_helpdesk_first_response_time_interval_8_12h: '8 - 12h'
+  label_helpdesk_first_response_time_interval_12_24h: '12 - 24h'
+  label_helpdesk_first_response_time_interval_24_48h: '24 - 48h'
+  label_helpdesk_first_response_time_interval_48_0h: 'mehr als 48h'
+  label_helpdesk_average_first_response_time: 'Durchschnittliche Zeit zur ersten Antwort'
+  label_helpdesk_average_responses_count: 'Durchschnittliche Anzahl an Antworten bis zum Ticketschließen'
+  label_helpdesk_average_time_to_close: 'Durchscnittliche Zeit zum Ticketschließen'
+  label_helpdesk_total_replies: Gesamtanzahl Antworten
+  label_helpdesk_hour: "h"
+  label_helpdesk_minute: "m"
+  label_helpdesk_report_previous: 'Vorherig'
+  label_helpdesk_report_deviation: 'Abweichung'
+
+  label_helpdesk_busiest_time_of_day: Beschäftigste Zeit des Tages
+  label_helpdesk_busiest_time_of_day_interval_6_8h: '06:00 - 08:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_8_10h: '08:00 - 10:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_10_12h: '10:00 - 12:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_12_14h: '12:00 - 14:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_14_16h: '14:00 - 16:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_16_18h: '16:00 - 18:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_18_20h: '18:00 - 20:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_20_22h: '20:00 - 22:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_22_0h: '22:00 - 00:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_0_2h: '00:00 - 02:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_2_4h: '02:00 - 04:00 Uhr'
+  label_helpdesk_busiest_time_of_day_interval_4_6h: '04:00 - 06:00 Uhr'
+  label_helpdesk_busiest_time_of_day_new_tickets: Neue Tickets
+  label_helpdesk_busiest_time_of_day_new_contacts: Neue Kontakte
+  label_helpdesk_number_of_tickets: Ticketanzahl
+  label_helpdesk_open_tickets: Offene Tickets
+  label_helpdesk_busiest_time_of_day_total_incoming: Gesamt eingegangen
+  label_helpdesk_autoclose_tickets_after: Ticket automatisch schließen nach
+  label_helpdesk_autoclose_from_status: Von Status
+  label_helpdesk_autoclose_to_status: Nach Status
+  label_helpdesk_hours: Stunden
+  label_helpdesk_days: Tage
+  label_helpdesk_autoclose_template: Autoclose Vorlage
+  label_helpdesk_autoclosed_ticket: Ticket wurde automatisch geschlossen
+  label_helpdesk_cc_address: CC Adressen
+
+  label_helpdesk_reply: Antwort
+
+  label_helpdesk_customer_satisfaction: Kundenzufriedenheit
+  label_helpdesk_satisfaction_score: Zufriedenheits-Wertung
+  label_helpdesk_total_votes: Gesamtbewertungen
+  label_helpdesk_custom: Benutzerdefiniert
+  label_helpdesk_mark_otherwise: Ansonsten
+
+  text_helpdesk_message_contact_email_blank: Kontakt %{contact_name} solle E-Mail haben
+  label_helpdesk_string: "Ticket: %{subject}, von: %{author}"
+
+  label_helpdesk_mail_rule: E-Mail Regel
+  label_helpdesk_mail_rule_new: Neue Regel
+  label_helpdesk_mail_rule_incoming: Eingehend
+  label_helpdesk_mail_rule_outgoing: Ausgehend
+  label_helpdesk_mail_rule_manually: Manuell
+  label_helpdesk_mail_rule_plural: E-Mail Regeln
+  label_helpdesk_mail_rule_condition_plural: Bedingungen
+  label_helpdesk_mail_rule_action_plural: Aktionen
+  label_helpdesk_mail_rule_trigger: Auslöser
+
+  label_helpdesk_mail_rule_mail_type_on: 'An'
+  label_helpdesk_mail_rule_mail_type_incoming: Eingehende Nachricht
+  label_helpdesk_mail_rule_mail_type_outgoing: Ausgehende Nachricht
+  label_helpdesk_mail_rule_mail_type_manually: Manuell
+
+  label_helpdesk_mail_rule_condition_add: Bedingung hinzufügen
+  label_helpdesk_mail_rule_condition_contact_tags: Kontakt tags
+  label_helpdesk_mail_rule_condition_from_address: Absenderadresse
+  label_helpdesk_mail_rule_condition_message_body: Nachrichteninhalt
+  label_helpdesk_mail_rule_condition_message_subject: Thema
+  label_helpdesk_mail_rule_condition_message_type: Nachrichten-Typ
+  label_helpdesk_mail_rule_condition_message_type_new: Neue Nachricht
+  label_helpdesk_mail_rule_condition_message_type_response: Antwort
+  label_helpdesk_mail_rule_condition_tags: Tags
+  label_helpdesk_mail_rule_condition_contact: Kontakt
+
+  label_helpdesk_mail_rule_action_add: Aktion hinzufügen
+  label_helpdesk_mail_rule_action_change_to: ändern in
+  label_helpdesk_mail_rule_action_assignee: Zugewiesener
+  label_helpdesk_mail_rule_action_contact_tags: Kontakt tags
+  label_helpdesk_mail_rule_action_issue_priority: Priorität
+  label_helpdesk_mail_rule_action_issue_status: Fehlerstatus
+  label_helpdesk_mail_rule_action_project: Projekt
+  label_helpdesk_mail_rule_action_tags: Tags
+
+  mail_rule_should_have_condition: Regel sollte mindestens eine Bedingung beinhalten
+  mail_rule_should_have_action: Regel sollte mindestens eine Aktion beinhalten
+
+  label_helpdesk_activity_type_customer_answer: Antwort an Kunden
+
+  label_helpdesk_viewed_on: 'Gesehen: %{viewed_on}'
+
+  label_helpdesk_email_rules_changes: 'Geändert durch E-Mail Regel'
+
+  label_helpdesk_send_reply: Antwort senden
+  label_helpdesk_hide_read_marks: Verstecke gelesen Markierung
+  label_helpdesk_authentication_none: Keine
+
+  label_helpdesk_mail_rule_action_issue_due_date: Ablaufdatum
+  label_helpdesk_days_after: nach
+  label_helpdesk_days_after_full: "%{days} Tage danach"

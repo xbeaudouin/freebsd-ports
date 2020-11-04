@@ -1,0 +1,5 @@
+<p><%= form.check_box :is_for_all, :label => l(:label_invoice_show_in_pdf) %></p>
+<p><%= form.check_box :is_filter %></p>
+<% if (@custom_field.respond_to?(:format) && @custom_field.format.searchable_supported) || !@custom_field.respond_to?(:format) %>
+<p><%= form.check_box :searchable %></p>
+<% end %>

@@ -1,0 +1,33 @@
+<div id="toolbar" class="pdf-toolbar">
+  <div class="buttons">
+    <% if !params[:token] && InvoicesSettings.public_links? %>
+      <%= link_to button_tag(l(:label_invoice_public_link), type: 'button'), @public_link_url %>
+    <% end %>
+    <%= link_to button_tag(l(:label_invoice_download_as_pdf), type: 'button'), @download_url if @download_url %>
+    <%= link_to button_tag(l(:label_invoice_print), type: 'button'), '#', onclick: 'window.print();' %>
+  </div>
+</div>
+
+<% @reports.each_with_index do |report, id| %>
+  <h2 class="title"><%= report.report_name %></h2>
+  <div class="content">
+    <%= report.content %>
+  </div>
+  
+  <% if InvoicesSettings.public_links? %>
+  <div class="public_link">
+    <div><%= l(:label_invoice_public_link) %>:</div>
+
+    <% input_id = "public_url_#{id}" %>
+    <% public_url = url_for report.public_link_params.merge(host: request.host) %>
+    <div class="filler">
+      <%= text_field_tag input_id, public_url, class: 'public_url', readonly: 'readonly' %>
+    </div>
+
+    <div>
+      <a class="report-button" tabindex="0" href="<%= public_url %>"><span><%= l(:button_invoices_open) %></span></a>
+      <a class="report-button" tabindex="0" onclick="copyTokenToClipboard('<%= input_id %>');"><span><%= l(:button_copy) %></span></a>
+    </div>
+  </div>
+  <% end %>
+<% end %>

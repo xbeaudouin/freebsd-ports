@@ -1,0 +1,8 @@
+<span id="shared-file-field-<%= f.object.drive_entry_id %>" class="shared-file-field">
+  <%= f.hidden_field :id %>
+  <%= f.hidden_field :drive_entry_id %>
+  <%= f.hidden_field :_destroy, class: 'destroy-value' %>
+
+  <%= text_field_tag '', f.object.filename, class: 'icon icon-shared filename readonly', readonly: true %>
+  <%= link_to_function '', 'removeSharedFileField(this); return false;', class: 'icon-only icon-del' %>
+</span>

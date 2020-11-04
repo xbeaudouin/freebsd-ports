@@ -1,0 +1,109 @@
+<h2><%= l(:label_invoice_send_by_email) %></h2>
+
+
+<div class="box">
+    <div class="invoice-card">
+
+      <% if @invoice.contact %>
+      <div class="avatar">
+        <%= contact_tag(@invoice.contact, :type => :avatar, :size => 32) %>
+      </div>
+      <% end %>
+      <div class="invoice-info">
+        <div class="invoice-sum"><strong><%= @invoice.amount_to_s  %></strong></div>
+        <div class="invoice-date" >
+          <%= format_date(@invoice.invoice_date) %><%= due_days(@invoice) %>
+        </div>
+      </div>
+      <div class="name invoice-name">
+        <h3 class="invoice_number"><%= link_to "#{@invoice.number}#{' - ' + @invoice.subject unless @invoice.subject.blank?}", invoice_path(@invoice)  %></h3>
+        <div>
+          <% if @invoice.contact.blank? %>
+            <%= l(:label_invoice_internal) %>
+          <% else %>
+            <%= contact_tag(@invoice.contact, :type => 'plain') %>
+          <% end %>
+          <% if @invoice.is_paid? %>
+             - <%= l(:label_invoice_status_paid) %>: <%= format_date(@invoice.paid_date) %>
+          <% elsif @invoice.is_open? && @invoice.balance > 0 %>
+             - <%= l(:label_invoice_amount_due) %>: <%= price_to_currency(@invoice.remaining_balance, @invoice.currency) %>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+
+
+<%= form_for(:email_message, :url => send_mail_invoice_invoice_mails_path(:invoice_id => @invoice), :html => {:multipart => true, :id => 'message-form'}) do %>
+
+<div class="box tabular">
+  <% if @invoice.is_draft %>
+    <p>
+      <label><%= l(:field_invoice_sent_flag) %></label>
+      <%= check_box_tag('mark_as_sent', 'yes', true) %>
+    </p>
+  <% end %>
+  <p>
+    <label><%= l(:field_mail_from) %></label>
+    <span class="current-from-address"><%= InvoicesSettings.email_from_address %></span>
+    <%= link_to_function image_tag('edit.png'), '$(".current-from-address").hide(); $("#from").show()', :class => "current-from-address"  %>
+
+    <%= text_field_tag('from', InvoicesSettings.email_from_address, :style => "width: 98%;display: none;") %>
+  </p>
+  <p>
+    <label><%= l(:label_invoice_mail_to) %></label>
+    <%= text_field_tag('to', @invoice.contact && @invoice.contact.primary_email ? "#{@invoice.contact.name.gsub(',', ' ')} <#{@invoice.contact.primary_email}>" : "", :style => "width: 98%;") %>
+    <%= link_to "#{l(:label_crm_contacts_cc)}/#{l(:label_crm_contacts_bcc)}", '#' , :onclick => "$('#mail_cc').show();$('#mail_cc #cc').val('#{escape_javascript User.current.mail}');$(this).hide();" %>
+  </p>
+
+<span id="mail_cc" style="display:none;">
+  <p>
+    <label><%= l(:label_crm_contacts_cc) %></label>
+    <%= text_field_tag('cc', '', :style => "width: 98%;") %>
+  </p>
+
+  <p>
+    <label><%= l(:label_crm_contacts_bcc) %></label>
+    <%= text_field_tag('bcc', '', :style => "width: 98%;") %>
+  </p>
+</span>
+	<p>
+		<label><%= l(:field_subject) %></label>
+		<%= text_field_tag('subject', InvoicesSettings[:invoices_email_subject, @invoice.project].blank? ? "#{l(:label_invoice)} #{@invoice.number} (#{InvoicesSettings[:invoices_company_name, @invoice.project].to_s})" : InvoicesSettings[:invoices_email_subject, @invoice.project].to_s, :id => "subject", :style => "width: 98%;") %>
+	</p>
+	<p>
+		<label><%= l(:field_message) %></label>
+	<%= text_area_tag 'message-content', InvoicesSettings[:invoices_email_template, @invoice.project].to_s, :cols => 60, :rows => 10, :class => 'wiki-edit' %>
+	<em class="info mail-macros"><%= InvoicesSettings::MACRO_LIST %></em>
+	</p>
+	<%= wikitoolbar_for 'message-content' %>
+
+  <p>
+    <label><%= l(:label_invoice) %></label>
+    <%= invoice_tag(@invoice).html_safe %>
+  </p>
+
+	<p id="attachments_form"><%= label_tag('attachments[1][file]', l(:label_attachment_plural))%><%= render :partial => 'attachments/form' %></p>
+</div>
+
+<p>
+	<%= submit_tag l(:button_submit) %>
+	<%= preview_link(preview_mail_invoice_invoice_mails_path(:invoice_id => @invoice), 'message-form') unless Redmine::VERSION.to_s >= '3.4.5' %>
+</p>
+
+<% end %>
+
+<div id="preview" class="wiki"></div>
+
+<script type="text/javascript" charset="utf-8">
+  $(".mail-macros a.mail-macro").bind( "click", function() {
+    $('#message-content').insertAtCaret($(this).html());
+    return false;
+  });
+</script>
+
+<% content_for :header_tags do %>
+  <%= javascript_include_tag :contacts, :plugin => 'redmine_contacts'  %>
+<% end %>

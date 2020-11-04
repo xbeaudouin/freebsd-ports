@@ -1,0 +1,41 @@
+<% previous_group = false %>
+<ul>
+<% @sections.each do |section| %>
+  <% if @project.blank? && (group = section.project) != previous_group %>
+    <% reset_cycle %>
+    </ul>
+    <% if group %>
+      <div class="project-forums">
+        <h3>
+          <%= group.name %>
+          <%= link_to " \xc2\xbb", project_questions_sections_path(:project_id => group.identifier) %>
+        </h3>
+      </div>
+    <% end %>
+    <ul>
+    <% previous_group = group %>
+  <% end %>
+
+    <li class="<%= cycle('odd', 'even') %> ">
+      <h3>
+        <%= link_to h(section.name), {:controller => "questions", :action => 'index', :section_id => section, :project_id => section.project}, :class => "section"  %>
+        <span class="topic-count"><%= "(#{section.questions_count})" %></span>
+      </h3>
+      <div class="topic_list">
+        <%  section.questions.visible.order("#{Question.table_name}.views ASC, #{Question.table_name}.cached_weighted_score ASC").reverse.first(5).each do |question| %>
+          <div class="list-item">
+            <span class="topic-subject">
+              <%= link_to h(question.subject), { :controller => 'questions', :action => 'show', :section_id => section, :id => question, :project_id => question.project } %>
+            </span><br>
+            <span class="last-author">
+            <% last_update = [question.last_reply ? question.last_reply.updated_on : question.created_on, question.updated_on, question.last_comment ? question.last_comment.created_on : question.updated_on].max %>
+            <% last_author = (question.last_reply && question.last_reply.updated_on) ? question.last_reply.author : question.author %>
+            <%= l(:label_updated_time, time_tag(last_update)).html_safe %>.
+
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </li>
+<% end %>
+</ul>

@@ -1,0 +1,7 @@
+
+<h2><%= l(:label_query_new) %></h2>
+
+<%= form_tag(@project ? project_orders_charts_queries_path(@project) : orders_charts_queries_path) do %>
+  <%= render partial: 'form', locals: { query: @query } %>
+  <%= submit_tag l(:button_create) %>
+<% end %>

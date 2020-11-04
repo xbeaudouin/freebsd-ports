@@ -1,0 +1,9 @@
+<span class="people-tags-edit">
+  <%= select2_tag 'person[tag_list]',
+                  options_from_collection_for_select(@person.tags, 'name', 'name', @person.tags.map(&:name)),
+                  :multiple => true,
+                  :style => 'width: 95%;',
+                  :url => autocomplete_tags_people_path,
+                  :placeholder => l(:label_people_add_tag),
+                  :tags => true %>
+</span>

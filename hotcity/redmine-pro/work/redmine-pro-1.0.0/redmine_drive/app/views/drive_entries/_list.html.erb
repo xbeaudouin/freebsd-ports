@@ -1,0 +1,39 @@
+<%= form_tag({}, data: { cm_url: context_menu_drive_entries_path }) do %>
+  <%= hidden_field_tag 'back_url', url_for(params: request.query_parameters), id: nil %>
+  <%= hidden_field_tag 'current_folder_id', @current_folder.id %>
+
+  <div class="autoscroll">
+    <table class="list files odd-even <%= query.css_classes %>">
+      <thead>
+      <tr>
+        <th class="checkbox">
+          <%= check_box_tag 'check_all', '', false, class: 'toggle-selection', title: "#{l(:button_check_all)}/#{l(:button_uncheck_all)}" %>
+        </th>
+        <% query.columns.each do |column| %>
+          <%= compatible_column_header(query, column) %>
+        <% end %>
+
+        <% if Redmine::VERSION.to_s >= '4.0' %>
+          <th class="buttons"></th>
+        <% end %>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% drive_entries.each do |drive_entry| %>
+        <tr id="drive-entry-<%= drive_entry.id %>" class="hascontextmenu odd <%= drive_entry.css_classes %>" data-id="<%= drive_entry.id %>" data-level="0">
+          <td class="checkbox"><%= check_box_tag('ids[]', drive_entry.id, false, id: nil) %></td>
+
+          <% query.columns.each do |column| %>
+            <%= content_tag('td', drive_entry_column_content(column, drive_entry), class: column.css_classes, style: params[:search] ? 'padding-left: 14px;' : nil) %>
+          <% end %>
+
+          <% if Redmine::VERSION.to_s >= '4.0' %>
+            <td class="buttons"><%= link_to_context_menu %></td>
+          <% end %>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

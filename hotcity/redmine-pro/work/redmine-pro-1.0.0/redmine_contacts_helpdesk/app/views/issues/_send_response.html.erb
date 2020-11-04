@@ -1,0 +1,181 @@
+<% if authorize_for(:issues, :send_helpdesk_response) && @issue.customer && @issue.customer.primary_email %>
+<script type="text/javascript" charset="utf-8">
+  function emailTagResult (opt) {
+    if (opt.name){
+      var formated_tag = $('<span class="select2-contact">' + opt.avatar + '<p class="select2-contact__name">' + opt.text + '</p><p class="select2-contact__email">' + opt.email + '</p></span>');;
+    } else {
+      var formated_tag = opt.text;
+    }
+    return formated_tag
+  };
+  function emailTagSelection (opt) {
+    if (opt.name){
+      var formated_tag = opt.name + ' <' + opt.email + '>';
+    } else {
+      var formated_tag = opt.text;
+    }
+    return formated_tag
+  };
+  $(document).ready(function() {
+    toggleSendMail($('#helpdesk_is_send_mail').get(0));
+    var select2_fields = ['#helpdesk_to', '#helpdesk_cc', '#helpdesk_bcc'];
+    $.each(select2_fields, function(index, field){
+      $(field).select2({
+        ajax: {
+          url: '<%= auto_complete_contacts_path(project_id: (ContactsSetting.cross_project_contacts? ? nil : @project), is_company: nil, multiaddress: 1) %>',
+          dataType: 'json',
+          delay: 250,
+          data: function (params) {
+            return { q: params.term };
+          },
+          processResults: function (data, params) {
+            return { results: $.grep(data, function(elem){ elem.id = elem.email; return elem }) };
+          },
+          cache: true
+        },
+        tags: true,
+        placeholder: ' ',
+        minimumInputLength: 1,
+        width: '60%',
+        templateResult: emailTagResult,
+        templateSelection: emailTagSelection,
+      }).on('select2:open', function (e) {
+        $(field).closest('.cc-list-edit').find('.select2-search__field').val(' ').trigger($.Event('input', { which: 13 })).val('');
+      });
+    });
+
+    var legendBlock = $('.helpdesk-send-response-wrapper').parents().eq(0).find('>legend');
+    $('.helpdesk-send-response-wrapper').insertBefore(legendBlock);
+    $('.email-header').insertBefore(legendBlock);
+    $('.email-canned-responses').insertBefore(legendBlock);
+    $('.email-footer').insertAfter($('.helpdesk-send-response-wrapper').parents().eq(0).find('.jstEditor'));
+  });
+
+  var issue_status = $('#issue_status_id').val();
+
+  function toggleSendMail(element) {
+    if (element.checked) {
+      $('.email-template').show();
+      <% unless HelpdeskSettings["helpdesk_answered_status", @project].blank? %>
+        issue_status = $('#issue_status_id').val();
+        $('#issue_status_id').val("<%= HelpdeskSettings["helpdesk_answered_status", @project] %>");
+      <% end %>
+      <% if @issue.assigned_to.blank? %>
+        $('#issue_assigned_to_id').val("<%= User.current.id %>");
+      <% end %>
+
+    } else {
+      $('.email-template').hide();
+      $('#cc_fields').hide();
+      <% unless HelpdeskSettings["helpdesk_answered_status", @project].blank? %>
+        $('#issue_status_id').val(issue_status);
+      <% end %>
+    }
+
+    toggleNoteSendDecoration(element);
+  }
+
+  function updateCannedResposeFrom(url, value) {
+    $.ajax({
+      url: url,
+      type: 'post',
+      data: {id: value}
+    });
+  }
+
+  function toggleNoteSendDecoration(element) {
+    var notesFieldset = $(element).closest('fieldset');
+    if (element.checked) {
+      notesFieldset.addClass('notes_with-send');
+      notesFieldset.children('legend').html('<%= l(:label_helpdesk_send_reply) %>')
+    } else {
+      notesFieldset.removeClass('notes_with-send');
+      notesFieldset.children('legend').html('<%= l(:field_notes) %>');
+    }
+  }
+</script>
+
+<% unless HelpdeskSettings["helpdesk_emails_header", @project].blank? %>
+  <div class="email-header email-template" style="display: none;">
+    <%= textilizable(HelpdeskMailSupport.apply_text_macro(HelpdeskSettings["helpdesk_emails_header", @project], @issue.customer, @issue, User.current)).html_safe  %>
+  </div>
+<% end %>
+
+<% unless HelpdeskSettings["helpdesk_emails_footer", @project].blank? %>
+  <div class="email-footer email-template" style="display: none;">
+    <%= textilizable(HelpdeskMailSupport.apply_text_macro(HelpdeskSettings["helpdesk_emails_footer", @project], @issue.customer, @issue, User.current)).html_safe  %>
+  </div>
+<% end %>
+
+<div class="helpdesk-send-response-wrapper">
+  <div class="helpdesk-send-response">
+    <div class="helpdeks-ticket-line email-template"></div>
+    <div class="helpdesk-ticket-to">
+      <%= hidden_field_tag 'helpdesk[is_send_mail]', 0, id: nil %>
+      <%= check_box_tag 'helpdesk[is_send_mail]', 1, (params[:helpdesk].try(:[], :is_send_mail) || @issue.helpdesk_ticket.is_send_mail || HelpdeskSettings["send_note_by_default", @project]).to_s.to_i > 0, :onclick => "toggleSendMail(this);" %>
+      <%= label_tag :helpdesk_is_send_mail, l(:label_is_send_mail), :class => "icon icon-email-to" %>
+
+      <span id="journal_contacts" style="display: none;" class="email-template">
+          <span id="customer_to_email" class="email-template">
+            <%= render partial: "issues/customer_to_email", :locals => { contact: Contact.where(email: @issue.helpdesk_ticket.default_to_address).first || @issue.customer, contact_email: @issue.helpdesk_ticket.default_to_address } %>
+          </span>
+          <a href="#" class="inline-edit email-template icon icon-edit" onclick="$('#customer_to_email').hide(); $(this).hide(); $('#cc_fields').show(); return false;"></a>
+      </span>
+    </div>
+  </div>
+
+  <div id="cc_fields" style="display:none;">
+    <% contact_emails = helpdesk_issue_contact_emails(@issue) %>
+    <%= hidden_field_tag 'journal_message[to_address][]' %>
+    <p class="cc-list-edit">
+      <span class="is-cc">
+      <%= label_tag l(:label_helpdesk_to) %>
+      </span>
+      <%= select_tag 'journal_message[to_address]', options_for_select(contact_emails, @issue.helpdesk_ticket.default_to_address), :id => "helpdesk_to", :multiple => true %>
+    </p>
+    <p class="cc-list-edit">
+      <span class="is-cc">
+      <%= label_tag l(:label_helpdesk_cc) %>
+      </span>
+      <%= select_tag 'journal_message[cc_address]', options_for_select(contact_emails, @issue.customer.primary_email != @issue.helpdesk_ticket.default_to_address ? @issue.customer.primary_email : @issue.helpdesk_ticket.cc_addresses), :id => "helpdesk_cc", :multiple => true %>
+    </p>
+    <div style="clear: both;"></div>
+    <p class="cc-list-edit">
+      <span class="is-cc">
+      <%= label_tag l(:label_helpdesk_bcc) %>
+      </span>
+      <%= select_tag 'journal_message[bcc_address]', nil, :id => "helpdesk_bcc", :multiple => true %>
+    </p>
+    <div style="clear: both;"></div>
+  </div>
+</div>
+<% end %>
+
+<% content_for :header_tags do %>
+  <%= javascript_include_tag :redmine_helpdesk, :plugin => 'redmine_contacts_helpdesk'  %>
+  <%= stylesheet_link_tag :helpdesk, :plugin => 'redmine_contacts_helpdesk' %>
+
+  <% canned_responses = CannedResponse.visible.in_project_or_public(@project).order("#{CannedResponse.table_name}.name") %>
+  <% if canned_responses.any? %>
+    <%= javascript_tag do %>
+      addCannedResponseButton(<%= { url: escape_javascript(add_canned_responses_path(project_id: @project, issue_id: @issue, format: 'js')),
+                                    responses: canned_responses.map { |cr| {id: cr.id, name: cr.name} } }.to_json.html_safe %>);
+    <% end %>
+  <% end %>
+
+<% end %>
+
+<% if authorize_for(:issues, :send_helpdesk_response) && @issue.customer && @issue.customer.primary_email %>
+  <%= javascript_tag do %>
+    $.each($(".contextual .icon.icon-edit"), function(index, link){
+      $(link).before('<%= helpdesk_reply_link %>')
+    })
+
+    var original_scroll_to = showAndScrollTo;
+    showAndScrollTo = function(id, focus){
+      original_scroll_to(id, focus);
+      showConfiguredSend("update", "issue_notes", false);
+      return false;
+    }
+  <% end %>
+<% end %>

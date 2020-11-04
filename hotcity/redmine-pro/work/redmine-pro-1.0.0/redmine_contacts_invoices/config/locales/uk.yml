@@ -1,0 +1,196 @@
+# Ukrainian strings go here for Rails i18n
+uk:
+  project_module_contacts_invoices: Рахунки
+
+  label_invoice_plural: Рахунки
+  label_invoice: Рахунок
+  label_invoice_new: Новий рахунок
+  label_invoice_edit: Редагувати рахунок
+  label_invoice_status: Статус
+  label_invoice_status_draft: Чорновик
+  label_invoice_status_sent: Виставлений
+  label_invoice_status_paid: Сплачено
+  label_invoice_lines: Рядки рахунку
+  label_invoice_percent: "%"
+  label_invoice_amount: "$"
+  label_invoice_address: Адреса
+  label_invoice_bill_to: Платник
+  label_invoice_company_representative: Представник
+  label_invoice_company_name: Назва компанії
+  label_invoice_company_info: Інформація про компанію
+  label_invoice_bill_info: Платіжна інформація
+  label_invoice_units: Одиниці виміру
+  label_invoice_total: Всього
+  label_invoice_tax: ПДВ
+  label_invoice_sub_amount: Разом
+  label_invoice_invoiced: Рахунки по даті
+  label_invoice_add_line: Додати рядок
+  label_invoice_overdue: Протермінований
+  label_invoice_last_number: 'Номер попереднього рахунку #%{number}'
+  label_invoice_template: Шаблон
+  label_invoice_number_format: Формат номера рахунка
+  label_invoice_default_tax: Ставка ПДВ по замовчуванню
+  label_invoice_line_grouping: Групувати рядки
+  label_invoice_line_grouping_by_activity: По активності
+  label_invoice_line_grouping_by_issue: По задачах
+  label_invoice_line_grouping_by_user: По користувачах
+  label_invoice_line_grouping_single_line: Один рядок
+
+  permission_edit_own_invoices: Редагування власних рахунків
+  permission_edit_invoices: Редагування рахунків
+  permission_delete_invoices: Видалення рахунків
+  permission_view_invoices: Перегляд рахунків
+
+  button_send_mail: Відправити
+  button_print: Роздрукувати
+  button_invoice: Рахунок
+
+  field_invoice_number: Номер рахунку
+  field_invoice_date: Дата рахунку
+  field_invoice_contact: Клієнт
+  field_invoice_due_date: Термін оплати
+  field_invoice_amount: Сума
+  field_invoice_discount: Знижка
+  field_invoice_assigned_to: Відповідальний
+  field_invoice_status: Статус
+  field_invoice_currency: Валюта
+  field_invoice_language: Мова
+
+  field_invoice_line_position: 'N'
+  field_invoice_line_description: Назва
+  field_invoice_line_price: Ціна
+  field_invoice_line_quantity: Кількість
+  field_invoice_line_tax: ПДВ
+  field_invoice_line_tax_amount: Сума податку
+  field_invoice_line_total: Сума
+  field_invoice_line_units: Од.вим.
+
+  #0.0.3
+  label_invoice_company_logo_url: Логотип компанії (URL)
+
+  #1.0.1
+  label_invoice_line_grouping_all: Всі
+  label_invoice_default_currency: Валюта по замовчуванню
+  label_invoice_total_including_tax: Включати ПДВ у всього
+  label_invoice_excerpt_invoice_list: Відображати рахунки списком
+  label_invoice_created: Створений рахунок
+  label_invoice_disable_taxes: Відключити ПДВ
+  label_invoice_days_late: '%{days} дня(ів) протерміновано'
+  label_invoice_contact_extra_field: Поле контакту для рахунку
+  lable_invoice_contact_extra_field_tip: 'Для відображення в рахунку (VAT, TAX ID)'
+  label_invoice_decimal_separator: Десятковий розділювач
+  label_invoice_thousands_delimiter: Розділювач разрядів
+  label_invoice_general: Загальне
+  label_invoice_company: Компанія
+  label_invoice_total_with_tax: 'Всього, включачи ПДВ'
+
+  #1.0.2
+  label_invoice_show_in_pdf: Показувати в PDF
+  label_invoice_discount_after_tax: Включати ПДВ в знижку
+
+  #1.0.3
+  label_invoice_use_rate_plugin: Використовувати плагін Rate
+  label_invoice_line_grouping_by_time_entry: По витраченому часу
+  label_generate_invoice: Створити рахунок
+
+  #1.0.4
+  field_invoice_subject: Тема
+
+  #2.0.0
+  label_invoice_filter_companies: Клієнти тільки компанії
+
+  #2.0.1
+  label_invoice_company_profile: Профіль компанії
+  project_module_contacts_expenses: Витрати
+# Expenses
+  label_expense_plural: Витрати
+  label_expense: Витрата
+  label_expense_new: Нова витрата
+  label_expense_edit: Редагувати витрату
+  label_expense_status: Статус
+  label_expense_status_draft: Чорновик
+  label_expense_status_new: Новий
+  label_expense_status_billed: Виставлений
+  label_expense_status_paid: Сплачений
+  label_expense_import: Завантажити витрати з CSV
+
+  field_expense_date: Дата витрати
+  field_expense_contact: Клієнт
+  field_expense_status: Статус
+  field_expense_price: Сума
+
+  permission_edit_own_expenses: Редагування власних витрат
+  permission_edit_expenses: Редагування витрат
+  permission_delete_expenses: Видалення витрат
+  permission_view_expenses: Перегляд витрат
+
+  label_expense_stat_by_period: Витрати по даті
+  label_expense_stat_by_status: Витрати по статусу
+  permission_import_invoices: Імпорт рахунків
+  permission_import_expenses: Імпорт витрат
+
+  #2.1.1
+  label_invoice_cross_project_contacts: Дозволити контакти з інших проектів
+
+  #2.1.2
+  label_invoice_show_invoices_in_top_menu: Показувати рахунки в головному меню
+  label_invoice_show_expenses_in_top_menu: Показувати витрати в головному меню
+  permission_manage_invoices: Управління налаштуванням рахунків
+  permission_comment_invoices: Коментування рахунків
+
+  #2.2.0
+  activerecord:
+    errors:
+      messages:
+        text_invoice_cant_change_status: не може бути змінений
+  label_invoice_status_canceled: Скасований
+  label_invoice_amount_due: Борг
+  label_invoice_payment: Платіж по рахунку
+  label_invoice_payment_plural: Платежі
+  label_invoice_payment_new: Новий платіж
+  label_invoice_add_payment: Додати платіж
+  label_invoice_payment_date: Дата платежу
+  label_invoice_paid_date: Дата оплати
+  label_invoice_balance: Баланс
+  label_invoice_days_due: '%{days} дня(ів) до'
+  label_invoice_internal: Внутрішній
+  permission_edit_invoice_payments: Редагування платежів
+  label_invoice_payment_created: Створений платіж
+
+  #2.3.1
+  label_invoice_is_billable: Оплачувані
+  label_invoice_show_units: "Показувати од. вим."
+  label_invoice_status_estimate: Калькуляція
+  label_estimate: Калькуляція
+
+  #3.0.0
+  label_invoice_templates: Шаблони
+  label_invoice_custom_template: Користувацький шаблон рахунку
+  label_invoice_pdf: PDF
+  label_invoice_public_link: Публічне посилання
+  label_invoice_template_classic: "Класичний"
+  label_invoice_template_modern: "Модерн"
+  label_invoice_template_left: "Модерн (клієнт справа)"
+  label_invoice_template_blank_header: "Модерн (пуста шапка)"
+  label_invoice_template_custom: "Користувацький шаблон"
+  label_invoice_public_links: Публічні посилання
+  label_invoice_recurring: Періодичний рахунок
+
+  #3.0.1
+  permission_add_invoices: Додавання рахунків
+  permission_add_expenses: Додавання витрат
+
+  #3.1.0
+  field_invoice_order_number: Номер замовлення
+  label_invoice_send_by_email: Відправити рахунок по email
+  permission_send_invoices: Відправити email
+  label_invoice_mail_to: Кому
+  label_invoice_email_template_plural: Шаблони email
+  label_invoice_email_template: Шаблон email
+
+  #3.1.1
+  label_invoice_hours: години
+  label_invoice_email_curent_user: Email поточного користувача
+
+  #3.1.4
+  label_invoice_download_as_pdf: Завантажити як PDF

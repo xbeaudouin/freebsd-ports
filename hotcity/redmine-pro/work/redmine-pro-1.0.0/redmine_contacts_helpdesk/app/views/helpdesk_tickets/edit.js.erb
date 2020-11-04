@@ -1,0 +1,30 @@
+$('#customer_profile_and_issues').html('<%= escape_javascript(render :partial => "helpdesk_tickets/customer_profile_and_issues") %>')
+$('.subject_header .email').html('<%= mail_to @helpdesk_ticket.from_address %>')
+$('#helpdesk_ticket_cc_address').select2({
+  ajax: {
+    url: '<%= auto_complete_contacts_path(:project_id => (ContactsSetting.cross_project_contacts? ? nil : @project), :is_company => nil) %>',
+    dataType: 'json',
+    delay: 250,
+    data: function (params) {
+      return { q: params.term };
+    },
+    processResults: function (data, params) {
+      return {
+        results: $.grep(data, function(elem) {
+          if (!elem.email) { return false }
+          elem.id = elem.email;
+          return elem;
+        })
+      };
+    },
+    cache: true
+  },
+  tags: true,
+  placeholder: ' ',
+  minimumInputLength: 1,
+  width: '100%',
+  templateResult: ccEmailTagResult,
+  templateSelection: ccEmailTagSelection,
+}).on('select2:open', function (e) {
+  $('#helpdesk_ticket_cc_address').closest('p').find('.select2-search__field').val(' ').trigger($.Event('input', { which: 13 })).val('');
+});

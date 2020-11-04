@@ -1,0 +1,11 @@
+<% drive_entries.each do |drive_entry| %>
+  <tr id="drive-entry-<%= drive_entry.id %>"
+      class="even <%= drive_entry.css_classes %>"
+      data-id="<%= drive_entry.id %>"
+      data-parent-id="<%= parent.id %>"
+      data-level="<%= offset %>">
+
+    <%= content_tag('td', filename_tag(drive_entry), class: 'filename', style: filename_column_styles(drive_entry, offset)) %>
+  </tr>
+  </tr>
+<% end %>

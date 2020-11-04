@@ -1,0 +1,48 @@
+people_announcement_001:
+  id: 1
+  description: 'some announcement #1'
+  start_date: '2016-01-01'
+  end_date: '2100-01-01'
+  frequency: 'everyday'
+  kind: notice
+  active: true
+people_announcement_002:
+  id: 2
+  description: 'some announcement #2'
+  start_date: '2016-01-01'
+  end_date: '2100-01-01'
+  frequency: 'once'
+  kind: notice
+  active: true
+people_announcement_003:
+  id: 3
+  description: 'some announcement #3'
+  start_date: '2016-01-01'
+  end_date: '2100-01-01'
+  frequency: 'wday'
+  kind: notice
+  active: true
+people_announcement_004:
+  id: 4
+  description: 'some announcement #4'
+  start_date: '2016-01-01'
+  end_date: '2100-01-01'
+  frequency: 'mday'
+  kind: notice
+  active: true
+people_announcement_005:
+  id: 5
+  description: 'some announcement #5'
+  start_date: '2016-01-01'
+  end_date: '2016-01-21'
+  frequency: 'mday'
+  kind: notice
+  active: true
+people_announcement_006:
+  id: 6
+  description: 'some announcement #6'
+  start_date: '2016-01-01'
+  end_date: '2016-01-21'
+  frequency: 'mday'
+  kind: notice
+  active: false

@@ -1,0 +1,13 @@
+<% if User.current.allowed_to?(:generate_issue_reports, @project, global: true) %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var reports_link = '<%= j(link_to(l(:label_report_plural), new_issues_report_template_path(issue_id: @issue.id), remote: true, method: 'get', class: 'icon icon-preview')) %>';
+      var $delete_links = $('#content > .contextual > a.icon.icon-del');
+      if ($delete_links.size() > 0) {
+        $delete_links.before(reports_link);
+      } else {
+        $('#content > .contextual').append(reports_link);
+      }
+    });
+  </script>
+<% end %>

@@ -1,0 +1,15 @@
+
+<%= labelled_fields_for :leave_type, @leave_type do |f| %>
+  <p><%= f.text_field :name, required: true %></p>
+  <p>
+    <%= f.select :color, options_for_select(LeaveType::COLORS, @leave_type.color), include_blank: true %>
+    <%= javascript_tag "$('#leave_type_color').simplecolorpicker({picker: true});"%>
+  </p>
+  <p><%= f.check_box :paid %></p>
+  <p><%= f.check_box :approvable %></p>
+<% end %>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'jquery.simplecolorpicker.css', plugin: 'redmine_people' %>
+  <%= javascript_include_tag 'jquery.simplecolorpicker.js', plugin: 'redmine_people' %>
+<% end %>

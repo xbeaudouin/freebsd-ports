@@ -1,0 +1,130 @@
+---
+# === Global files ===
+#
+#  eCookbook/
+#    Tests/
+#      Reports/
+#    tests.doc
+#    test-app.txt
+#
+#  Docs/
+#    Presentations/
+#      English.pdf
+#      management.ppt
+#    organization rules.doc
+#
+#  Reports/
+#
+#  logo.png
+#
+drive_entry_1:
+  id: 1
+  author_id: 1
+  name: logo.png
+  shared: true
+  description: Organization logo
+  created_at: 2019-01-01 09:01:00
+  updated_at: 2019-01-01 09:01:00
+
+drive_entry_2:
+  id: 2
+  author_id: 1
+  name: Docs
+  shared: true
+  description: Company documents
+  created_at: 2019-01-01 09:02:00
+  updated_at: 2019-01-01 09:02:00
+
+drive_entry_3:
+  id: 3
+  author_id: 1
+  name: Reports
+  created_at: 2019-01-01 09:02:00
+  updated_at: 2019-01-01 09:02:00
+
+drive_entry_4:
+  id: 4
+  parent_id: 2
+  author_id: 1
+  name: Presentations
+  created_at: 2019-01-01 09:02:00
+  updated_at: 2019-01-01 09:02:00
+
+drive_entry_5:
+  id: 5
+  parent_id: 2
+  author_id: 1
+  name: organization rules.doc
+  description: Internal company rules
+  created_at: 2019-01-01 09:04:00
+  updated_at: 2019-02-02 11:00:00
+
+drive_entry_6:
+  id: 6
+  parent_id: 4
+  author_id: 2
+  name: English.pdf
+  shared: true
+  created_at: 2019-02-10 12:30:00
+  updated_at: 2019-02-10 12:30:00
+
+drive_entry_7:
+  id: 7
+  parent_id: 4
+  author_id: 3
+  name: management.ppt
+  created_at: 2019-02-10 14:00:00
+  updated_at: 2019-02-10 14:00:00
+
+# === Project-1 files ===
+#
+#  Tests/
+#    Reports/
+#  tests.doc
+#  test-app.txt
+#
+drive_entry_8:
+  id: 8
+  project_id: 1
+  author_id: 1
+  name: Tests
+  created_at: 2019-02-20 09:00:00
+  updated_at: 2019-02-20 09:00:00
+
+drive_entry_9:
+  id: 9
+  project_id: 1
+  author_id: 2
+  name: tests.doc
+  shared: true
+  created_at: 2019-02-25 09:00:00
+  updated_at: 2019-02-25 09:30:00
+
+drive_entry_10:
+  id: 10
+  project_id: 1
+  author_id: 1
+  name: test-app.txt
+  created_at: 2019-02-25 09:30:00
+  updated_at: 2019-02-25 12:00:00
+
+drive_entry_11:
+  id: 11
+  project_id: 1
+  parent_id: 8
+  author_id: 1
+  name: Reports
+  created_at: 2019-02-25 10:00:00
+  updated_at: 2019-02-25 10:00:00
+
+# === Project-2 files ===
+#  testfile.txt
+#
+drive_entry_12:
+  id: 12
+  project_id: 2
+  author_id: 1
+  name: testfile.txt
+  shared: true
+  created_at: 2019-04-01 10:30:00
+  updated_at: 2019-04-01 10:30:00

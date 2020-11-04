@@ -1,0 +1,5 @@
+<h1><%= link_to("##{@invoice.number} #{@invoice.subject}", @invoice_url) %></h1>
+
+<p><%= l(:text_user_wrote, :value => h(@comment.author)) %></p>
+
+<%= textilizable @comment, :comments, :only_path => false %>

@@ -1,0 +1,45 @@
+<% html_title l(:label_questions) %>
+<div class="questions" >
+  <div class="contextual">
+    <%= link_to(l(:label_questions_new),
+      {:controller => 'questions', :action => 'new', :section_id => @section},
+      :class => 'icon icon-add') if User.current.allowed_to?(:add_questions, @project) %>
+    <%= link_to(l(:label_questions_section_edit),
+      {:controller => 'questions_sections', :action => 'edit', :id => @section},
+      :class => 'icon icon-edit') if @section && User.current.allowed_to?(:manage_sections, @project) %>
+  </div>
+
+  <%= question_breadcrumb @section %>
+  <h2 class="section-title">
+    <%= @section ? @section.name :  l(:label_questions)%>
+  </h2>
+  <% if @section && !@section.description.blank? %>
+    <em class="info"><%= @section.description %></em>
+  <% end %>
+  <div class="filters">
+    <%= form_tag({:controller => "questions", :action => "index"}, :method => :get,  :id => "query_form") do %>
+      <%= text_field_tag(:topic_search, params[:topic_search], :autocomplete => "off", :class => "questions-search", :placeholder => l(:label_questions_search) ) %>
+      <%= javascript_tag "observeSearchfield('topic_search', 'topics_list', '#{ escape_javascript(autocomplete_for_subject_questions_path(:project_id => @project, :section_id => @section, :sort_order => @sort_order)) }')" %>
+    <% end %>
+  </div>
+</div>
+<div class="questions-filters">
+  <ul>
+    <% params.permit! if params.respond_to?(:permit!) %>
+    <li><%= link_to l(:label_questions_newest), params.merge(:sort_order => 'newest'), :class => (@sort_order == 'newest' ? 'selected' : '') %> </li> 
+    <li><%= link_to l(:label_questions_active), params.merge(:sort_order => 'active'), :class => (@sort_order == 'active' ? 'selected' : '') %> </li>
+    <li><%= link_to l(:label_questions_voted), params.merge(:sort_order => 'voted'), :class => (@sort_order == 'voted' ? 'selected' : '') %> </li>
+    <li><%= link_to l(:label_questions_unanswered), params.merge(:sort_order => 'unanswered'), :class => (@sort_order == 'unanswered' ? 'selected' : '') %> </li>
+  </ul>
+</div>
+
+<div id="topics_list" >
+  <%= render :partial => "questions/question_list" %>
+</div>
+
+<% content_for :sidebar do %>
+  <%= render :partial => "questions/tag_cloud" %>
+  <%= render :partial => "questions/latest_topics" %>
+  <%= render :partial => "questions/popular_topics" %>
+<% end %>
+

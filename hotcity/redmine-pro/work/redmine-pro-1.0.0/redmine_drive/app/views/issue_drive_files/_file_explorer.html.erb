@@ -1,0 +1,23 @@
+<table class="list files odd-even">
+  <thead>
+    <tr><th class="filename"><%= render_breadcrumbs %></th></tr>
+  </thead>
+
+  <tbody>
+    <% if (parent = RedmineDrive::VirtualFileSystem.parent_for(@current_folder)) %>
+      <tr id="drive-entry-<%= parent.id %>" class="odd folder" data-id="<%= parent.id %>" data-level="0">
+        <td class="filename">
+          <%= link_to_folder(parent, name: '...', icon_classes: 'icon icon-arrow-up-to-folder') %>
+        </td>
+      </tr>
+    <% end %>
+
+    <% @drive_entries.each do |drive_entry| %>
+      <tr id="drive-entry-<%= drive_entry.id %>" class="odd <%= css_classes(drive_entry) %>" data-id="<%= drive_entry.id %>" data-level="0">
+        <td class="filename">
+          <%= filename_tag(drive_entry) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

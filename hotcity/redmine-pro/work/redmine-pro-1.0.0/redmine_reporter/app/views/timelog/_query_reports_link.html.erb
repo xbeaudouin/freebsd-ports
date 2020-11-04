@@ -1,0 +1,13 @@
+<% if params[:controller] == 'timelog' && params[:action] == 'index' && @query.try(:persisted?) && @entries.present? && User.current.allowed_to?(:generate_time_entries_reports, @project, global: true) %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var reports_link = '<%= j(link_to(l(:label_report_plural), new_time_entries_report_path(query_id: @query.id), remote: true, method: 'get', class: 'icon icon-preview')) %>';
+      var $delete_links = $('#query_form_with_buttons > p.buttons > a.icon.icon-del');
+      if ($delete_links.size() > 0) {
+        $delete_links.before(reports_link);
+      } else {
+        $('#query_form_with_buttons > p.buttons').append(reports_link);
+      }
+    });
+  </script>
+<% end %>

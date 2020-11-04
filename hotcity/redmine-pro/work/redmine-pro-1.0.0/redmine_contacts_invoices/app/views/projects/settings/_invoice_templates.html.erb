@@ -1,0 +1,7 @@
+<%= error_messages_for 'invoice_template' %>
+
+<% invoice_templates = InvoiceTemplate.visible.in_project_and_global(@project) -%>
+
+<%= render partial: 'projects/settings/invoice_templates_list', locals: { invoice_templates: invoice_templates } %>
+
+<p><%= link_to l(:label_invoice_new_template), new_invoice_template_path(:project_id => @project), :class => 'icon icon-add' if User.current.allowed_to?(:manage_invoices, @project, :global => true) %></p>

@@ -1,0 +1,13 @@
+one:
+  id: 1
+  name: First invoice template
+  description: First invoice template description
+  content: '<h1>Hello {% invoice.number %} </h1>'
+  project_id: 1
+  author_id: 1
+two:
+  id: 2
+  name: Second invoice template
+  description: Second invoice template description
+  content: '<h1>Bay {% invoice.number %} </h1>'
+  author_id: 2

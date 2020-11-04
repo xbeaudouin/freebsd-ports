@@ -1,0 +1,1 @@
+$("#<%= @vote_source.class.name.underscore %>_<%= @vote_source.id %> .vote").html('<%= escape_javascript(render :partial => "questions_votes/question_item_vote", :locals => {:question_item => @vote_source}) %>');

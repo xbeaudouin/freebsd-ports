@@ -1,0 +1,199 @@
+# encoding: utf-8
+# Serbian strings go here for Rails i18n
+sr:
+  project_module_contacts_invoices: Рачуни
+
+  label_invoice_plural: Рачуни
+  label_invoice: Рачун
+  label_invoice_new: Нови рачун
+  label_invoice_edit: Уреди рачун
+  label_invoice_status: Статус
+  label_invoice_status_draft: Нацрт-план
+  label_invoice_status_sent: Послано
+  label_invoice_status_paid: Плаћено
+  label_invoice_lines: Дјелови рачуна
+  label_invoice_percent: '%'
+  label_invoice_amount: '$'
+  label_invoice_address: Адреса
+  label_invoice_bill_to: Рачун за
+  label_invoice_company_representative: Представник
+  label_invoice_company_name: Име компанија
+  label_invoice_company_info: Податци о фирми
+  label_invoice_bill_info: Податци о рачуну
+  label_invoice_units: Цјелине-групе рачуна
+  label_invoice_total: Укупно
+  label_invoice_tax: Порез
+  label_invoice_sub_amount: Све укупно
+  label_invoice_invoiced: Израчунато
+  label_invoice_add_line: Додај ред
+  label_invoice_overdue: Истек рока
+  label_invoice_last_number: 'Број посљњдњег рачуна #%{number}'
+  label_invoice_template: Шаблон
+  label_invoice_number_format: Формат броја рачуна
+  label_invoice_default_tax: Неплаћена-невалидна вриједност таксе
+  label_invoice_line_grouping: Груписани рачуни
+  label_invoice_line_grouping_by_activity: Активност
+  label_invoice_line_grouping_by_issue: Груписање по кориштењу
+  label_invoice_line_grouping_by_user: Kорисник
+  label_invoice_line_grouping_single_line: Проред
+
+  permission_edit_own_invoices: Уредити-подесити личне рачуне
+  permission_edit_invoices: Уредити рачуне
+  permission_delete_invoices: Избрисати рачуне
+  permission_view_invoices: Приказ рачуна
+
+  button_send_mail: Пошаљи
+  button_print: Штампај
+  button_invoice: Рачун
+
+  field_invoice_number: Рачун број
+  field_invoice_date: Датум кориштења
+  field_invoice_contact: Клијент
+  field_invoice_due_date: Рок
+  field_invoice_amount: Износ
+  field_invoice_discount: Дефицит
+  field_invoice_assigned_to: Додјељено
+  field_invoice_status: Статус
+  field_invoice_currency: Валута
+  field_invoice_language: Језик
+
+  field_invoice_line_position: '#'
+  field_invoice_line_description: Опис
+  field_invoice_line_price: Цијена
+  field_invoice_line_quantity: Количина
+  field_invoice_line_tax: Порез
+  field_invoice_line_tax_amount: Износ пореза
+  field_invoice_line_total: Укупно
+  field_invoice_line_units: Дјелови
+
+  #0.0.3
+  label_invoice_company_logo_url: Лого фирме (URL)
+
+  #1.0.1
+  label_invoice_line_grouping_all: Све
+  label_invoice_default_currency: Истекао рок
+  label_invoice_total_including_tax: Све укупно укључујући и порез
+  label_invoice_excerpt_invoice_list: Извод листе рачуна
+  label_invoice_created: Направљен рачун
+  label_invoice_disable_taxes: Без пореза
+  label_invoice_days_late: '%{days} дана касни'
+  label_invoice_contact_extra_field: Kонтактирати додатна поља за рачуне
+  lable_invoice_contact_extra_field_tip: Displayed on invoices (e.g. Client VAT or TAX ID)
+  label_invoice_decimal_separator: Децимални зарез
+  label_invoice_thousands_delimiter: Ограничење до хиљаду
+  label_invoice_general: Општи
+  label_invoice_company: Компанија
+  label_invoice_total_with_tax: Све укупно укључујући и таксу
+
+  #1.0.2
+  label_invoice_show_in_pdf: Приказ у ПДФу
+  label_invoice_discount_including_tax: Попуст укључујући и таксу
+
+  #1.0.3
+  label_invoice_use_rate_plugin: програм за таксу
+  label_invoice_line_grouping_by_time_entry: Вријеме отварања програма
+  label_generate_invoice: Генериши рачун
+
+  #1.0.4
+  field_invoice_subject: Предмет
+
+  #2.0.0
+  label_invoice_filter_companies: Фирме које имају улогу да врше преглед рачуна
+
+  #2.0.1
+  label_invoice_company_profile: Профил компаније
+
+# Expenses
+  project_module_contacts_expenses: Трошкови
+
+  permission_import_invoices: Увези рачуне
+  permission_import_expenses: Увези трошкове
+  label_expense_plural: Трошкови
+  label_expense: Трошак
+  label_expense_new: Нови трошак
+  label_expense_edit: Промјена трошка
+  label_expense_status: Статус
+  label_expense_status_draft: Шаблон
+  label_expense_status_new: Нови
+  label_expense_status_billed: Израчунато
+  label_expense_status_paid: Плаћено
+  label_expense_created: Износ трошкова
+
+  field_expense_date: Датум уплате
+  field_expense_contact: Клијент
+  field_expense_status: Статус
+  field_expense_price: Количина
+
+  permission_edit_own_expenses: Уредити властите трошкове
+  permission_edit_expenses: Израчунати трошкове
+  permission_delete_expenses: Избрисати трошкове
+  permission_view_expenses: Приказ трошкова
+
+  label_expense_stat_by_period: Расходи у одређеном периоду
+  label_expense_stat_by_status: Расходи одређени статусом
+
+  #2.1.1
+  label_invoice_cross_project_contacts: Могућност размјене пројеката изнеђу заједничких контакта
+
+  #2.1.2
+  label_invoice_show_invoices_in_top_menu: Приказ рачуна у главном менију
+  label_invoice_show_expenses_in_top_menu: Приказ трошкова у главном менију
+  permission_manage_invoices: Управљање рачунима
+  permission_comment_invoices: Додатне информације о рачуну
+
+  #2.2.0
+  activerecord:
+    errors:
+      messages:
+        text_invoice_cant_change_status: Не може се мијењати
+  label_invoice_status_canceled: Oтказати
+  label_invoice_amount_due: Рок
+  label_invoice_payment: Плаћање
+  label_invoice_payment_plural: Износи рачуна
+  label_invoice_payment_new: Ново плаћање
+  label_invoice_add_payment: Додај уплату
+  label_invoice_payment_date: Датум уплате
+  label_invoice_paid_date: Датум плаћања
+  label_invoice_balance: Баланс
+  label_invoice_days_due: '%{days} дана до'
+  label_invoice_internal: Троскови унутар фирме или приход од пореза
+  permission_edit_invoice_payments: Приказ плаћања
+  label_invoice_payment_created: Износ рачуна
+
+  #2.3.0
+  label_invoice_is_billable: Billable
+  label_invoice_show_units: Приказ дијелова
+  label_invoice_status_estimate: Процјена
+  label_estimate: Процјена
+
+  #3.0.0
+  label_invoice_templates: Шаблон
+  label_invoice_custom_template: Шаблон рачуна
+  label_invoice_pdf: ПДФ
+  label_invoice_public_link: Линк
+  label_invoice_template_classic: "Classic"
+  label_invoice_template_modern: "Modern"
+  label_invoice_template_left: "Modern left"
+  label_invoice_template_blank_header: "Modern with blank header"
+  label_invoice_template_custom: "Custom template"
+  label_invoice_public_links: Доступни линкови
+  label_invoice_recurring: Понављање рачуна
+
+  #3.0.1
+  permission_add_invoices: Додати рачуне
+  permission_add_expenses: Додати трошкове
+
+  #3.1.0
+  field_invoice_order_number: Поредати по бројевима
+  label_invoice_send_by_email: Послати рачун мејлом
+  permission_send_invoices: Послати мејл
+  label_invoice_mail_to: За
+  label_invoice_email_template_plural: Имејл образац
+  label_invoice_email_template: Имејл образац
+
+  #3.1.1
+  label_invoice_hours: сати
+  label_invoice_email_curent_user: Тренутни корисник
+
+  #3.1.4
+  label_invoice_download_as_pdf: Сачувати као пдф формат

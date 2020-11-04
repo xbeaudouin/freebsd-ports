@@ -1,0 +1,30 @@
+<ul>
+
+  <% if @person.present? %>
+    <li><%= context_menu_link l(:button_edit), {:controller => 'people', :action => 'edit', :id => @person}, :class => 'icon icon-edit', :disabled => !@can[:edit] %></li>
+  <% else %>
+    <li><%= context_menu_link l(:button_edit), {:controller => 'people', :action => 'bulk_edit', :ids => @people.collect(&:id)},
+            :class => 'icon icon-edit', :disabled => !@can[:edit] %></li>
+  <% end %>
+  <li class="folder">
+    <a href="#" class="submenu"><%= l(:field_status) %></a>
+    <ul>
+      <% [[l(:status_active), User::STATUS_ACTIVE], [l(:status_locked), User::STATUS_LOCKED]].each do |s| -%>
+          <li><%= context_menu_link s[0], {:controller => 'people', :action => 'bulk_update', :ids => @people.collect(&:id), :person => {:status => s[1]}}, :method => :post,
+                                    :selected => (@person && s[1].to_s == @person.status.to_s), :disabled => !@can[:edit] %></li>
+      <% end -%>
+    </ul>
+  </li>
+
+  <li class="folder">
+    <a href="#" class="submenu"><%= l(:label_people_gender) %></a>
+    <ul>
+      <% Person.genders.each do |s| -%>
+          <li><%= context_menu_link s[0], {:controller => 'people', :action => 'bulk_update', :ids => @people.collect(&:id), :person => {:information_attributes => { :gender => s[1] } } }, :method => :post,
+                                    :selected => (@person && s[1].to_s == @person.gender.to_s), :disabled => !@can[:edit] %></li>
+      <% end -%>
+    </ul>
+  </li>
+
+</ul>
+

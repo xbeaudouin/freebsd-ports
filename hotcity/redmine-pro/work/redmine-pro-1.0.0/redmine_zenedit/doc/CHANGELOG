@@ -1,0 +1,39 @@
+== Redmine Zenedit plugin changelog
+
+Redmine Zenedit plugin - Enhanced edit mode for Redmine
+Copyright (C) 2011-2019 RedmineUP
+http://www.redmineup.com/
+
+== 2019-08-29 v1.0.3
+
+* Redmine 4 compatibility fixes
+* Added Issue mentions 
+* Added settings "User mentions" and "Issue mentions"
+
+== 2018-11-26 v1.0.2
+
+* Do not save draft if nothing has changed on page leave
+
+== 2018-11-20 v1.0.1
+
+* Added save draft on page close if corresponding settings is made for user	
+* Choosing mentions through keyboard
+* Added Zenedit button for Markdown text formatting
+* Fixed marshalling bug 
+* Fixed behavior of mentions menu and pattern
+* Fixed draft warning on XHR update
+
+== 2018-10-19 v1.0.0
+
+* Added Redmine users mentions inside notes and description
+* Added drafts saving for new issues and notes
+* Added Submit and Preview buttons for fullscreen edit mode
+
+== 2018-03-19 v0.0.3
+
+* Fullscreen buttons panel
+
+== 2013-05-04 v0.0.2
+
+* Font size for fullscreen mode changed to 18px
+* English tranlsation fixes

@@ -1,0 +1,31 @@
+---
+type: IssueListReportTemplate
+name: Issue cards
+description: Issue cards for print
+content: "<style>\r\n    .report-cards {\r\n        font-family: Arial;\r\n        font-size:
+  14px;\r\n    }\r\n    .report-cards table {\r\n        border-collapse: collapse;\r\n
+  \   }\r\n    .report-cards table th, table td {\r\n        padding: 5px;\r\n    }\r\n
+  \   .report-cards table th {\r\n        border: solid 1px #d7d7d7;\r\n        background-color:
+  #eee;\r\n        text-align: left;\r\n    }\r\n    .report-cards .issue-card {\r\n
+  \       float: left;\r\n        width: 40%;\r\n        border: solid 1px #d7d7d7;\r\n
+  \       padding: 20px;\r\n        margin: 5px;\r\n        height: 250px; \r\n        position:
+  relative;\r\n        font-size: 18px;        \r\n        page-break-inside:avoid;
+  \r\n        page-break-after:auto;\r\n    }\r\n    .report-cards p {\r\n        margin:
+  0 0 5px 0;\r\n    }\r\n    .report-cards p.issue-id {\r\n        font-weight: bold;\r\n
+  \       text-align: right;\r\n        padding-bottom: 5px;\r\n        margin-bottom:
+  10px;\r\n        border-bottom: 1px solid #aaa;\r\n    }\r\n    .report-cards p.user
+  {\r\n        font-size: 16px;\r\n        bottom: 5px;\r\n        position: absolute;\r\n
+  \       left: 15px;\r\n        font-style: italic;\r\n        width: 100%;\r\n    }\r\n
+  \   .report-cards .qr-canvas {\r\n        position: absolute;\r\n        right:
+  10px;\r\n        bottom: 10px;\r\n        background: #fff;\r\n        padding:
+  4px;\r\n        border: solid 1px #d7d7d7;\r\n      }\r\n    }\r\n</style>\r\n\r\n<script
+  src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js\"></script>\r\n<script
+  type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js\"></script>\r\n\r\n<div
+  class=\"report-cards\">\r\n  {% for issue in issues %}\r\n  <div class=\"issue-card\"
+  id=\"issue_{{issue.id}}\" style=\"background: {{issue.color | default: '#feffe8'
+  | lighten_color: '0.35'}};\">\r\n      <p class=\"issue-id\">{{issue.tracker}} #{{issue.id}}</p>\r\n
+  \     <p class=\"name\">{{ forloop.index }} - {{issue.subject}}</p>\r\n      <p
+  class=\"user\">{% if issue.assignee %} {{issue.assignee.name }} {% endif %}</p>\r\n
+  \     <div class=\"qr-canvas\"></div>\r\n      <script>jQuery('#issue_{{issue.id}}
+  .qr-canvas').qrcode({text: \"http://demo.redmineup.com{{issue.url}}\", width: 120,
+  height: 120});</script>\r\n  </div>\r\n  {% endfor %}\r\n</div>"

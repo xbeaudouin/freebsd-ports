@@ -1,0 +1,14 @@
+<h2><%=l(:label_helpdesk_new_canned_response)%></h2>
+
+<%= labelled_form_for :canned_response, @canned_response, url: { action: 'create', project_id: @project }, html: { multipart: true } do |f| %>
+  <div class="box tabular">
+    <%= render partial: 'canned_responses/form', locals: { f: f } %>
+
+    <p id="attachments_form">
+      <label><%= l(:label_attachment_plural) %></label>
+      <%= render partial: 'attachments/form', locals: { container: @canned_response } %>
+    </p>
+  </div>
+
+  <%= submit_tag l(:button_create) %>
+<% end %>

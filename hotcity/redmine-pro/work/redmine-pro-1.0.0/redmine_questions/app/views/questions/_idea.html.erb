@@ -1,0 +1,41 @@
+<div class="contextual">
+    <%= content_tag('span', watcher_link(@question_item, User.current), :id => 'watcher') %>
+    <%= link_to(l(:button_edit), edit_question_path(@question_item), :class => 'icon icon-edit' ) if @question_item.editable_by?(User.current)
+    %>
+    <%= link_to(l(:button_delete), question_path(@question_item, :project_id => @project), :method => :delete, :data => {:confirm => l(:text_are_you_sure)}, :class => 'icon icon-del') if @question_item.destroyable_by?(User.current)
+    %>
+</div>
+
+<h1 class="question-title"><%=h @question_item.subject %><%= question_status_tag(@question_item.status) %></h1>
+<%= render :partial => 'question_item', :object => @question_item %>
+
+<% content_for :sidebar do %>
+  <h3><%= l(:label_questions_message) %></h3>
+  <ul class="question-meta">
+    <li class="votes icon icon-vote">
+      <%= l(:label_questions_votes, :count => @question_item.weighted_score) %>
+    </li>
+    <li class="views icon icon-view">
+      <%= l(:label_questions_views, :count => @question_item.views ) %>
+    </li>
+    <% unless @question_item.tags.blank? %>
+      <li class="tags icon icon-tag">
+        <%=
+          @question_item.tags.collect do |tag|
+            link_to tag, {:controller => "questions", :action => "index", :project_id => @project, :tag => tag.name}
+          end.join(', ').html_safe
+        %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h3><%= l(:label_questions_related_questions) %></h3>
+  <ul class="related-topics">
+    <% Question.visible.related(@question_item, 5).each do |question| %>
+      <li class="related-topic">
+        <%= link_to h(question.subject), { :controller => 'questions', :action => 'show', :board_id => nil, :id => question } %>
+      </li>
+    <% end %>
+  </ul>
+
+<% end %>

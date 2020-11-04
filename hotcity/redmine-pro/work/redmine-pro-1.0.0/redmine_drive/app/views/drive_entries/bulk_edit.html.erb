@@ -1,0 +1,42 @@
+<h2><%= l(:label_drive_bulk_edit) %></h2>
+
+<%= error_messages_for *@drive_entries %>
+
+<%= form_tag(bulk_update_drive_entries_path(ids: @drive_entries, project_id: @project, current_folder_id: @current_folder.id), method: 'put') do %>
+  <%= back_url_hidden_field_tag %>
+  <div class="box attachments">
+    <table>
+      <% @drive_entries.each do |drive_entry| %>
+        <tr>
+          <td colspan="2">
+            <span class="icon icon-<%= drive_entry.file? ? 'attachment' : 'folder' %>"><%= drive_entry.name_was %></span>
+            <span class="size">(<%= size_column_content nil, drive_entry %>)</span>
+            <span class="author"><%= drive_entry.author %>, <%= format_time(drive_entry.created_at) %></span>
+          </td>
+        </tr>
+        <tr id="drive_entry-<%= drive_entry.id %>">
+          <td><%= text_field_tag "drive_entries[#{drive_entry.id}][name]", drive_entry.filename, size: 40 %></td>
+          <td>
+            <%= text_field_tag "drive_entries[#{drive_entry.id}][description]", drive_entry.description, size: 80, placeholder: l(:label_optional_description) %>
+          </td>
+          <td>
+            <%= select2_tag "drive_entries[#{drive_entry.id}][tag_list]",
+                            options_for_select(drive_entry.tag_list.map { |tag| [tag, tag] }, drive_entry.tag_list),
+                            multiple: true,
+                            width: '300px',
+                            url: tags_autocomplete_drive_entries_path,
+                            tags: true %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <p>
+    <%= submit_tag l(:button_save) %>
+    <%= link_to l(:button_cancel), back_url if back_url.present? %>
+  </p>
+<% end %>
+
+<% content_for :header_tags do %>
+  <%= select2_assets %>
+<% end %>

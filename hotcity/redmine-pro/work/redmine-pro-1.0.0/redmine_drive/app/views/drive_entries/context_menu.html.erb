@@ -1,0 +1,31 @@
+<ul>
+  <% if download_link_available?(@drive_entries) %>
+    <li><%= link_to l(:button_download), download_drive_entries_path(ids: @drive_entries.map(&:id)), class: 'icon icon-download', rel: 'nofollow' %></li>
+  <% end %>
+
+  <% if @drive_entries.all? { |drive_entry| drive_entry.is_a?(DriveEntry) } %>
+    <% if User.current.allowed_to?(:edit_drive_entries, @project, global: true) %>
+      <% if shared_link_available?(@drive_entries) %>
+        <li><%= link_to @drive_entries.first.shared ? l(:label_drive_unshare) : l(:label_drive_share),
+                        share_modal_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id, id: @drive_entries.first),
+                        class: "icon #{@drive_entries.first.shared ? 'icon-link-break' : 'icon-shared'}",
+                        rel: 'nofollow', remote: true %></li>
+      <% end %>
+
+      <li><%= link_to l(:button_edit), edit_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id, ids: @drive_entries),
+                      class: 'icon icon-edit', rel: 'nofollow', remote: true %></li>
+    <% end %>
+
+    <% if User.current.allowed_to?(:add_drive_entries, @project, global: true) %>
+      <li><%= link_to l(:button_copy), copy_modal_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id, ids: @drive_entries),
+                      class: 'icon icon-copy', rel: 'nofollow', remote: true %></li>
+    <% end %>
+
+    <% if User.current.allowed_to?(:edit_drive_entries, @project, global: true) %>
+      <li><%= link_to l(:button_move), move_modal_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id, ids: @drive_entries),
+                      class: 'icon icon-move', rel: 'nofollow', remote: true %></li>
+
+      <li><%= delete_link drive_path(project_id: @project, current_folder_id: @current_folder.id, ids: @drive_entries), remote: true, data: { confirm: l(:text_are_you_sure) } %></li>
+    <% end %>
+  <% end %>
+</ul>

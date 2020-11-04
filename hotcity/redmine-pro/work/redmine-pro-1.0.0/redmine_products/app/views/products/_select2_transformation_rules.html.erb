@@ -1,0 +1,2 @@
+<%= transform_to_select2 'product_tags', url: auto_complete_taggable_tags_path(project_id: @project, taggable_type: 'Product') %>
+<%= transform_to_select2 'product_list', url: auto_complete_products_path(project_id: @project) %>

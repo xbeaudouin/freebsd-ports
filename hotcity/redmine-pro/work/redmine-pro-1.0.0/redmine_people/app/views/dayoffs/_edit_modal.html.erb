@@ -1,0 +1,11 @@
+
+<h3 class="title"><%= l(:label_people_leave_edit) %></h3>
+
+<%= labelled_form_for @dayoff, url: { action: :update }, remote: true, html: { id: 'dayoff-form', method: :put } do |f| %>
+  <%= render partial: 'form', locals: { f: f } %>
+  <p class="buttons">
+    <%= delete_link dayoff_path(@dayoff), style: 'float: left;' %>
+    <%= submit_tag l(:button_update), name: nil, onclick: 'hideModal(this);' %>
+    <%= submit_tag l(:button_cancel), name: nil, onclick: 'hideModal(this);', type: 'button' %>
+  </p>
+<% end %>

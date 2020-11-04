@@ -1,0 +1,85 @@
+<%= form_tag({}, :data => {:cm_url => context_menu_invoices_path}) do -%>
+	<%= hidden_field_tag 'back_url', url_for(params.respond_to?(:to_unsafe_hash) ? params.to_unsafe_hash : params) %>
+	<%= hidden_field_tag 'project_id', @project.id if @project %>
+	<div class="autoscroll">
+		<table class="contacts invoices index">
+		<tbody>
+	    <% previous_group = false %>
+	    <% @invoices.each do |invoice| %>
+	        <% if @query.grouped? && (group = @query.group_by_column.value(invoice)) != previous_group %>
+	          <% reset_cycle %>
+	          <tr class="group open">
+	            <td colspan="<%= @query.columns.size + 2 %>">
+	              <span class="expander" onclick="toggleRowGroup(this);">&nbsp;</span>
+	              <%= group.blank? ? 'None' : column_content(@query.group_by_column, invoice) %>
+								<% if @invoice_count_by_group[group] %>
+	              <span class="count">(<%= @invoice_count_by_group[group] %>)</span>
+	              <% end %>
+	              <%= link_to_function("#{l(:button_collapse_all)}/#{l(:button_expand_all)}", "toggleAllRowGroups(this)", :class => 'toggle-all') %>
+	            </td>
+	          </tr>
+	          <% previous_group = group %>
+	        <% end %>
+
+			<tr class="hascontextmenu">
+				<td class="checkbox">
+					<%= check_box_tag("ids[]", invoice.id, false, :id => nil)  %>
+				</td>
+				<td class="status">
+				  <%= invoice_status_tag(invoice) %>
+				</td>
+				<% if invoice.contact %>
+				<td class="avatar">
+					<%= contact_tag(invoice.contact, :type => :avatar, :size => 32) %>
+				</td>
+				<% end %>
+				<td class="name invoice-name" <%= 'colspan=2' unless invoice.contact %>>
+						<h1 class="invoice_number"><%= link_to "#{invoice.number}#{' - ' + invoice.subject unless invoice.subject.blank?}", {:controller => :invoices, :action => :show, :id => invoice.id} %></h1>
+						<p>
+							<% if invoice.contact.blank? %>
+								<%= l(:label_invoice_internal) %>
+							<% else %>
+								<%= contact_tag(invoice.contact, :type => 'plain') %>
+							<% end %>
+							<% if invoice.is_paid? %>
+								 - <%= l(:label_invoice_status_paid) %>: <%= format_date(invoice.paid_date) %>
+							<% elsif invoice.is_open? && invoice.balance > 0 %>
+								 - <%= l(:label_invoice_amount_due) %>: <%= price_to_currency(invoice.remaining_balance, invoice.currency) %>
+							<% end %>
+						</p>
+				</td>
+
+				<td class="info invoice-info">
+					<div class="invoice-sum"><strong><%= invoice.amount_to_s  %></strong>
+
+					</div>
+					<div class="invoice-date" >
+						<strong><%# l(:field_invoice_date) + ":" %></strong> <%= format_date(invoice.invoice_date) %><%= due_days(invoice) %>
+					</div>
+				</td>
+			</tr>
+	    <% end %>
+
+		</tbody>
+	  </table>
+	  <table class="contacts invoices index total">
+			<tbody>
+			<tr class="total">
+				<th class="title"><%= l(:label_invoice_amount_due) %>:</th>
+				<th class="sum invoices-sum">
+					<%= prices_collection_by_currency(@due_amount, :hide_zeros => true).join('<br/>').html_safe %>
+				</th>
+				<th class="title"><%= l(:label_invoice_status_paid) %>:</th>
+				<th class="sum invoices-sum">
+					<%= prices_collection_by_currency(@paid_amount, :hide_zeros => true).join('<br/>').html_safe %>
+				</th>
+				<th class="title"><%= "#{l(:label_total)} (#{@invoices_count})" %>:</th>
+				<th class="sum invoices-sum">
+					<%= prices_collection_by_currency(@invoiced_amount, :hide_zeros => true).join('<br/>').html_safe %>
+				</th>
+			</tr>
+
+			</tbody>
+	  </table>
+	</div>
+<% end %>

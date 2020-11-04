@@ -1,0 +1,112 @@
+<div class="contextual">
+  <% if !@query.new_record? && @query.editable_by?(User.current) %>
+  <%= link_to l(:button_contacts_edit_query), edit_crm_query_path(@query, :object_type => "expense"), :class => 'icon icon-edit' %>
+  <%= link_to l(:button_contacts_delete_query), crm_query_path(@query, :object_type => "expense"), :confirm => l(:text_are_you_sure), :method => :delete, :class => 'icon icon-del' %>
+  <% end %>
+  <% if User.current.allowed_to?({:controller => :expenses, :action => :new}, @project, :global => @project.blank?) %>
+    <%= link_to l(:label_expense_new), {:controller => :expenses, :action => :new, :project_id => @project || Expense.allowed_target_projects.first}, :class => 'icon icon-add' %>
+  <% end %>
+  <%= link_to_if_authorized l(:label_crm_import), { :controller => 'expense_imports', :action => :new, :project_id => @project }, :class => 'icon icon-import', :id => 'import_from_csv' %>
+</div>
+
+<% html_title(@query.new_record? ? l(:label_expense_plural) : @query.name) %>
+
+<h2><%= @query.new_record? ? l(:label_expense_plural) : h(@query.name)  %></h2>
+
+<%= form_tag({ :controller => 'expenses', :action => 'index', :project_id => @project }, :method => :get, :id => 'query_form') do %>
+<%= hidden_field_tag 'set_filter', '1' %>
+<%= hidden_field_tag 'object_type', 'expense' %>
+<div id="query_form_content" class="hide-when-print">
+  <fieldset id="filters" class="collapsible <%= @query.new_record? ? "" : "collapsed" %>">
+    <legend class="icon icon-<%= @query.new_record? ? 'expended' : 'collapsed' %>" onclick="toggleFieldset(this);"><%= l(:label_filter_plural) %></legend>
+    <div style="<%= @query.new_record? ? "" : "display: none;" %>">
+      <%= render :partial => 'queries/filters', :locals => {:query => @query} %>
+    </div>
+  </fieldset>
+  <fieldset class="collapsible collapsed">
+    <legend class="icon icon-collapsed" onclick="toggleFieldset(this);"><%= l(:label_options) %></legend>
+    <div style="display: none;">
+      <table>
+        <tr style="<%= 'display: none;' if expenses_list_style != 'list' %>">
+          <td><%= l(:field_column_names) %></td>
+          <td><%= render_query_columns_selection(@query) %></td>
+        </tr>
+        <tr>
+        <% if expenses_list_style != 'list_board' %>
+            <td><label for='group_by'><%= l(:field_group_by) %></label></td>
+            <td><%= select_tag('group_by',
+                               options_for_select(
+                                 [[]] + @query.groupable_columns.collect {|c| [c.caption, c.name.to_s]},
+                                 @query.group_by)
+                       ) %></td>
+        <% end %>
+        <% if expenses_list_style == 'list_excerpt' %>
+            <td><label for='sort'><%= l(:label_sort) %></label></td>
+            <td><%= select_tag('sort',
+                               options_for_select(
+                                 [[]] +
+                                 [[l(:field_contact_status), "status:asc"],
+                                  [l(:field_due_date), "expense_date:asc"],
+                                  [l(:field_created_on), "created_at:desc"],
+                                  [l(:field_updated_on), "updated_at:desc"]],
+                                 params[:sort] || @query.sort_criteria.try(:first).try(:join, ':'))
+                       ) %></td>
+        <% end %>
+        </tr>
+        <tr>
+          <td><label for='expenses_list_style'><%= l(:label_crm_list_partial_style) %></label></td>
+          <td><%= select_tag('expenses_list_style', options_for_select([[l(:label_crm_list_excerpt), "list_excerpt"], [l(:label_crm_list_list), "list"]], expenses_list_style)) %></td>
+        </tr>
+      </table>
+    </div>
+  </fieldset>
+</div>
+
+<p class="buttons hide-when-print">
+  <%= link_to_function l(:button_apply), 'submit_query_form("query_form")', :class => 'icon icon-checked' %>
+  <%= link_to l(:button_clear), { :set_filter => 1, :project_id => @project }, :class => 'icon icon-reload'  %>
+  <% if @query.new_record? && User.current.allowed_to?(:save_expenses_queries, @project, :global => true) %>
+      <%= link_to_function l(:button_save),
+                           "$('#query_form').attr('action', '#{ @project ? new_project_crm_query_path(@project) : new_crm_query_path }'); submit_query_form('query_form')",
+                           :class => 'icon icon-save' %>
+
+  <% end %>
+</p>
+<% end %>
+
+<%= error_messages_for 'query' %>
+<% if @query.valid? %>
+  <div id="contact_list" class="expense_list">
+  <% if @expenses.empty? %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+  <% else %>
+    <%= render :partial => expenses_list_style %>
+    <span class="pagination"><%= pagination_links_full @expenses_pages, @expenses_count %></span>
+  <% end %>
+  </div>
+  <% other_formats_links do |f| %>
+      <%= f.link_to 'CSV', :url => params.respond_to?(:to_unsafe_hash) ? params.to_unsafe_hash : params %>
+  <% end %>
+<% end %>
+
+<% content_for :sidebar do %>
+  <%= render :partial => 'stat_by_period' %>
+  <%= render :partial => 'stat_by_status' %>
+  <%= render_sidebar_crm_queries('expense') %>
+
+<% end %>
+
+<% html_title l(:label_expense_plural) %>
+
+<% if Redmine::VERSION.to_s >= '3.4' || RedmineContacts.unstable_branch? %>
+  <%= context_menu %>
+<% else %>
+  <%= context_menu url_for( {:controller => "expenses", :action => "context_menu"} ) %>
+<% end %>
+
+<% content_for :header_tags do %>
+  <%= select2_assets %>
+  <%= javascript_include_tag :contacts, :plugin => 'redmine_contacts' %>
+  <meta name = "format-detection" content = "telephone=no">
+<% end %>
+

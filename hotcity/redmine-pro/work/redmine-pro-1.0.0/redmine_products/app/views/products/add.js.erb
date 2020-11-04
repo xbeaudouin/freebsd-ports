@@ -1,0 +1,36 @@
+<% new_id = Time.now.to_i + rand(100) %>
+<% case @line_class %>
+<% when 'invoice' %>
+  <% if ProductsSettings.invoices_fully_compatible? %>
+    <% content = fields_for(:invoice, Invoice.new){|f| f.fields_for(:lines, InvoiceLine.new(:product => @product, :quantity => 1, :price => @product.price), :child_index => new_id){|builder|
+    render("invoices/line_fields", :f => builder)}} %>
+  <% else %>
+    <%= render("add_product_line", :new_id => new_id) %>
+  <% end %>
+<% else %>
+  <% content = fields_for(@line_class.to_sym, @line_class.capitalize.constantize.new){|f| f.fields_for(:lines, ProductLine.new(:product => @product, :quantity => 1, :price => @product.price, :description => @product.description), :child_index => new_id){|builder|
+    render("#{@line_class.pluralize}/line_fields", :f => builder)}} %>
+  $('#<%= @line_class %>_lines_attributes_<%= new_id %>_quantity').focus();
+<% end %>
+
+<% if @line_class == 'invoice' && ProductsSettings.invoices_fully_compatible? %>
+  $('#sortable tr.line').last().after('<%= escape_javascript content %>')
+<% else %>
+  $('#sortable tr.line').last().after('<%= escape_javascript content %>')
+<% end %>
+
+<% case @line_class %>
+<% when 'invoice' %>
+  $('#invoice_lines_attributes_<%= new_id %>_quantity').focus();
+  updateInvoiceTotal();
+<% when 'deal' %>
+  $('#<% @line_class %>_lines_attributes_<%= new_id %>_quantity').focus();
+  updateTotal();
+  tooglePriceField();
+<% else %>
+  $('#<% @line_class %>_lines_attributes_<%= new_id %>_quantity').focus();
+  updateTotal();
+<% end %>
+
+$('#new_product_code').val('');
+

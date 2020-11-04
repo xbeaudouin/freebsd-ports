@@ -1,0 +1,68 @@
+<div class="question solution" id="question_<%= @question_item.id %>">
+
+  <div class="contextual">
+      <%= content_tag('span', watcher_link(@question_item, User.current), :id => 'watcher') %>
+      <%= link_to(l(:button_edit), edit_question_path(@question_item), :class => 'icon icon-edit' ) if @question_item.editable_by?(User.current)
+      %>
+      <%= link_to(l(:button_delete), question_path(@question_item), :method => :delete, :data => {:confirm => l(:text_are_you_sure)}, :class => 'icon icon-del') if @question_item.destroyable_by?(User.current)
+      %>
+  </div>
+
+  <h1 class="question-title"><%=h @question_item.subject %></h1>
+
+  <div class="question-container">
+    <div class="wiki">
+      <%= textilizable(@question_item, :content) %>
+    </div>
+
+    <%= link_to_attachments @question_item, :author => false %>
+
+    <div class="liking">
+        <p>
+            <strong id="liking-text"><%= l(:label_questions_wasthishelpful) %></strong>
+            <%= link_to l(:general_text_Yes), questions_votes_path(:source_id => @question_item, :source_type => @question_item.class.name.underscore, :up => true), :disabled => !allow_voting?(@question_item) %>
+            <%= link_to l(:general_text_No), questions_votes_path(:source_id => @question_item, :source_type => @question_item.class.name.underscore, :down => true), :disabled => !allow_voting?(@question_item) %>            
+            <span class="author">
+              <%= authoring @question_item.created_on, @question_item.author %>.
+              <% if @question_item.created_on != @question_item.updated_on %>
+              <%= l(:label_updated_time, time_tag(@question_item.updated_on)).html_safe %>.
+              <% end %>
+            </span>
+        </p>
+    </div>
+
+    <%= render :partial => 'questions_comments/comments_container', :locals => { :question_item => @question_item } %>
+  </div>
+</div>
+
+<% content_for :sidebar do %>
+  <h3><%= l(:label_questions_message) %></h3>
+  <ul class="question-meta">
+    <li class="votes icon icon-vote">
+      <%= l(:label_questions_votes, :count => @question_item.weighted_score) %>
+    </li>
+    <li class="views icon icon-view">
+      <%= l(:label_questions_views, :count => @question_item.views ) %>
+    </li>
+    <% unless @question_item.tags.blank? %>
+      <li class="tags icon icon-tag">
+        <%=
+          @question_item.tags.collect do |tag|
+            link_to tag, {:controller => "questions", :action => "index", :project_id => @project, :tag => tag.name}
+          end.join(', ').html_safe
+        %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h3><%= l(:label_questions_related_solutions) %></h3>
+  <ul class="related-topics">
+    <% Question.visible.related(@question_item, 5).each do |question| %>
+      <li class="related-topic">
+        <%= link_to h(question.subject), { :controller => 'questions', :action => 'show', :board_id => nil, :id => question } %>
+      </li>
+    <% end %>
+  </ul>
+
+
+<% end %>

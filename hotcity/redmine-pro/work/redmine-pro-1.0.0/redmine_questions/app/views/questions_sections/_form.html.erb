@@ -1,0 +1,10 @@
+<%= error_messages_for @section %>
+<p>
+  <%= f.text_field :name, :required => true %>
+</p>
+<p>
+  <%= f.select :section_type, QuestionsSection.types_list, :required => true, :label => l(:label_questions_section_type) %>
+</p>
+<p>
+  <%= f.text_area :description, :rows => 5 %>
+</p>

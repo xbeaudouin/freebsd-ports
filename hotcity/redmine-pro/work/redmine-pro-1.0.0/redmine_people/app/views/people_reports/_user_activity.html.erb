@@ -1,0 +1,45 @@
+<% if @collector.users.empty? %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% else %>
+  <div class="people_user_activity">
+    <table class="user_activity_table">
+      <tr class="header">
+        <td>&nbsp;</td>
+        <td class="column_data">S</td>
+        <% (0..23).each do |hour| %>
+          <td class="column_data"><%= hour.to_s.rjust(2, '0') %></td>
+        <% end %>
+      </tr>
+      <% @collector.users.each do |user| %>
+        <tr class="main_block">
+          <td class="column_data_user_name">
+            <%= avatar(user, :size => "24") %>
+            <%= link_to(user.name, user_path(user)) %>
+          </td>
+          <td class="column_data_total"><%= people_time_label(@collector.entries[user.id][:spent_time] * 3600 / @collector.days_count) %></td>
+          <% (0..23).each do |hour| %>
+            <% hour_ratio = (@collector.entries[user.id][:hours][hour].to_f / @collector.days_count).round(2) %>
+            <td class="column_data <%= ratio_color_class(hour_ratio) %>" title="<%= hour_ratio %>">&nbsp;</td>
+          <% end %>
+        </tr>
+      <% end %>
+      <tr class="metrics">
+        <td class="empty">&nbsp;</td>
+        <td colspan="10">
+          <p><%= l(:label_people_average_time_per_day) %></p>
+          <div class="num"><%= people_time_label(@collector.current_average * 3600) %></div>
+          <div class="change" title="">
+            <%= progress_in_percents(@collector.average_progress.round(2)) %>
+          </div>
+        </td>
+        <td colspan="14">
+          <p><%= l(:label_people_total_coverage) %></p>
+          <div class="num"><%= people_time_label(@collector.current_length * 3600) %></div>
+          <div class="change" title="">
+            <%= progress_in_percents(@collector.length_progress.round(2)) %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+<% end %>

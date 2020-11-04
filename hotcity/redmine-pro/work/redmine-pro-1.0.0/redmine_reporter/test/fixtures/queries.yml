@@ -1,0 +1,45 @@
+---
+query_1:
+  id: 1
+  type: IssueQuery
+  project_id: 1
+  visibility: 2
+  name: Multiple custom fields query
+  filters: |
+    ---
+    cf_1:
+      :values:
+      - MySQL
+      :operator: "="
+    status_id:
+      :values:
+      - "1"
+      :operator: o
+    cf_2:
+      :values:
+      - "125"
+      :operator: "="
+
+  user_id: 1
+  column_names:
+
+query_2:
+  id: 2
+  type: TimeEntryQuery
+  project_id: 1
+  visibility: 2
+  name: Admin time spent
+  filters: |
+    ---
+    user_id:
+      :values:
+      - '1'
+      :operator: =
+
+  user_id: 1
+  column_names:
+  group_by:
+  sort_criteria: |
+    ---
+    - - spent_on
+      - desc

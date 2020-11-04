@@ -1,0 +1,34 @@
+<div class="contextual">
+<%= link_to l(:label_products_order_status_new), new_order_status_path, :class => 'icon icon-add' %>
+</div>
+
+<h3><%=l(:label_products_order_status_plural)%></h3>
+
+<table class="list">
+  <thead><tr>
+  <th><%=l(:field_status)%></th>
+  <th><%=l(:field_is_default)%></th>
+  <th><%=l(:label_products_order_status_type)%></th>
+  <th><%=l(:button_sort)%></th>
+  <th></th>
+  </tr></thead>
+  <tbody>
+<% for status in OrderStatus.order(:position).all %>
+  <tr class="<%= cycle("odd", "even") %>">
+  <td class="name"><span class="color" style="border: 1px solid #D7D7D7;background-color: <%= status.color_name %>;">&nbsp;&nbsp;&nbsp;&nbsp;</span> <%= link_to status.name, edit_order_status_path(status) %></td>
+  <td align="center"><%= checked_image status.is_default? %></td>
+  <td align="center"><%= status.status_type_name %></td>
+  <td align="center" style="width:15%;"><%= stocked_reorder_link(status, 'order_status', {:controller => "order_statuses", :action => 'update', :id => status}, :put) %></td>
+  <td class="buttons">
+    <%= delete_link order_status_path(status) %>
+  </td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<% html_title(l(:label_products_order_status_plural)) -%>
+
+<%= javascript_tag do %>
+  $(function() { $("table.list tbody").positionedItems(); });
+<% end %>

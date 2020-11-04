@@ -1,0 +1,43 @@
+<div class="contextual">
+  <%= link_to l(:button_add), new_person_work_experience_path(@person), :class => 'icon icon-add' if PeopleWorkExperience.editable?(@person) %>
+</div>
+<h3><%= l(:label_people_work_experience) %></h3>
+<% unless @person.all_visible_work_experiences.blank? %>
+    <%= form_tag({}) do %>
+      <div class="autoscroll" >
+        <table class="list issues <%#= sort_css_classes %>">
+          <thead>
+          <tr>
+            <%#= sort_header_tag('previous_company_name', :caption => l(:field_previous_company_name)) %>
+            <%= content_tag('th', h(l(:label_people_previous_company_name))) %>
+            <%= content_tag('th', h(l(:label_people_job_title))) %>
+            <%= content_tag('th', h(l(:label_people_from_date))) %>
+            <%= content_tag('th', h(l(:label_people_to_date))) %>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @person.all_visible_work_experiences.each do |work_experience| %>
+              <tr id="person-<%= h(work_experience.id) %>" class="<%= cycle("odd", "even") -%>">
+                <td style="display: none;"><%= check_box_tag("ids[]", work_experience.id, false, :id => nil) %></td>
+                <td class=""><%= work_experience.previous_company_name %></td>
+                <td class=""><%= work_experience.job_title %></td>
+                <td class=""><%= format_date work_experience.from_date %></td>
+                <td class=""><%= format_date work_experience.to_date %></td>
+                <td class="">
+                  <% if PeopleWorkExperience.editable?(@person) %>
+                    <%= link_to l(:button_edit), edit_person_work_experience_path(@person, work_experience),
+                                      :class => 'icon icon-edit' %>
+                    <%= link_to l(:button_delete), person_work_experience_path(@person, work_experience),
+                                      :data => {:confirm => l(:text_are_you_sure)},
+                                      :method => :delete,
+                                      :class => 'icon icon-del' %>
+                  <% end %>
+                </td>
+              </tr>
+          <% end -%>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+<% end %>

@@ -1,0 +1,29 @@
+<table class="list">
+  <thead><tr>
+  <th><%= l(:label_helpdesk_mail_rule_condition_plural) %></th>
+  <th><%= l(:label_helpdesk_mail_rule_action_plural) %></th>
+  <th></th>
+  <th></th>
+  </tr></thead>
+  <tbody>
+  <% helpdesk_mail_rules.each do |mail_rule| %>
+  <tr class="<%= cycle 'odd', 'even' %>">
+    <td class="conditions">
+      <%= helpdesk_mail_rule_conditions_to_html(mail_rule.conditions) %>
+    </td>
+    <td class="actions">
+      <%= helpdesk_mail_rule_actions_to_html(mail_rule.actions) %>
+    </td>
+    <td><%= stocked_reorder_link(mail_rule, '', {:controller => "helpdesk_mail_rules", :action => 'update', :id => mail_rule}, :put) %></td>
+    <td class="buttons">
+      <%= link_to l(:button_edit), edit_helpdesk_mail_rule_path(mail_rule), :class => 'icon icon-edit' %>
+      <%= delete_link helpdesk_mail_rule_path(mail_rule) %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= javascript_tag do %>
+  $(function() { $("table.list tbody").positionedItems(); });
+<% end %>

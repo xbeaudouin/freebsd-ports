@@ -1,0 +1,296 @@
+== Redmine Invoices plugin changelog
+
+Redmine Invoices plugin - invoicing plugin for Redmine
+Copyright (C) 2011-2020 RedmineUP
+http://www.redmineup.com/pages/plugins/invoices
+
+== 2020-04-08 v4.2.3
+
+* Fixed empty account bug
+* Fixed pdf export bug
+* Fixed added comment notification
+
+== 2020-02-21 v4.2.2
+
+* Redmine 4.1 support
+* New Reports menu
+* Public view for group of templates
+* Added fields for CVS export 
+* Invoice templates setting tab added
+
+== 2019-10-01 v4.2.1
+
+* Linked operations approvement 
+* Fixed operation dependence bug
+* Fixed email attachments bug 
+
+== 2019-08-01 v4.2.0
+
+* Invoices and Finances integration 
+
+== 2019-04-17 v4.1.8
+
+* Redmine 4.0.3 support
+* Fixed order convertation bug
+
+== 2019-01-28 v4.1.7
+
+* Redmine 4.0 support
+* Added invoice discount values to drop
+* Add filters by payment fields: date, amount, description
+* New macros for Invoice {{month_name}}, {{month_name_short}}, {{id}}, {{year}}, {{month}}, {{day}}, {{daily_id}}, {{monthly_id}}, {{yearly_id}}, {{monthly_project_id}}, {{monthly_project_id}}
+* Fixed bug with invoice status filter
+* Fixed empty dates bug
+* Fixed grouped sorted queries bug
+* Fixed context menu
+* Fixed out of range value for decimal columns
+* select2 fixes
+* Invoices and Expenses permissions fixes
+
+== 2017-07-07 v4.1.6
+
+* Redmine 3.4 support
+
+== 2017-05-30 v4.1.5
+
+* Chinese translation update
+* Contact filters were changed for select2
+* Fixed InvoiceLine custom field bug
+
+== 2017-02-08 v4.1.4
+
+* Liquid drop "remaining_balance" and "balance" fields for invoice
+* Notification compatibility fixes
+* Fixed line breaks in custom templates
+
+== 2016-11-17 v4.1.3
+
+* Light version fixes
+
+== 2016-11-16 v4.1.2
+
+* Recurring profile total and due on invoice page
+* Link to recurring invoices from profile page
+* "Recurring profile" filter on invoices list
+* "Is recurring" filter on invoices list
+* Filter by Invoice ID
+* Invoice by estimated time
+* Invoice payments REST API
+* Invoice attachments REST API
+* Order number in invoice API
+* "+" button support
+* Chinese translation (Zuofeng Zhang)
+* Fixed bug with recurring invoices creation
+* Fixed bug in PDF preview
+
+== 2016-06-20 v4.1.1
+
+* Added relation with products
+* Custom fields for invoice lines
+
+== 2016-06-01 v4.1.0
+
+* Recurring invoices
+* Invoice comment notification
+* Expenses API
+* Fixed pagination styles for Redmine 3.2+
+* Fixed bug with reversed comments
+
+== 2015-12-14 v4.0.3
+
+* Fixed bug with unassigned invoice view
+
+== 2015-12-11 v4.0.2
+
+* New import for invoices and exprenses
+* German translation update by Alexander Meindl
+* Unicode encoding for pdf
+* Red color for overdue invoice date
+* Fixed major currencies bug
+* Fixed template preview
+* Fixed invoice page styles for Redmine 3.2
+
+== 2015-08-25 v4.0.1
+
+* Fixed bug with creating InvoiceLine with empty units
+* Fixed bug with creating Expense with empty assigned to, project and billable
+* Expenses filters bug fixed
+* Invoice templates controller bug fixed
+
+== 2015-06-16 v4.0.0
+
+* Redmine 3 support
+* inovice.project liquid attribute
+* Added Mark as Sent option for email sending invoices
+
+== 2015-03-25 v3.3.0
+
+* Print button for public links
+* Multiple custom templates per project
+* Invoice template field
+* PayPal online payments
+* Chinese translation (zhoutt)
+
+== 2014-11-14 v3.2.3
+
+* Custom fields fixes for Redmine < 2.5
+* Fixed bug with creating invoice from order with empty item price field
+* language field added to Liquid drop
+
+== 2014-11-10 v3.2.2
+
+* Invoices calendar view
+* Custom field as filter for expenses
+* Import dates fixes
+* Serbian translation (Radenko)
+
+== 2014-10-16 v3.2.1
+
+* Custom fields styles
+* New styles for copy to all invoice items amount
+* Fixes for seach by custom values
+* Fixed creating expenses from global list
+* Fixes for expense table view links
+
+== 2014-10-02 v3.2.0
+
+* Invoices and expenses queries
+* Change line description db field type to text
+* Send invoice with attachments fixes
+* XSS for invoice line description fixes
+* Czech tranlsation (Martin Grůber)
+* Disable uniqueness validation for invoice line description
+* Fixed add permission check on invoice list page
+* Select Invoices/Expenses menu items on import
+* Ukrainian translation (Olexa)
+
+== 2014-05-03 v3.1.4
+
+* "Download as PDF" button in custom template public view
+* Macro support for invoice mail subject
+* Fixed access issues with public invoices
+* Spanish translation (Luis Blasco)
+
+== 2014-04-10 v3.1.3
+
+* Prawn gem was downgraded for ruby 1.8.7 support
+* French translation update (Philippe Lafoucrière)
+* Bulgarian translation (Oldzhay Saroolu)
+
+== 2014-03-31 v3.1.2
+
+* Fixed bug with custom fields in pdf report
+
+== 2014-02-25 v3.1.1
+
+* Polish translation update (Szymon Anders)
+* From address for sending invoices
+* Redmine 2.5 support
+* Fixed bug with invoice status translation
+* Fixed bug with spliting time in activity and user grouping invoice lines
+* Invoice contact statistics through all projects
+
+== 2014-02-07 v3.1.0
+
+* Sending invoice by email
+* Added total sum to expenses table view
+* Added invoice.tax_amount param in custom templates
+* Added Order number field for invoice
+* Swedish translation update (Johan Bergquist)
+* Fixed due date missing in custom templates
+* Fixed currency symbols in prawn PDF reports
+
+== 2013-12-09 v3.0.1
+
+* Migration bug fixes
+* Fixed bug with hidden duplication link on invoice show page
+* Fixes in multiline address format in PDF report
+* New permissions for adding invoices and expenses
+* German translation update (Alex Meindl)
+
+== 2013-12-06 v3.0.0
+
+* Custom templates with liquid markup language
+* Public links
+* List view settings
+* PostgreSQL compatibility fixes
+* Brazilian Portuguese translation (Marcelo Fernandes)
+
+== 2013-11-16 v2.3.0
+
+* Taxes, Billable and Currency fields for Expenses
+* "Estimate" status for invoice
+* Currency signs
+* Global money setting on the Contacts -> Money tab
+* Units could be hided
+* Dutch translation (Bas Van Eijk)
+* Fixed bug in PDF genetation with emplty contact
+
+== 2013-10-22 v2.2.2
+
+* New macro {{invoice(inoice_number)}}
+* CRM 3.2.7 support
+* PostgreSQL sorting issues
+
+== 2013-07-22 v2.2.1
+
+* Japanese tranlation (Stephane Lapie)
+* PostgreSQL fixes for sorting
+
+== 2013-07-11 v2.2.0
+
+* Invoice payments
+* New forkflow for paid invoices
+* Stat for Due and Paid invoices
+* Client balance stat
+* Contacts context menu add invoice
+* Contact invoices tab
+* New "Cancel" invoice status
+* Sortable invoice lines
+
+== 2013-04-05 v2.1.1
+
+* Select project field
+* Bill time entries to different project
+* Contact select clean up
+* Fixed DAILY_ID bug
+* Added %%YEARLY_ID%%, %%MONTHLY_ID%% macros
+* Hungarian translation (Márk Sági-Kazár)
+* Czech translation (Martin Grůber)
+
+== 2013-02-26 v2.1.0
+
+* Assignee for expense
+* Attachments for invoices/expenses
+* Comments for invoices
+* Expenses table view
+* Sorting on excerpt list
+* Finance plugin support
+
+== 2013-02-04 v2.0.3
+
+* Redmine 2.3 support
+* Fixed bug with empty settings params
+
+== 2013-01-21 v2.0.2
+
+* Redmine 2.2.2 support
+
+== 2013-01-20 v2.0.1
+
+* Redmine 2.2 support
+* Per project invoice companies
+* All popular Currencies
+* Merging invoices and expenses plugins
+
+== 2012-05-03 v1.1.0
+
+* Caching for invoice total amount
+* Issues paginator with page_size
+* Invoice subject property
+* Expenses statistic by dates and statuses
+* Page number and invoice number in page footer
+* [PRO] CSV invoices/expenses export
+* [PRO] Custom Field support for Expenses module
+* Bug: Wrong statistics for boundary dates for last month
+* Bug: ActionView:TemplateError

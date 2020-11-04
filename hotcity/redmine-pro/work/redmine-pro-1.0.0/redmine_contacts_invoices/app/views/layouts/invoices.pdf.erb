@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="<%= "preview" if @html_preview %>">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <style type="text/css">
+    .preview body {
+      background-color: #f3f3f3;
+    }
+
+    div#toolbar {
+      display: none;
+      width: 21cm;
+      margin: auto;
+    }
+
+    div#content {
+      background-color: #FFFFFF;
+      box-sizing: border-box;
+      moz-box-sizing: border-box;
+      webkit-box-sizing: border-box;
+      color: black;
+      font-family: "Lucida Grande", Helvetica, Arial, "Sans-Serif";
+      font-size: 12px;
+      overflow: hidden;
+      position: relative;
+      text-align: left;
+    }
+
+
+    div.pdf-toolbar { font-family: 'Lucida Grande', Helvetica, Arial, 'Sans-Serif'; }
+    div.pdf-toolbar .buttons { float:right; margin-top: 10px; }
+    div.pdf-toolbar .buttons form { display: inline; }
+    div.pdf-toolbar .due-amount .small-text { margin-bottom: -1px; font-size: 11px; color: #666666; }
+    div.pdf-toolbar .due-amount .amount { font-weight: bold; font-size: 20px; }
+
+    @media screen {
+      .preview div#toolbar {
+        display: block;
+        padding-bottom: 5px;
+      }
+      .preview div#content {
+        margin: 0 auto;
+        border: 1px solid #CBCBCB;
+        padding: 2.1cm 2.2cm;
+        width: 21cm;
+        min-height: 29.7cm;
+        margin: 2px 0px 0px;
+        margin: auto;
+      }
+
+      .preview div.page-break {
+        display: block;
+        clear: both;
+        page-break-after: always;
+        height: 10px;
+        border-top: 1px solid #CBCBCB;
+        border-bottom: 1px solid #CBCBCB;
+        margin: 50px -100px;
+        background-color: #f3f3f3;
+      }
+    }
+
+    @media print {
+      .preview div#content {
+        margin: 0 auto;
+        padding: 2.1cm 2.2cm;
+        width: 21cm;
+        min-height: 29.7cm;
+        margin: 2px 0px 0px;
+        margin: auto;
+      }
+      div.page-break {
+        display: block;
+        clear: both;
+        page-break-after: always;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <div id="toolbar" class="pdf-toolbar">
+    <div class="buttons">
+      <% if InvoicesSettings.paypal_enabled?(@project.try(:id)) %>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="upload" value="1">
+        <input type="hidden" name="invoice" value="<%= @invoice.number %>">
+        <input type="hidden" name="business" value="<%= InvoicesSettings['invoices_paypal_account', @project.try(:id)] %>">
+        <input type="hidden" name="amount" value="<%= @invoice.amount.to_f %>">
+        <input type="hidden" name="currency_code" value="<%= @invoice.currency %>">
+        <input type="hidden" name="item_name" value="<%= paypal_item_name(@invoice) %>">
+        <button name="submit"><%= l(:label_invoice_pay_online) %></button>
+      </form>
+      <% end %>
+      <%= link_to  button_tag(l(:label_invoice_download_as_pdf), :type => "button"), client_view_invoice_url(@invoice, :token => @invoice.token, :format => :pdf) %>
+      <%= link_to  button_tag(l(:label_invoice_print), :type => "button"), '#', :onclick => "window.print();" %>
+    </div>
+    <div class="due-amount">
+      <div class="small-text "><%= l(:label_invoice_amount_due) %>
+      </div>
+      <div class="amount">
+        <%= price_to_currency(@invoice.remaining_balance, @invoice.currency, :converted => false) %>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <%= yield %>
+  </div>
+</body>
+</html>

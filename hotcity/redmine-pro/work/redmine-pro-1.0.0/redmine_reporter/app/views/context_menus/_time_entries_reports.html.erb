@@ -1,0 +1,3 @@
+<% if User.current.allowed_to?(:generate_time_entries_reports, @project, global: true) %>
+  <li><%= link_to l(:label_report_plural), new_time_entries_report_path(time_entries_ids: @time_entries.map(&:id)), remote: true, method: 'get' %></li>
+<% end %>

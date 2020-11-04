@@ -1,0 +1,32 @@
+<% html_title "#{@issue.tracker.name} ##{@issue.id}: #{@issue.subject}" %>
+
+<h2>[<%= @issue.visible? ? link_to_issue(@issue, :subject => false) : issue_heading(@issue) %>] <%= @issue.subject %></h2>
+
+<div id="history" class="ticket-history">
+
+  <div class="journal <%= @issue.helpdesk_ticket.is_incoming? ? 'incoming' : 'outgoing' %>">
+    <div>
+      <h4>
+        <%= l(:label_added_time_by, :author => @issue.helpdesk_ticket.is_incoming? ? mail_to(@ticket.from_address) : @issue.author.name, :age => content_tag('acronym', distance_of_time_in_words(Time.now, @issue.created_on), :title => format_time(@issue.created_on))).html_safe %>.
+      </h4>
+      <div class="wiki">
+        <%= textilizable(@issue, :description) unless @issue.description.blank? %>
+      </div>
+    </div>
+  </div>
+
+<%= render :partial => 'public_tickets/history', :locals => { :issue => @issue, :journals => @journals } if @journals.present?  %>
+</div>
+
+<div style="clear: both;"></div>
+
+<% if RedmineHelpdesk.public_comments? %>
+  <p><%= toggle_link l(:label_comment_add), "update", :focus => "journal_notes" %></p>
+  <div id="update" style="display:none;">
+  <h3><%= l(:label_comment_add) %></h3>
+  <%= render :partial => 'add_comment' %>
+  </div>
+<% end %>
+
+<%= render :partial => 'sidebar_content' %>
+

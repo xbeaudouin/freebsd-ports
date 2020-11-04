@@ -1,0 +1,11 @@
+<td class="description">
+  <% if line.product %>
+    <%= product_tag(line.product, :size => 32, :type => (line.product.image.blank? ? 'plain' : '') ) %>
+    <% unless line.description.blank? %>
+      <br>
+      <em class="info"><%= line.description %></em>
+    <% end %>
+  <% else %>
+    <%= textilizable(line.description) %>
+  <% end %>
+</td>

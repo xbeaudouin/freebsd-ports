@@ -1,0 +1,30 @@
+<<%= Redmine::VERSION.to_s > '3.2' ? 'div' : 'table' %>  class="attributes invoice status-<%= invoice.status_id %> <%= 'overdue' if invoice.overdue? %>" >
+<%= issue_fields_rows do |rows|
+  rows.left l(:field_invoice_status), invoice_status_tag(invoice), :class => 'status'
+  rows.left l(:field_invoice_language), invoice_avaliable_locales_hash[invoice.language.blank? ? 'default' : invoice.language], :class => 'language'
+  rows.left l(:field_invoice_contact), !invoice.contact.blank? ? link_to_contact(invoice.contact, :avatar => true).html_safe : ""
+  rows.left l(:field_invoice_assigned_to), "#{avatar(invoice.assigned_to, :size => "14")}#{(invoice.assigned_to ? link_to_user(invoice.assigned_to) : "-")}".html_safe, :class => 'assigned-to'
+  if invoice.recurring_instance?
+    rows.left l(:field_invoice_recurring_period), link_to( Invoice.recurring_period_name[invoice.profile_recurring_period], invoice_path(invoice.recurring_profile_id))
+  else
+    rows.left l(:field_invoice_is_recurring), invoice.is_recurring ? l(:general_text_Yes) : l(:general_text_No)
+  end
+  rows.left l(:label_invoice_template), invoice.template.name, :class => 'template', :title => invoice.template.description if InvoicesSettings.per_invoice_templates? && invoice.template
+  rows.right l(:field_invoice_order_number), invoice.order && invoice.order.visible? ? link_to(invoice.order_number, order_path(invoice.order.id)): invoice.order_number, :class => 'oder-number'
+  rows.right l(:field_invoice_date), format_date(invoice.invoice_date), :class => 'start-date'
+  rows.right l(:field_invoice_due_date), format_date(invoice.due_date), :class => 'due-date'
+  rows.right l(:field_invoice_discount), invoice.discount > 0 ? "#{"%.2f"%invoice.discount.round(2)}% / #{price_to_currency(invoice.discount_amount, invoice.currency)}".html_safe : ""
+  rows.right l(:field_invoice_recurrings), link_to( invoice.recurring_instances.count, invoices_path(:set_filter => 1, :f =>["recurring_profile"], :op => { :recurring_profile => '~'}, :v => {:recurring_profile => [invoice.number]})) if invoice.is_recurring
+  rows.right l(:field_invoice_recurring_number), invoice.recurring_number if invoice.recurring_instance?
+end %>
+  <%= render_custom_fields_rows(invoice) if invoice.respond_to?(:custom_field_values) %>
+  <%= call_hook(:view_invoices_show_details_bottom, :invoice => invoice) %>
+</<%= Redmine::VERSION.to_s > '3.2' ? 'div' : 'table' %>>
+
+<% if invoice.description? %>
+  <hr />
+  <p><strong><%=l(:field_description)%></strong></p>
+  <div class="wiki">
+  <%= textilizable invoice, :description, :attachments => invoice.attachments %>
+  </div>
+<% end %>

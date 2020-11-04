@@ -1,0 +1,35 @@
+<%= error_messages_for 'invoice_template' %>
+
+<div class="box tabular">
+  <p><%= f.text_field :name, :size => 80, :required => true %></p>
+  <p><%= f.text_area :description, :class => 'wiki-edit', :rows => 3 %></p>
+
+  <% if @invoice_template.author %>
+  <p>
+    <label><%= l(:field_author) %></label>
+    <%= @invoice_template.author.name %>
+  </p>
+  <% end %>
+
+  <p><label for="invoice_template_is_for_all"><%=l(:field_is_for_all)%></label>
+  <%= check_box_tag 'invoice_template_is_for_all', 1, @invoice_template.project.nil?,
+        :disabled => (!@invoice_template.new_record? && @invoice_template.project.nil?) %></p>
+
+  <% unless @invoice_template.new_record? %>
+  <p id="edit_content">
+    <label><%=l(:field_content)%></label>
+    <%= link_to_function image_tag('edit.png'), '$("#edit_content").hide(); $("#invoice_template_content").show()' %>
+  </p>
+  <% end %>
+
+  <fieldset id="invoice_template_content" style="<%= (@invoice_template.new_record? ? nil : 'display:none') %>"><legend><%= l(:label_invoice_template) %></legend>
+    <%= f.text_area :content, :class => 'wiki-edit', :rows => 40, :no_label => true, :style => "width: 99%;" %>
+  </fieldset>
+
+</div>
+
+
+<% content_for :header_tags do %>
+  <%= javascript_include_tag :contacts, :plugin => 'redmine_contacts'  %>
+<% end %>
+

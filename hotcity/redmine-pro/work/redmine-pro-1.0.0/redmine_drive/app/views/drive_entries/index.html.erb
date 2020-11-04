@@ -1,0 +1,59 @@
+<% html_title l(:label_drive) %>
+
+<%= render_breadcrumbs %>
+
+<div class="contextual">
+  <% if User.current.allowed_to?(:add_drive_entries, @project, global: true) %>
+    <%= link_to l(:label_drive_new_folder), new_folder_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id), remote: true, method: 'get', class: 'icon icon-add' %>
+  <% end %>
+
+  <% if User.current.allowed_to?(:add_drive_entries, @project, global: true) %>
+    <%= link_to l(:label_drive_upload_files), '#', class: 'icon icon-upload',
+                onclick: "selectFilesDialog('#{new_files_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id)}');" %>
+  <% end %>
+</div>
+
+<%= form_tag({ controller: 'drive_entries', action: 'index', project_id: @project }, method: :get, id: 'query_form') do %>
+  <%= hidden_field_tag 'current_folder_id', @current_folder.id %>
+
+  <h2 class="drive_header">
+    <span id='scope_header' class="scope_title">
+      <%= @query.new_record? ? l(:label_redmine_drive) : h(@query.name) %>
+    </span>
+    <span class="live_search">
+      <%= text_field_tag(:search, params[:search], autocomplete: 'off', class: 'live_search_field', placeholder: l(:label_drive_search_by_name)) %>
+    </span>
+  </h2>
+
+  <%= render partial: 'query_form' %>
+<% end %>
+
+<div id="drive-entries"><%= render partial: 'index' %></div>
+
+<% content_for :header_tags do %>
+  <% if Redmine::VERSION.to_s < '3.4' %>
+    <%= context_menu context_menu_drive_entries_path %>
+  <% else %>
+    <%= context_menu %>
+  <% end %>
+
+  <%= javascript_include_tag 'attachments' %>
+
+  <%= stylesheet_link_tag :redmine_drive, plugin: 'redmine_drive' %>
+  <%= javascript_include_tag :redmine_drive, plugin: 'redmine_drive' %>
+
+  <%= select2_assets %>
+<% end %>
+
+<% content_for :sidebar do %>
+  <%= render partial: 'sidebar' %>
+<% end %>
+
+<%= javascript_tag do %>
+  $(function () {
+    initializeSidebarMenu();
+    initializeQuickSearch();
+    initializeFileDrop('#drive-entries', '<%= new_files_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id) %>');
+  });
+<% end %>
+<%= transform_to_select2 'drive_entry_tags', url: tags_autocomplete_drive_entries_path %>

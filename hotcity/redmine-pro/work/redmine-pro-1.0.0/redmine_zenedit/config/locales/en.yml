@@ -1,0 +1,8 @@
+# English strings go here for Rails i18n
+en:
+  label_zen_placeholder: Leave a comment
+  label_click_for_edit: Click for edit
+  label_unsaved_issue: You have an unsaved issue. Do you want to restore it?
+  label_created_time: Created %{value} ago
+  label_zen_user_mentions: User mentions
+  label_zen_issue_mentions: Issue mentions

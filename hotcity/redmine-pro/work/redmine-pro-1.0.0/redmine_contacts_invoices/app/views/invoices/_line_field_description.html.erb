@@ -1,0 +1,1 @@
+<td class="description" colspan="2"><%= f.text_area :description, :no_label => true,  :rows => f.object.description.blank? ? 2 : [f.object.description.lines.count, 2].max, :onkeyup => "activateTextAreaResize(this);" %></td>

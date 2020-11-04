@@ -1,0 +1,54 @@
+<div class="splitcontent">
+  <div class="splitcontentleft">
+    <p>
+      <label><%= l(:field_invoice_number) %></label>
+      <%= mapping_select_tag @import, 'number', :required => true %>
+    </p>
+    <p>
+      <label><%= l(:field_invoice_date) %></label>
+      <%= mapping_select_tag @import, 'invoice_date', :required => true %>
+    </p>
+    <p>
+      <label><%= l(:field_invoice_status) %></label>
+      <%= mapping_select_tag @import, 'status', :required => true %>
+    </p>
+    <p>
+      <label><%= l(:field_invoice_due_date) %></label>
+      <%= mapping_select_tag @import, 'due_date' %>
+    </p>
+    <p>
+      <label><%= l(:field_invoice_contact) %></label>
+      <%= mapping_select_tag @import, 'contact' %>
+    </p>
+    <% @custom_fields.each do |field| %>
+      <p>
+        <label><%= field.name %></label>
+        <%= mapping_select_tag @import, "cf_#{field.id}" %>
+      </p>
+    <% end %>
+  </div>
+
+  <div class="splitcontentright">
+    <p>
+      <label><%= l(:field_invoice_amount) %></label>
+      <%= mapping_select_tag @import, 'amount' %>
+    </p>
+    <p>
+      <label><%= l(:field_invoice_currency) %></label>
+      <%= mapping_select_tag @import, 'currency' %>
+    </p>
+    <p>
+      <label><%= l(:field_invoice_discount) %></label>
+      <%= mapping_select_tag @import, 'discount' %>
+    </p>
+    <p>
+      <label><%= l(:field_invoice_subject) %></label>
+      <%= mapping_select_tag @import, 'subject' %>
+    </p>
+    <p>
+      <label><%= l(:field_invoice_assigned_to) %></label>
+      <%= mapping_select_tag @import, 'assigned_to' %>
+    </p>
+  </div>
+</div>
+

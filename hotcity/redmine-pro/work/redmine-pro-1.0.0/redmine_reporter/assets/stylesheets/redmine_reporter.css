@@ -1,0 +1,9 @@
+#report_templates { height: 200px; overflow:auto; }
+#report_templates label { display: block; }
+
+input#report_template_search { width: 90% }
+
+.icon-pdf { background-image: url(../images/page_white_acrobat.png); }
+.icon-pdf-context { background-image: url(../images/page_white_acrobat_context.png); }
+.icon-preview { background-image: url(../images/page_white_magnify.png); }
+.icon-reporter-public-link { background-image: url(../../../images/external.png); padding-left: 14px; }

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="<%= 'preview' if @reports.present? %>">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <style type="text/css">
+    .preview body { background-color: #f3f3f3; }
+
+    body {
+      font-family: "Lucida Grande", Helvetica, Arial, "Sans-Serif";
+    }
+
+    table { page-break-inside:auto }
+    table tr { page-break-inside:avoid; page-break-after:auto }    
+
+    .title { text-align: center; }
+
+    #toolbar {
+      display: none;
+      width: 21cm;
+      margin: auto;
+    }
+
+    .content {
+      background-color: #FFFFFF;
+      box-sizing: border-box;
+      moz-box-sizing: border-box;
+      webkit-box-sizing: border-box;
+      color: black;
+      font-size: 12px;
+      overflow: hidden;
+      position: relative;
+      text-align: left;
+    }
+
+    .pdf-toolbar { font-family: 'Lucida Grande', Helvetica, Arial, 'Sans-Serif'; }
+    .pdf-toolbar .buttons { text-align: right; margin-top: 10px; }
+    .pdf-toolbar .buttons form { display: inline; }
+
+    .public_link {
+      display: -webkit-flex;
+      -webkit-justify-content: space-between;
+      -webkit-align-items: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 21cm;
+      margin: 5px auto;
+      font-size: 12px;
+    }
+
+    .public_link .filler {
+      -webkit-flex-grow: 3;
+      flex-grow: 3;
+      padding: 0 5px;
+    }
+
+    .public_link .filler input[type="text"] {
+      width: 100%;
+      height: 25px;
+      background: #f3f3f3;
+      font-size: 12px;
+      color: #aaa;
+      outline: none;
+      border: 0px;
+      font-family: "Lucida Grande", Helvetica, Arial, "Sans-Serif";
+    }
+
+    .report-button {
+      border: 1px solid #CBCBCB;
+      padding: 4px 10px;
+      background: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a.report-button:visited { color: inherit }
+
+    .report-button:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    @media screen {
+      #toolbar {
+        display: block;
+        padding-bottom: 5px;
+      }
+      .content {
+        margin: 0 auto;
+        border: 1px solid #CBCBCB;
+        padding: 2.1cm 2.2cm;
+        width: 21cm;
+        min-height: 29.7cm;
+        margin: 2px 0px 0px;
+        margin: auto;
+      }
+
+      .page-break {
+        display: block;
+        clear: both;
+        page-break-after: always;
+        height: 10px;
+        border-top: 1px solid #CBCBCB;
+        border-bottom: 1px solid #CBCBCB;
+        margin: 50px -100px;
+        background-color: #f3f3f3;
+      }
+    }
+
+    @media print {
+      .title, .public_link { display: none; }
+      .content {
+        padding: 2.1cm 2.2cm;
+        width: unset;
+        min-height: unset;
+        border: 0px;
+        page-break-after: always;
+      }
+      .page-break {
+        display: block;
+        clear: both;
+        page-break-after: always;
+      }
+      @page {
+        size: auto;   /* auto is the initial value */
+        margin: 0;  /* this affects the margin in the printer settings */
+      }
+    }
+  </style>
+</head>
+<body>
+  <%= yield %>
+
+  <%= javascript_tag do %>
+    function copyTokenToClipboard(id) {
+      var copyText = document.getElementById(id);
+      copyText.select();
+      document.execCommand('copy');
+    };
+  <% end %>
+</body>
+</html>

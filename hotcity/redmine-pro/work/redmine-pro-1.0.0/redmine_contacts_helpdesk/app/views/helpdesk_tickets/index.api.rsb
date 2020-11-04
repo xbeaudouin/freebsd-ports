@@ -1,0 +1,7 @@
+api.array :helpdesk_tickets, api_meta(total_count: @tickets_count, offset: @offset, limit: @limit) do
+  @tickets.each do |helpdesk_ticket|
+    api.ticket do
+      render_api_helpdesk_ticket(helpdesk_ticket, api)
+    end
+  end
+end

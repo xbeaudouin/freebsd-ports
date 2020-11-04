@@ -1,0 +1,194 @@
+.jstEditor {
+  position: relative;
+}
+
+html.zen {
+  overflow: hidden;
+}
+
+.jstEditor.zen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 40px;
+  background: #fff;
+  text-shadow: none;
+  z-index: 1000;
+  text-align: center;
+}
+
+.jstEditor.zen textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  border: 0;
+  background: #fff;
+  color: #999999;
+  font-size: 18px;
+  line-height: 1.6em;
+  resize: none;
+  -moz-transition: color 0.15s ease-in 0;
+  -webkit-transition: color 0.15s ease-in 0;
+  transition: color 0.15s ease-in 0;
+  box-shadow: none;
+  max-width: 800px;
+  outline: none;
+  overflow: auto;
+}
+
+.jstEditor.zen textarea:active, .jstEditor.zen textarea:hover,  .jstEditor.zen textarea:focus {
+  color: #333333;
+}
+
+button.jstb_zenedit, button.jstb_zenedit.theme {
+  background-image: url(../images/fullscreen.png);
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ddd;
+  background-color: #f7f7f7;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  opacity: 0.5;
+}
+
+button.jstb_zenedit:hover {
+  opacity: 1;
+}
+
+button.jstb_zenedit.theme {
+  background-image: url(../images/theme.png);
+  display: none;
+}
+
+.jstEditor.zen button.jstb_zenedit.theme {
+  display: inline;
+  top: 35px;
+}
+
+.jstEditor.zen.dark-theme , .jstEditor.zen.dark-theme textarea {
+  background: #1d1f21;
+}
+
+.jstEditor.zen.dark-theme textarea {
+  color: #a4b1b1;
+}
+
+.jstEditor.zen.dark-theme textarea:hover, .jstEditor.zen.dark-theme textarea:active, .jstEditor.zen.dark-theme textarea:focus {
+  color: #dbe0e0;
+}
+
+.jstElements.zen {
+  position: fixed;
+  top: 0.5em;
+  left: 5em;
+  right: 5em;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 1001;
+  opacity: 0;
+  -moz-transition: 0.15s ease-in;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+}
+
+.jstElements.zen:hover {
+  opacity: 1;
+}
+
+.zenElements .jstb_zen_submit,
+.zenElements .jstb_zen_preview {
+  width: auto;
+}
+
+.jstElements .zenElements { display: none; }
+.zen.jstElements .zenElements { display: flex; }
+
+#zenClickForEditBtn {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 20%;
+  min-height: 2em;
+  font-size: 16px;
+  font-weight: bold;
+  border: solid 1px #bebebe;
+  background: #eee;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+#zenPreview {
+  display: inline-block;
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+}
+
+#zenPreview .preview {
+  -webkit-box-sizing: border-box ;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 20px 0;
+  margin: 0;
+  height: 100%;
+  transition: opacity .5s ease;
+  text-align: left;
+  overflow: auto;
+}
+
+#zenPreview .preview p {
+  margin: 1em 0;
+  padding: 0;
+}
+
+#zenPreview:hover .preview { opacity: 0.5; }
+#zenPreview:hover #zenClickForEditBtn { opacity: 1 }
+
+html.zen ul.ui-menu { z-index: 1001; }
+
+li.zen_mention-menu-item {
+  border-bottom: 1px solid #ddd;
+}
+
+li small.menu-item-info {
+  display: block;
+  color: grey;
+}
+
+@media screen and (max-width: 899px) {
+  .jstEditor.zen, .jstElements.zen {
+    margin: 64px 0 0; /* margin-top equals header height */
+  }
+
+  #zenPreview {
+    margin-top: -40px;
+    height: calc(100% + 40px);
+  }
+
+  html.zen #wrapper > div.flyout-menu.js-flyout-menu { z-index: 1001; }
+}
+
+.zen_mention-menu-item.selected {
+  margin: -1px;
+  border: 1px solid #628db6;
+  background: #eef5fd url(images/ui-bg_glass_100_eef5fd_1x400.png) 50% 50% repeat-x;
+  font-weight: bold;
+  color: #628db6;
+}

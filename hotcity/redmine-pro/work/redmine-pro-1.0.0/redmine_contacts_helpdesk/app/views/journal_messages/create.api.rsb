@@ -1,0 +1,3 @@
+api.journal_message do
+  render_api_journal_message(@journal_message, api)
+end

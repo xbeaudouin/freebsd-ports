@@ -1,0 +1,16 @@
+<h3 class="title"><%= l(:label_confirmation) %></h3>
+
+<%= form_tag(drive_path(project_id: @project, current_folder_id: @current_folder.id, ids: @drive_entries),
+             id: 'force-delete-modal-form', remote: true) do %>
+
+  <%= hidden_field_tag 'force_delete', true %>
+  <p class="nodata">
+    <%= l(:label_drive_shared_files_destroy_warning) %><br>
+    <%= l(:label_drive_files_destroy_confirmation) %>
+  </p>
+
+  <p class="buttons">
+    <%= submit_tag l(:button_delete), name: nil %>
+    <%= submit_tag l(:button_cancel), name: nil, onclick: 'hideModal(this);', type: 'button' %>
+  </p>
+<% end %>

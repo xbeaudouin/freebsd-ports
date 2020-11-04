@@ -1,0 +1,99 @@
+# ----------- Global files ------------
+#  Docs/                    --- [folder]
+#    Presentations/         --- [folder]
+#      English.pdf          --- [file]
+#      management.ppt       --- [file]
+#    organization rules.doc --- [file]
+#  Reports/                 --- [folder]
+#  logo.png                 --- [file]
+#
+# ---------- Project-1 files ----------
+#  Tests/                   --- [folder]
+#    Reports/               --- []
+#  tests.doc                --- [file, test]
+#  test-app.txt             --- [file, test]
+#
+---
+# Global::logo.png - file
+tagging_1:
+  tag_id: 2
+  taggable_id: 1
+  taggable_type: DriveEntry
+  created_at: 2019-01-01 09:01:00
+
+# Global::Docs - folder
+tagging_2:
+  tag_id: 1
+  taggable_id: 2
+  taggable_type: DriveEntry
+  created_at: 2019-01-01 09:02:00
+
+# Global::Reports - folder
+tagging_3:
+  tag_id: 1
+  taggable_id: 3
+  taggable_type: DriveEntry
+  created_at: 2019-01-01 09:02:00
+
+# Global::Presentations - folder
+tagging_4:
+  tag_id: 1
+  taggable_id: 4
+  taggable_type: DriveEntry
+  created_at: 2019-01-01 09:02:00
+
+# Global::organization rules.doc - file
+tagging_5:
+  tag_id: 2
+  taggable_id: 5
+  taggable_type: DriveEntry
+  created_at: 2019-01-01 09:04:00
+
+# Global::English.pdf - file
+tagging_6:
+  tag_id: 2
+  taggable_id: 6
+  taggable_type: DriveEntry
+  created_at: 2019-02-10 12:30:00
+
+# Global::management.ppt - file
+tagging_7:
+  tag_id: 2
+  taggable_id: 7
+  taggable_type: DriveEntry
+  created_at: 2019-02-10 14:00:00
+
+# Project-1::Tests - folder
+tagging_8:
+  tag_id: 1
+  taggable_id: 8
+  taggable_type: DriveEntry
+  created_at: 2019-02-20 09:00:00
+
+# Project-1::tests.doc - file
+tagging_9:
+  tag_id: 2
+  taggable_id: 9
+  taggable_type: DriveEntry
+  created_at: 2019-02-01 09:00:00
+
+# Project-1::tests.doc - test
+tagging_10:
+  tag_id: 3
+  taggable_id: 9
+  taggable_type: DriveEntry
+  created_at: 2019-02-01 09:00:00
+
+# Project-1::test-app.txt - file
+tagging_11:
+  tag_id: 2
+  taggable_id: 10
+  taggable_type: DriveEntry
+  created_at: 2019-02-01 09:30:00
+
+# Project-1::test-app.txt - test
+tagging_12:
+  tag_id: 3
+  taggable_id: 10
+  taggable_type: DriveEntry
+  created_at: 2019-02-01 09:30:00

@@ -1,0 +1,13 @@
+<h2><%=l(:label_people_work_experience_new)%></h2>
+
+<%= labelled_form_for @work_experience, :url => person_work_experience_index_path(@person),
+                      :html => {:id => 'work_experience', :multipart => true} do |f| %>
+    <%= error_messages_for 'work_experience' %>
+    <div class="box tabular">
+      <div id="all_attributes">
+        <%= render :partial => 'form', :locals => {:f => f} %>
+      </div>
+    </div>
+
+    <%= submit_tag l(:button_create) %>
+<% end %>

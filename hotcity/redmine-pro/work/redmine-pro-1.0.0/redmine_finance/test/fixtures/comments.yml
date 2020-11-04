@@ -1,0 +1,21 @@
+comments_003:
+  commented_type: Operation
+  commented_id: 1
+  id: 3
+  author_id: 1
+  <% if Rails.version >= '5.1' %>
+  content: my first operation comment
+  <% else %>
+  comments: my first operation comment
+  <% end %>
+
+comments_004:
+  commented_type: Operation
+  commented_id: 1
+  id: 4
+  author_id: 2
+  <% if Rails.version >= '5.1' %>
+  content: This is an other operation comment
+  <% else %>
+  comments: This is an other operation comment
+  <% end %>

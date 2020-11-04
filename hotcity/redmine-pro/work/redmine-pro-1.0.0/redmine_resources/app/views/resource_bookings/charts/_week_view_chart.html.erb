@@ -1,0 +1,127 @@
+<% if @rb_chart.empty? %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% else %>
+  <div id="week-view-bookings-chart" class="chart">
+    <table class="cal">
+      <thead>
+        <tr>
+          <% @rb_chart.project_schedules.first.user_schedules.first.plans.each do |plan| %>
+            <th scope="col" class="<%= plan.week_day_css_class %>"><%= plan.date_title %></th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% @rb_chart.project_schedules.each do |project_schedule| %>
+          <% if @query.group_by_project? %>
+            <tr class="project-group group open">
+              <td colspan="<%= project_schedule.user_schedules.first.plans.size %>">
+                <span class="expander icon icon-expended" onclick="toggleBookingRowGroup(this);">&nbsp;</span>
+                <span class="project"><%= link_to_project project_schedule.project %></span>
+
+                <span class="count">(<%= project_schedule.user_schedules.size %>)</span>
+                <span class="totals">
+                  <span class="total-for-capacity-hours">
+                    <span><%= l(:label_resources_capacity) %>:</span>
+                    <span class="value"><%= '%0.2f' % project_schedule.capacity_hours %></span>
+                  </span>
+                  <span class="total-for-allocated-hours">
+                    <span><%= l(:label_resources_planned) %>:</span>
+                    <span class="value"><%= '%0.2f' % project_schedule.allocated_hours %></span>
+                  </span>
+                  <span class="total-for-spent-hours">
+                    <span><%= l(:label_time_entry_plural) %>:</span>
+                    <span class="value"><%= '%0.2f' % project_schedule.spent_hours %></span>
+                  </span>
+                </span>
+                <%= link_to_function("#{l(:button_collapse_all)}/#{l(:button_expand_all)}", 'toggleAllBookingRowGroups(this)', class: 'toggle-all') %>
+              </td>
+            </tr>
+          <% end %>
+
+          <% if @query.group_by_project? %>
+            <tr>
+              <% project_schedule.workload_cards.each do |workload_card| %>
+                <td class="<%= workload_card.today_css_class %>"><%= workload_card.render %></td>
+              <% end %>
+            </tr>
+          <% end %>
+
+
+          <% if @query.show_versions && project_schedule.versions_cards.present? %>
+            <tr class="versions-line">
+              <% project_schedule.versions_cards.each do |versions_card| %>
+                <td><%= versions_card.render %></td>
+              <% end %>
+            </tr>
+          <% end %>
+
+          <% project_schedule.user_schedules.each do |user_schedule| %>
+            <tr class="user-group <%= @query.group_by_user? ? 'group open' : 'booking-data' %>">
+              <td colspan="<%= user_schedule.plans.size %>">
+                <% if @query.group_by_user? %>
+                  <span class="expander icon icon-expended" onclick="toggleBookingRowGroup(this);">&nbsp;</span>
+                <% end %>
+
+                <span class="user">
+                  <a id="avatar" href=""><%= avatar(user_schedule.user, size: '14') %></a>
+                  <%= link_to_user user_schedule.user %>
+                </span>
+
+                <% if @query.group_by_user? %>
+                  <span class="count">(<%= user_schedule.resource_bookings.size %>)</span>
+                  <span class="totals">
+                    <span class="total-for-capacity-hours">
+                      <span><%= l(:label_resources_capacity) %>:</span>
+                      <span class="value"><%= '%0.2f' % user_schedule.capacity_hours %></span>
+                    </span>
+                    <span class="total-for-allocated-hours">
+                      <span><%= l(:label_resources_planned) %>:</span>
+                      <span class="value"><%= '%0.2f' % user_schedule.allocated_hours %></span>
+                    </span>
+                    <span class="total-for-spent-hours">
+                      <span><%= l(:label_time_entry_plural) %>:</span>
+                      <span class="value"><%= '%0.2f' % user_schedule.spent_hours %></span>
+                    </span>
+                  </span>
+                  <%= link_to_function("#{l(:button_collapse_all)}/#{l(:button_expand_all)}", 'toggleAllBookingRowGroups(this)', class: 'toggle-all') %>
+                <% end %>
+              </td>
+            </tr>
+
+            <% if @query.group_by_user? %>
+              <tr>
+                <% user_schedule.plans.each do |plan| %>
+                  <td class="<%= plan.today_css_class %>"><%= plan.workload_card.render %></td>
+                <% end %>
+              </tr>
+            <% end %>
+
+            <tr class="booking-data">
+              <% user_schedule.plans.each do |plan| %>
+                <td class="<%= plan.today_css_class %> <%= plan.week_day_css_class %>">
+                  <% plan.booked_cards.each do |booked_card| %>
+                    <%= booked_card.render %>
+                  <% end %>
+
+                  <% if plan.unbooked_cards.present? %>
+                    <p class="spent group-name"><%= l(:label_resources_unbooked_time) %></p>
+                    <% plan.unbooked_cards.each do |unbooked_card| %>
+                      <%= unbooked_card.render %>
+                    <% end %>
+                  <% end %>
+                </td>
+              <% end %>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= javascript_tag do %>
+    $(function () {
+      $('.project-name').toggle(<%= @query.show_project_names %>);
+      $('.spent').toggle(<%= @query.show_spent_time %>);
+    });
+  <% end %>
+<% end %>

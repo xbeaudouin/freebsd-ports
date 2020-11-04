@@ -1,0 +1,41 @@
+<%= error_messages_for 'report_template' %>
+
+<% report_templates = ReportTemplate.in_project_and_global(@project) %>
+
+<div class="contextual">
+  <%= link_to l(:label_reporter_template_new), new_report_template_path(project_id: @project), class: 'icon icon-add' %>
+  <%= link_to l(:button_import), new_import_report_templates_path(project_id: @project), class: 'icon icon-duplicate' %>
+</div>
+
+<h3><%= l(:label_reporter_report_templates) %></h3>
+
+<% if report_templates.any? %>
+  <table class="list">
+    <thead>
+    <tr>
+      <th><%= l(:field_name) %></th>
+      <th><%= l(:field_type) %></th>
+      <th><%= l(:field_description) %></th>
+      <th><%= l(:field_is_for_all) %></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%  report_templates.each do |template| %>
+      <tr class="<%= cycle 'odd', 'even' %>">
+        <td class="name"><%= template.name  %></td>
+        <td class="report_type"><%= l(template.class.label) %></td>
+        <td class="description"><em class="info"><%= template.description.to_s.truncate(250) %></em></td>
+        <td class="tick"><%= checked_image template.project.blank? %></td>
+        <td class="buttons">
+          <%= link_to l(:label_preview), preview_report_template_path(template), class: 'icon icon-pdf' %>
+          <%= link_to l(:button_edit), edit_report_template_path(template, project_id: @project), class: 'icon icon-edit' %>
+          <%= delete_link report_template_path(template, project_id: @project) %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>

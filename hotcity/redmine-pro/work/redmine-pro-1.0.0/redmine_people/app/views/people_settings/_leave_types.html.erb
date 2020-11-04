@@ -1,0 +1,39 @@
+
+<div class="contextual">
+  <%= link_to l(:label_people_leave_type_new), new_leave_type_path, class: 'icon icon-add' %>
+</div>
+
+<h2><%= l(:label_people_leave_types) %></h2>
+
+<% if @leave_types.any? %>
+  <div class="autoscroll">
+    <table class="list">
+      <thead>
+      <tr>
+        <th><%= l(:field_name) %></th>
+        <th><%= l(:field_paid) %></th>
+        <th><%= l(:field_approvable) %></th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @leave_types.each do |leave_type| %>
+        <tr class="<%= cycle('odd', 'even') %>">
+          <td class="name">
+            <span class="color" style="border: 1px solid #D7D7D7; background-color: <%= leave_type.color %>;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <%= leave_type.name %>
+          </td>
+          <td><%= checked_image(leave_type.paid) %></td>
+          <td><%= checked_image(leave_type.approvable) %></td>
+          <td class="buttons">
+            <%= link_to l(:button_edit), edit_leave_type_path(leave_type), class: 'icon icon-edit' %>
+            <%= link_to l(:button_delete), leave_type_path(leave_type), method: :delete, class: 'icon icon-del' %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>

@@ -1,0 +1,8 @@
+<div id="contact_issues" class="contact-issues">
+  <h3><%= "#{l(:label_crm_related_issues)} (#{issues.count})" %></h3>
+  <% if issues.any? %>
+    <table style="width:100%">
+      <%= render partial: 'common/issue_item', collection: issues %>
+    </table>
+  <% end %>
+</div>

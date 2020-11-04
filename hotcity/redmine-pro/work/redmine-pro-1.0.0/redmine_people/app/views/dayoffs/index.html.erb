@@ -1,0 +1,31 @@
+
+<div class="contextual">
+  <% if User.current.allowed_people_to?(:edit_leave) %>
+    <%= link_to l(:label_people_leave_new), new_dayoff_path, remote: true, method: 'get', class: 'icon icon-add' %>
+  <% end %>
+</div>
+
+<h2><%= l(:label_people_leave_planner) %></h2>
+
+<%= form_tag(dayoffs_path, method: :get, id: 'query_form') do %>
+  <%= render partial: 'query_form' %>
+<% end %>
+
+<% if @query.valid? %>
+  <% if @dayoffs.blank? %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+  <% else %>
+    <%= render partial: dayoffs_list_partial, locals: { dayoffs: @dayoffs, query: @query } %>
+  <% end %>
+<% end %>
+
+<% html_title l(:label_people_leave_planner) %>
+
+<%= render partial: 'people/sidebar', locals: { tags: @tags } %>
+
+<% content_for :header_tags do %>
+  <%= select2_assets %>
+  <%= javascript_include_tag :redmine_people, plugin: 'redmine_people' %>
+<% end %>
+
+<% include_calendar_headers_tags %>

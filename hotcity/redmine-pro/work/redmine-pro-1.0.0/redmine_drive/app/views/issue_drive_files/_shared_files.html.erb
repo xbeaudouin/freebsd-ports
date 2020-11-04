@@ -1,0 +1,12 @@
+<% if @issue.shared_files.present? %>
+  <hr>
+  <div id="shared-files">
+    <% if User.current.allowed_to?(:edit_issues, @issue.project) %>
+      <div class="contextual">
+        <%= link_to l(:button_add), new_issue_drive_file_path(issue_id: @issue), remote: true %>
+      </div>
+    <% end %>
+    <p><strong><%= l(:label_drive_shared_files) %></strong></p>
+    <%= render partial: 'issue_drive_files/shared_files_links' %>
+  </div>
+<% end %>

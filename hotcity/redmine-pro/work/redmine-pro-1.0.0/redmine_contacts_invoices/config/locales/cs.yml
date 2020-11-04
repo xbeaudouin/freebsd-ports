@@ -1,0 +1,196 @@
+# encoding: utf-8
+# Czech strings go here for Rails i18n
+cs:
+  project_module_contacts_invoices: Faktury
+
+  label_invoice_plural: Faktury
+  label_invoice: Faktura
+  label_invoice_new: Nová faktura
+  label_invoice_edit: Upravit fakturu
+  label_invoice_status: Stav
+  label_invoice_status_draft: Návrh
+  label_invoice_status_sent: Odesláno
+  label_invoice_status_paid: Zaplaceno
+  label_invoice_lines: Položky faktury
+  label_invoice_percent: Procent
+  label_invoice_amount: Množství
+  label_invoice_address: Adresa
+  label_invoice_bill_to: Odběratel
+  label_invoice_company_representative: Zástupce
+  label_invoice_company_name: Název společnosti
+  label_invoice_company_info: Informace o společnosti
+  label_invoice_bill_info: Bankovní spojení
+  label_invoice_units: Jednotky pro řádky
+  label_invoice_total: Celkem
+  label_invoice_tax: DPH
+  label_invoice_sub_amount: Celkem
+  label_invoice_invoiced: Zaúčtováno
+  label_invoice_add_line: Přidat položku
+  label_invoice_overdue: Po splatnosti
+  label_invoice_last_number: 'Poslední číslo faktury #%{number}'
+  label_invoice_template: Šablona
+  label_invoice_number_format: Formát čísla faktury
+  label_invoice_default_tax: Implicitní sazba DPH
+  label_invoice_line_grouping: Seskupování řádek
+  label_invoice_line_grouping_by_activity: Podle aktivity
+  label_invoice_line_grouping_by_issue: Podle úkolu
+  label_invoice_line_grouping_by_user: Podle uživatele
+  label_invoice_line_grouping_single_line: V jedné řádce
+
+  permission_edit_own_invoices: Upravit vlastní faktury
+  permission_edit_invoices: Upravit faktury
+  permission_delete_invoices: Smazat faktury
+  permission_view_invoices: Zobrazit faktury
+
+  button_send_mail: Odeslat
+  button_print: Tisk
+  button_invoice: Faktura
+
+  field_invoice_number: Číslo faktury
+  field_invoice_date: Datum vystavení
+  field_invoice_contact: Zákazník
+  field_invoice_due_date: Datum splatnosti
+  field_invoice_amount: Množství
+  field_invoice_discount: Sleva
+  field_invoice_assigned_to: Přiřazeno
+  field_invoice_status: Stav
+  field_invoice_currency: Měna
+  field_invoice_language: Jazyk faktury
+
+  field_invoice_line_position: '#'
+  field_invoice_line_description: Popis
+  field_invoice_line_price: Jednotková cena
+  field_invoice_line_quantity: Množství
+  field_invoice_line_tax: DPH
+  field_invoice_line_tax_amount: Sazba DPH
+  field_invoice_line_total: Celkem
+  field_invoice_line_units: Jednotky
+
+  #0.0.3
+  label_invoice_company_logo_url: Logo společnosti (URL)
+
+  #1.0.1
+  label_invoice_line_grouping_all: Všechno
+  label_invoice_default_currency: Implicitní měna
+  label_invoice_total_including_tax: Celkem včetně DPH
+  label_invoice_excerpt_invoice_list: Výpis faktur
+  label_invoice_created: Faktura vytvořena
+  label_invoice_disable_taxes: Nepoužívat DPH
+  label_invoice_days_late: '%{days} dní po splatnosti'
+  label_invoice_contact_extra_field: Extra položka kontaktu pro fakturu
+  lable_invoice_contact_extra_field_tip: Zobrazeno na fakturách (např. klientovo DIČ)
+  label_invoice_decimal_separator: Oddělovač desetinných míst
+  label_invoice_thousands_delimiter: Oddělovač řádů
+  label_invoices_general: Obecné
+  label_invoices_company: Společnost
+  label_invoice_total_with_tax: Celkem včetně DPH
+
+  #1.0.2
+  label_invoices_show_in_pdf: Zobrazit v PDF
+  label_invoice_discount_after_tax: Sleva včetně DPH
+
+  #1.0.3
+  label_invoice_use_rate_plugin: Použít rate plugin
+  label_invoice_line_grouping_by_time_entry: Podle časového záznamu
+  label_generate_invoice: Vygenerovat fakturu
+
+  #1.0.4
+  field_invoice_subject: Předmět
+
+  #2.0.0
+  label_invoice_select_companies: Společnosti jako klienti
+
+  #2.0.1
+  label_invoices_company_profile: Profil společnosti
+
+# Expenses
+  project_module_contacts_expenses: Výdaje
+
+  permission_import_invoices: Importovat faktury
+  permission_import_expenses: Importovat výdaje
+  label_expense_plural: Výdaje
+  label_expense: Výdaj
+  label_expense_new: Nový výdaj
+  label_expense_edit: Upravit výdaj
+  label_expense_status: Stav
+  label_expense_status_draft: Návrh
+  label_expense_status_new: Nový
+  label_expense_status_billed: Vystaveno
+  label_expense_status_paid: Zaplaceno
+  label_expense_created: Výdaj vytvořen
+
+  field_expense_date: Datum výdaje
+  field_expense_contact: Klient
+  field_expense_status: Stav
+  field_expense_price: Množství
+
+  permission_edit_own_expenses: Upravit vlastní výdaje
+  permission_edit_expenses: Upravit výdaje
+  permission_delete_expenses: Smazat výdaje
+  permission_view_expenses: Zobrazit výdaje
+
+  label_expense_stat_by_period: Výdaje podle času
+  label_expense_stat_by_status: Výdaje podle stavu
+
+  #2.1.1
+  label_invoice_cross_project_contacts: Povolit meziprojektové vztahy kontaktů
+
+  #2.1.2
+  label_invoice_show_invoices_in_top_menu: Zobrazit faktury v horním menu
+  label_invoice_show_expenses_in_top_menu: Zobrazit výdaje v horním menu
+  permission_manage_invoices: Spravovat faktury
+  permission_comment_invoices: Komentovat faktury
+
+  #2.2.0
+  activerecord:
+    errors:
+      messages:
+        text_invoice_cant_change_status: nelze změnit
+  label_invoice_status_canceled: Zrušeno
+  label_invoice_amount_due: Splatnost
+  label_invoice_payment: Platba
+  label_invoice_payment_plural: Platby
+  label_invoice_payment_new: Nová platba
+  label_invoice_add_payment: Přidat platbu
+  label_invoice_payment_date: Datum platby
+  label_invoice_paid_date: Datum zaplacení
+  label_invoice_balance: Zůstatek
+  label_invoice_days_due: '%{days} dní po splatnosti'
+  label_invoice_internal: Interní
+  permission_edit_invoice_payments: Editovat platby
+  label_invoice_payment_created: Platba vytvořena
+
+  #2.3.0
+  label_invoice_is_billable: Zúčtovatelné
+  label_invoice_show_units: Zobrazit jednotky
+  label_invoice_status_estimate: Odhad
+  label_estimate: Odhad
+
+  #3.0.0
+  label_invoice_templates: Šablony
+  label_invoice_custom_template: Vlastní šablona faktury
+  label_invoice_pdf: PDF
+  label_invoice_public_link: Veřejný odkaz
+  label_invoice_template_classic: "Classic"
+  label_invoice_template_modern: "Modern"
+  label_invoice_template_left: "Modern left"
+  label_invoice_template_blank_header: "Modern with blank header"
+  label_invoice_template_custom: "Vlastní šablona"
+  label_invoice_public_links: Veřejné odkazy
+  label_invoice_recurring: Opakující se faktura
+
+  #3.0.1
+  permission_add_invoices: Přidat fakturu
+  permission_add_expenses: Přidat výdaj
+
+  #3.1.0
+  field_invoice_order_number: Objednací číslo
+  label_invoice_send_by_email: Poslat fakturu emailem
+  permission_send_invoices: Poslat emaily
+  label_invoice_mail_to: Komu
+  label_invoice_email_template_plural: Šablony emailu
+  label_invoice_email_template: Šablona emailu
+
+  #3.1.1
+  label_invoice_hours: hodiny
+  label_invoice_email_curent_user: Email aktuálního uživatele

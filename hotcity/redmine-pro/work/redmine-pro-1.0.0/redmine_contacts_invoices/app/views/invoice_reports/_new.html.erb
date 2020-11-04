@@ -1,0 +1,23 @@
+<h3 class="title"><%= l(:label_report_plural) %></h3>
+
+<%= form_tag(invoice_reports_path(invoice_id: @invoice.id), method: :post, id: 'new-invoice-reports-form') do %>
+  <p><%= label_tag 'invoice-template-search', l(:label_invoice_template_search) %><%= text_field_tag 'invoice-template-search', nil %></p>
+  <%= javascript_tag "observeSearchfield('invoice-template-search', 'invoice-templates', '#{j autocomplete_invoice_reports_path(invoice_id: @invoice.try(:id))}')" %>
+
+  <div id="invoice-templates">
+    <%= invoice_templates_check_box_tags 'invoice_template[ids][]', @invoice_templates %>
+    <%= javascript_tag('addInvoiceTemplatesCheckboxesListener();') %>
+  </div>
+
+  <p class="other-formats" style="display: none">
+    <span>
+      <%= link_to l(:label_preview), '#', class: 'icon icon-preview',
+                  onclick: "window.location = '#{ preview_invoice_reports_path(invoice_id: @invoice.id) }&' + $('#new-invoice-reports-form').serialize()" %>
+    </span>
+  </p>
+
+  <p class="buttons">
+    <%= submit_tag l(:button_create), name: nil, onclick: 'hideModal(this);' %>
+    <%= submit_tag l(:button_cancel), name: nil, onclick: 'hideModal(this);', type: 'button' %>
+  </p>
+<% end %>

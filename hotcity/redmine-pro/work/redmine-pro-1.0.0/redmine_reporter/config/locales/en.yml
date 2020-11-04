@@ -1,0 +1,38 @@
+en:
+  label_reporter: Reporter
+  label_reporter_report_template: Report template
+  label_reporter_report_templates: Report templates
+  label_reporter_template_new: New report template
+  label_reporter_template_search: 'Search for template:'
+  label_reporter_import_report_template: Import report template
+  label_reporter_rewrite_existed: Rewrite existed
+  label_reporter_import_file: Imported file
+  label_reporter_public_link: Public link
+  label_reporter_public_links: Public links
+  label_reporter_issue_template: Issue template
+  label_reporter_templates_no_selected: Report templates no selected
+  label_reporter_send_by_email: Send by email
+  label_reporter_mail_from: From address
+  label_reporter_mail_to: To
+  label_reporter_mail_cc: Cc
+  label_reporter_mail_bcc: Bcc
+  label_reporter_message: Message
+  label_reporter_download_as_pdf: Download as PDF
+  label_reporter_print: Print
+  label_reporter_report_css: Report stylesheet (CSS)
+
+  label_reporter_report_issue: Issue
+  label_reporter_report_issue_list: Issues List
+  label_reporter_report_time_entries: Time Entries
+
+  error_reporter_can_not_import_file: An error occurred on import the file
+  notice_reporter_import_success: Report template imported successfully
+
+  button_reporter_attach: Attach
+  button_reporter_send: Send
+  button_reporter_open: Open
+
+  permission_manage_report_templates: Manage report templates
+  permission_generate_issue_reports: Generate reports
+  permission_view_issue_reports: View reports
+  permission_send_issues: Send emails

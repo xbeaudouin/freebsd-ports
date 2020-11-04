@@ -1,0 +1,212 @@
+# encoding: utf-8
+# Simplified Chinese strings go here for Rails i18n
+# Author: zhoutt
+# Based on file: en.yml
+
+zh:
+  project_module_contacts_invoices: 發票
+
+  label_invoice_plural: 發票
+  label_invoice: 發票
+  label_invoice_new: 新建發票
+  label_invoice_edit: 編輯發票
+  label_invoice_status: 狀態
+  label_invoice_status_draft: 草稿
+  label_invoice_status_sent: 發送
+  label_invoice_status_paid: 已付
+  label_invoice_lines: 發票行
+  label_invoice_percent: '%'
+  label_invoice_amount: '$'
+  label_invoice_address: 地址
+  label_invoice_bill_to: 收票人
+  label_invoice_company_representative: 代表
+  label_invoice_company_name: 公司名
+  label_invoice_company_info: 公司信息
+  label_invoice_bill_info: 個人信息
+  label_invoice_units: 行單位
+  label_invoice_total: 總計
+  label_invoice_tax: 稅
+  label_invoice_sub_amount: 小計
+  label_invoice_invoiced: 已出票
+  label_invoice_add_line: 增加行數
+  label_invoice_overdue: 過期
+  label_invoice_last_number: '最后的發票號碼是 #%{number}'
+  label_invoice_template: 模版
+  label_invoice_number_format: 發票號碼格式
+  label_invoice_default_tax: 默認稅值
+  label_invoice_line_grouping: 行分組
+  label_invoice_line_grouping_by_activity: 根據活躍度
+  label_invoice_line_grouping_by_issue: 根據問題
+  label_invoice_line_grouping_by_user: 根據用戶
+  label_invoice_line_grouping_single_line: 單行
+
+  permission_edit_own_invoices: 編輯自己的發票
+  permission_edit_invoices: 編輯發票
+  permission_delete_invoices: 刪除發票
+  permission_view_invoices: 瀏覽發票
+
+  button_send_mail: 發送
+  button_print: 打印
+  button_invoice: 發票
+
+  field_invoice_number: 發票編碼
+  field_invoice_date: 問題日期
+  field_invoice_contact: 客戶
+  field_invoice_due_date: 截止日期
+  field_invoice_amount: 數量
+  field_invoice_discount: 折扣
+  field_invoice_assigned_to: 分配至
+  field_invoice_status: 狀態
+  field_invoice_currency: 貨幣
+  field_invoice_language: 語言
+
+  field_invoice_line_position: '#'
+  field_invoice_line_description: 描述
+  field_invoice_line_price: 單價
+  field_invoice_line_quantity: 數量
+  field_invoice_line_tax: 稅
+  field_invoice_line_tax_amount: 稅額
+  field_invoice_line_total: 總計
+  field_invoice_line_units: 單位
+
+  #0.0.3
+  label_invoice_company_logo_url: 公司logo (URL)
+
+  #1.0.1
+  label_invoice_line_grouping_all: 所有
+  label_invoice_default_currency: 默認貨幣
+  label_invoice_total_including_tax: 所有包括稅務
+  label_invoice_excerpt_invoice_list: 摘錄發票列表
+  label_invoice_created: 創建的發票
+  label_invoice_disable_taxes: 禁用稅
+  label_invoice_days_late: '%{days} 延遲天數'
+  label_invoice_contact_extra_field: 發票因其他業務聯系
+  lable_invoice_contact_extra_field_tip: 在發票上顯示 (如客戶增值稅或稅碼)
+  label_invoice_decimal_separator: 十進制分隔符
+  label_invoice_thousands_delimiter: 千位分隔符
+  label_invoice_general: 一般
+  label_invoice_company: 公司
+  label_invoice_total_with_tax: 含稅總額
+
+  #1.0.2
+  label_invoice_show_in_pdf: 在PDF中顯示
+  label_invoice_discount_after_tax: 稅后折扣
+
+  #1.0.3
+  label_invoice_use_rate_plugin: 利用率插件
+  label_invoice_line_grouping_by_time_entry: 根據輸入時間
+  label_generate_invoice: 開發票
+
+  #1.0.4
+  field_invoice_subject: 主題
+
+  #2.0.0
+  label_invoice_filter_companies: 公司過濾
+
+  #2.0.1
+  label_invoice_company_profile: 公司簡介
+
+# Expenses
+  project_module_contacts_expenses: 支出
+
+  permission_import_invoices: 導入發票
+  permission_import_expenses: 導入支出
+  label_expense_plural: 支出
+  label_expense: 支出
+  label_expense_new: 新建支出
+  label_expense_edit: 編輯支出
+  label_expense_status: 裝填
+  label_expense_status_draft: 草稿
+  label_expense_status_new: 新建
+  label_expense_status_billed: 開出支出
+  label_expense_status_paid: 已付
+  label_expense_created: 創建的支出
+
+  field_expense_date: 支出日期
+  field_expense_contact: 用戶
+  field_expense_status: 狀態
+  field_expense_price: 總額
+
+  permission_edit_own_expenses: 編輯自己的支出
+  permission_edit_expenses: 編輯支出
+  permission_delete_expenses: 刪除支出
+  permission_view_expenses: 瀏覽支出
+
+  label_expense_stat_by_period: 根據時期排列支出
+  label_expense_stat_by_status: 根據狀態排列支出
+
+  #2.1.1
+  label_invoice_cross_project_contacts: 允許跨項目聯系人關系
+
+  #2.1.2
+  label_invoice_show_invoices_in_top_menu: 在頂部菜單中顯示發票
+  label_invoice_show_expenses_in_top_menu: 在頂部菜單中顯示支出
+  permission_manage_invoices: 管理發票
+  permission_comment_invoices: 評論發票
+
+  #2.2.0
+  activerecord:
+    errors:
+      messages:
+        text_invoice_cant_change_status: 不可更改
+  label_invoice_status_canceled: 取消
+  label_invoice_amount_due: 到期金額
+  label_invoice_payment: 付款發票
+  label_invoice_payment_plural: 付款
+  label_invoice_payment_new: 新建付款發票
+  label_invoice_add_payment: 新建付款
+  label_invoice_payment_date: 付款日期
+  label_invoice_paid_date: 付款日
+  label_invoice_balance: 余額
+  label_invoice_days_due: '%{days} 到期日'
+  label_invoice_internal: 周期
+  permission_edit_invoice_payments: 編輯付款
+  label_invoice_payment_created: 創建的付款發票
+
+  #2.3.0
+  label_invoice_is_billable: 可計費的
+  label_invoice_show_units: 顯示單位
+  label_invoice_status_estimate: 估算
+  label_estimate: 估算
+
+  #3.0.0
+  label_invoice_templates: 模版
+  label_invoice_custom_template: 發票自定義摸板
+  label_invoice_pdf: PDF
+  label_invoice_public_link: 公共鏈接
+  label_invoice_template_classic: "經典"
+  label_invoice_template_modern: "現代"
+  label_invoice_template_left: "現代靠左"
+  label_invoice_template_blank_header: "現代空白頭條"
+  label_invoice_template_custom: "自定義模板"
+  label_invoice_public_links: 公共鏈接
+  label_invoice_recurring: 經常性發票
+
+  #3.0.1
+  permission_add_invoices: 新建發票
+  permission_add_expenses: 新建支出
+
+  #3.1.0
+  field_invoice_order_number: 訂單編號
+  label_invoice_send_by_email: 郵件發送發票
+  permission_send_invoices: 發送郵件
+  label_invoice_mail_to: 至
+  label_invoice_email_template_plural: 郵件模版
+  label_invoice_email_template: 郵件模版
+
+  #3.1.1
+  label_invoice_hours: 小時
+  label_invoice_email_curent_user: 當前用戶郵件
+
+  #3.1.4
+  label_invoice_download_as_pdf: 以PDF下載
+
+  #3.2.0
+  label_invoice_amount_paid: 已付金額
+  label_invoices_copy_to_all: 復制到所有
+
+  #3.2.2
+  permission_save_expenses_queries: 節省支出查詢
+  permission_manage_public_expenses_queries: 管理公共支出查詢
+  permission_save_invoices_queries: 保存發票查詢
+  permission_manage_public_invoices_queries: 管理公共發票查詢

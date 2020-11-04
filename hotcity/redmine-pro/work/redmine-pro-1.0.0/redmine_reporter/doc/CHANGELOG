@@ -1,0 +1,33 @@
+== Redmine Reporter plugin changelog
+
+Redmine Reporter plugin - Printable reports generation for Redmine issues
+Copyright (C) 2011-2019 RedmineUP
+https://www.redmineup.com/
+
+== 2019-07-30 v1.0.3
+
+* New filters where_custom_field and group_by_custom_field
+
+== 2019-05-23 v1.0.2
+
+* Added dynamic reports for saved queries 
+* Added Time Entires reports
+* Added statistic functions for issue: total_spent_time_by_date, time_in_status, total_time_in_status
+* Added array functions (sum, avg, max, mix, median)
+
+== 2019-02-04 v1.0.1
+
+* Added access to attached images from report
+* Added new Liquid filter custom_fields
+* Fixed bug with custom field values
+
+== 2018-10-24 v1.0.0
+
+* Initial release
+* Import/export reports
+* Single/multiple issues reports
+* Attach reports to selected issue
+* Email reports from issue page
+* Export notes, time entries and subtasks
+* Project or global reports
+* Issue list Reports context menu

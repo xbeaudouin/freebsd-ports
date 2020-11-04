@@ -1,0 +1,35 @@
+<% if @collector.issues_count.zero? %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% else %>
+  <div class="helpdesk_chart">
+    <table class="chart_table">
+      <%= render :partial => 'table_data' %>
+
+      <tr class="metrics">
+        <td colspan="<%= @collector.columns.count / 2 %>">
+          <p><%= l(:label_helpdesk_busiest_time_of_day_new_tickets) %></p>
+          <div class="num"><%= @collector.new_issues_count %></div>
+          <div class="change" title="<%= process_deviation(@collector.previous_new_issues_count, @collector.new_issues_count, false) %>">
+            <%= progress_in_percents(-@collector.new_issue_count_progress) %>
+          </div>
+        </td>
+        <td colspan="<%= @collector.columns.count / 2 %>">
+          <p><%= l(:label_helpdesk_busiest_time_of_day_new_contacts) %></p>
+          <div class="num"><%= @collector.contacts_count %></div>
+          <div class="change" title="<%= process_deviation(@collector.previous_contacts_count, @collector.contacts_count, false) %>">
+            <%= progress_in_percents(-@collector.total_contacts_count_progress) %>
+          </div>
+        </td>
+      </tr>
+      <tr class="metrics">
+        <td colspan="<%= @collector.columns.count / 2 %>">
+          <p><%= l(:label_helpdesk_busiest_time_of_day_total_incoming) %></p>
+          <div class="num"><%= @collector.issues_count %></div>
+          <div class="change" title="<%= process_deviation(@collector.previous_issues_count, @collector.issues_count, false) %>">
+            <%= progress_in_percents(-@collector.issue_count_progress) %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+<% end %>

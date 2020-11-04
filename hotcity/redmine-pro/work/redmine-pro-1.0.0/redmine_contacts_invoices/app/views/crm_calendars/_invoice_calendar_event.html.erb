@@ -1,0 +1,7 @@
+<div class="issue invoice <%= 'starting' if event.invoice_date && day == event.invoice_date.to_date %> <%= 'ending' if event.due_date && day == event.due_date.to_date %>" data-id="<%= event.id %>" >
+    <%= event.project unless @project && @project == event.project %>
+    <%= link_to event.number, invoice_path(event), :class => "price", :style => "white-space: nowrap;" %>
+    <span style="white-space: nowrap;"><%= event.amount_to_s %></span>
+    <%= " - " + event.subject unless event.subject.blank? %>
+    <span class="contact"><%= event.contact.name if event.contact %></span>
+</div>

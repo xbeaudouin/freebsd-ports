@@ -1,0 +1,33 @@
+<ul>
+
+	<% if @expense.present? %>
+		<li><%= context_menu_link l(:button_edit), {:controller => 'expenses', :action => 'edit', :id => @expense}, :class => 'icon icon-edit', :disabled => !@can[:edit] %></li>
+    <!-- <li><%= context_menu_link l(:label_invoice_pdf), {:controller => 'expenses', :action => 'show', :format => 'pdf', :id => @expense}, :class => 'icon-pdf-context' %></li> -->
+	<% else %>
+    <!-- <li><%= context_menu_link l(:button_edit), {:controller => 'expenses', :action => 'bulk_edit', :ids => @expenses.collect(&:id)},
+            :class => 'icon icon-edit', :disabled => !@can[:edit] %></li> -->
+	<% end %>
+
+
+    <% unless @project.nil? -%>
+		<li class="folder">
+			<a href="#" class="submenu"><%= l(:field_status) %></a>
+			<ul>
+			<% collection_expense_statuses.each do |u| -%>
+			    <li><%= context_menu_link u[0], {:controller => 'expenses', :action => 'bulk_update', :ids => @expenses.collect(&:id), :expense => {'status_id' => u[1]}, :back_url => @back}, :method => :post,
+			                              :selected => (@expense && u[1] == @expense.status_id), :disabled =>  !@can[:edit] %></li>
+			<% end -%>
+			</ul>
+		</li>
+	<% end %>
+
+  <li><%= context_menu_link l(:button_delete), {:controller => 'expenses', :action => 'bulk_destroy', :ids => @expenses.collect(&:id), :back_url => @back, :project_id => @project},
+                            :method => :delete, :confirm => l(:text_are_you_sure), :class => 'icon icon-del', :disabled => !@can[:delete] %>
+  </li>
+  <% if @expenses.count > 1  && Redmine::VERSION.to_s >= '3.3' %>
+    <li>
+      <%= context_menu_link l(:button_filter), _project_expenses_path(@project, :set_filter => 1, :ids => @expenses.map(&:id).join(',')),
+       :class => 'icon icon-list' %>
+    </li>
+  <% end %>
+</ul>

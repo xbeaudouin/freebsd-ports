@@ -1,0 +1,14 @@
+<% extend InvoicesHelper %>
+<% invoices_tabs = [
+	{:name => 'general', :partial => 'settings/invoices/general', :label => :label_invoice_general},
+    {:name => 'email_templates', :partial => 'settings/invoices/email_templates', :label => :label_invoice_email_template_plural},
+    {:name => 'online_payments', :partial => 'settings/invoices/online_payments', :label => :label_invoice_online_payments},
+  {:name => 'company', :partial => 'settings/invoices/company', :label => :label_invoice_company_profile},
+    {:name => 'invoice_templates', :partial => 'settings/invoices/invoice_templates', :label => :label_invoice_templates},
+    {:name => 'recurring_email_templates', :partial => 'settings/invoices/recurring_email_templates', :label => :label_invoice_recurring_email_template}
+] %>
+
+<%= render_tabs invoices_tabs %>
+
+<% html_title(l(:label_settings), l(:label_invoice_plural)) -%>
+

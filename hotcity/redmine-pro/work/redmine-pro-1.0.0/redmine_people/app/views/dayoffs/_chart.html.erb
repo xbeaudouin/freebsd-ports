@@ -1,0 +1,41 @@
+
+<table class="leave-planner-chart" style="width:100%; border:0; border-collapse: collapse;">
+  <tr>
+    <td class="gantt_subjects_column" style="<%= @chart.subjects_column_styles %>">
+      <%= content_tag(:div, class: 'subjects-container', style: @chart.subjects_container_styles) do %>
+        <%= content_tag(:div, '', class: 'subjects-header gantt_hdr', style: @chart.subjects_header_styles) %>
+        <%= content_tag(:div, '', class: 'gantt_hdr', style: @chart.subjects_column_borders_styles) %>
+        <%= content_tag(:div, class: 'leave-planner-subjects', style: @chart.subjects_content_styles) do %>
+          <%= @chart.render_subjects %>
+        <% end %>
+      <% end %>
+    </td>
+
+    <td>
+      <%= content_tag(:div, id: 'gantt_area', style: @chart.gantt_area_styles) do %>
+        <%= content_tag(:div, '&nbsp;'.html_safe, class: 'gantt_hdr', style: @chart.lines_header_styles) %>
+        <%= @chart.render_weeks_headers %>
+        <%= @chart.render_day_numbers_headers %>
+
+        <%= content_tag(:div, class: 'leave-planner-lines', style: @chart.lines_container_styles) do %>
+          <%= @chart.render_lines %>
+        <% end %>
+
+        <%= @chart.render_today_line %>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <td style="text-align:left;">
+      <%= link_to "\xc2\xab " + l(:label_previous), { params: request.query_parameters.merge(@chart.params_previous) }, accesskey: accesskey(:previous) %>
+    </td>
+    <td style="text-align:right;">
+      <%= link_to l(:label_next) + " \xc2\xbb", { params: request.query_parameters.merge(@chart.params_next) }, accesskey: accesskey(:next) %>
+    </td>
+  </tr>
+</table>
+
+<%= javascript_tag '$(document).ready(addEditableBarsOnClickListener);' %>

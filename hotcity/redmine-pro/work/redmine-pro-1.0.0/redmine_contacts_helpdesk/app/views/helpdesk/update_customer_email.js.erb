@@ -1,0 +1,9 @@
+$('#customer_to_email').html('<%= escape_javascript(render :partial => "issues/customer_to_email", :locals => {:contact => @contact, :contact_email => @email}) %>')
+
+$("#helpdesk_to").val("<%= @email %>");
+$("#helpdesk_to").attr("value", "<%= @email %>");
+$("#helpdesk_to").trigger('change');
+$("#helpdesk_cc").val(["<%= @cc_emails.join('","').html_safe %>"]);
+$("#helpdesk_cc").trigger('change');
+
+

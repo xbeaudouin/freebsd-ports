@@ -1,0 +1,7 @@
+<div class="contextual">
+  <%= link_to l(:label_invoice_new_template), { controller: 'invoice_templates', action: 'new'}, class: 'icon icon-add' %>
+</div>
+<h2><%= l(:label_invoice_templates) %></h2>
+
+<% invoice_templates = InvoiceTemplate.order(:name) %>
+<%= render partial: 'projects/settings/invoice_templates_list', locals: { invoice_templates: invoice_templates } %>

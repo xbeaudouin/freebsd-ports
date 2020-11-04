@@ -1,0 +1,30 @@
+<p>
+  <label><%= l(:label_invoice_paypal_enabled) %></label>
+  <%= check_box_tag 'settings[invoices_paypal_enabled]', 1, @settings["invoices_paypal_enabled"] %>
+  <%= text_field_tag 'settings[invoices_paypal_account]', @settings["invoices_paypal_account"], :disabled => !@settings["invoices_paypal_enabled"] %>
+</p>
+
+<%= javascript_tag do %>
+  $('body').on('click', '#settings_invoices_paypal_enabled', function(){
+    if ($('#settings_invoices_paypal_enabled').is(':checked')) {
+      $('#settings_invoices_paypal_account').attr('disabled', false)
+    }
+    else {
+      $('#settings_invoices_paypal_account').attr('disabled', true)
+    }
+  })
+<% end %>
+
+<%= javascript_tag do %>
+  function render_account_input(){
+    if ($('#settings_invoices_paypal_enabled').is(':checked')) {
+      $('#settings_invoices_paypal_account').show();
+    }
+    else {
+      $('#settings_invoices_paypal_account').hide();
+    }
+  }
+
+  $('body').on('change', '#settings_invoices_paypal_enabled', render_account_input);
+  render_account_input();
+<% end %>

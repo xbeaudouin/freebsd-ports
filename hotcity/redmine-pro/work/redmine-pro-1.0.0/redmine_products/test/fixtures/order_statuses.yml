@@ -1,0 +1,42 @@
+order_statuses_001:
+  id: 1
+  name: New
+  position: 1
+  is_default: <%= true %>
+  status_type: 0
+  color: 246503
+order_statuses_002:
+  id: 2
+  name: Placed
+  position: 2
+  is_default: <%= false %>
+  status_type: 0
+  color: 16001508
+order_statuses_003:
+  id: 3
+  name: Approved
+  position: 3
+  is_default: <%= false %>
+  status_type: 0
+  color: 7307363
+order_statuses_004:
+  id: 4
+  name: Paid
+  position: 4
+  is_default: <%= false %>
+  status_type: 0
+  color: 14680330
+order_statuses_005:
+  id: 5
+  name: Delivered
+  position: 5
+  is_default: <%= false %>
+  status_type: 1
+  color: 6811091
+order_statuses_006:
+  id: 6
+  name: Refunded
+  position: 5
+  is_default: <%= false %>
+  status_type: 3
+  color: 6841031

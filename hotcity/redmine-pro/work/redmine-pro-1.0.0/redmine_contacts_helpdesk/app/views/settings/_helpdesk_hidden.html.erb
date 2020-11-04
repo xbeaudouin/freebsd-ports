@@ -1,0 +1,14 @@
+<p>
+  <label><%= l(:setting_plain_text_mail) %></label>
+  <%= check_box_tag 'settings[plain_text_mail]', 1, @settings["plain_text_mail"] %>
+</p>
+
+<p>
+  <label>Do not strip HTML tags</label>
+  <%= check_box_tag 'settings[helpdesk_do_not_strip_tags]', 1, @settings["helpdesk_do_not_strip_tags"] %>
+</p>
+
+<p>
+  <label><%= l(:label_helpdesk_hide_read_marks) %></label>
+  <%= check_box_tag 'settings[helpdesk_hide_read_marks]', 1, @settings["helpdesk_hide_read_marks"], :disabled => true, :class => 'private_tikets' %>
+</p>

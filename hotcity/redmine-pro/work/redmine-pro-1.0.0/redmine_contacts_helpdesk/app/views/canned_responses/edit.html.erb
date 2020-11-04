@@ -1,0 +1,36 @@
+<h2><%=l(:label_helpdesk_canned_response)%></h2>
+
+<%= labelled_form_for :canned_response, @canned_response, url: { action: 'update', project_id: @project }, html: { multipart: true } do |f| %>
+  <div class="box tabular">
+    <fieldset class="tabular"><legend><%= l(:label_change_properties) %></legend>
+      <div id="all_attributes">
+        <%= render partial: 'canned_responses/form', locals: { f: f } %>
+      </div>
+    </fieldset>
+
+    <fieldset><legend><%= l(:label_attachment_plural) %></legend>
+      <% if @canned_response.attachments.any? && @canned_response.safe_attribute?('deleted_attachment_ids') %>
+        <div class="contextual"><%= link_to l(:label_edit_attachments), '#', onclick: "$('#existing-attachments').toggle(); return false;" %></div>
+        <div id="existing-attachments" style="<%= @canned_response.deleted_attachment_ids.blank? ? 'display:none;' : '' %>">
+          <% @canned_response.attachments.each do |attachment| %>
+          <span class="existing-attachment">
+            <%= text_field_tag '', attachment.filename, class: 'icon icon-attachment filename', disabled: true %>
+            <label>
+              <%= check_box_tag 'canned_response[deleted_attachment_ids][]',
+                                attachment.id,
+                                @canned_response.deleted_attachment_ids.include?(attachment.id),
+                                id: nil, class: 'deleted_attachment' %> <%= l(:button_delete) %>
+            </label>
+          </span>
+          <% end %>
+          <hr />
+        </div>
+      <% end %>
+
+      <div id="new-attachments" style="display:inline-block;">
+        <%= render partial: 'attachments/form', locals: { container: @canned_response } %>
+      </div>
+    </fieldset>
+  </div>
+  <%= submit_tag l(:button_save) %>
+<% end %>

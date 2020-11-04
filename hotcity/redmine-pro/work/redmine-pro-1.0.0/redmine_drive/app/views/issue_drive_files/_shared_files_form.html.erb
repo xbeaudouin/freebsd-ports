@@ -1,0 +1,18 @@
+<p id="shared-files-form">
+  <label><%= l(:label_drive_shared_files) %></label>
+  <span id="drive-inputs">
+    <%= fields_for :issue, @issue do |issue_field| %>
+      <%= issue_field.fields_for :shared_files do |file_field| %>
+        <%= render partial: 'issue_drive_files/shared_file_field', locals: { f: file_field } %>
+      <% end %>
+    <% end %>
+  </span>
+  <span>
+    <%= link_to l(:label_drive_link_shared_files), new_issue_drive_file_path, class: 'icon icon-link-add', remote: true %>
+  </span>
+</p>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag :redmine_drive, plugin: 'redmine_drive' %>
+  <%= javascript_include_tag :redmine_drive, plugin: 'redmine_drive' %>
+<% end %>

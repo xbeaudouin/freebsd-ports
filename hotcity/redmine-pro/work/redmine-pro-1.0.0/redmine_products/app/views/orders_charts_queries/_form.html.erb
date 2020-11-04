@@ -1,0 +1,69 @@
+
+<%= error_messages_for 'query' %>
+
+<div class="box">
+  <div class="tabular">
+    <p>
+      <label for="query_name"><%= l(:field_name) %></label>
+      <%= text_field 'query', 'name', size: 80 %>
+    </p>
+
+    <% if User.current.admin? || User.current.allowed_to?(:manage_public_orders_queries, @project) %>
+      <% if Redmine::VERSION.to_s < '2.4' %>
+        <p><label for="query_is_public"><%= l(:field_is_public) %></label>
+          <%= check_box 'query', 'is_public',
+                        :onchange => (User.current.admin? ? nil : 'if (this.checked) {$("#query_is_for_all").removeAttr("checked"); $("#query_is_for_all").attr("disabled", true);} else {$("#query_is_for_all").removeAttr("disabled");}') %>
+        </p>
+      <% else %>
+        <p><label><%= l(:field_visible) %></label>
+          <label class="block"><%= radio_button 'query', 'visibility', Query::VISIBILITY_PRIVATE %> <%= l(:label_visibility_private) %></label>
+          <label class="block"><%= radio_button 'query', 'visibility', Query::VISIBILITY_ROLES %> <%= l(:label_visibility_roles) %>:</label>
+          <% Role.givable.sorted.each do |role| %>
+            <label class="block role-visibility"><%= check_box_tag 'query[role_ids][]', role.id, @query.roles.include?(role), :id => nil %> <%= role.name %></label>
+          <% end %>
+          <label class="block"><%= radio_button 'query', 'visibility', Query::VISIBILITY_PUBLIC %> <%= l(:label_visibility_public) %></label>
+          <%= hidden_field_tag 'query[role_ids][]', '' %>
+        </p>
+      <% end %>
+    <% end %>
+
+    <p><label for="query_is_for_all"><%= l(:field_is_for_all) %></label>
+      <%= check_box_tag 'query_is_for_all', 1, @query.project.nil?,
+                        :disabled => (!@query.new_record? && (@query.project.nil? || (@query.is_public? && !User.current.admin?))) %>
+    </p>
+
+    <fieldset>
+      <legend><%= l(:label_options) %></legend>
+      <p>
+        <label for="chart"><%= l(:label_products_chart) %></label>
+        <%= select_tag 'chart', options_for_select(OrdersChartsQuery::CHARTS.map { |i| [l("label_products_#{i}"), i] }, query.chart),
+                       onchange: "toggleIntervalSize($(this).val(), 'interval_size_row');" %>
+      </p>
+      <p id="interval_size_row">
+        <label for="interval_size"><%= l(:label_products_interval_size) %></label>
+        <%= select_tag 'interval_size', options_for_select(OrdersChartsQuery::TIME_INTERVALS.map { |i| [l("label_products_#{i}"), i] }, @query.interval_size) %>
+      </p>
+    </fieldset>
+  </div>
+
+  <fieldset id="filters">
+    <legend><%= l(:label_filter_plural) %></legend>
+    <%= render partial: 'queries/filters', locals: { query: query } %>
+  </fieldset>
+</div>
+
+<% content_for :header_tags do %>
+  <%= javascript_include_tag :products, plugin: 'redmine_products' %>
+<% end %>
+
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    $("input[name='query[visibility]']").change(function() {
+    var checked = $('#query_visibility_1').is(':checked');
+    $("input[name='query[role_ids][]'][type=checkbox]").attr('disabled', !checked);
+    }).trigger('change');
+
+    toggleIntervalSize($('#chart').val(), 'interval_size_row');
+    hideFilterCheckbox('report_date_period');
+  });
+<% end %>

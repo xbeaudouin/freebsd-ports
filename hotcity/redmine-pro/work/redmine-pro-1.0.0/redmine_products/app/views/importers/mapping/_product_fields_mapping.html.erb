@@ -1,0 +1,42 @@
+<div class="splitcontent">
+  <div class="splitcontentleft">
+    <p>
+      <label><%= l(:label_products_name) %></label>
+      <%= mapping_select_tag @import, 'name', :required => true %>
+    </p>
+    <p>
+      <label><%= l(:label_products_status) %></label>
+      <%= mapping_select_tag @import, 'status', :required => true %>
+    </p>
+    <p>
+      <label><%= l(:label_products_code) %></label>
+      <%= mapping_select_tag @import, 'code' %>
+    </p>
+
+    <% @custom_fields.each do |field| %>
+      <p>
+        <label><%= field.name %></label>
+        <%= mapping_select_tag @import, "cf_#{field.id}" %>
+      </p>
+    <% end %>
+  </div>
+
+  <div class="splitcontentright">
+    <p>
+      <label><%= l(:label_products_description) %></label>
+      <%= mapping_select_tag @import, 'description' %>
+    </p>
+    <p>
+      <label><%= l(:label_products_price) %></label>
+      <%= mapping_select_tag @import, 'price' %>
+    </p>
+    <p>
+      <label><%= l(:label_products_category) %></label>
+      <%= mapping_select_tag @import, 'category' %>
+    </p>
+    <p>
+      <label><%= l(:label_products_currency) %></label>
+      <%= mapping_select_tag @import, 'currency' %>
+    </p>
+  </div>
+</div>

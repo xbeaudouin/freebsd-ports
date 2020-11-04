@@ -1,0 +1,35 @@
+---
+# === logo.png ===
+viewing_1:
+  id: 1
+  viewer_id: 1
+  viewed_id: 1
+  viewed_type: DriveEntry
+  ip: 96.27.6.142
+  created_at: 2019-01-01 09:30:00
+
+viewing_2:
+  id: 2
+  viewer_id: 2
+  viewed_id: 1
+  viewed_type: DriveEntry
+  ip: 94.22.8.147
+  created_at: 2019-02-01 12:30:00
+
+# === tests.doc ===
+viewing_3:
+  id: 3
+  viewer_id: 1
+  viewed_id: 9
+  viewed_type: DriveEntry
+  ip: 96.27.6.142
+  created_at: 2019-03-01 09:00:00
+
+# === testfile.txt ===
+viewing_4:
+  id: 4
+  viewer_id: 1
+  viewed_id: 11
+  viewed_type: DriveEntry
+  ip: 96.27.6.142
+  created_at: 2019-04-01 11:00:00

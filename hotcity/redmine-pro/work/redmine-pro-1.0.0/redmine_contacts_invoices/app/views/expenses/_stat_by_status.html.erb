@@ -1,0 +1,35 @@
+<h3><%= "#{l(:label_expense_stat_by_status)}#{' - ' + @expense.contact.name.strip if @expense && @expense.contact}"  %></h3>
+<table class="invoices-stat statuses">
+  <tr>
+    <th>
+      <span class="tag-label-color expense-status draft" >
+			  <span><%= link_to "#{l(:label_expense_status_draft)}#{'(' + @draft_status_count.to_s + ')' if @draft_status_count > 0 }", expense_status_url(Expense::DRAFT_EXPENSE, :contact_id => @expense && @expense.contact) %> </span>
+      </span>
+    </th>
+    <td class="sum"><%= prices_collection_by_currency(@draft_status_sum, :hide_zeros => true).join('<br/>').html_safe %></td>
+  </tr>
+  <tr>
+    <th>
+    <span class="tag-label-color expense-status tags new" >
+		  <span><%= link_to "#{l(:label_expense_status_new)}#{'(' + @new_status_count.to_s + ')' if @new_status_count > 0 }", expense_status_url(Expense::NEW_EXPENSE, :contact_id => @expense && @expense.contact) %> </span>
+    </span>
+    </th>
+    <td class="sum"><%= prices_collection_by_currency(@new_status_sum, :hide_zeros => true).join('<br/>').html_safe %></td>
+  </tr>
+  <tr>
+    <th>
+    <span class="tag-label-color expense-status tags billed" >
+		  <span><%= link_to "#{l(:label_expense_status_billed)}#{'(' + @billed_status_count.to_s + ')' if @billed_status_count > 0 }", expense_status_url(Expense::BILLED_EXPENSE, :contact_id => @expense && @expense.contact) %> </span>
+    </span>
+    </th>
+    <td class="sum"><%= prices_collection_by_currency(@billed_status_sum, :hide_zeros => true).join('<br/>').html_safe %></td>
+  </tr>
+  <tr>
+    <th>
+    <span class="tag-label-color expense-status tags paid" >
+      <span><%= link_to "#{l(:label_expense_status_paid)}#{'(' + @paid_status_count.to_s + ')' if @paid_status_count > 0 }", expense_status_url(Expense::PAID_EXPENSE, :contact_id => @expense && @expense.contact) %> </span>
+    </span>
+    </th>
+    <td class="sum"><%= prices_collection_by_currency(@paid_status_sum, :hide_zeros => true).join('<br/>').html_safe %></td>
+  </tr>
+</table>

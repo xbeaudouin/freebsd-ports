@@ -1,0 +1,54 @@
+<h3 class="title"><%= @drive_entry.shared ? l(:label_drive_unshare) : l(:label_drive_share) %></h3>
+
+<%= form_tag drive_entry_path(@drive_entry, project_id: @project, current_folder_id: @current_folder.id), { id: 'share-modal-form', method: :put, remote: true } do %>
+  <%= hidden_field_tag 'drive_entry[shared]', !@drive_entry.shared %>
+  <div class="box">
+    <div class="public-link">
+      <div class="filler">
+        <%= text_field_tag 'public-url', public_url_for(@drive_entry, @expiration_date), class: 'public-url', readonly: 'readonly' %>
+      </div>
+      <div>
+        <a class="button-copy icon icon-copy" tabindex="0" onclick="copyTokenToClipboard('public-url');"><span><%= l(:button_copy) %></span></a>
+      </div>
+    </div>
+    <p>
+      <label class="inline"><%= check_box_tag 'expires', '', @expiration_date, data: { enables: '#expiration_date'} %></label>
+      <label for='expires'><%= l(:label_drive_expiration_date) %></label>
+      <span id="expiration_field" style="display: none;">
+        <%= text_field_tag 'expiration_date', @expiration_date, size: 10, type: 'date' %><%= calendar_for('expiration_date') %>
+      </span>
+    </p>
+  </div>
+
+  <p class="buttons">
+    <%= submit_tag @drive_entry.shared ? l(:label_drive_unshare) : l(:label_drive_share), name: nil, onclick: 'hideModal(this);' %>
+    <%= submit_tag l(:button_cancel), name: nil, onclick: 'hideModal(this);', type: 'button' %>
+  </p>
+<% end %>
+
+<%= javascript_tag do %>
+  $(function () {
+    $('#share-modal-form').on('change', 'input[data-enables]', toggleDisabledOnChange);
+    toggleDisabledInit();
+
+    $('#expires').on('change', function (event) {
+      var $expirationDate = $('#expiration_date');
+      $('#expiration_field').toggle();
+      if (!$(event.target).prop('checked') && $expirationDate.val()) {
+        $expirationDate.val('').change()
+      }
+    });
+
+    $('#expiration_date').on('change', function (event) {
+      $.ajax({
+        url: '<%= share_modal_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id, id: @drive_entry) %>',
+        type: 'GET',
+        data: { expiration_date: $('#expiration_date').val() },
+        dataType: 'json',
+        success: function (data) {
+          $('#public-url').val(data.public_url);
+        }
+      })
+    });
+  });
+<% end %>

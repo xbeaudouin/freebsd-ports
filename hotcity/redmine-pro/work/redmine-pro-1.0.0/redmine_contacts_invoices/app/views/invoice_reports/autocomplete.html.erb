@@ -1,0 +1,3 @@
+<%= invoice_templates_check_box_tags 'invoice_template[ids][]', @invoice_templates %>
+<%= javascript_tag('addInvoiceTemplatesCheckboxesListener();') %>
+<%= javascript_tag('extraLinksToggle();') if @invoice_templates.present? %>

@@ -1,0 +1,20 @@
+---
+type: IssueReportTemplate
+name: Lilac issue report
+description: Single issue report with time entries
+content: "<style>\r\n\t.report-lilac {\r\n\t\tfont-family: Arial, Helvetica;\r\n\t\tfont-size:
+  14px;\r\n\t}\r\n\t.report-lilac p {\r\n\t\tpadding-left: 180px;\r\n\t\tclear: left;\r\n\t\tmargin:
+  4px 0px;\r\n\t}\r\n\t.report-lilac p label {\r\n\t\twidth: 170px;\r\n\t\tmargin-left:
+  -180px;\r\n\t\tfont-weight: bold;\r\n\t\tfloat: left;\r\n\t\toverflow: hidden;\r\n\t\ttext-overflow:
+  ellipsis;\r\n\t}\r\n</style>\r\n\r\n<div class=\"report-lilac\">\r\n\r\n\t<div class=\"title\"
+  style=\"text-align: center;\">\r\n\t\t<img src=\"https://www.redmineup.com/cms/assets/download/33292/logo_color_up.svg\"
+  alt=\"\" style=\"padding-bottom: 40px;\">\r\n\t\t<h1 style=\"color: #3d6cc8;padding-bottom:
+  10px;border-bottom: 2px solid;margin-bottom: 40px;\">Issue #{{issue.id}}</h1>\r\n\t</div>\r\n\r\n\t<p><label>Summary:</label>{{issue.subject}}</p>\r\n\t<p><label>Status:</label>{{issue.status}}</p>\r\n\t<p><label>Priority:</label>{{issue.priority}}</p>\r\n\t<p><label>Category:</label>{{issue.category}}</p>\r\n\t<p><label>Tracker:</label>{{issue.tracker}}</p>\r\n\t<p><label>Project:</label>{{issue.project.name}}</p>\r\n\t<p><label>Author:</label>{{issue.author.name}}</p>\r\n\t<p><label>Assignee:</label>{{issue.assignee.name}}</p>\r\n\t<p><label>Done:</label>{{issue.done_ratio}}%</p>\r\n\t<p><label>Estimated:</label>{{issue.total_estimated_hours}}hr</p>\r\n\t<p><label>Spent:</label>{{issue.total_spent_hours
+  | round: 2 }}hr</p>\r\n\t<p><label>Version:</label>{{issue.version}}</p>\r\n  <p><label>Tags:</label>{{issue.tags
+  | join: ', '}}</p>\r\n  <p><label>Story points:</label>{{issue.story_points}}</p>\r\n
+  \ <p><label>Color:</label><span style=\"background-color: {{issue.color}};padding:
+  0px 20px;\"></span></p>\r\n\t<p><label>Url:</label>http://demo.redmineup.com{{issue.url}}</p>\r\n\r\n\t<h3
+  style=\"color: #3d6cc8; padding-bottom: 10px; border-bottom: 2px solid; margin:
+  40px 0px 20px;\"> Time entries </h3>\r\n\t{% for time_entry in issue.time_entries.all
+  %}\r\n\t<p>\r\n\t\t<label>{{time_entry.user.name}}</label> {{time_entry.hours}}hr
+  ({{time_entry.activity}})\r\n\t</p>\r\n\t{% endfor %}\r\n\r\n</div>\r\n"

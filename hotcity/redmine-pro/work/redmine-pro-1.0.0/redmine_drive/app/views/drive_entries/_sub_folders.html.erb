@@ -1,0 +1,11 @@
+<% sub_folders.each do |folder| %>
+  <tr id="folder-<%= folder.id %>"
+      class="even <%= folder.css_classes %>"
+      data-id="<%= folder.id %>"
+      data-parent-id="<%= parent.id %>"
+      data-level="<%= offset %>">
+
+    <td class="checkbox"><%= radio_button_tag 'folder_id', folder.id, false, id: nil %></td>
+    <%= content_tag 'td', folder_name_tag(folder, clickable: false, only_folders: true), class: 'filename', style: filename_column_styles(folder, offset, only_folders: true) %>
+  </tr>
+<% end %>

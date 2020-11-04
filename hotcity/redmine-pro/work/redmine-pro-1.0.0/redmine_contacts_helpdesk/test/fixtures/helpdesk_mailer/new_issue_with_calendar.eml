@@ -1,0 +1,65 @@
+Reply-To: <support@somenet.foo>
+From: "New Customer-Name" <new_customer@somenet.foo>
+To: <support@somenet.foo>
+Subject: Calendar content-type test
+Date: Fri, 6 Mar 2020 12:39:12 +0300
+Message-ID: <00f101d5f3a3$79c1a3d0$6d44eb70$@somenet.foo>
+MIME-Version: 1.0
+Content-Type: text/calendar; method=REQUEST;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VEVENT
+ATTENDEE;CN=support@somenet.foo;RSVP=TRUE:mailto:support@somenet.foo
+CLASS:PUBLIC
+CREATED:20200306T103911Z
+DESCRIPTION:Testing helpdesk calendar content-type\n\n
+DTEND;VALUE=DATE:20200308
+DTSTAMP:20200306T103911Z
+DTSTART;VALUE=DATE:20200306
+LAST-MODIFIED:20200306T103911Z
+LOCATION:Redmine
+ORGANIZER;CN=support@somenet.foo:mailto:support@somenet.foo
+PRIORITY:5
+SEQUENCE:3
+SUMMARY;LANGUAGE=en:Calendar content-type test
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E00800000000B0900C3428F2D501000000000000000
+  010000000C32B1D7A0D391341994CBF295BAC8C00
+X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-mic
+  rosoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/
+  12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv=Co
+  ntent-Type content="text/html\; charset=us-ascii"><meta name=Generator con
+  tent="Microsoft Word 15 (filtered medium)"><style><!--\n/* Font Definition
+  s */\n@font-face\n  {font-family:"Cambria Math"\;\n panose-1:2 4 5 3 5 4 6
+  3 2 4\;}\n@font-face\n  {font-family:Calibri\;\n  panose-1:2 15 5 2 2 2 4 3
+  2 4\;}\n/* Style Definitions */\np.MsoNormal\, li.MsoNormal\, div.MsoNorma
+  l\n {margin:0cm\;\n margin-bottom:.0001pt\;\n font-size:11.0pt\;\n  font-fa
+  mily:"Calibri"\,sans-serif\;\n  mso-fareast-language:EN-US\;}\nspan.EmailSt
+  yle18\n {mso-style-type:personal-compose\;\n  font-family:"Calibri"\,sans-s
+  erif\;\n  color:windowtext\;}\n.MsoChpDefault\n {mso-style-type:export-only
+  \;\n  font-size:10.0pt\;}\n@page WordSection1\n {size:612.0pt 792.0pt\;\n m
+  argin:70.85pt 70.85pt 70.85pt 70.85pt\;}\ndiv.WordSection1\n  {page:WordSec
+  tion1\;}\n--></style><!--[if gte mso 9]><xml>\n<o:shapedefaults v:ext="edi
+  t" spidmax="1026" />\n</xml><![endif]--><!--[if gte mso 9]><xml>\n<o:shape
+  layout v:ext="edit">\n<o:idmap v:ext="edit" data="1" />\n</o:shapelayout><
+  /xml><![endif]--></head><body lang=EN link="#0563C1" vlink="#954F72"><div
+  class=WordSection1><p class=MsoNormal><span lang=EN-US>Testing helpdesk ca
+  lendar content-type<o:p></o:p></span></p></div></body></html>
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INTENDEDSTATUS:FREE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-APPTLASTSEQUENCE:2
+X-MS-OLK-APPTSEQTIME:20200304T112518Z
+X-MS-OLK-AUTOSTARTCHECK:FALSE
+X-MS-OLK-CONFTYPE:0
+END:VEVENT
+END:VCALENDAR
+

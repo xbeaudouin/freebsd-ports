@@ -1,0 +1,16 @@
+api.array :invoice_payments, api_meta(:total_count => @payments_count, :offset => @offset, :limit => @limit) do
+  @invoice_payments.each do |payment|
+    api.payment do
+      api.id payment.id
+      api.amount payment.amount
+      api.payment_date payment.payment_date
+      api.description payment.description
+      api.invoice(:id => payment.invoice_id, :number => payment.invoice.number) unless payment.invoice.blank?
+      api.author(:id => payment.author_id, :name => payment.author.name) unless payment.author.nil?
+      api.contact(:id => payment.invoice.contact_id, :name => payment.invoice.contact.name) if !payment.invoice.blank? && !payment.invoice.contact.blank?
+
+      api.created_on payment.created_at
+      api.updated_on payment.updated_at
+    end
+  end
+end

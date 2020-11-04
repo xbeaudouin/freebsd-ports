@@ -1,0 +1,15 @@
+
+<% if User.current.allowed_to?(:view_charts, @project, global: true) %>
+  <% queries = OrdersChartsQuery.all %>
+  <% if queries.present? %>
+    <h3><%= l(:label_products_chart_plural) %></h3>
+    <ul>
+      <% queries.each do |query| %>
+        <li>
+          <%= link_to query.name, { controller: 'orders_charts', action: 'show', query_id: query.id, project_id: @project },
+                      class: "#{'selected' if query.is_a?(OrdersChartsQuery) && params[:query_id] && params[:query_id] == query.id.to_s}" %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

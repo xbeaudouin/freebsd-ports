@@ -1,0 +1,10 @@
+
+<p>
+  <%= label_tag 'settings[user_mentions]', l(:label_zen_user_mentions) %>
+  <%= check_box_tag 'settings[user_mentions]', 1, @settings['user_mentions'] == '1' %>
+</p>
+
+<p>
+  <%= label_tag 'settings[issue_mentions]', l(:label_zen_issue_mentions) %>
+  <%= check_box_tag 'settings[issue_mentions]', 1, @settings['issue_mentions'] == '1' %>
+</p>

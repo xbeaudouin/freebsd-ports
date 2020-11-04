@@ -1,0 +1,9 @@
+<h3><%= l(:label_questions_tags) %></h3>
+<ul class="questions-tags">
+    <% Question.tags_cloud(:project => @project, :section => @section).each do |tag| %>
+        <li>
+          <%= link_to tag, {:controller => "questions", :action => "index", :project_id => @project, :tag => tag.name} %>
+          <span class="count"><%= tag.count %></span>
+        </li>
+    <% end %>
+</ul>

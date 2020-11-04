@@ -1,0 +1,111 @@
+<script>
+$(document).ready(function() {
+  var draftsUri = "<%= zen_draft_path %>";
+  var data = "issue[id]=<%= @issue.id %>&issue[project_id]=<%= @project && @project.id || @issue.project_id %>&";
+ 
+  var saveDraft = function() {
+    $.ajax({
+      method: "POST",
+      url: draftsUri,
+      data: data + $("#issue-form").serialize().replace(/_method=\w*/, "_method=post")
+    });
+  };
+
+  var saveDraftIfChanged = function() {
+    if (fields.some(function(field, i) { return $(field).val() !== previousValues[i] })) {
+      previousValues = valuesFrom(fields);
+      saveDraft();
+    }
+  }
+
+  <% unless User.current.pref.warn_on_leaving_unsaved == '0' %>
+    $(window).on('beforeunload', saveDraftIfChanged);
+  <% end %>
+
+  var removeDraft = function() {
+    $.ajax({
+      method: "DELETE",
+      url: draftsUri,
+      data: data
+    }).done(function() {
+      $("#zen-draft").hide();
+    });
+  };
+
+  var issueFromDraft = function() {
+    $.ajax({
+      method: "GET",
+      url: draftsUri,
+      data: data
+    }).done(function(draft) {
+      fields.forEach(function(field) {
+        var fieldName = field.selector.replace(/#issue_/, "");
+        field.val(draft[fieldName]);
+      });
+      removeDraft();
+    });
+  };
+
+  var fields = [$("#issue_subject"),
+                $("#issue_description"),
+                $("#issue_notes")].filter(function(field) { return field[0] });
+
+  var valuesFrom = function(fields) {
+    return fields.map(function(field) { return $(field).val() });
+  };
+
+  var previousValues = valuesFrom(fields);
+
+  setInterval(function() {
+    saveDraftIfChanged();
+  }, 30000);
+
+  if ($("#zen-draft")) {
+    $("#apply-zen-draft").on("click", function() {
+      issueFromDraft();
+    });
+
+    $("#cancel-zen-draft").on("click", function() {
+      removeDraft();
+    });
+  }
+});
+</script>
+
+<%
+  @restored_issue = nil
+  @restored_issue = @issue.last_draft.try(:restore)
+  if @restored_issue && !request.xhr?
+%>
+  <div id="zen-draft">
+    <div class="conflict">
+      <strong><%= l(:label_unsaved_issue) %></strong>
+      <div class="conflict-details conflict-journal">
+        <%= l(:label_created_time, value: time_ago_in_words(@issue.last_draft.updated_at)) %>
+        <ul class="details">
+          <% if @restored_issue.subject.to_s != @issue.subject.to_s %>
+            <li>
+              <strong><%= l(:field_subject) %></strong>:
+              <%= @restored_issue.subject %>
+            </li>
+          <% end %>
+          <% if @restored_issue.description.to_s != @issue.description.to_s %>
+            <li>
+              <strong><%= l(:field_description) %></strong>:
+              <%= @restored_issue.description %>
+            </li>
+          <% end %>
+          <% if @restored_issue.notes.to_s != @issue.notes.to_s %>
+            <li>
+              <strong><%= l(:field_notes) %></strong>:
+              <%= @restored_issue.notes %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <input type="button" id="apply-zen-draft" value="<%= l(:button_apply) %>">
+    <input type="button" id="cancel-zen-draft" value="<%= l(:button_cancel) %>">
+    <hr>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<%= error_messages_for 'report_template' %>
+
+<div class="box tabular">
+  <p><%= f.select :type, options_for_select(ReportTemplate.available_types.map { |type| [l(type.label), type] }, @report_template.type), required: true %></p>
+  <p><%= f.text_field :name, size: 80, required: true %></p>
+  <p><%= f.text_area :description, class: 'wiki-edit', rows: 3 %></p>
+
+  <% if @report_template.author %>
+    <p>
+      <label><%= l(:field_author) %></label>
+      <%= @report_template.author.name %>
+    </p>
+  <% end %>
+
+  <p>
+    <label for="report_template_is_for_all"><%=l(:field_is_for_all)%></label>
+    <%= check_box_tag 'report_template_is_for_all', 1, @report_template.project.nil?, disabled: (!@report_template.new_record? && @report_template.project.nil?) %>
+  </p>
+
+  <% unless @report_template.new_record? %>
+    <p id="edit_content">
+      <label><%=l(:field_content)%></label>
+      <%= link_to_function image_tag('edit.png'), '$("#edit_content").hide(); $("#report_template_content").show()' %>
+    </p>
+  <% end %>
+
+  <fieldset id="report_template_content" style="<%= (@report_template.new_record? ? nil : 'display:none') %>">
+    <legend><%= l(:label_reporter_report_template) %></legend>
+    <%= f.text_area :content, class: 'wiki-edit', rows: 40, no_label: true, style: 'width: 99%;' %>
+  </fieldset>
+</div>

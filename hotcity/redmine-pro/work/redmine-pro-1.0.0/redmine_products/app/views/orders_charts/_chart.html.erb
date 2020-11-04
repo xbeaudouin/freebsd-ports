@@ -1,0 +1,95 @@
+<% if @query.orders.empty? %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% else %>
+  <% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'charts', plugin: 'redmine_products' %>
+  <% end %>
+
+  <div id="chart_wrapper">
+    <div class="products-chart-container">
+      <canvas id="products-chart"></canvas>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+
+  <script>
+  $(document).ready(function() {
+    $.getJSON(<%= raw url_for(controller: 'orders_charts', action: 'render_chart', project_id: @project, chart: @chart, query_id: @query.try(:id)).to_json %>, function(data) {
+
+      Chart.defaults.global.defaultFontColor = "black";
+      Chart.defaults.global.defaultFontFamily = "Arial, sans-serif";
+      Chart.defaults.global.defaultFontStyle = "normal";
+
+      var chartData = {
+        labels: data["labels"],
+        datasets: data["datasets"],
+        stacked: data["stacked"]
+      };
+
+      new Chart(document.getElementById("products-chart").getContext("2d"), {
+        type: data["type"],
+        data: chartData,
+        options: {
+          tooltips: {
+            enabled: true,
+            mode: "single",
+            callbacks: {
+              label: function(tooltipItems, chartData) {
+                if (data["type"] === "pie") {
+                  var total = getSum(chartData.datasets[0].data);
+                  var current = chartData.datasets[0].data[tooltipItems.index];
+                  var percent = Math.round((current / total) * 100);
+                  return chartData.labels[tooltipItems.index] + ": " + Math.round(chartData.datasets[0].data[tooltipItems.index]) + " " + percent;
+                }
+                if (data["currencies"]) {
+                  return "" + Math.round(100 * tooltipItems.yLabel)/100 + " " + data["currencies"][tooltipItems.datasetIndex];
+                }
+                return "" + chartData.datasets[tooltipItems.datasetIndex].label + ": " + tooltipItems.yLabel;
+              },
+              title: function(tooltipItems, chartData) {
+                if (data["tooltips"]) {
+                  return data["tooltips"][tooltipItems[0].index];
+                }
+              }
+            }
+          },
+          spanGaps: true,
+          maintainAspectRatio: false,
+          legend: { position: "right" },
+          title: {
+            display: true,
+            fontSize: 16,
+            fontStyle: "normal",
+            text: data["title"]
+          },
+          elements: {
+            line: {
+              tension: 0, // disables bezier curves
+            }
+          },
+          scales : {
+            yAxes: [{
+              display: data["type"] !== "pie",
+              ticks: {
+                beginAtZero: true
+              }
+            }],
+            xAxes: [{
+              display: data["type"] !== "pie",
+              barPercentage: 0.8
+            }]
+          }
+        }
+      })
+    });
+
+    var getSum = function(array) {
+      var sum = 0.0
+      array.forEach(function(item) {
+        sum += Number.parseFloat(item)
+      });
+      return sum;
+    }
+  });
+  </script>
+<% end %>

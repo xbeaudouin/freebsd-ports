@@ -1,0 +1,10 @@
+
+<div class="splitcontentleft">
+  <% if User.current.allowed_to?(:manage_sprints, @project) && @project.agile_sprints_any? %>
+    <%= form.fields_for :agile_data do |f| %>
+      <p>
+        <%= f.select :agile_sprint_id, sprint_values_for_select_for(@project), include_blank: true %>
+      </p>
+    <% end %>
+  <% end %>
+</div>

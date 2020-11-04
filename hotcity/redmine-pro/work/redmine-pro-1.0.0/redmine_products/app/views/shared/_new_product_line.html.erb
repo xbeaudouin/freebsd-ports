@@ -1,0 +1,45 @@
+<% product_line_custom_fields = ProductLine.new.available_custom_fields %>
+<div class="autoscroll">
+  <table class="product-lines form" id="product_lines">
+    <thead>
+      <tr>
+        <th colspan="2"><%= l(:label_products_item) %></th>
+        <% product_line_custom_fields.each do |cf| %>
+          <th><%= cf.name %></th>
+        <% end %>
+        <th><%= l(:label_products_quantity) %></th>
+        <th><%= l(:label_products_order_unit_price) %></th>
+        <% if show_taxes = !ContactsSetting.disable_taxes? || parent_object.has_taxes? %>
+        <th><%= l(:label_products_line_tax) %></th>
+        <% end %>
+        <th><%= l(:label_products_line_discount) %></th>
+        <th><%= l(:label_products_total) %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="sortable">
+      <tr class='line' style="display:none;"></tr>
+      <% parent_object.lines.sort_by { |line| line.position.to_i }.each.with_index do |line, idx| %>
+        <%= form.fields_for :lines, line do |builder| %>
+          <%= render :partial => 'line_fields', :locals => {:f => builder, :idx => idx} %>
+        <% end %>
+      <% end %>
+    </tbody>
+    <thead>
+      <tr class="line-total">
+        <td style="text-align: left;" class="add-link" colspan="<%= 5 + (show_taxes ? 1 : 0) + product_line_custom_fields.count %>">
+        <%= text_field_tag :new_product_code, "", :placeholder => l(:label_products_add)  %>
+        <%= orders_link_to_add_fields l(:label_products_add_line), form, :lines %>
+        </td>
+        <td class="total-data total" id="total_amount"><%= "%.2f" % parent_object.subtotal.to_f %></td>
+        <td class="total-data"></td>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+<% content_for :header_tags do %>
+  <%= javascript_include_tag :products, :plugin => 'redmine_products'  %>
+  <%= javascript_tag "observeProductAutocompleteField('new_product_code', '#{escape_javascript auto_complete_products_path }', '#{escape_javascript add_products_path(:project_id => @project, :line_class => parent_object.class.name.underscore.to_sym)}')" %>
+<% end %>
+

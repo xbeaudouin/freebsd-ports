@@ -1,0 +1,59 @@
+<%= error_messages_for 'checklist_template' %>
+
+<div class="box tabular">
+  <p><%= f.text_field :name, :size => 80, :required => true %></p>
+  <% if ChecklistTemplateCategory.any? %>
+    <p>
+      <%= f.select :category_id, options_for_select([['', nil]] + ChecklistTemplateCategory.all.map{ |x| [x.name, x.id]}, f.object.category_id) %>
+    </p>
+  <% end %>
+
+  <% if User.current.admin? || User.current.allowed_to?(:manage_checklist_templates, @project) %>
+    <p><label><%=l(:field_visible)%></label>
+      <label class="block">
+        <%= f.radio_button :is_public, 0, :checked => !@checklist_template.is_public?,
+                           :onchange => (User.current.admin? ? nil : '$("#checklist_template_is_for_all").removeAttr("disabled");') %>
+        <%= l(:label_visibility_private) %>
+      </label>
+      <label class="block">
+        <%= f.radio_button :is_public, 1, :checked => @checklist_template.is_public?,
+                           :onchange => (User.current.admin? ? nil : '$("#checklist_template_is_for_all").removeAttr("checked"); $("#checklist_template_is_for_all").attr("disabled", true);') %>
+        <%= l(:label_visibility_public) %>
+      </label>
+    </p>
+  <% end %>
+
+  <p><label for="checklist_template_is_for_all"><%=l(:field_is_for_all)%></label>
+  <%= check_box_tag 'checklist_template_is_for_all', 1, @checklist_template.project.nil?,
+        :disabled => (!@checklist_template.new_record? && (@checklist_template.project.nil? || (@checklist_template.is_public? && !User.current.admin?)) || @project.nil? ) %></p>
+
+  <p id='is_default_block'><%= f.check_box :is_default, :label => l(:label_checklist_is_default) %></p>
+
+  <p>
+    <%= f.select :tracker_id, options_from_collection_for_select(@project ? @project.trackers : Tracker.all, :id, :name, f.object.tracker_id), :include_blank => true, :label => l(:label_tracker) %>
+  </p>
+
+  <p><%= f.text_area :template_items, :required => true, :rows => 5 %></p>
+  <p>
+    <em class='info'>
+      <%= l(:label_checklists_description) %>
+    </em>
+  </p>
+</div>
+
+<%= javascript_tag do %>
+  function isDefaultToggle(element){
+    if (element.prop('checked') == true) {
+      $('#is_default_block').hide();
+      $('#checklist_template_is_default').prop('checked', false);
+    } else {
+      $('#is_default_block').show();
+    }
+  }
+
+  $('#checklist_template_is_for_all').change(function(){
+    isDefaultToggle($(this));
+  });
+
+  isDefaultToggle($('#checklist_template_is_for_all'));
+<% end%>

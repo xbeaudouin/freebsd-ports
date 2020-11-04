@@ -1,0 +1,38 @@
+---
+type: IssueReportTemplate
+name: Green issue report
+description: "Single issue report with notes\r\n"
+content: "<div class=\"report-green\">\r\n    <style>\r\n        .report-green {\r\n
+  \           font-family: Times;\r\n            font-size: 14px;\r\n        }\r\n
+  \       .report-green table {\r\n            border-collapse: collapse;\r\n            width:
+  100%;\r\n        }\r\n        .report-green table th, table td {\r\n            padding:
+  5px;\r\n            border: solid 1px #d7d7d7;\r\n        }\r\n        .report-green
+  table th {\r\n            background-color: #eee;\r\n            text-align: left;\r\n
+  \       }\r\n        .report-green .note em {\r\n            color: #aaa;\r\n        }\r\n
+  \       .report-green .note  p  {\r\n            margin-top: 5px;\r\n            border-bottom:
+  1px solid #d7d7d7;\r\n        }\r\n    </style>\r\n\r\n    <div class=\"title\"
+  style=\"text-align: center;\">\r\n        <img src=\"https://www.redmineup.com/attachments/download/38122/redmine_logo.png\"
+  alt=\"\" style=\"padding-bottom: 40px;\" width=200px>\r\n        <h1 style=\"color:
+  #4ca76a;padding-bottom: 10px;border-bottom: 2px solid;margin-bottom: 40px;\">Issue
+  #{{issue.id}}</h1>\r\n    </div>\r\n\r\n    <table>\r\n        <tr><th>Summary:</th><td>{{issue.subject}}</td></tr>\r\n
+  \       <tr><th>Status:</th><td>{{issue.status}}</td></tr>\r\n        <tr><th>Priority:</th><td>{{issue.priority}}</td></tr>\r\n
+  \       <tr><th>Category:</th><td>{{issue.category}}</td></tr>\r\n        <tr><th>Tracker:</th><td>{{issue.tracker}}</td></tr>\r\n
+  \       <tr><th>Project:</th><td>{{issue.project.name}}</td></tr>\r\n        <tr><th>Author:</th><td>{{issue.author.name}}</td></tr>\r\n
+  \       <tr><th>Assignee:</th><td>{{issue.assignee.name}}</td></tr>\r\n        <tr>\r\n
+  \           <th>Done:</th>\r\n            <td>\r\n                <table style=\"width:
+  100%;\">\r\n                    <tr>\r\n                        {% if issue.done_ratio
+  > 0 %}\r\n                        <td style=\"width: {{issue.done_ratio | round}}%;background-color:
+  #4ca76a;border: 0px;\"></td>\r\n                        {% endif %}\r\n                        {%
+  if issue.done_ratio < 100 %}\r\n                        <td style=\"width: {{100
+  | minus: issue.done_ratio | round}}%;background-color: #d7d7d7;border: 0px;\"></td>\r\n
+  \                       {% endif %}\r\n                    </tr>\r\n                </table>
+  \               \r\n            </td>\r\n        </tr>\r\n        <tr><th>Estimated:</th><td>{{issue.total_estimated_hours
+  | round: 2}}hr</td></tr>\r\n        <tr><th>Spent:</th><td>{{issue.total_spent_hours
+  | round: 2 }}hr</td></tr>\r\n        <tr><th>Version:</th><td>{{issue.version}}</td></tr>\r\n
+  \       <tr><th>Url:</th><td>http://demo.redmineup.com{{issue.url}}</td></tr>\r\n
+  \   </table>\r\n\r\n    <h3 style=\"color: #4ca76a; padding-bottom: 10px; border-bottom:
+  2px solid; margin: 40px 0px 20px;\">Notes</h3>\r\n    {% for journal in issue.journals.all
+  %}\r\n        {% if journal.notes != ''  %}\r\n        <div class=\"note\">\r\n
+  \           <em>{{journal.created_on | date: \"%a, %b %d, %y\"}} - {{journal.user.name}}</em>
+  {{journal.notes | textilize }}\r\n        </div>\r\n        {% endif %}   \r\n    {%
+  endfor %}\r\n</div>    "

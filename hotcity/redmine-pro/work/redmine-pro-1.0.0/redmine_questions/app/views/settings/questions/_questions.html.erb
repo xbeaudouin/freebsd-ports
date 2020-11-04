@@ -1,0 +1,8 @@
+<% questions_tabs = [{:name => 'general', :partial => 'settings/questions/general', :label => :label_general},
+        {:name => 'questions_statuses', :partial => 'settings/questions/questions_statuses', :label => :label_questions_status_plural}
+        ]   %>
+
+<%= render_tabs questions_tabs %>
+
+<% html_title(l(:label_settings), l(:label_question_plural)) -%>
+

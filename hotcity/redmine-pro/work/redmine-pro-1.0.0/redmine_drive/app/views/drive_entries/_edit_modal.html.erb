@@ -1,0 +1,13 @@
+<h3 class="title"><%= l("label_drive_edit_#{@drive_entry.entry_type}") %></h3>
+
+<%= labelled_form_for @drive_entry,
+                      url: { action: :update, id: @drive_entry, project_id: @project, current_folder_id: @current_folder.id },
+                      remote: true, html: { id: 'edit-form', method: :put } do |f| %>
+
+  <%= render partial: 'form', locals: { f: f } %>
+
+  <p class="buttons">
+    <%= submit_tag l(:button_update), name: nil, onclick: 'hideModal(this);' %>
+    <%= submit_tag l(:button_cancel), name: nil, onclick: 'hideModal(this);', type: 'button' %>
+  </p>
+<% end %>

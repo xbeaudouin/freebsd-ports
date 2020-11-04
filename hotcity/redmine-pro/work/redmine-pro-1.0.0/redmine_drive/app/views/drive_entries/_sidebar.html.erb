@@ -1,0 +1,13 @@
+<h3><%= l(:label_redmine_drive) %></h3>
+
+<p>
+  <% if User.current.allowed_to?(:add_drive_entries, @project, global: true) %>
+    <% if RedmineDrive.storage_size %>
+      <%= progress_bar(RedmineDrive.progress, legend: "#{RedmineDrive.progress}%") %>
+    <% end %>
+  <% end %>
+</p>
+
+<div id="files-sidebar-menu"></div>
+
+<%= render_drive_sidebar_queries(@project) %>

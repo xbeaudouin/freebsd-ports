@@ -1,0 +1,21 @@
+<%= error_messages_for 'drive_entry' %>
+
+<div class="box tabular">
+  <p><%= f.text_field :name, required: true, style: 'width: 95%;' %></p>
+  <p>
+    <%= label_tag l(:label_drive_tags), nil, for: :drive_entry_tag_list %>
+    <%= select2_tag 'drive_entry[tag_list]',
+                    options_from_collection_for_select(@drive_entry.tags, 'name', 'name', @drive_entry.tags.map(&:name)),
+                    multiple: true,
+                    width: '95%',
+                    url: tags_autocomplete_drive_entries_path,
+                    tags: true %>
+  </p>
+  <p><%= f.text_area :description, rows: 3 %></p>
+</div>
+
+<%= javascript_tag do %>
+  $(function () {
+    $('#drive_entry_name').select();
+  });
+<% end %>

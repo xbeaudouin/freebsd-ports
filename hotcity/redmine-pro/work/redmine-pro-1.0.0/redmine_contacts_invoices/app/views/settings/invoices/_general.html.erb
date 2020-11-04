@@ -1,0 +1,102 @@
+<p>
+  <label><%= l(:label_invoice_number_format) %></label>
+  <%= text_field_tag 'settings[invoices_invoice_number_format]', @settings["invoices_invoice_number_format"], :size => 60 %>
+  <br>
+	<em class="info"><%= InvoicesSettings::MACRO_LIST %></em>
+</p>
+<p>
+  <label><%= l(:label_invoice_excerpt_invoice_list) %></label>
+  <%= check_box_tag 'settings[invoices_excerpt_invoice_list]', 1, @settings["invoices_excerpt_invoice_list"] %>
+</p>
+
+<p>
+  <label><%= l(:label_invoice_public_links) %></label>
+  <%= check_box_tag 'settings[invoices_public_links]', 1, @settings["invoices_public_links"] %>
+</p>
+
+
+<p>
+  <label><%= l(:label_invoice_per_invoice_templates) %></label>
+  <%= check_box_tag 'settings[per_invoice_templates]', 1, @settings["per_invoice_templates"] %>
+</p>
+
+
+<p>
+  <label><%= l(:label_invoice_template) %></label>
+   <%= select_tag 'settings[invoices_template]',  invoice_templates_options_for_select(@settings["invoices_template"]) %>
+</p>
+
+<p>
+  <label><%= l(:label_invoice_line_grouping) %></label>
+  <%= select_tag 'settings[invoices_line_grouping]',  options_for_select([[l(:label_invoice_line_grouping_by_activity), 0],
+                                                                 [l(:label_invoice_line_grouping_by_issue), 1],
+                                                                 [l(:label_invoice_line_grouping_by_user), 2],
+                                                                 [l(:label_invoice_line_grouping_single_line), 3],
+                                                                 [l(:label_invoice_line_grouping_by_time_entry), 5],
+                                                                 [l(:label_invoice_line_grouping_by_estimated_time), 6],
+                                                                 [l(:label_invoice_line_grouping_by_project), 7],
+                                                                 [l(:label_invoice_line_grouping_by_tracker), 8],
+                                                                 [l(:label_invoice_line_grouping_all), 4]], @settings["invoices_line_grouping"].to_i) %>
+</p>
+
+
+<% if RedmineInvoices.rate_plugin_installed? %>
+<p>
+  <label><%= l(:label_invoice_use_rate_plugin) %></label>
+  <%= check_box_tag 'settings[invoices_use_rate_plugin]', 1, @settings["invoices_use_rate_plugin"] %>
+</p>
+<% end %>
+
+<p>
+  <label><%= l(:label_invoice_show_units) %></label>
+  <%= check_box_tag 'settings[show_units]', 1, @settings["show_units"] %>
+</p>
+
+<span id="tax_data">
+  <p>
+    <label><%= l(:label_invoice_discount_after_tax) %></label>
+    <%= check_box_tag 'settings[invoices_discount_after_tax]', 1, @settings["invoices_discount_after_tax"] %>
+  </p>
+
+</span>
+
+<p>
+  <label><%= l(:label_invoice_filter_companies) %></label>
+  <%= check_box_tag 'settings[invoices_select_companies]', 1, @settings["invoices_select_companies"] %>
+</p>
+<% if contact_custom_fields.any? %>
+<p>
+  <label><%= l(:label_invoice_contact_extra_field) %></label>
+  <%= select_tag 'settings[invoices_contact_extra_field]', options_for_select(contact_custom_fields.insert(0, ['', '']), @settings["invoices_contact_extra_field"]) %>
+  <br/>
+  <em class="info"><%= l(:lable_invoice_contact_extra_field_tip) %></em>
+</p>
+<% end %>
+
+<p>
+  <label><%= l(:label_crm_show_in_top_menu) %></label>
+  <span id="watchers_inputs">
+    <span class="floating" style="margin-left: 0px;">
+    <%= check_box_tag 'settings[invoices_show_invoices_in_top_menu]', 1, @settings["invoices_show_invoices_in_top_menu"] %>
+    <%= l(:label_invoice_plural) %>
+    </span>
+    <span class="floating" style="margin-left: 0px;">
+    <%= check_box_tag 'settings[invoices_show_expenses_in_top_menu]', 1, @settings["invoices_show_expenses_in_top_menu"] %>
+    <%= l(:label_expense_plural) %>
+    </span>
+  </span>
+</p>
+
+<p>
+  <label><%= l(:label_crm_show_in_app_menu) %></label>
+  <span id="watchers_inputs">
+    <span class="floating" style="margin-left: 0px;">
+    <%= check_box_tag 'settings[invoices_show_in_app_menu]', 1, @settings["invoices_show_in_app_menu"] %>
+    <%= l(:label_invoice_plural) %>
+    </span>
+    <span class="floating" style="margin-left: 0px;">
+    <%= check_box_tag 'settings[invoices_show_expenses_in_app_menu]', 1, @settings["invoices_show_expenses_in_app_menu"] %>
+    <%= l(:label_expense_plural) %>
+    </span>
+  </span>
+</p>

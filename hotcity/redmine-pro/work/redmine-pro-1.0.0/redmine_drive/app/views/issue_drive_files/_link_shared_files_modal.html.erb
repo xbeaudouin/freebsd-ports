@@ -1,0 +1,26 @@
+<h3 class="title"><%= l(:label_drive_link_shared_files) %></h3>
+
+<%= form_tag(@issue.blank? ? add_issue_drive_files_path : issue_drive_files_path(issue_id: @issue), remote: true, method: :post, id: 'link-shared-files-form') do %>
+  <div>
+    <% if @drive_entries.blank? %>
+      <p id="file-explorer-info" class="nodata">
+        <%= l(:label_drive_no_uploaded_files) %><br>
+        <%= l(:label_drive_go_to_the) %> <%= link_to l(:label_drive), drive_path %>
+      </p>
+    <% else %>
+      <p>
+        <%= label_tag 'file_search', l(:label_drive_file_search) %>
+        <%= text_field_tag 'file_search', nil, autocomplete: 'off', class: 'autocomplete', placeholder: l(:label_drive_search_by_name) %>
+      </p>
+      <%= javascript_tag "observeFilesSearchField('file_search', 'file-explorer', '#{ escape_javascript search_issue_drive_files_path }')" %>
+      <div id="file-explorer" class="autoscroll">
+        <%= render partial: 'file_explorer' %>
+      </div>
+    <% end %>
+
+    <p class="buttons">
+      <%= submit_tag l(:button_add), name: nil, onclick: 'hideModal(this);' %>
+      <%= submit_tag l(:button_cancel), name: nil, onclick: 'hideModal(this);', type: 'button' %>
+    </p>
+  </div>
+<% end %>

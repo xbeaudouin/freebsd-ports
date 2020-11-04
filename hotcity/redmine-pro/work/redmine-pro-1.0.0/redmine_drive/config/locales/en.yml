@@ -1,0 +1,42 @@
+# English strings go here for Rails i18n
+en:
+  label_drive: Drive
+  label_redmine_drive: Redmine drive
+  label_drive_new_folder: New folder
+  label_drive_edit_folder: Edit folder
+  label_drive_edit_file: Edit file
+  label_drive_tags: Tags
+  label_drive_upload_files: Upload files
+  label_drive_new_files: New files
+  label_drive_share: Share
+  label_drive_shared: Shared
+  label_drive_unshare: Unshare
+  label_drive_expiration_date: Expiration date
+  label_drive_copy_to_folder: Copy to folder
+  label_drive_move_to_folder: Move to folder
+  label_drive_bulk_edit: Bulk edit
+  label_drive_search_by_name: Search by name
+  label_drive_storage_size: Storage size
+  label_drive_shared_file: Drive shared file
+  label_drive_shared_files: Shared files
+  label_drive_link_shared_files: Link shared files
+  label_drive_file_search: 'Search for file:'
+  label_drive_no_uploaded_files: There are no uploaded files.
+  label_drive_go_to_the: Go to the
+  label_drive_shared_files_destroy_warning: One or more files are linked to issues.
+  label_drive_files_destroy_confirmation: 'Are you sure you want to delete the selected file(s)?'
+
+  label_drive_notice_copying_completed: Copying completed
+  label_drive_notice_move_completed: Move completed
+  label_drive_notice_copying_error: An error occurred while copying
+  label_drive_notice_moving_error: An error occurred while moving
+  label_drive_notice_update_error: Failed to update
+
+  label_drive_file_items:
+    one: '%{count} item'
+    other: "%{count} items"
+
+  activerecord:
+    errors:
+      messages:
+        error_file_already_exists: 'A file with the name «%{name}» already exists'

@@ -1,0 +1,15 @@
+<h3 class="title"><%= l(:label_drive_new_files) %></h3>
+
+<%= form_tag create_files_drive_entries_path(project_id: @project, current_folder_id: @current_folder.id), { id: 'new-files-form', multipart: true, method: :post, remote: true } do %>
+  <%= render_flash_messages %>
+
+  <p id="attachments_form">
+    <label><%=l(:label_attachment_plural)%></label>
+    <%= render partial: 'attachments/form', locals: { saved_attachments: @saved_attachments} %>
+  </p>
+
+  <p class="buttons">
+    <%= submit_tag l(:button_add), name: nil, onclick: 'hideModal(this);' %>
+    <%= submit_tag l(:button_cancel), name: nil, onclick: 'hideModal(this);', type: 'button' %>
+  </p>
+<% end %>
