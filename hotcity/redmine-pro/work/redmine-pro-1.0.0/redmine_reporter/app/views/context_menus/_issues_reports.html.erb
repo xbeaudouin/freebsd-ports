@@ -1,3 +1,0 @@
-<% if User.current.allowed_to?(:generate_issue_reports, @project, global: true) %>
-  <li><%= link_to l(:label_report_plural), new_issues_report_template_path(issue_ids: @issue_ids), remote: true, method: 'get' %></li>
-<% end %>

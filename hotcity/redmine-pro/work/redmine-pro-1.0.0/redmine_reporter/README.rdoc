@@ -1,3 +1,0 @@
-= redmine_reporter
-
-Printable reports generation for Redmine issues

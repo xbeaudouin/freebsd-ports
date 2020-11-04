@@ -1,9 +1,0 @@
-
-<%= l(:mail_body_deal_reminder, count: @deals_count, days: @days) %>:
-
-<% @deals.each do |deal| -%>
-* <%= "#{deal.project} ##{deal.id}: #{deal.name} (#{due_date_distance_in_words(deal.due_date)})" %>
-<% end -%>
-
-<%= l(:label_crm_deal_view_all)%> (<%= l(:label_x_open_issues_abbr, count: @deals_count) %>)
-<%= @deals_url %>

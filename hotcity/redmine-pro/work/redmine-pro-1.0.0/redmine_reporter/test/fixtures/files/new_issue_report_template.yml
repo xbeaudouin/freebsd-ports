@@ -1,5 +1,0 @@
----
-type: IssueReportTemplate
-name: New issue report
-description: Issue report template description.
-content: '<h1>Issue report example</h1><hr>{{issue.subject}}'

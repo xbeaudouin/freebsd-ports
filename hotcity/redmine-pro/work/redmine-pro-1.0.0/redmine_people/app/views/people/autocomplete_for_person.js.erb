@@ -1,6 +1,0 @@
-<%= raw @people.map { |person|
-      { id: person.id,
-        text: person.name.html_safe,
-        avatar: avatar(person, size: 16) }
-    }.to_json
-%>

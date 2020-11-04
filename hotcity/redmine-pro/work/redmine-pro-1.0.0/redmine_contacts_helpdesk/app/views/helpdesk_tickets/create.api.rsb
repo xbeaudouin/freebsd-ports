@@ -1,3 +1,0 @@
-api.helpdesk_ticket do
-  render_api_helpdesk_ticket(@helpdesk_ticket, api)
-end
