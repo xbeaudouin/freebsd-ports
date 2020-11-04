@@ -14,7 +14,7 @@ RUN_DEPENDS=	rubygem-spreadsheet>=0:textproc/rubygem-spreadsheet \
 		rubygem-vcard>=0:textproc/rubygem-vcard \
 		rubygem-prawn>=1:print/rubygem-prawn \
 		rubygem-wicked_pdf>=1:print/rubygem-wicked_pdf \
-		rubygem-rubyzip>=0:archiver/rubygem-rubyzip
+		rubygem-rubyzip>=0:archivers/rubygem-rubyzip
 
 NO_ARCH=        yes
 
