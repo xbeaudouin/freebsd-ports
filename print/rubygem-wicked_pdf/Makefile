@@ -11,7 +11,7 @@ COMMENT=	Use wkhtmltopodf to make PDF
 
 LICENSE=	GPLv3
 
-RUN_DEPENDS=	rubygem-activesupport52>=0:devel/rubygem-activesupport \
+RUN_DEPENDS=	rubygem-activesupport52>=0:devel/rubygem-activesupport52 \
 		wkhtmltopdf:converters/wkhtmltopdf
 
 NO_ARCH=	yes
