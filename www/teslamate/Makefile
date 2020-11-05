@@ -14,7 +14,12 @@ USES=		elixir
 USE_GITHUB=	yes
 GH_ACCOUNT=	adriankumpf
 
-MIX_BUILD_DEPS=	www/elixir-phoenix www/elixir-phoenix_pubsub www/elixir-phoeni_ecto databases/postgrex www/elixir-phoenix_html devel/elixir-gettext
+MIX_BUILD_DEPS=	www/elixir-phoenix \
+		www/elixir-phoenix_pubsub \
+		www/elixir-phoeni_ecto \
+		databases/elixir-postgrex \
+		www/elixir-phoenix_html \
+		devel/elixir-gettext 
 MIX_RUN_DEPS:=	${MIX_BUILD_DEPS}
 MIX_REWRITE=	yes
 
