@@ -16,7 +16,7 @@ GH_ACCOUNT=	adriankumpf
 
 MIX_BUILD_DEPS=	www/elixir-phoenix \
 		www/elixir-phoenix_pubsub \
-		www/elixir-phoeni_ecto \
+		www/elixir-phoenix_ecto \
 		databases/elixir-postgrex \
 		www/elixir-phoenix_html \
 		devel/elixir-gettext 
