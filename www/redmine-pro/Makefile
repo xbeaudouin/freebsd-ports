@@ -3,7 +3,7 @@
 PORTNAME=       redmine-pro
 PORTVERSION=    1.0.0
 CATEGORIES=     www
-MASTER_SITES=	http://wpad.home.oav.net/kiwi/
+MASTER_SITES=	http://kiwi.oav.net/kiwi/
 
 MAINTAINER=     xbeaudouin@hotcity.lu
 COMMENT=        Redmine Additionals Plugin
