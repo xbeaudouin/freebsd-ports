@@ -1,7 +1,7 @@
 # $FreeBSD: head/devel/elixir-crontab/Makefile 479406 2018-09-10 13:14:50Z mat $
 
 PORTNAME=	teslamate
-PORTVERSION=	1.20.0
+PORTVERSION=	1.20.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
