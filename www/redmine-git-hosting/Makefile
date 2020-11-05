@@ -35,6 +35,6 @@ GH_ACCOUNT=     jbox-web
 GH_PROJECT=	redmine_git_hosting
 #GH_TAGNAME=     a625da4
 
-REDMINE_PLUGIN_NAME=    redmine_${PORTNAME}
+REDMINE_PLUGIN_NAME=    ${PORTNAME}
 
 .include "${.CURDIR}/../../www/redmine4/bsd.redmine.mk"

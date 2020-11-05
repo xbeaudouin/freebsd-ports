@@ -23,6 +23,6 @@ GH_ACCOUNT=     AlphaNodes
 GH_PROJECT=	additionals
 GH_TAGNAME=     058e1f7
 
-REDMINE_PLUGIN_NAME=    redmine_${PORTNAME}
+REDMINE_PLUGIN_NAME=    ${PORTNAME}
 
 .include "${.CURDIR}/../../www/redmine4/bsd.redmine.mk"
