@@ -13,7 +13,7 @@ COMMENT=        Redmine Additionals Plugin
 
 LICENSE=        GPLv2
 
-#RUN_DEPENDS=	rubygem-mailchimp-api?>=0:textproc/rubygem-spreadsheet \
+RUN_DEPENDS=	rubygem-mailchimp-api>=0:mail/rubygem-mailchimp-api
 
 NO_ARCH=        yes
 
