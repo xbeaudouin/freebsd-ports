@@ -11,14 +11,14 @@ WRKSRC=		$(WRKDIR)/${PORTNAME}
 MAINTAINER=     xbeaudouin@hotcity.lu
 COMMENT=        Redmine Additionals Plugin
 
-LICENSE=        GPLv2
+LICENSE=        NONE
 
 RUN_DEPENDS=	rubygem-spreadsheet>=0:textproc/rubygem-spreadsheet \
 		rubygem-vcard>=0:textproc/rubygem-vcard 
 
 NO_ARCH=        yes
 
-REDMINE_PLUGIN_NAME=    redmine_${PORTNAME}
+REDMINE_PLUGIN_NAME=    ${PORTNAME}
 
 USES=		zip
 
