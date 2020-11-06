@@ -24,7 +24,7 @@ MARIAEX_DESC=	MySQL adapter support
 MIX_BUILD_NAME=	shared
 MIX_BUILD_DEPS=	devel/elixir-decimal \
 		devel/elixir-poison \
-		devel/erlang-poolboy
+		devel/erlang-poolboy 
 
 .include <bsd.port.options.mk>
 
