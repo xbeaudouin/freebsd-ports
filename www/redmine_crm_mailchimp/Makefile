@@ -6,6 +6,8 @@ DISTNAME=	${PORTNAME}-1_0_4
 CATEGORIES=     www
 MASTER_SITES=	http://wpad.home.oav.net/kiwi/r/
 
+WRKSRC=		$(WRKDIR)/${PORTNAME}
+
 MAINTAINER=     xbeaudouin@hotcity.lu
 COMMENT=        Redmine Additionals Plugin
 
