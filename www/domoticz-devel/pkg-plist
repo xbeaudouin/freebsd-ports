@@ -243,6 +243,8 @@ domoticz/Config/evolve/lrm-as.xml
 domoticz/Config/evolve/lsm-15.xml
 domoticz/Config/evolve/ltm-5.xml
 domoticz/Config/fakro/arz.xml
+domoticz/Config/fakro/arzsolar.xml
+domoticz/Config/fakro/zrh12.xml
 domoticz/Config/fakro/zwp10.xml
 domoticz/Config/fakro/zwrs.xml
 domoticz/Config/fakro/zws12.xml
@@ -504,6 +506,9 @@ domoticz/Config/merten/508244.xml
 domoticz/Config/merten/50x5xx.xml
 domoticz/Config/miyakawaelectric/me-d101.xml
 domoticz/Config/namron/1402756.xml
+domoticz/Config/namron/4512710.xml
+domoticz/Config/namron/4512715.xml
+domoticz/Config/namron/4512724.xml
 domoticz/Config/nexia/db100z.xml
 domoticz/Config/nexia/th100nx.xml
 domoticz/Config/nodon/asp3100SmartPlug.xml
@@ -572,6 +577,7 @@ domoticz/Config/q-light/q-light_zerodim.xml
 domoticz/Config/q-light/q-light_zerodim_2pol.xml
 domoticz/Config/qees/reto-dimmer-plus.xml
 domoticz/Config/qees/reto-plugin-switch.xml
+domoticz/Config/qolsys/qz2140-840.xml
 domoticz/Config/qubino/ZMNHAA2.xml
 domoticz/Config/qubino/ZMNHADx.xml
 domoticz/Config/qubino/ZMNHBA2.xml
@@ -679,6 +685,7 @@ domoticz/Config/thermofloor/heatit021.xml
 domoticz/Config/thermofloor/heatit056.xml
 domoticz/Config/thermofloor/heatit058.xml
 domoticz/Config/thermofloor/heatit20a.xml
+domoticz/Config/thermofloor/heatitz4.xml
 domoticz/Config/thermofloor/heatitz8.xml
 domoticz/Config/trane/TZEMT400AB32MAA.xml
 domoticz/Config/trane/TZEMT400BB32MAA.xml
