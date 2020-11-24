@@ -1,5 +1,0 @@
-_LICENSE=NONE
-_LICENSE_NAME=No license specified
-_LICENSE_PERMS=none
-_LICENSE_GROUPS=
-_LICENSE_DISTFILES=circle_theme-2_1_5.zip
