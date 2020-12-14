@@ -1,0 +1,12 @@
+--- stylesheets/application.css.orig	2020-12-14 12:50:39 UTC
++++ stylesheets/application.css
+@@ -1392,3 +1392,9 @@ input.autocomplete {
+ 		margin-right: 0px;
+ 	}
+ }
++
++/* HOTCITY Override */
++div.journal h4 img.gravatar {
++	margin-left: 0;
++}
++

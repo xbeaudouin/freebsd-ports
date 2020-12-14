@@ -2,7 +2,7 @@
 
 PORTNAME=	a1_theme
 DISTVERSION=	3.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}-3_0_0
 MASTER_SITES=	http://wpad.home.oav.net/kiwi/r/
