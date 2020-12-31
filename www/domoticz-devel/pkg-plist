@@ -825,6 +825,7 @@ domoticz/dzVents/runtime/EventHelpers.lua
 domoticz/dzVents/runtime/HTTPResponse.lua
 domoticz/dzVents/runtime/HistoricalStorage.lua
 domoticz/dzVents/runtime/Security.lua
+domoticz/dzVents/runtime/ShellCommandResponse.lua
 domoticz/dzVents/runtime/SystemEvent.lua
 domoticz/dzVents/runtime/Time.lua
 domoticz/dzVents/runtime/TimedCommand.lua
@@ -1035,6 +1036,7 @@ domoticz/scripts/dzVents/examples/templates/All.lua
 domoticz/scripts/dzVents/examples/templates/Bare.lua
 domoticz/scripts/dzVents/examples/templates/CustomEvents.lua
 domoticz/scripts/dzVents/examples/templates/Device.lua
+domoticz/scripts/dzVents/examples/templates/ExecuteShellCommand.lua
 domoticz/scripts/dzVents/examples/templates/Group.lua
 domoticz/scripts/dzVents/examples/templates/HTTPRequest.lua
 domoticz/scripts/dzVents/examples/templates/Scene.lua
@@ -1073,6 +1075,7 @@ domoticz/scripts/templates/Bare.dzVents
 domoticz/scripts/templates/CustomEvents.dzVents
 domoticz/scripts/templates/Device.Lua
 domoticz/scripts/templates/Device.dzVents
+domoticz/scripts/templates/ExecuteShellCommand.dzVents
 domoticz/scripts/templates/Group.dzVents
 domoticz/scripts/templates/HTTPRequest.dzVents
 domoticz/scripts/templates/Scene.dzVents
@@ -1166,10 +1169,16 @@ domoticz/www/app/hardware/setup/ZWave.js
 domoticz/www/app/livesocket.js
 domoticz/www/app/log/AngularBase.js
 domoticz/www/app/log/Base.js
+domoticz/www/app/log/Chart.js
 domoticz/www/app/log/ChartLoader.js
 domoticz/www/app/log/ChartZoomer.js
 domoticz/www/app/log/CounterLog.html
 domoticz/www/app/log/CounterLog.js
+domoticz/www/app/log/CounterLogEnergySeriesSuppliers.js
+domoticz/www/app/log/CounterLogInstantAndCounter.js
+domoticz/www/app/log/CounterLogP1Energy.js
+domoticz/www/app/log/CounterLogParams.js
+domoticz/www/app/log/CounterLogSeriesSupplier.js
 domoticz/www/app/log/DataLoader.js
 domoticz/www/app/log/DeviceLog.html
 domoticz/www/app/log/DeviceLog.js
