@@ -243,6 +243,7 @@ domoticz/Config/evolve/lfm-20.xml
 domoticz/Config/evolve/lrm-as.xml
 domoticz/Config/evolve/lsm-15.xml
 domoticz/Config/evolve/ltm-5.xml
+domoticz/Config/evolve/t-100.xml
 domoticz/Config/fakro/arz.xml
 domoticz/Config/fakro/arzsolar.xml
 domoticz/Config/fakro/zrh12.xml
@@ -273,6 +274,7 @@ domoticz/Config/fibaro/fgrm222.xml
 domoticz/Config/fibaro/fgs211.xml
 domoticz/Config/fibaro/fgs212.xml
 domoticz/Config/fibaro/fgs213.xml
+domoticz/Config/fibaro/fgs214.xml
 domoticz/Config/fibaro/fgs221.xml
 domoticz/Config/fibaro/fgs222.xml
 domoticz/Config/fibaro/fgs223.xml
@@ -283,6 +285,7 @@ domoticz/Config/fibaro/fgt001.xml
 domoticz/Config/fibaro/fgwd111.xml
 domoticz/Config/fibaro/fgwds221.xml
 domoticz/Config/fibaro/fgwoe.xml
+domoticz/Config/fibaro/fgwpb121.xml
 domoticz/Config/fibaro/fgwpe.xml
 domoticz/Config/fibaro/fgwpfzw5.xml
 domoticz/Config/fibaro/fgwpg111.xml
@@ -318,6 +321,7 @@ domoticz/Config/ge/14292-toggle-switch.xml
 domoticz/Config/ge/14294-dimmer.xml
 domoticz/Config/ge/14295-dimmer-toggle.xml
 domoticz/Config/ge/14298.xml
+domoticz/Config/ge/14322-dimmer-toggle.xml
 domoticz/Config/ge/26931-motion-switch.xml
 domoticz/Config/ge/26932-motion-dimmer.xml
 domoticz/Config/ge/26933-motion-dimmer.xml
@@ -428,6 +432,7 @@ domoticz/Config/inovelli/lzw36.xml
 domoticz/Config/inovelli/lzw40.xml
 domoticz/Config/inovelli/lzw41.xml
 domoticz/Config/inovelli/lzw42.xml
+domoticz/Config/inovelli/lzw45.xml
 domoticz/Config/inovelli/lzw60.xml
 domoticz/Config/inovelli/nzw1201.xml
 domoticz/Config/inovelli/nzw30.xml
@@ -465,6 +470,7 @@ domoticz/Config/leviton/vri10.xml
 domoticz/Config/leviton/vrpa1.xml
 domoticz/Config/leviton/vrpd3.xml
 domoticz/Config/leviton/vrs15.xml
+domoticz/Config/leviton/zw15r.xml
 domoticz/Config/leviton/zw4sf.xml
 domoticz/Config/linear/GC-TBZ48.xml
 domoticz/Config/linear/LB60Z-1.xml
@@ -493,6 +499,7 @@ domoticz/Config/mcohome/mh9co2.xml
 domoticz/Config/mcohome/mhp210.xml
 domoticz/Config/mcohome/mhp220.xml
 domoticz/Config/mcohome/mhp511.xml
+domoticz/Config/mcohome/mhs220.xml
 domoticz/Config/mcohome/mhs311.xml
 domoticz/Config/mcohome/mhs312.xml
 domoticz/Config/mcohome/mhs314.xml
@@ -508,8 +515,10 @@ domoticz/Config/merten/50x5xx.xml
 domoticz/Config/miyakawaelectric/me-d101.xml
 domoticz/Config/namron/1402756.xml
 domoticz/Config/namron/4512710.xml
+domoticz/Config/namron/4512714.xml
 domoticz/Config/namron/4512715.xml
 domoticz/Config/namron/4512724.xml
+domoticz/Config/nei/ms11z.xml
 domoticz/Config/nexia/db100z.xml
 domoticz/Config/nexia/th100nx.xml
 domoticz/Config/nodon/asp3100SmartPlug.xml
@@ -627,6 +636,7 @@ domoticz/Config/remotec/zxt-120.xml
 domoticz/Config/remotec/zxt-310.xml
 domoticz/Config/remotec/zxt-600.xml
 domoticz/Config/ring/PIR-SS.xml
+domoticz/Config/ring/contact-sensor-v2.xml
 domoticz/Config/schlage/BE468.xml
 domoticz/Config/schlage/BE468ZP.xml
 domoticz/Config/schlage/BE469.xml
@@ -642,11 +652,13 @@ domoticz/Config/shenzen_neo/ls01ch.xml
 domoticz/Config/shenzen_neo/ls02ch.xml
 domoticz/Config/shenzen_neo/ls03ch.xml
 domoticz/Config/shenzen_neo/nas-ab01z.xml
+domoticz/Config/shenzen_neo/nas-cs01z.xml
 domoticz/Config/shenzen_neo/nas-ds01z.xml
 domoticz/Config/shenzen_neo/nas-pd01z.xml
 domoticz/Config/shenzen_neo/nas-pd02z.xml
 domoticz/Config/shenzen_neo/nas-pd03z.xml
 domoticz/Config/shenzen_neo/nas-rc01z.xml
+domoticz/Config/shenzen_neo/nas-sc03ze.xml
 domoticz/Config/shenzen_neo/nas-wr01z.xml
 domoticz/Config/shenzen_neo/nas-wr01ze.xml
 domoticz/Config/shenzen_neo/nas-ws02z.xml
@@ -664,11 +676,16 @@ domoticz/Config/steinel/xled-home-2.xml
 domoticz/Config/stelpro/stzw402.xml
 domoticz/Config/sunricher/srzv9001k12dimz4.xml
 domoticz/Config/sunricher/srzv9001k12dimz5.xml
+domoticz/Config/sunricher/srzv9001k2dim.xml
+domoticz/Config/sunricher/srzv9001k4dim.xml
+domoticz/Config/sunricher/srzv9001k4dimg2.xml
 domoticz/Config/sunricher/srzv9001k8.xml
 domoticz/Config/sunricher/srzv9001t4dimeu.xml
 domoticz/Config/sunricher/srzv9001tccteu.xml
 domoticz/Config/sunricher/srzv9003t4rgbweu.xml
+domoticz/Config/sunricher/srzv9100aa.xml
 domoticz/Config/sunricher/srzv9101sachpeu.xml
+domoticz/Config/sunricher/srzv9101sachpswitch.xml
 domoticz/Config/sunricher/zv2835rac.xml
 domoticz/Config/sunricher/zv9101.xml
 domoticz/Config/sunricher/zv9101fa.xml
@@ -682,9 +699,11 @@ domoticz/Config/telldus/tzdw100.xml
 domoticz/Config/telldus/tzwp100.xml
 domoticz/Config/there/800z.xml
 domoticz/Config/thermofloor/heatit-zdim.xml
+domoticz/Config/thermofloor/heatit021-v1.92.xml
 domoticz/Config/thermofloor/heatit021.xml
 domoticz/Config/thermofloor/heatit056.xml
 domoticz/Config/thermofloor/heatit058.xml
+domoticz/Config/thermofloor/heatit204.xml
 domoticz/Config/thermofloor/heatit20a.xml
 domoticz/Config/thermofloor/heatitz4.xml
 domoticz/Config/thermofloor/heatitz8.xml
@@ -740,6 +759,7 @@ domoticz/Config/wenzhou/tz74.xml
 domoticz/Config/wenzhou/tz78.xml
 domoticz/Config/wenzhou/tz79.xml
 domoticz/Config/wenzhou/tz88.xml
+domoticz/Config/wenzhou/tze96.xml
 domoticz/Config/widom/DRY.xml
 domoticz/Config/widom/UBS104.xml
 domoticz/Config/widom/UME304C_S.xml
