@@ -1,6 +1,0 @@
-Rack::Parser is a rack middleware that allow your application to do
-decode/parser incoming post data into param hashes for your applications
-to use. You can provide a custom Parser for things like JSON, XML, MSGPACK
-using your library of choice.
-
-WWW: https://github.com/achiurizo/rack-parser
