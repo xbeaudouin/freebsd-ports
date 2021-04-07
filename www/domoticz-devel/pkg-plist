@@ -114,12 +114,14 @@ domoticz/Config/alfred/DB2.xml
 domoticz/Config/assa_abloy/ConexisL1.xml
 domoticz/Config/assa_abloy/KeyfreeConnected-plus.xml
 domoticz/Config/assa_abloy/KeyfreeConnected.xml
+domoticz/Config/assa_abloy/ProSLKey-FreeDeadbolt.xml
 domoticz/Config/assa_abloy/PushButtonDeadbolt.xml
 domoticz/Config/assa_abloy/PushButtonLever.xml
 domoticz/Config/assa_abloy/TouchDeadbolt.xml
 domoticz/Config/assa_abloy/TouchLever.xml
 domoticz/Config/assa_abloy/nexTouch.xml
 domoticz/Config/assa_abloy/yrd1x0.xml
+domoticz/Config/assa_abloy/yrm276.xml
 domoticz/Config/august/asl-03.xml
 domoticz/Config/buffalo/hw-100v15a-zw.xml
 domoticz/Config/building36/b36-t10.xml
@@ -132,6 +134,7 @@ domoticz/Config/cooper/RF9505-T.xml.zip
 domoticz/Config/cooper/RF9517.xml
 domoticz/Config/cooper/RF9540-N.xml
 domoticz/Config/cooper/RF9542-Z.xml
+domoticz/Config/cooper/RF9601.xml
 domoticz/Config/cooper/RFWC5.xml
 domoticz/Config/cooper/rf9534.xml
 domoticz/Config/danfoss/living.xml
@@ -167,6 +170,7 @@ domoticz/Config/dome/0086.xml
 domoticz/Config/dome/0087.xml
 domoticz/Config/dome/0088.xml
 domoticz/Config/dome/0101.xml
+domoticz/Config/dome/0104.xml
 domoticz/Config/dome/0201.xml
 domoticz/Config/dome/dmex1.xml
 domoticz/Config/domitech/zb22uk.xml
@@ -284,6 +288,7 @@ domoticz/Config/fibaro/fgss101.xml
 domoticz/Config/fibaro/fgt001.xml
 domoticz/Config/fibaro/fgwd111.xml
 domoticz/Config/fibaro/fgwds221.xml
+domoticz/Config/fibaro/fgwds221ss.xml
 domoticz/Config/fibaro/fgwoe.xml
 domoticz/Config/fibaro/fgwpb121.xml
 domoticz/Config/fibaro/fgwpe.xml
@@ -492,10 +497,12 @@ domoticz/Config/logicsoft/ZHC5010.xml
 domoticz/Config/manufacturer_specific.xml
 domoticz/Config/manufacturer_specific.xsd
 domoticz/Config/mcohome/a8-9.xml
+domoticz/Config/mcohome/mh10pm25wd.xml
 domoticz/Config/mcohome/mh7h.xml
 domoticz/Config/mcohome/mh8fceu.xml
 domoticz/Config/mcohome/mh8fceu0803.xml
 domoticz/Config/mcohome/mh9co2.xml
+domoticz/Config/mcohome/mhdt411.xml
 domoticz/Config/mcohome/mhp210.xml
 domoticz/Config/mcohome/mhp220.xml
 domoticz/Config/mcohome/mhp511.xml
@@ -515,8 +522,10 @@ domoticz/Config/merten/50x5xx.xml
 domoticz/Config/miyakawaelectric/me-d101.xml
 domoticz/Config/namron/1402756.xml
 domoticz/Config/namron/4512710.xml
+domoticz/Config/namron/4512712.xml
 domoticz/Config/namron/4512714.xml
 domoticz/Config/namron/4512715.xml
+domoticz/Config/namron/4512720.xml
 domoticz/Config/namron/4512724.xml
 domoticz/Config/nei/ms11z.xml
 domoticz/Config/nexia/db100z.xml
@@ -605,6 +614,7 @@ domoticz/Config/qubino/ZMNHJD1.xml
 domoticz/Config/qubino/ZMNHKDx.xml
 domoticz/Config/qubino/ZMNHLAx.xml
 domoticz/Config/qubino/ZMNHLDx.xml
+domoticz/Config/qubino/ZMNHMDx.xml
 domoticz/Config/qubino/ZMNHNDx.xml
 domoticz/Config/qubino/ZMNHODx.xml
 domoticz/Config/qubino/ZMNHQDx.xml
@@ -637,6 +647,7 @@ domoticz/Config/remotec/zxt-310.xml
 domoticz/Config/remotec/zxt-600.xml
 domoticz/Config/ring/PIR-SS.xml
 domoticz/Config/ring/contact-sensor-v2.xml
+domoticz/Config/ring/motion-detector-v2.xml
 domoticz/Config/schlage/BE468.xml
 domoticz/Config/schlage/BE468ZP.xml
 domoticz/Config/schlage/BE469.xml
@@ -663,6 +674,7 @@ domoticz/Config/shenzen_neo/nas-wr01z.xml
 domoticz/Config/shenzen_neo/nas-wr01ze.xml
 domoticz/Config/shenzen_neo/nas-ws02z.xml
 domoticz/Config/shenzen_saykey/sk-3007-05.xml
+domoticz/Config/simon/10002020-13X.xml
 domoticz/Config/simon/10002034-13X.xml
 domoticz/Config/simon/10002041-13X.xml
 domoticz/Config/simon/10002080-13X.xml
@@ -756,6 +768,7 @@ domoticz/Config/wenzhou/tz67.xml
 domoticz/Config/wenzhou/tz68.xml
 domoticz/Config/wenzhou/tz69.xml
 domoticz/Config/wenzhou/tz74.xml
+domoticz/Config/wenzhou/tz77.xml
 domoticz/Config/wenzhou/tz78.xml
 domoticz/Config/wenzhou/tz79.xml
 domoticz/Config/wenzhou/tz88.xml
@@ -781,6 +794,7 @@ domoticz/Config/zooz/zen06.xml
 domoticz/Config/zooz/zen07.xml
 domoticz/Config/zooz/zen15.xml
 domoticz/Config/zooz/zen16.xml
+domoticz/Config/zooz/zen17.xml
 domoticz/Config/zooz/zen20.xml
 domoticz/Config/zooz/zen20v2.xml
 domoticz/Config/zooz/zen21.xml
@@ -796,7 +810,12 @@ domoticz/Config/zooz/zen26.xml
 domoticz/Config/zooz/zen27.xml
 domoticz/Config/zooz/zen30.xml
 domoticz/Config/zooz/zen31.xml
+domoticz/Config/zooz/zen32.xml
 domoticz/Config/zooz/zen34.xml
+domoticz/Config/zooz/zen71.xml
+domoticz/Config/zooz/zen72.xml
+domoticz/Config/zooz/zen76.xml
+domoticz/Config/zooz/zen77.xml
 domoticz/Config/zooz/zse08.xml
 domoticz/Config/zooz/zse09.xml
 domoticz/Config/zooz/zse18.xml
