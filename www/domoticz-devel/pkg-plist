@@ -1071,19 +1071,6 @@ domoticz/scripts/dzVents/examples/respond to switch.lua
 domoticz/scripts/dzVents/examples/schedule fish pond pump.lua
 domoticz/scripts/dzVents/examples/simple room heating with hysteresis control.lua
 domoticz/scripts/dzVents/examples/sunscreen.lua
-domoticz/scripts/dzVents/examples/templates/All.lua
-domoticz/scripts/dzVents/examples/templates/Bare.lua
-domoticz/scripts/dzVents/examples/templates/CustomEvents.lua
-domoticz/scripts/dzVents/examples/templates/Device.lua
-domoticz/scripts/dzVents/examples/templates/ExecuteShellCommand.lua
-domoticz/scripts/dzVents/examples/templates/Group.lua
-domoticz/scripts/dzVents/examples/templates/HTTPRequest.lua
-domoticz/scripts/dzVents/examples/templates/Scene.lua
-domoticz/scripts/dzVents/examples/templates/Security.lua
-domoticz/scripts/dzVents/examples/templates/System.lua
-domoticz/scripts/dzVents/examples/templates/Timer.lua
-domoticz/scripts/dzVents/examples/templates/UserVariable.lua
-domoticz/scripts/dzVents/examples/templates/global_data.lua
 domoticz/scripts/dzVents/generated_scripts/README.md
 domoticz/scripts/dzVents/scripts/README.md
 domoticz/scripts/install.sh
@@ -1969,5 +1956,5 @@ domoticz/www/views/uservariables.html
 domoticz/www/views/utility.html
 domoticz/www/views/weather.html
 domoticz/www/views/weather_widget.html
-@dir(domoticz,domoticz) /var/db/domoticz
-@dir(domoticz,domoticz) /var/run/domoticz
+@dir(domoticz:domoticz) /var/db/domoticz
+@dir(domoticz:domoticz) /var/run/domoticz
