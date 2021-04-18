@@ -106,6 +106,7 @@ domoticz/Config/aeotec/zwa005.xml
 domoticz/Config/aeotec/zwa006.xml
 domoticz/Config/aeotec/zwa008.xml
 domoticz/Config/aeotec/zwa009.xml
+domoticz/Config/aeotec/zwa011.xml
 domoticz/Config/aeotec/zwa012.xml
 domoticz/Config/aeotec/zwa019.xml
 domoticz/Config/aeotec/zwa021.xml
@@ -863,6 +864,7 @@ domoticz/dzVents/runtime/Domoticz.lua
 domoticz/dzVents/runtime/EventHelpers.lua
 domoticz/dzVents/runtime/HTTPResponse.lua
 domoticz/dzVents/runtime/HistoricalStorage.lua
+domoticz/dzVents/runtime/JSON.lua
 domoticz/dzVents/runtime/Security.lua
 domoticz/dzVents/runtime/ShellCommandResponse.lua
 domoticz/dzVents/runtime/SystemEvent.lua
@@ -872,6 +874,7 @@ domoticz/dzVents/runtime/TimedCommandOptions.lua
 domoticz/dzVents/runtime/Timer.lua
 domoticz/dzVents/runtime/Utils.lua
 domoticz/dzVents/runtime/Variable.lua
+domoticz/dzVents/runtime/XmlParser.lua
 domoticz/dzVents/runtime/constants.lua
 domoticz/dzVents/runtime/device-adapters/Adapters.lua
 domoticz/dzVents/runtime/device-adapters/airquality_device.lua
@@ -1031,6 +1034,10 @@ domoticz/dzVents/runtime/tests/testVariable.lua
 domoticz/dzVents/runtime/tests/testfile
 domoticz/dzVents/runtime/tests/tstData.lua
 domoticz/dzVents/runtime/todo.md
+domoticz/dzVents/runtime/xml2lua.lua
+domoticz/dzVents/runtime/xmlhandler/dom.lua
+domoticz/dzVents/runtime/xmlhandler/print.lua
+domoticz/dzVents/runtime/xmlhandler/tree.lua
 domoticz/plugins/AwoxSMP/lib/__init__.py
 domoticz/plugins/AwoxSMP/lib/pySmartPlugSmpB16.py
 domoticz/plugins/AwoxSMP/plugin.py
@@ -1076,13 +1083,8 @@ domoticz/scripts/dzVents/scripts/README.md
 domoticz/scripts/install.sh
 domoticz/scripts/logrotate/domoticz
 domoticz/scripts/lua/JSON.lua
-domoticz/scripts/lua/XmlParser.lua
 domoticz/scripts/lua/script_device_demo.lua
 domoticz/scripts/lua/script_time_demo.lua
-domoticz/scripts/lua/xml2lua.lua
-domoticz/scripts/lua/xmlhandler/dom.lua
-domoticz/scripts/lua/xmlhandler/print.lua
-domoticz/scripts/lua/xmlhandler/tree.lua
 domoticz/scripts/lua_parsers/example.lua
 domoticz/scripts/lua_parsers/example_json.lua
 domoticz/scripts/lua_parsers/example_owm.lua
@@ -1956,5 +1958,5 @@ domoticz/www/views/uservariables.html
 domoticz/www/views/utility.html
 domoticz/www/views/weather.html
 domoticz/www/views/weather_widget.html
-@dir(domoticz:domoticz) /var/db/domoticz
-@dir(domoticz:domoticz) /var/run/domoticz
+@dir(domoticz,domoticz) /var/db/domoticz
+@dir(domoticz,domoticz) /var/run/domoticz

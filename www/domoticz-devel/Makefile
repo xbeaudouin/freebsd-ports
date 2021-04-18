@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	domoticz-devel
-PORTVERSION=	2020.2.${DOMOTICZ_REL}
+PORTVERSION=	2021.1.${DOMOTICZ_REL}
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -14,7 +14,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libopenzwave.so:comms/openzwave-devel \
 		libjsoncpp.so:devel/jsoncpp \
 		libminizip.so:archivers/minizip \
-		libmosquitto.so:net/mosquitto
+		libmosquitto.so:net/mosquitto \
+		libfmt.so:devel/libfmt
 BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 
 USES=		cmake pkgconfig ssl sqlite lua:53
@@ -22,7 +23,7 @@ USES=		cmake pkgconfig ssl sqlite lua:53
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
 OPTIONS_SUB=	YES
-OPTIONS_DEFINE=	SSSL SBOOST PYTHON TELLDUS PRECOMP
+OPTIONS_DEFINE=	SSSL SBOOST PYTHON TELLDUS PRECOMP DBG
 OPTIONS_DEFAULT=	PYTHON PRECOMP
 SBOOST_DESC=	Use static Boost instead of dynamic linking
 SSSL_DESC=	Use static OpenSSL library instead of dynamic linking
@@ -34,12 +35,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	13151
-DOMOTICZ_TS=	1618179018
+DOMOTICZ_REL=	13196
+DOMOTICZ_TS=	1618747238
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	4282c8af2
+GH_TAGNAME=	40194e618
 
 USE_RC_SUBR=	domoticz
 
@@ -53,7 +54,8 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
 		-DUSE_BUILTIN_SQLITE="NO" \
 		-DUSE_BUILTIN_MQTT="NO" \
 		-DUSE_BUILTIN_JSONCPP="NO" \
-		-DUSE_BUILTIN_MINIZIP="NO"
+		-DUSE_BUILTIN_MINIZIP="NO" \
+		-DUSE_BUILTIN_LIBFMT="NO"
 
 .if ${PORT_OPTIONS:MSSSL}
 CMAKE_ARGS+=	-DUSE_OPENSSL_STATIC="YES"
