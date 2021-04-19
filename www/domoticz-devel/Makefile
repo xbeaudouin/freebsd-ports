@@ -14,8 +14,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libopenzwave.so:comms/openzwave-devel \
 		libjsoncpp.so:devel/jsoncpp \
 		libminizip.so:archivers/minizip \
-		libmosquitto.so:net/mosquitto \
-		libfmt.so:devel/libfmt
+		libmosquitto.so:net/mosquitto
 BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 
 USES=		cmake pkgconfig ssl sqlite lua:53
@@ -35,12 +34,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	13196
-DOMOTICZ_TS=	1618747238
+DOMOTICZ_REL=	13203
+DOMOTICZ_TS=	1618828694
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	40194e618
+GH_TAGNAME=	ab7a7bba3
 
 USE_RC_SUBR=	domoticz
 
