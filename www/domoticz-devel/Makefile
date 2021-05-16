@@ -34,12 +34,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	13252
-DOMOTICZ_TS=	1620458777
+DOMOTICZ_REL=	13266
+DOMOTICZ_TS=	1621157571
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	86ac025ab
+GH_TAGNAME=	1f55110ee
 
 USE_RC_SUBR=	domoticz
 
@@ -53,8 +53,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}/domoticz \
 		-DUSE_BUILTIN_SQLITE="NO" \
 		-DUSE_BUILTIN_MQTT="NO" \
 		-DUSE_BUILTIN_JSONCPP="NO" \
-		-DUSE_BUILTIN_MINIZIP="NO" \
-		-DUSE_BUILTIN_LIBFMT="NO"
+		-DUSE_BUILTIN_MINIZIP="NO"
 
 .if ${PORT_OPTIONS:MSSSL}
 CMAKE_ARGS+=	-DUSE_OPENSSL_STATIC="YES"
