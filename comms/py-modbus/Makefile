@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	modbus
 PORTVERSION=	3.2
 CATEGORIES=	comms python
