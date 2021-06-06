@@ -1202,6 +1202,8 @@ domoticz/www/app/log/ChartLoader.js
 domoticz/www/app/log/ChartZoomer.js
 domoticz/www/app/log/CounterLog.html
 domoticz/www/app/log/CounterLog.js
+domoticz/www/app/log/CounterLogCounter.js
+domoticz/www/app/log/CounterLogCounterSeriesSuppliers.js
 domoticz/www/app/log/CounterLogEnergySeriesSuppliers.js
 domoticz/www/app/log/CounterLogInstantAndCounter.js
 domoticz/www/app/log/CounterLogP1Energy.js
@@ -1222,6 +1224,7 @@ domoticz/www/app/log/TemperatureLog.html
 domoticz/www/app/log/TemperatureLog.js
 domoticz/www/app/log/TextLog.html
 domoticz/www/app/log/TextLog.js
+domoticz/www/app/log/chart-compare.html
 domoticz/www/app/log/chart-day.html
 domoticz/www/app/log/chart-month.html
 domoticz/www/app/log/chart-week.html
@@ -1793,7 +1796,13 @@ domoticz/www/js/date.format.js.gz
 domoticz/www/js/domoticz.js
 domoticz/www/js/domoticzdevices.js
 domoticz/www/js/highcharts-ng.min.js.gz
+domoticz/www/js/highcharts/README.md
 domoticz/www/js/highcharts/highcharts-8.2.2-patch.9612.src.js
+domoticz/www/js/highcharts/highcharts-9.0.0-patch.9612.src.js
+domoticz/www/js/highcharts/highcharts-9.0.1-patch.9612.src.js
+domoticz/www/js/highcharts/highcharts-9.0.1.src.js
+domoticz/www/js/highcharts/highcharts-9.1.0-patch.9612.src.js
+domoticz/www/js/highcharts/highcharts-9.1.0.src.js
 domoticz/www/js/highcharts/highcharts-more.js
 domoticz/www/js/highcharts/highcharts-more.js.map
 domoticz/www/js/highcharts/highcharts-more.src.js
@@ -1815,6 +1824,7 @@ domoticz/www/js/highcharts/themes/dark-unica.js.map
 domoticz/www/js/html5shiv.js.gz
 domoticz/www/js/i18next-1.8.0.min.js.gz
 domoticz/www/js/jquery-3.5.1.min.js.gz
+domoticz/www/js/jquery-3.6.0.min.js.gz
 domoticz/www/js/jquery-ui-timepicker-addon.js.gz
 domoticz/www/js/jquery-ui.min.js.gz
 domoticz/www/js/jquery.ddslick.min.js.gz
@@ -1823,12 +1833,16 @@ domoticz/www/js/jquery.jeditable.mini.js.gz
 domoticz/www/js/jquery.ui.touch-punch.min.js.gz
 domoticz/www/js/jquery.uix.multiselect.min.js.gz
 domoticz/www/js/jquery.wheelcolorpicker.js.gz
-domoticz/www/js/lodash-custom.merge.js
-domoticz/www/js/lodash-custom.merge.min.js.gz
+domoticz/www/js/lodash-custom.js
+domoticz/www/js/lodash-custom.min.js.gz
 domoticz/www/js/luxon.min.js
 domoticz/www/js/md5.js.gz
+domoticz/www/js/moment-timezone-with-data.min.js
 domoticz/www/js/moment-timezone-with-data.min.js.gz
+domoticz/www/js/moment-with-locales.min.js
 domoticz/www/js/moment-with-locales.min.js.gz
+domoticz/www/js/moment-with-locales.min.js.map
+domoticz/www/js/moment-with-locales.min.js.map.gz
 domoticz/www/js/ngDraggable.js.gz
 domoticz/www/js/ngload.min.js.gz
 domoticz/www/js/noty/noty.css
