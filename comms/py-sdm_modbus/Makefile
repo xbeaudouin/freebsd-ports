@@ -9,7 +9,7 @@ COMMENT=	Library for Eastron SDM single or three phase kWh meters
 
 LICENSE=	MIT
 
-#RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16.0:math/py-numpy@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}modbus>=3.4:comms/py-modbus@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	distutils autoplist
