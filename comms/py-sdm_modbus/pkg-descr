@@ -1,0 +1,4 @@
+Library that collects data from Eastron SDM single and three phase kWh
+meters over Modbus RTU or Modbus TCP
+
+WWW: https://github.com/nmakel/sdm_modbus
