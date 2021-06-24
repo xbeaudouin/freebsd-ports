@@ -1,0 +1,22 @@
+PORTNAME=	pymodbus
+PORTVERSION=	2.5.0
+CATEGORIES=	comms python
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	kiwi@oav.net
+COMMENT=	A Python Modbus Stack
+
+LICENSE=	BSD
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>=1.15.0:devel/py-six@${PY_FLAVOR}
+
+USES=		python
+USE_PYTHON=	distutils autoplist
+
+NO_ARCH=	yes
+
+DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
+PORTDOCS=	*
+
+.include <bsd.port.mk>
