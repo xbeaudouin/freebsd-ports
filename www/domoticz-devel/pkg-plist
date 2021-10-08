@@ -1811,6 +1811,9 @@ domoticz/www/js/highcharts/modules/export-data.src.js.gz
 domoticz/www/js/highcharts/modules/exporting.js.gz
 domoticz/www/js/highcharts/modules/exporting.js.map.gz
 domoticz/www/js/highcharts/modules/exporting.src.js.gz
+domoticz/www/js/highcharts/modules/no-data-to-display.js.gz
+domoticz/www/js/highcharts/modules/no-data-to-display.js.map.gz
+domoticz/www/js/highcharts/modules/no-data-to-display.src.js.gz
 domoticz/www/js/highcharts/modules/sankey.js.gz
 domoticz/www/js/highcharts/modules/sankey.js.map.gz
 domoticz/www/js/highcharts/modules/sankey.src.js.gz
