@@ -34,12 +34,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	13783
-DOMOTICZ_TS=	1635314064
+DOMOTICZ_REL=	13835
+DOMOTICZ_TS=	1635943747
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	9eee297ab
+GH_TAGNAME=	6edf2c250
 
 USE_RC_SUBR=	domoticz
 
@@ -71,7 +71,7 @@ LIB_DEPENDS+=	libboost_system.so:devel/boost-libs
 
 .if ${PORT_OPTIONS:MPYTHON}
 CMAKE_ARGS+=	-DUSE_PYTHON="YES"
-USES+=		python:3.5+
+USES+=		python:3.8+
 .else
 CMAKE_ARGS+=	-DUSE_PYTHON="NO"
 .endif
