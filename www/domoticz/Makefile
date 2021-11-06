@@ -1,5 +1,3 @@
-# $FreeBSD: head/www/domoticz/Makefile 540909 2020-06-30 17:46:18Z tcberner $
-
 PORTNAME=	domoticz
 PORTVERSION=	2020.2
 PORTREVISION=	2
