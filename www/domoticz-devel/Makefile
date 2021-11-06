@@ -17,7 +17,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libmosquitto.so:net/mosquitto
 BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 
-USES=		cmake pkgconfig ssl sqlite lua:53
+USES=		cmake compuler:c++11-lang cpe pkgconfig ssl sqlite lua:53
 
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
