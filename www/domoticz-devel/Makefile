@@ -17,7 +17,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libmosquitto.so:net/mosquitto
 BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 
-USES=		cmake compuler:c++11-lang cpe pkgconfig ssl sqlite lua:53
+USES=		cmake compiler:c++11-lang cpe pkgconfig ssl sqlite lua:53
 
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
@@ -34,12 +34,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	13847
-DOMOTICZ_TS=	1636092922
+DOMOTICZ_REL=	13851
+DOMOTICZ_TS=	1636183394
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	e850dcdf5
+GH_TAGNAME=	a1c6c28b
 
 USE_RC_SUBR=	domoticz
 
