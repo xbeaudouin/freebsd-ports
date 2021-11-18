@@ -1,5 +1,6 @@
 PORTNAME=	envoy_reader
 PORTVERSION=	0.20.0
+PORTREVISION=	1
 CATEGORIES=	comms python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,6 +12,7 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}httpx=1.12.1:www/py-httpx@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}envoy_utils=0.0.1:comms/py-envoy_utils@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel:devel/py-wheel@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pip:devel/py-pip@${PY_FLAVOR} 
 
 USES=		python
