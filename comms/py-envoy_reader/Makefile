@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}httpx=1.12.1:www/py-httpx@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}envoy_utils=0.0.1:comms/py-envoy_utils@${PY_FLAVOR}
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest-runner:devel/py-pytest-runner@${PY_FLAVOR} 
+#BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest-runner:devel/py-pytest-runner@${PY_FLAVOR} 
 
 USES=		python
 USE_PYTHON=	distutils autoplist
