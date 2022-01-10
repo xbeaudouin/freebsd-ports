@@ -16,13 +16,16 @@ USES=		gmake tar:bz2 iconv pkgconfig
 
 # Manually update this when makefile is updated
 # echo $(git describe --long --tags --dirty 2>/dev/null | sed s/^v//) | awk '{split($$0,a,"-"); print a[2]}'
-VERSION_REV=	1570
+VERSION_REV=	1965
 
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
-GH_ACCOUNT=	OpenZWave
+# Switch to domoticz fork
+#GH_ACCOUNT=	OpenZWave
+GH_ACCOUNT=	domoticz
 GH_PROJECT=	open-zwave
-GH_TAGNAME=	a9d57fcc
+#GH_TAGNAME=	f150a985
+GH_TAGNAME=	ab7d6d7a
 MAKE_ARGS=	VERSION_REV=${VERSION_REV} LIBDIR=${WRKSRC} docdir=${DOCSDIR}
 
 OPTIONS_DEFINE=	DOXYGEN DOCS
