@@ -1183,6 +1183,10 @@ domoticz/www/app/hardware/Hardware.html
 domoticz/www/app/hardware/Hardware.js
 domoticz/www/app/hardware/HardwareSetup.html
 domoticz/www/app/hardware/HardwareSetup.js
+domoticz/www/app/hardware/extra/DaikinParams.html
+domoticz/www/app/hardware/extra/DaikinParams.js
+domoticz/www/app/hardware/extra/MQTTParams.html
+domoticz/www/app/hardware/extra/MQTTParams.js
 domoticz/www/app/hardware/setup/BleBox.html
 domoticz/www/app/hardware/setup/BleBox.js
 domoticz/www/app/hardware/setup/Kodi.html
@@ -1316,6 +1320,13 @@ domoticz/www/css/ui-darkness/jquery-ui.min.css
 domoticz/www/css/ui-grid.min.css
 domoticz/www/css/wheelcolorpicker.css
 domoticz/www/favicon.ico
+domoticz/www/font-awesome/css/fontawesome.min.css
+domoticz/www/font-awesome/css/solid.min.css
+domoticz/www/font-awesome/webfonts/fa-solid-900.eot
+domoticz/www/font-awesome/webfonts/fa-solid-900.svg
+domoticz/www/font-awesome/webfonts/fa-solid-900.ttf
+domoticz/www/font-awesome/webfonts/fa-solid-900.woff
+domoticz/www/font-awesome/webfonts/fa-solid-900.woff2
 domoticz/www/html5.appcache
 domoticz/www/i18n/domoticz-ar.json.gz
 domoticz/www/i18n/domoticz-bg.json.gz
@@ -1412,6 +1423,9 @@ domoticz/www/images/Harddisk48_On.png
 domoticz/www/images/Heating.png
 domoticz/www/images/Heating48_Off.png
 domoticz/www/images/Heating48_On.png
+domoticz/www/images/Irrigation.png
+domoticz/www/images/Irrigation48_Off.png
+domoticz/www/images/Irrigation48_On.png
 domoticz/www/images/Light48_Off.png
 domoticz/www/images/Light48_On.png
 domoticz/www/images/LogitechMediaServer.png
