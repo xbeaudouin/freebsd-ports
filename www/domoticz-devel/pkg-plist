@@ -1083,6 +1083,7 @@ domoticz/scripts/dzVents/examples/simple room heating with hysteresis control.lu
 domoticz/scripts/dzVents/examples/sunscreen.lua
 domoticz/scripts/dzVents/generated_scripts/README.md
 domoticz/scripts/dzVents/scripts/README.md
+domoticz/scripts/get_build_versions.sh
 domoticz/scripts/install.sh
 domoticz/scripts/logrotate/domoticz
 domoticz/scripts/lua/JSON.lua

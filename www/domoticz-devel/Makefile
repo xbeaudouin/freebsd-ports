@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	domoticz-devel
-PORTVERSION=	2021.1.${DOMOTICZ_REL}
+PORTVERSION=	2022.1.${DOMOTICZ_REL}
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -13,11 +13,10 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libopenzwave.so:comms/openzwave-devel \
 		libjsoncpp.so:devel/jsoncpp \
-		libminizip.so:archivers/minizip \
 		libmosquitto.so:net/mosquitto
 BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 
-USES=		cmake compiler:c++11-lang cpe pkgconfig ssl sqlite lua:53
+USES=		cmake compiler:c++11-lang cpe minizip pkgconfig ssl sqlite lua:53
 
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
@@ -34,12 +33,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	14095
-DOMOTICZ_TS=	1642695800
+DOMOTICZ_REL=	14106
+DOMOTICZ_TS=	1643114997
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	3861cc0e8
+GH_TAGNAME=	4e7a691a0
 
 USE_RC_SUBR=	domoticz
 
