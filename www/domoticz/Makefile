@@ -9,7 +9,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl libboost_system.so:devel/boost-libs \
-		libjsoncpp.so:devel/jsoncpp \
+		libjsoncpp.so:comms/openzwave-devel \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
 
