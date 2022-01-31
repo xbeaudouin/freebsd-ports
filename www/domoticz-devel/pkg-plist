@@ -1083,7 +1083,6 @@ domoticz/scripts/dzVents/examples/simple room heating with hysteresis control.lu
 domoticz/scripts/dzVents/examples/sunscreen.lua
 domoticz/scripts/dzVents/generated_scripts/README.md
 domoticz/scripts/dzVents/scripts/README.md
-domoticz/scripts/get_build_versions.sh
 domoticz/scripts/install.sh
 domoticz/scripts/logrotate/domoticz
 domoticz/scripts/lua/JSON.lua
@@ -1100,6 +1099,11 @@ domoticz/scripts/python/script_device_demo.py
 domoticz/scripts/python/script_time_demo.py
 domoticz/scripts/readme.txt
 domoticz/scripts/restart_domoticz
+domoticz/scripts/support/README.md
+domoticz/scripts/support/get_build_versions.sh
+domoticz/scripts/support/mqtt_ad/README.md
+domoticz/scripts/support/mqtt_ad/mqtt_ad_record.sh
+domoticz/scripts/support/mqtt_ad/mqtt_ad_send.sh
 domoticz/scripts/templates/All.Lua
 domoticz/scripts/templates/All.Python
 domoticz/scripts/templates/All.dzVents
@@ -1556,8 +1560,6 @@ domoticz/www/images/evohome/Custom.png
 domoticz/www/images/evohome/CustomInv.png
 domoticz/www/images/evohome/DayOff.png
 domoticz/www/images/evohome/DayOffInv.png
-domoticz/www/images/evohome/DayOffWithEco.png
-domoticz/www/images/evohome/DayOffWithEcoInv.png
 domoticz/www/images/evohome/HeatingOff.png
 domoticz/www/images/evohome/HeatingOffInv.png
 domoticz/www/images/evohome/Off.png
