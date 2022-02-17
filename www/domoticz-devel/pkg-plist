@@ -1194,6 +1194,8 @@ domoticz/www/app/hardware/extra/MQTTParams.html
 domoticz/www/app/hardware/extra/MQTTParams.js
 domoticz/www/app/hardware/setup/BleBox.html
 domoticz/www/app/hardware/setup/BleBox.js
+domoticz/www/app/hardware/setup/EnOceanESP3.html
+domoticz/www/app/hardware/setup/EnOceanESP3.js
 domoticz/www/app/hardware/setup/Kodi.html
 domoticz/www/app/hardware/setup/Kodi.js
 domoticz/www/app/hardware/setup/MySensors.html
