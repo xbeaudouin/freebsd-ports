@@ -1056,6 +1056,7 @@ domoticz/plugins/examples/Mutli-Threaded.py
 domoticz/plugins/examples/Pinger.py
 domoticz/plugins/examples/RAVEn.py
 domoticz/plugins/examples/UDP Discovery.py
+domoticz/plugins/examples/Web Socket Client.py
 domoticz/scripts/_domoticz_main
 domoticz/scripts/_domoticz_main.bat
 domoticz/scripts/buienradar_rain_example.pl
