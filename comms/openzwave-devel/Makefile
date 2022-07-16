@@ -3,7 +3,7 @@
 
 PORTNAME=	openzwave
 PORTVERSION=	1.6.${VERSION_REV}
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	comms
 PKGNAMESUFFIX=	-devel
 
@@ -16,16 +16,15 @@ USES=		gmake tar:bz2 iconv pkgconfig
 
 # Manually update this when makefile is updated
 # echo $(git describe --long --tags --dirty 2>/dev/null | sed s/^v//) | awk '{split($$0,a,"-"); print a[2]}'
-VERSION_REV=	1965
+VERSION_REV=	1961
 
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 # Switch to domoticz fork
-#GH_ACCOUNT=	OpenZWave
-GH_ACCOUNT=	domoticz
+GH_ACCOUNT=	OpenZWave
+#GH_ACCOUNT=	domoticz
 GH_PROJECT=	open-zwave
-#GH_TAGNAME=	f150a985
-GH_TAGNAME=	ab7d6d7a
+GH_TAGNAME=	4887754f
 MAKE_ARGS=	VERSION_REV=${VERSION_REV} LIBDIR=${WRKSRC} docdir=${DOCSDIR}
 
 OPTIONS_DEFINE=	DOXYGEN DOCS
