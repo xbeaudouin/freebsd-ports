@@ -1,6 +1,6 @@
 PORTNAME=	domoticz
 PORTVERSION=	2022.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -10,7 +10,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl libboost_system.so:devel/boost-libs \
-		libjsoncpp.so:comms/openzwave-devel \
+		libopenzwave.so:comms/openzwave-devel \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
 
