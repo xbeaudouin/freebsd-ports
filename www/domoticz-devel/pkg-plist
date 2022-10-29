@@ -1093,6 +1093,7 @@ domoticz/scripts/lua_parsers/example.lua
 domoticz/scripts/lua_parsers/example_json.lua
 domoticz/scripts/lua_parsers/example_owm.lua
 domoticz/scripts/lua_parsers/example_xml.lua
+domoticz/scripts/lua_parsers/readme.txt
 domoticz/scripts/python/domoticz.py
 domoticz/scripts/python/googlepubsub.py
 domoticz/scripts/python/reloader.py
