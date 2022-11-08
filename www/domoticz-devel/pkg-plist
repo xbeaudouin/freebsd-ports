@@ -1128,6 +1128,7 @@ domoticz/scripts/templates/global_data.dzVents
 domoticz/scripts/update_domoticz
 domoticz/server_cert.pem
 domoticz/www/app/AboutController.js
+domoticz/www/app/ApplicationsController.js
 domoticz/www/app/CamController.js
 domoticz/www/app/CustomIconsController.js
 domoticz/www/app/DPFibaroController.js
@@ -1941,6 +1942,7 @@ domoticz/www/switch_icons.txt
 domoticz/www/templates/custom.example
 domoticz/www/templates/readme.txt
 domoticz/www/views/about.html
+domoticz/www/views/applications.html
 domoticz/www/views/cam.html
 domoticz/www/views/customicons.html
 domoticz/www/views/dashboard.html
