@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# PROVIDE: owm-cache
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+# Add the following lines to /etc/rc.conf to enable socat:
+# owmcache_enable="YES"
+# owmcache_daemonuser="nobody"
+
+. /etc/rc.subr
+
+name="owmcache"
+rcvar=owmcache_enable
+
+load_rc_config $name
+
+: ${owmcache_enable="NO"}
+: ${owmcache_daemonuser:=nobody}
+
+pidfile=/var/run/owmcache.pid
+procname="%%PREFIX%%/bin/openweathermap-cache-proxy"
+command=/usr/sbin/daemon
+command_args=' -f -S -p ${pidfile} -u ${owmcache_daemonuser} ${procname}'
+
+run_rc_command "$1"

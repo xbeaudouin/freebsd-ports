@@ -1,0 +1,2 @@
+Simple golang http proxy service for openweathermap.org with caching.
+By default requests are cached for 1 hour and only JSON is expected.
