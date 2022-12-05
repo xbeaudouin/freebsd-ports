@@ -1,16 +1,15 @@
 PORTNAME=	domoticz
-PORTVERSION=	2022.1
-PORTREVISION=	3
+PORTVERSION=	2022.2
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Home Automation System
+WWW=		https://www.domoticz.com
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl libboost_system.so:devel/boost-libs \
-		libopenzwave.so:comms/openzwave-devel \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
 
@@ -41,7 +40,7 @@ CMAKE_OFF+=		GIT_SUBMODULE USE_STATIC_BOOST USE_OPENSSL_STATIC \
 
 .if ${PORT_OPTIONS:MPYTHON}
 CMAKE_ON+=	USE_PYTHON
-USES+=		python:3.8+
+USES+=		python:3.9+
 .else
 CMAKE_OFF+=	USE_PYTHON
 .endif

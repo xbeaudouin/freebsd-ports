@@ -1,8 +1,8 @@
---- CMakeLists.txt.orig	2020-04-09 22:17:24.381964000 +0200
-+++ CMakeLists.txt	2020-04-09 22:19:30.344384000 +0200
-@@ -464,19 +464,11 @@
-   ENDIF (HAVE_LINUX_SPI_H)
- ENDIF (INCLUDE_SPI)
+--- CMakeLists.txt.orig	2022-12-05 15:26:33.000000000 +0100
++++ CMakeLists.txt	2022-12-05 21:42:14.020781000 +0100
+@@ -489,19 +489,11 @@
+   ENDIF(HAVE_LINUX_SPI_H)
+ ENDIF(INCLUDE_SPI)
  
 -FIND_PROGRAM(GIT_EXECUTABLE git
 +FIND_PROGRAM(GIT_EXECUTABLE NOgitNO
@@ -21,26 +21,29 @@
  MESSAGE(STATUS "###########################")
  MESSAGE(STATUS "Compiling Revision #${ProjectRevision}")
  MESSAGE(STATUS "###########################")
-@@ -486,9 +478,6 @@
+@@ -511,10 +503,6 @@
  set (domoticz_VERSION_MINOR 1)
  set (domoticz_VERSION_PATCH ${ProjectRevision})
  
 -# explicitly say that the executable depends on the revisiontag
 -add_dependencies(domoticz revisiontag)
+-add_dependencies(domoticztester revisiontag)
 -
  TEST_BIG_ENDIAN(BIGENDIAN)
  IF(${BIGENDIAN})
       ADD_DEFINITIONS(-DIS_BIG_ENDIAN)
-@@ -792,7 +781,7 @@
+@@ -829,8 +817,8 @@
  
  SET(CPACK_SOURCE_PACKAGE_FILE_NAME "${domoticz}-dev")
  SET(CPACK_PACKAGING_INSTALL_PREFIX "/")
 -SET(CPACK_PACKAGE_DEFAULT_LOCATION "/opt/${CPACK_PACKAGE_NAME}")
+-SET(CPACK_PACKAGE_EXECUTABLES "domoticz;Home Automation System (Domotica).")
 +SET(CPACK_PACKAGE_DEFAULT_LOCATION "/usr/local/${CPACK_PACKAGE_NAME}")
- SET(CPACK_PACKAGE_EXECUTABLES "domoticz;Home Automation System (Domotica).")
++SET(CPACK_PACKAGE_EXECUTABLES "domoticz;Home Automation System (Domoticz).")
  
  #set(CPACK_DEB_COMPONENT_INSTALL TRUE)
-@@ -801,9 +790,12 @@
+ SET(CPACK_DEBIAN_ARCHITECTURE ${CMAKE_SYSTEM_PROCESSOR})
+@@ -838,9 +826,12 @@
  INCLUDE(CPack)
  
  IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
@@ -54,7 +57,7 @@
  install(TARGETS domoticz DESTINATION ${CMAKE_INSTALL_PREFIX})
  install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/www DESTINATION ${CMAKE_INSTALL_PREFIX})
  install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/License.txt DESTINATION ${CMAKE_INSTALL_PREFIX})
-@@ -813,4 +805,4 @@
+@@ -850,4 +841,4 @@
  install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/plugins DESTINATION ${CMAKE_INSTALL_PREFIX})
  install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/Config DESTINATION ${CMAKE_INSTALL_PREFIX})
  install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/dzVents DESTINATION ${CMAKE_INSTALL_PREFIX})
