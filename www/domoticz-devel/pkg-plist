@@ -1435,7 +1435,6 @@ domoticz/www/images/Door48_Off.png
 domoticz/www/images/Door48_On.png
 domoticz/www/images/Down48.png
 domoticz/www/images/Down48_2.png
-domoticz/www/images/Fan.png
 domoticz/www/images/Fan48_Off.png
 domoticz/www/images/Fan48_On.png
 domoticz/www/images/Fireplace.png
@@ -1597,6 +1596,7 @@ domoticz/www/images/evohome/TemporaryOverride.png
 domoticz/www/images/evohome/TemporaryOverrideInv.png
 domoticz/www/images/expand16.png
 domoticz/www/images/failed.png
+domoticz/www/images/fan.png
 domoticz/www/images/favorite.png
 domoticz/www/images/floorplans/example.jpg
 domoticz/www/images/forward_disabled.png
