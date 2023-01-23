@@ -1270,6 +1270,7 @@ domoticz/www/app/timers/DeviceTimersController.js
 domoticz/www/app/timers/SceneTimersController.js
 domoticz/www/app/timers/components.js
 domoticz/www/app/timers/factories.js
+domoticz/www/app/timers/planning.js
 domoticz/www/css/bootstrap-responsive.css
 domoticz/www/css/bootstrap.css
 domoticz/www/css/colpick.css
@@ -1309,6 +1310,7 @@ domoticz/www/css/jquery-ui-timepicker-addon.css
 domoticz/www/css/jquery.dataTables.min.css
 domoticz/www/css/jquery.uix.multiselect.css
 domoticz/www/css/legacy.css
+domoticz/www/css/planning.css
 domoticz/www/css/remote.css
 domoticz/www/css/style.css
 domoticz/www/css/ui-darkness/images/animated-overlay.gif
