@@ -1201,6 +1201,8 @@ domoticz/www/app/hardware/setup/EnOceanESP3.html
 domoticz/www/app/hardware/setup/EnOceanESP3.js
 domoticz/www/app/hardware/setup/Kodi.html
 domoticz/www/app/hardware/setup/Kodi.js
+domoticz/www/app/hardware/setup/MQTT-AD.html
+domoticz/www/app/hardware/setup/MQTT-AD.js
 domoticz/www/app/hardware/setup/MySensors.html
 domoticz/www/app/hardware/setup/MySensors.js
 domoticz/www/app/hardware/setup/PanasonicTV.html
