@@ -11,7 +11,6 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
-		libopenzwave.so:comms/openzwave-devel \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
 BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
@@ -33,12 +32,12 @@ PRECOMP_DESC=	Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	15178
-DOMOTICZ_TS=	1679760800
+DOMOTICZ_REL=	15182
+DOMOTICZ_TS=	1681140179
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	7480f91b2
+GH_TAGNAME=	34815c1a9
 
 USE_RC_SUBR=	domoticz
 
