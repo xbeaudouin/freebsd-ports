@@ -1,5 +1,5 @@
 PORTNAME=	domoticz
-PORTVERSION=	2022.2
+PORTVERSION=	2023.1
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -9,7 +9,8 @@ WWW=		https://www.domoticz.com
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
-LIB_DEPENDS=	libcurl.so:ftp/curl libboost_system.so:devel/boost-libs \
+LIB_DEPENDS=	libcurl.so:ftp/curl \
+		libboost_system.so:devel/boost-libs \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
 
@@ -34,7 +35,7 @@ USERS=		domoticz
 GROUPS=		domoticz
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/domoticz
-CMAKE_OFF+=		GIT_SUBMODULE USE_STATIC_BOOST USE_OPENSSL_STATIC \
+CMAKE_OFF+=		GIT_SUBMODULE USE_STATIC_BOOST USE_OPENSSL_STATIC USE_STATIC_BOOST \
 			USE_BUILTIN_SQLITE USE_BUILTIN_MINIZIP USE_BUILTIN_JSONCPP \
 			USE_BUILTIN_MQTT USE_STATIC_OPENZWAVE
 
