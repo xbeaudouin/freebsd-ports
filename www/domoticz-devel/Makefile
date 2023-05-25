@@ -1,11 +1,10 @@
-# $FreeBSD$
-
 PORTNAME=	domoticz-devel
 PORTVERSION=	2023.1.${DOMOTICZ_REL}
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Home Automation System (Development Branch)
+WWW=		https://www.domoticz.com
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
