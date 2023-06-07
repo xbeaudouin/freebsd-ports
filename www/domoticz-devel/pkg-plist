@@ -1148,6 +1148,7 @@ domoticz/www/app/LogController.js
 domoticz/www/app/LoginController.js
 domoticz/www/app/LogoutController.js
 domoticz/www/app/MobileNotificationsController.js
+domoticz/www/app/MyProfileController.js
 domoticz/www/app/NotificationController.js
 domoticz/www/app/OfflineController.js
 domoticz/www/app/RFXComFirmwareController.js
@@ -1874,6 +1875,7 @@ domoticz/www/js/ngload.min.js.gz
 domoticz/www/js/noty/noty.css
 domoticz/www/js/noty/noty.min.js.gz
 domoticz/www/js/noty/relax.css
+domoticz/www/js/qrcode.js
 domoticz/www/js/require.min.js.gz
 domoticz/www/js/respond.min.js.gz
 domoticz/www/js/sw-toolbox.js
@@ -1986,6 +1988,7 @@ domoticz/www/views/log.html
 domoticz/www/views/login.html
 domoticz/www/views/logout.html
 domoticz/www/views/mobile_notifications.html
+domoticz/www/views/myprofile.html
 domoticz/www/views/notification.html
 domoticz/www/views/notifications.html
 domoticz/www/views/offline.html
