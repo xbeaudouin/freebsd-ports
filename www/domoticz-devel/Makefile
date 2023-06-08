@@ -14,18 +14,19 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libmosquitto.so:net/mosquitto
 BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 
-USES=		cmake compiler:c++11-lang cpe minizip pkgconfig ssl sqlite lua:53
+USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
+		ssl
 
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
-OPTIONS_SUB=	YES
-OPTIONS_DEFINE=	SSSL SBOOST PYTHON TELLDUS PRECOMP
-OPTIONS_DEFAULT=	PYTHON PRECOMP
-SBOOST_DESC=	Use static Boost instead of dynamic linking
-SSSL_DESC=	Use static OpenSSL library instead of dynamic linking
-PYTHON_DESC=	Enable support for Python Plugins
-TELLDUS_DESC=	Enable support for Telldus
-PRECOMP_DESC=	Enable usage of precompiled header to speed build time
+OPTIONS_SUB=		YES
+OPTIONS_DEFINE=		PRECOMP PYTHON SBOOST SSSL TELLDUS
+OPTIONS_DEFAULT=	PRECOMP PYTHON
+SBOOST_DESC=		Use static Boost instead of dynamic linking
+SSSL_DESC=		Use static OpenSSL library instead of dynamic linking
+PYTHON_DESC=		Enable support for Python Plugins
+TELLDUS_DESC=		Enable support for Telldus
+PRECOMP_DESC=		Enable usage of precompiled header to speed build time
 
 .include <bsd.port.options.mk>
 
@@ -44,9 +45,9 @@ USERS=		domoticz
 GROUPS=		domoticz
 
 DCMAKE_INSTALL_PREFIX=	${PREFIX}/domoticz
-CMAKE_OFF+=	GIT_SUBMODULE USE_LUA_STATIC USE_STATIC_OPENZWAVE \
-		USE_BUILTIN_SQLITE USE_BUILTIN_MQTT USE_BUILTIN_JSONCPP \
-		USE_BUILTIN_MINIZIP
+CMAKE_OFF+=		GIT_SUBMODULE USE_BUILTIN_JSONCPP USE_BUILTIN_MINIZIP \
+			USE_BUILTIN_MQTT USE_BUILTIN_SQLITE USE_LUA_STATIC \
+			USE_STATIC_OPENZWAVE
 
 .if ${PORT_OPTIONS:MSSSL}
 CMAKE_ON+=	USE_OPENSSL_STATIC
