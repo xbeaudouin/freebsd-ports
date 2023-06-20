@@ -1964,6 +1964,7 @@ domoticz/www/styles/simple-blue/custom.js
 domoticz/www/styles/simple-gray/custom.css
 domoticz/www/styles/simple-gray/custom.js
 domoticz/www/switch_icons.txt
+domoticz/www/templates/angular.example
 domoticz/www/templates/custom.example
 domoticz/www/templates/readme.txt
 domoticz/www/views/about.html
