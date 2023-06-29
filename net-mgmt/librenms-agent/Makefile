@@ -17,7 +17,7 @@ GH_ACCOUNT=	librenms
 GH_PROJECT=	librenms-agent
 GH_TAGNAME=	9be1b41
 
-USES+=		python:3.7
+USES+=		python:3.9
 
 NO_BUILD=	yes
 
