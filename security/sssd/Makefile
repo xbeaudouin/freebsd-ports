@@ -53,8 +53,7 @@ LIB_DEPENDS=	libcares.so:dns/c-ares \
 		libunistring.so:devel/libunistring \
 		libuuid.so:misc/e2fsprogs-libuuid
 
-RUN_DEPENDS=	cyrus-sasl-gssapi>0:security/cyrus-sasl2-gssapi \
-		sudo>0:security/sudo
+RUN_DEPENDS=	cyrus-sasl-gssapi>0:security/cyrus-sasl2-gssapi
 
 .include <bsd.port.options.mk>
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300076
