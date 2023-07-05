@@ -34,19 +34,19 @@ LIB_DEPENDS=	libcares.so:dns/c-ares \
 		libjose.so:net/jose \
 		libkrb5.so:security/krb5 \
 		libldb.so:databases/ldb22 \
-		libndr-krb5pac.so:net/samba416 \
-		libndr-nbt.so:net/samba416 \
-		libndr-standard.so:net/samba416 \
-		libndr.so:net/samba416 \
+		libndr-krb5pac.so:net/samba413 \
+		libndr-nbt.so:net/samba413 \
+		libndr-standard.so:net/samba413 \
+		libndr.so:net/samba413 \
 		libnfs.so:net/libnfs \
 		libnss3.so:security/nss \
 		libp11-kit.so:security/p11-kit \
 		libpcre2-posix.so:devel/pcre2 \
 		libplds4.so:devel/nspr \
 		libpopt.so:devel/popt \
-		libsamba-util.so:net/samba416 \
+		libsamba-util.so:net/samba413 \
 		libsasl2.so:security/cyrus-sasl2 \
-		libsmbclient.so:net/samba416 \
+		libsmbclient.so:net/samba413 \
 		libtalloc.so:devel/talloc \
 		libtdb.so:databases/tdb \
 		libtevent.so:devel/tevent \
