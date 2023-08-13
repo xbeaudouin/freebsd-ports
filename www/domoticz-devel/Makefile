@@ -32,12 +32,12 @@ PRECOMP_DESC=		Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	15480
-DOMOTICZ_TS=	1691569935
+DOMOTICZ_REL=	15501
+DOMOTICZ_TS=	1691916532
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	bde6bb03e
+GH_TAGNAME=	0a30a74d4
 
 USE_RC_SUBR=	domoticz
 
@@ -86,6 +86,8 @@ post-patch:
 	@${REINPLACE_CMD} -e "s/\(#define APPVERSION\)\(.*\)/\1 ${DOMOTICZ_REL}/" ${WRKSRC}/appversion.h
 	@${REINPLACE_CMD} -e "s/\(#define APPHASH\)\(.*\)/\1 \"${GH_TAGNAME}\"/" ${WRKSRC}/appversion.h
 	@${REINPLACE_CMD} -e "s/\(#define APPDATE\)\(.*\)/\1 ${DOMOTICZ_TS}/" ${WRKSRC}/appversion.h
+	# Remove python includes that should not been there
+	@${RM} -rf ${WRKSRC}/hardware/plugins/Include
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz

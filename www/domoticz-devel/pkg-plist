@@ -543,6 +543,9 @@ domoticz/www/i18n/domoticz-tr.json.gz
 domoticz/www/i18n/domoticz-uk.json.gz
 domoticz/www/i18n/domoticz-zh.json.gz
 domoticz/www/i18n/domoticz-zh_TW.json.gz
+domoticz/www/images/AC.png
+domoticz/www/images/AC48_Off.png
+domoticz/www/images/AC48_On.png
 domoticz/www/images/Alarm.png
 domoticz/www/images/Alarm48_Off.png
 domoticz/www/images/Alarm48_On.png
