@@ -385,6 +385,8 @@ domoticz/www/app/log/LightLog.js
 domoticz/www/app/log/RefreshingChart.js
 domoticz/www/app/log/SceneLog.html
 domoticz/www/app/log/SceneLog.js
+domoticz/www/app/log/SetpointLog.html
+domoticz/www/app/log/SetpointLog.js
 domoticz/www/app/log/TemperatureLog.html
 domoticz/www/app/log/TemperatureLog.js
 domoticz/www/app/log/TextLog.html
