@@ -87,7 +87,7 @@ post-patch:
 	@${REINPLACE_CMD} -e "s/\(#define APPHASH\)\(.*\)/\1 \"${GH_TAGNAME}\"/" ${WRKSRC}/appversion.h
 	@${REINPLACE_CMD} -e "s/\(#define APPDATE\)\(.*\)/\1 ${DOMOTICZ_TS}/" ${WRKSRC}/appversion.h
 	# Remove python includes that should not been there
-	@${RM} -rf ${WRKSRC}/hardware/plugins/Include
+	#@${RM} -rf ${WRKSRC}/hardware/plugins/Include
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
