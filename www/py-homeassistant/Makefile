@@ -39,7 +39,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astral>=2.2:astro/py-astral@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-slugify>=8.0.1:textproc/py-python-slugify@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=5.4.1:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=2.31.0:www/py-requests@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}typing-extensions>=3.10.0:www/py-typing-extensions@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}typing-extensions>=3.10.0:devel/py-typing-extensions@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ulid-transform>=0.9.0:devel/py-ulid-transform@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}voluptuous>=0.13.1:devel/py-voluptuous@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}voluptuous-serialize>=2.5.0:devel/py-voluptuous-serialize@${PY_FLAVOR} \
