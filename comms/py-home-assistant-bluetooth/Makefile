@@ -1,8 +1,9 @@
-PORTNAME=	home_assistant_bluetooth
+PORTNAME=	home-assistant-bluetooth
 DISTVERSION=	1.10.4
 CATEGORIES=	comms python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	home_assistant_bluetooth-${PORTVERSION}
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Home Assistant Bluetooth Models and Helpers
