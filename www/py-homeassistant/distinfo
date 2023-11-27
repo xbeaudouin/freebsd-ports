@@ -1,3 +1,3 @@
-TIMESTAMP = 1701073014
-SHA256 (homeassistant-2023.11.3.tar.gz) = 96518723a2d5a53a3d9b644cb5c0d2916db05ab6a37b63a4545c793fb973677d
-SIZE (homeassistant-2023.11.3.tar.gz) = 18319265
+TIMESTAMP = 1701093979
+SHA256 (homeassistant-2023.11.3-py3-none-any.whl) = bf0a1af9d7e673e53b0e752666b39aa26c515d57b8bddbed066c4a7980a15662
+SIZE (homeassistant-2023.11.3-py3-none-any.whl) = 32056415
