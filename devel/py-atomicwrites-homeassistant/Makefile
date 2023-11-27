@@ -1,0 +1,19 @@
+PORTNAME=	atomicwrites-homeassistant
+DISTVERSION=	1.4.1
+CATEGORIES=	devel python
+MASTER_SITES=	PYPI
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	kiwi@oav.net
+COMMENT=	Atomic file writes library fork
+WWW=		https://github.com/untitaker/python-atomicwrites
+
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+USES=		python
+USE_PYTHON=	autoplist distutils
+
+NO_ARCH=	yes
+
+.include <bsd.port.mk>
