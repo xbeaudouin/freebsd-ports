@@ -9,9 +9,9 @@ COMMENT=	Opensource Home Automation system.
 
 LICENSE=	APACHE20
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astral:astral/py-astral@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astral:astro/py-astral@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}attrs:devel/py-attrs@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}atomicwrites-homeassistant:devel/py-astomicwrite-homeassistant@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}atomicwrites-homeassistant:devel/py-atomicwrites-homeassistant@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}awesomeversion:devel/py-awesomeversion@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}bcrypt:security/py-bcrypt@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}certifi>=2021.5.30:security/py-certifi@${PY_FLAVOR} \
@@ -21,8 +21,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astral:astral/py-astral@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ifaddr:net/py-ifaddr@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}lru-dict:devel/py-lru-dict@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pyjwt=2.8.0:devel/py-pyjwt@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}cryptography:devel/py-cryptography@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyjwt=2.8.0:www/py-pyjwt@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}cryptography:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}openssl:security/py-openssl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}orjson:devel/py-orjson@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}packaging:devel/py-packaging@${PY_FLAVOR} \
