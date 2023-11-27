@@ -49,8 +49,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astral>=2.2:astro/py-astral@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}home-assistant-frontend>=20231030.2:www/py-home-assistant-frontend@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} 
 
-USES=		python:3.11
-USE_PYTHON=	distutils autoplist
+USES=		python:3.9+
+USE_PYTHON=	distutils autoplist allflavors
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 #USERS=		homeassistant
@@ -134,6 +134,5 @@ post-stage:
 		${SED} -e 's|%%PYTHON_SITELIBDIR%%|${PYTHONPREFIX_SITELIBDIR}|' \
 			-e 's|%%PYTHON_EXT_SUFFIX%%|${PYTHON_EXT_SUFFIX}|' \
 			> ${TMPPLIST}
-
 
 .include <bsd.port.mk>
