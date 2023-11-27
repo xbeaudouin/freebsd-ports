@@ -45,7 +45,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astral>=2.2:astro/py-astral@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}voluptuous-serialize>=2.5.0:devel/py-voluptuous-serialize@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yarl>=1.8.1:www/py-yarl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}aiohttp>=3.8.1:www/py-aiohttp@${PY_FLAVOR} \
-#		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-pysqlite3@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}typing-extensions>=4.8.0:devel/py-typing-extensions@${PY_FLAVOR}
 
 USES=		python:3.9+
 USE_PYTHON=	distutils autoplist
