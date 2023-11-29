@@ -1,6 +1,6 @@
---- asn1/asn1c/Makefile.am.orig	2023-11-09 13:01:57.787896000 +0100
-+++ asn1/asn1c/Makefile.am	2023-11-09 13:03:45.134821000 +0100
-@@ -70,7 +70,7 @@
+--- asn1/asn1c/Makefile.am.orig	2021-11-25 17:34:42 UTC
++++ asn1/asn1c/Makefile.am
+@@ -70,7 +70,7 @@ libasn1c_la_SOURCES =		\
  
  EXTRA_DIST = ipa.asn1
  

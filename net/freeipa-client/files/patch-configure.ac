@@ -1,8 +1,11 @@
---- configure.ac.orig	2023-08-21 16:29:00.040643147 +0200
-+++ configure.ac	2023-11-09 13:07:42.361796000 +0100
-@@ -25,9 +25,10 @@
+--- configure.ac.orig	2023-08-21 14:29:00 UTC
++++ configure.ac
+@@ -24,10 +24,13 @@ dnl enable features like htole16()
+ CFLAGS="$CFLAGS -D_DEFAULT_SOURCE=1"
  dnl Enable features like strndup()
  CFLAGS="$CFLAGS -D_POSIX_C_SOURCE=200809L"
++dnl Removing this failing hard because on implicit declaration of
++dnl alloca() used several place in the code.
  dnl fail hard when includes statements are missing
 -CFLAGS="$CFLAGS -Werror=implicit-function-declaration"
 +dnl CFLAGS="$CFLAGS -Werror=implicit-function-declaration"
@@ -12,7 +15,7 @@
  AC_DISABLE_STATIC
  LT_INIT
  
-@@ -211,14 +212,7 @@
+@@ -211,14 +214,7 @@ dnl --------------------------------------------------
  dnl - Check for libintl
  dnl ---------------------------------------------------------------------------
  SAVE_LIBS="$LIBS"
@@ -28,7 +31,7 @@
  LIBS="$SAVELIBS"
  AC_SUBST(LIBINTL_LIBS)
  
-@@ -249,32 +243,13 @@
+@@ -249,32 +245,13 @@ AC_ARG_WITH([runstatedir],
  AC_SUBST([runstatedir])
  
  dnl ---------------------------------------------------------------------------
@@ -65,7 +68,7 @@
  
  dnl ---------------------------------------------------------------------------
  dnl - Check if IPA certauth plugin can be build
-@@ -618,35 +593,11 @@
+@@ -618,35 +595,11 @@ AC_CONFIG_FILES([
      client/Makefile
      client/share/Makefile
      client/man/Makefile

@@ -1,5 +1,5 @@
---- client/ipa-getkeytab.c.orig	2023-08-21 16:29:00.040643147 +0200
-+++ client/ipa-getkeytab.c	2023-11-09 13:33:11.961875000 +0100
+--- client/ipa-getkeytab.c.orig	2023-08-21 14:29:00 UTC
++++ client/ipa-getkeytab.c
 @@ -34,6 +34,13 @@
  #include <time.h>
  #include <krb5.h>
