@@ -17,6 +17,9 @@ BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
 		ssl
 
+# Do not extract python Includes
+EXTRACT_AFTER_ARGS=	--exclude hardware/plugins/Include
+
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
 OPTIONS_SUB=		YES
@@ -32,12 +35,12 @@ PRECOMP_DESC=		Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	15690
-DOMOTICZ_TS=	1701531328
+DOMOTICZ_REL=	15692
+DOMOTICZ_TS=	1701602726
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	90c192847
+GH_TAGNAME=	7cb424d71
 
 USE_RC_SUBR=	domoticz
 
@@ -86,8 +89,6 @@ post-patch:
 	@${REINPLACE_CMD} -e "s/\(#define APPVERSION\)\(.*\)/\1 ${DOMOTICZ_REL}/" ${WRKSRC}/appversion.h
 	@${REINPLACE_CMD} -e "s/\(#define APPHASH\)\(.*\)/\1 \"${GH_TAGNAME}\"/" ${WRKSRC}/appversion.h
 	@${REINPLACE_CMD} -e "s/\(#define APPDATE\)\(.*\)/\1 ${DOMOTICZ_TS}/" ${WRKSRC}/appversion.h
-	# Remove python includes that should not been there
-	@${RM} -rf ${WRKSRC}/hardware/plugins/Include
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
