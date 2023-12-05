@@ -9,7 +9,7 @@ COMMENT=	FreeIPA Client tools
 WWW=		https://www.freeipa.org/
 
 LICENSE=	GPLv3+
-LICENSE_FILE_GPLv3+ =	${WRKSRC}/COPYING
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR}
 
@@ -28,17 +28,16 @@ USES=		autoreconf libtool gmake gettext python pkgconfig gssapi:mit \
 		ldap localbase:ldflags
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --disable-server \
+CONFIGURE_ARGS+=	--disable-server \
 			--with-ipaplatform=freebsd \
 			--disable-dependency-tracking \
 			--without-ipatests --without-server
 
-post-patch:
-	@${RM} -rf ${WRKSRC}/client/systemd
-	@${RM} -rf ${WRKSRC}/daemons/dnssec
-	@${RM} -rf ${WRKSRC}/daemons/ipa-otpd
-	@${RM} -rf ${WRKSRC}/daemons/ipa-slapi-plugins
-	@${RM} -rf ${WRKSRC}/init/systemd
-	@${RM} -rf ${WRKSRC}/init/tmpfilesd
+EXTRACT_AFTER_ARGS=	--exclude client/systemd \
+			--exclude daemons/dnssec \
+			--exclude daemons/ipa-otpd \
+			--exclude daemons/ipa-slapi-plugins \
+			--exclude init/systemd \
+			--exclude init/tmpfilesd
 
 .include <bsd.port.mk>
