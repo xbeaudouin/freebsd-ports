@@ -13,32 +13,31 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR}
 
-LIB_DEPENDS=	libpopt.so:devel/popt \
+LIB_DEPENDS=	libcmocka.so:sysutils/cmocka \
+		libcurl.so:ftp/curl \
+		libini_config.so:devel/ding-libs \
 		libjansson.so:devel/jansson \
 		libnspr4.so:devel/nspr \
 		libnss3.so:security/nss \
+		libpopt.so:devel/popt \
 		libpwquality.so:security/libpwquality \
-		libcmocka.so:sysutils/cmocka \
-		libini_config.so:devel/ding-libs \
-		libcurl.so:ftp/curl \
 		libsasl2.so:security/cyrus-sasl2 \
 		libxmlrpc.so:net/xmlrpc-c
 
-USES=		autoreconf libtool gmake gettext python pkgconfig gssapi:mit \
-		ldap localbase:ldflags
+USES=		autoreconf gettext gmake gssapi:mit ldap libtool \
+		localbase:ldflags pkgconfig python
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--disable-server \
-			--with-ipaplatform=freebsd \
-			--disable-dependency-tracking \
-			--without-ipatests --without-server
+CONFIGURE_ARGS=	--disable-dependency-tracking \
+		--disable-server \
+		--with-ipaplatform=freebsd \
+		--without-ipatests \
+		--without-server
 
 # Remove all systemd dependant things
-EXTRACT_AFTER_ARGS=	--exclude client/systemd \
-			--exclude daemons/dnssec \
-			--exclude daemons/ipa-otpd \
-			--exclude daemons/ipa-slapi-plugins \
-			--exclude init/systemd \
+EXTRACT_AFTER_ARGS=	--exclude client/systemd --exclude daemons/dnssec \
+			--exclude daemons/ipa-otpd --exclude \
+			daemons/ipa-slapi-plugins --exclude init/systemd \
 			--exclude init/tmpfilesd
 
 # Remove Python bytecode files
