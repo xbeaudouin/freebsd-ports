@@ -1,4 +1,3 @@
-/you/have/to/check/what/makeplist/gives/you
 bin/ipa
 etc/bash_completion.d/ipa
 etc/ipa/epn.conf
@@ -341,16 +340,6 @@ etc/ipa/epn/expire_msg.template
 %%PYTHON_SITELIBDIR%%/ipaplatform/rhel/services.py
 %%PYTHON_SITELIBDIR%%/ipaplatform/rhel/tasks.py
 %%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__init__.py
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/constants%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/constants%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/paths%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/paths%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/services%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/services%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/tasks%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/__pycache__/tasks%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/constants.py
 %%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/paths.py
 %%PYTHON_SITELIBDIR%%/ipaplatform/rhel_container/services.py
