@@ -33,11 +33,38 @@ CONFIGURE_ARGS+=	--disable-server \
 			--disable-dependency-tracking \
 			--without-ipatests --without-server
 
+# Remove all systemd dependant things
 EXTRACT_AFTER_ARGS=	--exclude client/systemd \
 			--exclude daemons/dnssec \
 			--exclude daemons/ipa-otpd \
 			--exclude daemons/ipa-slapi-plugins \
 			--exclude init/systemd \
 			--exclude init/tmpfilesd
+
+# Remove Python bytecode files
+post-install:
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/install/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/plugins/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/2_49/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/2_114/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/2_156/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/2_164/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipalib/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipalib/install/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/base/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/debian/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/fedora/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/fedora_container/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/freebsd/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/nixos/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/redhat/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/rhel/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/rhel_container/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/suse/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipapython/__pycache__
+	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipapython/install/__pycache__
 
 .include <bsd.port.mk>
