@@ -53,7 +53,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR
 		${PYTHON_PKGNAMEPREFIX}hass-nabucasa>=0.56.0:devel/py-hass-nabucasa@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pillow>=9.0:graphics/py-pillow@${PY_FLAVOR}
 
-USES=		python:3.10+
+USES=		python:3.9
 USE_PYTHON=	flavors
 USE_RC_SUBR=	home-assistant
 WRKSRC=		${WRKDIR}/${PORTNAME}
