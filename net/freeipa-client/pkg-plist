@@ -1,6 +1,6 @@
 bin/ipa
 etc/bash_completion.d/ipa
-@sample etc/ipa/epn.conf
+@sample etc/ipa/epn.conf.sample
 etc/ipa/epn/expire_msg.template
 %%PYTHON_SITELIBDIR%%/ipaclient-4.11.0-py%%PYTHON_VER%%.egg-info/PKG-INFO
 %%PYTHON_SITELIBDIR%%/ipaclient-4.11.0-py%%PYTHON_VER%%.egg-info/SOURCES.txt
