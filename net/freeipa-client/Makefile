@@ -68,5 +68,7 @@ post-install:
 	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/suse/__pycache__
 	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipapython/__pycache__
 	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipapython/install/__pycache__
+	# Make sample configuration file
+	@${MV} ${STAGEDIR}${PREFIX}/etc/ipa/epn.conf ${STAGEDIR}${PREFIX}/etc/ipa/epn.conf.sample
 
 .include <bsd.port.mk>
