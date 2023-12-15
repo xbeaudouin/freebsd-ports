@@ -25,7 +25,7 @@ load_rc_config $name
 : ${home_assistant_env:="HOME=\"${home_assistant_config_dir}\" VIRTUAL_ENV=\"${home_assistant_config_dir}/\" PATH=\"${home_assistant_config_dir}/bin/:${PATH}\""}
 
 
-pidfile="/var/run/${name}.pid"
+pidfile="/var/run/homeassistant/${name}.pid"
 procname="${home_assistant_config_dir}/bin/%%PYTHON_VERSION%%"
 command="/usr/sbin/daemon"
 command_args="-S -t ${name} -T ${name} -p \"${pidfile}\" ${procname} -m homeassistant --log-no-color --log-file \"${home_assistant_log_file}\" --log-rotate-days \"${home_assistant_log_days}\" --config \"${home_assistant_config_dir}\""

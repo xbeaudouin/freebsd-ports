@@ -132,8 +132,9 @@ do-install:
 	cd ${WRKDIR}/${DISTNAME}.dist-info && ${COPYTREE_SHARE} . ${STAGEDIR}/${PYTHON_SITELIBDIR}/${DISTNAME}.dist-info
 
 post-stage:
-	@${MKDIR} ${STAGEDIR}/var/db/homeassistant
+	@${MKDIR} ${STAGEDIR}/var/db/homeassistant ${STAGEDIR}/var/run/homeassistant
 	@${ECHO_CMD} "@dir(homeassistant,homeassistant,) /var/db/homeassistant" >> ${TMPPLIST}
+	@${ECHO_CMD} "@dir(homeassistant,homeassistant,) /var/run/homeassistant" >> ${TMPPLIST}
 	# Generate plist.
 	@${SETENV} ${CO_ENV} ${SH} ${SCRIPTSDIR}/check-stagedir.sh makeplist | \
 		${GREP} -v ^\/ | \
