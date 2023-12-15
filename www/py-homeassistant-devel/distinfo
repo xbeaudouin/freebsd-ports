@@ -1,3 +1,3 @@
-TIMESTAMP = 1702673232
-SHA256 (homeassistant-2023.8.4-py3-none-any.whl) = c7349ae76e2e99c0dbfc60584cedef29c68ac3d5c269a1f2e0183fa9db9eb647
-SIZE (homeassistant-2023.8.4-py3-none-any.whl) = 28831071
+TIMESTAMP = 1702674252
+SHA256 (homeassistant-2023.6.3-py3-none-any.whl) = ce443bdb0a7803e08fb1625df58bc454d3a8dc0c0d75e5884b7a8e83439e9d5d
+SIZE (homeassistant-2023.6.3-py3-none-any.whl) = 25464720

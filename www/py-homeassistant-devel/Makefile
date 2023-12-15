@@ -1,5 +1,5 @@
 PORTNAME=	homeassistant
-PORTVERSION=	2023.8.4
+PORTVERSION=	2023.6.3
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOPWHL
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -49,7 +49,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}cryptography>=38.0.1:security/py-cryptograp
 		${PYTHON_PKGNAMEPREFIX}yarl>=1.8.1:www/py-yarl@${PY_FLAVOR}
 # Extra deps: failed to install via pip or have no fixed version or optional.
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}home-assistant-frontend-devel>=20230802.1:www/py-home-assistant-frontend-devel@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}home-assistant-frontend-devel>=20230608.0:www/py-home-assistant-frontend-devel@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}hass-nabucasa>=0.56.0:devel/py-hass-nabucasa@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pillow>=9.0:graphics/py-pillow@${PY_FLAVOR}
 
