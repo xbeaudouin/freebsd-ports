@@ -21,7 +21,7 @@ WWW=		https://www.home-assistant.io/
 LICENSE=	APACHE20
 ICENSE_FILE=	${WRKDIR}/${DISTNAME}.dist-info/LICENSE.md
 
-USES=		python:3.9
+USES=		python:3.10
 USE_PYTHON=	flavors
 
 NO_ARCH=	yes
