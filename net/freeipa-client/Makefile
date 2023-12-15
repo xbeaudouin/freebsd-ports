@@ -34,6 +34,9 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--without-ipatests \
 		--without-server
 
+# Mark it broken on FreeBSD 12
+BROKEN_FreeBSD_12=	does not build: Package requirements (libcrypto) were not met
+
 # Remove all systemd dependant things
 EXTRACT_AFTER_ARGS=	--exclude client/systemd --exclude daemons/dnssec \
 			--exclude daemons/ipa-otpd --exclude \
