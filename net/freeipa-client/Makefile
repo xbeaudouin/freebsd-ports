@@ -34,7 +34,8 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--without-ipatests \
 		--without-server
 
-MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
+# Don't bytecode python files
+MAKE_ENV=	PYTHONDONTWRITEBYTECODE=1
 
 # Mark it broken on FreeBSD 12
 BROKEN_FreeBSD_12=	does not build: Package requirements (libcrypto) were not met
@@ -45,32 +46,8 @@ EXTRACT_AFTER_ARGS=	--exclude client/systemd --exclude daemons/dnssec \
 			daemons/ipa-slapi-plugins --exclude init/systemd \
 			--exclude init/tmpfilesd
 
-# Remove Python bytecode files
+# Make sample configuration file
 post-install:
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/install/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/plugins/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/2_49/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/2_114/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/2_156/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/2_164/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaclient/remote_plugins/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipalib/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipalib/install/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/base/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/debian/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/fedora/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/fedora_container/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/freebsd/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/nixos/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/redhat/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/rhel/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/rhel_container/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipaplatform/suse/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipapython/__pycache__
-	#@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/ipapython/install/__pycache__
-	# Make sample configuration file
 	@${MV} ${STAGEDIR}${PREFIX}/etc/ipa/epn.conf ${STAGEDIR}${PREFIX}/etc/ipa/epn.conf.sample
 
 .include <bsd.port.mk>
