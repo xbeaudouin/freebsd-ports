@@ -283,6 +283,7 @@ domoticz/www/app/DPFibaroController.js
 domoticz/www/app/DPGooglePubSubController.js
 domoticz/www/app/DPHttpController.js
 domoticz/www/app/DPInfluxController.js
+domoticz/www/app/DPMQTTController.js
 domoticz/www/app/DashboardController.js
 domoticz/www/app/DeviceLightEdit.js
 domoticz/www/app/DummyController.js
@@ -299,7 +300,6 @@ domoticz/www/app/MobileNotificationsController.js
 domoticz/www/app/MyProfileController.js
 domoticz/www/app/NotificationController.js
 domoticz/www/app/OfflineController.js
-domoticz/www/app/RFXComFirmwareController.js
 domoticz/www/app/RestoreDatabaseController.js
 domoticz/www/app/ScenesController.js
 domoticz/www/app/SetupController.js
@@ -1128,6 +1128,7 @@ domoticz/www/views/dpfibaro.html
 domoticz/www/views/dpgooglepubsub.html
 domoticz/www/views/dphttp.html
 domoticz/www/views/dpinflux.html
+domoticz/www/views/dpmqtt.html
 domoticz/www/views/floorplanedit.html
 domoticz/www/views/floorplans.html
 domoticz/www/views/forecast.html
@@ -1145,7 +1146,6 @@ domoticz/www/views/notification.html
 domoticz/www/views/notifications.html
 domoticz/www/views/offline.html
 domoticz/www/views/restoredatabase.html
-domoticz/www/views/rfxcomfirmware.html
 domoticz/www/views/scenes.html
 domoticz/www/views/setup.html
 domoticz/www/views/temperature.html
