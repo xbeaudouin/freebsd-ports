@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
-BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
+#BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
 
 USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
 		ssl
