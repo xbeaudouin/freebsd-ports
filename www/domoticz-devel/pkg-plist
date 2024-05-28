@@ -283,6 +283,7 @@ domoticz/www/app/DPFibaroController.js
 domoticz/www/app/DPGooglePubSubController.js
 domoticz/www/app/DPHttpController.js
 domoticz/www/app/DPInfluxController.js
+domoticz/www/app/DPMQTTController.js
 domoticz/www/app/DashboardController.js
 domoticz/www/app/DeviceLightEdit.js
 domoticz/www/app/DummyController.js
@@ -299,7 +300,6 @@ domoticz/www/app/MobileNotificationsController.js
 domoticz/www/app/MyProfileController.js
 domoticz/www/app/NotificationController.js
 domoticz/www/app/OfflineController.js
-domoticz/www/app/RFXComFirmwareController.js
 domoticz/www/app/RestoreDatabaseController.js
 domoticz/www/app/ScenesController.js
 domoticz/www/app/SetupController.js
@@ -311,6 +311,7 @@ domoticz/www/app/UserVariablesController.js
 domoticz/www/app/UsersController.js
 domoticz/www/app/UtilityController.js
 domoticz/www/app/WeatherController.js
+domoticz/www/app/ZWaveTopologyController.js
 domoticz/www/app/app.constants.js
 domoticz/www/app/app.js
 domoticz/www/app/app.notifications.js
@@ -351,6 +352,8 @@ domoticz/www/app/hardware/setup/Kodi.html
 domoticz/www/app/hardware/setup/Kodi.js
 domoticz/www/app/hardware/setup/MQTT-AD.html
 domoticz/www/app/hardware/setup/MQTT-AD.js
+domoticz/www/app/hardware/setup/MQTT.html
+domoticz/www/app/hardware/setup/MQTT.js
 domoticz/www/app/hardware/setup/MySensors.html
 domoticz/www/app/hardware/setup/MySensors.js
 domoticz/www/app/hardware/setup/PanasonicTV.html
@@ -359,6 +362,8 @@ domoticz/www/app/hardware/setup/Pinger.html
 domoticz/www/app/hardware/setup/Pinger.js
 domoticz/www/app/hardware/setup/WakeOnLan.html
 domoticz/www/app/hardware/setup/WakeOnLan.js
+domoticz/www/app/hardware/setup/ZWave.html
+domoticz/www/app/hardware/setup/ZWave.js
 domoticz/www/app/livesocket.js
 domoticz/www/app/log/AngularBase.js
 domoticz/www/app/log/Base.js
@@ -382,6 +387,8 @@ domoticz/www/app/log/GraphLog.html
 domoticz/www/app/log/GraphLog.js
 domoticz/www/app/log/LightLog.html
 domoticz/www/app/log/LightLog.js
+domoticz/www/app/log/RainLog.html
+domoticz/www/app/log/RainLog.js
 domoticz/www/app/log/RefreshingChart.js
 domoticz/www/app/log/SceneLog.html
 domoticz/www/app/log/SceneLog.js
@@ -391,8 +398,10 @@ domoticz/www/app/log/TemperatureLog.html
 domoticz/www/app/log/TemperatureLog.js
 domoticz/www/app/log/TextLog.html
 domoticz/www/app/log/TextLog.js
+domoticz/www/app/log/chart-compare-temp.html
 domoticz/www/app/log/chart-compare.html
 domoticz/www/app/log/chart-day.html
+domoticz/www/app/log/chart-hour.html
 domoticz/www/app/log/chart-month.html
 domoticz/www/app/log/chart-week.html
 domoticz/www/app/log/chart-year.html
@@ -1054,6 +1063,8 @@ domoticz/www/media/swf/copy_csv_xls_pdf.swf
 domoticz/www/media/trashbody.png
 domoticz/www/media/trashlid.png
 domoticz/www/media/tree.png
+domoticz/www/ozwcp/cp.html
+domoticz/www/ozwcp/cp.js
 domoticz/www/robots.txt
 domoticz/www/secpanel/css/style.css
 domoticz/www/secpanel/font/Audiowide.eot
@@ -1126,6 +1137,7 @@ domoticz/www/views/dpfibaro.html
 domoticz/www/views/dpgooglepubsub.html
 domoticz/www/views/dphttp.html
 domoticz/www/views/dpinflux.html
+domoticz/www/views/dpmqtt.html
 domoticz/www/views/floorplanedit.html
 domoticz/www/views/floorplans.html
 domoticz/www/views/forecast.html
@@ -1143,7 +1155,6 @@ domoticz/www/views/notification.html
 domoticz/www/views/notifications.html
 domoticz/www/views/offline.html
 domoticz/www/views/restoredatabase.html
-domoticz/www/views/rfxcomfirmware.html
 domoticz/www/views/scenes.html
 domoticz/www/views/setup.html
 domoticz/www/views/temperature.html
