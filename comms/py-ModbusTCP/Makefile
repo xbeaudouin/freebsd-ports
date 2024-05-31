@@ -7,13 +7,14 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Simple Modbus/TCP client library for Python
+WWW=		https://github.com/sourceperl/pyModbusTCP
 
 LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16.0:math/py-numpy@${PY_FLAVOR}
 
 USES=		python
-USE_PYTHON=	autoplist distinfo
+USE_PYTHON=	autoplist distutils allflavors
 
 NO_ARCH=	yes
 
