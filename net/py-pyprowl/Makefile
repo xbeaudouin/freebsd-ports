@@ -11,7 +11,7 @@ WWW=		https://github.com/toddrob99/pyprowl
 LICENSE=	GPLv3
 
 USES=		python
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	distutils pep518
 
 NO_ARCH=	yes
 
