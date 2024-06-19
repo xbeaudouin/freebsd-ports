@@ -17,6 +17,8 @@ USE_PYTHON=	allflavors pep517 autoplist
 
 NO_ARCH=	yes
 
+BUILD_DEPENDS=	${PY_SETUPTOOLS}
+
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 PORTDOCS=	*
 
