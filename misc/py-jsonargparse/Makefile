@@ -1,5 +1,6 @@
 PORTNAME=	jsonargparse
-PORTVERSION=	4.30.0
+#PORTVERSION=	4.30.0
+PORTVERSION=	3.19.4
 CATEGORIES=	misc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +13,7 @@ LICENSE=	MIT
 
 USES=		python
 #USE_PYTHON=	allflavors distutils pep517 autoplist
-USE_PYTHON=	allflavors distutils autoplist
+USE_PYTHON=	allflavors pep517 autoplist
 
 NO_ARCH=	yes
 
