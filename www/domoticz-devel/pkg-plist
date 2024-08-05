@@ -264,6 +264,7 @@ domoticz/scripts/templates/Device.dzVents
 domoticz/scripts/templates/ExecuteShellCommand.dzVents
 domoticz/scripts/templates/Group.dzVents
 domoticz/scripts/templates/HTTPRequest.dzVents
+domoticz/scripts/templates/Logging.dzVents
 domoticz/scripts/templates/Scene.dzVents
 domoticz/scripts/templates/Security.Lua
 domoticz/scripts/templates/Security.dzVents

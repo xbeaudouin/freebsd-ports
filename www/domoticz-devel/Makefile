@@ -1,5 +1,5 @@
 PORTNAME=	domoticz-devel
-PORTVERSION=	2024.4.${DOMOTICZ_REL}
+PORTVERSION=	2024.7.${DOMOTICZ_REL}
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@oav.net
@@ -35,12 +35,12 @@ PRECOMP_DESC=		Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	16081
-DOMOTICZ_TS=	1718635270
+DOMOTICZ_REL=	16167
+DOMOTICZ_TS=	1722675891
 USE_GITHUB=	yes
 GH_ACCOUNT=	domoticz
 GH_PROJECT=	domoticz
-GH_TAGNAME=	9393b6d4c
+GH_TAGNAME=	1d2c51b72
 
 USE_RC_SUBR=	domoticz
 
