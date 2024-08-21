@@ -1,4 +1,6 @@
-PORTNAME=	domoticz-devel
+#PORTNAME=	domoticz-devel
+PORTNAME=	domoticz
+PKGNAMESUFFIX=	-devel
 PORTVERSION=	2024.7.${DOMOTICZ_REL}
 CATEGORIES=	www
 
@@ -10,6 +12,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
+		libboost_system.so:devel/boost-libs \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
 #BUILD_DEPENDS=	cereal>=1.2.2:devel/cereal
@@ -23,10 +26,8 @@ EXTRACT_AFTER_ARGS=	--exclude hardware/plugins/Include
 CONFLICTS_INSTALL?=	domoticz-[234]*
 
 OPTIONS_SUB=		YES
-OPTIONS_DEFINE=		PRECOMP PYTHON SBOOST SSSL TELLDUS
+OPTIONS_DEFINE=		PRECOMP PYTHON TELLDUS
 OPTIONS_DEFAULT=	PRECOMP PYTHON
-SBOOST_DESC=		Use static Boost instead of dynamic linking
-SSSL_DESC=		Use static OpenSSL library instead of dynamic linking
 PYTHON_DESC=		Enable support for Python Plugins
 TELLDUS_DESC=		Enable support for Telldus
 PRECOMP_DESC=		Enable usage of precompiled header to speed build time
@@ -35,39 +36,25 @@ PRECOMP_DESC=		Enable usage of precompiled header to speed build time
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	16178
-DOMOTICZ_TS=	1723038228
+DOMOTICZ_REL=	16186
+DOMOTICZ_TS=	1724156096
 USE_GITHUB=	yes
-GH_ACCOUNT=	domoticz
-GH_PROJECT=	domoticz
-GH_TAGNAME=	bc750e2df
+GH_TAGNAME=	a580a6b1f
 
 USE_RC_SUBR=	domoticz
 
 USERS=		domoticz
 GROUPS=		domoticz
 
-DCMAKE_INSTALL_PREFIX=	${PREFIX}/domoticz
-CMAKE_OFF+=		GIT_SUBMODULE USE_BUILTIN_JSONCPP USE_BUILTIN_MINIZIP \
-			USE_BUILTIN_MQTT USE_BUILTIN_SQLITE USE_LUA_STATIC
-
-.if ${PORT_OPTIONS:MSSSL}
-CMAKE_ON+=	USE_OPENSSL_STATIC
-.else
-CMAKE_OFF+=	USE_OPENSSL_STATIC
-.endif
-
-.if ${PORT_OPTIONS:MSBOOST}
-CMAKE_ON+=	USE_STATIC_BOOST
-BUILD_DEPENDS+=	boost-libs>=0:devel/boost-libs
-.else
-CMAKE_OFF+=	USE_STATIC_BOOST
-LIB_DEPENDS+=	libboost_system.so:devel/boost-libs
-.endif
+CMAKE_INSTALL_PREFIX=	${PREFIX}/domoticz
+CMAKE_OFF+=		GIT_SUBMODULE USE_STATIC_BOOST USE_OPENSSL_STATIC \
+			USE_STATIC_BOOST USE_BUILTIN_JSONCPP USE_BUILTIN_MINIZIP \
+			USE_BUILTIN_MQTT USE_STATIC_OPENZWAVE USE_BUILTIN_SQLITE \
+			USE_LUA_STATIC
 
 .if ${PORT_OPTIONS:MPYTHON}
 CMAKE_ON+=	USE_PYTHON
-USES+=		python:3.8+
+USES+=		python:3.9+
 .else
 CMAKE_OFF+=	USE_PYTHON
 .endif
