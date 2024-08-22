@@ -1,8 +1,7 @@
-#PORTNAME=	domoticz-devel
 PORTNAME=	domoticz
-PKGNAMESUFFIX=	-devel
 PORTVERSION=	2024.7.${DOMOTICZ_REL}
 CATEGORIES=	www
+PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Home Automation System (Development Branch)
@@ -20,17 +19,17 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
 		ssl
 
+CONFLICTS_INSTALL?=	domoticz-[234]*
+
 # Do not extract python Includes
 EXTRACT_AFTER_ARGS=	--exclude hardware/plugins/Include
 
-CONFLICTS_INSTALL?=	domoticz-[234]*
-
-OPTIONS_SUB=		YES
 OPTIONS_DEFINE=		PRECOMP PYTHON TELLDUS
 OPTIONS_DEFAULT=	PRECOMP PYTHON
+OPTIONS_SUB=		YES
+PRECOMP_DESC=		Enable usage of precompiled header to speed build time
 PYTHON_DESC=		Enable support for Python Plugins
 TELLDUS_DESC=		Enable support for Telldus
-PRECOMP_DESC=		Enable usage of precompiled header to speed build time
 
 .include <bsd.port.options.mk>
 
