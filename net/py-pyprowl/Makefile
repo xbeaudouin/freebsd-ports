@@ -12,7 +12,7 @@ WWW=		https://github.com/toddrob99/pyprowl
 LICENSE=	GPLv3
 
 USES=		python
-USE_PYTHON=	pep517 autoplist
+USE_PYTHON=	distutils pep517 autoplist
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
