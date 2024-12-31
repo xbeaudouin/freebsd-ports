@@ -15,19 +15,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libmosquitto.so:net/mosquitto
 
 USES=		cmake compiler:c++11-lang cpe minizip pkgconfig ssl lua:53 sqlite
-
-CONFLICTS_INSTALL=	domoticz-devel-[234]*
-
-EXTRACT_AFTER_ARGS=	--exclude ${PORTNAME}-${PORTVERSION}/hardware/plugins/Include \
-			--no-same-owner --no-same-permissions
-
 USE_GITHUB=	yes
-
 USE_RC_SUBR=	domoticz
-USERS=		domoticz
-GROUPS=		domoticz
-
-CMAKE_INSTALL_PREFIX=	${PREFIX}/domoticz
 
 CMAKE_OFF+=	GIT_SUBMODULE \
 		USE_STATIC_BOOST \
@@ -38,6 +27,16 @@ CMAKE_OFF+=	GIT_SUBMODULE \
 		USE_BUILTIN_JSONCPP \
 		USE_BUILTIN_MQTT \
 		USE_STATIC_OPENZWAVE
+
+CMAKE_INSTALL_PREFIX=	${PREFIX}/domoticz
+
+CONFLICTS_INSTALL=	domoticz-devel-[234]*
+
+EXTRACT_AFTER_ARGS=	--exclude ${PORTNAME}-${PORTVERSION}/hardware/plugins/Include \
+			--no-same-owner --no-same-permissions
+
+USERS=		domoticz
+GROUPS=		domoticz
 
 OPTIONS_DEFINE=		PRECOMP PYTHON
 OPTIONS_DEFAULT=	PRECOMP PYTHON
