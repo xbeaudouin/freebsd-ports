@@ -15,9 +15,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pymodbus>=2.0:comms/py-pymodbus@${PY_FLAVOR}
 USES=		python
 USE_PYTHON=	pep517 autoplist
 
+DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
+
 NO_ARCH=	yes
 
-DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 PORTDOCS=	*
 
 .include <bsd.port.mk>
