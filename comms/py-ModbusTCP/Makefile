@@ -1,11 +1,11 @@
 
 PORTNAME=	pyModbusTCP
-PORTVERSION=	0.2.1
+PORTVERSION=	0.3.0
 CATEGORIES=	comms python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	kiwi@oav.net
+MAINTAINER=	kiwi@FreeBSD.org
 COMMENT=	Simple Modbus/TCP client library for Python
 WWW=		https://github.com/sourceperl/pyModbusTCP
 
@@ -14,11 +14,13 @@ LICENSE=	MIT
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16.0:math/py-numpy@${PY_FLAVOR}
 
 USES=		python
-USE_PYTHON=	autoplist distutils allflavors
+#USE_PYTHON=	autoplist distutils allflavors
+USE_PYTHON=	pep517 autoplist
+
+DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
 NO_ARCH=	yes
 
-DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 PORTDOCS=	*
 
 .include <bsd.port.mk>
