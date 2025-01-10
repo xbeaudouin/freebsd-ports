@@ -4,7 +4,7 @@ CATEGORIES=	comms python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	kiwi@oav.net
+MAINTAINER=	kiwi@FreeBSD.org
 COMMENT=	Library for Eastron SDM single or three phase kWh meters
 WWW=		https://github.com/nmakel/sdm_modbus
 
