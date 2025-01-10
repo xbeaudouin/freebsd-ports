@@ -14,7 +14,6 @@ LICENSE=	MIT
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16.0:math/py-numpy@${PY_FLAVOR}
 
 USES=		python
-#USE_PYTHON=	autoplist distutils allflavors
 USE_PYTHON=	pep517 autoplist
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
