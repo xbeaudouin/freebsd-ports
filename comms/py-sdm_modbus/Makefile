@@ -1,18 +1,19 @@
 PORTNAME=	sdm_modbus
 PORTVERSION=	0.6.1
 CATEGORIES=	comms python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Library for Eastron SDM single or three phase kWh meters
+WWW=		https://github.com/nmakel/sdm_modbus
 
 LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pymodbus>=2.0:comms/py-pymodbus@${PY_FLAVOR}
 
 USES=		python
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	pep517 autoplist
 
 NO_ARCH=	yes
 
