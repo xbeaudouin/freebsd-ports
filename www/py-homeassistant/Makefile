@@ -1,8 +1,8 @@
 PORTNAME=	homeassistant
 PORTVERSION=	2024.1.3
 CATEGORIES=	www python
-#MASTER_SITES=
-#DISTFILES=	
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 EXTRACT_ONLY=	# nothing to extract
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -24,8 +24,10 @@ RUN_DEPENDS+=	cmake:devel/cmake-core \
 USES=		python:3.11
 USE_RC_SUBR=	home-assistant
 
-USERS=		homeassistant
-GROUPS=		homeassistant
+#USERS=		homeassistant
+USERS=		www
+#GROUPS=		homeassistant
+GROUPS=		www
 
 SUB_LIST=	PORTVERSION=${PORTVERSION} \
 		PYTHON_CMD=${PYTHON_CMD} \
