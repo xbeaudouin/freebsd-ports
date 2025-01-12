@@ -14,7 +14,8 @@ LICENSE=	APACHE20
 
 # Real run deps.
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg \
-		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pip>=0:devel/py-pip@${PY_FLAVOR}
 # VENV bootstrap deps.
 RUN_DEPENDS+=	cmake:devel/cmake-core \
 		ninja:devel/ninja \
