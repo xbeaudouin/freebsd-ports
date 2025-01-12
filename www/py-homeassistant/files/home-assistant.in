@@ -69,7 +69,7 @@ home_assistant_start_precmd() {
 		mkdir -p "${home_assistant_config_dir}/lib/%%PYTHON_VERSION%%/lib-dynload/"
 		cp -af %%LOCALBASE%%/lib/%%PYTHON_VERSION%%/lib-dynload/*sqlite3* "${home_assistant_config_dir}/lib/%%PYTHON_VERSION%%/lib-dynload/"
 		# Install HA and some deps.
-		su -m "${home_assistant_user}" -c "env ${home_assistant_env} pip3 install numpy %%MSSQLCLIENT%% %%MYSQLCLIENT%% %%PYMYSQLCLIENT%% %%PGSQLCLIENT%% homeassistant==%%PORTVERSION%%"
+		su -m "${home_assistant_user}" -c "env ${home_assistant_env} pip install numpy %%MSSQLCLIENT%% %%MYSQLCLIENT%% %%PYMYSQLCLIENT%% %%PGSQLCLIENT%% homeassistant==%%PORTVERSION%%"
 		# Enable FreeBSD support.
 		sed -i '.orig' \
 			-e 's|("darwin", "linux")|("darwin", "linux", "freebsd")|g' \
