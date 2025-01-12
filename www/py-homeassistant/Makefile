@@ -1,10 +1,10 @@
 PORTNAME=	homeassistant
 PORTVERSION=	2024.1.3
 CATEGORIES=	www python
-MASTER_SITES=	# empty
-DISTFILES=	# empty
-EXTRACT_ONLY=	# nothing to extract
+MASTER_SITES=	# nothing to extract
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTFILES=	# nothing to extract
+EXTRACT_ONLY=	# nothing to extract
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Open-source home automation platform running on Python
@@ -24,33 +24,34 @@ RUN_DEPENDS+=	cmake:devel/cmake-core \
 USES=		python:3.11
 USE_RC_SUBR=	home-assistant
 
-#USERS=		homeassistant
-USERS=		www
-#GROUPS=		homeassistant
-GROUPS=		www
+NO_ARCH=	yes
+NO_BUILD=	yes
 
 SUB_LIST=	PORTVERSION=${PORTVERSION} \
 		PYTHON_CMD=${PYTHON_CMD} \
 		PYTHON_VERSION=${PYTHON_VERSION}
 
-NO_ARCH=	yes
-NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
+
+#USERS=		homeassistant
+USERS=		www
+#GROUPS=		homeassistant
+GROUPS=		www
 
 OPTIONS_GROUP=	DB
 OPTIONS_GROUP_DB=	MSSQL MYSQL PYMYSQL PGSQL
+
+MYSQL_DESC=	MySQL/MariaDB support
+PYMYSQL_DESC=	MySQL/MariaDB support via pymysql
 
 MSSQL_SUB_LIST=		MSSQLCLIENT=pymssql
 MSSQL_SUB_LIST_OFF=	MSSQLCLIENT=""
 MYSQL_SUB_LIST=		MYSQLCLIENT=mysqlclient
 MYSQL_SUB_LIST_OFF=	MYSQLCLIENT=""
-PYMYSQL_SUB_LIST=	PYMYSQLCLIENT=pymysql
-PYMYSQL_SUB_LIST_OFF=	PYMYSQLCLIENT=""
 PGSQL_SUB_LIST=		PGSQLCLIENT=psycopg2
 PGSQL_SUB_LIST_OFF=	PGSQLCLIENT=""
-
-MYSQL_DESC=	MySQL/MariaDB support
-PYMYSQL_DESC=	MySQL/MariaDB support via pymysql
+PYMYSQL_SUB_LIST=	PYMYSQLCLIENT=pymysql
+PYMYSQL_SUB_LIST_OFF=	PYMYSQLCLIENT=""
 
 do-install:
 	@${MKDIR} ${STAGEDIR}/var/db/homeassistant
