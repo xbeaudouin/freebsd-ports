@@ -23,7 +23,7 @@ load_rc_config $name
 : ${home_assistant_log_days:="7"}
 : ${home_assistant_chdir:="${home_assistant_config_dir}"}
 : ${home_assistant_jobs:=`getconf NPROCESSORS_ONLN | tr -cd '[:print:]'`}
-: ${home_assistant_env:="HOME=\"${home_assistant_config_dir}\" XDG_CACHE_HOME=\"${home_assistant_config_dir}/.cache\" VIRTUAL_ENV=\"${home_assistant_config_dir}/\" PATH=\"${home_assistant_config_dir}/bin/:${PATH}\" CPUCOUNT=${home_assistant_jobs}" MAKEFLAGS=\"-j${home_assistant_jobs}\"}
+: ${home_assistant_env:="HOME=\"${home_assistant_config_dir}\" XDG_CACHE_HOME=\"${home_assistant_config_dir}/.cache\" VIRTUAL_ENV=\"${home_assistant_config_dir}/\" PATH=\"${home_assistant_config_dir}/bin/:${PATH}:/usr/local/bin\" CPUCOUNT=${home_assistant_jobs}" MAKEFLAGS=\"-j${home_assistant_jobs}\"}
 
 
 pidfile="/var/run/${name}.pid"
