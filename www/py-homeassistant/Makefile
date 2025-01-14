@@ -1,7 +1,7 @@
 PORTNAME=	homeassistant
 PORTVERSION=	2024.1.3
 CATEGORIES=	www python
-PORTREVISION=	1
+PORTREVISION=	2
 MASTER_SITES=	# nothing to extract
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	# nothing to extract
@@ -16,13 +16,14 @@ LICENSE=	APACHE20
 # Real run deps.
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pip>=0:devel/py-pip@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}zlib-ng>=0.4:archivers/py-zlib-ng@${PY_FLAVOR} 
+		${PYTHON_PKGNAMEPREFIX}pip>=0:devel/py-pip@${PY_FLAVOR} 
+#		${PYTHON_PKGNAMEPREFIX}zlib-ng>=0.4:archivers/py-zlib-ng@${PY_FLAVOR} 
 # VENV bootstrap deps.
 RUN_DEPENDS+=	cmake:devel/cmake-core \
 		ninja:devel/ninja \
 		pkg-config:devel/pkgconf \
-		rustc:lang/rust
+		rustc:lang/rust \
+		git:devel/git
 
 USES=		python:3.11
 USE_RC_SUBR=	home-assistant
