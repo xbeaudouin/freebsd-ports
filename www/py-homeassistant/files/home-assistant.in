@@ -22,8 +22,8 @@ load_rc_config $name
 : ${home_assistant_log_file:="/var/log/homeassistant.log"}
 : ${home_assistant_log_days:="7"}
 : ${home_assistant_chdir:="${home_assistant_config_dir}"}
-: ${home_assistant_jobs:=`getconf NPROCESSORS_ONLN | tr -cd '[:print:]'`}
-: ${home_assistant_env:="HOME=\"${home_assistant_config_dir}\" XDG_CACHE_HOME=\"${home_assistant_config_dir}/.cache\" VIRTUAL_ENV=\"${home_assistant_config_dir}/\" PATH=\"${home_assistant_config_dir}/bin/:${PATH}:/usr/local/bin\" CPUCOUNT=${home_assistant_jobs}" MAKEFLAGS=\"-j${home_assistant_jobs}\"}
+: ${home_assistant_jobs:=`nproc | tr -cd '[:print:]'`}
+: ${home_assistant_env:="HOME=\"${home_assistant_config_dir}\" XDG_CACHE_HOME=\"${home_assistant_config_dir}/.cache\" VIRTUAL_ENV=\"${home_assistant_config_dir}/\" PATH=\"${home_assistant_config_dir}/bin/:${PATH}:%%LOCALBASE%%/bin\" CPUCOUNT=${home_assistant_jobs}" MAKEFLAGS=\"-j${home_assistant_jobs}\"}
 
 
 pidfile="/var/run/${name}.pid"
@@ -44,7 +44,7 @@ home_assistant_start_precmd() {
 	if [ -e "${home_assistant_config_dir}/pyver.txt" ]; then
 		__CUR_PY_VER=`cat "${home_assistant_config_dir}/pyver.txt" | tr -cd '[:print:]'`
 		if [ "${__CUR_PY_VER}" != "%%PYTHON_VERSION%%" ]; then
-			echo 'Python version change detected, rebuilding pyenv!'
+			info 'Python version change detected, rebuilding pyenv!'
 			rm -f "${home_assistant_config_dir}/pyvenv.cfg"
 			rm -rf	"${home_assistant_config_dir}/bin" \
 				"${home_assistant_config_dir}/cache" \
@@ -62,8 +62,8 @@ home_assistant_start_precmd() {
 	#export MAKEFLAGS="-j${home_assistant_jobs}" # CFLAGS=${CFLAGS}
 
 	if [ ! -e "${home_assistant_config_dir}/pyvenv.cfg" ]; then
-		echo 'Bootstaping venv.'
-		echo "%%PYTHON_VERSION%%" > "${home_assistant_config_dir}/pyver.txt"
+		info 'Bootstaping venv.'
+		info "%%PYTHON_VERSION%%" > "${home_assistant_config_dir}/pyver.txt"
 		su -m "${home_assistant_user}" -c "%%PYTHON_CMD%% -m venv \"${home_assistant_config_dir}\""
 		# _sqlite3 hack to avoid --system-site-packages.
 		mkdir -p "${home_assistant_config_dir}/lib/%%PYTHON_VERSION%%/lib-dynload/"
