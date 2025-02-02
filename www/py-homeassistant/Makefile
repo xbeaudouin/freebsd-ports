@@ -1,7 +1,7 @@
 PORTNAME=	homeassistant
 PORTVERSION=	2024.1.3
 CATEGORIES=	www python
-PORTREVISION=	3
+PORTREVISION=	4
 MASTER_SITES=	# nothing to extract
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	# nothing to extract
@@ -60,13 +60,13 @@ PYMYSQL_SUB_LIST_OFF=	PYMYSQLCLIENT=""
 do-install:
 	@${MKDIR} ${STAGEDIR}/var/db/homeassistant
 
-post-stage:
-	@${ECHO_CMD} "@dir(homeassistant,homeassistant,) /var/db/homeassistant" >> ${TMPPLIST}
-	# Generate plist.
-	@${SETENV} ${CO_ENV} ${SH} ${SCRIPTSDIR}/check-stagedir.sh makeplist | \
-		${GREP} -v ^\/ | \
-		${SED} -e 's|%%PYTHON_SITELIBDIR%%|${PYTHONPREFIX_SITELIBDIR}|' \
-			-e 's|%%PYTHON_EXT_SUFFIX%%|${PYTHON_EXT_SUFFIX}|' \
-			> ${TMPPLIST}
+#post-stage:
+#	#${ECHO_CMD} "@dir(homeassistant,homeassistant,) /var/db/homeassistant" >> ${TMPPLIST}
+#	# Generate plist.
+#	#${SETENV} ${CO_ENV} ${SH} ${SCRIPTSDIR}/check-stagedir.sh makeplist | \
+#		${GREP} -v ^\/ | \
+#		${SED} -e 's|%%PYTHON_SITELIBDIR%%|${PYTHONPREFIX_SITELIBDIR}|' \
+#			-e 's|%%PYTHON_EXT_SUFFIX%%|${PYTHON_EXT_SUFFIX}|' \
+#			> ${TMPPLIST}
 
 .include <bsd.port.mk>

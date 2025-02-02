@@ -1,0 +1,2 @@
+@dir /var/db/homeassistant
+/usr/local/etc/rc.d/homeassistant

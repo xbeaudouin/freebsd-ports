@@ -1,7 +1,6 @@
 [
 { type: install
   message: <<EOM
-
 Installation Type: Home Assistant Core.
 
 This port uses Virtual Environment and will download and install via pip
@@ -13,7 +12,9 @@ Probably some integrations can be used without bluetooth, patches and
 tests required.
 
 $ service home-assistant forcerestart
---- The Home Assistant can now be reached http://localhost:8123/
+By default, Home Assistant starts on port 8123 on localhost:
+
+    http://localhost:8123/
 EOM
 }
 ]
