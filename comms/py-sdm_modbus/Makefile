@@ -15,9 +15,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pymodbus>=2.0:comms/py-pymodbus@${PY_FLAVOR}
 USES=		python
 USE_PYTHON=	distutils autoplist
 
-# Test
-#DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
-
 NO_ARCH=	yes
 
 PORTDOCS=	*
