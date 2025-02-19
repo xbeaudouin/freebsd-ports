@@ -1,5 +1,6 @@
 PORTNAME=		sope
 PORTVERSION=		5.11.2
+PORTREVISION=		1
 CATEGORIES=		devel gnustep
 MASTER_SITES=		https://packages.sogo.nu/sources/
 DISTNAME=		SOPE-${PORTVERSION}
@@ -13,7 +14,7 @@ LICENSE=		LGPL20
 LIB_DEPENDS=		libmemcached.so:databases/libmemcached
 
 FLAVORS=		default mysql pgsql memcached ldap ldapmysql
-FLAVOR?=		${FLAVORS[1]}
+FLAVOR?=		${FLAVORS:[1]}
 ldap_PKGNAMESUFFIX=	-ldap
 ldapmysql_PKGNAMESUFFIX=	-ldapmysql
 memcached_PKGNAMESUFFIX=	-memcached
@@ -38,7 +39,6 @@ SUB_LIST+=		GNUSTEP_LOCAL_TOOLS=${GNUSTEP_LOCAL_TOOLS} \
 WRKSRC=			${WRKDIR}/SOPE
 
 OPTIONS_DEFINE=		LDAP MYSQL PGSQL MEMCACHED
-OPTIONS_DEFAULT=
 OPTIONS_SUB=		yes
 
 LDAP_DESC=		Build with LDAP support
