@@ -1,0 +1,14 @@
+CTV (Command-line Text Viewer) is a simple interactive text-based file
+browser and text viewer for Linux, written in C++. It provides a TUI
+(Text User Interface) with a split-screen interface that allows you to
+browse directories and view text files.
+
+Features:
+- Split-screen interface with file browser on the left and file viewer
+  on the right
+- Directory navigation using arrow keys
+- File listing with size information
+- Text file viewing with line numbers
+- File filtering (supports many of file extensions for text and source
+  code files)
+- Keyboard shortcuts for navigation
