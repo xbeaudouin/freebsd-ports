@@ -9,13 +9,11 @@ WWW=		https://github.com/q5sys/ctv
 LICENSE=        MIT
 LICENSE_FILE=   ${WRKSRC}/LICENSE
 
-LIB_DEPENDS=    libncurses.so:devel/ncurses
-
-USES=           cmake compiler:c++17-lang
-USE_GITHUB=    yes
-GH_ACCOUNT=    q5sys
-GH_PROJECT=    ctv
-GH_TAGNAME=    1.0.0
+USES=		ncurses cmake compiler:c++17-lang
+USE_GITHUB=	yes
+GH_ACCOUNT=	q5sys
+GH_PROJECT=	ctv
+GH_TAGNAME=	1.0.0
 
 PLIST_FILES=    bin/ctv
 
