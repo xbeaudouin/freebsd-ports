@@ -1,0 +1,33 @@
+PORTNAME=	jwt-cpp
+DISTVERSIONPREFIX=	v
+
+DISTVERSION=	0.7.1
+CATEGORIES=	devel
+
+MAINTAINER=	kiwi@FreeBSD.org
+COMMENT=	C++ library for jwt
+WWW=		https://thalhammer.github.io/jwt-cpp/
+
+LICENSE=	MIT
+
+#BUILD_DEPENDS=	nlohmann-json>=3.11:devel/nlohmann-json
+BUILD_DEPENDS=	nlohmann-json>=3.11:devel/nlohmann-json \
+		picojson>=1.3:devel/picojson
+#BUILD_DEPENDS=	picojson>=1.3:devel/picojson
+
+#USES=		cmake compiler:c++11-lang cpe minizip pkgconfig ssl lua:53 sqlite
+USES=		cmake pkgconfig
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	Thalhammer
+
+CMAKE_ON+=	JWT_ENABLE_COVERAGE \
+		JWT_ENABLE_FUZZING \
+		JWT_EXTERNAL_NLOHMANN_JSON
+
+CMAKE_OFF+=	JWT_BUILD_EXAMPLES \
+		JWT_BUILD_TESTS \
+		JWT_BUILD_DOCS \
+		JWT_EXTERNAL_PICOJSON
+
+.include <bsd.port.mk>
