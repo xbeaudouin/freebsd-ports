@@ -10,10 +10,7 @@ WWW=		https://thalhammer.github.io/jwt-cpp/
 
 LICENSE=	MIT
 
-#BUILD_DEPENDS=	nlohmann-json>=3.11:devel/nlohmann-json
-BUILD_DEPENDS=	nlohmann-json>=3.11:devel/nlohmann-json \
-		picojson>=1.3:devel/picojson
-#BUILD_DEPENDS=	picojson>=1.3:devel/picojson
+BUILD_DEPENDS=	nlohmann-json>=3.11:devel/nlohmann-json
 
 #USES=		cmake compiler:c++11-lang cpe minizip pkgconfig ssl lua:53 sqlite
 USES=		cmake pkgconfig
