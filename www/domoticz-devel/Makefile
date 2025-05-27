@@ -11,10 +11,12 @@ WWW=		https://www.domoticz.com
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
+BUILD_DEPENDS=	jwt-cpp>=0.7:devel/jwt-cpp
+
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libboost_system.so:devel/boost-libs \
 		libjsoncpp.so:devel/jsoncpp \
-		libmosquitto.so:net/mosquitto
+		libmosquitto.so:net/mosquitto 
 
 USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
 		ssl
