@@ -1,9 +1,10 @@
 PORTNAME=	domoticz
-PORTVERSION=	2024.7.${DOMOTICZ_REL}
+PORTVERSION=	2025.1.${DOMOTICZ_REL}
+#PORTREVISION=	0
 CATEGORIES=	www
 PKGNAMESUFFIX=	-devel
 
-MAINTAINER=	kiwi@oav.net
+MAINTAINER=	kiwi@FreeBSD.org
 COMMENT=	Home Automation System (Development Branch)
 WWW=		https://www.domoticz.com
 
@@ -19,7 +20,7 @@ USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
 		ssl
 
 USE_GITHUB=	yes
-GH_TAGNAME=	a580a6b1f
+GH_TAGNAME=	e3d5ebea0
 
 CONFLICTS_INSTALL=	domoticz-[234]*
 
@@ -28,8 +29,8 @@ EXTRACT_AFTER_ARGS=	--exclude ${GH_PROJECT_DEFAULT}-${GH_TAGNAME_EXTRACT}/hardwa
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	16186
-DOMOTICZ_TS=	1724156096
+DOMOTICZ_REL=	16712
+DOMOTICZ_TS=	1748326902
 
 USE_RC_SUBR=	domoticz
 USERS=		domoticz
