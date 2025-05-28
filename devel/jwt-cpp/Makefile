@@ -10,7 +10,8 @@ WWW=		https://thalhammer.github.io/jwt-cpp/
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	nlohmann-json>=3.11:devel/nlohmann-json
+BUILD_DEPENDS=	nlohmann-json>=3.11:devel/nlohmann-json \
+		jsoncpp>=1.9:devel/jsoncpp
 
 USES=		cmake pkgconfig
 
