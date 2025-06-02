@@ -3,30 +3,20 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.1
 PORTREVISION=	2
 CATEGORIES=	devel
+MASTER_SITES=	https://github.com/Thalhammer/jwt-cpp/releases/download/${DISTVERSIONFULL}/
 
 MAINTAINER=	kiwi@FreeBSD.org
-COMMENT=	C++ library for jwt
+COMMENT=	Header only library for creating and validating JSON web tokens in C++
 WWW=		https://thalhammer.github.io/jwt-cpp/
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	nlohmann-json>=3.11:devel/nlohmann-json \
-		jsoncpp>=1.9:devel/jsoncpp
+USES=		cmake
 
-USES=		cmake pkgconfig
+NO_WRKSUBDIR=	yes
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	Thalhammer
-
-CMAKE_ARGS+=	-DJWT_CMAKE_FILES_INSTALL_DIR=${PREFIX}/lib/cmake/jwt-cpp
-
-CMAKE_ON=	JWT_ENABLE_COVERAGE \
-		JWT_ENABLE_FUZZING \
-		JWT_EXTERNAL_NLOHMANN_JSON
-
-CMAKE_OFF=	JWT_BUILD_EXAMPLES \
-		JWT_BUILD_TESTS \
-		JWT_BUILD_DOCS \
-		JWT_EXTERNAL_PICOJSON
+CMAKE_OFF=	JWT_BUILD_EXAMPLES
+CMAKE_ARGS=	-DJWT_CMAKE_FILES_INSTALL_DIR:STRING="lib/cmake/${PORTNAME}"
 
 .include <bsd.port.mk>
