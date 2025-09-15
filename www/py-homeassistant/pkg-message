@@ -7,11 +7,10 @@ This port uses Virtual Environment and will download and install via pip
 all required python packets on first service run or on some actions in
 WebUI.
 
-Some integrations was removed due bluetooth support not ported.
-Probably some integrations can be used without bluetooth, patches and
-tests required.
+Some functionalities of HA are not available on FreeBSD at the moment
+such as Bluetooth support.
 
-$ service home-assistant forcerestart
+# service home-assistant forcerestart
 By default, Home Assistant starts on port 8123 on localhost:
 
     http://localhost:8123/

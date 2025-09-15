@@ -1,7 +1,6 @@
 PORTNAME=	homeassistant
 PORTVERSION=	2024.1.3
 CATEGORIES=	www python
-PORTREVISION=	4
 MASTER_SITES=	# nothing to extract
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	# nothing to extract
@@ -13,19 +12,19 @@ WWW=		https://www.home-assistant.io/
 
 LICENSE=	APACHE20
 
-# Real run deps.
+# Actual run dependencies of HA
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pip>=0:devel/py-pip@${PY_FLAVOR} 
-#		${PYTHON_PKGNAMEPREFIX}zlib-ng>=0.4:archivers/py-zlib-ng@${PY_FLAVOR} 
-# VENV bootstrap deps.
+		${PYTHON_PKGNAMEPREFIX}pip>=0:devel/py-pip@${PY_FLAVOR}
+# Run dependencies required by the dependencies installed during the
+# bootstrap step in a Python virtual environment (venv)
 RUN_DEPENDS+=	cmake:devel/cmake-core \
 		ninja:devel/ninja \
-		pkg-config:devel/pkgconf \
 		rustc:lang/rust \
 		git:devel/git
 
-USES=		python:3.11
+# This version of HA runs only on python 3.11
+USES=		python:3.11 pkgconfig:run
 USE_RC_SUBR=	home-assistant
 
 NO_ARCH=	yes
@@ -59,14 +58,5 @@ PYMYSQL_SUB_LIST_OFF=	PYMYSQLCLIENT=""
 
 do-install:
 	@${MKDIR} ${STAGEDIR}/var/db/homeassistant
-
-#post-stage:
-#	#${ECHO_CMD} "@dir(homeassistant,homeassistant,) /var/db/homeassistant" >> ${TMPPLIST}
-#	# Generate plist.
-#	#${SETENV} ${CO_ENV} ${SH} ${SCRIPTSDIR}/check-stagedir.sh makeplist | \
-#		${GREP} -v ^\/ | \
-#		${SED} -e 's|%%PYTHON_SITELIBDIR%%|${PYTHONPREFIX_SITELIBDIR}|' \
-#			-e 's|%%PYTHON_EXT_SUFFIX%%|${PYTHON_EXT_SUFFIX}|' \
-#			> ${TMPPLIST}
 
 .include <bsd.port.mk>
