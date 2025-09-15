@@ -12,7 +12,7 @@ WWW=		https://thalhammer.github.io/jwt-cpp/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${LOCALBASE}/include/picojson/picojson.h:devel/picojson
+BUILD_DEPENDS=	${LOCALBASE}/include/picojson.h:devel/picojson
 RUN_DEPENDS=	${BUILD_DEPNDS}
 
 USES=		cmake pkgconfig:both
