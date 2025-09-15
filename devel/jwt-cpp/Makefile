@@ -1,7 +1,7 @@
 PORTNAME=	jwt-cpp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/Thalhammer/jwt-cpp/releases/download/${DISTVERSIONFULL}/
 
