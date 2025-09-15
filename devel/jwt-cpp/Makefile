@@ -1,7 +1,7 @@
 PORTNAME=	jwt-cpp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/Thalhammer/jwt-cpp/releases/download/${DISTVERSIONFULL}/
 
@@ -13,7 +13,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${LOCALBASE}/include/picojson.h:devel/picojson
-RUN_DEPENDS=	${BUILD_DEPNDS}
+RUN_DEPENDS=	${BUILD_DEPENDS}
 
 USES=		cmake pkgconfig:both
 
