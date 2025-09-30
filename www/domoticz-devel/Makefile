@@ -1,6 +1,6 @@
 PORTNAME=	domoticz
-PORTVERSION=	2025.1.${DOMOTICZ_REL}
-#PORTREVISION=	0
+PORTVERSION=	2024.7.${DOMOTICZ_REL}
+PORTREVISION=	4
 CATEGORIES=	www
 PKGNAMESUFFIX=	-devel
 
@@ -11,18 +11,16 @@ WWW=		https://www.domoticz.com
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
-BUILD_DEPENDS=	jwt-cpp>=0.7:devel/jwt-cpp
-
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libboost_system.so:devel/boost-libs \
 		libjsoncpp.so:devel/jsoncpp \
-		libmosquitto.so:net/mosquitto 
+		libmosquitto.so:net/mosquitto
 
 USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
 		ssl
 
 USE_GITHUB=	yes
-GH_TAGNAME=	e3d5ebea0
+GH_TAGNAME=	a580a6b1f
 
 CONFLICTS_INSTALL=	domoticz-[234]*
 
@@ -31,8 +29,8 @@ EXTRACT_AFTER_ARGS=	--exclude ${GH_PROJECT_DEFAULT}-${GH_TAGNAME_EXTRACT}/hardwa
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	16712
-DOMOTICZ_TS=	1748326902
+DOMOTICZ_REL=	16186
+DOMOTICZ_TS=	1724156096
 
 USE_RC_SUBR=	domoticz
 USERS=		domoticz
@@ -46,8 +44,7 @@ CMAKE_OFF=	GIT_SUBMODULE \
 		USE_BUILTIN_MQTT \
 		USE_LUA_STATIC \
 		USE_STATIC_BOOST \
-		USE_STATIC_OPENZWAVE \
-		USE_BUILTIN_JWTCPP
+		USE_STATIC_OPENZWAVE
 
 OPTIONS_DEFINE=		PRECOMP PYTHON
 OPTIONS_DEFAULT=	PRECOMP PYTHON
