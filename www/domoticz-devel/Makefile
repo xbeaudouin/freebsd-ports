@@ -10,18 +10,30 @@ WWW=		https://www.domoticz.com
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
+BUILD_DEPENDS=	${LOCALBASE}/include/jwt-cpp/jwt.h:devel/jwt-cpp
+
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libboost_system.so:devel/boost-libs \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
-
-BUILD_DEPENDS=	${LOCALBASE}/include/jwt-cpp/jwt.h:devel/jwt-cpp
 
 USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
 		ssl
 
 USE_GITHUB=	yes
 GH_TAGNAME=	f560a4c3e
+USE_RC_SUBR=	domoticz
+
+CMAKE_OFF=	GIT_SUBMODULE \
+		USE_BUILTIN_JSONCPP \
+		USE_BUILTIN_MINIZIP \
+		USE_BUILTIN_MQTT \
+		USE_LUA_STATIC \
+		USE_STATIC_BOOST \
+		USE_STATIC_OPENZWAVE \
+		USE_BUILTIN_JWTCPP
+
+CMAKE_INSTALL_PREFIX=   ${PREFIX}/domoticz
 
 CONFLICTS_INSTALL=	domoticz-[234]*
 
@@ -33,20 +45,8 @@ EXTRACT_AFTER_ARGS=	--exclude ${GH_PROJECT_DEFAULT}-${GH_TAGNAME_EXTRACT}/hardwa
 DOMOTICZ_REL=	16796
 DOMOTICZ_TS=	1759127674
 
-USE_RC_SUBR=	domoticz
 USERS=		domoticz
 GROUPS=		domoticz
-
-CMAKE_INSTALL_PREFIX=   ${PREFIX}/domoticz
-
-CMAKE_OFF=	GIT_SUBMODULE \
-		USE_BUILTIN_JSONCPP \
-		USE_BUILTIN_MINIZIP \
-		USE_BUILTIN_MQTT \
-		USE_LUA_STATIC \
-		USE_STATIC_BOOST \
-		USE_STATIC_OPENZWAVE \
-		USE_BUILTIN_JWTCPP
 
 OPTIONS_DEFINE=		PRECOMP PYTHON
 OPTIONS_DEFAULT=	PRECOMP PYTHON
@@ -55,10 +55,10 @@ OPTIONS_SUB=		yes
 PRECOMP_DESC=		Enable usage of precompiled header to speed build time
 PYTHON_DESC=		Enable support for Python Plugins
 
+PRECOMP_CMAKE_BOOL=	USE_PRECOMPILED_HEADER
+
 PYTHON_USES=		python:3.10+
 PYTHON_CMAKE_BOOL=	USE_PYTHON
-
-PRECOMP_CMAKE_BOOL=	USE_PRECOMPILED_HEADER
 
 post-patch:
 	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
