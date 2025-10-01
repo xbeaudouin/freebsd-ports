@@ -1,6 +1,5 @@
 PORTNAME=	domoticz
-DISTVERSION=	2024.7
-PORTREVISION=	2
+DISTVERSION=	2025.1
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@FreeBSD.org
@@ -9,6 +8,8 @@ WWW=		https://www.domoticz.com
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
+
+BUILD_DEPENDS=	${LOCALBASE}/include/jwt-cpp/jwt.h:devel/jwt-cpp
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libboost_system.so:devel/boost-libs \
@@ -27,7 +28,8 @@ CMAKE_OFF+=	GIT_SUBMODULE \
 		USE_BUILTIN_MINIZIP \
 		USE_BUILTIN_JSONCPP \
 		USE_BUILTIN_MQTT \
-		USE_STATIC_OPENZWAVE
+		USE_STATIC_OPENZWAVE \
+		USE_BUILTIN_JWTCPP
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/domoticz
 
