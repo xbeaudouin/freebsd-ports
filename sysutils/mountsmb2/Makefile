@@ -7,10 +7,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SMB/CIFS shares mounting scripts to do it at login
 WWW=		http://www.granch.ru/~shelton
 
-RUN_DEPENDS=	nbtscan:net-mgmt/nbtscan \
-		sudo:security/sudo
+RUN_DEPENDS=	nbtscan:net-mgmt/nbtscan
 
-USES=		tar:bzip2
+USES=		tar:bzip2 sudo
 NO_BUILD=	yes
 
 SCRIPTS=	smb2nsmbrc mountsmb2
