@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/License.txt
 BUILD_DEPENDS=	${LOCALBASE}/include/jwt-cpp/jwt.h:devel/jwt-cpp
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
-		libboost_system.so:devel/boost-libs \
+		libboost_thread.so:devel/boost-libs \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
 
