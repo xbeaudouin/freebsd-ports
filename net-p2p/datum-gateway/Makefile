@@ -22,5 +22,8 @@ USES=		cmake pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	OCEAN-xyz
 GH_PROJECT=	datum_gateway
+USE_RC_SUBR=	${PORTNAME}
+
+SUB_FILES=	${PORTNAME}
 
 .include <bsd.port.mk>
