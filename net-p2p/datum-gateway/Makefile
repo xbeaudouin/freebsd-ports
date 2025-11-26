@@ -1,9 +1,8 @@
 PORTNAME=	datum_gateway
 DISTVERSIONPREFIX=	v
-DISTVERSIONSUFFIX=	beta
 DISTVERSION=	0.4.0
+DISTVERSIONSUFFIX=	beta
 CATEGORIES=	net-p2p
-
 
 MAINTAINER=	kiwi@FreeBSD.org
 COMMENT=	Gateway for true solo mining
@@ -19,9 +18,9 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libargp.so:devel/argp-standalone \
 		libepoll-shim.so:devel/libepoll-shim
 
+USES=		cmake pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	OCEAN-xyz
 GH_PROJECT=	datum_gateway
-USES=		cmake pkgconfig 
 
 .include <bsd.port.mk>
