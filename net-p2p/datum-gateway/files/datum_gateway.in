@@ -16,8 +16,8 @@
 #				Default: nogroup
 . /etc/rc.subr
 
-name="datum_gatewayeb2ldap"
-rcvar=web2ldap_enable
+name="datum_gateway"
+rcvar=datum_gateway_enable
 
 : ${datum_gateway_enable:="NO"}
 : ${datum_gateway_user:="nobody"}
@@ -27,7 +27,7 @@ rcvar=web2ldap_enable
 pidfile="/var/run/${name}.pid"
 command=/usr/sbin/daemon
 procname="daemon"
-command_args=" -c -f -P ${pidfile} %%PREFIX%%/bin/${name}"
+command_args=" -c -f -P ${pidfile} %%PREFIX%%/bin/${name} -c %%PREFIX%%/etc/datum_gateway_config.json"
 
 load_rc_config $name
 run_rc_command "$1"
