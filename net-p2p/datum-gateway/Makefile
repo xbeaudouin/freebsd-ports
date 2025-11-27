@@ -26,4 +26,8 @@ USE_RC_SUBR=	${PORTNAME}
 
 SUB_FILES=	${PORTNAME}
 
+post-install:
+	${CP} ${STAGEDIR}${PREFIX}/share/doc/DATUM/example_datum_gateway_config.json ${STAGEDIR}${PREFIX}/etc/datum_gateway_config.json.sample
+	${MKDIR} ${STAGEDIR}/var/run/datum_gateway
+
 .include <bsd.port.mk>

@@ -24,7 +24,7 @@ rcvar=datum_gateway_enable
 : ${datum_gateway_group:="nogroup"}
 
 # daemon
-pidfile="/var/run/${name}.pid"
+pidfile="/var/run/${name}/${name}.pid"
 command=/usr/sbin/daemon
 procname="daemon"
 command_args=" -c -f -P ${pidfile} %%PREFIX%%/bin/${name} -c %%PREFIX%%/etc/datum_gateway_config.json"
