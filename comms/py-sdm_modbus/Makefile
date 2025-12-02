@@ -1,5 +1,5 @@
 PORTNAME=	sdm_modbus
-DISTVERSION=	0.6.1
+DISTVERSION=	0.7.0
 PORTREVISION=	1
 CATEGORIES=	comms python
 MASTER_SITES=	PYPI
@@ -14,7 +14,7 @@ LICENSE=	MIT
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pymodbus>=2.0:comms/py-pymodbus@${PY_FLAVOR}
 
 USES=		python
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	pep517 autoplist
 
 NO_ARCH=	yes
 
