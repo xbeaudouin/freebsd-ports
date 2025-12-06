@@ -19,12 +19,15 @@ RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg \
 # Run dependencies required by the dependencies installed during the
 # bootstrap step in a Python virtual environment (venv)
 RUN_DEPENDS+=	cmake:devel/cmake-core \
+		gmake:devel/gmake \
 		ninja:devel/ninja \
 		rustc:lang/rust \
+		${PYTHON_PKGNAMEPREFIX}uv-build>0:devel/py-uv-build@${PY_FLAVOR}
 		git:devel/git
+LIB_DEPENDS+=	libturbojpeg.so:graphics/libjpeg-turbo
 
 # This version of HA runs only on python 3.13
-USES=		python:3.13 pkgconfig:run
+USES=		python:3.13+ pkgconfig:run
 USE_RC_SUBR=	home-assistant
 
 NO_ARCH=	yes
