@@ -22,7 +22,7 @@ RUN_DEPENDS+=	cmake:devel/cmake-core \
 		gmake:devel/gmake \
 		ninja:devel/ninja \
 		rustc:lang/rust \
-		${PYTHON_PKGNAMEPREFIX}uv-build>0:devel/py-uv-build@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}uv-build>0:devel/py-uv-build@${PY_FLAVOR} \
 		git:devel/git
 LIB_DEPENDS+=	libturbojpeg.so:graphics/libjpeg-turbo
 
