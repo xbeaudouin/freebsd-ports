@@ -1,5 +1,5 @@
 PORTNAME=	homeassistant
-PORTVERSION=	2024.1.3
+PORTVERSION=	2024.12.1
 CATEGORIES=	www python
 MASTER_SITES=	# nothing to extract
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,8 +23,8 @@ RUN_DEPENDS+=	cmake:devel/cmake-core \
 		rustc:lang/rust \
 		git:devel/git
 
-# This version of HA runs only on python 3.11
-USES=		python:3.11 pkgconfig:run
+# This version of HA runs only on python 3.13
+USES=		python:3.13 pkgconfig:run
 USE_RC_SUBR=	home-assistant
 
 NO_ARCH=	yes

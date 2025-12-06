@@ -57,12 +57,8 @@ home_assistant_start_precmd() {
 		fi
 	fi
 
-	#export PYTHONPATH="${PYTHONPATH}:/usr/local/lib/"
-	#export CFLAGS='-I/usr/local/include'
-	#export MAKEFLAGS="-j${home_assistant_jobs}" # CFLAGS=${CFLAGS}
-
 	if [ ! -e "${home_assistant_config_dir}/pyvenv.cfg" ]; then
-		info 'Bootstaping venv.'
+		info 'Bootstraping venv.'
 		info "%%PYTHON_VERSION%%" > "${home_assistant_config_dir}/pyver.txt"
 		su -m "${home_assistant_user}" -c "%%PYTHON_CMD%% -m venv \"${home_assistant_config_dir}\""
 		# _sqlite3 hack to avoid --system-site-packages.
