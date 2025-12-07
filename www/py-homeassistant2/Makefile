@@ -15,16 +15,14 @@ LICENSE=	APACHE20
 # Actual run dependencies of HA
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR}
-#		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
-#		${PYTHON_PKGNAMEPREFIX}pip>=0:devel/py-pip@${PY_FLAVOR}
 # Run dependencies required by the dependencies installed during the
 # bootstrap step in a Python virtual environment (venv)
 RUN_DEPENDS+=	cmake:devel/cmake-core \
 		gmake:devel/gmake \
 		ninja:devel/ninja \
 		rustc:lang/rust \
-		${PYTHON_PKGNAMEPREFIX}uv-build>0:devel/py-uv-build@${PY_FLAVOR} \
-		git:devel/git
+		ccache:devel/ccache \
+		${PYTHON_PKGNAMEPREFIX}uv-build>0:devel/py-uv-build@${PY_FLAVOR}
 LIB_DEPENDS+=	libturbojpeg.so:graphics/libjpeg-turbo
 
 # This version of HA runs only on python 3.13
