@@ -1,0 +1,19 @@
+[
+{ type: install
+  message: <<EOM
+Installation Type: Home Assistant Core.
+
+This port uses Virtual Environment and will download and install via pip
+all required python packets on first service run or on some actions in
+WebUI.
+
+Some functionalities of HA are not available on FreeBSD at the moment
+such as Bluetooth support.
+
+# service home-assistant forcerestart
+By default, Home Assistant starts on port 8123 on localhost:
+
+    http://localhost:8123/
+EOM
+}
+]
