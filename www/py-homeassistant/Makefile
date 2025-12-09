@@ -18,14 +18,13 @@ LIB_DEPENDS=	ibz-ng.so:archivers/zlib-ng
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg
 # VENV bootstrap deps.
 RUN_DEPENDS+=	cmake:devel/cmake-core \
-		gmake:devel/gmake \
 		ninja:devel/ninja \
 		rustc:lang/rust \
 		uv:devel/uv
 LIB_DEPENDS=	libturbojpeg.so:graphics/libjpeg-turbo \
 		libz-ng.so:archivers/zlib-ng
 
-USES=		python:3.13 pkgconfig:run
+USES=		gmake python:3.13 pkgconfig:run
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	home-assistant
