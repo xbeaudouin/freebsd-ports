@@ -10,10 +10,10 @@ LICENSE=	APACHE20
 
 # Packed into venv during build.
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}uv>=0:devel/py-uv@${PY_FLAVOR} \
 		ccache:devel/ccache
 #		${PYTHON_PKGNAMEPREFIX}uv>=0:devel/py-uv@${PY_FLAVOR} \
 
-LIB_DEPENDS=	ibz-ng.so:archivers/zlib-ng
 # Real run deps.
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg
 # VENV bootstrap deps.
