@@ -96,7 +96,7 @@ CARGO_CRATES=	\
 	smallvec-1.15.0 \
 	strsim-0.11.1 \
 	syn-2.0.101 \
-	sysinfo-0.34.3 \
+	sysinfo-0.34.2 \
 	termcolor-1.4.1 \
 	thiserror-2.0.12 \
 	thiserror-impl-2.0.12 \
