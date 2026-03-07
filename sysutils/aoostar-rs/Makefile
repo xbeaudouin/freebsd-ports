@@ -112,7 +112,7 @@ PLIST_FILES=	bin/asterctl \
 		"@sample ${ETCDIR}/aoostar/monitor.json.sample" \
 		share/doc/${PORTNAME}/README.md
 
-SUB_FILES=	aoostar-lcd.in
+SUB_FILES=	aoostar-lcd
 SUB_LIST=	ASTERCTL=${PREFIX}/bin/asterctl \
 		DEVICE=/dev/cuaU0
 
