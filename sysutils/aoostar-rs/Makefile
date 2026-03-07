@@ -277,9 +277,10 @@ CARGO_CRATES=	ab_glyph-0.2.31 \
 		zune-jpeg-0.4.20
 
 PLIST_FILES=	bin/asterctl \
-		bin/aster-sysinfo \
-		"@sample ${ETCDIR}/aoostar/monitor.json.sample" \
-		share/doc/${PORTNAME}/README.md
+		bin/aster-sysinfo
+		#bin/aster-sysinfo \
+		#"@sample ${ETCDIR}/aoostar/monitor.json.sample" \
+		#share/doc/${PORTNAME}/README.md
 
 SUB_FILES=	aoostar-lcd
 SUB_LIST=	ASTERCTL=${PREFIX}/bin/asterctl \
