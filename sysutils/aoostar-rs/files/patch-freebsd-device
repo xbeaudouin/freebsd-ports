@@ -1,0 +1,17 @@
+--- crates/asterctl/src/main.rs.orig
++++ crates/asterctl/src/main.rs
+@@ -1,7 +1,11 @@
+-/// Default USB UART device on Linux
+-#[cfg(target_os = "linux")]
++/// Default USB UART device (platform-specific)
++#[cfg(target_os = "freebsd")]
++const DEFAULT_DEVICE_HINT: &str = "/dev/cuaU0";
++
++#[cfg(target_os = "linux")]
+ const DEFAULT_DEVICE_HINT: &str = "/dev/ttyACM0";
+ 
+ #[cfg(target_os = "windows")]
+ const DEFAULT_DEVICE_HINT: &str = "COM3";
++
++#[cfg(not(any(target_os = "linux", target_os = "windows", target_os = "freebsd")))]
+ const DEFAULT_DEVICE_HINT: &str = "/dev/ttyACM0";
