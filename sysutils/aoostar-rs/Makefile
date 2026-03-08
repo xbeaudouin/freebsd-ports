@@ -1,10 +1,9 @@
 PORTNAME=	aoostar-rs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.0
-PORTREVISION=	0
 CATEGORIES=	sysutils
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	kiwi@FreeBSD.org
 COMMENT=	AOOSTAR WTR MAX / GEM12+ PRO LCD screen control tool
 WWW=		https://github.com/zehnm/aoostar-rs
 
@@ -21,9 +20,6 @@ GH_ACCOUNT=	zehnm
 # Build both binaries
 CARGO_INSTALL_PATH=	crates/asterctl \
 			crates/aster-sysinfo
-
-# FreeBSD: device is /dev/cuaU0 instead of Linux /dev/ttyACM0
-# The user can override at runtime with -d /dev/cuaU0
 
 # Vendor all crates offline (run `make cargo-crates` to regenerate this list)
 CARGO_CRATES=	ab_glyph-0.2.31 \
@@ -278,18 +274,11 @@ CARGO_CRATES=	ab_glyph-0.2.31 \
 
 PLIST_FILES=	bin/asterctl \
 		bin/aster-sysinfo
-		#bin/aster-sysinfo \
-		#"@sample ${ETCDIR}/aoostar/monitor.json.sample" \
-		#share/doc/${PORTNAME}/README.md
 
 SUB_FILES=	aoostar-lcd
 SUB_LIST=	ASTERCTL=${PREFIX}/bin/asterctl \
 		DEVICE=/dev/cuaU0
 
 USE_RC_SUBR=	aoostar-lcd
-
-#PORTDOCS=	README.md
-
-OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>
