@@ -14,5 +14,3 @@ kernel module).
 
 All protocol commands have been reverse engineered from the original
 AOOSTAR-X Windows software.  No official documentation is available.
-
-WWW: https://github.com/zehnm/aoostar-rs

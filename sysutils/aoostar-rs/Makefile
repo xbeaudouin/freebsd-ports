@@ -17,9 +17,7 @@ USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	zehnm
 
-# Build both binaries
-CARGO_INSTALL_PATH=	crates/asterctl \
-			crates/aster-sysinfo
+USE_RC_SUBR=	aoostar-lcd
 
 # Vendor all crates offline (run `make cargo-crates` to regenerate this list)
 CARGO_CRATES=	ab_glyph-0.2.31 \
@@ -272,13 +270,15 @@ CARGO_CRATES=	ab_glyph-0.2.31 \
 		zune-inflate-0.2.54 \
 		zune-jpeg-0.4.20
 
-PLIST_FILES=	bin/asterctl \
-		bin/aster-sysinfo
+# Build both binaries
+CARGO_INSTALL_PATH=	crates/asterctl \
+			crates/aster-sysinfo
 
 SUB_FILES=	aoostar-lcd
 SUB_LIST=	ASTERCTL=${PREFIX}/bin/asterctl \
 		DEVICE=/dev/cuaU0
 
-USE_RC_SUBR=	aoostar-lcd
+PLIST_FILES=	bin/asterctl \
+		bin/aster-sysinfo
 
 .include <bsd.port.mk>
