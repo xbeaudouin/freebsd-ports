@@ -1,7 +1,8 @@
---- config/puma.rb.orig
+--- config/puma.rb.orig	2026-05-15 09:46:22 UTC
 +++ config/puma.rb
-@@ -1,5 +1,13 @@
- # frozen_string_literal: true
+@@ -19,6 +19,16 @@ pidfile ENV.fetch('PIDFILE') { 'tmp/pids/server.pid' }
+ # Specifies the `pidfile` that Puma will use.
+ pidfile ENV.fetch('PIDFILE') { 'tmp/pids/server.pid' }
  
 +# FreeBSD port: override log paths to the system log directory.
 +# CHATWOOT_LOGDIR is exported by the rc.d script; fall back to the
@@ -13,5 +14,6 @@
 +  true  # append
 +)
 +
- # Puma configuration file
- workers ENV.fetch('WEB_CONCURRENCY', 2).to_i
+ # Specifies the number of `workers` to boot in clustered mode.
+ # Workers are forked web server processes. If using threads and workers together
+ # the concurrency of the application would be max `threads` * `workers`.
