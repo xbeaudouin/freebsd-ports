@@ -10,19 +10,18 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 # --- Build dependencies ---
-BUILD_DEPENDS=	rubygem-bundler>=2.4:devel/rubygem-bundler \
-		node>=20:www/node20 \
+BUILD_DEPENDS=	rubygem-bundler>=2.4:sysutils/rubygem-bundler \
 		yarn:www/yarn
 
 # --- Runtime dependencies ---
-RUN_DEPENDS=	rubygem-bundler>=2.4:devel/rubygem-bundler \
+RUN_DEPENDS=	rubygem-bundler>=2.4:sysutils/rubygem-bundler \
 		redis>=6.2:databases/redis
 
 # --- PostgreSQL dependency (required) ---
 USE_PGSQL=	yes
 PGSQL_VER?=	15
 
-USES=		ruby pgsql shebangfix
+USES=		nodejs:env ruby pgsql shebangfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	chatwoot
