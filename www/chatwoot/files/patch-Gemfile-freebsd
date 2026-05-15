@@ -1,0 +1,16 @@
+--- Gemfile.orig
++++ Gemfile
+@@ -1,6 +1,16 @@
+ source 'https://rubygems.org'
+ 
+-# Performance: Linux-only memory allocator — skip on FreeBSD
+-# gem 'jemalloc' is already conditional in the app but enforce it here
++# FreeBSD port: remove Linux-specific native extensions that do not
++# build cleanly outside of Linux. The functionality is either optional
++# or handled by an alternative gem already present in the lockfile.
++
++# mini_racer embeds V8 via libv8-node which ships Linux-only pre-built
++# binaries. On FreeBSD we rely on ExecJS finding Node.js in PATH instead.
++gem 'execjs'          # keep — uses system Node.js
++
+ # End FreeBSD-specific block

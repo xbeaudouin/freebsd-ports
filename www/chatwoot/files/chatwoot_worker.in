@@ -1,0 +1,69 @@
+#!/bin/sh
+#
+# PROVIDE: chatwoot_worker
+# REQUIRE: LOGIN postgresql redis chatwoot
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf to enable the Chatwoot worker:
+#
+#   chatwoot_worker_enable="YES"
+#
+# Optional configuration variables (with defaults shown):
+#
+#   chatwoot_worker_user="chatwoot"
+#   chatwoot_worker_dir="/usr/local/www/chatwoot"
+#   chatwoot_worker_env="production"
+#   chatwoot_worker_concurrency="5"
+#   chatwoot_worker_logdir="/var/log/chatwoot"
+#   chatwoot_worker_pidfile="/var/run/chatwoot/worker.pid"
+#
+
+. /etc/rc.subr
+
+name="chatwoot_worker"
+rcvar="chatwoot_worker_enable"
+
+load_rc_config $name
+
+: ${chatwoot_worker_enable:="NO"}
+: ${chatwoot_worker_user:="www"}
+: ${chatwoot_worker_dir:="%%CHATWOOT_DIR%%"}
+: ${chatwoot_worker_env:="production"}
+: ${chatwoot_worker_concurrency:="5"}
+: ${chatwoot_worker_logdir:="%%CHATWOOT_LOGDIR%%"}
+: ${chatwoot_worker_pidfile:="%%CHATWOOT_RUNDIR%%/worker.pid"}
+
+pidfile="${chatwoot_worker_pidfile}"
+required_files="${chatwoot_worker_dir}/.env"
+
+command="/usr/sbin/daemon"
+command_args="-P ${pidfile} -r -f \
+	/usr/local/bin/bundle exec sidekiq \
+	-C ${chatwoot_worker_dir}/config/sidekiq.yml \
+	-c ${chatwoot_worker_concurrency} \
+	-e ${chatwoot_worker_env} \
+	>> ${chatwoot_worker_logdir}/worker.log 2>&1"
+
+start_precmd="chatwoot_worker_precmd"
+stop_postcmd="chatwoot_worker_postcmd"
+
+chatwoot_worker_precmd()
+{
+	install -d -o ${chatwoot_worker_user} -m 750 ${chatwoot_worker_logdir}
+	install -d -o ${chatwoot_worker_user} -m 755 %%CHATWOOT_RUNDIR%%
+
+	export RAILS_ENV="${chatwoot_worker_env}"
+	export BUNDLE_PATH="${chatwoot_worker_dir}/vendor/bundle"
+	export HOME="${chatwoot_worker_dir}"
+
+	if [ -f "${chatwoot_worker_dir}/.env" ]; then
+		. "${chatwoot_worker_dir}/.env"
+	fi
+}
+
+chatwoot_worker_postcmd()
+{
+	rm -f ${pidfile}
+}
+
+run_rc_command "$1"

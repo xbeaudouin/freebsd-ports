@@ -1,0 +1,35 @@
+# pkg-plist for chatwoot
+#
+# NOTE: The full plist is generated automatically during the port build by
+# running "make makeplist" after a successful "make install". The entries
+# below cover the hand-crafted items (rc scripts, symlinks, directories).
+# The @sample, @dir, and @owner directives below ensure clean install/deinstall.
+#
+# Generated file entries (app tree under www/chatwoot/) are added by
+# "make makeplist" and should replace the %%APP_FILES%% marker below.
+
+# rc.d service scripts
+etc/rc.d/chatwoot
+etc/rc.d/chatwoot_worker
+
+# Convenience symlinks in bin/
+bin/chatwoot-rails
+bin/chatwoot-rake
+
+# Environment config sample (marked @sample so pkg does not remove .env on deinstall)
+@sample www/chatwoot/.env.sample
+
+# Application tree
+# (replace the lines below with the output of "make makeplist" or
+#  use "make install && make makeplist > pkg-plist" in the port directory)
+@dir(chatwoot,chatwoot,750) www/chatwoot
+@dir(chatwoot,chatwoot,750) www/chatwoot/public/packs
+@dir(chatwoot,chatwoot,750) www/chatwoot/public/assets
+@dir(chatwoot,chatwoot,750) www/chatwoot/vendor/bundle
+@dir(chatwoot,chatwoot,750) www/chatwoot/log
+
+# System directories created by this port
+@dir(chatwoot,chatwoot,750) /var/log/chatwoot
+@dir(chatwoot,chatwoot,755) /var/run/chatwoot
+@dir(chatwoot,chatwoot,750) /var/db/chatwoot
+@dir(chatwoot,chatwoot,750) /var/db/chatwoot/storage

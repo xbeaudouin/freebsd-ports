@@ -1,0 +1,52 @@
+===========================================================================
+
+Chatwoot has been installed into %%CHATWOOT_DIR%%.
+
+=== FIRST-TIME SETUP ===
+
+1. Copy and edit the environment file:
+
+   cp %%CHATWOOT_DIR%%/.env.sample %%CHATWOOT_DIR%%/.env
+   $EDITOR %%CHATWOOT_DIR%%/.env
+
+   At minimum, configure:
+     SECRET_KEY_BASE   — generate with: openssl rand -hex 64
+     FRONTEND_URL      — public URL of your Chatwoot instance
+     POSTGRES_HOST, POSTGRES_USERNAME, POSTGRES_PASSWORD, POSTGRES_DATABASE
+     REDIS_URL         — e.g. redis://localhost:6379
+
+2. Create the PostgreSQL database and user:
+
+   psql -U postgres -c "CREATE USER chatwoot WITH PASSWORD 'yourpassword';"
+   psql -U postgres -c "CREATE DATABASE chatwoot_production OWNER chatwoot;"
+
+3. Run database migrations (as the chatwoot user):
+
+   su -m chatwoot -c "cd %%CHATWOOT_DIR%% && \
+     RAILS_ENV=production bundle exec rails db:chatwoot_prepare"
+
+4. Enable and start the services:
+
+   sysrc chatwoot_enable="YES"
+   sysrc chatwoot_worker_enable="YES"
+   service chatwoot start
+   service chatwoot_worker start
+
+5. Access the web UI at http://your-host:3000 to create the first account.
+
+=== UPDATES ===
+
+After upgrading the package, run:
+
+  su -m chatwoot -c "cd %%CHATWOOT_DIR%% && \
+    RAILS_ENV=production bundle exec rails db:migrate"
+  service chatwoot restart
+  service chatwoot_worker restart
+
+=== LOG FILES ===
+
+  %%CHATWOOT_LOGDIR%%/web.log        — Puma web server
+  %%CHATWOOT_LOGDIR%%/worker.log     — Sidekiq background worker
+  %%CHATWOOT_LOGDIR%%/rails.log      — Rails application log
+
+===========================================================================

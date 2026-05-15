@@ -1,0 +1,69 @@
+#!/bin/sh
+#
+# PROVIDE: chatwoot
+# REQUIRE: LOGIN postgresql redis
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf to enable Chatwoot:
+#
+#   chatwoot_enable="YES"
+#
+# Optional configuration variables (with defaults shown):
+#
+#   chatwoot_user="chatwoot"
+#   chatwoot_dir="/usr/local/www/chatwoot"
+#   chatwoot_env="production"
+#   chatwoot_port="3000"
+#   chatwoot_logdir="/var/log/chatwoot"
+#   chatwoot_pidfile="/var/run/chatwoot/web.pid"
+#
+
+. /etc/rc.subr
+
+name="chatwoot"
+rcvar="chatwoot_enable"
+
+load_rc_config $name
+
+: ${chatwoot_enable:="NO"}
+: ${chatwoot_user:="www"}
+: ${chatwoot_dir:="%%CHATWOOT_DIR%%"}
+: ${chatwoot_env:="production"}
+: ${chatwoot_port:="3000"}
+: ${chatwoot_logdir:="%%CHATWOOT_LOGDIR%%"}
+: ${chatwoot_pidfile:="%%CHATWOOT_RUNDIR%%/web.pid"}
+
+pidfile="${chatwoot_pidfile}"
+required_files="${chatwoot_dir}/.env"
+
+command="/usr/sbin/daemon"
+command_args="-P ${pidfile} -r -f \
+	/usr/local/bin/bundle exec puma \
+	-C ${chatwoot_dir}/config/puma.rb \
+	-p ${chatwoot_port}"
+
+start_precmd="chatwoot_precmd"
+stop_postcmd="chatwoot_postcmd"
+
+chatwoot_precmd()
+{
+	# Ensure log and run directories exist and are owned by the service user
+	install -d -o ${chatwoot_user} -m 750 ${chatwoot_logdir}
+	install -d -o ${chatwoot_user} -m 755 %%CHATWOOT_RUNDIR%%
+
+	export RAILS_ENV="${chatwoot_env}"
+	export BUNDLE_PATH="${chatwoot_dir}/vendor/bundle"
+	export HOME="${chatwoot_dir}"
+
+	# Load the application .env file into the environment
+	if [ -f "${chatwoot_dir}/.env" ]; then
+		. "${chatwoot_dir}/.env"
+	fi
+}
+
+chatwoot_postcmd()
+{
+	rm -f ${pidfile}
+}
+
+run_rc_command "$1"

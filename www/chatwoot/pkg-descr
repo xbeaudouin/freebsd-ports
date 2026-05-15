@@ -1,0 +1,21 @@
+Chatwoot is an open-source, self-hosted customer support platform that
+centralizes conversations across multiple channels into a single inbox.
+
+It supports live chat via website widget, email, Facebook, Instagram,
+Twitter/X, WhatsApp (Meta Cloud API and Twilio), Telegram, Line, SMS
+(Twilio/Bandwidth), and a custom API channel.
+
+Key features:
+- Shared team inbox with assignment and auto-routing
+- AI-assisted responses (Captain agent)
+- Canned responses, labels, and conversation automation
+- Multi-lingual support (30+ languages)
+- Contact and CRM management with custom attributes
+- Rich webhook and REST API
+- Slack and Linear integrations
+- Self-hosted, MIT-licensed — you own your data
+
+Chatwoot requires PostgreSQL (>= 14) and Redis (>= 6.2) to operate.
+Both must be configured before running the post-install setup steps.
+
+WWW: https://www.chatwoot.com/
