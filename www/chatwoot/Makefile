@@ -37,7 +37,7 @@ GH_TAGNAME=	v${PORTVERSION}
 NO_ARCH=	yes
 
 USERS?=		www
-GROUPS=		www
+GROUPS?=	www
 
 USE_RC_SUBR=	chatwoot chatwoot_worker
 
@@ -81,6 +81,10 @@ pre-build:
 	@${REINPLACE_CMD} -e \
 		's/gem "execjs"/gem "execjs" # uses system Node.js/' \
 		${WRKSRC}/Gemfile || true
+	# Neutralise the husky 'prepare' postinstall script.
+	# Yarn 1.x does not honour HUSKY=0; the only reliable fix is to patch
+	# package.json before yarn runs.  Husky requires a .git directory which
+	# is never present in a port build tree (extracted tarball).
 	@${REINPLACE_CMD} -e \
 		's|"prepare": "husky install"|"prepare": "true"|' \
 		${WRKSRC}/package.json
@@ -99,30 +103,30 @@ do-build:
 		${BUNDLE_CMD} install --jobs ${MAKE_JOBS_NUMBER}
 
 	# Install JS dependencies.
-	# HUSKY=0 prevents husky from running 'husky install' as a postinstall
-	# script: husky requires a .git directory which does not exist in a port
-	# build tree (extracted tarball, not a git clone).
-	# --frozen-lockfile is omitted: GitHub release tarballs do not always
-	# include yarn.lock, so we let yarn resolve freely and rely on the
-	# Gemfile.lock / package.json version pins for reproducibility.
+	# husky is neutralised via the package.json patch in pre-build.
+	# --ignore-optional is NOT used: vite and related packages can be
+	# marked optional in transitive deps and would be silently excluded,
+	# causing ViteRuby::MissingExecutableError at assets:precompile time.
 	cd ${WRKSRC} && ${SETENV} HOME=${WRKDIR} NODE_ENV=${NODE_ENV} \
-		HUSKY=0 \
-		yarn install --production=false --ignore-optional
+		yarn install --production=false
 
 	# Pre-compile frontend assets.
-	# SECRET_KEY_BASE is consumed by Rails initializers; any non-empty value
-	# works at asset-compile time.  DATABASE_URL is set to prevent any
-	# accidental connection attempt during the compile phase.
-	#cd ${WRKSRC} && ${SETENV} ${BUNDLE_ENV} \
-	#	SECRET_KEY_BASE=freebsd_build_placeholder \
-	#	DATABASE_URL=nulldb://localhost/chatwoot \
-	#	${BUNDLE_CMD} exec rails assets:precompile
-
+	# SECRET_KEY_BASE_DUMMY=1 (Rails 7.1+) tells Rails not to enforce a real
+	# secret key base, avoiding the need to generate one at build time.
+	# SECRET_KEY_BASE is kept as a fallback for older Rails boot paths.
+	# DATABASE_URL uses a syntactically valid postgresql:// URI so ActiveRecord
+	# can parse the adapter without raising AdapterNotFound.  assets:precompile
+	# does not establish an actual DB connection in standard Rails setups; if
+	# Chatwoot has an eager-connect initializer a targeted patch will be needed.
+	# PATH must include node_modules/.bin so vite-ruby can locate the vite
+	# binary installed by yarn.  Without it, ViteRuby raises
+	# MissingExecutableError even though vite is present on disk.
 	cd ${WRKSRC} && ${SETENV} ${BUNDLE_ENV} \
-	    SECRET_KEY_BASE=freebsd_build_placeholder \
-	    SECRET_KEY_BASE_DUMMY=1 \
-	    DATABASE_URL=postgresql://localhost/chatwoot_build_dummy \
-	    ${BUNDLE_CMD} exec rails assets:precompile
+		PATH=${WRKSRC}/node_modules/.bin:${PREFIX}/bin:$$PATH \
+		SECRET_KEY_BASE=freebsd_build_placeholder \
+		SECRET_KEY_BASE_DUMMY=1 \
+		DATABASE_URL=postgresql://localhost/chatwoot_build_dummy \
+		${BUNDLE_CMD} exec rails assets:precompile
 
 do-install:
 	${MKDIR} ${STAGEDIR}${CHATWOOT_DIR}
