@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libjansson.so:devel/jansson
 
-USES=		autoreconf ssl
+USES=		autoreconf libtool ssl
 
 # Commit hash
 GH_TAGNAME=	968016e54004
