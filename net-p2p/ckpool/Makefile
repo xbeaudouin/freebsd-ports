@@ -1,9 +1,10 @@
 PORTNAME=	ckpool
-#DISTVERSION=	0.9.9
-#PORTREVISION=	0
+DISTVERSION=	g20250528
 CATEGORIES=	net-p2p
+MASTER_SITES=	https://bitbucket.org/ckolivas/ckpool/get/
+DISTNAME=	${GH_TAGNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	kiwi@FreeBSD.org
 COMMENT=	Solo Bitcoin mining pool server with merged mining support
 WWW=		https://bitbucket.org/ckolivas/ckpool
 
@@ -14,8 +15,9 @@ LIB_DEPENDS=	libjansson.so:devel/jansson
 
 USES=		autoreconf ssl
 
-DISTVERSION=	g20250528   # date du snapshot
-GH_TAGNAME=	968016e54004  # hash du commit
+# Commit hash
+GH_TAGNAME=	968016e54004
+USE_RC_SUBR=	ckpool
 
 MASTER_SITES=	https://bitbucket.org/ckolivas/ckpool/get/
 DISTNAME=	${GH_TAGNAME}
@@ -31,16 +33,8 @@ LDFLAGS+=       -L${LOCALBASE}/lib -lepoll-shim -lpthread
 USERS=		nobody
 GROUPS=		nobody
 
-USE_RC_SUBR=	ckpool
-
-OPTIONS_DEFINE=		DOCS EXAMPLES
-OPTIONS_DEFAULT=	DOCS
-
-DOCS_BUILD_DEPENDS=	asciidoc:textproc/asciidoc
-
 post-extract:
 	${MV} ${WRKDIR}/ckolivas-${PORTNAME}-${GH_TAGNAME} ${WRKSRC}
-
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/var/log/ckpool|${LOCALBASE}/var/log/ckpool|g' \
@@ -56,19 +50,18 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/notifier \
 		${STAGEDIR}${PREFIX}/bin/ckpool-notifier
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/ckpool
-	${INSTALL_DATA} ${WRKSRC}/doc/ckpool.conf \
+	${INSTALL_DATA} ${WRKSRC}/ckpool.conf \
+		${STAGEDIR}${PREFIX}/etc/ckpool/ckpool.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/ckpassthrough.conf \
+		${STAGEDIR}${PREFIX}/etc/ckpool/ckpassthrough.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/ckproxy.conf \
+		${STAGEDIR}${PREFIX}/etc/ckpool/ckproxy.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/ckpool.conf \
 		${STAGEDIR}${PREFIX}/etc/ckpool/ckpool.conf.sample
 	${MKDIR} ${STAGEDIR}${PREFIX}/var/log/ckpool
 	${MKDIR} ${STAGEDIR}${PREFIX}/var/run/ckpool
-
-do-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.md \
-		${STAGEDIR}${DOCSDIR}/README.md
-
-do-install-EXAMPLES-on:
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/ckpool.conf \
-		${STAGEDIR}${EXAMPLESDIR}/ckpool.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${STAGEDIR}${DOCSDIR}/README
 
 .include <bsd.port.mk>

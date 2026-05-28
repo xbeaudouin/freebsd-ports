@@ -1,0 +1,10 @@
+bin/ckpmsg
+bin/ckpool
+bin/ckpool-notifier
+%%ETCDIR%%/ckpassthrough.conf.sample
+%%ETCDIR%%/ckpool.conf.sample
+%%ETCDIR%%/ckproxy.conf.sample
+etc/rc.d/ckpool
+%%PORTDOCS%%%%DOCSDIR%%/README
+@dir var/log/ckpool
+@dir var/run/ckpool
