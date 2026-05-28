@@ -1,0 +1,71 @@
+#!/bin/sh
+#
+# PROVIDE: ckpool
+# REQUIRE: LOGIN bitcoind
+# BEFORE:  securelevel
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf to enable ckpool:
+#
+# ckpool_enable="YES"
+# ckpool_config="%%PREFIX%%/etc/ckpool/ckpool.conf"   # optional
+# ckpool_user="ckpool"                                 # optional
+# ckpool_group="ckpool"                                # optional
+# ckpool_logdir="%%PREFIX%%/var/log/ckpool"            # optional
+#
+
+. /etc/rc.subr
+
+name="ckpool"
+desc="Solo Bitcoin mining pool with merged mining support"
+rcvar="ckpool_enable"
+
+load_rc_config "${name}"
+
+: ${ckpool_enable:="NO"}
+: ${ckpool_user:="ckpool"}
+: ${ckpool_group:="ckpool"}
+: ${ckpool_config:="%%PREFIX%%/etc/ckpool/ckpool.conf"}
+: ${ckpool_logdir:="%%PREFIX%%/var/log/ckpool"}
+: ${ckpool_rundir:="%%PREFIX%%/var/run/ckpool"}
+: ${ckpool_pidfile:="${ckpool_rundir}/ckpool.pid"}
+: ${ckpool_flags:=""}
+
+pidfile="${ckpool_pidfile}"
+command="%%PREFIX%%/bin/ckpool"
+command_args="-c ${ckpool_config} -l ${ckpool_logdir} -B ${ckpool_flags}"
+
+start_precmd="${name}_prestart"
+stop_postcmd="${name}_postcmd"
+
+ckpool_prestart()
+{
+	# Ensure log directory exists and has correct ownership
+	if [ ! -d "${ckpool_logdir}" ]; then
+		install -d -o "${ckpool_user}" -g "${ckpool_group}" \
+			-m 0755 "${ckpool_logdir}"
+	fi
+
+	# Ensure run directory exists and has correct ownership
+	if [ ! -d "${ckpool_rundir}" ]; then
+		install -d -o "${ckpool_user}" -g "${ckpool_group}" \
+			-m 0750 "${ckpool_rundir}"
+	fi
+
+	# Check that config file exists
+	if [ ! -f "${ckpool_config}" ]; then
+		err 1 "Configuration file not found: ${ckpool_config}"
+	fi
+
+	# Check that bitcoind is reachable (basic sanity check)
+	if ! %%PREFIX%%/bin/bitcoin-cli getblockchaininfo > /dev/null 2>&1; then
+		warn "bitcoind may not be running or not yet synced"
+	fi
+}
+
+ckpool_postcmd()
+{
+	rm -f "${ckpool_pidfile}"
+}
+
+run_rc_command "$1"

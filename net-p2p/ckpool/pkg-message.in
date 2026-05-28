@@ -1,0 +1,48 @@
+[
+{ type: install
+  message: <<EOM
+==========================================================================
+ckpool has been installed.
+
+CONFIGURATION:
+  Copy the sample config and edit it:
+    cp %%PREFIX%%/etc/ckpool/ckpool.conf.sample \
+       %%PREFIX%%/etc/ckpool/ckpool.conf
+    edit %%PREFIX%%/etc/ckpool/ckpool.conf
+
+  Minimum required fields in ckpool.conf:
+    {
+      "btcd"       : [{"url":"localhost:8332","auth":"user","pass":"pass"}],
+      "btcaddress" : "YOUR_BTC_ADDRESS",
+      "serverurl"  : ["0.0.0.0:3333"],
+      "solo"       : true
+    }
+
+  For merged mining (BTC + NMC + SYS), add:
+    "aux" : [
+      {"url":"localhost:8336","auth":"nmcuser","pass":"nmcpass"},
+      {"url":"localhost:8370","auth":"sysuser","pass":"syspass"}
+    ],
+    "auxaddress" : ["YOUR_NMC_ADDRESS", "YOUR_SYS_ADDRESS"]
+
+ENABLING THE SERVICE:
+  Add to /etc/rc.conf:
+    ckpool_enable="YES"
+
+  Then start with:
+    service ckpool start
+
+NOTES:
+  - bitcoind (and namecoind/syscoind for merged mining) must be running
+    and fully synced before starting ckpool.
+  - Logs are written to: %%PREFIX%%/var/log/ckpool/
+  - The service runs as the 'ckpool' user (created automatically).
+  - Stratum port default: 3333 (configure firewall accordingly).
+
+For more information, see:
+  %%PREFIX%%/share/doc/ckpool/README.md
+  https://bitbucket.org/ckolivas/ckpool
+==========================================================================
+EOM
+}
+]
