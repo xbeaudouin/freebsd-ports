@@ -9,8 +9,8 @@
 #
 # ckpool_enable="YES"
 # ckpool_config="%%PREFIX%%/etc/ckpool/ckpool.conf"   # optional
-# ckpool_user="ckpool"                                 # optional
-# ckpool_group="ckpool"                                # optional
+# ckpool_user="nobody"                                 # optional
+# ckpool_group="nobody"                                # optional
 # ckpool_logdir="%%PREFIX%%/var/log/ckpool"            # optional
 #
 
@@ -23,8 +23,8 @@ rcvar="ckpool_enable"
 load_rc_config "${name}"
 
 : ${ckpool_enable:="NO"}
-: ${ckpool_user:="ckpool"}
-: ${ckpool_group:="ckpool"}
+: ${ckpool_user:="nobody"}
+: ${ckpool_group:="nobody"}
 : ${ckpool_config:="%%PREFIX%%/etc/ckpool/ckpool.conf"}
 : ${ckpool_logdir:="%%PREFIX%%/var/log/ckpool"}
 : ${ckpool_rundir:="%%PREFIX%%/var/run/ckpool"}

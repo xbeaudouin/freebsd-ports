@@ -26,10 +26,10 @@ CONFIGURE_ARGS=		--with-openssl=${OPENSSLBASE}
 
 LIB_DEPENDS+=   libepoll-shim.so:devel/libepoll-shim
 CFLAGS+=        -I${LOCALBASE}/include/libepoll-shim
-LDFLAGS+=       -L${LOCALBASE}/lib -lepoll-shim
+LDFLAGS+=       -L${LOCALBASE}/lib -lepoll-shim -lpthread
 
-USERS=		ckpool
-GROUPS=		ckpool
+USERS=		nobody
+GROUPS=		nobody
 
 USE_RC_SUBR=	ckpool
 
