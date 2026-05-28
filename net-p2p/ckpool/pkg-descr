@@ -10,5 +10,3 @@ server written in C. It supports:
 ckpool is designed to connect directly to a local bitcoind (and optionally
 namecoind, syscoind, etc.) via RPC, making it ideal for self-hosted
 solo mining setups with small miners such as Bitaxe/NerdAxe devices.
-
-WWW: https://bitbucket.org/ckolivas/ckpool
