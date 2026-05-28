@@ -1,6 +1,6 @@
 PORTNAME=	ckpool
-DISTVERSION=	0.9.9
-PORTREVISION=	0
+#DISTVERSION=	0.9.9
+#PORTREVISION=	0
 CATEGORIES=	net-p2p
 
 MAINTAINER=	ports@FreeBSD.org
@@ -12,16 +12,21 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libjansson.so:devel/jansson
 
-USES=		autoreconf:build ssl
+USES=		autoreconf ssl
 
-USE_BITBUCKET=	yes
-BB_ACCOUNT=	ckolivas
-BB_PROJECT=	ckpool
-BB_TAGNAME=	ckpool-${DISTVERSION}
+DISTVERSION=	g20250528   # date du snapshot
+GH_TAGNAME=	968016e54004  # hash du commit
+
+MASTER_SITES=	https://bitbucket.org/ckolivas/ckpool/get/
+DISTNAME=	${GH_TAGNAME}
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=		--with-openssl=${OPENSSLBASE}
+
+LIB_DEPENDS+=   libepoll-shim.so:devel/libepoll-shim
+CFLAGS+=        -I${LOCALBASE}/include/libepoll-shim
+LDFLAGS+=       -L${LOCALBASE}/lib -lepoll-shim
 
 USERS=		ckpool
 GROUPS=		ckpool
@@ -32,6 +37,10 @@ OPTIONS_DEFINE=		DOCS EXAMPLES
 OPTIONS_DEFAULT=	DOCS
 
 DOCS_BUILD_DEPENDS=	asciidoc:textproc/asciidoc
+
+post-extract:
+	${MV} ${WRKDIR}/ckolivas-${PORTNAME}-${GH_TAGNAME} ${WRKSRC}
+
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/var/log/ckpool|${LOCALBASE}/var/log/ckpool|g' \
