@@ -1,0 +1,16 @@
+Eloipool is a fast Python3 Bitcoin mining pool server written by Luke Dashjr.
+
+Features:
+- Stratum protocol support for miners
+- JSON-RPC getwork interface
+- Merged mining via the setworkaux/gotwork RPC interface (Namecoin, etc.)
+- Optional share logging to PostgreSQL or MySQL
+- Highly configurable via a Python config file
+
+Eloipool is configured by editing config.py (copied from the provided
+sample). The config file is Python source code, allowing flexible setup.
+
+NOTE: eloipool requires Python 3.6-3.11. It is NOT compatible with
+Python 3.12+ because it relies on asynchat, which was removed in 3.12.
+
+WWW: https://github.com/luke-jr/eloipool

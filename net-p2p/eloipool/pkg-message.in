@@ -1,0 +1,40 @@
+[
+{ type: install
+  message: <<EOM
+==========================================================================
+eloipool has been installed.
+
+FIRST-TIME SETUP:
+  1. Copy and edit the config file:
+       cp %%PREFIX%%/etc/eloipool/config.py.sample \
+          %%PREFIX%%/etc/eloipool/config.py
+       edit %%PREFIX%%/etc/eloipool/config.py
+
+  2. Key config options to set:
+       TrackerAddr   - Your Bitcoin payout address
+       UpstreamBitcoind - RPC connection to bitcoind
+       JSONRPCAddresses / StratumAddresses - Listening ports
+
+  3. For merged mining (e.g. Namecoin), configure:
+       AuxPow servers via the setworkaux RPC interface
+
+ENABLING THE SERVICE:
+  Add to /etc/rc.conf:
+    eloipool_enable="YES"
+
+  Then:
+    service eloipool start
+
+PYTHON VERSION NOTE:
+  eloipool requires Python 3.6-3.11 and is NOT compatible with
+  Python 3.12+ (asynchat was removed). Ensure the correct version
+  is active if multiple Python versions are installed.
+
+Files:
+  Config sample : %%PREFIX%%/etc/eloipool/config.py.sample
+  Application   : %%PREFIX%%/share/eloipool/
+  Wrapper script: %%PREFIX%%/bin/eloipool
+==========================================================================
+EOM
+}
+]
