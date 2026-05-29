@@ -1,21 +1,21 @@
 PORTNAME=	eloipool
 DISTVERSION=	g20230101
-PORTREVISION=	0
+#PORTREVISION=	0
 CATEGORIES=	net-p2p
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast Python3 Bitcoin pool server with merged mining support
 WWW=		https://github.com/luke-jr/eloipool
 
-LICENSE=	AGPL30
-LICENSE_FILE=	${WRKSRC}/COPYING
+#LICENSE=	AGPL30
+#LICENSE_FILE=	${WRKSRC}/COPYING
 
 # asynchat was removed in Python 3.12; constrain accordingly
 USES=		python:3.6-3.11,run shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	luke-jr
 GH_PROJECT=	eloipool
-GH_TAGNAME=	PUT_COMMIT_HASH_HERE	# pin to a specific commit: git log --oneline -1
+GH_TAGNAME=	d488480	# pin to a specific commit: git log --oneline -1
 
 NO_BUILD=	yes
 NO_ARCH=	yes

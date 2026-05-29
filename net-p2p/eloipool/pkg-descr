@@ -13,4 +13,3 @@ sample). The config file is Python source code, allowing flexible setup.
 NOTE: eloipool requires Python 3.6-3.11. It is NOT compatible with
 Python 3.12+ because it relies on asynchat, which was removed in 3.12.
 
-WWW: https://github.com/luke-jr/eloipool
