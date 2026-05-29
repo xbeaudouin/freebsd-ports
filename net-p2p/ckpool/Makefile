@@ -61,7 +61,5 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/var/log/ckpool
 	${MKDIR} ${STAGEDIR}${PREFIX}/var/run/ckpool
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README \
-		${STAGEDIR}${DOCSDIR}/README
 
 .include <bsd.port.mk>
