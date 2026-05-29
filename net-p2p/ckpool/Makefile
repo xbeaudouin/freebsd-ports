@@ -1,5 +1,6 @@
 PORTNAME=	ckpool
 DISTVERSION=	g20250528
+PORTREVISION=	1
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://bitbucket.org/ckolivas/ckpool/get/
 DISTNAME=	${GH_TAGNAME}
@@ -27,7 +28,7 @@ GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=		--with-openssl=${OPENSSLBASE}
 
 LIB_DEPENDS+=   libepoll-shim.so:devel/libepoll-shim
-CFLAGS+=        -I${LOCALBASE}/include/libepoll-shim
+CFLAGS+=        -I${LOCALBASE}/include/libepoll-shim -g
 LDFLAGS+=       -L${LOCALBASE}/lib -lepoll-shim -lpthread
 
 USERS=		nobody
