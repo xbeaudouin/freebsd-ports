@@ -4,7 +4,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	votre@email.com
+MAINTAINER=	kiwi@FreeBSD.org
 COMMENT=	Video anonymization by face detection
 WWW=		https://github.com/ORB-HD/deface
 
