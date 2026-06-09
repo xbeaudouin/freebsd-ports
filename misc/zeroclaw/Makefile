@@ -13,12 +13,8 @@ LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
 USES=		cargo
-CARGO_FEATURES=	channel-whatsapp-cloud whatsapp-web
 USE_GITHUB=	yes
 GH_ACCOUNT=	zeroclaw-labs
-
-PLIST_FILES=	bin/zeroclaw \
-		bin/zeroclaw-acp-bridge
 
 CARGO_CRATES=	accessory-2.1.0 \
 		addr2line-0.25.1 \
@@ -1195,5 +1191,10 @@ CARGO_CRATES=	accessory-2.1.0 \
 		zvariant_derive-5.11.0 \
 		zvariant_utils-3.3.1 \
 		wacore,wacore-appstate,wacore-binary,wacore-derive,wacore-libsignal,wacore-noise,waproto,whatsapp-rust,whatsapp-rust-tokio-transport,whatsapp-rust-ureq-http-client@git+https://github.com/oxidezap/whatsapp-rust?rev=9734fb2ec544e22b7055147aa3e73b6889e3ff0d\#9734fb2ec544e22b7055147aa3e73b6889e3ff0d
+
+CARGO_FEATURES=	channel-whatsapp-cloud whatsapp-web
+
+PLIST_FILES=	bin/zeroclaw \
+		bin/zeroclaw-acp-bridge
 
 .include <bsd.port.mk>
