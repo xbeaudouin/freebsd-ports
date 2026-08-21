@@ -375,7 +375,7 @@ _BUNDLED_LIBS+=	${"${PORT_OPTIONS:MBUNDLED_TALLOC}" == "BUNDLED_TALLOC":?:!}pyta
 	powerpc && ${ARCH} != powerpcspe
 .       if (${PORT_OPTIONS:MAD_DC} || ${PORT_OPTIONS:MDEVELOPER})
 # LMDB
-_LMDB_DEPENDS=	lmdb>=0.9.16:databases/lmdb
+_LMDB_DEPENDS=	lmdb0>=0.9.16:databases/lmdb0
 PLIST_FILES+=	${SAMBA_LDB_MODULESDIR}/mdb.so \
 		${SAMBA_LIBDIR}/private/libldb-mdb-int-private-samba.so
 .       endif
