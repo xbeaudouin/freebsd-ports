@@ -4,7 +4,7 @@ DISTVERSION=	1.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	freebsd@sysctl.cz
-COMMENT=	Free, open-source EDA platform for VHDL and Verilog. HDL editor.
+COMMENT=	Free, open-source EDA platform for VHDL and Verilog. HDL editor
 WWW=		https://github.com/openlab-x/OpenCircuitX
 
 LICENSE=	MIT
