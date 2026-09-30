@@ -11,8 +11,6 @@ WWW=		https://www.domoticz.com
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
-BROKEN=		Fails to build with boost 1.91.0
-
 BUILD_DEPENDS=	${LOCALBASE}/include/jwt-cpp/jwt.h:devel/jwt-cpp
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
@@ -24,7 +22,8 @@ USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
 		ssl
 
 USE_GITHUB=	yes
-GH_TAGNAME=	cb3b96b72
+GH_TAGNAME=	7d3ae2b0f
+GH_TUPLE=	domoticz:libwebem:dde28f2:extern/libwebem
 USE_RC_SUBR=	domoticz
 
 CMAKE_OFF=	GIT_SUBMODULE \
@@ -45,8 +44,8 @@ EXTRACT_AFTER_ARGS=	--exclude ${GH_PROJECT_DEFAULT}-${GH_TAGNAME_EXTRACT}/hardwa
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	16997
-DOMOTICZ_TS=	1765761535
+DOMOTICZ_REL=	18378
+DOMOTICZ_TS=	1790669368
 
 USERS=		domoticz
 GROUPS=		domoticz
