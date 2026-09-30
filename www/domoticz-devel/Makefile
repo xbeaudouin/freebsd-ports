@@ -23,7 +23,8 @@ USES=		cmake compiler:c++11-lang cpe lua:53 minizip pkgconfig sqlite \
 
 USE_GITHUB=	yes
 GH_TAGNAME=	7d3ae2b0f
-GH_TUPLE=	domoticz:libwebem:dde28f2:extern/libwebem
+GH_TUPLE=	domoticz:libwebem:dde28f2:libwebem
+GH_SUBDIR=	extern/libwebem:libwebem
 USE_RC_SUBR=	domoticz
 
 CMAKE_OFF=	GIT_SUBMODULE \
