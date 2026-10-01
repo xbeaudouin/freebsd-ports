@@ -1,6 +1,6 @@
 PORTNAME=	domoticz
-DISTVERSION=	2025.2
-PORTREVISION=	2
+DISTVERSION=	2026.3
+PORTREVISION=	0
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@FreeBSD.org
@@ -10,8 +10,6 @@ WWW=		https://www.domoticz.com
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
-BROKEN=		Fails to build with boost 1.91.0
-
 BUILD_DEPENDS=	${LOCALBASE}/include/jwt-cpp/jwt.h:devel/jwt-cpp
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
@@ -19,8 +17,10 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
 
-USES=		cmake compiler:c++11-lang cpe minizip pkgconfig ssl lua:53 sqlite
+USES=		cmake compiler:c++11-lang cpe minizip pkgconfig ssl lua:53 sqlite ssl
 USE_GITHUB=	yes
+GH_TUPLE=       domoticz:libwebem:dde28f2:libwebem
+GH_SUBDIR=      extern/libwebem:libwebem
 USE_RC_SUBR=	domoticz
 
 CMAKE_OFF+=	GIT_SUBMODULE \
