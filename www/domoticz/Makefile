@@ -19,8 +19,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 
 USES=		cmake compiler:c++11-lang cpe minizip pkgconfig ssl lua:53 sqlite ssl
 USE_GITHUB=	yes
-GH_TUPLE=       domoticz:libwebem:dde28f2:libwebem
 GH_SUBDIR=      extern/libwebem:libwebem
+GH_TUPLE=       domoticz:libwebem:dde28f2:libwebem
 USE_RC_SUBR=	domoticz
 
 CMAKE_OFF+=	GIT_SUBMODULE \
