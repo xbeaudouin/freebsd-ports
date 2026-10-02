@@ -56,6 +56,18 @@ PRECOMP_CMAKE_BOOL=	USE_PRECOMPILED_HEADER
 PYTHON_USES=		python
 PYTHON_CMAKE_BOOL=	USE_PYTHON
 
+DOMOTICZ_REL=	0
+DOMOTICZ_TAG=	78ec238
+DOMOTICZ_TS=	0
+
+post-patch:
+	@${REINPLACE_CMD} -e "s,\/opt,${PREFIX},g" ${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e "s,XXXPREFIXXXX,${PREFIX}/domoticz,g" ${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e "/^ADD_PRECOMPILED_HEADER/ d" ${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e "s/\(#define APPVERSION\)\(.*\)/\1 ${DOMOTICZ_REL}/" ${WRKSRC}/appversion.h
+	@${REINPLACE_CMD} -e "s/\(#define APPHASH\)\(.*\)/\1 \"${DOMOTICZ_TAG}\"/" ${WRKSRC}/appversion.h
+	@${REINPLACE_CMD} -e "s/\(#define APPDATE\)\(.*\)/\1 ${DOMOTICZ_TS}/" ${WRKSRC}/appversion.h
+
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz
 
