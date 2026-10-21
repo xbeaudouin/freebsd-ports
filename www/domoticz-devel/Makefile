@@ -43,7 +43,6 @@ CONFLICTS_INSTALL=	domoticz-[234]*
 EXTRACT_AFTER_ARGS=	--exclude ${GH_PROJECT_DEFAULT}-${GH_TAGNAME_EXTRACT}/hardware/plugins/Include \
 			--exclude ${PORTNAME}-${PORTVERSION}/scripts/build_server \
 			--exclude ${PORTNAME}-${PORTVERSION}/scripts/support \
-
 			--no-same-owner --no-same-permissions
 
 # This hack is to get rid of dependency of git while building
