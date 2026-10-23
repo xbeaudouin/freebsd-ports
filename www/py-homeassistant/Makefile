@@ -1,5 +1,5 @@
 PORTNAME=	homeassistant
-PORTVERSION=	2025.11.3
+PORTVERSION=	2026.10.2
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -24,7 +24,7 @@ RUN_DEPENDS+=	cmake:devel/cmake-core \
 LIB_DEPENDS=	libturbojpeg.so:graphics/libjpeg-turbo \
 		libz-ng.so:archivers/zlib-ng
 
-USES=		gmake python:3.13 pkgconfig:run
+USES=		gmake python:3.14 pkgconfig:run
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	home-assistant
