@@ -5,6 +5,7 @@ useful or provide a starting point for a proper port.
 Some ports here have known issues. You should read through the port to
 make sure it matches your expectations and proceed at your own risk.
 
-The layout of this repository is compatible with [portshaker][].
+The layout of this repository is compatible with [portshaker][] or
+be used as overlay with poudriere.
 
 [portshaker]: http://romain.blogreen.org/projects/portshaker/
