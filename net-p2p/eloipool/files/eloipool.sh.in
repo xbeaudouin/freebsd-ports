@@ -1,4 +1,0 @@
-#!/bin/sh
-# Wrapper for eloipool - changes to DATADIR before launching
-# so relative imports and config lookups work correctly.
-exec %%PYTHON_CMD%% %%DATADIR%%/eloipool.py "$@"
