@@ -22,8 +22,8 @@ USES=		cmake compiler:c++11-lang cpe lua minizip pkgconfig sqlite \
 		ssl
 
 USE_GITHUB=	yes
-GH_TAGNAME=	623d51af5
-GH_TUPLE=	domoticz:libwebem:b7fd46e:libwebem
+GH_TAGNAME=	fa9b6a8ac
+GH_TUPLE=	domoticz:libwebem:001fb13:libwebem
 GH_SUBDIR=	extern/libwebem:libwebem
 USE_RC_SUBR=	domoticz
 
@@ -47,8 +47,8 @@ EXTRACT_AFTER_ARGS=	--exclude ${GH_PROJECT_DEFAULT}-${GH_TAGNAME_EXTRACT}/hardwa
 
 # This hack is to get rid of dependency of git while building
 # the package.
-DOMOTICZ_REL=	18490
-DOMOTICZ_TS=	1792399750
+DOMOTICZ_REL=	18625
+DOMOTICZ_TS=	1794413546
 
 USERS=		domoticz
 GROUPS=		domoticz
