@@ -1,14 +1,11 @@
-# Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: head/sysutils/syslogger/Makefile 516897 2019-11-06 16:26:34Z antoine $
-
 PORTNAME=	syslogger
 PORTVERSION=	1.0
-PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://oav.net/projects/syslogger/
 
-MAINTAINER=	kiwi@oav.net
+MAINTAINER=	kiwi@FreeBSD.org
 COMMENT=	Logger(1) like tool that sends file or pipe througth syslog
+WWW=		https://oav.net/projects/syslogger/
 
 PLIST_FILES=		bin/syslogger
 
