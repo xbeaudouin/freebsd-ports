@@ -31,7 +31,7 @@ SUB_LIST=	USERS=${USERS} \
 CARGO_ENV=	LIBCLANG_PATH=${LLVM_PREFIX}/lib \
 		ROCKSDB_INCLUDE_DIR=${LOCALBASE}/include
 CARGO_FEATURES=	--no-default-features
-CARGO_BUILD=	--package stalwart
+CARGO_BUILD_ARGS=	--package stalwart
 
 CARGO_INSTALL_PATH=	crates/main
 
